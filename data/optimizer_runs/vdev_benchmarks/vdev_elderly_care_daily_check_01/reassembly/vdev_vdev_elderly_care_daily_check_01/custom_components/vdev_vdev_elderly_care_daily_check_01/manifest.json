@@ -1,0 +1,9 @@
+{
+  "codeowners": [],
+  "dependencies": [],
+  "documentation": "https://example.invalid/vibeaura/vdev",
+  "domain": "vdev_vdev_elderly_care_daily_check_01",
+  "name": "Elderly Care Daily Check",
+  "requirements": [],
+  "version": "0.1.0"
+}

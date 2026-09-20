@@ -1,0 +1,142 @@
+{
+  "counterexample_verdict_counts": {
+    "DIFF_FOUND": 110,
+    "TRACE_ONLY": 40
+  },
+  "datasets": {
+    "long-chain": {
+      "counterexample_count": 39,
+      "counterexample_yield_pct": 69.23,
+      "false_positive_count": 0,
+      "false_positive_rate_pct": 0.0,
+      "mutation_rejection_rate_pct": 100.0,
+      "mutations": 39,
+      "trace_only_reject_pct": 30.77,
+      "violation_type_accuracy_pct": 100.0
+    },
+    "smart-home": {
+      "counterexample_count": 111,
+      "counterexample_yield_pct": 74.77,
+      "false_positive_count": 0,
+      "false_positive_rate_pct": 0.0,
+      "mutation_rejection_rate_pct": 100.0,
+      "mutations": 111,
+      "trace_only_reject_pct": 25.23,
+      "violation_type_accuracy_pct": 100.0
+    }
+  },
+  "latency_group_counts": {
+    "G1:(0,3]": 49,
+    "G2:(3,6]": 15,
+    "G3:(6,9]": 45,
+    "G4:(9,+)": 41
+  },
+  "modality_counts": {
+    "BLE": 8,
+    "BLE+Cloud": 10,
+    "BLE+Local+Cloud": 22,
+    "Cloud": 43,
+    "Local": 50,
+    "Local+Cloud": 17
+  },
+  "mutation_types": {
+    "M1_dependent_action_swap": {
+      "counterexample_count": 20,
+      "counterexample_yield_pct": 0.0,
+      "false_positive_count": 0,
+      "false_positive_rate_pct": 0.0,
+      "mutation_rejection_rate_pct": 100.0,
+      "mutations": 20,
+      "trace_only_reject_pct": 100.0,
+      "violation_type_accuracy_pct": 100.0
+    },
+    "M2_premature_state_writeback": {
+      "counterexample_count": 20,
+      "counterexample_yield_pct": 100.0,
+      "false_positive_count": 0,
+      "false_positive_rate_pct": 0.0,
+      "mutation_rejection_rate_pct": 100.0,
+      "mutations": 20,
+      "trace_only_reject_pct": 0.0,
+      "violation_type_accuracy_pct": 100.0
+    },
+    "M3_missing_refresh_status_query": {
+      "counterexample_count": 20,
+      "counterexample_yield_pct": 100.0,
+      "false_positive_count": 0,
+      "false_positive_rate_pct": 0.0,
+      "mutation_rejection_rate_pct": 100.0,
+      "mutations": 20,
+      "trace_only_reject_pct": 0.0,
+      "violation_type_accuracy_pct": 100.0
+    },
+    "M4_ble_serialization_violation": {
+      "counterexample_count": 12,
+      "counterexample_yield_pct": 100.0,
+      "false_positive_count": 0,
+      "false_positive_rate_pct": 0.0,
+      "mutation_rejection_rate_pct": 100.0,
+      "mutations": 12,
+      "trace_only_reject_pct": 0.0,
+      "violation_type_accuracy_pct": 100.0
+    },
+    "M5_cloud_rate_session_violation": {
+      "counterexample_count": 18,
+      "counterexample_yield_pct": 100.0,
+      "false_positive_count": 0,
+      "false_positive_rate_pct": 0.0,
+      "mutation_rejection_rate_pct": 100.0,
+      "mutations": 18,
+      "trace_only_reject_pct": 0.0,
+      "violation_type_accuracy_pct": 100.0
+    },
+    "M6_wrong_batching_writeback_merge": {
+      "counterexample_count": 20,
+      "counterexample_yield_pct": 100.0,
+      "false_positive_count": 0,
+      "false_positive_rate_pct": 0.0,
+      "mutation_rejection_rate_pct": 100.0,
+      "mutations": 20,
+      "trace_only_reject_pct": 0.0,
+      "violation_type_accuracy_pct": 100.0
+    },
+    "M7_same_device_ordering_violation": {
+      "counterexample_count": 20,
+      "counterexample_yield_pct": 0.0,
+      "false_positive_count": 0,
+      "false_positive_rate_pct": 0.0,
+      "mutation_rejection_rate_pct": 100.0,
+      "mutations": 20,
+      "trace_only_reject_pct": 100.0,
+      "violation_type_accuracy_pct": 100.0
+    },
+    "M8_cleanup_lifecycle_violation": {
+      "counterexample_count": 20,
+      "counterexample_yield_pct": 100.0,
+      "false_positive_count": 0,
+      "false_positive_rate_pct": 0.0,
+      "mutation_rejection_rate_pct": 100.0,
+      "mutations": 20,
+      "trace_only_reject_pct": 0.0,
+      "violation_type_accuracy_pct": 100.0
+    }
+  },
+  "note": "Synthetic semantic-breaking traces are fed through the existing M6 TrustLayer; this does not execute real Home Assistant routines.",
+  "oracle_mode": "synthetic_mutation_replay",
+  "overall": {
+    "counterexample_count": 150,
+    "counterexample_yield_pct": 73.33,
+    "false_positive_count": 0,
+    "false_positive_rate_pct": 0.0,
+    "mutation_rejection_rate_pct": 100.0,
+    "mutations": 150,
+    "trace_only_reject_pct": 26.67,
+    "violation_type_accuracy_pct": 100.0
+  },
+  "routines": 30,
+  "valid_injected_mutations": 150,
+  "validator_diff_kind_counts": {
+    "missing_prerequisite": 38,
+    "order_violation": 112
+  }
+}

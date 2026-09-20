@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_elderly_care_daily_check_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Elderly Care Daily Check"
+}

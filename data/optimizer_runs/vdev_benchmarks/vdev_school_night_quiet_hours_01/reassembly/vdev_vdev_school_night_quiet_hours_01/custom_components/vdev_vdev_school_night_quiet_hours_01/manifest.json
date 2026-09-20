@@ -1,0 +1,9 @@
+{
+  "codeowners": [],
+  "dependencies": [],
+  "documentation": "https://example.invalid/vibeaura/vdev",
+  "domain": "vdev_vdev_school_night_quiet_hours_01",
+  "name": "School-Night Quiet Hours Routine",
+  "requirements": [],
+  "version": "0.1.0"
+}

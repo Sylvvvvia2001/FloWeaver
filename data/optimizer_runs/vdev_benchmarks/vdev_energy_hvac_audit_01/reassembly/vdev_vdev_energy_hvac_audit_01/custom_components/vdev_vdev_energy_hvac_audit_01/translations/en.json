@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_energy_hvac_audit_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Cloud Burst Energy & HVAC Audit Routine"
+}

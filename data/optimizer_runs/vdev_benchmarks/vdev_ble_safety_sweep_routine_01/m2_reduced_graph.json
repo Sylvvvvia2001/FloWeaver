@@ -1,0 +1,5172 @@
+{
+  "anchor_nodes": [
+    "0e4b12a7:_handle_coordinator_update:0:136",
+    "0e4b12a7:_handle_coordinator_update:0:217",
+    "0e4b12a7:_handle_coordinator_update:0:305",
+    "0e4b12a7:_handle_coordinator_update:1:137",
+    "0e4b12a7:_handle_coordinator_update:1:218",
+    "0e4b12a7:_handle_coordinator_update:1:306",
+    "0e4b12a7:_handle_coordinator_update:2:138",
+    "0e4b12a7:_handle_coordinator_update:2:219",
+    "0e4b12a7:_handle_coordinator_update:2:307",
+    "0e4b12a7:_handle_coordinator_update:3:139",
+    "0e4b12a7:_handle_coordinator_update:3:220",
+    "0e4b12a7:_handle_coordinator_update:3:308",
+    "0e4b12a7:_handle_coordinator_update:4:140",
+    "0e4b12a7:_handle_coordinator_update:4:223",
+    "0e4b12a7:_handle_coordinator_update:4:309",
+    "0e4b12a7:_handle_coordinator_update:5:142",
+    "0e4b12a7:_handle_coordinator_update:5:224",
+    "0e4b12a7:_handle_coordinator_update:5:311",
+    "0e4b12a7:_handle_coordinator_update:6:225",
+    "0e4b12a7:async_stop_cover:2:118",
+    "0e4b12a7:async_stop_cover:2:287",
+    "0e4b12a7:async_stop_cover_tilt:2:203",
+    "199997a2:_async_clear_dynamic_encryption_key:10.0:136",
+    "199997a2:_async_clear_dynamic_encryption_key:10.0:152",
+    "199997a2:_async_clear_dynamic_encryption_key:10:135",
+    "9425188b:async_oscillate:3:101",
+    "9425188b:async_set_percentage:3:92",
+    "9425188b:async_set_preset_mode:3:161",
+    "9425188b:async_set_preset_mode:3:83",
+    "9425188b:async_turn_off:3:125",
+    "9425188b:async_turn_off:3:187",
+    "9425188b:async_turn_on:3:118",
+    "9425188b:async_turn_on:3:179",
+    "9da22f42:_handle_device_update:3:186",
+    "ab8f4bde:_async_handle_event:0:179",
+    "ab8f4bde:_async_handle_event:1:180",
+    "bb8906f4:sensor_update_to_bluetooth_data_update:0:173",
+    "bb8906f4:sensor_update_to_bluetooth_data_update:1:174",
+    "bb8906f4:sensor_update_to_bluetooth_data_update:2:175",
+    "bb8906f4:sensor_update_to_bluetooth_data_update:3.0:177",
+    "bb8906f4:sensor_update_to_bluetooth_data_update:3.1:178",
+    "bb8906f4:sensor_update_to_bluetooth_data_update:3:176",
+    "bb8906f4:sensor_update_to_bluetooth_data_update:4.0:180",
+    "bb8906f4:sensor_update_to_bluetooth_data_update:4.1.0:182",
+    "bb8906f4:sensor_update_to_bluetooth_data_update:4.1:181",
+    "bb8906f4:sensor_update_to_bluetooth_data_update:4:179",
+    "bb8906f4:sensor_update_to_bluetooth_data_update:5:184",
+    "d9c4917e:sensor_update_to_bluetooth_data_update:0:111",
+    "d9c4917e:sensor_update_to_bluetooth_data_update:1:112",
+    "e3b5e3c6:_async_update_data:0:92",
+    "e3b5e3c6:_async_update_data:1.0:94",
+    "e3b5e3c6:_async_update_data:1.0:96",
+    "e3b5e3c6:_async_update_data:1:93",
+    "e3b5e3c6:_async_update_data:2:97",
+    "f20e5673:_on_connect:17.2:617",
+    "f20e5673:_start_reauth_and_disconnect:2:806",
+    "f20e5673:async_on_state_subscription:2:480",
+    "f20e5673:cleanup_instance:5:1374",
+    "f20e5673:on_connect:1.1:513",
+    "f8314a32:_needs_poll:0:137"
+  ],
+  "edges": [
+    {
+      "dst": "e3b5e3c6:_async_update_data:1:93",
+      "edge_type": "CFG_NEXT",
+      "src": "e3b5e3c6:_async_update_data:0:92"
+    },
+    {
+      "dst": "e3b5e3c6:_async_update_data:1.0:94",
+      "edge_type": "CFG_NEXT",
+      "src": "e3b5e3c6:_async_update_data:1:93"
+    },
+    {
+      "dst": "e3b5e3c6:_async_update_data:1.0:96",
+      "edge_type": "CFG_NEXT",
+      "src": "e3b5e3c6:_async_update_data:1.0:94"
+    },
+    {
+      "dst": "e3b5e3c6:_async_update_data:2:97",
+      "edge_type": "CFG_NEXT",
+      "src": "e3b5e3c6:_async_update_data:1.0:96"
+    },
+    {
+      "dst": "e3b5e3c6:_async_update_data:2:97",
+      "edge_type": "DATA_DEP",
+      "src": "e3b5e3c6:_async_update_data:1.0:94"
+    },
+    {
+      "dst": "e3b5e3c6:_async_update_data:1.0:94",
+      "edge_type": "CONTROL_DEP",
+      "src": "e3b5e3c6:_async_update_data:1:93"
+    },
+    {
+      "dst": "e3b5e3c6:_async_update_data:1.0:96",
+      "edge_type": "CONTROL_DEP",
+      "src": "e3b5e3c6:_async_update_data:1:93"
+    },
+    {
+      "dst": "e3b5e3c6:_async_update_data:1.0:94",
+      "edge_type": "EXCEPTION_DEP",
+      "src": "e3b5e3c6:_async_update_data:1:93"
+    },
+    {
+      "dst": "e3b5e3c6:_async_update_data:1.0:96",
+      "edge_type": "EXCEPTION_DEP",
+      "src": "e3b5e3c6:_async_update_data:1:93"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10:135",
+      "edge_type": "CFG_NEXT",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:9:125"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10:135",
+      "edge_type": "DATA_DEP",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:9:125"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10.0:136",
+      "edge_type": "CFG_NEXT",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:10:135"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10.0:136",
+      "edge_type": "DATA_DEP",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:9:125"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10.1:138",
+      "edge_type": "CFG_NEXT",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:10.0:136"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10.1:138",
+      "edge_type": "DATA_DEP",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:9:125"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10.1.0:139",
+      "edge_type": "CFG_NEXT",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:10.1:138"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10.1.1:143",
+      "edge_type": "CFG_NEXT",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:10.1.0:139"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10.0:145",
+      "edge_type": "CFG_NEXT",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:10.1.1:143"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10.1:150",
+      "edge_type": "CFG_NEXT",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:10.0:145"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10.0:152",
+      "edge_type": "CFG_NEXT",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:10.1:150"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10.0:152",
+      "edge_type": "DATA_DEP",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:9:125"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10.0:136",
+      "edge_type": "CONTROL_DEP",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:10:135"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10.1:138",
+      "edge_type": "CONTROL_DEP",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:10:135"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10.1.0:139",
+      "edge_type": "CONTROL_DEP",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:10:135"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10.1.1:143",
+      "edge_type": "CONTROL_DEP",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:10:135"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10.0:145",
+      "edge_type": "CONTROL_DEP",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:10:135"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10.1:150",
+      "edge_type": "CONTROL_DEP",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:10:135"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10.0:152",
+      "edge_type": "CONTROL_DEP",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:10:135"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10.1.0:139",
+      "edge_type": "CONTROL_DEP",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:10.1:138"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10.1.1:143",
+      "edge_type": "CONTROL_DEP",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:10.1:138"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10.0:136",
+      "edge_type": "EXCEPTION_DEP",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:10:135"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10.1:138",
+      "edge_type": "EXCEPTION_DEP",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:10:135"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10.1.0:139",
+      "edge_type": "EXCEPTION_DEP",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:10:135"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10.1.1:143",
+      "edge_type": "EXCEPTION_DEP",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:10:135"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10.0:145",
+      "edge_type": "EXCEPTION_DEP",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:10:135"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10.1:150",
+      "edge_type": "EXCEPTION_DEP",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:10:135"
+    },
+    {
+      "dst": "199997a2:_async_clear_dynamic_encryption_key:10.0:152",
+      "edge_type": "EXCEPTION_DEP",
+      "src": "199997a2:_async_clear_dynamic_encryption_key:10:135"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.0:653",
+      "edge_type": "CFG_NEXT",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.0.0:654",
+      "edge_type": "CFG_NEXT",
+      "src": "2d864ced:_stream_tts_audio:2.0:653"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.1:656",
+      "edge_type": "CFG_NEXT",
+      "src": "2d864ced:_stream_tts_audio:2.0.0:654"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.1.0:657",
+      "edge_type": "CFG_NEXT",
+      "src": "2d864ced:_stream_tts_audio:2.1:656"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.1.1:660",
+      "edge_type": "CFG_NEXT",
+      "src": "2d864ced:_stream_tts_audio:2.1.0:657"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.2:662",
+      "edge_type": "CFG_NEXT",
+      "src": "2d864ced:_stream_tts_audio:2.1.1:660"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.2:662",
+      "edge_type": "DATA_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3:664",
+      "edge_type": "CFG_NEXT",
+      "src": "2d864ced:_stream_tts_audio:2.2:662"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3:664",
+      "edge_type": "DATA_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3:664",
+      "edge_type": "DATA_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.2:662"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.0:665",
+      "edge_type": "CFG_NEXT",
+      "src": "2d864ced:_stream_tts_audio:2.3:664"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.0:665",
+      "edge_type": "DATA_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3:664"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.0.0:670",
+      "edge_type": "CFG_NEXT",
+      "src": "2d864ced:_stream_tts_audio:2.3.0:665"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.0.1:671",
+      "edge_type": "CFG_NEXT",
+      "src": "2d864ced:_stream_tts_audio:2.3.0.0:670"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.1:673",
+      "edge_type": "CFG_NEXT",
+      "src": "2d864ced:_stream_tts_audio:2.3.0.1:671"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.1:673",
+      "edge_type": "DATA_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3:664"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2:675",
+      "edge_type": "CFG_NEXT",
+      "src": "2d864ced:_stream_tts_audio:2.3.1:673"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2:675",
+      "edge_type": "DATA_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3:664"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.0:676",
+      "edge_type": "CFG_NEXT",
+      "src": "2d864ced:_stream_tts_audio:2.3.2:675"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.0:676",
+      "edge_type": "DATA_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3:664"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.1:677",
+      "edge_type": "CFG_NEXT",
+      "src": "2d864ced:_stream_tts_audio:2.3.2.0:676"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.1:677",
+      "edge_type": "DATA_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3.2.0:676"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.1.0:678",
+      "edge_type": "CFG_NEXT",
+      "src": "2d864ced:_stream_tts_audio:2.3.2.1:677"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.2:680",
+      "edge_type": "CFG_NEXT",
+      "src": "2d864ced:_stream_tts_audio:2.3.2.1.0:678"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.2:680",
+      "edge_type": "DATA_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3.2.0:676"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.2.0:681",
+      "edge_type": "CFG_NEXT",
+      "src": "2d864ced:_stream_tts_audio:2.3.2.2:680"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.2.0:681",
+      "edge_type": "DATA_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3.2.0:676"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.2.0:683",
+      "edge_type": "CFG_NEXT",
+      "src": "2d864ced:_stream_tts_audio:2.3.2.2.0:681"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.2.0:683",
+      "edge_type": "DATA_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3.2.0:676"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.3:689",
+      "edge_type": "CFG_NEXT",
+      "src": "2d864ced:_stream_tts_audio:2.3.2.2.0:683"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.3:689",
+      "edge_type": "DATA_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3.2.0:676"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.4:690",
+      "edge_type": "CFG_NEXT",
+      "src": "2d864ced:_stream_tts_audio:2.3.2.3:689"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.4:690",
+      "edge_type": "DATA_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3.2.3:689"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.5:691",
+      "edge_type": "CFG_NEXT",
+      "src": "2d864ced:_stream_tts_audio:2.3.2.4:690"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.5:691",
+      "edge_type": "DATA_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3.2.4:690"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.0:693",
+      "edge_type": "CFG_NEXT",
+      "src": "2d864ced:_stream_tts_audio:2.3.2.5:691"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.0:695",
+      "edge_type": "CFG_NEXT",
+      "src": "2d864ced:_stream_tts_audio:2.0:693"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.0:653",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.0.0:654",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.1:656",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.1.0:657",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.1.1:660",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.2:662",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3:664",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.0:665",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.0.0:670",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.0.1:671",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.1:673",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2:675",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.0:676",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.1:677",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.1.0:678",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.2:680",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.2.0:681",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.2.0:683",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.3:689",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.4:690",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.5:691",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.0:693",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.0:695",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.0.0:654",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.0:653"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.1.0:657",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.1:656"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.1.1:660",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.1:656"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.0:665",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3:664"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.0.0:670",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3:664"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.0.1:671",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3:664"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.1:673",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3:664"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2:675",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3:664"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.0:676",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3:664"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.1:677",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3:664"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.1.0:678",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3:664"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.2:680",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3:664"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.2.0:681",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3:664"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.2.0:683",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3:664"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.3:689",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3:664"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.4:690",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3:664"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.5:691",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3:664"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.0.0:670",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3.0:665"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.0.1:671",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3.0:665"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.0:676",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3.2:675"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.1:677",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3.2:675"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.1.0:678",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3.2:675"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.2:680",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3.2:675"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.2.0:681",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3.2:675"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.2.0:683",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3.2:675"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.3:689",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3.2:675"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.4:690",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3.2:675"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.5:691",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3.2:675"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.1.0:678",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3.2.1:677"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.2.0:681",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3.2.2:680"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.3.2.2.0:683",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stream_tts_audio:2.3.2.2:680"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.0:653",
+      "edge_type": "EXCEPTION_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.0.0:654",
+      "edge_type": "EXCEPTION_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.0:693",
+      "edge_type": "EXCEPTION_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stream_tts_audio:2.0:695",
+      "edge_type": "EXCEPTION_DEP",
+      "src": "2d864ced:_stream_tts_audio:2:652"
+    },
+    {
+      "dst": "2d864ced:_stop_udp_server:2.0:749",
+      "edge_type": "CFG_NEXT",
+      "src": "2d864ced:_stop_udp_server:2:748"
+    },
+    {
+      "dst": "2d864ced:_stop_udp_server:2.0:751",
+      "edge_type": "CFG_NEXT",
+      "src": "2d864ced:_stop_udp_server:2.0:749"
+    },
+    {
+      "dst": "2d864ced:_stop_udp_server:2.0:749",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stop_udp_server:2:748"
+    },
+    {
+      "dst": "2d864ced:_stop_udp_server:2.0:751",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:_stop_udp_server:2:748"
+    },
+    {
+      "dst": "2d864ced:_stop_udp_server:2.0:749",
+      "edge_type": "EXCEPTION_DEP",
+      "src": "2d864ced:_stop_udp_server:2:748"
+    },
+    {
+      "dst": "2d864ced:_stop_udp_server:2.0:751",
+      "edge_type": "EXCEPTION_DEP",
+      "src": "2d864ced:_stop_udp_server:2:748"
+    },
+    {
+      "dst": "2d864ced:close:1.0:793",
+      "edge_type": "CFG_NEXT",
+      "src": "2d864ced:close:1:792"
+    },
+    {
+      "dst": "2d864ced:close:1.0:793",
+      "edge_type": "CONTROL_DEP",
+      "src": "2d864ced:close:1:792"
+    },
+    {
+      "dst": "f20e5673:cleanup_instance:4:1373",
+      "edge_type": "DATA_DEP",
+      "src": "f20e5673:cleanup_instance:1:1369"
+    },
+    {
+      "dst": "f20e5673:cleanup_instance:5:1374",
+      "edge_type": "CFG_NEXT",
+      "src": "f20e5673:cleanup_instance:4:1373"
+    },
+    {
+      "dst": "f20e5673:cleanup_instance:5:1374",
+      "edge_type": "DATA_DEP",
+      "src": "f20e5673:cleanup_instance:1:1369"
+    },
+    {
+      "dst": "f20e5673:on_connect:1.0:504",
+      "edge_type": "CFG_NEXT",
+      "src": "f20e5673:on_connect:1:503"
+    },
+    {
+      "dst": "f20e5673:on_connect:1.0:506",
+      "edge_type": "CFG_NEXT",
+      "src": "f20e5673:on_connect:1.0:504"
+    },
+    {
+      "dst": "f20e5673:on_connect:1.1:507",
+      "edge_type": "CFG_NEXT",
+      "src": "f20e5673:on_connect:1.0:506"
+    },
+    {
+      "dst": "f20e5673:on_connect:1.0:509",
+      "edge_type": "CFG_NEXT",
+      "src": "f20e5673:on_connect:1.1:507"
+    },
+    {
+      "dst": "f20e5673:on_connect:1.1:513",
+      "edge_type": "CFG_NEXT",
+      "src": "f20e5673:on_connect:1.0:509"
+    },
+    {
+      "dst": "f20e5673:on_connect:1.0:504",
+      "edge_type": "CONTROL_DEP",
+      "src": "f20e5673:on_connect:1:503"
+    },
+    {
+      "dst": "f20e5673:on_connect:1.0:506",
+      "edge_type": "CONTROL_DEP",
+      "src": "f20e5673:on_connect:1:503"
+    },
+    {
+      "dst": "f20e5673:on_connect:1.1:507",
+      "edge_type": "CONTROL_DEP",
+      "src": "f20e5673:on_connect:1:503"
+    },
+    {
+      "dst": "f20e5673:on_connect:1.0:509",
+      "edge_type": "CONTROL_DEP",
+      "src": "f20e5673:on_connect:1:503"
+    },
+    {
+      "dst": "f20e5673:on_connect:1.1:513",
+      "edge_type": "CONTROL_DEP",
+      "src": "f20e5673:on_connect:1:503"
+    },
+    {
+      "dst": "f20e5673:on_connect:1.0:504",
+      "edge_type": "EXCEPTION_DEP",
+      "src": "f20e5673:on_connect:1:503"
+    },
+    {
+      "dst": "f20e5673:on_connect:1.0:506",
+      "edge_type": "EXCEPTION_DEP",
+      "src": "f20e5673:on_connect:1:503"
+    },
+    {
+      "dst": "f20e5673:on_connect:1.1:507",
+      "edge_type": "EXCEPTION_DEP",
+      "src": "f20e5673:on_connect:1:503"
+    },
+    {
+      "dst": "f20e5673:on_connect:1.0:509",
+      "edge_type": "EXCEPTION_DEP",
+      "src": "f20e5673:on_connect:1:503"
+    },
+    {
+      "dst": "f20e5673:on_connect:1.1:513",
+      "edge_type": "EXCEPTION_DEP",
+      "src": "f20e5673:on_connect:1:503"
+    },
+    {
+      "dst": "f20e5673:_on_connect:17.2:617",
+      "edge_type": "CFG_NEXT",
+      "src": "f20e5673:_on_connect:17.1:607"
+    },
+    {
+      "dst": "f20e5673:_on_connect:17.2:617",
+      "edge_type": "DATA_DEP",
+      "src": "f20e5673:_on_connect:7:553"
+    },
+    {
+      "dst": "f20e5673:_start_reauth_and_disconnect:2:806",
+      "edge_type": "CFG_NEXT",
+      "src": "f20e5673:_start_reauth_and_disconnect:1:805"
+    },
+    {
+      "dst": "9da22f42:_handle_device_update:3:186",
+      "edge_type": "CFG_NEXT",
+      "src": "9da22f42:_handle_device_update:2:185"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:1:174",
+      "edge_type": "CFG_NEXT",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:0:173"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:2:175",
+      "edge_type": "CFG_NEXT",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:1:174"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:3:176",
+      "edge_type": "CFG_NEXT",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:2:175"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:3:176",
+      "edge_type": "DATA_DEP",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:2:175"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:3.0:177",
+      "edge_type": "CFG_NEXT",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:3:176"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:3.0:177",
+      "edge_type": "DATA_DEP",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:3:176"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:3.1:178",
+      "edge_type": "CFG_NEXT",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:3.0:177"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:3.1:178",
+      "edge_type": "DATA_DEP",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:3:176"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:3.1:178",
+      "edge_type": "DATA_DEP",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:2:175"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:3.1:178",
+      "edge_type": "DATA_DEP",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:3.0:177"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:4:179",
+      "edge_type": "CFG_NEXT",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:3.1:178"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:4:179",
+      "edge_type": "DATA_DEP",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:3:176"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:4:179",
+      "edge_type": "DATA_DEP",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:3.0:177"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:4:179",
+      "edge_type": "DATA_DEP",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:1:174"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:4.0:180",
+      "edge_type": "CFG_NEXT",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:4:179"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:4.0:180",
+      "edge_type": "DATA_DEP",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:4:179"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:4.1:181",
+      "edge_type": "CFG_NEXT",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:4.0:180"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:4.1:181",
+      "edge_type": "DATA_DEP",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:4:179"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:4.1:181",
+      "edge_type": "DATA_DEP",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:4.0:180"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:4.1:181",
+      "edge_type": "DATA_DEP",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:1:174"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:4.1.0:182",
+      "edge_type": "CFG_NEXT",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:4.1:181"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:4.1.0:182",
+      "edge_type": "DATA_DEP",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:4.0:180"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:4.1.0:182",
+      "edge_type": "DATA_DEP",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:4.1:181"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:4.1.0:182",
+      "edge_type": "DATA_DEP",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:1:174"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:5:184",
+      "edge_type": "CFG_NEXT",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:4.1.0:182"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:5:184",
+      "edge_type": "DATA_DEP",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:2:175"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:5:184",
+      "edge_type": "DATA_DEP",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:1:174"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:3.0:177",
+      "edge_type": "CONTROL_DEP",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:3:176"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:3.1:178",
+      "edge_type": "CONTROL_DEP",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:3:176"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:4.0:180",
+      "edge_type": "CONTROL_DEP",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:4:179"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:4.1:181",
+      "edge_type": "CONTROL_DEP",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:4:179"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:4.1.0:182",
+      "edge_type": "CONTROL_DEP",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:4:179"
+    },
+    {
+      "dst": "bb8906f4:sensor_update_to_bluetooth_data_update:4.1.0:182",
+      "edge_type": "CONTROL_DEP",
+      "src": "bb8906f4:sensor_update_to_bluetooth_data_update:4.1:181"
+    },
+    {
+      "dst": "0e4b12a7:async_stop_cover:2:118",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:async_stop_cover:1:117"
+    },
+    {
+      "dst": "0e4b12a7:async_stop_cover:3:119",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:async_stop_cover:2:118"
+    },
+    {
+      "dst": "0e4b12a7:async_stop_cover:4:120",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:async_stop_cover:3:119"
+    },
+    {
+      "dst": "0e4b12a7:async_stop_cover:5:121",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:async_stop_cover:4:120"
+    },
+    {
+      "dst": "0e4b12a7:async_stop_cover:0:284",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:async_stop_cover:5:121"
+    },
+    {
+      "dst": "0e4b12a7:async_stop_cover:1:286",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:async_stop_cover:0:284"
+    },
+    {
+      "dst": "0e4b12a7:async_stop_cover:2:287",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:async_stop_cover:1:286"
+    },
+    {
+      "dst": "0e4b12a7:async_stop_cover:3:288",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:async_stop_cover:2:287"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:1:137",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:0:136"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:2:138",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:1:137"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:3:139",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:2:138"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:4:140",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:3:139"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:5:142",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:4:140"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:0:217",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:5:142"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:1:218",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:0:217"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:2:219",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:1:218"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:2:219",
+      "edge_type": "DATA_DEP",
+      "src": "0e4b12a7:_handle_coordinator_update:1:218"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:3:220",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:2:219"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:3:220",
+      "edge_type": "DATA_DEP",
+      "src": "0e4b12a7:_handle_coordinator_update:1:218"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:4:223",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:3:220"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:5:224",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:4:223"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:6:225",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:5:224"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:0:305",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:6:225"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:1:306",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:0:305"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:2:307",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:1:306"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:3:308",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:2:307"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:4:309",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:3:308"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:5:311",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:4:309"
+    },
+    {
+      "dst": "0e4b12a7:async_stop_cover_tilt:2:203",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:async_stop_cover_tilt:1:202"
+    },
+    {
+      "dst": "9425188b:async_set_preset_mode:3:83",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_set_preset_mode:2:82"
+    },
+    {
+      "dst": "9425188b:async_set_preset_mode:0:153",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_set_preset_mode:3:83"
+    },
+    {
+      "dst": "9425188b:async_set_preset_mode:1:155",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_set_preset_mode:0:153"
+    },
+    {
+      "dst": "9425188b:async_set_preset_mode:2:160",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_set_preset_mode:1:155"
+    },
+    {
+      "dst": "9425188b:async_set_preset_mode:3:161",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_set_preset_mode:2:160"
+    },
+    {
+      "dst": "9425188b:async_set_percentage:3:92",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_set_percentage:2:91"
+    },
+    {
+      "dst": "9425188b:async_oscillate:3:101",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_oscillate:2:100"
+    },
+    {
+      "dst": "9425188b:async_turn_on:3:118",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_turn_on:2:117"
+    },
+    {
+      "dst": "9425188b:async_turn_on:0:170",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_turn_on:3:118"
+    },
+    {
+      "dst": "9425188b:async_turn_on:1:172",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_turn_on:0:170"
+    },
+    {
+      "dst": "9425188b:async_turn_on:2:178",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_turn_on:1:172"
+    },
+    {
+      "dst": "9425188b:async_turn_on:3:179",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_turn_on:2:178"
+    },
+    {
+      "dst": "9425188b:async_turn_off:3:125",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_turn_off:2:124"
+    },
+    {
+      "dst": "9425188b:async_turn_off:0:183",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_turn_off:3:125"
+    },
+    {
+      "dst": "9425188b:async_turn_off:1:185",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_turn_off:0:183"
+    },
+    {
+      "dst": "9425188b:async_turn_off:2:186",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_turn_off:1:185"
+    },
+    {
+      "dst": "9425188b:async_turn_off:3:187",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_turn_off:2:186"
+    },
+    {
+      "dst": "d9c4917e:sensor_update_to_bluetooth_data_update:1:112",
+      "edge_type": "CFG_NEXT",
+      "src": "d9c4917e:sensor_update_to_bluetooth_data_update:0:111"
+    },
+    {
+      "dst": "ab8f4bde:_async_handle_event:1:180",
+      "edge_type": "CFG_NEXT",
+      "src": "ab8f4bde:_async_handle_event:0:179"
+    }
+  ],
+  "kept_nodes": [
+    "0e4b12a7:_handle_coordinator_update:0:136",
+    "0e4b12a7:_handle_coordinator_update:0:217",
+    "0e4b12a7:_handle_coordinator_update:0:305",
+    "0e4b12a7:_handle_coordinator_update:1:137",
+    "0e4b12a7:_handle_coordinator_update:1:218",
+    "0e4b12a7:_handle_coordinator_update:1:306",
+    "0e4b12a7:_handle_coordinator_update:2:138",
+    "0e4b12a7:_handle_coordinator_update:2:219",
+    "0e4b12a7:_handle_coordinator_update:2:307",
+    "0e4b12a7:_handle_coordinator_update:3:139",
+    "0e4b12a7:_handle_coordinator_update:3:220",
+    "0e4b12a7:_handle_coordinator_update:3:308",
+    "0e4b12a7:_handle_coordinator_update:4:140",
+    "0e4b12a7:_handle_coordinator_update:4:223",
+    "0e4b12a7:_handle_coordinator_update:4:309",
+    "0e4b12a7:_handle_coordinator_update:5:142",
+    "0e4b12a7:_handle_coordinator_update:5:224",
+    "0e4b12a7:_handle_coordinator_update:5:311",
+    "0e4b12a7:_handle_coordinator_update:6:225",
+    "0e4b12a7:async_stop_cover:0:284",
+    "0e4b12a7:async_stop_cover:1:117",
+    "0e4b12a7:async_stop_cover:1:286",
+    "0e4b12a7:async_stop_cover:2:118",
+    "0e4b12a7:async_stop_cover:2:287",
+    "0e4b12a7:async_stop_cover:3:119",
+    "0e4b12a7:async_stop_cover:3:288",
+    "0e4b12a7:async_stop_cover:4:120",
+    "0e4b12a7:async_stop_cover:5:121",
+    "0e4b12a7:async_stop_cover_tilt:1:202",
+    "0e4b12a7:async_stop_cover_tilt:2:203",
+    "199997a2:_async_clear_dynamic_encryption_key:10.0:136",
+    "199997a2:_async_clear_dynamic_encryption_key:10.0:145",
+    "199997a2:_async_clear_dynamic_encryption_key:10.0:152",
+    "199997a2:_async_clear_dynamic_encryption_key:10.1.0:139",
+    "199997a2:_async_clear_dynamic_encryption_key:10.1.1:143",
+    "199997a2:_async_clear_dynamic_encryption_key:10.1:138",
+    "199997a2:_async_clear_dynamic_encryption_key:10.1:150",
+    "199997a2:_async_clear_dynamic_encryption_key:10:135",
+    "199997a2:_async_clear_dynamic_encryption_key:9:125",
+    "199997a2:async_remove_entry:0:94",
+    "199997a2:async_unload_entry:0:84",
+    "2d864ced:_stop_udp_server:2.0:749",
+    "2d864ced:_stop_udp_server:2.0:751",
+    "2d864ced:_stop_udp_server:2:748",
+    "2d864ced:_stream_tts_audio:2.0.0:654",
+    "2d864ced:_stream_tts_audio:2.0:653",
+    "2d864ced:_stream_tts_audio:2.0:693",
+    "2d864ced:_stream_tts_audio:2.0:695",
+    "2d864ced:_stream_tts_audio:2.1.0:657",
+    "2d864ced:_stream_tts_audio:2.1.1:660",
+    "2d864ced:_stream_tts_audio:2.1:656",
+    "2d864ced:_stream_tts_audio:2.2:662",
+    "2d864ced:_stream_tts_audio:2.3.0.0:670",
+    "2d864ced:_stream_tts_audio:2.3.0.1:671",
+    "2d864ced:_stream_tts_audio:2.3.0:665",
+    "2d864ced:_stream_tts_audio:2.3.1:673",
+    "2d864ced:_stream_tts_audio:2.3.2.0:676",
+    "2d864ced:_stream_tts_audio:2.3.2.1.0:678",
+    "2d864ced:_stream_tts_audio:2.3.2.1:677",
+    "2d864ced:_stream_tts_audio:2.3.2.2.0:681",
+    "2d864ced:_stream_tts_audio:2.3.2.2.0:683",
+    "2d864ced:_stream_tts_audio:2.3.2.2:680",
+    "2d864ced:_stream_tts_audio:2.3.2.3:689",
+    "2d864ced:_stream_tts_audio:2.3.2.4:690",
+    "2d864ced:_stream_tts_audio:2.3.2.5:691",
+    "2d864ced:_stream_tts_audio:2.3.2:675",
+    "2d864ced:_stream_tts_audio:2.3:664",
+    "2d864ced:_stream_tts_audio:2:652",
+    "2d864ced:close:1.0:793",
+    "2d864ced:close:1:792",
+    "9425188b:async_oscillate:2:100",
+    "9425188b:async_oscillate:3:101",
+    "9425188b:async_set_percentage:2:91",
+    "9425188b:async_set_percentage:3:92",
+    "9425188b:async_set_preset_mode:0:153",
+    "9425188b:async_set_preset_mode:1:155",
+    "9425188b:async_set_preset_mode:2:160",
+    "9425188b:async_set_preset_mode:2:82",
+    "9425188b:async_set_preset_mode:3:161",
+    "9425188b:async_set_preset_mode:3:83",
+    "9425188b:async_turn_off:0:183",
+    "9425188b:async_turn_off:1:185",
+    "9425188b:async_turn_off:2:124",
+    "9425188b:async_turn_off:2:186",
+    "9425188b:async_turn_off:3:125",
+    "9425188b:async_turn_off:3:187",
+    "9425188b:async_turn_on:0:170",
+    "9425188b:async_turn_on:1:172",
+    "9425188b:async_turn_on:2:117",
+    "9425188b:async_turn_on:2:178",
+    "9425188b:async_turn_on:3:118",
+    "9425188b:async_turn_on:3:179",
+    "9da22f42:_async_setup_update_entity:4:82",
+    "9da22f42:_handle_device_update:2:185",
+    "9da22f42:_handle_device_update:3:186",
+    "9da22f42:async_setup_entry:7:71",
+    "ab8f4bde:_async_handle_event:0:179",
+    "ab8f4bde:_async_handle_event:1:180",
+    "bb8906f4:sensor_update_to_bluetooth_data_update:0:173",
+    "bb8906f4:sensor_update_to_bluetooth_data_update:1:174",
+    "bb8906f4:sensor_update_to_bluetooth_data_update:2:175",
+    "bb8906f4:sensor_update_to_bluetooth_data_update:3.0:177",
+    "bb8906f4:sensor_update_to_bluetooth_data_update:3.1:178",
+    "bb8906f4:sensor_update_to_bluetooth_data_update:3:176",
+    "bb8906f4:sensor_update_to_bluetooth_data_update:4.0:180",
+    "bb8906f4:sensor_update_to_bluetooth_data_update:4.1.0:182",
+    "bb8906f4:sensor_update_to_bluetooth_data_update:4.1:181",
+    "bb8906f4:sensor_update_to_bluetooth_data_update:4:179",
+    "bb8906f4:sensor_update_to_bluetooth_data_update:5:184",
+    "d9c4917e:sensor_update_to_bluetooth_data_update:0:111",
+    "d9c4917e:sensor_update_to_bluetooth_data_update:1:112",
+    "e3b5e3c6:_async_update_data:0:92",
+    "e3b5e3c6:_async_update_data:1.0:94",
+    "e3b5e3c6:_async_update_data:1.0:96",
+    "e3b5e3c6:_async_update_data:1:93",
+    "e3b5e3c6:_async_update_data:2:97",
+    "f20e5673:_on_connect:17.1:607",
+    "f20e5673:_on_connect:17.2:617",
+    "f20e5673:_on_connect:7:553",
+    "f20e5673:_start_reauth_and_disconnect:1:805",
+    "f20e5673:_start_reauth_and_disconnect:2:806",
+    "f20e5673:async_on_state_subscription:2:480",
+    "f20e5673:cleanup_instance:1:1369",
+    "f20e5673:cleanup_instance:4:1373",
+    "f20e5673:cleanup_instance:5:1374",
+    "f20e5673:on_connect:1.0:504",
+    "f20e5673:on_connect:1.0:506",
+    "f20e5673:on_connect:1.0:509",
+    "f20e5673:on_connect:1.1:507",
+    "f20e5673:on_connect:1.1:513",
+    "f20e5673:on_connect:1:503",
+    "f8314a32:_needs_poll:0:137",
+    "f8314a32:async_unload_entry:0:191"
+  ],
+  "mapping": {
+    "0e4b12a7:_handle_coordinator_update:0:136": {
+      "col_end": 55,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 136,
+      "line_start": 136
+    },
+    "0e4b12a7:_handle_coordinator_update:0:217": {
+      "col_end": 55,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 217,
+      "line_start": 217
+    },
+    "0e4b12a7:_handle_coordinator_update:0:305": {
+      "col_end": 55,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 305,
+      "line_start": 305
+    },
+    "0e4b12a7:_handle_coordinator_update:1:137": {
+      "col_end": 57,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 137,
+      "line_start": 137
+    },
+    "0e4b12a7:_handle_coordinator_update:1:218": {
+      "col_end": 40,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 218,
+      "line_start": 218
+    },
+    "0e4b12a7:_handle_coordinator_update:1:306": {
+      "col_end": 57,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 306,
+      "line_start": 306
+    },
+    "0e4b12a7:_handle_coordinator_update:2:138": {
+      "col_end": 57,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 138,
+      "line_start": 138
+    },
+    "0e4b12a7:_handle_coordinator_update:2:219": {
+      "col_end": 54,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 219,
+      "line_start": 219
+    },
+    "0e4b12a7:_handle_coordinator_update:2:307": {
+      "col_end": 57,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 307,
+      "line_start": 307
+    },
+    "0e4b12a7:_handle_coordinator_update:3:139": {
+      "col_end": 72,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 139,
+      "line_start": 139
+    },
+    "0e4b12a7:_handle_coordinator_update:3:220": {
+      "col_end": 9,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 222,
+      "line_start": 220
+    },
+    "0e4b12a7:_handle_coordinator_update:3:308": {
+      "col_end": 72,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 308,
+      "line_start": 308
+    },
+    "0e4b12a7:_handle_coordinator_update:4:140": {
+      "col_end": 65,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 140,
+      "line_start": 140
+    },
+    "0e4b12a7:_handle_coordinator_update:4:223": {
+      "col_end": 78,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 223,
+      "line_start": 223
+    },
+    "0e4b12a7:_handle_coordinator_update:4:309": {
+      "col_end": 65,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 309,
+      "line_start": 309
+    },
+    "0e4b12a7:_handle_coordinator_update:5:142": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 142,
+      "line_start": 142
+    },
+    "0e4b12a7:_handle_coordinator_update:5:224": {
+      "col_end": 78,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 224,
+      "line_start": 224
+    },
+    "0e4b12a7:_handle_coordinator_update:5:311": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 311,
+      "line_start": 311
+    },
+    "0e4b12a7:_handle_coordinator_update:6:225": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 225,
+      "line_start": 225
+    },
+    "0e4b12a7:async_stop_cover:0:284": {
+      "col_end": 46,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "async_stop_cover",
+      "line_end": 284,
+      "line_start": 284
+    },
+    "0e4b12a7:async_stop_cover:1:117": {
+      "col_end": 60,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "async_stop_cover",
+      "line_end": 117,
+      "line_start": 117
+    },
+    "0e4b12a7:async_stop_cover:1:286": {
+      "col_end": 73,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "async_stop_cover",
+      "line_end": 286,
+      "line_start": 286
+    },
+    "0e4b12a7:async_stop_cover:2:118": {
+      "col_end": 64,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "async_stop_cover",
+      "line_end": 118,
+      "line_start": 118
+    },
+    "0e4b12a7:async_stop_cover:2:287": {
+      "col_end": 64,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "async_stop_cover",
+      "line_end": 287,
+      "line_start": 287
+    },
+    "0e4b12a7:async_stop_cover:3:119": {
+      "col_end": 57,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "async_stop_cover",
+      "line_end": 119,
+      "line_start": 119
+    },
+    "0e4b12a7:async_stop_cover:3:288": {
+      "col_end": 57,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "async_stop_cover",
+      "line_end": 288,
+      "line_start": 288
+    },
+    "0e4b12a7:async_stop_cover:4:120": {
+      "col_end": 57,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "async_stop_cover",
+      "line_end": 120,
+      "line_start": 120
+    },
+    "0e4b12a7:async_stop_cover:5:121": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "async_stop_cover",
+      "line_end": 121,
+      "line_start": 121
+    },
+    "0e4b12a7:async_stop_cover_tilt:1:202": {
+      "col_end": 60,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "async_stop_cover_tilt",
+      "line_end": 202,
+      "line_start": 202
+    },
+    "0e4b12a7:async_stop_cover_tilt:2:203": {
+      "col_end": 64,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "async_stop_cover_tilt",
+      "line_end": 203,
+      "line_start": 203
+    },
+    "199997a2:_async_clear_dynamic_encryption_key:10.0:136": {
+      "col_end": 27,
+      "col_start": 8,
+      "file": "data/repo_snapshot/esphome/__init__.py",
+      "function": "_async_clear_dynamic_encryption_key",
+      "line_end": 136,
+      "line_start": 136
+    },
+    "199997a2:_async_clear_dynamic_encryption_key:10.0:145": {
+      "col_end": 9,
+      "col_start": 8,
+      "file": "data/repo_snapshot/esphome/__init__.py",
+      "function": "_async_clear_dynamic_encryption_key",
+      "line_end": 149,
+      "line_start": 145
+    },
+    "199997a2:_async_clear_dynamic_encryption_key:10.0:152": {
+      "col_end": 30,
+      "col_start": 8,
+      "file": "data/repo_snapshot/esphome/__init__.py",
+      "function": "_async_clear_dynamic_encryption_key",
+      "line_end": 152,
+      "line_start": 152
+    },
+    "199997a2:_async_clear_dynamic_encryption_key:10.1.0:139": {
+      "col_end": 13,
+      "col_start": 12,
+      "file": "data/repo_snapshot/esphome/__init__.py",
+      "function": "_async_clear_dynamic_encryption_key",
+      "line_end": 142,
+      "line_start": 139
+    },
+    "199997a2:_async_clear_dynamic_encryption_key:10.1.1:143": {
+      "col_end": 18,
+      "col_start": 12,
+      "file": "data/repo_snapshot/esphome/__init__.py",
+      "function": "_async_clear_dynamic_encryption_key",
+      "line_end": 143,
+      "line_start": 143
+    },
+    "199997a2:_async_clear_dynamic_encryption_key:10.1:138": {
+      "col_end": 18,
+      "col_start": 8,
+      "file": "data/repo_snapshot/esphome/__init__.py",
+      "function": "_async_clear_dynamic_encryption_key",
+      "line_end": 143,
+      "line_start": 138
+    },
+    "199997a2:_async_clear_dynamic_encryption_key:10.1:150": {
+      "col_end": 14,
+      "col_start": 8,
+      "file": "data/repo_snapshot/esphome/__init__.py",
+      "function": "_async_clear_dynamic_encryption_key",
+      "line_end": 150,
+      "line_start": 150
+    },
+    "199997a2:_async_clear_dynamic_encryption_key:10:135": {
+      "col_end": 30,
+      "col_start": 4,
+      "file": "data/repo_snapshot/esphome/__init__.py",
+      "function": "_async_clear_dynamic_encryption_key",
+      "line_end": 152,
+      "line_start": 135
+    },
+    "199997a2:_async_clear_dynamic_encryption_key:9:125": {
+      "col_end": 5,
+      "col_start": 4,
+      "file": "data/repo_snapshot/esphome/__init__.py",
+      "function": "_async_clear_dynamic_encryption_key",
+      "line_end": 133,
+      "line_start": 125
+    },
+    "199997a2:async_remove_entry:0:94": {
+      "col_end": 41,
+      "col_start": 4,
+      "file": "data/repo_snapshot/esphome/__init__.py",
+      "function": "async_remove_entry",
+      "line_end": 94,
+      "line_start": 94
+    },
+    "199997a2:async_unload_entry:0:84": {
+      "col_end": 41,
+      "col_start": 4,
+      "file": "data/repo_snapshot/esphome/__init__.py",
+      "function": "async_unload_entry",
+      "line_end": 84,
+      "line_start": 84
+    },
+    "2d864ced:_stop_udp_server:2.0:749": {
+      "col_end": 36,
+      "col_start": 12,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stop_udp_server",
+      "line_end": 749,
+      "line_start": 749
+    },
+    "2d864ced:_stop_udp_server:2.0:751": {
+      "col_end": 35,
+      "col_start": 12,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stop_udp_server",
+      "line_end": 751,
+      "line_start": 751
+    },
+    "2d864ced:_stop_udp_server:2:748": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stop_udp_server",
+      "line_end": 751,
+      "line_start": 748
+    },
+    "2d864ced:_stream_tts_audio:2.0.0:654": {
+      "col_end": 22,
+      "col_start": 16,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stream_tts_audio",
+      "line_end": 654,
+      "line_start": 654
+    },
+    "2d864ced:_stream_tts_audio:2.0:653": {
+      "col_end": 22,
+      "col_start": 12,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stream_tts_audio",
+      "line_end": 654,
+      "line_start": 653
+    },
+    "2d864ced:_stream_tts_audio:2.0:693": {
+      "col_end": 18,
+      "col_start": 12,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stream_tts_audio",
+      "line_end": 693,
+      "line_start": 693
+    },
+    "2d864ced:_stream_tts_audio:2.0:695": {
+      "col_end": 13,
+      "col_start": 12,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stream_tts_audio",
+      "line_end": 697,
+      "line_start": 695
+    },
+    "2d864ced:_stream_tts_audio:2.1.0:657": {
+      "col_end": 17,
+      "col_start": 16,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stream_tts_audio",
+      "line_end": 659,
+      "line_start": 657
+    },
+    "2d864ced:_stream_tts_audio:2.1.1:660": {
+      "col_end": 22,
+      "col_start": 16,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stream_tts_audio",
+      "line_end": 660,
+      "line_start": 660
+    },
+    "2d864ced:_stream_tts_audio:2.1:656": {
+      "col_end": 22,
+      "col_start": 12,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stream_tts_audio",
+      "line_end": 660,
+      "line_start": 656
+    },
+    "2d864ced:_stream_tts_audio:2.2:662": {
+      "col_end": 88,
+      "col_start": 12,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stream_tts_audio",
+      "line_end": 662,
+      "line_start": 662
+    },
+    "2d864ced:_stream_tts_audio:2.3.0.0:670": {
+      "col_end": 74,
+      "col_start": 20,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stream_tts_audio",
+      "line_end": 670,
+      "line_start": 670
+    },
+    "2d864ced:_stream_tts_audio:2.3.0.1:671": {
+      "col_end": 26,
+      "col_start": 20,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stream_tts_audio",
+      "line_end": 671,
+      "line_start": 671
+    },
+    "2d864ced:_stream_tts_audio:2.3.0:665": {
+      "col_end": 26,
+      "col_start": 16,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stream_tts_audio",
+      "line_end": 671,
+      "line_start": 665
+    },
+    "2d864ced:_stream_tts_audio:2.3.1:673": {
+      "col_end": 82,
+      "col_start": 16,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stream_tts_audio",
+      "line_end": 673,
+      "line_start": 673
+    },
+    "2d864ced:_stream_tts_audio:2.3.2.0:676": {
+      "col_end": 66,
+      "col_start": 20,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stream_tts_audio",
+      "line_end": 676,
+      "line_start": 676
+    },
+    "2d864ced:_stream_tts_audio:2.3.2.1.0:678": {
+      "col_end": 29,
+      "col_start": 24,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stream_tts_audio",
+      "line_end": 678,
+      "line_start": 678
+    },
+    "2d864ced:_stream_tts_audio:2.3.2.1:677": {
+      "col_end": 29,
+      "col_start": 20,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stream_tts_audio",
+      "line_end": 678,
+      "line_start": 677
+    },
+    "2d864ced:_stream_tts_audio:2.3.2.2.0:681": {
+      "col_end": 64,
+      "col_start": 24,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stream_tts_audio",
+      "line_end": 681,
+      "line_start": 681
+    },
+    "2d864ced:_stream_tts_audio:2.3.2.2.0:683": {
+      "col_end": 66,
+      "col_start": 24,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stream_tts_audio",
+      "line_end": 683,
+      "line_start": 683
+    },
+    "2d864ced:_stream_tts_audio:2.3.2.2:680": {
+      "col_end": 66,
+      "col_start": 20,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stream_tts_audio",
+      "line_end": 683,
+      "line_start": 680
+    },
+    "2d864ced:_stream_tts_audio:2.3.2.3:689": {
+      "col_end": 85,
+      "col_start": 20,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stream_tts_audio",
+      "line_end": 689,
+      "line_start": 689
+    },
+    "2d864ced:_stream_tts_audio:2.3.2.4:690": {
+      "col_end": 69,
+      "col_start": 20,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stream_tts_audio",
+      "line_end": 690,
+      "line_start": 690
+    },
+    "2d864ced:_stream_tts_audio:2.3.2.5:691": {
+      "col_end": 63,
+      "col_start": 20,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stream_tts_audio",
+      "line_end": 691,
+      "line_start": 691
+    },
+    "2d864ced:_stream_tts_audio:2.3.2:675": {
+      "col_end": 63,
+      "col_start": 16,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stream_tts_audio",
+      "line_end": 691,
+      "line_start": 675
+    },
+    "2d864ced:_stream_tts_audio:2.3:664": {
+      "col_end": 63,
+      "col_start": 12,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stream_tts_audio",
+      "line_end": 691,
+      "line_start": 664
+    },
+    "2d864ced:_stream_tts_audio:2:652": {
+      "col_end": 13,
+      "col_start": 8,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "_stream_tts_audio",
+      "line_end": 697,
+      "line_start": 652
+    },
+    "2d864ced:close:1.0:793": {
+      "col_end": 34,
+      "col_start": 12,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "close",
+      "line_end": 793,
+      "line_start": 793
+    },
+    "2d864ced:close:1:792": {
+      "col_end": 34,
+      "col_start": 8,
+      "file": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function": "close",
+      "line_end": 793,
+      "line_start": 792
+    },
+    "9425188b:async_oscillate:2:100": {
+      "col_end": 86,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_oscillate",
+      "line_end": 100,
+      "line_start": 100
+    },
+    "9425188b:async_oscillate:3:101": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_oscillate",
+      "line_end": 101,
+      "line_start": 101
+    },
+    "9425188b:async_set_percentage:2:91": {
+      "col_end": 84,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_set_percentage",
+      "line_end": 91,
+      "line_start": 91
+    },
+    "9425188b:async_set_percentage:3:92": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_set_percentage",
+      "line_end": 92,
+      "line_start": 92
+    },
+    "9425188b:async_set_preset_mode:0:153": {
+      "col_end": 54,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_set_preset_mode",
+      "line_end": 153,
+      "line_start": 153
+    },
+    "9425188b:async_set_preset_mode:1:155": {
+      "col_end": 9,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_set_preset_mode",
+      "line_end": 159,
+      "line_start": 155
+    },
+    "9425188b:async_set_preset_mode:2:160": {
+      "col_end": 86,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_set_preset_mode",
+      "line_end": 160,
+      "line_start": 160
+    },
+    "9425188b:async_set_preset_mode:2:82": {
+      "col_end": 86,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_set_preset_mode",
+      "line_end": 82,
+      "line_start": 82
+    },
+    "9425188b:async_set_preset_mode:3:161": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_set_preset_mode",
+      "line_end": 161,
+      "line_start": 161
+    },
+    "9425188b:async_set_preset_mode:3:83": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_set_preset_mode",
+      "line_end": 83,
+      "line_start": 83
+    },
+    "9425188b:async_turn_off:0:183": {
+      "col_end": 40,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_turn_off",
+      "line_end": 183,
+      "line_start": 183
+    },
+    "9425188b:async_turn_off:1:185": {
+      "col_end": 81,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_turn_off",
+      "line_end": 185,
+      "line_start": 185
+    },
+    "9425188b:async_turn_off:2:124": {
+      "col_end": 68,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_turn_off",
+      "line_end": 124,
+      "line_start": 124
+    },
+    "9425188b:async_turn_off:2:186": {
+      "col_end": 68,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_turn_off",
+      "line_end": 186,
+      "line_start": 186
+    },
+    "9425188b:async_turn_off:3:125": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_turn_off",
+      "line_end": 125,
+      "line_start": 125
+    },
+    "9425188b:async_turn_off:3:187": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_turn_off",
+      "line_end": 187,
+      "line_start": 187
+    },
+    "9425188b:async_turn_on:0:170": {
+      "col_end": 39,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_turn_on",
+      "line_end": 170,
+      "line_start": 170
+    },
+    "9425188b:async_turn_on:1:172": {
+      "col_end": 9,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_turn_on",
+      "line_end": 177,
+      "line_start": 172
+    },
+    "9425188b:async_turn_on:2:117": {
+      "col_end": 67,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_turn_on",
+      "line_end": 117,
+      "line_start": 117
+    },
+    "9425188b:async_turn_on:2:178": {
+      "col_end": 67,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_turn_on",
+      "line_end": 178,
+      "line_start": 178
+    },
+    "9425188b:async_turn_on:3:118": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_turn_on",
+      "line_end": 118,
+      "line_start": 118
+    },
+    "9425188b:async_turn_on:3:179": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_turn_on",
+      "line_end": 179,
+      "line_start": 179
+    },
+    "9da22f42:_async_setup_update_entity:4:82": {
+      "col_end": 19,
+      "col_start": 8,
+      "file": "data/repo_snapshot/esphome/update.py",
+      "function": "_async_setup_update_entity",
+      "line_end": 83,
+      "line_start": 82
+    },
+    "9da22f42:_handle_device_update:2:185": {
+      "col_end": 28,
+      "col_start": 8,
+      "file": "data/repo_snapshot/esphome/update.py",
+      "function": "_handle_device_update",
+      "line_end": 185,
+      "line_start": 185
+    },
+    "9da22f42:_handle_device_update:3:186": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/esphome/update.py",
+      "function": "_handle_device_update",
+      "line_end": 186,
+      "line_start": 186
+    },
+    "9da22f42:async_setup_entry:7:71": {
+      "col_end": 81,
+      "col_start": 4,
+      "file": "data/repo_snapshot/esphome/update.py",
+      "function": "async_setup_entry",
+      "line_end": 86,
+      "line_start": 71
+    },
+    "ab8f4bde:_async_handle_event:0:179": {
+      "col_end": 71,
+      "col_start": 8,
+      "file": "data/repo_snapshot/xiaomi_ble/event.py",
+      "function": "_async_handle_event",
+      "line_end": 179,
+      "line_start": 179
+    },
+    "ab8f4bde:_async_handle_event:1:180": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/xiaomi_ble/event.py",
+      "function": "_async_handle_event",
+      "line_end": 180,
+      "line_start": 180
+    },
+    "bb8906f4:sensor_update_to_bluetooth_data_update:0:173": {
+      "col_end": 61,
+      "col_start": 4,
+      "file": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+      "function": "sensor_update_to_bluetooth_data_update",
+      "line_end": 173,
+      "line_start": 173
+    },
+    "bb8906f4:sensor_update_to_bluetooth_data_update:1:174": {
+      "col_end": 80,
+      "col_start": 4,
+      "file": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+      "function": "sensor_update_to_bluetooth_data_update",
+      "line_end": 174,
+      "line_start": 174
+    },
+    "bb8906f4:sensor_update_to_bluetooth_data_update:2:175": {
+      "col_end": 20,
+      "col_start": 4,
+      "file": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+      "function": "sensor_update_to_bluetooth_data_update",
+      "line_end": 175,
+      "line_start": 175
+    },
+    "bb8906f4:sensor_update_to_bluetooth_data_update:3.0:177": {
+      "col_end": 61,
+      "col_start": 8,
+      "file": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+      "function": "sensor_update_to_bluetooth_data_update",
+      "line_end": 177,
+      "line_start": 177
+    },
+    "bb8906f4:sensor_update_to_bluetooth_data_update:3.1:178": {
+      "col_end": 53,
+      "col_start": 8,
+      "file": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+      "function": "sensor_update_to_bluetooth_data_update",
+      "line_end": 178,
+      "line_start": 178
+    },
+    "bb8906f4:sensor_update_to_bluetooth_data_update:3:176": {
+      "col_end": 53,
+      "col_start": 4,
+      "file": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+      "function": "sensor_update_to_bluetooth_data_update",
+      "line_end": 178,
+      "line_start": 176
+    },
+    "bb8906f4:sensor_update_to_bluetooth_data_update:4.0:180": {
+      "col_end": 61,
+      "col_start": 8,
+      "file": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+      "function": "sensor_update_to_bluetooth_data_update",
+      "line_end": 180,
+      "line_start": 180
+    },
+    "bb8906f4:sensor_update_to_bluetooth_data_update:4.1.0:182": {
+      "col_end": 53,
+      "col_start": 12,
+      "file": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+      "function": "sensor_update_to_bluetooth_data_update",
+      "line_end": 182,
+      "line_start": 182
+    },
+    "bb8906f4:sensor_update_to_bluetooth_data_update:4.1:181": {
+      "col_end": 53,
+      "col_start": 8,
+      "file": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+      "function": "sensor_update_to_bluetooth_data_update",
+      "line_end": 182,
+      "line_start": 181
+    },
+    "bb8906f4:sensor_update_to_bluetooth_data_update:4:179": {
+      "col_end": 53,
+      "col_start": 4,
+      "file": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+      "function": "sensor_update_to_bluetooth_data_update",
+      "line_end": 182,
+      "line_start": 179
+    },
+    "bb8906f4:sensor_update_to_bluetooth_data_update:5:184": {
+      "col_end": 5,
+      "col_start": 4,
+      "file": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+      "function": "sensor_update_to_bluetooth_data_update",
+      "line_end": 192,
+      "line_start": 184
+    },
+    "d9c4917e:sensor_update_to_bluetooth_data_update:0:111": {
+      "col_end": 61,
+      "col_start": 4,
+      "file": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+      "function": "sensor_update_to_bluetooth_data_update",
+      "line_end": 111,
+      "line_start": 111
+    },
+    "d9c4917e:sensor_update_to_bluetooth_data_update:1:112": {
+      "col_end": 5,
+      "col_start": 4,
+      "file": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+      "function": "sensor_update_to_bluetooth_data_update",
+      "line_end": 132,
+      "line_start": 112
+    },
+    "e3b5e3c6:_async_update_data:0:92": {
+      "col_end": 42,
+      "col_start": 8,
+      "file": "data/repo_snapshot/airthings_ble/coordinator.py",
+      "function": "_async_update_data",
+      "line_end": 92,
+      "line_start": 92
+    },
+    "e3b5e3c6:_async_update_data:1.0:94": {
+      "col_end": 70,
+      "col_start": 12,
+      "file": "data/repo_snapshot/airthings_ble/coordinator.py",
+      "function": "_async_update_data",
+      "line_end": 94,
+      "line_start": 94
+    },
+    "e3b5e3c6:_async_update_data:1.0:96": {
+      "col_end": 71,
+      "col_start": 12,
+      "file": "data/repo_snapshot/airthings_ble/coordinator.py",
+      "function": "_async_update_data",
+      "line_end": 96,
+      "line_start": 96
+    },
+    "e3b5e3c6:_async_update_data:1:93": {
+      "col_end": 71,
+      "col_start": 8,
+      "file": "data/repo_snapshot/airthings_ble/coordinator.py",
+      "function": "_async_update_data",
+      "line_end": 96,
+      "line_start": 93
+    },
+    "e3b5e3c6:_async_update_data:2:97": {
+      "col_end": 19,
+      "col_start": 8,
+      "file": "data/repo_snapshot/airthings_ble/coordinator.py",
+      "function": "_async_update_data",
+      "line_end": 97,
+      "line_start": 97
+    },
+    "f20e5673:_on_connect:17.1:607": {
+      "col_end": 13,
+      "col_start": 12,
+      "file": "data/repo_snapshot/esphome/manager.py",
+      "function": "_on_connect",
+      "line_end": 616,
+      "line_start": 607
+    },
+    "f20e5673:_on_connect:17.2:617": {
+      "col_end": 34,
+      "col_start": 12,
+      "file": "data/repo_snapshot/esphome/manager.py",
+      "function": "_on_connect",
+      "line_end": 617,
+      "line_start": 617
+    },
+    "f20e5673:_on_connect:7:553": {
+      "col_end": 22,
+      "col_start": 8,
+      "file": "data/repo_snapshot/esphome/manager.py",
+      "function": "_on_connect",
+      "line_end": 553,
+      "line_start": 553
+    },
+    "f20e5673:_start_reauth_and_disconnect:1:805": {
+      "col_end": 48,
+      "col_start": 8,
+      "file": "data/repo_snapshot/esphome/manager.py",
+      "function": "_start_reauth_and_disconnect",
+      "line_end": 805,
+      "line_start": 805
+    },
+    "f20e5673:_start_reauth_and_disconnect:2:806": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/esphome/manager.py",
+      "function": "_start_reauth_and_disconnect",
+      "line_end": 806,
+      "line_start": 806
+    },
+    "f20e5673:async_on_state_subscription:2:480": {
+      "col_end": 9,
+      "col_start": 8,
+      "file": "data/repo_snapshot/esphome/manager.py",
+      "function": "async_on_state_subscription",
+      "line_end": 486,
+      "line_start": 480
+    },
+    "f20e5673:cleanup_instance:1:1369": {
+      "col_end": 29,
+      "col_start": 4,
+      "file": "data/repo_snapshot/esphome/manager.py",
+      "function": "cleanup_instance",
+      "line_end": 1369,
+      "line_start": 1369
+    },
+    "f20e5673:cleanup_instance:4:1373": {
+      "col_end": 30,
+      "col_start": 4,
+      "file": "data/repo_snapshot/esphome/manager.py",
+      "function": "cleanup_instance",
+      "line_end": 1373,
+      "line_start": 1373
+    },
+    "f20e5673:cleanup_instance:5:1374": {
+      "col_end": 34,
+      "col_start": 4,
+      "file": "data/repo_snapshot/esphome/manager.py",
+      "function": "cleanup_instance",
+      "line_end": 1374,
+      "line_start": 1374
+    },
+    "f20e5673:on_connect:1.0:504": {
+      "col_end": 36,
+      "col_start": 12,
+      "file": "data/repo_snapshot/esphome/manager.py",
+      "function": "on_connect",
+      "line_end": 504,
+      "line_start": 504
+    },
+    "f20e5673:on_connect:1.0:506": {
+      "col_end": 79,
+      "col_start": 12,
+      "file": "data/repo_snapshot/esphome/manager.py",
+      "function": "on_connect",
+      "line_end": 506,
+      "line_start": 506
+    },
+    "f20e5673:on_connect:1.0:509": {
+      "col_end": 13,
+      "col_start": 12,
+      "file": "data/repo_snapshot/esphome/manager.py",
+      "function": "on_connect",
+      "line_end": 511,
+      "line_start": 509
+    },
+    "f20e5673:on_connect:1.1:507": {
+      "col_end": 53,
+      "col_start": 12,
+      "file": "data/repo_snapshot/esphome/manager.py",
+      "function": "on_connect",
+      "line_end": 507,
+      "line_start": 507
+    },
+    "f20e5673:on_connect:1.1:513": {
+      "col_end": 39,
+      "col_start": 12,
+      "file": "data/repo_snapshot/esphome/manager.py",
+      "function": "on_connect",
+      "line_end": 513,
+      "line_start": 513
+    },
+    "f20e5673:on_connect:1:503": {
+      "col_end": 39,
+      "col_start": 8,
+      "file": "data/repo_snapshot/esphome/manager.py",
+      "function": "on_connect",
+      "line_end": 513,
+      "line_start": 503
+    },
+    "f8314a32:_needs_poll:0:137": {
+      "col_end": 9,
+      "col_start": 8,
+      "file": "data/repo_snapshot/xiaomi_ble/__init__.py",
+      "function": "_needs_poll",
+      "line_end": 145,
+      "line_start": 137
+    },
+    "f8314a32:async_unload_entry:0:191": {
+      "col_end": 32,
+      "col_start": 4,
+      "file": "data/repo_snapshot/xiaomi_ble/__init__.py",
+      "function": "async_unload_entry",
+      "line_end": 191,
+      "line_start": 191
+    }
+  },
+  "nodes": {
+    "0e4b12a7:_handle_coordinator_update:0:136": {
+      "col_end": 55,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 136,
+      "line_start": 136,
+      "marker_refs": [
+        "marker_c98ac57c4c"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:0:136",
+      "raw_repr": "Expr(Constant('Handle updated data from the coordinator.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "0e4b12a7:_handle_coordinator_update:0:217": {
+      "col_end": 55,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 217,
+      "line_start": 217,
+      "marker_refs": [
+        "marker_3c44b8ccd8"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:0:217",
+      "raw_repr": "Expr(Constant('Handle updated data from the coordinator.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "0e4b12a7:_handle_coordinator_update:0:305": {
+      "col_end": 55,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 305,
+      "line_start": 305,
+      "marker_refs": [
+        "marker_643e95f17b"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:0:305",
+      "raw_repr": "Expr(Constant('Handle updated data from the coordinator.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "0e4b12a7:_handle_coordinator_update:1:137": {
+      "col_end": 57,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 137,
+      "line_start": 137,
+      "marker_refs": [
+        "marker_c98ac57c4c"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:1:137",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_is_closing', Store())], Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'is_closing', Load())))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:1:218": {
+      "col_end": 40,
+      "col_start": 8,
+      "defs": [
+        "_tilt"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 218,
+      "line_start": 218,
+      "marker_refs": [
+        "marker_3c44b8ccd8"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:1:218",
+      "raw_repr": "Assign([Name('_tilt', Store())], Subscript(Attribute(Name('self', Load()), 'parsed_data', Load()), Constant('tilt'), Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:1:306": {
+      "col_end": 57,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 306,
+      "line_start": 306,
+      "marker_refs": [
+        "marker_643e95f17b"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:1:306",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_is_closing', Store())], Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'is_closing', Load())))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:2:138": {
+      "col_end": 57,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 138,
+      "line_start": 138,
+      "marker_refs": [
+        "marker_c98ac57c4c"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:2:138",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_is_opening', Store())], Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'is_opening', Load())))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:2:219": {
+      "col_end": 54,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 219,
+      "line_start": 219,
+      "marker_refs": [
+        "marker_3c44b8ccd8"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:2:219",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_current_cover_tilt_position', Store())], Name('_tilt', Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "_tilt",
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:2:307": {
+      "col_end": 57,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 307,
+      "line_start": 307,
+      "marker_refs": [
+        "marker_643e95f17b"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:2:307",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_is_opening', Store())], Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'is_opening', Load())))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:3:139": {
+      "col_end": 72,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 139,
+      "line_start": 139,
+      "marker_refs": [
+        "marker_c98ac57c4c"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:3:139",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_current_cover_position', Store())], Subscript(Attribute(Name('self', Load()), 'parsed_data', Load()), Constant('position'), Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:3:220": {
+      "col_end": 9,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 222,
+      "line_start": 220,
+      "marker_refs": [
+        "marker_3c44b8ccd8"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:3:220",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_is_closed', Store())], BoolOp(Or(), [Compare(Name('_tilt', Load()), [Lt()], [Attribute(Name('self', Load()), 'CLOSED_DOWN_THRESHOLD', Load())]), Compare(Name('_tilt', Load()), [Gt()], [Attribute(Name('self', Load()), 'CLOSED_UP_THRESHOLD', Load())])]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "_tilt",
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:3:308": {
+      "col_end": 72,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 308,
+      "line_start": 308,
+      "marker_refs": [
+        "marker_643e95f17b"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:3:308",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_current_cover_position', Store())], Subscript(Attribute(Name('self', Load()), 'parsed_data', Load()), Constant('position'), Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:4:140": {
+      "col_end": 65,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 140,
+      "line_start": 140,
+      "marker_refs": [
+        "marker_c98ac57c4c"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:4:140",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_is_closed', Store())], Compare(Subscript(Attribute(Name('self', Load()), 'parsed_data', Load()), Constant('position'), Load()), [LtE()], [Constant(20)]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:4:223": {
+      "col_end": 78,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 223,
+      "line_start": 223,
+      "marker_refs": [
+        "marker_3c44b8ccd8"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:4:223",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_is_opening', Store())], Subscript(Subscript(Attribute(Name('self', Load()), 'parsed_data', Load()), Constant('motionDirection'), Load()), Constant('opening'), Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:4:309": {
+      "col_end": 65,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 309,
+      "line_start": 309,
+      "marker_refs": [
+        "marker_643e95f17b"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:4:309",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_is_closed', Store())], Compare(Subscript(Attribute(Name('self', Load()), 'parsed_data', Load()), Constant('position'), Load()), [LtE()], [Constant(20)]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:5:142": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 142,
+      "line_start": 142,
+      "marker_refs": [
+        "marker_c98ac57c4c"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:5:142",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:5:224": {
+      "col_end": 78,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 224,
+      "line_start": 224,
+      "marker_refs": [
+        "marker_3c44b8ccd8"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:5:224",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_is_closing', Store())], Subscript(Subscript(Attribute(Name('self', Load()), 'parsed_data', Load()), Constant('motionDirection'), Load()), Constant('closing'), Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:5:311": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 311,
+      "line_start": 311,
+      "marker_refs": [
+        "marker_643e95f17b"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:5:311",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:6:225": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 225,
+      "line_start": 225,
+      "marker_refs": [
+        "marker_3c44b8ccd8"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:6:225",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:async_stop_cover:0:284": {
+      "col_end": 46,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "async_stop_cover",
+      "line_end": 284,
+      "line_start": 284,
+      "marker_refs": [],
+      "node_id": "0e4b12a7:async_stop_cover:0:284",
+      "raw_repr": "Expr(Constant('Stop the moving of roller shade.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "0e4b12a7:async_stop_cover:1:117": {
+      "col_end": 60,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "async_stop_cover",
+      "line_end": 117,
+      "line_start": 117,
+      "marker_refs": [],
+      "node_id": "0e4b12a7:async_stop_cover:1:117",
+      "raw_repr": "Expr(Call(Attribute(Name('_LOGGER', Load()), 'debug', Load()), [Constant('Switchbot to stop %s'), Attribute(Name('self', Load()), '_address', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "_LOGGER",
+        "self"
+      ]
+    },
+    "0e4b12a7:async_stop_cover:1:286": {
+      "col_end": 73,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "async_stop_cover",
+      "line_end": 286,
+      "line_start": 286,
+      "marker_refs": [],
+      "node_id": "0e4b12a7:async_stop_cover:1:286",
+      "raw_repr": "Expr(Call(Attribute(Name('_LOGGER', Load()), 'debug', Load()), [Constant('Switchbot to stop roller shade %s'), Attribute(Name('self', Load()), '_address', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "_LOGGER",
+        "self"
+      ]
+    },
+    "0e4b12a7:async_stop_cover:2:118": {
+      "col_end": 64,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "async_stop_cover",
+      "line_end": 118,
+      "line_start": 118,
+      "marker_refs": [
+        "marker_1a328b14d6"
+      ],
+      "node_id": "0e4b12a7:async_stop_cover:2:118",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_last_run_success', Store())], Call(Name('bool', Load()), [Await(Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'stop', Load())))]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "bool",
+        "self"
+      ]
+    },
+    "0e4b12a7:async_stop_cover:2:287": {
+      "col_end": 64,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "async_stop_cover",
+      "line_end": 287,
+      "line_start": 287,
+      "marker_refs": [
+        "marker_1f2c3503f3"
+      ],
+      "node_id": "0e4b12a7:async_stop_cover:2:287",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_last_run_success', Store())], Call(Name('bool', Load()), [Await(Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'stop', Load())))]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "bool",
+        "self"
+      ]
+    },
+    "0e4b12a7:async_stop_cover:3:119": {
+      "col_end": 57,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "async_stop_cover",
+      "line_end": 119,
+      "line_start": 119,
+      "marker_refs": [],
+      "node_id": "0e4b12a7:async_stop_cover:3:119",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_is_opening', Store())], Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'is_opening', Load())))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:async_stop_cover:3:288": {
+      "col_end": 57,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "async_stop_cover",
+      "line_end": 288,
+      "line_start": 288,
+      "marker_refs": [],
+      "node_id": "0e4b12a7:async_stop_cover:3:288",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_is_opening', Store())], Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'is_opening', Load())))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:async_stop_cover:4:120": {
+      "col_end": 57,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "async_stop_cover",
+      "line_end": 120,
+      "line_start": 120,
+      "marker_refs": [],
+      "node_id": "0e4b12a7:async_stop_cover:4:120",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_is_closing', Store())], Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'is_closing', Load())))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:async_stop_cover:5:121": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "async_stop_cover",
+      "line_end": 121,
+      "line_start": 121,
+      "marker_refs": [],
+      "node_id": "0e4b12a7:async_stop_cover:5:121",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:async_stop_cover_tilt:1:202": {
+      "col_end": 60,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "async_stop_cover_tilt",
+      "line_end": 202,
+      "line_start": 202,
+      "marker_refs": [],
+      "node_id": "0e4b12a7:async_stop_cover_tilt:1:202",
+      "raw_repr": "Expr(Call(Attribute(Name('_LOGGER', Load()), 'debug', Load()), [Constant('Switchbot to stop %s'), Attribute(Name('self', Load()), '_address', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "_LOGGER",
+        "self"
+      ]
+    },
+    "0e4b12a7:async_stop_cover_tilt:2:203": {
+      "col_end": 64,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "async_stop_cover_tilt",
+      "line_end": 203,
+      "line_start": 203,
+      "marker_refs": [
+        "marker_c586b78c6d"
+      ],
+      "node_id": "0e4b12a7:async_stop_cover_tilt:2:203",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_last_run_success', Store())], Call(Name('bool', Load()), [Await(Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'stop', Load())))]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "bool",
+        "self"
+      ]
+    },
+    "199997a2:_async_clear_dynamic_encryption_key:10.0:136": {
+      "col_end": 27,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "external_call_ble"
+      ],
+      "file_path": "data/repo_snapshot/esphome/__init__.py",
+      "function_name": "_async_clear_dynamic_encryption_key",
+      "line_end": 136,
+      "line_start": 136,
+      "marker_refs": [
+        "marker_c5787dee94",
+        "marker_4b6afcdb38"
+      ],
+      "node_id": "199997a2:_async_clear_dynamic_encryption_key:10.0:136",
+      "raw_repr": "Expr(Await(Call(Attribute(Name('cli', Load()), 'connect', Load()))))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "cli"
+      ]
+    },
+    "199997a2:_async_clear_dynamic_encryption_key:10.0:145": {
+      "col_end": 9,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/__init__.py",
+      "function_name": "_async_clear_dynamic_encryption_key",
+      "line_end": 149,
+      "line_start": 145,
+      "marker_refs": [],
+      "node_id": "199997a2:_async_clear_dynamic_encryption_key:10.0:145",
+      "raw_repr": "Expr(Call(Attribute(Name('_LOGGER', Load()), 'debug', Load()), [Constant('Could not connect to ESPHome device %s to clear dynamic encryption key: %s'), Attribute(Name('entry', Load()), 'unique_id', Load()), Name('exc', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "_LOGGER",
+        "entry",
+        "exc"
+      ]
+    },
+    "199997a2:_async_clear_dynamic_encryption_key:10.0:152": {
+      "col_end": 30,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "external_call_ble"
+      ],
+      "file_path": "data/repo_snapshot/esphome/__init__.py",
+      "function_name": "_async_clear_dynamic_encryption_key",
+      "line_end": 152,
+      "line_start": 152,
+      "marker_refs": [
+        "marker_b4b98f46fc",
+        "marker_48dcd06472"
+      ],
+      "node_id": "199997a2:_async_clear_dynamic_encryption_key:10.0:152",
+      "raw_repr": "Expr(Await(Call(Attribute(Name('cli', Load()), 'disconnect', Load()))))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "cli"
+      ]
+    },
+    "199997a2:_async_clear_dynamic_encryption_key:10.1.0:139": {
+      "col_end": 13,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/__init__.py",
+      "function_name": "_async_clear_dynamic_encryption_key",
+      "line_end": 142,
+      "line_start": 139,
+      "marker_refs": [],
+      "node_id": "199997a2:_async_clear_dynamic_encryption_key:10.1.0:139",
+      "raw_repr": "Expr(Call(Attribute(Name('_LOGGER', Load()), 'debug', Load()), [Constant('Could not clear dynamic encryption key for ESPHome device %s: Device rejected key removal'), Attribute(Name('entry', Load()), 'unique_id', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "_LOGGER",
+        "entry"
+      ]
+    },
+    "199997a2:_async_clear_dynamic_encryption_key:10.1.1:143": {
+      "col_end": 18,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/__init__.py",
+      "function_name": "_async_clear_dynamic_encryption_key",
+      "line_end": 143,
+      "line_start": 143,
+      "marker_refs": [],
+      "node_id": "199997a2:_async_clear_dynamic_encryption_key:10.1.1:143",
+      "raw_repr": "Return()",
+      "stmt_kind": "Return",
+      "uses": []
+    },
+    "199997a2:_async_clear_dynamic_encryption_key:10.1:138": {
+      "col_end": 18,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/__init__.py",
+      "function_name": "_async_clear_dynamic_encryption_key",
+      "line_end": 143,
+      "line_start": 138,
+      "marker_refs": [],
+      "node_id": "199997a2:_async_clear_dynamic_encryption_key:10.1:138",
+      "raw_repr": "If(UnaryOp(Not(), Await(Call(Attribute(Name('cli', Load()), 'noise_encryption_set_key', Load()), [Constant(b'')]))), [Expr(Call(Attribute(Name('_LOGGER', Load()), 'debug', Load()), [Constant('Could not clear dynamic encryption key for ESPHome device %s: Device rejected key removal'), Attribute(Name('entry', Load()), 'unique_id', Load())])), Return()])",
+      "stmt_kind": "If",
+      "uses": [
+        "_LOGGER",
+        "cli",
+        "entry"
+      ]
+    },
+    "199997a2:_async_clear_dynamic_encryption_key:10.1:150": {
+      "col_end": 14,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/__init__.py",
+      "function_name": "_async_clear_dynamic_encryption_key",
+      "line_end": 150,
+      "line_start": 150,
+      "marker_refs": [],
+      "node_id": "199997a2:_async_clear_dynamic_encryption_key:10.1:150",
+      "raw_repr": "Return()",
+      "stmt_kind": "Return",
+      "uses": []
+    },
+    "199997a2:_async_clear_dynamic_encryption_key:10:135": {
+      "col_end": 30,
+      "col_start": 4,
+      "defs": [],
+      "effects": [
+        "external_call_ble"
+      ],
+      "file_path": "data/repo_snapshot/esphome/__init__.py",
+      "function_name": "_async_clear_dynamic_encryption_key",
+      "line_end": 152,
+      "line_start": 135,
+      "marker_refs": [
+        "marker_c5787dee94",
+        "marker_4b6afcdb38"
+      ],
+      "node_id": "199997a2:_async_clear_dynamic_encryption_key:10:135",
+      "raw_repr": "Try([Expr(Await(Call(Attribute(Name('cli', Load()), 'connect', Load())))), If(UnaryOp(Not(), Await(Call(Attribute(Name('cli', Load()), 'noise_encryption_set_key', Load()), [Constant(b'')]))), [Expr(Call(Attribute(Name('_LOGGER', Load()), 'debug', Load()), [Constant('Could not clear dynamic encryption key for ESPHome device %s: Device rejected key removal'), Attribute(Name('entry', Load()), 'unique_id', Load())])), Return()])], [ExceptHandler(Name('APIConnectionError', Load()), 'exc', [Expr(Call(Attribute(Name('_LOGGER', Load()), 'debug', Load()), [Constant('Could not connect to ESPHome device %s to clear dynamic encryption key: %s'), Attribute(Name('entry', Load()), 'unique_id', Load()), Name('exc', Load())])), Return()])], [], [Expr(Await(Call(Attribute(Name('cli', Load()), 'disconnect', Load()))))])",
+      "stmt_kind": "Try",
+      "uses": [
+        "APIConnectionError",
+        "_LOGGER",
+        "cli",
+        "entry",
+        "exc"
+      ]
+    },
+    "199997a2:_async_clear_dynamic_encryption_key:9:125": {
+      "col_end": 5,
+      "col_start": 4,
+      "defs": [
+        "cli"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/__init__.py",
+      "function_name": "_async_clear_dynamic_encryption_key",
+      "line_end": 133,
+      "line_start": 125,
+      "marker_refs": [],
+      "node_id": "199997a2:_async_clear_dynamic_encryption_key:9:125",
+      "raw_repr": "Assign([Name('cli', Store())], Call(Name('APIClient', Load()), [Name('host', Load()), Name('port', Load()), Name('password', Load())], [keyword('client_info', Name('CLIENT_INFO', Load())), keyword('zeroconf_instance', Name('zeroconf_instance', Load())), keyword('noise_psk', Name('noise_psk', Load())), keyword('timezone', Attribute(Attribute(Name('hass', Load()), 'config', Load()), 'time_zone', Load()))]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "APIClient",
+        "CLIENT_INFO",
+        "hass",
+        "host",
+        "noise_psk",
+        "password",
+        "port",
+        "zeroconf_instance"
+      ]
+    },
+    "199997a2:async_remove_entry:0:94": {
+      "col_end": 41,
+      "col_start": 4,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/__init__.py",
+      "function_name": "async_remove_entry",
+      "line_end": 94,
+      "line_start": 94,
+      "marker_refs": [
+        "marker_5024625522"
+      ],
+      "node_id": "199997a2:async_remove_entry:0:94",
+      "raw_repr": "Expr(Constant('Remove an esphome config entry.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "199997a2:async_unload_entry:0:84": {
+      "col_end": 41,
+      "col_start": 4,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/__init__.py",
+      "function_name": "async_unload_entry",
+      "line_end": 84,
+      "line_start": 84,
+      "marker_refs": [
+        "marker_0fccec14d3"
+      ],
+      "node_id": "199997a2:async_unload_entry:0:84",
+      "raw_repr": "Expr(Constant('Unload an esphome config entry.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "2d864ced:_stop_udp_server:2.0:749": {
+      "col_end": 36,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stop_udp_server",
+      "line_end": 749,
+      "line_start": 749,
+      "marker_refs": [
+        "marker_f89520721b"
+      ],
+      "node_id": "2d864ced:_stop_udp_server:2.0:749",
+      "raw_repr": "Expr(Call(Attribute(Attribute(Name('self', Load()), '_udp_server', Load()), 'close', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "2d864ced:_stop_udp_server:2.0:751": {
+      "col_end": 35,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stop_udp_server",
+      "line_end": 751,
+      "line_start": 751,
+      "marker_refs": [],
+      "node_id": "2d864ced:_stop_udp_server:2.0:751",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_udp_server', Store())], Constant(None))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "2d864ced:_stop_udp_server:2:748": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stop_udp_server",
+      "line_end": 751,
+      "line_start": 748,
+      "marker_refs": [
+        "marker_f89520721b"
+      ],
+      "node_id": "2d864ced:_stop_udp_server:2:748",
+      "raw_repr": "Try([Expr(Call(Attribute(Attribute(Name('self', Load()), '_udp_server', Load()), 'close', Load())))], [], [], [Assign([Attribute(Name('self', Load()), '_udp_server', Store())], Constant(None))])",
+      "stmt_kind": "Try",
+      "uses": [
+        "self"
+      ]
+    },
+    "2d864ced:_stream_tts_audio:2.0.0:654": {
+      "col_end": 22,
+      "col_start": 16,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stream_tts_audio",
+      "line_end": 654,
+      "line_start": 654,
+      "marker_refs": [],
+      "node_id": "2d864ced:_stream_tts_audio:2.0.0:654",
+      "raw_repr": "Return()",
+      "stmt_kind": "Return",
+      "uses": []
+    },
+    "2d864ced:_stream_tts_audio:2.0:653": {
+      "col_end": 22,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stream_tts_audio",
+      "line_end": 654,
+      "line_start": 653,
+      "marker_refs": [],
+      "node_id": "2d864ced:_stream_tts_audio:2.0:653",
+      "raw_repr": "If(UnaryOp(Not(), Attribute(Name('self', Load()), '_is_running', Load())), [Return()])",
+      "stmt_kind": "If",
+      "uses": [
+        "self"
+      ]
+    },
+    "2d864ced:_stream_tts_audio:2.0:693": {
+      "col_end": 18,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stream_tts_audio",
+      "line_end": 693,
+      "line_start": 693,
+      "marker_refs": [],
+      "node_id": "2d864ced:_stream_tts_audio:2.0:693",
+      "raw_repr": "Return()",
+      "stmt_kind": "Return",
+      "uses": []
+    },
+    "2d864ced:_stream_tts_audio:2.0:695": {
+      "col_end": 13,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stream_tts_audio",
+      "line_end": 697,
+      "line_start": 695,
+      "marker_refs": [],
+      "node_id": "2d864ced:_stream_tts_audio:2.0:695",
+      "raw_repr": "Expr(Call(Attribute(Attribute(Name('self', Load()), 'cli', Load()), 'send_voice_assistant_event', Load()), [Attribute(Name('VoiceAssistantEventType', Load()), 'VOICE_ASSISTANT_TTS_STREAM_END', Load()), Dict()]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "VoiceAssistantEventType",
+        "self"
+      ]
+    },
+    "2d864ced:_stream_tts_audio:2.1.0:657": {
+      "col_end": 17,
+      "col_start": 16,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stream_tts_audio",
+      "line_end": 659,
+      "line_start": 657,
+      "marker_refs": [],
+      "node_id": "2d864ced:_stream_tts_audio:2.1.0:657",
+      "raw_repr": "Expr(Call(Attribute(Name('_LOGGER', Load()), 'error', Load()), [Constant('Only WAV audio can be streamed, got %s'), Attribute(Name('tts_result', Load()), 'extension', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "_LOGGER",
+        "tts_result"
+      ]
+    },
+    "2d864ced:_stream_tts_audio:2.1.1:660": {
+      "col_end": 22,
+      "col_start": 16,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stream_tts_audio",
+      "line_end": 660,
+      "line_start": 660,
+      "marker_refs": [],
+      "node_id": "2d864ced:_stream_tts_audio:2.1.1:660",
+      "raw_repr": "Return()",
+      "stmt_kind": "Return",
+      "uses": []
+    },
+    "2d864ced:_stream_tts_audio:2.1:656": {
+      "col_end": 22,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stream_tts_audio",
+      "line_end": 660,
+      "line_start": 656,
+      "marker_refs": [],
+      "node_id": "2d864ced:_stream_tts_audio:2.1:656",
+      "raw_repr": "If(Compare(Attribute(Name('tts_result', Load()), 'extension', Load()), [NotEq()], [Constant('wav')]), [Expr(Call(Attribute(Name('_LOGGER', Load()), 'error', Load()), [Constant('Only WAV audio can be streamed, got %s'), Attribute(Name('tts_result', Load()), 'extension', Load())])), Return()])",
+      "stmt_kind": "If",
+      "uses": [
+        "_LOGGER",
+        "tts_result"
+      ]
+    },
+    "2d864ced:_stream_tts_audio:2.2:662": {
+      "col_end": 88,
+      "col_start": 12,
+      "defs": [
+        "chunk",
+        "data"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stream_tts_audio",
+      "line_end": 662,
+      "line_start": 662,
+      "marker_refs": [],
+      "node_id": "2d864ced:_stream_tts_audio:2.2:662",
+      "raw_repr": "Assign([Name('data', Store())], Call(Attribute(Constant(b''), 'join', Load()), [ListComp(Name('chunk', Load()), [comprehension(Name('chunk', Store()), Call(Attribute(Name('tts_result', Load()), 'async_stream_result', Load())), [], 1)])]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "chunk",
+        "tts_result"
+      ]
+    },
+    "2d864ced:_stream_tts_audio:2.3.0.0:670": {
+      "col_end": 74,
+      "col_start": 20,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stream_tts_audio",
+      "line_end": 670,
+      "line_start": 670,
+      "marker_refs": [],
+      "node_id": "2d864ced:_stream_tts_audio:2.3.0.0:670",
+      "raw_repr": "Expr(Call(Attribute(Name('_LOGGER', Load()), 'error', Load()), [Constant('Can only stream 16Khz 16-bit mono WAV')]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "_LOGGER"
+      ]
+    },
+    "2d864ced:_stream_tts_audio:2.3.0.1:671": {
+      "col_end": 26,
+      "col_start": 20,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stream_tts_audio",
+      "line_end": 671,
+      "line_start": 671,
+      "marker_refs": [],
+      "node_id": "2d864ced:_stream_tts_audio:2.3.0.1:671",
+      "raw_repr": "Return()",
+      "stmt_kind": "Return",
+      "uses": []
+    },
+    "2d864ced:_stream_tts_audio:2.3.0:665": {
+      "col_end": 26,
+      "col_start": 16,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stream_tts_audio",
+      "line_end": 671,
+      "line_start": 665,
+      "marker_refs": [],
+      "node_id": "2d864ced:_stream_tts_audio:2.3.0:665",
+      "raw_repr": "If(BoolOp(Or(), [Compare(Call(Attribute(Name('wav_file', Load()), 'getframerate', Load())), [NotEq()], [Name('sample_rate', Load())]), Compare(Call(Attribute(Name('wav_file', Load()), 'getsampwidth', Load())), [NotEq()], [Name('sample_width', Load())]), Compare(Call(Attribute(Name('wav_file', Load()), 'getnchannels', Load())), [NotEq()], [Name('sample_channels', Load())])]), [Expr(Call(Attribute(Name('_LOGGER', Load()), 'error', Load()), [Constant('Can only stream 16Khz 16-bit mono WAV')])), Return()])",
+      "stmt_kind": "If",
+      "uses": [
+        "_LOGGER",
+        "sample_channels",
+        "sample_rate",
+        "sample_width",
+        "wav_file"
+      ]
+    },
+    "2d864ced:_stream_tts_audio:2.3.1:673": {
+      "col_end": 82,
+      "col_start": 16,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stream_tts_audio",
+      "line_end": 673,
+      "line_start": 673,
+      "marker_refs": [],
+      "node_id": "2d864ced:_stream_tts_audio:2.3.1:673",
+      "raw_repr": "Expr(Call(Attribute(Name('_LOGGER', Load()), 'debug', Load()), [Constant('Streaming %s audio samples'), Call(Attribute(Name('wav_file', Load()), 'getnframes', Load()))]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "_LOGGER",
+        "wav_file"
+      ]
+    },
+    "2d864ced:_stream_tts_audio:2.3.2.0:676": {
+      "col_end": 66,
+      "col_start": 20,
+      "defs": [
+        "chunk"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stream_tts_audio",
+      "line_end": 676,
+      "line_start": 676,
+      "marker_refs": [],
+      "node_id": "2d864ced:_stream_tts_audio:2.3.2.0:676",
+      "raw_repr": "Assign([Name('chunk', Store())], Call(Attribute(Name('wav_file', Load()), 'readframes', Load()), [Name('samples_per_chunk', Load())]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "samples_per_chunk",
+        "wav_file"
+      ]
+    },
+    "2d864ced:_stream_tts_audio:2.3.2.1.0:678": {
+      "col_end": 29,
+      "col_start": 24,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stream_tts_audio",
+      "line_end": 678,
+      "line_start": 678,
+      "marker_refs": [],
+      "node_id": "2d864ced:_stream_tts_audio:2.3.2.1.0:678",
+      "raw_repr": "Break()",
+      "stmt_kind": "Break",
+      "uses": []
+    },
+    "2d864ced:_stream_tts_audio:2.3.2.1:677": {
+      "col_end": 29,
+      "col_start": 20,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stream_tts_audio",
+      "line_end": 678,
+      "line_start": 677,
+      "marker_refs": [],
+      "node_id": "2d864ced:_stream_tts_audio:2.3.2.1:677",
+      "raw_repr": "If(UnaryOp(Not(), Name('chunk', Load())), [Break()])",
+      "stmt_kind": "If",
+      "uses": [
+        "chunk"
+      ]
+    },
+    "2d864ced:_stream_tts_audio:2.3.2.2.0:681": {
+      "col_end": 64,
+      "col_start": 24,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stream_tts_audio",
+      "line_end": 681,
+      "line_start": 681,
+      "marker_refs": [],
+      "node_id": "2d864ced:_stream_tts_audio:2.3.2.2.0:681",
+      "raw_repr": "Expr(Call(Attribute(Attribute(Name('self', Load()), '_udp_server', Load()), 'send_audio_bytes', Load()), [Name('chunk', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "chunk",
+        "self"
+      ]
+    },
+    "2d864ced:_stream_tts_audio:2.3.2.2.0:683": {
+      "col_end": 66,
+      "col_start": 24,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stream_tts_audio",
+      "line_end": 683,
+      "line_start": 683,
+      "marker_refs": [],
+      "node_id": "2d864ced:_stream_tts_audio:2.3.2.2.0:683",
+      "raw_repr": "Expr(Call(Attribute(Attribute(Name('self', Load()), 'cli', Load()), 'send_voice_assistant_audio', Load()), [Name('chunk', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "chunk",
+        "self"
+      ]
+    },
+    "2d864ced:_stream_tts_audio:2.3.2.2:680": {
+      "col_end": 66,
+      "col_start": 20,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stream_tts_audio",
+      "line_end": 683,
+      "line_start": 680,
+      "marker_refs": [],
+      "node_id": "2d864ced:_stream_tts_audio:2.3.2.2:680",
+      "raw_repr": "If(Compare(Attribute(Name('self', Load()), '_udp_server', Load()), [IsNot()], [Constant(None)]), [Expr(Call(Attribute(Attribute(Name('self', Load()), '_udp_server', Load()), 'send_audio_bytes', Load()), [Name('chunk', Load())]))], [Expr(Call(Attribute(Attribute(Name('self', Load()), 'cli', Load()), 'send_voice_assistant_audio', Load()), [Name('chunk', Load())]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "chunk",
+        "self"
+      ]
+    },
+    "2d864ced:_stream_tts_audio:2.3.2.3:689": {
+      "col_end": 85,
+      "col_start": 20,
+      "defs": [
+        "samples_in_chunk"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stream_tts_audio",
+      "line_end": 689,
+      "line_start": 689,
+      "marker_refs": [],
+      "node_id": "2d864ced:_stream_tts_audio:2.3.2.3:689",
+      "raw_repr": "Assign([Name('samples_in_chunk', Store())], BinOp(Call(Name('len', Load()), [Name('chunk', Load())]), FloorDiv(), BinOp(Name('sample_width', Load()), Mult(), Name('sample_channels', Load()))))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "chunk",
+        "len",
+        "sample_channels",
+        "sample_width"
+      ]
+    },
+    "2d864ced:_stream_tts_audio:2.3.2.4:690": {
+      "col_end": 69,
+      "col_start": 20,
+      "defs": [
+        "seconds_in_chunk"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stream_tts_audio",
+      "line_end": 690,
+      "line_start": 690,
+      "marker_refs": [],
+      "node_id": "2d864ced:_stream_tts_audio:2.3.2.4:690",
+      "raw_repr": "Assign([Name('seconds_in_chunk', Store())], BinOp(Name('samples_in_chunk', Load()), Div(), Name('sample_rate', Load())))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "sample_rate",
+        "samples_in_chunk"
+      ]
+    },
+    "2d864ced:_stream_tts_audio:2.3.2.5:691": {
+      "col_end": 63,
+      "col_start": 20,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stream_tts_audio",
+      "line_end": 691,
+      "line_start": 691,
+      "marker_refs": [
+        "marker_d99071265d"
+      ],
+      "node_id": "2d864ced:_stream_tts_audio:2.3.2.5:691",
+      "raw_repr": "Expr(Await(Call(Attribute(Name('asyncio', Load()), 'sleep', Load()), [BinOp(Name('seconds_in_chunk', Load()), Mult(), Constant(0.9))])))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "asyncio",
+        "seconds_in_chunk"
+      ]
+    },
+    "2d864ced:_stream_tts_audio:2.3.2:675": {
+      "col_end": 63,
+      "col_start": 16,
+      "defs": [
+        "chunk",
+        "samples_in_chunk",
+        "seconds_in_chunk"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stream_tts_audio",
+      "line_end": 691,
+      "line_start": 675,
+      "marker_refs": [],
+      "node_id": "2d864ced:_stream_tts_audio:2.3.2:675",
+      "raw_repr": "While(Attribute(Name('self', Load()), '_is_running', Load()), [Assign([Name('chunk', Store())], Call(Attribute(Name('wav_file', Load()), 'readframes', Load()), [Name('samples_per_chunk', Load())])), If(UnaryOp(Not(), Name('chunk', Load())), [Break()]), If(Compare(Attribute(Name('self', Load()), '_udp_server', Load()), [IsNot()], [Constant(None)]), [Expr(Call(Attribute(Attribute(Name('self', Load()), '_udp_server', Load()), 'send_audio_bytes', Load()), [Name('chunk', Load())]))], [Expr(Call(Attribute(Attribute(Name('self', Load()), 'cli', Load()), 'send_voice_assistant_audio', Load()), [Name('chunk', Load())]))]), Assign([Name('samples_in_chunk', Store())], BinOp(Call(Name('len', Load()), [Name('chunk', Load())]), FloorDiv(), BinOp(Name('sample_width', Load()), Mult(), Name('sample_channels', Load())))), Assign([Name('seconds_in_chunk', Store())], BinOp(Name('samples_in_chunk', Load()), Div(), Name('sample_rate', Load()))), Expr(Await(Call(Attribute(Name('asyncio', Load()), 'sleep', Load()), [BinOp(Name('seconds_in_chunk', Load()), Mult(), Constant(0.9))])))])",
+      "stmt_kind": "While",
+      "uses": [
+        "asyncio",
+        "chunk",
+        "len",
+        "sample_channels",
+        "sample_rate",
+        "sample_width",
+        "samples_in_chunk",
+        "samples_per_chunk",
+        "seconds_in_chunk",
+        "self",
+        "wav_file"
+      ]
+    },
+    "2d864ced:_stream_tts_audio:2.3:664": {
+      "col_end": 63,
+      "col_start": 12,
+      "defs": [
+        "chunk",
+        "samples_in_chunk",
+        "seconds_in_chunk",
+        "wav_file",
+        "wav_io"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stream_tts_audio",
+      "line_end": 691,
+      "line_start": 664,
+      "marker_refs": [],
+      "node_id": "2d864ced:_stream_tts_audio:2.3:664",
+      "raw_repr": "With([withitem(Call(Attribute(Name('io', Load()), 'BytesIO', Load()), [Name('data', Load())]), Name('wav_io', Store())), withitem(Call(Attribute(Name('wave', Load()), 'open', Load()), [Name('wav_io', Load()), Constant('rb')]), Name('wav_file', Store()))], [If(BoolOp(Or(), [Compare(Call(Attribute(Name('wav_file', Load()), 'getframerate', Load())), [NotEq()], [Name('sample_rate', Load())]), Compare(Call(Attribute(Name('wav_file', Load()), 'getsampwidth', Load())), [NotEq()], [Name('sample_width', Load())]), Compare(Call(Attribute(Name('wav_file', Load()), 'getnchannels', Load())), [NotEq()], [Name('sample_channels', Load())])]), [Expr(Call(Attribute(Name('_LOGGER', Load()), 'error', Load()), [Constant('Can only stream 16Khz 16-bit mono WAV')])), Return()]), Expr(Call(Attribute(Name('_LOGGER', Load()), 'debug', Load()), [Constant('Streaming %s audio samples'), Call(Attribute(Name('wav_file', Load()), 'getnframes', Load()))])), While(Attribute(Name('self', Load()), '_is_running', Load()), [Assign([Name('chunk', Store())], Call(Attribute(Name('wav_file', Load()), 'readframes', Load()), [Name('samples_per_chunk', Load())])), If(UnaryOp(Not(), Name('chunk', Load())), [Break()]), If(Compare(Attribute(Name('self', Load()), '_udp_server', Load()), [IsNot()], [Constant(None)]), [Expr(Call(Attribute(Attribute(Name('self', Load()), '_udp_server', Load()), 'send_audio_bytes', Load()), [Name('chunk', Load())]))], [Expr(Call(Attribute(Attribute(Name('self', Load()), 'cli', Load()), 'send_voice_assistant_audio', Load()), [Name('chunk', Load())]))]), Assign([Name('samples_in_chunk', Store())], BinOp(Call(Name('len', Load()), [Name('chunk', Load())]), FloorDiv(), BinOp(Name('sample_width', Load()), Mult(), Name('sample_channels', Load())))), Assign([Name('seconds_in_chunk', Store())], BinOp(Name('samples_in_chunk', Load()), Div(), Name('sample_rate', Load()))), Expr(Await(Call(Attribute(Name('asyncio', Load()), 'sleep', Load()), [BinOp(Name('seconds_in_chunk', Load()), Mult(), Constant(0.9))])))])])",
+      "stmt_kind": "With",
+      "uses": [
+        "_LOGGER",
+        "asyncio",
+        "chunk",
+        "data",
+        "io",
+        "len",
+        "sample_channels",
+        "sample_rate",
+        "sample_width",
+        "samples_in_chunk",
+        "samples_per_chunk",
+        "seconds_in_chunk",
+        "self",
+        "wav_file",
+        "wav_io",
+        "wave"
+      ]
+    },
+    "2d864ced:_stream_tts_audio:2:652": {
+      "col_end": 13,
+      "col_start": 8,
+      "defs": [
+        "chunk",
+        "data",
+        "samples_in_chunk",
+        "seconds_in_chunk",
+        "wav_file",
+        "wav_io"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "_stream_tts_audio",
+      "line_end": 697,
+      "line_start": 652,
+      "marker_refs": [],
+      "node_id": "2d864ced:_stream_tts_audio:2:652",
+      "raw_repr": "Try([If(UnaryOp(Not(), Attribute(Name('self', Load()), '_is_running', Load())), [Return()]), If(Compare(Attribute(Name('tts_result', Load()), 'extension', Load()), [NotEq()], [Constant('wav')]), [Expr(Call(Attribute(Name('_LOGGER', Load()), 'error', Load()), [Constant('Only WAV audio can be streamed, got %s'), Attribute(Name('tts_result', Load()), 'extension', Load())])), Return()]), Assign([Name('data', Store())], Call(Attribute(Constant(b''), 'join', Load()), [ListComp(Name('chunk', Load()), [comprehension(Name('chunk', Store()), Call(Attribute(Name('tts_result', Load()), 'async_stream_result', Load())), [], 1)])])), With([withitem(Call(Attribute(Name('io', Load()), 'BytesIO', Load()), [Name('data', Load())]), Name('wav_io', Store())), withitem(Call(Attribute(Name('wave', Load()), 'open', Load()), [Name('wav_io', Load()), Constant('rb')]), Name('wav_file', Store()))], [If(BoolOp(Or(), [Compare(Call(Attribute(Name('wav_file', Load()), 'getframerate', Load())), [NotEq()], [Name('sample_rate', Load())]), Compare(Call(Attribute(Name('wav_file', Load()), 'getsampwidth', Load())), [NotEq()], [Name('sample_width', Load())]), Compare(Call(Attribute(Name('wav_file', Load()), 'getnchannels', Load())), [NotEq()], [Name('sample_channels', Load())])]), [Expr(Call(Attribute(Name('_LOGGER', Load()), 'error', Load()), [Constant('Can only stream 16Khz 16-bit mono WAV')])), Return()]), Expr(Call(Attribute(Name('_LOGGER', Load()), 'debug', Load()), [Constant('Streaming %s audio samples'), Call(Attribute(Name('wav_file', Load()), 'getnframes', Load()))])), While(Attribute(Name('self', Load()), '_is_running', Load()), [Assign([Name('chunk', Store())], Call(Attribute(Name('wav_file', Load()), 'readframes', Load()), [Name('samples_per_chunk', Load())])), If(UnaryOp(Not(), Name('chunk', Load())), [Break()]), If(Compare(Attribute(Name('self', Load()), '_udp_server', Load()), [IsNot()], [Constant(None)]), [Expr(Call(Attribute(Attribute(Name('self', Load()), '_udp_server', Load()), 'send_audio_bytes', Load()), [Name('chunk', Load())]))], [Expr(Call(Attribute(Attribute(Name('self', Load()), 'cli', Load()), 'send_voice_assistant_audio', Load()), [Name('chunk', Load())]))]), Assign([Name('samples_in_chunk', Store())], BinOp(Call(Name('len', Load()), [Name('chunk', Load())]), FloorDiv(), BinOp(Name('sample_width', Load()), Mult(), Name('sample_channels', Load())))), Assign([Name('seconds_in_chunk', Store())], BinOp(Name('samples_in_chunk', Load()), Div(), Name('sample_rate', Load()))), Expr(Await(Call(Attribute(Name('asyncio', Load()), 'sleep', Load()), [BinOp(Name('seconds_in_chunk', Load()), Mult(), Constant(0.9))])))])])], [ExceptHandler(Attribute(Name('asyncio', Load()), 'CancelledError', Load()), body=[Return()])], [], [Expr(Call(Attribute(Attribute(Name('self', Load()), 'cli', Load()), 'send_voice_assistant_event', Load()), [Attribute(Name('VoiceAssistantEventType', Load()), 'VOICE_ASSISTANT_TTS_STREAM_END', Load()), Dict()]))])",
+      "stmt_kind": "Try",
+      "uses": [
+        "VoiceAssistantEventType",
+        "_LOGGER",
+        "asyncio",
+        "chunk",
+        "data",
+        "io",
+        "len",
+        "sample_channels",
+        "sample_rate",
+        "sample_width",
+        "samples_in_chunk",
+        "samples_per_chunk",
+        "seconds_in_chunk",
+        "self",
+        "tts_result",
+        "wav_file",
+        "wav_io",
+        "wave"
+      ]
+    },
+    "2d864ced:close:1.0:793": {
+      "col_end": 34,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "close",
+      "line_end": 793,
+      "line_start": 793,
+      "marker_refs": [
+        "marker_00cd779ed1"
+      ],
+      "node_id": "2d864ced:close:1.0:793",
+      "raw_repr": "Expr(Call(Attribute(Attribute(Name('self', Load()), 'transport', Load()), 'close', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "2d864ced:close:1:792": {
+      "col_end": 34,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+      "function_name": "close",
+      "line_end": 793,
+      "line_start": 792,
+      "marker_refs": [
+        "marker_00cd779ed1"
+      ],
+      "node_id": "2d864ced:close:1:792",
+      "raw_repr": "If(Compare(Attribute(Name('self', Load()), 'transport', Load()), [IsNot()], [Constant(None)]), [Expr(Call(Attribute(Attribute(Name('self', Load()), 'transport', Load()), 'close', Load())))])",
+      "stmt_kind": "If",
+      "uses": [
+        "self"
+      ]
+    },
+    "9425188b:async_oscillate:2:100": {
+      "col_end": 86,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_oscillate",
+      "line_end": 100,
+      "line_start": 100,
+      "marker_refs": [],
+      "node_id": "9425188b:async_oscillate:2:100",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_last_run_success', Store())], Call(Name('bool', Load()), [Await(Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'set_oscillation', Load()), [Name('oscillating', Load())]))]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "bool",
+        "oscillating",
+        "self"
+      ]
+    },
+    "9425188b:async_oscillate:3:101": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_oscillate",
+      "line_end": 101,
+      "line_start": 101,
+      "marker_refs": [
+        "marker_c1599f0892"
+      ],
+      "node_id": "9425188b:async_oscillate:3:101",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "9425188b:async_set_percentage:2:91": {
+      "col_end": 84,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_set_percentage",
+      "line_end": 91,
+      "line_start": 91,
+      "marker_refs": [],
+      "node_id": "9425188b:async_set_percentage:2:91",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_last_run_success', Store())], Call(Name('bool', Load()), [Await(Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'set_percentage', Load()), [Name('percentage', Load())]))]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "bool",
+        "percentage",
+        "self"
+      ]
+    },
+    "9425188b:async_set_percentage:3:92": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_set_percentage",
+      "line_end": 92,
+      "line_start": 92,
+      "marker_refs": [
+        "marker_b9989a7050"
+      ],
+      "node_id": "9425188b:async_set_percentage:3:92",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "9425188b:async_set_preset_mode:0:153": {
+      "col_end": 54,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_set_preset_mode",
+      "line_end": 153,
+      "line_start": 153,
+      "marker_refs": [],
+      "node_id": "9425188b:async_set_preset_mode:0:153",
+      "raw_repr": "Expr(Constant('Set the preset mode of the air purifier.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "9425188b:async_set_preset_mode:1:155": {
+      "col_end": 9,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_set_preset_mode",
+      "line_end": 159,
+      "line_start": 155,
+      "marker_refs": [],
+      "node_id": "9425188b:async_set_preset_mode:1:155",
+      "raw_repr": "Expr(Call(Attribute(Name('_LOGGER', Load()), 'debug', Load()), [Constant('Switchbot air purifier to set preset mode %s %s'), Name('preset_mode', Load()), Attribute(Name('self', Load()), '_address', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "_LOGGER",
+        "preset_mode",
+        "self"
+      ]
+    },
+    "9425188b:async_set_preset_mode:2:160": {
+      "col_end": 86,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_set_preset_mode",
+      "line_end": 160,
+      "line_start": 160,
+      "marker_refs": [],
+      "node_id": "9425188b:async_set_preset_mode:2:160",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_last_run_success', Store())], Call(Name('bool', Load()), [Await(Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'set_preset_mode', Load()), [Name('preset_mode', Load())]))]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "bool",
+        "preset_mode",
+        "self"
+      ]
+    },
+    "9425188b:async_set_preset_mode:2:82": {
+      "col_end": 86,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_set_preset_mode",
+      "line_end": 82,
+      "line_start": 82,
+      "marker_refs": [],
+      "node_id": "9425188b:async_set_preset_mode:2:82",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_last_run_success', Store())], Call(Name('bool', Load()), [Await(Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'set_preset_mode', Load()), [Name('preset_mode', Load())]))]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "bool",
+        "preset_mode",
+        "self"
+      ]
+    },
+    "9425188b:async_set_preset_mode:3:161": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_set_preset_mode",
+      "line_end": 161,
+      "line_start": 161,
+      "marker_refs": [
+        "marker_7529ee2411"
+      ],
+      "node_id": "9425188b:async_set_preset_mode:3:161",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "9425188b:async_set_preset_mode:3:83": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_set_preset_mode",
+      "line_end": 83,
+      "line_start": 83,
+      "marker_refs": [
+        "marker_e34316b43e"
+      ],
+      "node_id": "9425188b:async_set_preset_mode:3:83",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "9425188b:async_turn_off:0:183": {
+      "col_end": 40,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_turn_off",
+      "line_end": 183,
+      "line_start": 183,
+      "marker_refs": [],
+      "node_id": "9425188b:async_turn_off:0:183",
+      "raw_repr": "Expr(Constant('Turn off the air purifier.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "9425188b:async_turn_off:1:185": {
+      "col_end": 81,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_turn_off",
+      "line_end": 185,
+      "line_start": 185,
+      "marker_refs": [],
+      "node_id": "9425188b:async_turn_off:1:185",
+      "raw_repr": "Expr(Call(Attribute(Name('_LOGGER', Load()), 'debug', Load()), [Constant('Switchbot air purifier to set turn off %s'), Attribute(Name('self', Load()), '_address', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "_LOGGER",
+        "self"
+      ]
+    },
+    "9425188b:async_turn_off:2:124": {
+      "col_end": 68,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_turn_off",
+      "line_end": 124,
+      "line_start": 124,
+      "marker_refs": [],
+      "node_id": "9425188b:async_turn_off:2:124",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_last_run_success', Store())], Call(Name('bool', Load()), [Await(Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'turn_off', Load())))]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "bool",
+        "self"
+      ]
+    },
+    "9425188b:async_turn_off:2:186": {
+      "col_end": 68,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_turn_off",
+      "line_end": 186,
+      "line_start": 186,
+      "marker_refs": [],
+      "node_id": "9425188b:async_turn_off:2:186",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_last_run_success', Store())], Call(Name('bool', Load()), [Await(Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'turn_off', Load())))]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "bool",
+        "self"
+      ]
+    },
+    "9425188b:async_turn_off:3:125": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_turn_off",
+      "line_end": 125,
+      "line_start": 125,
+      "marker_refs": [
+        "marker_8ff06e2c99"
+      ],
+      "node_id": "9425188b:async_turn_off:3:125",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "9425188b:async_turn_off:3:187": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_turn_off",
+      "line_end": 187,
+      "line_start": 187,
+      "marker_refs": [
+        "marker_a75f778a26"
+      ],
+      "node_id": "9425188b:async_turn_off:3:187",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "9425188b:async_turn_on:0:170": {
+      "col_end": 39,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_turn_on",
+      "line_end": 170,
+      "line_start": 170,
+      "marker_refs": [],
+      "node_id": "9425188b:async_turn_on:0:170",
+      "raw_repr": "Expr(Constant('Turn on the air purifier.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "9425188b:async_turn_on:1:172": {
+      "col_end": 9,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_turn_on",
+      "line_end": 177,
+      "line_start": 172,
+      "marker_refs": [],
+      "node_id": "9425188b:async_turn_on:1:172",
+      "raw_repr": "Expr(Call(Attribute(Name('_LOGGER', Load()), 'debug', Load()), [Constant('Switchbot air purifier to set turn on %s %s %s'), Name('percentage', Load()), Name('preset_mode', Load()), Attribute(Name('self', Load()), '_address', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "_LOGGER",
+        "percentage",
+        "preset_mode",
+        "self"
+      ]
+    },
+    "9425188b:async_turn_on:2:117": {
+      "col_end": 67,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_turn_on",
+      "line_end": 117,
+      "line_start": 117,
+      "marker_refs": [],
+      "node_id": "9425188b:async_turn_on:2:117",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_last_run_success', Store())], Call(Name('bool', Load()), [Await(Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'turn_on', Load())))]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "bool",
+        "self"
+      ]
+    },
+    "9425188b:async_turn_on:2:178": {
+      "col_end": 67,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_turn_on",
+      "line_end": 178,
+      "line_start": 178,
+      "marker_refs": [],
+      "node_id": "9425188b:async_turn_on:2:178",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_last_run_success', Store())], Call(Name('bool', Load()), [Await(Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'turn_on', Load())))]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "bool",
+        "self"
+      ]
+    },
+    "9425188b:async_turn_on:3:118": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_turn_on",
+      "line_end": 118,
+      "line_start": 118,
+      "marker_refs": [
+        "marker_771a133e32"
+      ],
+      "node_id": "9425188b:async_turn_on:3:118",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "9425188b:async_turn_on:3:179": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_turn_on",
+      "line_end": 179,
+      "line_start": 179,
+      "marker_refs": [
+        "marker_4664192a7e"
+      ],
+      "node_id": "9425188b:async_turn_on:3:179",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "9da22f42:_async_setup_update_entity:4:82": {
+      "col_end": 19,
+      "col_start": 8,
+      "defs": [
+        "unsub"
+      ],
+      "effects": [
+        "unsubscribe"
+      ],
+      "file_path": "data/repo_snapshot/esphome/update.py",
+      "function_name": "_async_setup_update_entity",
+      "line_end": 83,
+      "line_start": 82,
+      "marker_refs": [
+        "marker_0057872025"
+      ],
+      "node_id": "9da22f42:_async_setup_update_entity:4:82",
+      "raw_repr": "For(Name('unsub', Store()), Name('unsubs', Load()), [Expr(Call(Name('unsub', Load())))])",
+      "stmt_kind": "For",
+      "uses": [
+        "unsub",
+        "unsubs"
+      ]
+    },
+    "9da22f42:_handle_device_update:2:185": {
+      "col_end": 28,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/update.py",
+      "function_name": "_handle_device_update",
+      "line_end": 185,
+      "line_start": 185,
+      "marker_refs": [],
+      "node_id": "9da22f42:_handle_device_update:2:185",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), '_update_attrs', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "9da22f42:_handle_device_update:3:186": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/esphome/update.py",
+      "function_name": "_handle_device_update",
+      "line_end": 186,
+      "line_start": 186,
+      "marker_refs": [
+        "marker_767e7c72f5"
+      ],
+      "node_id": "9da22f42:_handle_device_update:3:186",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "9da22f42:async_setup_entry:7:71": {
+      "col_end": 81,
+      "col_start": 4,
+      "defs": [
+        "unsub"
+      ],
+      "effects": [
+        "external_call_cloud",
+        "unsubscribe"
+      ],
+      "file_path": "data/repo_snapshot/esphome/update.py",
+      "function_name": "async_setup_entry",
+      "line_end": 86,
+      "line_start": 71,
+      "marker_refs": [
+        "marker_ce22d7b81f",
+        "marker_8364d61ffe"
+      ],
+      "node_id": "9da22f42:async_setup_entry:7:71",
+      "raw_repr": "FunctionDef('_async_setup_update_entity', arguments(), [Expr(Constant('Set up the update entity.')), Assert(Compare(Name('dashboard', Load()), [IsNot()], [Constant(None)])), If(BoolOp(Or(), [UnaryOp(Not(), Attribute(Name('entry_data', Load()), 'available', Load())), UnaryOp(Not(), Attribute(Name('dashboard', Load()), 'last_update_success', Load()))]), [Return()]), If(BoolOp(Or(), [Compare(Attribute(Name('dashboard', Load()), 'data', Load()), [Is()], [Constant(None)]), Compare(Call(Attribute(Attribute(Name('dashboard', Load()), 'data', Load()), 'get', Load()), [Name('device_name', Load())]), [Is()], [Constant(None)])]), [Return()]), For(Name('unsub', Store()), Name('unsubs', Load()), [Expr(Call(Name('unsub', Load())))]), Expr(Call(Attribute(Name('unsubs', Load()), 'clear', Load()))), Expr(Call(Name('async_add_entities', Load()), [List([Call(Name('ESPHomeDashboardUpdateEntity', Load()), [Name('entry_data', Load()), Name('dashboard', Load())])], Load())]))], [Name('callback', Load())], Constant(None))",
+      "stmt_kind": "FunctionDef",
+      "uses": [
+        "ESPHomeDashboardUpdateEntity",
+        "async_add_entities",
+        "callback",
+        "dashboard",
+        "device_name",
+        "entry_data",
+        "unsub",
+        "unsubs"
+      ]
+    },
+    "ab8f4bde:_async_handle_event:0:179": {
+      "col_end": 71,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/xiaomi_ble/event.py",
+      "function_name": "_async_handle_event",
+      "line_end": 179,
+      "line_start": 179,
+      "marker_refs": [
+        "marker_6f52f6ca11"
+      ],
+      "node_id": "ab8f4bde:_async_handle_event:0:179",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), '_trigger_event', Load()), [Subscript(Name('event', Load()), Name('EVENT_TYPE', Load()), Load()), Subscript(Name('event', Load()), Name('EVENT_PROPERTIES', Load()), Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "EVENT_PROPERTIES",
+        "EVENT_TYPE",
+        "event",
+        "self"
+      ]
+    },
+    "ab8f4bde:_async_handle_event:1:180": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/xiaomi_ble/event.py",
+      "function_name": "_async_handle_event",
+      "line_end": 180,
+      "line_start": 180,
+      "marker_refs": [
+        "marker_6f52f6ca11"
+      ],
+      "node_id": "ab8f4bde:_async_handle_event:1:180",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "bb8906f4:sensor_update_to_bluetooth_data_update:0:173": {
+      "col_end": 61,
+      "col_start": 4,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+      "function_name": "sensor_update_to_bluetooth_data_update",
+      "line_end": 173,
+      "line_start": 173,
+      "marker_refs": [
+        "marker_0d80eea84b"
+      ],
+      "node_id": "bb8906f4:sensor_update_to_bluetooth_data_update:0:173",
+      "raw_repr": "Expr(Constant('Convert a sensor update to a bluetooth data update.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "bb8906f4:sensor_update_to_bluetooth_data_update:1:174": {
+      "col_end": 80,
+      "col_start": 4,
+      "defs": [
+        "entity_descriptions"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+      "function_name": "sensor_update_to_bluetooth_data_update",
+      "line_end": 174,
+      "line_start": 174,
+      "marker_refs": [
+        "marker_0d80eea84b"
+      ],
+      "node_id": "bb8906f4:sensor_update_to_bluetooth_data_update:1:174",
+      "raw_repr": "AnnAssign(Name('entity_descriptions', Store()), Subscript(Name('dict', Load()), Tuple([Name('PassiveBluetoothEntityKey', Load()), Name('EntityDescription', Load())], Load()), Load()), Dict(), 1)",
+      "stmt_kind": "AnnAssign",
+      "uses": [
+        "EntityDescription",
+        "PassiveBluetoothEntityKey",
+        "dict"
+      ]
+    },
+    "bb8906f4:sensor_update_to_bluetooth_data_update:2:175": {
+      "col_end": 20,
+      "col_start": 4,
+      "defs": [
+        "entity_data"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+      "function_name": "sensor_update_to_bluetooth_data_update",
+      "line_end": 175,
+      "line_start": 175,
+      "marker_refs": [
+        "marker_0d80eea84b"
+      ],
+      "node_id": "bb8906f4:sensor_update_to_bluetooth_data_update:2:175",
+      "raw_repr": "Assign([Name('entity_data', Store())], Dict())",
+      "stmt_kind": "Assign",
+      "uses": []
+    },
+    "bb8906f4:sensor_update_to_bluetooth_data_update:3.0:177": {
+      "col_end": 61,
+      "col_start": 8,
+      "defs": [
+        "bek"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+      "function_name": "sensor_update_to_bluetooth_data_update",
+      "line_end": 177,
+      "line_start": 177,
+      "marker_refs": [
+        "marker_0d80eea84b"
+      ],
+      "node_id": "bb8906f4:sensor_update_to_bluetooth_data_update:3.0:177",
+      "raw_repr": "Assign([Name('bek', Store())], Call(Name('_device_key_to_bluetooth_entity_key', Load()), [Name('device_key', Load())]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "_device_key_to_bluetooth_entity_key",
+        "device_key"
+      ]
+    },
+    "bb8906f4:sensor_update_to_bluetooth_data_update:3.1:178": {
+      "col_end": 53,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+      "function_name": "sensor_update_to_bluetooth_data_update",
+      "line_end": 178,
+      "line_start": 178,
+      "marker_refs": [
+        "marker_0d80eea84b"
+      ],
+      "node_id": "bb8906f4:sensor_update_to_bluetooth_data_update:3.1:178",
+      "raw_repr": "Assign([Subscript(Name('entity_data', Load()), Name('bek', Load()), Store())], Attribute(Name('sensor_values', Load()), 'native_value', Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "bek",
+        "entity_data",
+        "sensor_values"
+      ]
+    },
+    "bb8906f4:sensor_update_to_bluetooth_data_update:3:176": {
+      "col_end": 53,
+      "col_start": 4,
+      "defs": [
+        "bek",
+        "device_key",
+        "sensor_values"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+      "function_name": "sensor_update_to_bluetooth_data_update",
+      "line_end": 178,
+      "line_start": 176,
+      "marker_refs": [
+        "marker_0d80eea84b"
+      ],
+      "node_id": "bb8906f4:sensor_update_to_bluetooth_data_update:3:176",
+      "raw_repr": "For(Tuple([Name('device_key', Store()), Name('sensor_values', Store())], Store()), Call(Attribute(Attribute(Name('sensor_update', Load()), 'entity_values', Load()), 'items', Load())), [Assign([Name('bek', Store())], Call(Name('_device_key_to_bluetooth_entity_key', Load()), [Name('device_key', Load())])), Assign([Subscript(Name('entity_data', Load()), Name('bek', Load()), Store())], Attribute(Name('sensor_values', Load()), 'native_value', Load()))])",
+      "stmt_kind": "For",
+      "uses": [
+        "_device_key_to_bluetooth_entity_key",
+        "bek",
+        "device_key",
+        "entity_data",
+        "sensor_update",
+        "sensor_values"
+      ]
+    },
+    "bb8906f4:sensor_update_to_bluetooth_data_update:4.0:180": {
+      "col_end": 61,
+      "col_start": 8,
+      "defs": [
+        "bek"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+      "function_name": "sensor_update_to_bluetooth_data_update",
+      "line_end": 180,
+      "line_start": 180,
+      "marker_refs": [
+        "marker_0d80eea84b"
+      ],
+      "node_id": "bb8906f4:sensor_update_to_bluetooth_data_update:4.0:180",
+      "raw_repr": "Assign([Name('bek', Store())], Call(Name('_device_key_to_bluetooth_entity_key', Load()), [Name('device_key', Load())]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "_device_key_to_bluetooth_entity_key",
+        "device_key"
+      ]
+    },
+    "bb8906f4:sensor_update_to_bluetooth_data_update:4.1.0:182": {
+      "col_end": 53,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+      "function_name": "sensor_update_to_bluetooth_data_update",
+      "line_end": 182,
+      "line_start": 182,
+      "marker_refs": [
+        "marker_0d80eea84b"
+      ],
+      "node_id": "bb8906f4:sensor_update_to_bluetooth_data_update:4.1.0:182",
+      "raw_repr": "Assign([Subscript(Name('entity_descriptions', Load()), Name('bek', Load()), Store())], Name('sk_description', Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "bek",
+        "entity_descriptions",
+        "sk_description"
+      ]
+    },
+    "bb8906f4:sensor_update_to_bluetooth_data_update:4.1:181": {
+      "col_end": 53,
+      "col_start": 8,
+      "defs": [
+        "sk_description"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+      "function_name": "sensor_update_to_bluetooth_data_update",
+      "line_end": 182,
+      "line_start": 181,
+      "marker_refs": [
+        "marker_0d80eea84b"
+      ],
+      "node_id": "bb8906f4:sensor_update_to_bluetooth_data_update:4.1:181",
+      "raw_repr": "If(NamedExpr(Name('sk_description', Store()), Call(Attribute(Name('SENSOR_DESCRIPTIONS', Load()), 'get', Load()), [Attribute(Name('device_key', Load()), 'key', Load())])), [Assign([Subscript(Name('entity_descriptions', Load()), Name('bek', Load()), Store())], Name('sk_description', Load()))])",
+      "stmt_kind": "If",
+      "uses": [
+        "SENSOR_DESCRIPTIONS",
+        "bek",
+        "device_key",
+        "entity_descriptions",
+        "sk_description"
+      ]
+    },
+    "bb8906f4:sensor_update_to_bluetooth_data_update:4:179": {
+      "col_end": 53,
+      "col_start": 4,
+      "defs": [
+        "bek",
+        "device_key",
+        "sk_description"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+      "function_name": "sensor_update_to_bluetooth_data_update",
+      "line_end": 182,
+      "line_start": 179,
+      "marker_refs": [
+        "marker_0d80eea84b"
+      ],
+      "node_id": "bb8906f4:sensor_update_to_bluetooth_data_update:4:179",
+      "raw_repr": "For(Name('device_key', Store()), Attribute(Name('sensor_update', Load()), 'entity_descriptions', Load()), [Assign([Name('bek', Store())], Call(Name('_device_key_to_bluetooth_entity_key', Load()), [Name('device_key', Load())])), If(NamedExpr(Name('sk_description', Store()), Call(Attribute(Name('SENSOR_DESCRIPTIONS', Load()), 'get', Load()), [Attribute(Name('device_key', Load()), 'key', Load())])), [Assign([Subscript(Name('entity_descriptions', Load()), Name('bek', Load()), Store())], Name('sk_description', Load()))])])",
+      "stmt_kind": "For",
+      "uses": [
+        "SENSOR_DESCRIPTIONS",
+        "_device_key_to_bluetooth_entity_key",
+        "bek",
+        "device_key",
+        "entity_descriptions",
+        "sensor_update",
+        "sk_description"
+      ]
+    },
+    "bb8906f4:sensor_update_to_bluetooth_data_update:5:184": {
+      "col_end": 5,
+      "col_start": 4,
+      "defs": [
+        "device_id",
+        "device_info"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+      "function_name": "sensor_update_to_bluetooth_data_update",
+      "line_end": 192,
+      "line_start": 184,
+      "marker_refs": [
+        "marker_0d80eea84b"
+      ],
+      "node_id": "bb8906f4:sensor_update_to_bluetooth_data_update:5:184",
+      "raw_repr": "Return(Call(Name('PassiveBluetoothDataUpdate', Load()), [], [keyword('devices', DictComp(Name('device_id', Load()), Call(Name('sensor_device_info_to_hass_device_info', Load()), [Name('device_info', Load())]), [comprehension(Tuple([Name('device_id', Store()), Name('device_info', Store())], Store()), Call(Attribute(Attribute(Name('sensor_update', Load()), 'devices', Load()), 'items', Load())), [], 0)])), keyword('entity_descriptions', Name('entity_descriptions', Load())), keyword('entity_data', Name('entity_data', Load())), keyword('entity_names', Dict())]))",
+      "stmt_kind": "Return",
+      "uses": [
+        "PassiveBluetoothDataUpdate",
+        "device_id",
+        "device_info",
+        "entity_data",
+        "entity_descriptions",
+        "sensor_device_info_to_hass_device_info",
+        "sensor_update"
+      ]
+    },
+    "d9c4917e:sensor_update_to_bluetooth_data_update:0:111": {
+      "col_end": 61,
+      "col_start": 4,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+      "function_name": "sensor_update_to_bluetooth_data_update",
+      "line_end": 111,
+      "line_start": 111,
+      "marker_refs": [
+        "marker_0e91c5f067"
+      ],
+      "node_id": "d9c4917e:sensor_update_to_bluetooth_data_update:0:111",
+      "raw_repr": "Expr(Constant('Convert a sensor update to a bluetooth data update.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "d9c4917e:sensor_update_to_bluetooth_data_update:1:112": {
+      "col_end": 5,
+      "col_start": 4,
+      "defs": [
+        "description",
+        "device_id",
+        "device_info",
+        "device_key",
+        "sensor_values"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+      "function_name": "sensor_update_to_bluetooth_data_update",
+      "line_end": 132,
+      "line_start": 112,
+      "marker_refs": [
+        "marker_0e91c5f067"
+      ],
+      "node_id": "d9c4917e:sensor_update_to_bluetooth_data_update:1:112",
+      "raw_repr": "Return(Call(Name('PassiveBluetoothDataUpdate', Load()), [], [keyword('devices', DictComp(Name('device_id', Load()), Call(Name('sensor_device_info_to_hass_device_info', Load()), [Name('device_info', Load())]), [comprehension(Tuple([Name('device_id', Store()), Name('device_info', Store())], Store()), Call(Attribute(Attribute(Name('sensor_update', Load()), 'devices', Load()), 'items', Load())), [], 0)])), keyword('entity_descriptions', DictComp(Call(Name('device_key_to_bluetooth_entity_key', Load()), [Name('device_key', Load())]), Subscript(Name('BINARY_SENSOR_DESCRIPTIONS', Load()), Attribute(Name('description', Load()), 'device_class', Load()), Load()), [comprehension(Tuple([Name('device_key', Store()), Name('description', Store())], Store()), Call(Attribute(Attribute(Name('sensor_update', Load()), 'binary_entity_descriptions', Load()), 'items', Load())), [Attribute(Name('description', Load()), 'device_class', Load())], 0)])), keyword('entity_data', DictComp(Call(Name('device_key_to_bluetooth_entity_key', Load()), [Name('device_key', Load())]), Attribute(Name('sensor_values', Load()), 'native_value', Load()), [comprehension(Tuple([Name('device_key', Store()), Name('sensor_values', Store())], Store()), Call(Attribute(Attribute(Name('sensor_update', Load()), 'binary_entity_values', Load()), 'items', Load())), [], 0)])), keyword('entity_names', DictComp(Call(Name('device_key_to_bluetooth_entity_key', Load()), [Name('device_key', Load())]), Attribute(Name('sensor_values', Load()), 'name', Load()), [comprehension(Tuple([Name('device_key', Store()), Name('sensor_values', Store())], Store()), Call(Attribute(Attribute(Name('sensor_update', Load()), 'binary_entity_values', Load()), 'items', Load())), [], 0)]))]))",
+      "stmt_kind": "Return",
+      "uses": [
+        "BINARY_SENSOR_DESCRIPTIONS",
+        "PassiveBluetoothDataUpdate",
+        "description",
+        "device_id",
+        "device_info",
+        "device_key",
+        "device_key_to_bluetooth_entity_key",
+        "sensor_device_info_to_hass_device_info",
+        "sensor_update",
+        "sensor_values"
+      ]
+    },
+    "e3b5e3c6:_async_update_data:0:92": {
+      "col_end": 42,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/airthings_ble/coordinator.py",
+      "function_name": "_async_update_data",
+      "line_end": 92,
+      "line_start": 92,
+      "marker_refs": [
+        "marker_529aef1f97"
+      ],
+      "node_id": "e3b5e3c6:_async_update_data:0:92",
+      "raw_repr": "Expr(Constant('Get data from Airthings BLE.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "e3b5e3c6:_async_update_data:1.0:94": {
+      "col_end": 70,
+      "col_start": 12,
+      "defs": [
+        "data"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/airthings_ble/coordinator.py",
+      "function_name": "_async_update_data",
+      "line_end": 94,
+      "line_start": 94,
+      "marker_refs": [
+        "marker_529aef1f97"
+      ],
+      "node_id": "e3b5e3c6:_async_update_data:1.0:94",
+      "raw_repr": "Assign([Name('data', Store())], Await(Call(Attribute(Attribute(Name('self', Load()), 'airthings', Load()), 'update_device', Load()), [Attribute(Name('self', Load()), 'ble_device', Load())])))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "e3b5e3c6:_async_update_data:1.0:96": {
+      "col_end": 71,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/airthings_ble/coordinator.py",
+      "function_name": "_async_update_data",
+      "line_end": 96,
+      "line_start": 96,
+      "marker_refs": [
+        "marker_529aef1f97"
+      ],
+      "node_id": "e3b5e3c6:_async_update_data:1.0:96",
+      "raw_repr": "Raise(Call(Name('UpdateFailed', Load()), [JoinedStr([Constant('Unable to fetch data: '), FormattedValue(Name('err', Load()), -1)])]), Name('err', Load()))",
+      "stmt_kind": "Raise",
+      "uses": [
+        "UpdateFailed",
+        "err"
+      ]
+    },
+    "e3b5e3c6:_async_update_data:1:93": {
+      "col_end": 71,
+      "col_start": 8,
+      "defs": [
+        "data"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/airthings_ble/coordinator.py",
+      "function_name": "_async_update_data",
+      "line_end": 96,
+      "line_start": 93,
+      "marker_refs": [
+        "marker_529aef1f97"
+      ],
+      "node_id": "e3b5e3c6:_async_update_data:1:93",
+      "raw_repr": "Try([Assign([Name('data', Store())], Await(Call(Attribute(Attribute(Name('self', Load()), 'airthings', Load()), 'update_device', Load()), [Attribute(Name('self', Load()), 'ble_device', Load())])))], [ExceptHandler(Name('Exception', Load()), 'err', [Raise(Call(Name('UpdateFailed', Load()), [JoinedStr([Constant('Unable to fetch data: '), FormattedValue(Name('err', Load()), -1)])]), Name('err', Load()))])])",
+      "stmt_kind": "Try",
+      "uses": [
+        "Exception",
+        "UpdateFailed",
+        "err",
+        "self"
+      ]
+    },
+    "e3b5e3c6:_async_update_data:2:97": {
+      "col_end": 19,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/airthings_ble/coordinator.py",
+      "function_name": "_async_update_data",
+      "line_end": 97,
+      "line_start": 97,
+      "marker_refs": [
+        "marker_529aef1f97"
+      ],
+      "node_id": "e3b5e3c6:_async_update_data:2:97",
+      "raw_repr": "Return(Name('data', Load()))",
+      "stmt_kind": "Return",
+      "uses": [
+        "data"
+      ]
+    },
+    "f20e5673:_on_connect:17.1:607": {
+      "col_end": 13,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/manager.py",
+      "function_name": "_on_connect",
+      "line_end": 616,
+      "line_start": 607,
+      "marker_refs": [],
+      "node_id": "f20e5673:_on_connect:17.1:607",
+      "raw_repr": "Expr(Call(Attribute(Name('_LOGGER', Load()), 'error', Load()), [Constant('Unexpected device found at %s; expected `%s` with mac address `%s`, found `%s` with mac address `%s`'), Attribute(Name('self', Load()), 'host', Load()), Name('stored_device_name', Load()), Name('unique_id', Load()), Attribute(Name('device_info', Load()), 'name', Load()), Name('device_mac', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "_LOGGER",
+        "device_info",
+        "device_mac",
+        "self",
+        "stored_device_name",
+        "unique_id"
+      ]
+    },
+    "f20e5673:_on_connect:17.2:617": {
+      "col_end": 34,
+      "col_start": 12,
+      "defs": [],
+      "effects": [
+        "external_call_ble"
+      ],
+      "file_path": "data/repo_snapshot/esphome/manager.py",
+      "function_name": "_on_connect",
+      "line_end": 617,
+      "line_start": 617,
+      "marker_refs": [
+        "marker_a166557dd8",
+        "marker_a50e901cdd"
+      ],
+      "node_id": "f20e5673:_on_connect:17.2:617",
+      "raw_repr": "Expr(Await(Call(Attribute(Name('cli', Load()), 'disconnect', Load()))))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "cli"
+      ]
+    },
+    "f20e5673:_on_connect:7:553": {
+      "col_end": 22,
+      "col_start": 8,
+      "defs": [
+        "cli"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/manager.py",
+      "function_name": "_on_connect",
+      "line_end": 553,
+      "line_start": 553,
+      "marker_refs": [],
+      "node_id": "f20e5673:_on_connect:7:553",
+      "raw_repr": "Assign([Name('cli', Store())], Attribute(Name('self', Load()), 'cli', Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "f20e5673:_start_reauth_and_disconnect:1:805": {
+      "col_end": 48,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/manager.py",
+      "function_name": "_start_reauth_and_disconnect",
+      "line_end": 805,
+      "line_start": 805,
+      "marker_refs": [],
+      "node_id": "f20e5673:_start_reauth_and_disconnect:1:805",
+      "raw_repr": "Expr(Call(Attribute(Attribute(Name('self', Load()), 'entry', Load()), 'async_start_reauth', Load()), [Attribute(Name('self', Load()), 'hass', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "f20e5673:_start_reauth_and_disconnect:2:806": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "external_call_ble"
+      ],
+      "file_path": "data/repo_snapshot/esphome/manager.py",
+      "function_name": "_start_reauth_and_disconnect",
+      "line_end": 806,
+      "line_start": 806,
+      "marker_refs": [
+        "marker_de29b958c9",
+        "marker_e0abc6464f"
+      ],
+      "node_id": "f20e5673:_start_reauth_and_disconnect:2:806",
+      "raw_repr": "Expr(Await(Call(Attribute(Attribute(Name('self', Load()), 'cli', Load()), 'disconnect', Load()))))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "f20e5673:async_on_state_subscription:2:480": {
+      "col_end": 9,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "subscribe"
+      ],
+      "file_path": "data/repo_snapshot/esphome/manager.py",
+      "function_name": "async_on_state_subscription",
+      "line_end": 486,
+      "line_start": 480,
+      "marker_refs": [
+        "marker_7b58432c38"
+      ],
+      "node_id": "f20e5673:async_on_state_subscription:2:480",
+      "raw_repr": "Expr(Call(Attribute(Attribute(Attribute(Name('self', Load()), 'entry_data', Load()), 'disconnect_callbacks', Load()), 'add', Load()), [Call(Name('async_track_state_change_event', Load()), [Name('hass', Load()), List([Name('entity_id', Load())], Load()), Call(Name('partial', Load()), [Attribute(Name('self', Load()), '_send_home_assistant_state_event', Load()), Name('attribute', Load())])])]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "async_track_state_change_event",
+        "attribute",
+        "entity_id",
+        "hass",
+        "partial",
+        "self"
+      ]
+    },
+    "f20e5673:cleanup_instance:1:1369": {
+      "col_end": 29,
+      "col_start": 4,
+      "defs": [
+        "data"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/manager.py",
+      "function_name": "cleanup_instance",
+      "line_end": 1369,
+      "line_start": 1369,
+      "marker_refs": [],
+      "node_id": "f20e5673:cleanup_instance:1:1369",
+      "raw_repr": "Assign([Name('data', Store())], Attribute(Name('entry', Load()), 'runtime_data', Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "entry"
+      ]
+    },
+    "f20e5673:cleanup_instance:4:1373": {
+      "col_end": 30,
+      "col_start": 4,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/manager.py",
+      "function_name": "cleanup_instance",
+      "line_end": 1373,
+      "line_start": 1373,
+      "marker_refs": [],
+      "node_id": "f20e5673:cleanup_instance:4:1373",
+      "raw_repr": "Expr(Await(Call(Attribute(Name('data', Load()), 'async_cleanup', Load()))))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "data"
+      ]
+    },
+    "f20e5673:cleanup_instance:5:1374": {
+      "col_end": 34,
+      "col_start": 4,
+      "defs": [],
+      "effects": [
+        "external_call_ble"
+      ],
+      "file_path": "data/repo_snapshot/esphome/manager.py",
+      "function_name": "cleanup_instance",
+      "line_end": 1374,
+      "line_start": 1374,
+      "marker_refs": [
+        "marker_9920dcafb0",
+        "marker_c3292e5c34"
+      ],
+      "node_id": "f20e5673:cleanup_instance:5:1374",
+      "raw_repr": "Expr(Await(Call(Attribute(Attribute(Name('data', Load()), 'client', Load()), 'disconnect', Load()))))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "data"
+      ]
+    },
+    "f20e5673:on_connect:1.0:504": {
+      "col_end": 36,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/manager.py",
+      "function_name": "on_connect",
+      "line_end": 504,
+      "line_start": 504,
+      "marker_refs": [],
+      "node_id": "f20e5673:on_connect:1.0:504",
+      "raw_repr": "Expr(Await(Call(Attribute(Name('self', Load()), '_on_connect', Load()))))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "f20e5673:on_connect:1.0:506": {
+      "col_end": 79,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/manager.py",
+      "function_name": "on_connect",
+      "line_end": 506,
+      "line_start": 506,
+      "marker_refs": [],
+      "node_id": "f20e5673:on_connect:1.0:506",
+      "raw_repr": "Expr(Call(Attribute(Name('_LOGGER', Load()), 'warning', Load()), [Constant('Authentication failed for %s: %s'), Attribute(Name('self', Load()), 'host', Load()), Name('err', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "_LOGGER",
+        "err",
+        "self"
+      ]
+    },
+    "f20e5673:on_connect:1.0:509": {
+      "col_end": 13,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/manager.py",
+      "function_name": "on_connect",
+      "line_end": 511,
+      "line_start": 509,
+      "marker_refs": [],
+      "node_id": "f20e5673:on_connect:1.0:509",
+      "raw_repr": "Expr(Call(Attribute(Name('_LOGGER', Load()), 'warning', Load()), [Constant('Error getting setting up connection for %s: %s'), Attribute(Name('self', Load()), 'host', Load()), Name('err', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "_LOGGER",
+        "err",
+        "self"
+      ]
+    },
+    "f20e5673:on_connect:1.1:507": {
+      "col_end": 53,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/manager.py",
+      "function_name": "on_connect",
+      "line_end": 507,
+      "line_start": 507,
+      "marker_refs": [],
+      "node_id": "f20e5673:on_connect:1.1:507",
+      "raw_repr": "Expr(Await(Call(Attribute(Name('self', Load()), '_start_reauth_and_disconnect', Load()))))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "f20e5673:on_connect:1.1:513": {
+      "col_end": 39,
+      "col_start": 12,
+      "defs": [],
+      "effects": [
+        "external_call_ble"
+      ],
+      "file_path": "data/repo_snapshot/esphome/manager.py",
+      "function_name": "on_connect",
+      "line_end": 513,
+      "line_start": 513,
+      "marker_refs": [
+        "marker_770bd101b5",
+        "marker_010219f373"
+      ],
+      "node_id": "f20e5673:on_connect:1.1:513",
+      "raw_repr": "Expr(Await(Call(Attribute(Attribute(Name('self', Load()), 'cli', Load()), 'disconnect', Load()))))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "f20e5673:on_connect:1:503": {
+      "col_end": 39,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "external_call_ble"
+      ],
+      "file_path": "data/repo_snapshot/esphome/manager.py",
+      "function_name": "on_connect",
+      "line_end": 513,
+      "line_start": 503,
+      "marker_refs": [],
+      "node_id": "f20e5673:on_connect:1:503",
+      "raw_repr": "Try([Expr(Await(Call(Attribute(Name('self', Load()), '_on_connect', Load()))))], [ExceptHandler(Name('InvalidAuthAPIError', Load()), 'err', [Expr(Call(Attribute(Name('_LOGGER', Load()), 'warning', Load()), [Constant('Authentication failed for %s: %s'), Attribute(Name('self', Load()), 'host', Load()), Name('err', Load())])), Expr(Await(Call(Attribute(Name('self', Load()), '_start_reauth_and_disconnect', Load()))))]), ExceptHandler(Name('APIConnectionError', Load()), 'err', [Expr(Call(Attribute(Name('_LOGGER', Load()), 'warning', Load()), [Constant('Error getting setting up connection for %s: %s'), Attribute(Name('self', Load()), 'host', Load()), Name('err', Load())])), Expr(Await(Call(Attribute(Attribute(Name('self', Load()), 'cli', Load()), 'disconnect', Load()))))])])",
+      "stmt_kind": "Try",
+      "uses": [
+        "APIConnectionError",
+        "InvalidAuthAPIError",
+        "_LOGGER",
+        "err",
+        "self"
+      ]
+    },
+    "f8314a32:_needs_poll:0:137": {
+      "col_end": 9,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/xiaomi_ble/__init__.py",
+      "function_name": "_needs_poll",
+      "line_end": 145,
+      "line_start": 137,
+      "marker_refs": [
+        "marker_8b05854925"
+      ],
+      "node_id": "f8314a32:_needs_poll:0:137",
+      "raw_repr": "Return(BoolOp(And(), [Compare(Attribute(Name('hass', Load()), 'state', Load()), [Is()], [Attribute(Name('CoreState', Load()), 'running', Load())]), Call(Attribute(Name('data', Load()), 'poll_needed', Load()), [Name('service_info', Load()), Name('last_poll', Load())]), Call(Name('bool', Load()), [Call(Name('async_ble_device_from_address', Load()), [Name('hass', Load()), Attribute(Attribute(Name('service_info', Load()), 'device', Load()), 'address', Load())], [keyword('connectable', Constant(True))])])]))",
+      "stmt_kind": "Return",
+      "uses": [
+        "CoreState",
+        "async_ble_device_from_address",
+        "bool",
+        "data",
+        "hass",
+        "last_poll",
+        "service_info"
+      ]
+    },
+    "f8314a32:async_unload_entry:0:191": {
+      "col_end": 32,
+      "col_start": 4,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/xiaomi_ble/__init__.py",
+      "function_name": "async_unload_entry",
+      "line_end": 191,
+      "line_start": 191,
+      "marker_refs": [
+        "marker_abcd008d4f"
+      ],
+      "node_id": "f8314a32:async_unload_entry:0:191",
+      "raw_repr": "Expr(Constant('Unload a config entry.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    }
+  },
+  "source_files": [
+    "data/repo_snapshot/airthings_ble/config_flow.py",
+    "data/repo_snapshot/airthings_ble/coordinator.py",
+    "data/repo_snapshot/airthings_ble/sensor.py",
+    "data/repo_snapshot/esphome/__init__.py",
+    "data/repo_snapshot/esphome/assist_satellite.py",
+    "data/repo_snapshot/esphome/climate.py",
+    "data/repo_snapshot/esphome/manager.py",
+    "data/repo_snapshot/esphome/update.py",
+    "data/repo_snapshot/ruuvitag_ble/config_flow.py",
+    "data/repo_snapshot/ruuvitag_ble/sensor.py",
+    "data/repo_snapshot/switchbot/cover.py",
+    "data/repo_snapshot/switchbot/fan.py",
+    "data/repo_snapshot/xiaomi_ble/__init__.py",
+    "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+    "data/repo_snapshot/xiaomi_ble/device.py",
+    "data/repo_snapshot/xiaomi_ble/event.py"
+  ]
+}

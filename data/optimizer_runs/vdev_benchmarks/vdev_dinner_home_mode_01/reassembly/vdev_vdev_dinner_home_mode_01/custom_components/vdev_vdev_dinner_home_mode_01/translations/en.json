@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_dinner_home_mode_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Dinner Time Home Mode Routine"
+}

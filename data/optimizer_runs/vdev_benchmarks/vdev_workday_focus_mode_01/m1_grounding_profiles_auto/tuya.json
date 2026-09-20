@@ -1,0 +1,1404 @@
+{
+  "integration": "tuya",
+  "runtime_families": [
+    {
+      "action_kind": "status",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "office_main",
+          "tuya:light.office_main.status",
+          "office_task",
+          "tuya:light.office_task.status",
+          "study_bookshelf",
+          "tuya:light.study_bookshelf.status"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "status",
+          "poll_update"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "const",
+          "homeassistant",
+          "logging",
+          "tuya_sharing",
+          "typing"
+        ],
+        "boost_if_names": [
+          "status",
+          "update_device",
+          "update_token"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "CLOUD_STATUS_CALL",
+      "file_globs": [
+        "tuya/__init__.py"
+      ],
+      "forbidden_context": [
+        "setup_function",
+        "dunder_init",
+        "entity_property_getter"
+      ],
+      "forbidden_path_signals": [
+        "setup_function:async_setup_entry",
+        "control_function:async_turn_on",
+        "control_function:async_turn_off",
+        "control_function:async_open_cover",
+        "control_function:async_close_cover",
+        "control_function:async_set_cover_position",
+        "control_function:set_state",
+        "state_accessor_property:state"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "update_device",
+        "update_token"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A15",
+        "A16",
+        "A17",
+        "A18"
+      ],
+      "integration": "tuya",
+      "negative_call_patterns": [
+        "tokenlistener",
+        "devicelistener",
+        "add_device_listener",
+        "homeassistanttuyadata",
+        "async_get",
+        "async_add_executor_job"
+      ],
+      "negative_evidence": [
+        "negative_function:async_setup_entry",
+        "negative_function:add_device",
+        "negative_call:tokenlistener",
+        "negative_call:devicelistener",
+        "negative_call:add_device_listener",
+        "negative_call:homeassistanttuyadata",
+        "negative_call:async_get",
+        "negative_call:values",
+        "negative_call:async_add_executor_job",
+        "negative_call:cleanup_device_registry"
+      ],
+      "negative_function_patterns": [
+        "async_setup_entry",
+        "add_device",
+        "async_turn_on",
+        "async_turn_off",
+        "async_set_*",
+        "async_open_*"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [
+            "tokenlistener",
+            "devicelistener",
+            "manager.add_device_listener",
+            "homeassistanttuyadata",
+            "dr.async_get",
+            "manager.device_map.values",
+            "hass.async_add_executor_job",
+            "cleanup_device_registry"
+          ],
+          "call_patterns": [
+            "tokenlistener",
+            "devicelistener",
+            "add_device_listener",
+            "homeassistanttuyadata",
+            "async_get",
+            "values",
+            "async_add_executor_job",
+            "cleanup_device_registry"
+          ],
+          "file_path": "data/repo_snapshot/tuya/__init__.py",
+          "function_name": "async_setup_entry",
+          "path_kind": "setup_path",
+          "path_signals": [
+            "setup_function:async_setup_entry",
+            "subscription_call:tokenlistener",
+            "subscription_call:devicelistener",
+            "subscription_call:manager.add_device_listener"
+          ],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -18,
+          "snippet": "58: \n59: async def async_setup_entry(hass: HomeAssistant, entry: TuyaConfigEntry) -> bool:\n60:     \"\"\"Async setup hass config entry.\"\"\"\n61:     token_listener = TokenListener(hass, entry)\n62: \n63:     # Move to executor as it makes blocking call to import_module\n64:     # with args ('.system', 'urllib3.contrib.resolver')\n65:     manager = await hass.async_add_executor_job(_create_manager, entry, token_listener)\n66: \n67:     listener = DeviceListener(hass, manager)\n68:     manager.add_device_listener(listener)\n69: \n70:     # Get all devices from Tuya\n71:     try:"
+        },
+        {
+          "call_chains": [
+            "self.hass.add_job",
+            "logger.debug",
+            "dispatcher_send"
+          ],
+          "call_patterns": [
+            "add_job",
+            "debug",
+            "dispatcher_send"
+          ],
+          "file_path": "data/repo_snapshot/tuya/__init__.py",
+          "function_name": "add_device",
+          "path_kind": "helper_path",
+          "path_signals": [],
+          "prototype_kind": "negative_helper",
+          "role_hint": "helper",
+          "score": -4,
+          "snippet": "192: \n193:     def add_device(self, device: CustomerDevice) -> None:\n194:         \"\"\"Add device added listener.\"\"\"\n195:         # Ensure the device isn't present stale\n196:         self.hass.add_job(self.async_remove_device, device.id)\n197: \n198:         LOGGER.debug(\n199:             \"Add device %s (online: %s): %s (function: %s, status range: %s)\",\n200:             device.id,\n201:             device.online,\n202:             device.status,\n203:             device.function,\n204:             device.status_range,\n205:         )"
+        }
+      ],
+      "origin_action_id": "A18",
+      "origin_cluster_id": "tuya____init____cloud_status_call__status__cloud",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [
+            "logger.debug",
+            "dispatcher_send"
+          ],
+          "call_patterns": [
+            "debug",
+            "dispatcher_send"
+          ],
+          "file_path": "data/repo_snapshot/tuya/__init__.py",
+          "function_name": "update_device",
+          "path_kind": "read_path",
+          "path_signals": [],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 6,
+          "snippet": "169: \n170:     def update_device(\n171:         self,\n172:         device: CustomerDevice,\n173:         updated_status_properties: list[str] | None = None,\n174:         dp_timestamps: dict[str, int] | None = None,\n175:     ) -> None:\n176:         \"\"\"Update device status with optional DP timestamps.\"\"\"\n177:         LOGGER.debug(\n178:             \"Received update for device %s (online: %s): %s\"\n179:             \" (updated properties: %s, dp_timestamps: %s)\",\n180:             device.id,\n181:             device.online,\n182:             device.status,"
+        },
+        {
+          "call_chains": [
+            "self.hass.add_job",
+            "self.hass.config_entries.async_update_entry"
+          ],
+          "call_patterns": [
+            "add_job",
+            "async_update_entry"
+          ],
+          "file_path": "data/repo_snapshot/tuya/__init__.py",
+          "function_name": "update_token",
+          "path_kind": "read_path",
+          "path_signals": [],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 6,
+          "snippet": "236: \n237:     def update_token(self, token_info: dict[str, Any]) -> None:\n238:         \"\"\"Update token info in config entry.\"\"\"\n239:         data = {\n240:             **self.entry.data,\n241:             CONF_TOKEN_INFO: {\n242:                 \"t\": token_info[\"t\"],\n243:                 \"uid\": token_info[\"uid\"],\n244:                 \"expire_time\": token_info[\"expire_time\"],\n245:                 \"access_token\": token_info[\"access_token\"],\n246:                 \"refresh_token\": token_info[\"refresh_token\"],\n247:             },\n248:         }\n249:"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read"
+      ],
+      "required_context": [
+        "runtime_update_path"
+      ],
+      "required_path_signals": [],
+      "required_runtime_roles": [
+        "runtime_read"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "tuya:__init___runtime_status_read",
+      "runtime_archetypes": [
+        "cloud_runtime_read",
+        "entity_wrapper_read",
+        "coordinator_update_path"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:update_device",
+        "runtime_function:update_token",
+        "runtime_call:debug",
+        "runtime_call:dispatcher_send",
+        "runtime_call:logger.debug",
+        "runtime_call:add_job",
+        "runtime_call:async_update_entry",
+        "runtime_call:self.hass.add_job",
+        "runtime_call:self.hass.config_entries.async_update_entry",
+        "path_signal:update_callback_function:_process_device_update"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/tuya/__init__.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A16",
+        "A17",
+        "A18"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "same runtime idiom appears in one file across multiple unresolved actions",
+      "why_not_setup": [
+        "exclude_role:setup:async_setup_entry",
+        "exclude_role:helper:add_device",
+        "exclude_path_signal:setup_function:async_setup_entry",
+        "exclude_control_path_for_read_like_action"
+      ]
+    },
+    {
+      "action_kind": "status",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "office_main",
+          "tuya:light.office_main.status",
+          "office_task",
+          "tuya:light.office_task.status",
+          "study_bookshelf",
+          "tuya:light.study_bookshelf.status"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "status",
+          "poll_update"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [
+        "read_device_status"
+      ],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "const",
+          "homeassistant",
+          "tuya_device_handlers",
+          "tuya_sharing",
+          "typing"
+        ],
+        "boost_if_names": [
+          "status",
+          "_process_device_update",
+          "read_device_status"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "CLOUD_STATUS_CALL",
+      "file_globs": [
+        "tuya/entity.py"
+      ],
+      "forbidden_context": [
+        "setup_function",
+        "dunder_init",
+        "entity_property_getter"
+      ],
+      "forbidden_path_signals": [
+        "control_function:_async_send_wrapper_updates",
+        "control_call:self._async_send_commands",
+        "awaited_control_call:self._async_send_commands",
+        "control_function:_async_send_commands",
+        "property_function:available",
+        "property_function:device_info",
+        "control_function:async_turn_on",
+        "control_function:async_turn_off"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "_process_device_update"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A15",
+        "A16",
+        "A17",
+        "A18"
+      ],
+      "integration": "tuya",
+      "negative_call_patterns": [
+        "_async_send_commands",
+        "get_update_commands",
+        "self._async_send_commands",
+        "wrapper.get_update_commands",
+        "async_add_executor_job",
+        "logger.debug"
+      ],
+      "negative_evidence": [
+        "negative_function:__init__",
+        "negative_function:_async_send_wrapper_updates",
+        "negative_function:_async_send_commands",
+        "negative_function:available",
+        "negative_function:device_info",
+        "negative_call:_async_send_commands",
+        "negative_call:get_update_commands",
+        "negative_call:self._async_send_commands",
+        "negative_call:wrapper.get_update_commands",
+        "negative_call:debug"
+      ],
+      "negative_function_patterns": [
+        "__init__",
+        "_async_send_wrapper_updates",
+        "_async_send_commands",
+        "available",
+        "device_info",
+        "_read_wrapper"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/tuya/entity.py",
+          "function_name": "__init__",
+          "path_kind": "setup_path",
+          "path_signals": [],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -6,
+          "snippet": "22: \n23:     def __init__(self, device: CustomerDevice, device_manager: Manager) -> None:\n24:         \"\"\"Init TuyaHaEntity.\"\"\"\n25:         self._attr_unique_id = f\"tuya.{device.id}\"\n26:         # TuyaEntity initialize mq can subscribe\n27:         device.set_up = True\n28:         self.device = device\n29:         self.device_manager = device_manager\n30: \n31:     @property"
+        },
+        {
+          "call_chains": [
+            "self._async_send_commands",
+            "wrapper.get_update_commands"
+          ],
+          "call_patterns": [
+            "_async_send_commands",
+            "get_update_commands"
+          ],
+          "file_path": "data/repo_snapshot/tuya/entity.py",
+          "function_name": "_async_send_wrapper_updates",
+          "path_kind": "control_path",
+          "path_signals": [
+            "control_function:_async_send_wrapper_updates",
+            "read_function:_async_send_wrapper_updates",
+            "control_call:self._async_send_commands",
+            "read_call:wrapper.get_update_commands",
+            "awaited_control_call:self._async_send_commands"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -10,
+          "snippet": "104: \n105:     async def _async_send_wrapper_updates[T](\n106:         self, wrapper: DeviceWrapper[T] | None, value: T\n107:     ) -> None:\n108:         \"\"\"Send command to the device.\"\"\"\n109:         if wrapper is None:\n110:             return\n111:         await self._async_send_commands(\n112:             wrapper.get_update_commands(self.device, value),\n113:         )"
+        },
+        {
+          "call_chains": [
+            "logger.debug",
+            "self.hass.async_add_executor_job"
+          ],
+          "call_patterns": [
+            "debug",
+            "async_add_executor_job"
+          ],
+          "file_path": "data/repo_snapshot/tuya/entity.py",
+          "function_name": "_async_send_commands",
+          "path_kind": "control_path",
+          "path_signals": [
+            "control_function:_async_send_commands"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -8,
+          "snippet": "89: \n90:     async def _async_send_commands(self, commands: list[dict[str, Any]]) -> None:\n91:         \"\"\"Send a list of commands to the device.\"\"\"\n92:         LOGGER.debug(\"Sending commands for device %s: %s\", self.device.id, commands)\n93:         if not commands:\n94:             return\n95:         await self.hass.async_add_executor_job(\n96:             self.device_manager.send_commands, self.device.id, commands\n97:         )\n98: \n99:     def _read_wrapper[T](self, wrapper: DeviceWrapper[T] | None) -> T | None:"
+        },
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/tuya/entity.py",
+          "function_name": "available",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:available"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "42:     @property\n43:     def available(self) -> bool:\n44:         \"\"\"Return if the device is available.\"\"\"\n45:         return self.device.online\n46: \n47:     async def async_added_to_hass(self) -> None:"
+        },
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/tuya/entity.py",
+          "function_name": "device_info",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:device_info"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "31:     @property\n32:     def device_info(self) -> DeviceInfo:\n33:         \"\"\"Return a device description for device registry.\"\"\"\n34:         return DeviceInfo(\n35:             identifiers={(DOMAIN, self.device.id)},\n36:             manufacturer=\"Tuya\",\n37:             name=self.device.name,\n38:             model=self.device.product_name,\n39:             model_id=self.device.product_id,\n40:         )\n41: \n42:     @property"
+        }
+      ],
+      "origin_action_id": "A18",
+      "origin_cluster_id": "tuya__entity__cloud_status_call__status__cloud",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [
+            "wrapper.read_device_status"
+          ],
+          "call_patterns": [
+            "read_device_status"
+          ],
+          "file_path": "data/repo_snapshot/tuya/entity.py",
+          "function_name": "_read_wrapper",
+          "path_kind": "read_path",
+          "path_signals": [
+            "read_function:_read_wrapper",
+            "read_call:wrapper.read_device_status",
+            "state_accessor_call:wrapper.read_device_status"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 8,
+          "snippet": "98: \n99:     def _read_wrapper[T](self, wrapper: DeviceWrapper[T] | None) -> T | None:\n100:         \"\"\"Read the wrapper device status.\"\"\"\n101:         if wrapper is None:\n102:             return None\n103:         return wrapper.read_device_status(self.device)\n104: \n105:     async def _async_send_wrapper_updates[T]("
+        },
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/tuya/entity.py",
+          "function_name": "_process_device_update",
+          "path_kind": "read_path",
+          "path_signals": [
+            "update_callback_function:_process_device_update"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 8,
+          "snippet": "77: \n78:     async def _process_device_update(\n79:         self,\n80:         updated_status_properties: list[str],\n81:         dp_timestamps: dict[str, int] | None,\n82:     ) -> bool:\n83:         \"\"\"Called when Tuya device sends an update with updated properties.\n84: \n85:         Returns True if the Home Assistant state should be written,\n86:         or False if the state write should be skipped.\n87:         \"\"\"\n88:         return True\n89: \n90:     async def _async_send_commands(self, commands: list[dict[str, Any]]) -> None:"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read"
+      ],
+      "required_context": [
+        "runtime_update_path"
+      ],
+      "required_path_signals": [
+        "read_function:_read_wrapper",
+        "read_call:wrapper.read_device_status",
+        "state_accessor_call:wrapper.read_device_status",
+        "update_callback_function:_process_device_update"
+      ],
+      "required_runtime_roles": [
+        "runtime_read"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "tuya:entity_runtime_status_read",
+      "runtime_archetypes": [
+        "cloud_runtime_read",
+        "entity_wrapper_read",
+        "coordinator_update_path"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:_read_wrapper",
+        "runtime_function:_process_device_update",
+        "runtime_call:read_device_status",
+        "runtime_call:wrapper.read_device_status",
+        "path_signal:read_function:_read_wrapper",
+        "path_signal:read_call:wrapper.read_device_status",
+        "path_signal:state_accessor_call:wrapper.read_device_status",
+        "path_signal:update_callback_function:_process_device_update"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/tuya/entity.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A16",
+        "A17",
+        "A18"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "same runtime idiom appears in one file across multiple unresolved actions",
+      "why_not_setup": [
+        "exclude_role:setup:__init__",
+        "exclude_role:runtime_write:_async_send_wrapper_updates",
+        "exclude_role:runtime_write:_async_send_commands",
+        "exclude_role:property_getter:available",
+        "exclude_role:property_getter:device_info",
+        "exclude_path_signal:control_function:_async_send_wrapper_updates",
+        "exclude_path_signal:control_call:self._async_send_commands",
+        "exclude_path_signal:awaited_control_call:self._async_send_commands"
+      ]
+    },
+    {
+      "action_kind": "turn_on",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "office_main",
+          "tuya:light.office_main.turn_on",
+          "office_task",
+          "tuya:light.office_task.turn_on",
+          "study_bookshelf",
+          "tuya:light.study_bookshelf.turn_on"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "control",
+          "turn_on"
+        ],
+        "required_service_tokens": [
+          "turn_on"
+        ]
+      },
+      "call_patterns": [
+        "get_update_commands",
+        "_async_send_commands",
+        "self._switch_wrapper.get_update_commands",
+        "self._async_send_commands",
+        "self._color_mode_wrapper.get_update_commands",
+        "self._color_temp_wrapper.get_update_commands"
+      ],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "const",
+          "dataclasses",
+          "entity",
+          "enum",
+          "homeassistant"
+        ],
+        "boost_if_names": [
+          "turn_on",
+          "async_turn_on",
+          "get_update_commands",
+          "_async_send_commands",
+          "self._switch_wrapper.get_update_commands",
+          "self._async_send_commands"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "CLOUD_OP",
+      "file_globs": [
+        "tuya/light.py"
+      ],
+      "forbidden_context": [
+        "setup_function",
+        "dunder_init",
+        "entity_property_getter"
+      ],
+      "forbidden_path_signals": [
+        "setup_function:async_setup_entry",
+        "setup_call:async_add_entities",
+        "setup_call:async_dispatcher_connect",
+        "property_function:is_on",
+        "state_accessor_property:is_on",
+        "property_function:hs_color",
+        "state_accessor_property:hs_color"
+      ],
+      "forbidden_runtime_roles": [
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "async_turn_on"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A8",
+        "A9",
+        "A10"
+      ],
+      "integration": "tuya",
+      "negative_call_patterns": [
+        "async_discover_device",
+        "async_on_unload",
+        "async_add_entities",
+        "async_dispatcher_connect",
+        "extend",
+        "tuyalightentity"
+      ],
+      "negative_evidence": [
+        "negative_function:async_setup_entry",
+        "negative_function:is_on",
+        "negative_function:hs_color",
+        "negative_call:async_discover_device",
+        "negative_call:async_on_unload",
+        "negative_call:async_add_entities",
+        "negative_call:async_dispatcher_connect",
+        "negative_call:get",
+        "negative_call:extend",
+        "negative_call:tuyalightentity"
+      ],
+      "negative_function_patterns": [
+        "async_setup_entry",
+        "is_on",
+        "hs_color"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [
+            "async_discover_device",
+            "entry.async_on_unload",
+            "async_add_entities",
+            "async_dispatcher_connect",
+            "lights.get",
+            "entities.extend",
+            "tuyalightentity",
+            "_get_color_data_wrapper"
+          ],
+          "call_patterns": [
+            "async_discover_device",
+            "async_on_unload",
+            "async_add_entities",
+            "async_dispatcher_connect",
+            "get",
+            "extend",
+            "tuyalightentity",
+            "_get_color_data_wrapper"
+          ],
+          "file_path": "data/repo_snapshot/tuya/light.py",
+          "function_name": "async_setup_entry",
+          "path_kind": "setup_path",
+          "path_signals": [
+            "setup_function:async_setup_entry",
+            "setup_call:async_add_entities",
+            "setup_call:async_dispatcher_connect",
+            "connect_call:async_dispatcher_connect"
+          ],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -8,
+          "snippet": "455: \n456: async def async_setup_entry(\n457:     hass: HomeAssistant,\n458:     entry: TuyaConfigEntry,\n459:     async_add_entities: AddConfigEntryEntitiesCallback,\n460: ) -> None:\n461:     \"\"\"Set up tuya light dynamically through tuya discovery.\"\"\"\n462:     manager = entry.runtime_data.manager\n463: \n464:     @callback\n465:     def async_discover_device(device_ids: list[str]):\n466:         \"\"\"Discover and add a discovered tuya light.\"\"\"\n467:         entities: list[TuyaLightEntity] = []\n468:         for device_id in device_ids:"
+        },
+        {
+          "call_chains": [
+            "self._read_wrapper"
+          ],
+          "call_patterns": [
+            "_read_wrapper"
+          ],
+          "file_path": "data/repo_snapshot/tuya/light.py",
+          "function_name": "is_on",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:is_on",
+            "state_accessor_property:is_on",
+            "state_accessor_call:self._read_wrapper"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "567:     @property\n568:     def is_on(self) -> bool | None:\n569:         \"\"\"Return true if light is on.\"\"\"\n570:         return self._read_wrapper(self._switch_wrapper)\n571: \n572:     async def async_turn_on(self, **kwargs: Any) -> None:"
+        },
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/tuya/light.py",
+          "function_name": "hs_color",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:hs_color",
+            "state_accessor_property:hs_color",
+            "state_accessor_call:self._read_wrapper"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "653:     @property\n654:     def hs_color(self) -> tuple[float, float] | None:\n655:         \"\"\"Return the hs_color of the light.\"\"\"\n656:         if self._color_data_wrapper is None:\n657:             return None\n658:         hsv_data = self._read_wrapper(self._color_data_wrapper)\n659:         return None if hsv_data is None else (hsv_data[0], hsv_data[1])\n660: \n661:     @property"
+        }
+      ],
+      "origin_action_id": null,
+      "origin_cluster_id": "tuya__light__cloud_op__turn_on__cloud",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [
+            "self._switch_wrapper.get_update_commands",
+            "commands.extend",
+            "self._async_send_commands",
+            "self._color_mode_wrapper.get_update_commands",
+            "self._color_temp_wrapper.get_update_commands",
+            "self._color_data_wrapper.get_update_commands",
+            "kwargs.get",
+            "self._brightness_wrapper.get_update_commands"
+          ],
+          "call_patterns": [
+            "get_update_commands",
+            "extend",
+            "_async_send_commands",
+            "get"
+          ],
+          "file_path": "data/repo_snapshot/tuya/light.py",
+          "function_name": "async_turn_on",
+          "path_kind": "control_path",
+          "path_signals": [
+            "control_function:async_turn_on",
+            "read_function:async_turn_on",
+            "read_call:self._switch_wrapper.get_update_commands",
+            "control_call:self._async_send_commands",
+            "read_call:self._color_mode_wrapper.get_update_commands",
+            "read_call:self._color_temp_wrapper.get_update_commands",
+            "read_call:self._color_data_wrapper.get_update_commands",
+            "read_call:self._brightness_wrapper.get_update_commands",
+            "awaited_control_call:self._async_send_commands"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_write",
+          "score": 13,
+          "snippet": "571: \n572:     async def async_turn_on(self, **kwargs: Any) -> None:\n573:         \"\"\"Turn on or control the light.\"\"\"\n574:         commands = self._switch_wrapper.get_update_commands(self.device, True)\n575: \n576:         if self._color_mode_wrapper and (\n577:             ATTR_WHITE in kwargs or ATTR_COLOR_TEMP_KELVIN in kwargs\n578:         ):\n579:             commands.extend(\n580:                 self._color_mode_wrapper.get_update_commands(\n581:                     self.device, WorkMode.WHITE\n582:                 ),\n583:             )\n584:"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_write"
+      ],
+      "required_context": [
+        "runtime_path"
+      ],
+      "required_path_signals": [
+        "control_function:async_turn_on",
+        "read_function:async_turn_on",
+        "read_call:self._switch_wrapper.get_update_commands",
+        "control_call:self._async_send_commands",
+        "read_call:self._color_mode_wrapper.get_update_commands",
+        "read_call:self._color_temp_wrapper.get_update_commands",
+        "read_call:self._color_data_wrapper.get_update_commands",
+        "read_call:self._brightness_wrapper.get_update_commands"
+      ],
+      "required_runtime_roles": [
+        "runtime_write"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "tuya:light_runtime_turn_on_control",
+      "runtime_archetypes": [
+        "cloud_runtime_control",
+        "entity_control_path"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:async_turn_on",
+        "runtime_call:get_update_commands",
+        "runtime_call:extend",
+        "runtime_call:_async_send_commands",
+        "runtime_call:get",
+        "runtime_call:self._switch_wrapper.get_update_commands",
+        "runtime_call:commands.extend",
+        "runtime_call:self._async_send_commands",
+        "runtime_call:self._color_mode_wrapper.get_update_commands",
+        "runtime_call:self._color_temp_wrapper.get_update_commands"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/tuya/light.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A8",
+        "A9"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "same runtime idiom appears in one file across multiple unresolved actions",
+      "why_not_setup": [
+        "exclude_role:setup:async_setup_entry",
+        "exclude_role:property_getter:is_on",
+        "exclude_role:property_getter:hs_color",
+        "exclude_path_signal:setup_function:async_setup_entry",
+        "exclude_path_signal:setup_call:async_add_entities",
+        "exclude_path_signal:setup_call:async_dispatcher_connect",
+        "exclude_path_signal:property_function:is_on",
+        "exclude_path_signal:state_accessor_property:is_on"
+      ]
+    },
+    {
+      "action_kind": "status",
+      "allow_accessor_fallback": true,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "office_main",
+          "tuya:light.office_main.status",
+          "office_task",
+          "tuya:light.office_task.status",
+          "study_bookshelf",
+          "tuya:light.study_bookshelf.status"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "status",
+          "poll_update"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "const",
+          "dataclasses",
+          "entity",
+          "enum",
+          "homeassistant"
+        ],
+        "boost_if_names": [
+          "status",
+          "is_on"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "CLOUD_STATUS_CALL",
+      "file_globs": [
+        "tuya/light.py"
+      ],
+      "forbidden_context": [
+        "setup_function",
+        "dunder_init"
+      ],
+      "forbidden_path_signals": [
+        "setup_function:async_setup_entry",
+        "setup_call:async_add_entities",
+        "setup_call:async_dispatcher_connect",
+        "control_function:async_turn_off",
+        "control_call:self._async_send_wrapper_updates",
+        "awaited_control_call:self._async_send_wrapper_updates",
+        "control_function:async_turn_on",
+        "control_call:self._async_send_commands"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "is_on"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A15",
+        "A16",
+        "A17"
+      ],
+      "integration": "tuya",
+      "negative_call_patterns": [
+        "async_discover_device",
+        "async_on_unload",
+        "async_add_entities",
+        "async_dispatcher_connect",
+        "extend",
+        "tuyalightentity"
+      ],
+      "negative_evidence": [
+        "negative_function:async_setup_entry",
+        "negative_function:async_turn_off",
+        "negative_function:async_turn_on",
+        "negative_function:is_on",
+        "negative_function:hs_color",
+        "negative_call:async_discover_device",
+        "negative_call:async_on_unload",
+        "negative_call:async_add_entities",
+        "negative_call:async_dispatcher_connect",
+        "negative_call:get"
+      ],
+      "negative_function_patterns": [
+        "async_setup_entry",
+        "async_turn_off",
+        "async_turn_on",
+        "hs_color",
+        "async_set_*",
+        "async_open_*"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [
+            "async_discover_device",
+            "entry.async_on_unload",
+            "async_add_entities",
+            "async_dispatcher_connect",
+            "lights.get",
+            "entities.extend",
+            "tuyalightentity",
+            "_get_color_data_wrapper"
+          ],
+          "call_patterns": [
+            "async_discover_device",
+            "async_on_unload",
+            "async_add_entities",
+            "async_dispatcher_connect",
+            "get",
+            "extend",
+            "tuyalightentity",
+            "_get_color_data_wrapper"
+          ],
+          "file_path": "data/repo_snapshot/tuya/light.py",
+          "function_name": "async_setup_entry",
+          "path_kind": "setup_path",
+          "path_signals": [
+            "setup_function:async_setup_entry",
+            "setup_call:async_add_entities",
+            "setup_call:async_dispatcher_connect",
+            "connect_call:async_dispatcher_connect"
+          ],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -8,
+          "snippet": "455: \n456: async def async_setup_entry(\n457:     hass: HomeAssistant,\n458:     entry: TuyaConfigEntry,\n459:     async_add_entities: AddConfigEntryEntitiesCallback,\n460: ) -> None:\n461:     \"\"\"Set up tuya light dynamically through tuya discovery.\"\"\"\n462:     manager = entry.runtime_data.manager\n463: \n464:     @callback\n465:     def async_discover_device(device_ids: list[str]):\n466:         \"\"\"Discover and add a discovered tuya light.\"\"\"\n467:         entities: list[TuyaLightEntity] = []\n468:         for device_id in device_ids:"
+        },
+        {
+          "call_chains": [
+            "self._async_send_wrapper_updates"
+          ],
+          "call_patterns": [
+            "_async_send_wrapper_updates"
+          ],
+          "file_path": "data/repo_snapshot/tuya/light.py",
+          "function_name": "async_turn_off",
+          "path_kind": "control_path",
+          "path_signals": [
+            "control_function:async_turn_off",
+            "control_call:self._async_send_wrapper_updates",
+            "awaited_control_call:self._async_send_wrapper_updates"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -12,
+          "snippet": "633: \n634:     async def async_turn_off(self, **kwargs: Any) -> None:\n635:         \"\"\"Instruct the light to turn off.\"\"\"\n636:         await self._async_send_wrapper_updates(self._switch_wrapper, False)\n637: \n638:     @property"
+        },
+        {
+          "call_chains": [
+            "self._switch_wrapper.get_update_commands",
+            "commands.extend",
+            "self._async_send_commands",
+            "self._color_mode_wrapper.get_update_commands",
+            "self._color_temp_wrapper.get_update_commands",
+            "self._color_data_wrapper.get_update_commands",
+            "kwargs.get",
+            "self._brightness_wrapper.get_update_commands"
+          ],
+          "call_patterns": [
+            "get_update_commands",
+            "extend",
+            "_async_send_commands",
+            "get"
+          ],
+          "file_path": "data/repo_snapshot/tuya/light.py",
+          "function_name": "async_turn_on",
+          "path_kind": "control_path",
+          "path_signals": [
+            "control_function:async_turn_on",
+            "read_function:async_turn_on",
+            "read_call:self._switch_wrapper.get_update_commands",
+            "control_call:self._async_send_commands",
+            "read_call:self._color_mode_wrapper.get_update_commands",
+            "read_call:self._color_temp_wrapper.get_update_commands",
+            "read_call:self._color_data_wrapper.get_update_commands",
+            "read_call:self._brightness_wrapper.get_update_commands",
+            "awaited_control_call:self._async_send_commands"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -10,
+          "snippet": "571: \n572:     async def async_turn_on(self, **kwargs: Any) -> None:\n573:         \"\"\"Turn on or control the light.\"\"\"\n574:         commands = self._switch_wrapper.get_update_commands(self.device, True)\n575: \n576:         if self._color_mode_wrapper and (\n577:             ATTR_WHITE in kwargs or ATTR_COLOR_TEMP_KELVIN in kwargs\n578:         ):\n579:             commands.extend(\n580:                 self._color_mode_wrapper.get_update_commands(\n581:                     self.device, WorkMode.WHITE\n582:                 ),\n583:             )\n584:"
+        },
+        {
+          "call_chains": [
+            "self._read_wrapper"
+          ],
+          "call_patterns": [
+            "_read_wrapper"
+          ],
+          "file_path": "data/repo_snapshot/tuya/light.py",
+          "function_name": "is_on",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:is_on",
+            "state_accessor_property:is_on",
+            "state_accessor_call:self._read_wrapper"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "567:     @property\n568:     def is_on(self) -> bool | None:\n569:         \"\"\"Return true if light is on.\"\"\"\n570:         return self._read_wrapper(self._switch_wrapper)\n571: \n572:     async def async_turn_on(self, **kwargs: Any) -> None:"
+        },
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/tuya/light.py",
+          "function_name": "hs_color",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:hs_color",
+            "state_accessor_property:hs_color",
+            "state_accessor_call:self._read_wrapper"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "653:     @property\n654:     def hs_color(self) -> tuple[float, float] | None:\n655:         \"\"\"Return the hs_color of the light.\"\"\"\n656:         if self._color_data_wrapper is None:\n657:             return None\n658:         hsv_data = self._read_wrapper(self._color_data_wrapper)\n659:         return None if hsv_data is None else (hsv_data[0], hsv_data[1])\n660: \n661:     @property"
+        }
+      ],
+      "origin_action_id": null,
+      "origin_cluster_id": "tuya__light__cloud_status_call__status__cloud",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [
+            "self._read_wrapper"
+          ],
+          "call_patterns": [
+            "_read_wrapper"
+          ],
+          "file_path": "data/repo_snapshot/tuya/light.py",
+          "function_name": "is_on",
+          "path_kind": "read_path",
+          "path_signals": [
+            "property_function:is_on",
+            "state_accessor_property:is_on",
+            "state_accessor_call:self._read_wrapper",
+            "_read_wrapper"
+          ],
+          "prototype_kind": "synthetic_accessor_positive",
+          "role_hint": "runtime_read_snapshot",
+          "score": 3,
+          "snippet": "567:     @property\n568:     def is_on(self) -> bool | None:\n569:         \"\"\"Return true if light is on.\"\"\"\n570:         return self._read_wrapper(self._switch_wrapper)\n571: \n572:     async def async_turn_on(self, **kwargs: Any) -> None:"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read"
+      ],
+      "required_context": [
+        "runtime_update_path"
+      ],
+      "required_path_signals": [
+        "property_function:is_on",
+        "state_accessor_property:is_on",
+        "state_accessor_call:self._read_wrapper"
+      ],
+      "required_runtime_roles": [
+        "runtime_read"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "tuya:light_runtime_status_read",
+      "runtime_archetypes": [
+        "cloud_runtime_read",
+        "entity_wrapper_read",
+        "coordinator_update_path"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:is_on",
+        "runtime_call:_read_wrapper",
+        "runtime_call:self._read_wrapper",
+        "path_signal:property_function:is_on",
+        "path_signal:state_accessor_property:is_on",
+        "path_signal:state_accessor_call:self._read_wrapper",
+        "path_signal:update_callback_function:_process_device_update",
+        "path_signal:read_function:_read_wrapper",
+        "path_signal:read_call:wrapper.read_device_status",
+        "path_signal:state_accessor_call:wrapper.read_device_status"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/tuya/light.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A16",
+        "A17"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "same runtime idiom appears in one file across multiple unresolved actions",
+      "why_not_setup": [
+        "exclude_role:setup:async_setup_entry",
+        "exclude_role:runtime_write:async_turn_off",
+        "exclude_role:runtime_write:async_turn_on",
+        "exclude_role:property_getter:is_on",
+        "exclude_role:property_getter:hs_color",
+        "exclude_path_signal:setup_function:async_setup_entry",
+        "exclude_path_signal:setup_call:async_add_entities",
+        "exclude_path_signal:setup_call:async_dispatcher_connect"
+      ]
+    },
+    {
+      "action_kind": "status",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "energy_strip_desk",
+          "tuya:switch.energy_strip_desk.status"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "status",
+          "poll_update"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "const",
+          "entity",
+          "homeassistant",
+          "tuya_device_handlers",
+          "tuya_sharing"
+        ],
+        "boost_if_names": [
+          "status",
+          "_process_device_update"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "CLOUD_STATUS_CALL",
+      "file_globs": [
+        "tuya/switch.py"
+      ],
+      "forbidden_context": [
+        "setup_function",
+        "dunder_init",
+        "entity_property_getter"
+      ],
+      "forbidden_path_signals": [
+        "setup_function:async_setup_entry",
+        "setup_call:async_add_entities",
+        "setup_call:async_dispatcher_connect",
+        "control_function:async_turn_on",
+        "control_call:self._async_send_wrapper_updates",
+        "awaited_control_call:self._async_send_wrapper_updates",
+        "control_function:async_turn_off",
+        "property_function:is_on"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "_process_device_update"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A18"
+      ],
+      "integration": "tuya",
+      "negative_call_patterns": [
+        "async_discover_device",
+        "async_on_unload",
+        "async_add_entities",
+        "async_dispatcher_connect",
+        "extend",
+        "tuyaswitchentity"
+      ],
+      "negative_evidence": [
+        "negative_function:async_setup_entry",
+        "negative_function:async_turn_on",
+        "negative_function:async_turn_off",
+        "negative_function:is_on",
+        "negative_function:async_discover_device",
+        "negative_call:async_discover_device",
+        "negative_call:async_on_unload",
+        "negative_call:async_add_entities",
+        "negative_call:async_dispatcher_connect",
+        "negative_call:get"
+      ],
+      "negative_function_patterns": [
+        "async_setup_entry",
+        "async_turn_on",
+        "async_turn_off",
+        "is_on",
+        "async_discover_device",
+        "async_set_*"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [
+            "async_discover_device",
+            "entry.async_on_unload",
+            "async_add_entities",
+            "async_dispatcher_connect",
+            "switches.get",
+            "entities.extend",
+            "tuyaswitchentity",
+            "dpcodebooleanwrapper.find_dpcode"
+          ],
+          "call_patterns": [
+            "async_discover_device",
+            "async_on_unload",
+            "async_add_entities",
+            "async_dispatcher_connect",
+            "get",
+            "extend",
+            "tuyaswitchentity",
+            "find_dpcode"
+          ],
+          "file_path": "data/repo_snapshot/tuya/switch.py",
+          "function_name": "async_setup_entry",
+          "path_kind": "setup_path",
+          "path_signals": [
+            "setup_function:async_setup_entry",
+            "setup_call:async_add_entities",
+            "setup_call:async_dispatcher_connect",
+            "connect_call:async_dispatcher_connect"
+          ],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -8,
+          "snippet": "907: \n908: async def async_setup_entry(\n909:     hass: HomeAssistant,\n910:     entry: TuyaConfigEntry,\n911:     async_add_entities: AddConfigEntryEntitiesCallback,\n912: ) -> None:\n913:     \"\"\"Set up tuya sensors dynamically through tuya discovery.\"\"\"\n914:     manager = entry.runtime_data.manager\n915: \n916:     @callback\n917:     def async_discover_device(device_ids: list[str]) -> None:\n918:         \"\"\"Discover and add a discovered tuya sensor.\"\"\"\n919:         entities: list[TuyaSwitchEntity] = []\n920:         for device_id in device_ids:"
+        },
+        {
+          "call_chains": [
+            "self._async_send_wrapper_updates"
+          ],
+          "call_patterns": [
+            "_async_send_wrapper_updates"
+          ],
+          "file_path": "data/repo_snapshot/tuya/switch.py",
+          "function_name": "async_turn_on",
+          "path_kind": "control_path",
+          "path_signals": [
+            "control_function:async_turn_on",
+            "control_call:self._async_send_wrapper_updates",
+            "awaited_control_call:self._async_send_wrapper_updates"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -12,
+          "snippet": "976: \n977:     async def async_turn_on(self, **kwargs: Any) -> None:\n978:         \"\"\"Turn the switch on.\"\"\"\n979:         await self._async_send_wrapper_updates(self._dpcode_wrapper, True)\n980: \n981:     async def async_turn_off(self, **kwargs: Any) -> None:"
+        },
+        {
+          "call_chains": [
+            "self._async_send_wrapper_updates"
+          ],
+          "call_patterns": [
+            "_async_send_wrapper_updates"
+          ],
+          "file_path": "data/repo_snapshot/tuya/switch.py",
+          "function_name": "async_turn_off",
+          "path_kind": "control_path",
+          "path_signals": [
+            "control_function:async_turn_off",
+            "control_call:self._async_send_wrapper_updates",
+            "awaited_control_call:self._async_send_wrapper_updates"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -12,
+          "snippet": "980: \n981:     async def async_turn_off(self, **kwargs: Any) -> None:\n982:         \"\"\"Turn the switch off.\"\"\"\n983:         await self._async_send_wrapper_updates(self._dpcode_wrapper, False)"
+        },
+        {
+          "call_chains": [
+            "self._read_wrapper"
+          ],
+          "call_patterns": [
+            "_read_wrapper"
+          ],
+          "file_path": "data/repo_snapshot/tuya/switch.py",
+          "function_name": "is_on",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:is_on",
+            "state_accessor_property:is_on",
+            "state_accessor_call:self._read_wrapper"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "958:     @property\n959:     def is_on(self) -> bool | None:\n960:         \"\"\"Return true if switch is on.\"\"\"\n961:         return self._read_wrapper(self._dpcode_wrapper)\n962: \n963:     async def _process_device_update("
+        },
+        {
+          "call_chains": [
+            "async_add_entities",
+            "switches.get",
+            "entities.extend",
+            "tuyaswitchentity",
+            "dpcodebooleanwrapper.find_dpcode"
+          ],
+          "call_patterns": [
+            "async_add_entities",
+            "get",
+            "extend",
+            "tuyaswitchentity",
+            "find_dpcode"
+          ],
+          "file_path": "data/repo_snapshot/tuya/switch.py",
+          "function_name": "async_discover_device",
+          "path_kind": "helper_path",
+          "path_signals": [
+            "setup_call:async_add_entities"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "helper",
+          "score": -4,
+          "snippet": "916:     @callback\n917:     def async_discover_device(device_ids: list[str]) -> None:\n918:         \"\"\"Discover and add a discovered tuya sensor.\"\"\"\n919:         entities: list[TuyaSwitchEntity] = []\n920:         for device_id in device_ids:\n921:             device = manager.device_map[device_id]\n922:             if descriptions := SWITCHES.get(device.category):\n923:                 entities.extend(\n924:                     TuyaSwitchEntity(device, manager, description, dpcode_wrapper)\n925:                     for description in descriptions\n926:                     if (\n927:                         dpcode_wrapper := DPCodeBooleanWrapper.find_dpcode(\n928:                             device, description.key, prefer_function=True\n929:                         )"
+        }
+      ],
+      "origin_action_id": "A18",
+      "origin_cluster_id": "tuya__switch__cloud_status_call__status__cloud",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [
+            "self._dpcode_wrapper.skip_update"
+          ],
+          "call_patterns": [
+            "skip_update"
+          ],
+          "file_path": "data/repo_snapshot/tuya/switch.py",
+          "function_name": "_process_device_update",
+          "path_kind": "read_path",
+          "path_signals": [
+            "update_callback_function:_process_device_update"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 8,
+          "snippet": "962: \n963:     async def _process_device_update(\n964:         self,\n965:         updated_status_properties: list[str],\n966:         dp_timestamps: dict[str, int] | None,\n967:     ) -> bool:\n968:         \"\"\"Called when Tuya device sends an update with updated properties.\n969: \n970:         Returns True if the Home Assistant state should be written,\n971:         or False if the state write should be skipped.\n972:         \"\"\"\n973:         return not self._dpcode_wrapper.skip_update(\n974:             self.device, updated_status_properties, dp_timestamps\n975:         )"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read"
+      ],
+      "required_context": [
+        "runtime_update_path"
+      ],
+      "required_path_signals": [
+        "update_callback_function:_process_device_update"
+      ],
+      "required_runtime_roles": [
+        "runtime_read"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "tuya:switch_runtime_status_read",
+      "runtime_archetypes": [
+        "cloud_runtime_read",
+        "entity_wrapper_read",
+        "coordinator_update_path"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:_process_device_update",
+        "runtime_call:skip_update",
+        "runtime_call:self._dpcode_wrapper.skip_update",
+        "path_signal:update_callback_function:_process_device_update",
+        "path_signal:read_function:_read_wrapper",
+        "path_signal:read_call:wrapper.read_device_status",
+        "path_signal:state_accessor_call:wrapper.read_device_status"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/tuya/switch.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A18"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+      "why_not_setup": [
+        "exclude_role:setup:async_setup_entry",
+        "exclude_role:runtime_write:async_turn_on",
+        "exclude_role:runtime_write:async_turn_off",
+        "exclude_role:property_getter:is_on",
+        "exclude_role:helper:async_discover_device",
+        "exclude_path_signal:setup_function:async_setup_entry",
+        "exclude_path_signal:setup_call:async_add_entities",
+        "exclude_path_signal:setup_call:async_dispatcher_connect"
+      ]
+    }
+  ],
+  "schema_version": "m1_grounding_profile/v3",
+  "version": "draft_llm_v3"
+}

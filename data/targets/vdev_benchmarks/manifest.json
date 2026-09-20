@@ -1,0 +1,340 @@
+{
+  "cases": [
+    {
+      "vdev_id": "vdev_morning_wakeup_readiness_01",
+      "name": "Morning Wake-Up Readiness Routine",
+      "group": "Morning and Leaving Home Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_morning_wakeup_readiness_01.json"
+    },
+    {
+      "vdev_id": "vdev_leaving_home_safety_check_01",
+      "name": "Leaving Home Safety Check Routine",
+      "group": "Morning and Leaving Home Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_leaving_home_safety_check_01.json"
+    },
+    {
+      "vdev_id": "vdev_arrival_comfort_preparation_01",
+      "name": "Coming Home Comfort Preparation Routine",
+      "group": "Coming Home and Evening Comfort Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_arrival_comfort_preparation_01.json"
+    },
+    {
+      "vdev_id": "vdev_dinner_home_mode_01",
+      "name": "Dinner Time Home Mode Routine",
+      "group": "Coming Home and Evening Comfort Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_dinner_home_mode_01.json"
+    },
+    {
+      "vdev_id": "vdev_night_shutdown_01",
+      "name": "Night Shutdown Routine",
+      "group": "Night and Energy Monitoring Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_night_shutdown_01.json"
+    },
+    {
+      "vdev_id": "vdev_overnight_health_safety_monitoring_01",
+      "name": "Overnight Health & Safety Monitoring Routine",
+      "group": "Night and Energy Monitoring Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_overnight_health_safety_monitoring_01.json"
+    },
+    {
+      "vdev_id": "vdev_weekend_whole_home_snapshot_01",
+      "name": "Weekend Whole-Home Snapshot Routine",
+      "group": "Night and Energy Monitoring Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_weekend_whole_home_snapshot_01.json"
+    },
+    {
+      "vdev_id": "vdev_party_preparation_01",
+      "name": "Party Preparation Routine",
+      "group": "Coming Home and Evening Comfort Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_party_preparation_01.json"
+    },
+    {
+      "vdev_id": "vdev_party_scene_activation_01",
+      "name": "Party Scene Activation Routine",
+      "group": "Scene Activation and Comfort Control Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_party_scene_activation_01.json"
+    },
+    {
+      "vdev_id": "vdev_movie_night_blackout_01",
+      "name": "Movie Night Blackout Routine",
+      "group": "Scene Activation and Comfort Control Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_movie_night_blackout_01.json"
+    },
+    {
+      "vdev_id": "vdev_morning_wakeup_ramp_01",
+      "name": "Morning Wake-Up Ramp Routine",
+      "group": "Scene Activation and Comfort Control Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_morning_wakeup_ramp_01.json"
+    },
+    {
+      "vdev_id": "vdev_workday_focus_mode_01",
+      "name": "Workday Focus Mode Routine",
+      "group": "Scene Activation and Comfort Control Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_workday_focus_mode_01.json"
+    },
+    {
+      "vdev_id": "vdev_guest_suite_welcome_01",
+      "name": "Guest Suite Welcome Routine",
+      "group": "Scene Activation and Comfort Control Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_guest_suite_welcome_01.json"
+    },
+    {
+      "vdev_id": "vdev_storm_lockdown_safety_01",
+      "name": "Storm Lockdown Safety Routine",
+      "group": "Scene Activation and Comfort Control Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_storm_lockdown_safety_01.json"
+    },
+    {
+      "vdev_id": "vdev_ble_safety_sweep_stress_01",
+      "name": "BLE Congestion Routine Stress",
+      "group": "Household Stress and Abnormality Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_ble_safety_sweep_stress_01.json"
+    },
+    {
+      "vdev_id": "vdev_energy_hvac_audit_01",
+      "name": "Cloud Burst Energy & HVAC Audit Routine",
+      "group": "Household Stress and Abnormality Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_energy_hvac_audit_01.json"
+    },
+    {
+      "vdev_id": "vdev_arrive_home_lighting_climate_prep_01",
+      "name": "Arrive-Home Lighting and Climate Prep",
+      "group": "Coming Home and Evening Comfort Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_arrive_home_lighting_climate_prep_01.json"
+    },
+    {
+      "vdev_id": "vdev_leave_home_safety_energy_sweep_01",
+      "name": "Leave-Home Safety and Energy Sweep",
+      "group": "Morning and Leaving Home Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_leave_home_safety_energy_sweep_01.json"
+    },
+    {
+      "vdev_id": "vdev_good_morning_whole_floor_readiness_01",
+      "name": "Good-Morning Whole-Floor Readiness",
+      "group": "Morning and Leaving Home Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_good_morning_whole_floor_readiness_01.json"
+    },
+    {
+      "vdev_id": "vdev_bedtime_lockdown_routine_01",
+      "name": "Bedtime Lockdown Routine",
+      "group": "Night and Energy Monitoring Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_bedtime_lockdown_routine_01.json"
+    },
+    {
+      "vdev_id": "vdev_rain_coming_indoor_adjustment_01",
+      "name": "Rain-Coming Indoor Adjustment",
+      "group": "Weather and Contextual Adjustment Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_rain_coming_indoor_adjustment_01.json"
+    },
+    {
+      "vdev_id": "vdev_weekend_whole_home_snapshot_extended_01",
+      "name": "Weekend Whole-Home Snapshot Extended",
+      "group": "Whole-Home Survey and Audit Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_weekend_whole_home_snapshot_extended_01.json"
+    },
+    {
+      "vdev_id": "vdev_dinner_preparation_readiness_01",
+      "name": "Dinner Preparation Readiness",
+      "group": "Coming Home and Evening Comfort Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_dinner_preparation_readiness_01.json"
+    },
+    {
+      "vdev_id": "vdev_party_preparation_ambience_check_01",
+      "name": "Party Preparation and Ambience Check",
+      "group": "Coming Home and Evening Comfort Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_party_preparation_ambience_check_01.json"
+    },
+    {
+      "vdev_id": "vdev_workday_departure_office_zone_shutdown_01",
+      "name": "Workday Departure Office-Zone Shutdown",
+      "group": "Morning and Leaving Home Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_workday_departure_office_zone_shutdown_01.json"
+    },
+    {
+      "vdev_id": "vdev_kids_room_comfort_safety_snapshot_01",
+      "name": "Kids' Room Comfort and Safety Snapshot",
+      "group": "Family Care and Room-Level Snapshot Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_kids_room_comfort_safety_snapshot_01.json"
+    },
+    {
+      "vdev_id": "vdev_elderly_care_daily_check_01",
+      "name": "Elderly Care Daily Check",
+      "group": "Family Care and Room-Level Snapshot Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_elderly_care_daily_check_01.json"
+    },
+    {
+      "vdev_id": "vdev_laundry_utility_room_sweep_01",
+      "name": "Laundry and Utility Room Sweep",
+      "group": "Family Care and Room-Level Snapshot Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_laundry_utility_room_sweep_01.json"
+    },
+    {
+      "vdev_id": "vdev_air_quality_recovery_routine_01",
+      "name": "Air Quality Recovery Routine",
+      "group": "Family Care and Room-Level Snapshot Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_air_quality_recovery_routine_01.json"
+    },
+    {
+      "vdev_id": "vdev_vacation_mode_house_sweep_01",
+      "name": "Vacation-Mode House Sweep",
+      "group": "Whole-Home Survey and Audit Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_vacation_mode_house_sweep_01.json"
+    },
+    {
+      "vdev_id": "vdev_homecoming_security_ambience_merge_01",
+      "name": "Homecoming Security and Ambience Merge",
+      "group": "Scene Activation and Comfort Control Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_homecoming_security_ambience_merge_01.json"
+    },
+    {
+      "vdev_id": "vdev_school_night_quiet_hours_01",
+      "name": "School-Night Quiet Hours Routine",
+      "group": "Night and Energy Monitoring Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_school_night_quiet_hours_01.json"
+    },
+    {
+      "vdev_id": "vdev_rainy_commute_preparation_01",
+      "name": "Rainy Commute Preparation",
+      "group": "Weather and Contextual Adjustment Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_rainy_commute_preparation_01.json"
+    },
+    {
+      "vdev_id": "vdev_energy_hvac_audit_expanded_01",
+      "name": "Energy and HVAC Audit Expanded",
+      "group": "Whole-Home Survey and Audit Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_energy_hvac_audit_expanded_01.json"
+    },
+    {
+      "vdev_id": "vdev_whole_home_ble_safety_sweep_01",
+      "name": "Whole-Home BLE Safety Sweep",
+      "group": "Household Stress and Abnormality Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_whole_home_ble_safety_sweep_01.json"
+    },
+    {
+      "vdev_id": "vdev_cloud_burst_living_conditions_snapshot_01",
+      "name": "Cloud Burst Living-Conditions Snapshot",
+      "group": "Whole-Home Survey and Audit Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_cloud_burst_living_conditions_snapshot_01.json"
+    },
+    {
+      "vdev_id": "vdev_morning_wakeup_readiness_profile_01",
+      "name": "Morning Wake-Up Readiness Profile Coverage",
+      "group": "Profile Coverage - Morning Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_morning_wakeup_readiness_profile_01.json"
+    },
+    {
+      "vdev_id": "vdev_whole_family_morning_comfort_snapshot_01",
+      "name": "Whole-Family Morning Comfort Snapshot",
+      "group": "Profile Coverage - Morning Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_whole_family_morning_comfort_snapshot_01.json"
+    },
+    {
+      "vdev_id": "vdev_school_day_quiet_start_check_01",
+      "name": "School-Day Quiet Start Check",
+      "group": "Profile Coverage - Morning Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_school_day_quiet_start_check_01.json"
+    },
+    {
+      "vdev_id": "vdev_bad_air_morning_recovery_01",
+      "name": "Bad-Air Morning Recovery",
+      "group": "Profile Coverage - Morning Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_bad_air_morning_recovery_01.json"
+    },
+    {
+      "vdev_id": "vdev_leave_home_safety_sweep_profile_01",
+      "name": "Leave-Home Safety Sweep Profile Coverage",
+      "group": "Profile Coverage - Arrival and Departure Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_leave_home_safety_sweep_profile_01.json"
+    },
+    {
+      "vdev_id": "vdev_arrival_home_preparation_profile_01",
+      "name": "Arrival Home Preparation Profile Coverage",
+      "group": "Profile Coverage - Arrival and Departure Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_arrival_home_preparation_profile_01.json"
+    },
+    {
+      "vdev_id": "vdev_vacation_departure_final_audit_01",
+      "name": "Vacation Departure Final Audit",
+      "group": "Profile Coverage - Arrival and Departure Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_vacation_departure_final_audit_01.json"
+    },
+    {
+      "vdev_id": "vdev_come_home_security_comfort_merge_01",
+      "name": "Come-Home Security and Comfort Merge",
+      "group": "Profile Coverage - Arrival and Departure Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_come_home_security_comfort_merge_01.json"
+    },
+    {
+      "vdev_id": "vdev_bedtime_lockdown_profile_01",
+      "name": "Bedtime Lockdown Profile Coverage",
+      "group": "Profile Coverage - Evening and Overnight Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_bedtime_lockdown_profile_01.json"
+    },
+    {
+      "vdev_id": "vdev_kids_room_night_safety_check_01",
+      "name": "Kids' Room Night Safety Check",
+      "group": "Profile Coverage - Evening and Overnight Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_kids_room_night_safety_check_01.json"
+    },
+    {
+      "vdev_id": "vdev_late_night_entertainment_shutdown_01",
+      "name": "Late-Night Entertainment Shutdown",
+      "group": "Profile Coverage - Evening and Overnight Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_late_night_entertainment_shutdown_01.json"
+    },
+    {
+      "vdev_id": "vdev_overnight_quiet_hours_snapshot_01",
+      "name": "Overnight Quiet-Hours Snapshot",
+      "group": "Profile Coverage - Evening and Overnight Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_overnight_quiet_hours_snapshot_01.json"
+    },
+    {
+      "vdev_id": "vdev_weekend_whole_home_snapshot_profile_01",
+      "name": "Weekend Whole-Home Snapshot Profile Coverage",
+      "group": "Profile Coverage - Monitoring and Audit Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_weekend_whole_home_snapshot_profile_01.json"
+    },
+    {
+      "vdev_id": "vdev_whole_home_energy_hvac_audit_profile_01",
+      "name": "Whole-Home Energy and HVAC Audit Profile Coverage",
+      "group": "Profile Coverage - Monitoring and Audit Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_whole_home_energy_hvac_audit_profile_01.json"
+    },
+    {
+      "vdev_id": "vdev_indoor_air_climate_audit_01",
+      "name": "Indoor Air and Climate Audit",
+      "group": "Profile Coverage - Monitoring and Audit Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_indoor_air_climate_audit_01.json"
+    },
+    {
+      "vdev_id": "vdev_security_presence_fabric_snapshot_01",
+      "name": "Security and Presence Fabric Snapshot",
+      "group": "Profile Coverage - Monitoring and Audit Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_security_presence_fabric_snapshot_01.json"
+    },
+    {
+      "vdev_id": "vdev_party_preparation_full_sweep_01",
+      "name": "Party Preparation Full Sweep",
+      "group": "Profile Coverage - Realistic Stress Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_party_preparation_full_sweep_01.json"
+    },
+    {
+      "vdev_id": "vdev_holiday_vacation_mode_full_audit_01",
+      "name": "Holiday Vacation Mode Full Audit",
+      "group": "Profile Coverage - Realistic Stress Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_holiday_vacation_mode_full_audit_01.json"
+    },
+    {
+      "vdev_id": "vdev_ble_safety_sweep_routine_01",
+      "name": "BLE Safety Sweep Routine",
+      "group": "Profile Coverage - Realistic Stress Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_ble_safety_sweep_routine_01.json"
+    },
+    {
+      "vdev_id": "vdev_cloud_burst_living_conditions_snapshot_profile_01",
+      "name": "Cloud Burst Living Conditions Snapshot Profile Coverage",
+      "group": "Profile Coverage - Realistic Stress Routines",
+      "target_path": "data/targets/vdev_benchmarks/vdev_cloud_burst_living_conditions_snapshot_profile_01.json"
+    }
+  ]
+}

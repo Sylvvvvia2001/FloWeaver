@@ -1,0 +1,29 @@
+{
+  "batches": [
+    [
+      "A1"
+    ],
+    [
+      "A2"
+    ]
+  ],
+  "fallback": [
+    {
+      "kind": "MIN_GAP",
+      "scope": [
+        "A1"
+      ],
+      "action": "preserve_action_order",
+      "params": {}
+    },
+    {
+      "kind": "MIN_GAP",
+      "scope": [
+        "A1"
+      ],
+      "action": "reduce_parallelism",
+      "params": {}
+    }
+  ],
+  "cycle_resolution_count": 0
+}

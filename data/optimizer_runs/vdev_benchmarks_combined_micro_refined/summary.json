@@ -1,0 +1,28 @@
+{
+  "case_count": 1,
+  "cases": [
+    {
+      "accepted_corridor_count": 1,
+      "api_added_savings_ms": 25,
+      "ble_added_savings_ms": 0,
+      "combined_added_savings_ms": 25,
+      "combined_added_savings_ratio": 0.013157894736842105,
+      "combined_refined_estimated_latency_ms": 1875,
+      "conflict_count": 0,
+      "group": "Scene Activation and Comfort Control Routines",
+      "name": "Homecoming Security and Ambience Merge",
+      "original_estimated_latency_ms": 1900,
+      "rejected_corridor_count": 0,
+      "simulated_event_count": 18,
+      "validation_passed": true,
+      "validation_reasons": [],
+      "vdev_id": "vdev_homecoming_security_ambience_merge_01"
+    }
+  ],
+  "total_api_added_savings_ms": 25,
+  "total_ble_added_savings_ms": 0,
+  "total_combined_added_savings_ms": 25,
+  "total_combined_added_savings_ratio": 0.013157894736842105,
+  "total_conflict_count": 0,
+  "total_original_estimated_latency_ms": 1900
+}

@@ -1,0 +1,56 @@
+{
+  "min_corridor_length": 3,
+  "min_corridor_latency_ms": 1800,
+  "read_like_min_corridor_length": 2,
+  "read_like_min_corridor_latency_ms": 1200,
+  "control_like_min_corridor_length": 3,
+  "control_like_min_corridor_latency_ms": 1800,
+  "session_chain_min_corridor_length": 2,
+  "session_chain_min_corridor_latency_ms": 1400,
+  "generic_min_corridor_length": 3,
+  "generic_min_corridor_latency_ms": 1800,
+  "max_lookahead_actions": 1,
+  "require_shared_scanner": true,
+  "assume_shared_scanner_available": true,
+  "require_source_resolution_for_adv_overlap": true,
+  "allow_unknown_source_adv_overlap": false,
+  "require_connectable_controller_for_connect_prep": true,
+  "assume_connectable_controller_available": true,
+  "enforce_connection_slot_guard": true,
+  "connectable_slot_limit": 1,
+  "current_xfer_slot_cost": 1,
+  "next_connect_prepare_slot_cost": 1,
+  "allow_adv_prepare_overlap": true,
+  "allow_connect_prepare_overlap": false,
+  "allow_subscribe_like_adv_overlap": false,
+  "allow_same_device_adv_overlap": false,
+  "allow_same_session_adv_overlap": false,
+  "source_capability_overrides": {
+    "switchbot": ["adv_anchor_safe"],
+    "xiaomi_ble": ["adv_anchor_safe"],
+    "esphome": ["subscribe_adv_overlap_safe"]
+  },
+  "kind_capability_overrides": {
+    "refresh_cover": ["read_like_ble_op"],
+    "read_sensor": ["read_like_ble_op"],
+    "read_status": ["read_like_ble_op"],
+    "connect": ["session_chain_ble_op"],
+    "subscribe": ["session_chain_ble_op"],
+    "set_cover_position": ["control_like_ble_op"],
+    "set_percentage": ["control_like_ble_op"],
+    "turn_on": ["control_like_ble_op"],
+    "turn_off": ["control_like_ble_op"]
+  },
+  "allow_adv_prepare_during_connect_capabilities": ["adv_anchor_safe"],
+  "allow_subscribe_like_adv_overlap_capabilities": ["subscribe_adv_overlap_safe"],
+  "allow_adv_prepare_during_connect_for_sources": [
+    "switchbot",
+    "xiaomi_ble"
+  ],
+  "allow_subscribe_like_adv_overlap_sources": [
+    "esphome"
+  ],
+  "prepare_adv_timeout_ms": 120,
+  "prepare_connect_timeout_ms": 180,
+  "prepare_must_be_side_effect_free": true
+}

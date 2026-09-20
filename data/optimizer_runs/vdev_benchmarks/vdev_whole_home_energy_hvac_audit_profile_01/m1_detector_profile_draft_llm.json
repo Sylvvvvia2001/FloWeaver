@@ -1,0 +1,3021 @@
+{
+  "builder_version": "m1_detector_builder/v3",
+  "cluster_count": 9,
+  "cluster_decisions": [
+    {
+      "attempts": 0,
+      "cluster_id": "denonavr__media_player__local_api_read__get_state__local",
+      "decision": "heuristic_accept",
+      "final_rule_id": "denonavr:media_player_local_api_read",
+      "heuristic_rule_id": "denonavr:media_player_local_api_read",
+      "llm_error": null,
+      "promotability_score": 15
+    },
+    {
+      "attempts": 0,
+      "cluster_id": "ecobee__climate__cloud_status_call__read_runtime__cloud",
+      "decision": "heuristic_accept",
+      "final_rule_id": "ecobee:climate_runtime_status_read",
+      "heuristic_rule_id": "ecobee:climate_runtime_status_read",
+      "llm_error": null,
+      "promotability_score": 12
+    },
+    {
+      "attempts": 0,
+      "cluster_id": "smartthings__entity__cloud_status_call__read_runtime__cloud",
+      "decision": "heuristic_accept",
+      "final_rule_id": "smartthings:entity_runtime_status_read",
+      "heuristic_rule_id": "smartthings:entity_runtime_status_read",
+      "llm_error": null,
+      "promotability_score": 17
+    },
+    {
+      "attempts": 0,
+      "cluster_id": "tplink__entity__local_api_read__get_state__local",
+      "decision": "heuristic_accept",
+      "final_rule_id": "tplink:entity_local_api_read",
+      "heuristic_rule_id": "tplink:entity_local_api_read",
+      "llm_error": null,
+      "promotability_score": 18
+    },
+    {
+      "attempts": 0,
+      "cluster_id": "tplink__entity__state_write__write__ha",
+      "decision": "heuristic_accept",
+      "final_rule_id": "tplink:entity_runtime_writeback",
+      "heuristic_rule_id": "tplink:entity_runtime_writeback",
+      "llm_error": null,
+      "promotability_score": 16
+    },
+    {
+      "attempts": 0,
+      "cluster_id": "tuya__climate__cloud_status_call__status__cloud",
+      "decision": "heuristic_accept",
+      "final_rule_id": "tuya:climate_runtime_status_read",
+      "heuristic_rule_id": "tuya:climate_runtime_status_read",
+      "llm_error": null,
+      "promotability_score": 12
+    },
+    {
+      "attempts": 0,
+      "cluster_id": "tuya__light__cloud_status_call__status__cloud",
+      "decision": "heuristic_accept",
+      "final_rule_id": "tuya:light_runtime_status_read",
+      "heuristic_rule_id": "tuya:light_runtime_status_read",
+      "llm_error": null,
+      "promotability_score": 12
+    },
+    {
+      "attempts": 0,
+      "cluster_id": "tuya__switch__cloud_status_call__status__cloud",
+      "decision": "heuristic_accept",
+      "final_rule_id": "tuya:switch_runtime_status_read",
+      "heuristic_rule_id": "tuya:switch_runtime_status_read",
+      "llm_error": null,
+      "promotability_score": 12
+    },
+    {
+      "attempts": 0,
+      "cluster_id": "webostv__media_player__local_api_read__get_state__local",
+      "decision": "heuristic_accept",
+      "final_rule_id": "webostv:media_player_local_api_read",
+      "heuristic_rule_id": "webostv:media_player_local_api_read",
+      "llm_error": null,
+      "promotability_score": 18
+    }
+  ],
+  "detector_profile_drafts": [
+    {
+      "integration": "denonavr",
+      "runtime_families": [
+        {
+          "action_kind": "get_state",
+          "allow_accessor_fallback": false,
+          "binding_hints": {
+            "boost_target_tokens": [
+              "denonavr:media_player.energy_audit_avr",
+              "denonavr_local",
+              "energy_audit_avr"
+            ],
+            "phase": "RUNTIME",
+            "preferred_action_kinds": [
+              "read",
+              "local_api_read"
+            ],
+            "required_service_tokens": []
+          },
+          "call_patterns": [
+            "async_update",
+            "receiver.async_update"
+          ],
+          "confidence": {
+            "base": 0.7,
+            "boost_if_imports": [
+              "__future__",
+              "collections",
+              "const",
+              "datetime",
+              "denonavr",
+              "functools"
+            ],
+            "boost_if_names": [
+              "get_state",
+              "async_update",
+              "async_update_audyssey",
+              "receiver.async_update"
+            ],
+            "emit_threshold": 0.7
+          },
+          "family": "LOCAL_API_READ",
+          "file_globs": [
+            "denonavr/media_player.py"
+          ],
+          "forbidden_context": [
+            "dunder_init"
+          ],
+          "forbidden_path_signals": [
+            "setup_function:async_setup_entry",
+            "setup_call:async_add_entities",
+            "control_function:async_select_source",
+            "control_call:self._receiver.async_set_input_func",
+            "awaited_control_call:self._receiver.async_set_input_func",
+            "control_function:async_set_volume_level",
+            "control_call:self._receiver.async_set_volume",
+            "awaited_control_call:self._receiver.async_set_volume"
+          ],
+          "forbidden_runtime_roles": [
+            "runtime_write",
+            "setup",
+            "property_getter",
+            "helper"
+          ],
+          "function_name_patterns": [
+            "async_update",
+            "async_update_audyssey"
+          ],
+          "generalization_scope": "file_specific",
+          "generalizes_actions": [
+            "A17"
+          ],
+          "integration": "denonavr",
+          "negative_call_patterns": [
+            "async_add_entities",
+            "denondevice",
+            "config_entry.options.get",
+            "receiver.zones.values",
+            "_logger.debug",
+            "entities.append"
+          ],
+          "negative_evidence": [
+            "negative_function:async_setup_entry",
+            "negative_function:async_select_source",
+            "negative_function:async_set_volume_level",
+            "negative_function:state",
+            "negative_function:source",
+            "negative_call:get",
+            "negative_call:values",
+            "negative_call:debug",
+            "negative_call:async_add_entities",
+            "negative_call:append"
+          ],
+          "negative_function_patterns": [
+            "async_setup_entry",
+            "async_select_source",
+            "async_set_volume_level",
+            "state",
+            "source",
+            "async_turn_on"
+          ],
+          "negative_prototypes": [
+            {
+              "call_chains": [
+                "config_entry.options.get",
+                "receiver.zones.values",
+                "_logger.debug",
+                "async_add_entities",
+                "entities.append",
+                "denondevice"
+              ],
+              "call_patterns": [
+                "get",
+                "values",
+                "debug",
+                "async_add_entities",
+                "append",
+                "denondevice"
+              ],
+              "file_path": "data/repo_snapshot/denonavr/media_player.py",
+              "function_name": "async_setup_entry",
+              "path_kind": "setup_path",
+              "path_signals": [
+                "setup_function:async_setup_entry",
+                "setup_call:async_add_entities"
+              ],
+              "prototype_kind": "negative_setup",
+              "role_hint": "setup",
+              "score": -10,
+              "snippet": "104: \n105: async def async_setup_entry(\n106:     hass: HomeAssistant,\n107:     config_entry: DenonavrConfigEntry,\n108:     async_add_entities: AddConfigEntryEntitiesCallback,\n109: ) -> None:\n110:     \"\"\"Set up the DenonAVR receiver from a config entry.\"\"\"\n111:     entities = []\n112:     receiver = config_entry.runtime_data\n113:     update_audyssey = config_entry.options.get(\n114:         CONF_UPDATE_AUDYSSEY, DEFAULT_UPDATE_AUDYSSEY\n115:     )\n116:     for receiver_zone in receiver.zones.values():\n117:         if config_entry.data[CONF_SERIAL_NUMBER] is not None:"
+            },
+            {
+              "call_chains": [
+                "self._receiver.async_set_input_func"
+              ],
+              "call_patterns": [
+                "async_set_input_func"
+              ],
+              "file_path": "data/repo_snapshot/denonavr/media_player.py",
+              "function_name": "async_select_source",
+              "path_kind": "control_path",
+              "path_signals": [
+                "control_function:async_select_source",
+                "control_call:self._receiver.async_set_input_func",
+                "awaited_control_call:self._receiver.async_set_input_func"
+              ],
+              "prototype_kind": "negative_control",
+              "role_hint": "runtime_write",
+              "score": -12,
+              "snippet": "425:     @async_log_errors\n426:     async def async_select_source(self, source: str) -> None:\n427:         \"\"\"Select input source.\"\"\"\n428:         await self._receiver.async_set_input_func(source)\n429: \n430:     @async_log_errors"
+            },
+            {
+              "call_chains": [
+                "float",
+                "self._receiver.async_set_volume"
+              ],
+              "call_patterns": [
+                "float",
+                "async_set_volume"
+              ],
+              "file_path": "data/repo_snapshot/denonavr/media_player.py",
+              "function_name": "async_set_volume_level",
+              "path_kind": "control_path",
+              "path_signals": [
+                "control_function:async_set_volume_level",
+                "control_call:self._receiver.async_set_volume",
+                "awaited_control_call:self._receiver.async_set_volume"
+              ],
+              "prototype_kind": "negative_control",
+              "role_hint": "runtime_write",
+              "score": -12,
+              "snippet": "455:     @async_log_errors\n456:     async def async_set_volume_level(self, volume: float) -> None:\n457:         \"\"\"Set volume level, range 0..1.\"\"\"\n458:         # Volume has to be sent in a format like -50.0. Minimum is -80.0,\n459:         # maximum is 18.0\n460:         volume_denon = float((volume * 100) - 80)\n461:         if volume_denon > 18:\n462:             volume_denon = float(18)\n463:         await self._receiver.async_set_volume(volume_denon)\n464: \n465:     @async_log_errors"
+            },
+            {
+              "call_chains": [
+                "denon_state_mapping.get"
+              ],
+              "call_patterns": [
+                "get"
+              ],
+              "file_path": "data/repo_snapshot/denonavr/media_player.py",
+              "function_name": "state",
+              "path_kind": "property_path",
+              "path_signals": [
+                "property_function:state"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "property_getter",
+              "score": -10,
+              "snippet": "297:     @property\n298:     def state(self) -> MediaPlayerState | None:\n299:         \"\"\"Return the state of the device.\"\"\"\n300:         return DENON_STATE_MAPPING.get(self._receiver.state)\n301: \n302:     @property"
+            },
+            {
+              "call_chains": [],
+              "call_patterns": [],
+              "file_path": "data/repo_snapshot/denonavr/media_player.py",
+              "function_name": "source",
+              "path_kind": "property_path",
+              "path_signals": [
+                "property_function:source"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "property_getter",
+              "score": -10,
+              "snippet": "321:     @property\n322:     def source(self) -> str | None:\n323:         \"\"\"Return the current input source.\"\"\"\n324:         return self._receiver.input_func\n325: \n326:     @property"
+            }
+          ],
+          "origin_action_id": "A17",
+          "origin_cluster_id": "denonavr__media_player__local_api_read__get_state__local",
+          "phase": "RUNTIME",
+          "positive_prototypes": [
+            {
+              "call_chains": [
+                "receiver.async_update",
+                "receiver.async_update_audyssey"
+              ],
+              "call_patterns": [
+                "async_update",
+                "async_update_audyssey"
+              ],
+              "file_path": "data/repo_snapshot/denonavr/media_player.py",
+              "function_name": "async_update",
+              "path_kind": "read_path",
+              "path_signals": [
+                "read_function:async_update",
+                "read_call:receiver.async_update",
+                "awaited_read_call:receiver.async_update"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 8,
+              "snippet": "282:     @async_log_errors\n283:     async def async_update(self) -> None:\n284:         \"\"\"Get the latest status information from device.\"\"\"\n285:         receiver = self._receiver\n286: \n287:         # We skip the update if telnet is healthy.\n288:         # When telnet recovers it automatically updates all properties.\n289:         if receiver.telnet_connected and receiver.telnet_healthy:\n290:             return\n291: \n292:         await receiver.async_update()\n293: \n294:         if self._update_audyssey:\n295:             await receiver.async_update_audyssey()"
+            },
+            {
+              "call_chains": [
+                "self._receiver.async_update_audyssey"
+              ],
+              "call_patterns": [
+                "async_update_audyssey"
+              ],
+              "file_path": "data/repo_snapshot/denonavr/media_player.py",
+              "function_name": "async_update_audyssey",
+              "path_kind": "read_path",
+              "path_signals": [],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 6,
+              "snippet": "475:     @async_log_errors\n476:     async def async_update_audyssey(self) -> None:\n477:         \"\"\"Get the latest audyssey information from device.\"\"\"\n478:         await self._receiver.async_update_audyssey()\n479: \n480:     @async_log_errors"
+            }
+          ],
+          "preferred_runtime_roles": [
+            "runtime_read"
+          ],
+          "required_context": [
+            "runtime_path"
+          ],
+          "required_path_signals": [
+            "read_function:async_update",
+            "read_call:receiver.async_update",
+            "awaited_read_call:receiver.async_update"
+          ],
+          "required_runtime_roles": [
+            "runtime_read"
+          ],
+          "reviewer_status": "draft",
+          "rule_id": "denonavr:media_player_local_api_read",
+          "runtime_archetypes": [
+            "local_bridge_getter",
+            "runtime_read"
+          ],
+          "runtime_path_evidence": [
+            "runtime_function:async_update",
+            "runtime_function:async_update_audyssey",
+            "runtime_call:async_update",
+            "runtime_call:async_update_audyssey",
+            "runtime_call:receiver.async_update",
+            "runtime_call:receiver.async_update_audyssey",
+            "runtime_call:self._receiver.async_update_audyssey",
+            "path_signal:read_function:async_update",
+            "path_signal:read_call:receiver.async_update",
+            "path_signal:awaited_read_call:receiver.async_update"
+          ],
+          "source_file_paths": [
+            "data/repo_snapshot/denonavr/media_player.py"
+          ],
+          "source_unresolved_action_ids": [
+            "A17"
+          ],
+          "strength": "MEDIUM",
+          "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+          "why_not_setup": [
+            "exclude_role:setup:async_setup_entry",
+            "exclude_role:runtime_write:async_select_source",
+            "exclude_role:runtime_write:async_set_volume_level",
+            "exclude_role:property_getter:state",
+            "exclude_role:property_getter:source",
+            "exclude_path_signal:setup_function:async_setup_entry",
+            "exclude_path_signal:setup_call:async_add_entities",
+            "exclude_path_signal:control_function:async_select_source"
+          ]
+        }
+      ],
+      "schema_version": "m1_grounding_profile/v3",
+      "version": "draft_llm_v3"
+    },
+    {
+      "integration": "ecobee",
+      "runtime_families": [
+        {
+          "action_kind": "read_runtime",
+          "allow_accessor_fallback": false,
+          "binding_hints": {
+            "boost_target_tokens": [
+              "ecobee:thermostat.energy_audit_1",
+              "energy_audit_1",
+              "thermostat",
+              "ecobee:thermostat.energy_audit_2",
+              "energy_audit_2"
+            ],
+            "phase": "RUNTIME",
+            "preferred_action_kinds": [
+              "status",
+              "poll_update"
+            ],
+            "required_service_tokens": []
+          },
+          "call_patterns": [
+            "get_thermostat",
+            "self.data.ecobee.get_thermostat"
+          ],
+          "confidence": {
+            "base": 0.7,
+            "boost_if_imports": [
+              "__future__",
+              "collections",
+              "const",
+              "homeassistant",
+              "typing",
+              "util"
+            ],
+            "boost_if_names": [
+              "read_runtime",
+              "async_update",
+              "get_thermostat",
+              "self.data.ecobee.get_thermostat"
+            ],
+            "emit_threshold": 0.7
+          },
+          "family": "CLOUD_STATUS_CALL",
+          "file_globs": [
+            "ecobee/climate.py"
+          ],
+          "forbidden_context": [
+            "setup_function",
+            "dunder_init",
+            "entity_property_getter"
+          ],
+          "forbidden_path_signals": [
+            "setup_function:async_setup_entry",
+            "control_function:async_setup_entry",
+            "setup_call:async_add_entities",
+            "control_call:thermostat.set_fan_min_on_time",
+            "control_call:thermostat.schedule_update_ha_state",
+            "control_function:set_preset_mode",
+            "control_call:self.data.ecobee.delete_vacation",
+            "control_call:self.data.ecobee.set_climate_hold"
+          ],
+          "forbidden_runtime_roles": [
+            "runtime_write",
+            "setup",
+            "property_getter",
+            "helper"
+          ],
+          "function_name_patterns": [
+            "async_update"
+          ],
+          "generalization_scope": "file_specific",
+          "generalizes_actions": [
+            "A11",
+            "A12"
+          ],
+          "integration": "ecobee",
+          "negative_call_patterns": [
+            "async_add_entities",
+            "async_get_current_platform",
+            "async_register",
+            "async_register_entity_service",
+            "entity_platform.async_get_current_platform",
+            "hass.services.async_register"
+          ],
+          "negative_evidence": [
+            "negative_function:async_setup_entry",
+            "negative_function:set_preset_mode",
+            "negative_function:set_temperature",
+            "negative_function:fan",
+            "negative_function:settings",
+            "negative_call:range",
+            "negative_call:async_add_entities",
+            "negative_call:async_get_current_platform",
+            "negative_call:async_register",
+            "negative_call:async_register_entity_service"
+          ],
+          "negative_function_patterns": [
+            "async_setup_entry",
+            "set_preset_mode",
+            "set_temperature",
+            "fan",
+            "settings",
+            "async_turn_on"
+          ],
+          "negative_prototypes": [
+            {
+              "call_chains": [
+                "range",
+                "async_add_entities",
+                "entity_platform.async_get_current_platform",
+                "hass.services.async_register",
+                "platform.async_register_entity_service",
+                "len",
+                "data.ecobee.get_thermostat",
+                "entities.append"
+              ],
+              "call_patterns": [
+                "range",
+                "async_add_entities",
+                "async_get_current_platform",
+                "async_register",
+                "async_register_entity_service",
+                "len",
+                "get_thermostat",
+                "append"
+              ],
+              "file_path": "data/repo_snapshot/ecobee/climate.py",
+              "function_name": "async_setup_entry",
+              "path_kind": "setup_path",
+              "path_signals": [
+                "setup_function:async_setup_entry",
+                "state_write_function:async_setup_entry",
+                "control_function:async_setup_entry",
+                "read_function:async_setup_entry",
+                "setup_call:async_add_entities",
+                "service_registration_call:hass.services.async_register",
+                "service_registration_call:platform.async_register_entity_service",
+                "read_call:data.ecobee.get_thermostat",
+                "control_call:thermostat.set_fan_min_on_time",
+                "control_call:thermostat.schedule_update_ha_state"
+              ],
+              "prototype_kind": "negative_setup",
+              "role_hint": "setup",
+              "score": -11,
+              "snippet": "203: \n204: async def async_setup_entry(\n205:     hass: HomeAssistant,\n206:     config_entry: EcobeeConfigEntry,\n207:     async_add_entities: AddConfigEntryEntitiesCallback,\n208: ) -> None:\n209:     \"\"\"Set up the ecobee thermostat.\"\"\"\n210: \n211:     data = config_entry.runtime_data\n212:     entities = []\n213: \n214:     for index in range(len(data.ecobee.thermostats)):\n215:         thermostat = data.ecobee.get_thermostat(index)\n216:         if thermostat[\"modelNumber\"] not in ECOBEE_MODEL_TO_NAME:"
+            },
+            {
+              "call_chains": [
+                "hass_to_ecobee_preset.get",
+                "self.data.ecobee.delete_vacation",
+                "self.data.ecobee.set_climate_hold",
+                "self.hold_hours",
+                "self.set_temp_hold",
+                "self.hold_preference",
+                "self.data.ecobee.resume_program",
+                "self.comfort_settings.items"
+              ],
+              "call_patterns": [
+                "get",
+                "delete_vacation",
+                "set_climate_hold",
+                "hold_hours",
+                "set_temp_hold",
+                "hold_preference",
+                "resume_program",
+                "items"
+              ],
+              "file_path": "data/repo_snapshot/ecobee/climate.py",
+              "function_name": "set_preset_mode",
+              "path_kind": "control_path",
+              "path_signals": [
+                "control_function:set_preset_mode",
+                "control_call:self.data.ecobee.delete_vacation",
+                "control_call:self.data.ecobee.set_climate_hold",
+                "control_call:self.set_temp_hold",
+                "control_call:self.data.ecobee.resume_program"
+              ],
+              "prototype_kind": "negative_control",
+              "role_hint": "runtime_write",
+              "score": -12,
+              "snippet": "646: \n647:     def set_preset_mode(self, preset_mode: str) -> None:\n648:         \"\"\"Activate a preset.\"\"\"\n649:         preset_mode = HASS_TO_ECOBEE_PRESET.get(preset_mode, preset_mode)\n650: \n651:         if preset_mode == self.preset_mode:\n652:             return\n653: \n654:         self.update_without_throttle = True\n655: \n656:         # If we are currently in vacation mode, cancel it.\n657:         if self.preset_mode == PRESET_VACATION:\n658:             self.data.ecobee.delete_vacation(self.thermostat_index, self.vacation)\n659:"
+            },
+            {
+              "call_chains": [
+                "kwargs.get",
+                "self.set_auto_temp_hold",
+                "self.set_temp_hold",
+                "_logger.error"
+              ],
+              "call_patterns": [
+                "get",
+                "set_auto_temp_hold",
+                "set_temp_hold",
+                "error"
+              ],
+              "file_path": "data/repo_snapshot/ecobee/climate.py",
+              "function_name": "set_temperature",
+              "path_kind": "control_path",
+              "path_signals": [
+                "control_function:set_temperature",
+                "control_call:self.set_auto_temp_hold",
+                "control_call:self.set_temp_hold"
+              ],
+              "prototype_kind": "negative_control",
+              "role_hint": "runtime_write",
+              "score": -12,
+              "snippet": "776: \n777:     def set_temperature(self, **kwargs: Any) -> None:\n778:         \"\"\"Set new target temperature.\"\"\"\n779:         low_temp = kwargs.get(ATTR_TARGET_TEMP_LOW)\n780:         high_temp = kwargs.get(ATTR_TARGET_TEMP_HIGH)\n781:         temp = kwargs.get(ATTR_TEMPERATURE)\n782: \n783:         if self.hvac_mode == HVACMode.HEAT_COOL and (\n784:             low_temp is not None or high_temp is not None\n785:         ):\n786:             self.set_auto_temp_hold(low_temp, high_temp)\n787:         elif temp is not None:\n788:             self.set_temp_hold(temp)\n789:         else:"
+            },
+            {
+              "call_chains": [],
+              "call_patterns": [],
+              "file_path": "data/repo_snapshot/ecobee/climate.py",
+              "function_name": "fan",
+              "path_kind": "property_path",
+              "path_signals": [
+                "property_function:fan"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "property_getter",
+              "score": -10,
+              "snippet": "492:     @property\n493:     def fan(self) -> str:\n494:         \"\"\"Return the current fan status.\"\"\"\n495:         if \"fan\" in self.thermostat[\"equipmentStatus\"]:\n496:             return STATE_ON\n497:         return STATE_OFF\n498: \n499:     @property"
+            },
+            {
+              "call_chains": [],
+              "call_patterns": [],
+              "file_path": "data/repo_snapshot/ecobee/climate.py",
+              "function_name": "settings",
+              "path_kind": "property_path",
+              "path_signals": [
+                "property_function:settings"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "property_getter",
+              "score": -10,
+              "snippet": "461:     @property\n462:     def settings(self) -> dict[str, Any]:\n463:         \"\"\"Return the settings of the thermostat.\"\"\"\n464:         return self.thermostat[\"settings\"]\n465: \n466:     @property"
+            }
+          ],
+          "origin_action_id": null,
+          "origin_cluster_id": "ecobee__climate__cloud_status_call__read_runtime__cloud",
+          "phase": "RUNTIME",
+          "positive_prototypes": [
+            {
+              "call_chains": [
+                "self.data.ecobee.get_thermostat",
+                "self.data.update"
+              ],
+              "call_patterns": [
+                "get_thermostat",
+                "update"
+              ],
+              "file_path": "data/repo_snapshot/ecobee/climate.py",
+              "function_name": "async_update",
+              "path_kind": "read_path",
+              "path_signals": [
+                "read_function:async_update",
+                "read_call:self.data.ecobee.get_thermostat",
+                "refresh_call:self.data.update",
+                "awaited_refresh_call:self.data.update"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 12,
+              "snippet": "391: \n392:     async def async_update(self) -> None:\n393:         \"\"\"Get the latest state from the thermostat.\"\"\"\n394:         if self.update_without_throttle:\n395:             await self.data.update(no_throttle=True)\n396:             self.update_without_throttle = False\n397:         else:\n398:             await self.data.update()\n399:         self.thermostat = self.data.ecobee.get_thermostat(self.thermostat_index)\n400:         if self.hvac_mode != HVACMode.OFF:\n401:             self._last_active_hvac_mode = self.hvac_mode\n402: \n403:     @property"
+            }
+          ],
+          "preferred_runtime_roles": [
+            "runtime_read"
+          ],
+          "required_context": [
+            "runtime_update_path"
+          ],
+          "required_path_signals": [
+            "read_function:async_update",
+            "read_call:self.data.ecobee.get_thermostat",
+            "refresh_call:self.data.update",
+            "awaited_refresh_call:self.data.update"
+          ],
+          "required_runtime_roles": [
+            "runtime_read"
+          ],
+          "reviewer_status": "draft",
+          "rule_id": "ecobee:climate_runtime_status_read",
+          "runtime_archetypes": [
+            "cloud_runtime_read",
+            "entity_wrapper_read",
+            "coordinator_update_path"
+          ],
+          "runtime_path_evidence": [
+            "runtime_function:async_update",
+            "runtime_call:get_thermostat",
+            "runtime_call:update",
+            "runtime_call:self.data.ecobee.get_thermostat",
+            "runtime_call:self.data.update",
+            "path_signal:read_function:async_update",
+            "path_signal:read_call:self.data.ecobee.get_thermostat",
+            "path_signal:refresh_call:self.data.update",
+            "path_signal:awaited_refresh_call:self.data.update"
+          ],
+          "source_file_paths": [
+            "data/repo_snapshot/ecobee/climate.py"
+          ],
+          "source_unresolved_action_ids": [
+            "A11",
+            "A12"
+          ],
+          "strength": "MEDIUM",
+          "why_not_more_general": "same runtime idiom appears in one file across multiple unresolved actions",
+          "why_not_setup": [
+            "exclude_role:setup:async_setup_entry",
+            "exclude_role:runtime_write:set_preset_mode",
+            "exclude_role:runtime_write:set_temperature",
+            "exclude_role:property_getter:fan",
+            "exclude_role:property_getter:settings",
+            "exclude_path_signal:setup_function:async_setup_entry",
+            "exclude_path_signal:control_function:async_setup_entry",
+            "exclude_path_signal:setup_call:async_add_entities"
+          ]
+        }
+      ],
+      "schema_version": "m1_grounding_profile/v3",
+      "version": "draft_llm_v3"
+    },
+    {
+      "integration": "smartthings",
+      "runtime_families": [
+        {
+          "action_kind": "read_runtime",
+          "allow_accessor_fallback": false,
+          "binding_hints": {
+            "boost_target_tokens": [
+              "energy_snapshot",
+              "smartthings:platform.energy_snapshot",
+              "platform"
+            ],
+            "phase": "RUNTIME",
+            "preferred_action_kinds": [
+              "status",
+              "poll_update"
+            ],
+            "required_service_tokens": []
+          },
+          "call_patterns": [],
+          "confidence": {
+            "base": 0.7,
+            "boost_if_imports": [
+              "__future__",
+              "const",
+              "homeassistant",
+              "pysmartthings",
+              "typing"
+            ],
+            "boost_if_names": [
+              "read_runtime",
+              "_handle_update",
+              "_update_handler",
+              "_update_attr"
+            ],
+            "emit_threshold": 0.7
+          },
+          "family": "CLOUD_STATUS_CALL",
+          "file_globs": [
+            "smartthings/entity.py"
+          ],
+          "forbidden_context": [
+            "setup_function",
+            "dunder_init",
+            "entity_property_getter"
+          ],
+          "forbidden_path_signals": [
+            "control_function:async_turn_on",
+            "control_function:async_turn_off",
+            "control_function:async_open_cover",
+            "control_function:async_close_cover",
+            "control_function:async_set_cover_position",
+            "control_function:set_state",
+            "setup_function:async_setup_entry",
+            "state_accessor_property:state"
+          ],
+          "forbidden_runtime_roles": [
+            "runtime_write",
+            "setup",
+            "property_getter",
+            "helper"
+          ],
+          "function_name_patterns": [
+            "_handle_update",
+            "_update_handler",
+            "_update_attr"
+          ],
+          "generalization_scope": "file_specific",
+          "generalizes_actions": [
+            "A13"
+          ],
+          "integration": "smartthings",
+          "negative_call_patterns": [
+            "deviceinfo",
+            "async_write_ha_state",
+            "self.async_write_ha_state",
+            "async_on_remove",
+            "_update_attr",
+            "async_added_to_hass"
+          ],
+          "negative_evidence": [
+            "negative_function:__init__",
+            "negative_function:_availability_handler",
+            "negative_function:get_attribute_value",
+            "negative_function:async_added_to_hass",
+            "negative_call:deviceinfo",
+            "negative_call:async_write_ha_state",
+            "negative_call:self.async_write_ha_state",
+            "negative_call:async_on_remove",
+            "negative_call:_update_attr",
+            "negative_call:async_added_to_hass"
+          ],
+          "negative_function_patterns": [
+            "__init__",
+            "_availability_handler",
+            "get_attribute_value",
+            "async_added_to_hass",
+            "async_turn_on",
+            "async_turn_off"
+          ],
+          "negative_prototypes": [
+            {
+              "call_chains": [
+                "deviceinfo"
+              ],
+              "call_patterns": [
+                "deviceinfo"
+              ],
+              "file_path": "data/repo_snapshot/smartthings/entity.py",
+              "function_name": "__init__",
+              "path_kind": "setup_path",
+              "path_signals": [],
+              "prototype_kind": "negative_setup",
+              "role_hint": "setup",
+              "score": -6,
+              "snippet": "30: \n31:     def __init__(\n32:         self,\n33:         client: SmartThings,\n34:         device: FullDevice,\n35:         capabilities: set[Capability],\n36:         *,\n37:         component: str = MAIN,\n38:     ) -> None:\n39:         \"\"\"Initialize the instance.\"\"\"\n40:         self.client = client\n41:         self.capabilities = capabilities\n42:         self.component = component\n43:         self._internal_state: ComponentStatus = {"
+            },
+            {
+              "call_chains": [
+                "self.async_write_ha_state"
+              ],
+              "call_patterns": [
+                "async_write_ha_state"
+              ],
+              "file_path": "data/repo_snapshot/smartthings/entity.py",
+              "function_name": "_availability_handler",
+              "path_kind": "control_path",
+              "path_signals": [
+                "state_write_function:_availability_handler",
+                "state_write_call:self.async_write_ha_state"
+              ],
+              "prototype_kind": "negative_control",
+              "role_hint": "runtime_write",
+              "score": -1,
+              "snippet": "73: \n74:     def _availability_handler(self, event: DeviceHealthEvent) -> None:\n75:         self._attr_available = event.status != HealthStatus.OFFLINE\n76:         self.async_write_ha_state()\n77: \n78:     def _update_handler(self, event: DeviceEvent) -> None:"
+            },
+            {
+              "call_chains": [],
+              "call_patterns": [],
+              "file_path": "data/repo_snapshot/smartthings/entity.py",
+              "function_name": "get_attribute_value",
+              "path_kind": "helper_path",
+              "path_signals": [
+                "read_function:get_attribute_value"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "helper",
+              "score": -2,
+              "snippet": "86: \n87:     def get_attribute_value(self, capability: Capability, attribute: Attribute) -> Any:\n88:         \"\"\"Get the value of a device attribute.\"\"\"\n89:         return self._internal_state[capability][attribute].value\n90: \n91:     def _update_attr(self) -> None:"
+            },
+            {
+              "call_chains": [
+                "self.async_on_remove",
+                "self._update_attr",
+                "async_added_to_hass",
+                "self.client.add_device_availability_event_listener",
+                "self.client.add_device_capability_event_listener",
+                "super"
+              ],
+              "call_patterns": [
+                "async_on_remove",
+                "_update_attr",
+                "async_added_to_hass",
+                "add_device_availability_event_listener",
+                "add_device_capability_event_listener",
+                "super"
+              ],
+              "file_path": "data/repo_snapshot/smartthings/entity.py",
+              "function_name": "async_added_to_hass",
+              "path_kind": "subscription_path",
+              "path_signals": [
+                "subscription_call:self.client.add_device_availability_event_listener",
+                "subscription_call:self.client.add_device_capability_event_listener"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "runtime_subscribe",
+              "score": 5,
+              "snippet": "54: \n55:     async def async_added_to_hass(self) -> None:\n56:         \"\"\"Subscribe to updates.\"\"\"\n57:         await super().async_added_to_hass()\n58:         for capability in self._internal_state:\n59:             self.async_on_remove(\n60:                 self.client.add_device_capability_event_listener(\n61:                     self.device.device.device_id,\n62:                     self.component,\n63:                     capability,\n64:                     self._update_handler,\n65:                 )\n66:             )\n67:         self.async_on_remove("
+            }
+          ],
+          "origin_action_id": "A13",
+          "origin_cluster_id": "smartthings__entity__cloud_status_call__read_runtime__cloud",
+          "phase": "RUNTIME",
+          "positive_prototypes": [
+            {
+              "call_chains": [
+                "self._update_attr",
+                "self.async_write_ha_state"
+              ],
+              "call_patterns": [
+                "_update_attr",
+                "async_write_ha_state"
+              ],
+              "file_path": "data/repo_snapshot/smartthings/entity.py",
+              "function_name": "_handle_update",
+              "path_kind": "control_path",
+              "path_signals": [
+                "update_callback_function:_handle_update",
+                "state_write_function:_handle_update",
+                "state_write_call:self.async_write_ha_state"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_write",
+              "score": 14,
+              "snippet": "93: \n94:     def _handle_update(self) -> None:\n95:         \"\"\"Handle updated data from the coordinator.\"\"\"\n96:         self._update_attr()\n97:         self.async_write_ha_state()\n98: \n99:     async def execute_device_command("
+            },
+            {
+              "call_chains": [
+                "self._handle_update"
+              ],
+              "call_patterns": [
+                "_handle_update"
+              ],
+              "file_path": "data/repo_snapshot/smartthings/entity.py",
+              "function_name": "_update_handler",
+              "path_kind": "read_path",
+              "path_signals": [],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 6,
+              "snippet": "77: \n78:     def _update_handler(self, event: DeviceEvent) -> None:\n79:         self._internal_state[event.capability][event.attribute].value = event.value\n80:         self._internal_state[event.capability][event.attribute].data = event.data\n81:         self._handle_update()\n82: \n83:     def supports_capability(self, capability: Capability) -> bool:"
+            },
+            {
+              "call_chains": [],
+              "call_patterns": [],
+              "file_path": "data/repo_snapshot/smartthings/entity.py",
+              "function_name": "_update_attr",
+              "path_kind": "read_path",
+              "path_signals": [],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 6,
+              "snippet": "90: \n91:     def _update_attr(self) -> None:\n92:         \"\"\"Update the attributes.\"\"\"\n93: \n94:     def _handle_update(self) -> None:"
+            }
+          ],
+          "preferred_runtime_roles": [
+            "runtime_read"
+          ],
+          "required_context": [
+            "runtime_update_path"
+          ],
+          "required_path_signals": [
+            "update_callback_function:_handle_update",
+            "state_write_function:_handle_update",
+            "state_write_call:self.async_write_ha_state"
+          ],
+          "required_runtime_roles": [
+            "runtime_read"
+          ],
+          "reviewer_status": "draft",
+          "rule_id": "smartthings:entity_runtime_status_read",
+          "runtime_archetypes": [
+            "cloud_runtime_read",
+            "entity_wrapper_read",
+            "coordinator_update_path"
+          ],
+          "runtime_path_evidence": [
+            "runtime_function:_handle_update",
+            "runtime_function:_update_handler",
+            "runtime_function:_update_attr",
+            "runtime_call:_update_attr",
+            "runtime_call:async_write_ha_state",
+            "runtime_call:self._update_attr",
+            "runtime_call:self.async_write_ha_state",
+            "runtime_call:_handle_update",
+            "runtime_call:self._handle_update",
+            "path_signal:update_callback_function:_handle_update"
+          ],
+          "source_file_paths": [
+            "data/repo_snapshot/smartthings/entity.py"
+          ],
+          "source_unresolved_action_ids": [
+            "A13"
+          ],
+          "strength": "MEDIUM",
+          "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+          "why_not_setup": [
+            "exclude_role:setup:__init__",
+            "exclude_role:runtime_write:_availability_handler",
+            "exclude_role:helper:get_attribute_value",
+            "exclude_control_path_for_read_like_action"
+          ]
+        }
+      ],
+      "schema_version": "m1_grounding_profile/v3",
+      "version": "draft_llm_v3"
+    },
+    {
+      "integration": "tplink",
+      "runtime_families": [
+        {
+          "action_kind": "get_state",
+          "allow_accessor_fallback": false,
+          "binding_hints": {
+            "boost_target_tokens": [
+              "energy_audit_1",
+              "tplink:plug.energy_audit_1",
+              "tplink_local",
+              "plug",
+              "energy_audit_2",
+              "tplink:plug.energy_audit_2",
+              "energy_audit_3",
+              "tplink:plug.energy_audit_3"
+            ],
+            "phase": "RUNTIME",
+            "preferred_action_kinds": [
+              "read",
+              "local_api_read"
+            ],
+            "required_service_tokens": []
+          },
+          "call_patterns": [],
+          "confidence": {
+            "base": 0.7,
+            "boost_if_imports": [
+              "__future__",
+              "abc",
+              "collections",
+              "const",
+              "coordinator",
+              "dataclasses"
+            ],
+            "boost_if_names": [
+              "get_state",
+              "_handle_coordinator_update"
+            ],
+            "emit_threshold": 0.7
+          },
+          "family": "LOCAL_API_READ",
+          "file_globs": [
+            "tplink/entity.py"
+          ],
+          "forbidden_context": [
+            "dunder_init"
+          ],
+          "forbidden_path_signals": [
+            "property_function:available",
+            "control_function:async_turn_on",
+            "control_function:async_turn_off",
+            "control_function:async_open_cover",
+            "control_function:async_close_cover",
+            "control_function:async_set_cover_position",
+            "control_function:set_state",
+            "setup_function:async_setup_entry"
+          ],
+          "forbidden_runtime_roles": [
+            "runtime_write",
+            "setup",
+            "property_getter",
+            "helper"
+          ],
+          "function_name_patterns": [
+            "_handle_coordinator_update"
+          ],
+          "generalization_scope": "file_specific",
+          "generalizes_actions": [
+            "A14",
+            "A15",
+            "A16"
+          ],
+          "integration": "tplink",
+          "negative_call_patterns": [
+            "__init__",
+            "get_device_name",
+            "deviceinfo",
+            "_get_unique_id",
+            "super",
+            "self._get_unique_id"
+          ],
+          "negative_evidence": [
+            "negative_function:__init__",
+            "negative_function:_async_call_update_attrs",
+            "negative_function:async_added_to_hass",
+            "negative_function:available",
+            "negative_function:_description_for_feature",
+            "negative_call:__init__",
+            "negative_call:get_device_name",
+            "negative_call:deviceinfo",
+            "negative_call:_get_unique_id",
+            "negative_call:super"
+          ],
+          "negative_function_patterns": [
+            "__init__",
+            "_async_call_update_attrs",
+            "async_added_to_hass",
+            "available",
+            "_description_for_feature",
+            "async_refresh_after"
+          ],
+          "negative_prototypes": [
+            {
+              "call_chains": [
+                "__init__",
+                "get_device_name",
+                "deviceinfo",
+                "self._get_unique_id",
+                "super",
+                "str"
+              ],
+              "call_patterns": [
+                "__init__",
+                "get_device_name",
+                "deviceinfo",
+                "_get_unique_id",
+                "super",
+                "str"
+              ],
+              "file_path": "data/repo_snapshot/tplink/entity.py",
+              "function_name": "__init__",
+              "path_kind": "setup_path",
+              "path_signals": [
+                "read_function:__init__",
+                "read_call:get_device_name"
+              ],
+              "prototype_kind": "negative_setup",
+              "role_hint": "setup",
+              "score": -4,
+              "snippet": "166: \n167:     def __init__(\n168:         self,\n169:         device: Device,\n170:         coordinator: TPLinkDataUpdateCoordinator,\n171:         description: TPLinkEntityDescription,\n172:         *,\n173:         feature: Feature | None = None,\n174:         parent: Device | None = None,\n175:     ) -> None:\n176:         \"\"\"Initialize the entity.\"\"\"\n177:         super().__init__(coordinator)\n178:         self.entity_description = description\n179:         self._device: Device = device"
+            },
+            {
+              "call_chains": [
+                "self._async_update_attrs",
+                "_logger.warning"
+              ],
+              "call_patterns": [
+                "_async_update_attrs",
+                "warning"
+              ],
+              "file_path": "data/repo_snapshot/tplink/entity.py",
+              "function_name": "_async_call_update_attrs",
+              "path_kind": "control_path",
+              "path_signals": [
+                "state_write_function:_async_call_update_attrs",
+                "state_write_call:self._async_update_attrs"
+              ],
+              "prototype_kind": "negative_control",
+              "role_hint": "runtime_write",
+              "score": -1,
+              "snippet": "268:     @callback\n269:     def _async_call_update_attrs(self) -> None:\n270:         \"\"\"Call update_attrs and make entity unavailable on errors.\"\"\"\n271:         try:\n272:             available = self._async_update_attrs()\n273:         except Exception as ex:  # noqa: BLE001\n274:             if self._attr_available:\n275:                 _LOGGER.warning(\n276:                     \"Unable to read data for %s %s: %s\",\n277:                     self._device,\n278:                     self.entity_id,\n279:                     ex,\n280:                 )\n281:             self._attr_available = False"
+            },
+            {
+              "call_chains": [
+                "self._async_call_update_attrs",
+                "async_added_to_hass",
+                "super"
+              ],
+              "call_patterns": [
+                "_async_call_update_attrs",
+                "async_added_to_hass",
+                "super"
+              ],
+              "file_path": "data/repo_snapshot/tplink/entity.py",
+              "function_name": "async_added_to_hass",
+              "path_kind": "control_path",
+              "path_signals": [
+                "state_write_function:async_added_to_hass",
+                "state_write_call:self._async_call_update_attrs"
+              ],
+              "prototype_kind": "negative_control",
+              "role_hint": "runtime_write",
+              "score": -1,
+              "snippet": "252: \n253:     async def async_added_to_hass(self) -> None:\n254:         \"\"\"Call update attributes after the device is added to the platform.\"\"\"\n255:         await super().async_added_to_hass()\n256: \n257:         self._async_call_update_attrs()\n258: \n259:     @abstractmethod"
+            },
+            {
+              "call_chains": [],
+              "call_patterns": [],
+              "file_path": "data/repo_snapshot/tplink/entity.py",
+              "function_name": "available",
+              "path_kind": "property_path",
+              "path_signals": [
+                "property_function:available"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "property_getter",
+              "score": -10,
+              "snippet": "291:     @property\n292:     def available(self) -> bool:\n293:         \"\"\"Return if entity is available.\"\"\"\n294:         return self.coordinator.last_update_success and self._attr_available\n295: \n296:"
+            },
+            {
+              "call_chains": [
+                "_logger.debug",
+                "replace",
+                "descriptions.get",
+                "get_device_name",
+                "cls._category_for_feature"
+              ],
+              "call_patterns": [
+                "debug",
+                "replace",
+                "get",
+                "get_device_name",
+                "_category_for_feature"
+              ],
+              "file_path": "data/repo_snapshot/tplink/entity.py",
+              "function_name": "_description_for_feature",
+              "path_kind": "helper_path",
+              "path_signals": [
+                "read_function:_description_for_feature",
+                "read_call:get_device_name"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "helper",
+              "score": -2,
+              "snippet": "360:     @classmethod\n361:     def _description_for_feature[_D: EntityDescription](\n362:         cls,\n363:         feature: Feature,\n364:         descriptions: Mapping[str, _D],\n365:         *,\n366:         device: Device,\n367:         parent: Device | None = None,\n368:     ) -> _D | None:\n369:         \"\"\"Return description object for the given feature.\n370: \n371:         This is responsible for setting the common parameters & deciding\n372:         based on feature id which additional parameters are passed.\n373:         \"\"\""
+            }
+          ],
+          "origin_action_id": null,
+          "origin_cluster_id": "tplink__entity__local_api_read__get_state__local",
+          "phase": "RUNTIME",
+          "positive_prototypes": [
+            {
+              "call_chains": [
+                "self._async_call_update_attrs",
+                "_handle_coordinator_update",
+                "super"
+              ],
+              "call_patterns": [
+                "_async_call_update_attrs",
+                "_handle_coordinator_update",
+                "super"
+              ],
+              "file_path": "data/repo_snapshot/tplink/entity.py",
+              "function_name": "_handle_coordinator_update",
+              "path_kind": "control_path",
+              "path_signals": [
+                "update_callback_function:_handle_coordinator_update",
+                "state_write_function:_handle_coordinator_update",
+                "state_write_call:self._async_call_update_attrs",
+                "state_write_call:_handle_coordinator_update"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_write",
+              "score": 14,
+              "snippet": "285:     @callback\n286:     def _handle_coordinator_update(self) -> None:\n287:         \"\"\"Handle updated data from the coordinator.\"\"\"\n288:         self._async_call_update_attrs()\n289:         super()._handle_coordinator_update()\n290: \n291:     @property"
+            },
+            {
+              "call_chains": [
+                "self.coordinator.async_request_refresh",
+                "func",
+                "self.coordinator.config_entry.async_start_reauth",
+                "homeassistanterror",
+                "str"
+              ],
+              "call_patterns": [
+                "async_request_refresh",
+                "func",
+                "async_start_reauth",
+                "homeassistanterror",
+                "str"
+              ],
+              "file_path": "data/repo_snapshot/tplink/entity.py",
+              "function_name": "async_refresh_after",
+              "path_kind": "read_path",
+              "path_signals": [
+                "refresh_call:self.coordinator.async_request_refresh",
+                "awaited_refresh_call:self.coordinator.async_request_refresh"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 4,
+              "snippet": "117: \n118: def async_refresh_after[_T: CoordinatedTPLinkEntity, **_P](\n119:     func: Callable[Concatenate[_T, _P], Awaitable[None]],\n120: ) -> Callable[Concatenate[_T, _P], Coroutine[Any, Any, None]]:\n121:     \"\"\"Define a wrapper to raise HA errors and refresh after.\"\"\"\n122: \n123:     async def _async_wrap(self: _T, *args: _P.args, **kwargs: _P.kwargs) -> None:\n124:         try:\n125:             await func(self, *args, **kwargs)\n126:         except AuthenticationError as ex:\n127:             self.coordinator.config_entry.async_start_reauth(self.hass)\n128:             raise HomeAssistantError(\n129:                 translation_domain=DOMAIN,\n130:                 translation_key=\"device_authentication\","
+            },
+            {
+              "call_chains": [
+                "self.coordinator.async_request_refresh",
+                "func",
+                "self.coordinator.config_entry.async_start_reauth",
+                "homeassistanterror",
+                "str"
+              ],
+              "call_patterns": [
+                "async_request_refresh",
+                "func",
+                "async_start_reauth",
+                "homeassistanterror",
+                "str"
+              ],
+              "file_path": "data/repo_snapshot/tplink/entity.py",
+              "function_name": "_async_wrap",
+              "path_kind": "read_path",
+              "path_signals": [
+                "refresh_call:self.coordinator.async_request_refresh",
+                "awaited_refresh_call:self.coordinator.async_request_refresh"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 4,
+              "snippet": "122: \n123:     async def _async_wrap(self: _T, *args: _P.args, **kwargs: _P.kwargs) -> None:\n124:         try:\n125:             await func(self, *args, **kwargs)\n126:         except AuthenticationError as ex:\n127:             self.coordinator.config_entry.async_start_reauth(self.hass)\n128:             raise HomeAssistantError(\n129:                 translation_domain=DOMAIN,\n130:                 translation_key=\"device_authentication\",\n131:                 translation_placeholders={\n132:                     \"func\": func.__name__,\n133:                     \"exc\": str(ex),\n134:                 },\n135:             ) from ex"
+            }
+          ],
+          "preferred_runtime_roles": [
+            "runtime_read"
+          ],
+          "required_context": [
+            "runtime_path"
+          ],
+          "required_path_signals": [
+            "update_callback_function:_handle_coordinator_update",
+            "state_write_function:_handle_coordinator_update",
+            "state_write_call:self._async_call_update_attrs",
+            "state_write_call:_handle_coordinator_update",
+            "refresh_call:self.coordinator.async_request_refresh",
+            "awaited_refresh_call:self.coordinator.async_request_refresh"
+          ],
+          "required_runtime_roles": [
+            "runtime_read"
+          ],
+          "reviewer_status": "draft",
+          "rule_id": "tplink:entity_local_api_read",
+          "runtime_archetypes": [
+            "local_bridge_getter",
+            "runtime_read"
+          ],
+          "runtime_path_evidence": [
+            "runtime_function:_handle_coordinator_update",
+            "runtime_function:async_refresh_after",
+            "runtime_function:_async_wrap",
+            "runtime_call:_async_call_update_attrs",
+            "runtime_call:_handle_coordinator_update",
+            "runtime_call:super",
+            "runtime_call:self._async_call_update_attrs",
+            "runtime_call:async_request_refresh",
+            "runtime_call:func",
+            "runtime_call:async_start_reauth"
+          ],
+          "source_file_paths": [
+            "data/repo_snapshot/tplink/entity.py"
+          ],
+          "source_unresolved_action_ids": [
+            "A14",
+            "A15",
+            "A16"
+          ],
+          "strength": "MEDIUM",
+          "why_not_more_general": "same runtime idiom appears in one file across multiple unresolved actions",
+          "why_not_setup": [
+            "exclude_role:setup:__init__",
+            "exclude_role:runtime_write:_async_call_update_attrs",
+            "exclude_role:runtime_write:async_added_to_hass",
+            "exclude_role:property_getter:available",
+            "exclude_role:helper:_description_for_feature",
+            "exclude_path_signal:property_function:available",
+            "exclude_control_path_for_read_like_action"
+          ]
+        },
+        {
+          "action_kind": "write",
+          "allow_accessor_fallback": false,
+          "binding_hints": {
+            "boost_target_tokens": [
+              "sensor.vdev_whole_home_energy_hvac_audit_profile_01_local_lane",
+              "vdev_whole_home_energy_hvac_audit_profile_01_local_lane"
+            ],
+            "phase": "RUNTIME",
+            "preferred_action_kinds": [
+              "publish",
+              "write"
+            ],
+            "required_service_tokens": []
+          },
+          "call_patterns": [
+            "_async_call_update_attrs",
+            "_handle_coordinator_update",
+            "super",
+            "self._async_call_update_attrs",
+            "async_added_to_hass",
+            "_async_update_attrs"
+          ],
+          "confidence": {
+            "base": 0.7,
+            "boost_if_imports": [
+              "__future__",
+              "abc",
+              "collections",
+              "const",
+              "coordinator",
+              "dataclasses"
+            ],
+            "boost_if_names": [
+              "write",
+              "_handle_coordinator_update",
+              "async_added_to_hass",
+              "_async_call_update_attrs",
+              "super",
+              "self._async_call_update_attrs"
+            ],
+            "emit_threshold": 0.7
+          },
+          "family": "STATE_WRITE",
+          "file_globs": [
+            "tplink/entity.py"
+          ],
+          "forbidden_context": [
+            "dunder_init"
+          ],
+          "forbidden_path_signals": [
+            "property_function:available"
+          ],
+          "forbidden_runtime_roles": [
+            "setup",
+            "property_getter"
+          ],
+          "function_name_patterns": [
+            "_handle_coordinator_update",
+            "async_added_to_hass",
+            "_async_call_update_attrs"
+          ],
+          "generalization_scope": "file_specific",
+          "generalizes_actions": [
+            "A20"
+          ],
+          "integration": "tplink",
+          "negative_call_patterns": [
+            "__init__",
+            "get_device_name",
+            "deviceinfo",
+            "_get_unique_id",
+            "self._get_unique_id",
+            "replace"
+          ],
+          "negative_evidence": [
+            "negative_function:__init__",
+            "negative_function:available",
+            "negative_function:_description_for_feature",
+            "negative_call:__init__",
+            "negative_call:get_device_name",
+            "negative_call:deviceinfo",
+            "negative_call:_get_unique_id",
+            "negative_call:super",
+            "negative_call:str",
+            "negative_call:self._get_unique_id"
+          ],
+          "negative_function_patterns": [
+            "__init__",
+            "available",
+            "_description_for_feature"
+          ],
+          "negative_prototypes": [
+            {
+              "call_chains": [
+                "__init__",
+                "get_device_name",
+                "deviceinfo",
+                "self._get_unique_id",
+                "super",
+                "str"
+              ],
+              "call_patterns": [
+                "__init__",
+                "get_device_name",
+                "deviceinfo",
+                "_get_unique_id",
+                "super",
+                "str"
+              ],
+              "file_path": "data/repo_snapshot/tplink/entity.py",
+              "function_name": "__init__",
+              "path_kind": "setup_path",
+              "path_signals": [
+                "read_function:__init__",
+                "read_call:get_device_name"
+              ],
+              "prototype_kind": "negative_setup",
+              "role_hint": "setup",
+              "score": -4,
+              "snippet": "166: \n167:     def __init__(\n168:         self,\n169:         device: Device,\n170:         coordinator: TPLinkDataUpdateCoordinator,\n171:         description: TPLinkEntityDescription,\n172:         *,\n173:         feature: Feature | None = None,\n174:         parent: Device | None = None,\n175:     ) -> None:\n176:         \"\"\"Initialize the entity.\"\"\"\n177:         super().__init__(coordinator)\n178:         self.entity_description = description\n179:         self._device: Device = device"
+            },
+            {
+              "call_chains": [],
+              "call_patterns": [],
+              "file_path": "data/repo_snapshot/tplink/entity.py",
+              "function_name": "available",
+              "path_kind": "property_path",
+              "path_signals": [
+                "property_function:available"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "property_getter",
+              "score": -10,
+              "snippet": "291:     @property\n292:     def available(self) -> bool:\n293:         \"\"\"Return if entity is available.\"\"\"\n294:         return self.coordinator.last_update_success and self._attr_available\n295: \n296:"
+            },
+            {
+              "call_chains": [
+                "_logger.debug",
+                "replace",
+                "descriptions.get",
+                "get_device_name",
+                "cls._category_for_feature"
+              ],
+              "call_patterns": [
+                "debug",
+                "replace",
+                "get",
+                "get_device_name",
+                "_category_for_feature"
+              ],
+              "file_path": "data/repo_snapshot/tplink/entity.py",
+              "function_name": "_description_for_feature",
+              "path_kind": "helper_path",
+              "path_signals": [
+                "read_function:_description_for_feature",
+                "read_call:get_device_name"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "helper",
+              "score": 0,
+              "snippet": "360:     @classmethod\n361:     def _description_for_feature[_D: EntityDescription](\n362:         cls,\n363:         feature: Feature,\n364:         descriptions: Mapping[str, _D],\n365:         *,\n366:         device: Device,\n367:         parent: Device | None = None,\n368:     ) -> _D | None:\n369:         \"\"\"Return description object for the given feature.\n370: \n371:         This is responsible for setting the common parameters & deciding\n372:         based on feature id which additional parameters are passed.\n373:         \"\"\""
+            }
+          ],
+          "origin_action_id": "A20",
+          "origin_cluster_id": "tplink__entity__state_write__write__ha",
+          "phase": "RUNTIME",
+          "positive_prototypes": [
+            {
+              "call_chains": [
+                "self._async_call_update_attrs",
+                "_handle_coordinator_update",
+                "super"
+              ],
+              "call_patterns": [
+                "_async_call_update_attrs",
+                "_handle_coordinator_update",
+                "super"
+              ],
+              "file_path": "data/repo_snapshot/tplink/entity.py",
+              "function_name": "_handle_coordinator_update",
+              "path_kind": "control_path",
+              "path_signals": [
+                "update_callback_function:_handle_coordinator_update",
+                "state_write_function:_handle_coordinator_update",
+                "state_write_call:self._async_call_update_attrs",
+                "state_write_call:_handle_coordinator_update"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_write",
+              "score": 9,
+              "snippet": "285:     @callback\n286:     def _handle_coordinator_update(self) -> None:\n287:         \"\"\"Handle updated data from the coordinator.\"\"\"\n288:         self._async_call_update_attrs()\n289:         super()._handle_coordinator_update()\n290: \n291:     @property"
+            },
+            {
+              "call_chains": [
+                "self._async_call_update_attrs",
+                "async_added_to_hass",
+                "super"
+              ],
+              "call_patterns": [
+                "_async_call_update_attrs",
+                "async_added_to_hass",
+                "super"
+              ],
+              "file_path": "data/repo_snapshot/tplink/entity.py",
+              "function_name": "async_added_to_hass",
+              "path_kind": "control_path",
+              "path_signals": [
+                "state_write_function:async_added_to_hass",
+                "state_write_call:self._async_call_update_attrs"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_write",
+              "score": 7,
+              "snippet": "252: \n253:     async def async_added_to_hass(self) -> None:\n254:         \"\"\"Call update attributes after the device is added to the platform.\"\"\"\n255:         await super().async_added_to_hass()\n256: \n257:         self._async_call_update_attrs()\n258: \n259:     @abstractmethod"
+            },
+            {
+              "call_chains": [
+                "self._async_update_attrs",
+                "_logger.warning"
+              ],
+              "call_patterns": [
+                "_async_update_attrs",
+                "warning"
+              ],
+              "file_path": "data/repo_snapshot/tplink/entity.py",
+              "function_name": "_async_call_update_attrs",
+              "path_kind": "control_path",
+              "path_signals": [
+                "state_write_function:_async_call_update_attrs",
+                "state_write_call:self._async_update_attrs"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_write",
+              "score": 7,
+              "snippet": "268:     @callback\n269:     def _async_call_update_attrs(self) -> None:\n270:         \"\"\"Call update_attrs and make entity unavailable on errors.\"\"\"\n271:         try:\n272:             available = self._async_update_attrs()\n273:         except Exception as ex:  # noqa: BLE001\n274:             if self._attr_available:\n275:                 _LOGGER.warning(\n276:                     \"Unable to read data for %s %s: %s\",\n277:                     self._device,\n278:                     self.entity_id,\n279:                     ex,\n280:                 )\n281:             self._attr_available = False"
+            }
+          ],
+          "preferred_runtime_roles": [
+            "runtime_write"
+          ],
+          "required_context": [
+            "runtime_path"
+          ],
+          "required_path_signals": [
+            "update_callback_function:_handle_coordinator_update",
+            "state_write_function:_handle_coordinator_update",
+            "state_write_call:self._async_call_update_attrs",
+            "state_write_call:_handle_coordinator_update",
+            "state_write_function:async_added_to_hass",
+            "state_write_function:_async_call_update_attrs",
+            "state_write_call:self._async_update_attrs"
+          ],
+          "required_runtime_roles": [
+            "runtime_write"
+          ],
+          "reviewer_status": "draft",
+          "rule_id": "tplink:entity_runtime_writeback",
+          "runtime_archetypes": [
+            "state_writeback"
+          ],
+          "runtime_path_evidence": [
+            "runtime_function:_handle_coordinator_update",
+            "runtime_function:async_added_to_hass",
+            "runtime_function:_async_call_update_attrs",
+            "runtime_call:_async_call_update_attrs",
+            "runtime_call:_handle_coordinator_update",
+            "runtime_call:super",
+            "runtime_call:self._async_call_update_attrs",
+            "runtime_call:async_added_to_hass",
+            "runtime_call:_async_update_attrs",
+            "runtime_call:warning"
+          ],
+          "source_file_paths": [
+            "data/repo_snapshot/tplink/entity.py"
+          ],
+          "source_unresolved_action_ids": [
+            "A20"
+          ],
+          "strength": "MEDIUM",
+          "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+          "why_not_setup": [
+            "exclude_role:setup:__init__",
+            "exclude_role:property_getter:available",
+            "exclude_path_signal:property_function:available"
+          ]
+        }
+      ],
+      "schema_version": "m1_grounding_profile/v3",
+      "version": "draft_llm_v3"
+    },
+    {
+      "integration": "tuya",
+      "runtime_families": [
+        {
+          "action_kind": "status",
+          "allow_accessor_fallback": false,
+          "binding_hints": {
+            "boost_target_tokens": [
+              "energy_audit_ac_1",
+              "tuya:climate.energy_audit_ac_1.status",
+              "energy_audit_ac_2",
+              "tuya:climate.energy_audit_ac_2.status"
+            ],
+            "phase": "RUNTIME",
+            "preferred_action_kinds": [
+              "status",
+              "poll_update"
+            ],
+            "required_service_tokens": []
+          },
+          "call_patterns": [
+            "read_device_status",
+            "temp_unit_convert.read_device_status"
+          ],
+          "confidence": {
+            "base": 0.7,
+            "boost_if_imports": [
+              "__future__",
+              "const",
+              "dataclasses",
+              "entity",
+              "homeassistant",
+              "tuya_device_handlers"
+            ],
+            "boost_if_names": [
+              "status",
+              "_get_temperature_wrappers",
+              "read_device_status",
+              "temp_unit_convert.read_device_status"
+            ],
+            "emit_threshold": 0.7
+          },
+          "family": "CLOUD_STATUS_CALL",
+          "file_globs": [
+            "tuya/climate.py"
+          ],
+          "forbidden_context": [
+            "setup_function",
+            "dunder_init",
+            "entity_property_getter"
+          ],
+          "forbidden_path_signals": [
+            "setup_function:async_setup_entry",
+            "setup_call:async_add_entities",
+            "setup_call:async_dispatcher_connect",
+            "control_function:async_turn_on",
+            "control_call:self._async_send_wrapper_updates",
+            "awaited_control_call:self._async_send_wrapper_updates",
+            "control_function:async_turn_off",
+            "property_function:fan_mode"
+          ],
+          "forbidden_runtime_roles": [
+            "runtime_write",
+            "setup",
+            "property_getter",
+            "helper"
+          ],
+          "function_name_patterns": [
+            "_get_temperature_wrappers"
+          ],
+          "generalization_scope": "file_specific",
+          "generalizes_actions": [
+            "A9",
+            "A10"
+          ],
+          "integration": "tuya",
+          "negative_call_patterns": [
+            "async_discover_device",
+            "async_on_unload",
+            "async_add_entities",
+            "async_dispatcher_connect",
+            "_get_temperature_wrappers",
+            "tuyaclimateentity"
+          ],
+          "negative_evidence": [
+            "negative_function:async_setup_entry",
+            "negative_function:async_turn_on",
+            "negative_function:async_turn_off",
+            "negative_function:fan_mode",
+            "negative_function:hvac_mode",
+            "negative_call:async_discover_device",
+            "negative_call:async_on_unload",
+            "negative_call:async_add_entities",
+            "negative_call:async_dispatcher_connect",
+            "negative_call:_get_temperature_wrappers"
+          ],
+          "negative_function_patterns": [
+            "async_setup_entry",
+            "async_turn_on",
+            "async_turn_off",
+            "fan_mode",
+            "hvac_mode",
+            "async_set_*"
+          ],
+          "negative_prototypes": [
+            {
+              "call_chains": [
+                "async_discover_device",
+                "entry.async_on_unload",
+                "async_add_entities",
+                "async_dispatcher_connect",
+                "_get_temperature_wrappers",
+                "entities.append",
+                "tuyaclimateentity",
+                "dpcoderoundedintegerwrapper.find_dpcode"
+              ],
+              "call_patterns": [
+                "async_discover_device",
+                "async_on_unload",
+                "async_add_entities",
+                "async_dispatcher_connect",
+                "_get_temperature_wrappers",
+                "append",
+                "tuyaclimateentity",
+                "find_dpcode"
+              ],
+              "file_path": "data/repo_snapshot/tuya/climate.py",
+              "function_name": "async_setup_entry",
+              "path_kind": "setup_path",
+              "path_signals": [
+                "setup_function:async_setup_entry",
+                "setup_call:async_add_entities",
+                "setup_call:async_dispatcher_connect",
+                "connect_call:async_dispatcher_connect"
+              ],
+              "prototype_kind": "negative_setup",
+              "role_hint": "setup",
+              "score": -8,
+              "snippet": "197: \n198: async def async_setup_entry(\n199:     hass: HomeAssistant,\n200:     entry: TuyaConfigEntry,\n201:     async_add_entities: AddConfigEntryEntitiesCallback,\n202: ) -> None:\n203:     \"\"\"Set up Tuya climate dynamically through Tuya discovery.\"\"\"\n204:     manager = entry.runtime_data.manager\n205: \n206:     @callback\n207:     def async_discover_device(device_ids: list[str]) -> None:\n208:         \"\"\"Discover and add a discovered Tuya climate.\"\"\"\n209:         entities: list[TuyaClimateEntity] = []\n210:         for device_id in device_ids:"
+            },
+            {
+              "call_chains": [
+                "self._async_send_wrapper_updates"
+              ],
+              "call_patterns": [
+                "_async_send_wrapper_updates"
+              ],
+              "file_path": "data/repo_snapshot/tuya/climate.py",
+              "function_name": "async_turn_on",
+              "path_kind": "control_path",
+              "path_signals": [
+                "control_function:async_turn_on",
+                "control_call:self._async_send_wrapper_updates",
+                "awaited_control_call:self._async_send_wrapper_updates"
+              ],
+              "prototype_kind": "negative_control",
+              "role_hint": "runtime_write",
+              "score": -12,
+              "snippet": "448: \n449:     async def async_turn_on(self) -> None:\n450:         \"\"\"Turn the device on, retaining current HVAC (if supported).\"\"\"\n451:         await self._async_send_wrapper_updates(self._switch_wrapper, True)\n452: \n453:     async def async_turn_off(self) -> None:"
+            },
+            {
+              "call_chains": [
+                "self._async_send_wrapper_updates"
+              ],
+              "call_patterns": [
+                "_async_send_wrapper_updates"
+              ],
+              "file_path": "data/repo_snapshot/tuya/climate.py",
+              "function_name": "async_turn_off",
+              "path_kind": "control_path",
+              "path_signals": [
+                "control_function:async_turn_off",
+                "control_call:self._async_send_wrapper_updates",
+                "awaited_control_call:self._async_send_wrapper_updates"
+              ],
+              "prototype_kind": "negative_control",
+              "role_hint": "runtime_write",
+              "score": -12,
+              "snippet": "452: \n453:     async def async_turn_off(self) -> None:\n454:         \"\"\"Turn the device on, retaining current HVAC (if supported).\"\"\"\n455:         await self._async_send_wrapper_updates(self._switch_wrapper, False)"
+            },
+            {
+              "call_chains": [
+                "self._read_wrapper"
+              ],
+              "call_patterns": [
+                "_read_wrapper"
+              ],
+              "file_path": "data/repo_snapshot/tuya/climate.py",
+              "function_name": "fan_mode",
+              "path_kind": "property_path",
+              "path_signals": [
+                "property_function:fan_mode",
+                "state_accessor_property:fan_mode",
+                "state_accessor_call:self._read_wrapper"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "property_getter",
+              "score": -10,
+              "snippet": "438:     @property\n439:     def fan_mode(self) -> str | None:\n440:         \"\"\"Return fan mode.\"\"\"\n441:         return self._read_wrapper(self._fan_mode_wrapper)\n442: \n443:     @property"
+            },
+            {
+              "call_chains": [],
+              "call_patterns": [],
+              "file_path": "data/repo_snapshot/tuya/climate.py",
+              "function_name": "hvac_mode",
+              "path_kind": "property_path",
+              "path_signals": [
+                "property_function:hvac_mode",
+                "state_accessor_property:hvac_mode",
+                "state_accessor_call:self._read_wrapper"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "property_getter",
+              "score": -10,
+              "snippet": "415:     @property\n416:     def hvac_mode(self) -> HVACMode | None:\n417:         \"\"\"Return hvac mode.\"\"\"\n418:         # If the switch is off, hvac mode is off.\n419:         switch_status: bool | None\n420:         if (switch_status := self._read_wrapper(self._switch_wrapper)) is False:\n421:             return HVACMode.OFF\n422: \n423:         # If we don't have a mode wrapper, return switch only mode.\n424:         if self._hvac_mode_wrapper is None:\n425:             if switch_status is True:\n426:                 return self.entity_description.switch_only_hvac_mode\n427:             return None\n428:"
+            }
+          ],
+          "origin_action_id": "A9",
+          "origin_cluster_id": "tuya__climate__cloud_status_call__status__cloud",
+          "phase": "RUNTIME",
+          "positive_prototypes": [
+            {
+              "call_chains": [
+                "dpcodeintegerwrapper.find_dpcode",
+                "_get_temperature_wrapper",
+                "dpcodeenumwrapper.find_dpcode",
+                "temp_unit_convert.read_device_status"
+              ],
+              "call_patterns": [
+                "find_dpcode",
+                "_get_temperature_wrapper",
+                "read_device_status"
+              ],
+              "file_path": "data/repo_snapshot/tuya/climate.py",
+              "function_name": "_get_temperature_wrappers",
+              "path_kind": "read_path",
+              "path_signals": [
+                "read_function:_get_temperature_wrappers",
+                "read_call:temp_unit_convert.read_device_status",
+                "state_accessor_call:temp_unit_convert.read_device_status"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 8,
+              "snippet": "123: \n124: def _get_temperature_wrappers(\n125:     device: CustomerDevice, system_temperature_unit: UnitOfTemperature\n126: ) -> tuple[DPCodeIntegerWrapper | None, DPCodeIntegerWrapper | None, UnitOfTemperature]:\n127:     \"\"\"Get temperature wrappers for current and set temperatures.\"\"\"\n128:     # Get all possible temperature dpcodes\n129:     temp_current = DPCodeIntegerWrapper.find_dpcode(\n130:         device, (DPCode.TEMP_CURRENT, DPCode.UPPER_TEMP)\n131:     )\n132:     temp_current_f = DPCodeIntegerWrapper.find_dpcode(\n133:         device, (DPCode.TEMP_CURRENT_F, DPCode.UPPER_TEMP_F)\n134:     )\n135:     temp_set = DPCodeIntegerWrapper.find_dpcode(\n136:         device, DPCode.TEMP_SET, prefer_function=True"
+            }
+          ],
+          "preferred_runtime_roles": [
+            "runtime_read"
+          ],
+          "required_context": [
+            "runtime_update_path"
+          ],
+          "required_path_signals": [
+            "read_function:_get_temperature_wrappers",
+            "read_call:temp_unit_convert.read_device_status",
+            "state_accessor_call:temp_unit_convert.read_device_status"
+          ],
+          "required_runtime_roles": [
+            "runtime_read"
+          ],
+          "reviewer_status": "draft",
+          "rule_id": "tuya:climate_runtime_status_read",
+          "runtime_archetypes": [
+            "cloud_runtime_read",
+            "entity_wrapper_read",
+            "coordinator_update_path"
+          ],
+          "runtime_path_evidence": [
+            "runtime_function:_get_temperature_wrappers",
+            "runtime_call:find_dpcode",
+            "runtime_call:_get_temperature_wrapper",
+            "runtime_call:read_device_status",
+            "runtime_call:dpcodeintegerwrapper.find_dpcode",
+            "runtime_call:dpcodeenumwrapper.find_dpcode",
+            "runtime_call:temp_unit_convert.read_device_status",
+            "path_signal:read_function:_get_temperature_wrappers",
+            "path_signal:read_call:temp_unit_convert.read_device_status",
+            "path_signal:state_accessor_call:temp_unit_convert.read_device_status"
+          ],
+          "source_file_paths": [
+            "data/repo_snapshot/tuya/climate.py"
+          ],
+          "source_unresolved_action_ids": [
+            "A9"
+          ],
+          "strength": "MEDIUM",
+          "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+          "why_not_setup": [
+            "exclude_role:setup:async_setup_entry",
+            "exclude_role:runtime_write:async_turn_on",
+            "exclude_role:runtime_write:async_turn_off",
+            "exclude_role:property_getter:fan_mode",
+            "exclude_role:property_getter:hvac_mode",
+            "exclude_path_signal:setup_function:async_setup_entry",
+            "exclude_path_signal:setup_call:async_add_entities",
+            "exclude_path_signal:setup_call:async_dispatcher_connect"
+          ]
+        },
+        {
+          "action_kind": "status",
+          "allow_accessor_fallback": true,
+          "binding_hints": {
+            "boost_target_tokens": [
+              "energy_audit_light_1",
+              "tuya:light.energy_audit_light_1.status",
+              "energy_audit_light_2",
+              "tuya:light.energy_audit_light_2.status",
+              "energy_audit_light_3",
+              "tuya:light.energy_audit_light_3.status",
+              "energy_audit_light_4",
+              "tuya:light.energy_audit_light_4.status"
+            ],
+            "phase": "RUNTIME",
+            "preferred_action_kinds": [
+              "status",
+              "poll_update"
+            ],
+            "required_service_tokens": []
+          },
+          "call_patterns": [],
+          "confidence": {
+            "base": 0.7,
+            "boost_if_imports": [
+              "__future__",
+              "const",
+              "dataclasses",
+              "entity",
+              "enum",
+              "homeassistant"
+            ],
+            "boost_if_names": [
+              "status",
+              "is_on"
+            ],
+            "emit_threshold": 0.7
+          },
+          "family": "CLOUD_STATUS_CALL",
+          "file_globs": [
+            "tuya/light.py"
+          ],
+          "forbidden_context": [
+            "setup_function",
+            "dunder_init"
+          ],
+          "forbidden_path_signals": [
+            "setup_function:async_setup_entry",
+            "setup_call:async_add_entities",
+            "setup_call:async_dispatcher_connect",
+            "control_function:async_turn_off",
+            "control_call:self._async_send_wrapper_updates",
+            "awaited_control_call:self._async_send_wrapper_updates",
+            "control_function:async_turn_on",
+            "control_call:self._async_send_commands"
+          ],
+          "forbidden_runtime_roles": [
+            "runtime_write",
+            "setup",
+            "property_getter",
+            "helper"
+          ],
+          "function_name_patterns": [
+            "is_on"
+          ],
+          "generalization_scope": "file_specific",
+          "generalizes_actions": [
+            "A1",
+            "A2",
+            "A3",
+            "A4"
+          ],
+          "integration": "tuya",
+          "negative_call_patterns": [
+            "async_discover_device",
+            "async_on_unload",
+            "async_add_entities",
+            "async_dispatcher_connect",
+            "extend",
+            "tuyalightentity"
+          ],
+          "negative_evidence": [
+            "negative_function:async_setup_entry",
+            "negative_function:async_turn_off",
+            "negative_function:async_turn_on",
+            "negative_function:is_on",
+            "negative_function:hs_color",
+            "negative_call:async_discover_device",
+            "negative_call:async_on_unload",
+            "negative_call:async_add_entities",
+            "negative_call:async_dispatcher_connect",
+            "negative_call:get"
+          ],
+          "negative_function_patterns": [
+            "async_setup_entry",
+            "async_turn_off",
+            "async_turn_on",
+            "hs_color",
+            "async_set_*",
+            "async_open_*"
+          ],
+          "negative_prototypes": [
+            {
+              "call_chains": [
+                "async_discover_device",
+                "entry.async_on_unload",
+                "async_add_entities",
+                "async_dispatcher_connect",
+                "lights.get",
+                "entities.extend",
+                "tuyalightentity",
+                "_get_color_data_wrapper"
+              ],
+              "call_patterns": [
+                "async_discover_device",
+                "async_on_unload",
+                "async_add_entities",
+                "async_dispatcher_connect",
+                "get",
+                "extend",
+                "tuyalightentity",
+                "_get_color_data_wrapper"
+              ],
+              "file_path": "data/repo_snapshot/tuya/light.py",
+              "function_name": "async_setup_entry",
+              "path_kind": "setup_path",
+              "path_signals": [
+                "setup_function:async_setup_entry",
+                "setup_call:async_add_entities",
+                "setup_call:async_dispatcher_connect",
+                "connect_call:async_dispatcher_connect"
+              ],
+              "prototype_kind": "negative_setup",
+              "role_hint": "setup",
+              "score": -8,
+              "snippet": "455: \n456: async def async_setup_entry(\n457:     hass: HomeAssistant,\n458:     entry: TuyaConfigEntry,\n459:     async_add_entities: AddConfigEntryEntitiesCallback,\n460: ) -> None:\n461:     \"\"\"Set up tuya light dynamically through tuya discovery.\"\"\"\n462:     manager = entry.runtime_data.manager\n463: \n464:     @callback\n465:     def async_discover_device(device_ids: list[str]):\n466:         \"\"\"Discover and add a discovered tuya light.\"\"\"\n467:         entities: list[TuyaLightEntity] = []\n468:         for device_id in device_ids:"
+            },
+            {
+              "call_chains": [
+                "self._async_send_wrapper_updates"
+              ],
+              "call_patterns": [
+                "_async_send_wrapper_updates"
+              ],
+              "file_path": "data/repo_snapshot/tuya/light.py",
+              "function_name": "async_turn_off",
+              "path_kind": "control_path",
+              "path_signals": [
+                "control_function:async_turn_off",
+                "control_call:self._async_send_wrapper_updates",
+                "awaited_control_call:self._async_send_wrapper_updates"
+              ],
+              "prototype_kind": "negative_control",
+              "role_hint": "runtime_write",
+              "score": -12,
+              "snippet": "633: \n634:     async def async_turn_off(self, **kwargs: Any) -> None:\n635:         \"\"\"Instruct the light to turn off.\"\"\"\n636:         await self._async_send_wrapper_updates(self._switch_wrapper, False)\n637: \n638:     @property"
+            },
+            {
+              "call_chains": [
+                "self._switch_wrapper.get_update_commands",
+                "commands.extend",
+                "self._async_send_commands",
+                "self._color_mode_wrapper.get_update_commands",
+                "self._color_temp_wrapper.get_update_commands",
+                "self._color_data_wrapper.get_update_commands",
+                "kwargs.get",
+                "self._brightness_wrapper.get_update_commands"
+              ],
+              "call_patterns": [
+                "get_update_commands",
+                "extend",
+                "_async_send_commands",
+                "get"
+              ],
+              "file_path": "data/repo_snapshot/tuya/light.py",
+              "function_name": "async_turn_on",
+              "path_kind": "control_path",
+              "path_signals": [
+                "control_function:async_turn_on",
+                "read_function:async_turn_on",
+                "read_call:self._switch_wrapper.get_update_commands",
+                "control_call:self._async_send_commands",
+                "read_call:self._color_mode_wrapper.get_update_commands",
+                "read_call:self._color_temp_wrapper.get_update_commands",
+                "read_call:self._color_data_wrapper.get_update_commands",
+                "read_call:self._brightness_wrapper.get_update_commands",
+                "awaited_control_call:self._async_send_commands"
+              ],
+              "prototype_kind": "negative_control",
+              "role_hint": "runtime_write",
+              "score": -10,
+              "snippet": "571: \n572:     async def async_turn_on(self, **kwargs: Any) -> None:\n573:         \"\"\"Turn on or control the light.\"\"\"\n574:         commands = self._switch_wrapper.get_update_commands(self.device, True)\n575: \n576:         if self._color_mode_wrapper and (\n577:             ATTR_WHITE in kwargs or ATTR_COLOR_TEMP_KELVIN in kwargs\n578:         ):\n579:             commands.extend(\n580:                 self._color_mode_wrapper.get_update_commands(\n581:                     self.device, WorkMode.WHITE\n582:                 ),\n583:             )\n584:"
+            },
+            {
+              "call_chains": [
+                "self._read_wrapper"
+              ],
+              "call_patterns": [
+                "_read_wrapper"
+              ],
+              "file_path": "data/repo_snapshot/tuya/light.py",
+              "function_name": "is_on",
+              "path_kind": "property_path",
+              "path_signals": [
+                "property_function:is_on",
+                "state_accessor_property:is_on",
+                "state_accessor_call:self._read_wrapper"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "property_getter",
+              "score": -10,
+              "snippet": "567:     @property\n568:     def is_on(self) -> bool | None:\n569:         \"\"\"Return true if light is on.\"\"\"\n570:         return self._read_wrapper(self._switch_wrapper)\n571: \n572:     async def async_turn_on(self, **kwargs: Any) -> None:"
+            },
+            {
+              "call_chains": [],
+              "call_patterns": [],
+              "file_path": "data/repo_snapshot/tuya/light.py",
+              "function_name": "hs_color",
+              "path_kind": "property_path",
+              "path_signals": [
+                "property_function:hs_color",
+                "state_accessor_property:hs_color",
+                "state_accessor_call:self._read_wrapper"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "property_getter",
+              "score": -10,
+              "snippet": "653:     @property\n654:     def hs_color(self) -> tuple[float, float] | None:\n655:         \"\"\"Return the hs_color of the light.\"\"\"\n656:         if self._color_data_wrapper is None:\n657:             return None\n658:         hsv_data = self._read_wrapper(self._color_data_wrapper)\n659:         return None if hsv_data is None else (hsv_data[0], hsv_data[1])\n660: \n661:     @property"
+            }
+          ],
+          "origin_action_id": null,
+          "origin_cluster_id": "tuya__light__cloud_status_call__status__cloud",
+          "phase": "RUNTIME",
+          "positive_prototypes": [
+            {
+              "call_chains": [
+                "self._read_wrapper"
+              ],
+              "call_patterns": [
+                "_read_wrapper"
+              ],
+              "file_path": "data/repo_snapshot/tuya/light.py",
+              "function_name": "is_on",
+              "path_kind": "read_path",
+              "path_signals": [
+                "property_function:is_on",
+                "state_accessor_property:is_on",
+                "state_accessor_call:self._read_wrapper",
+                "_read_wrapper"
+              ],
+              "prototype_kind": "synthetic_accessor_positive",
+              "role_hint": "runtime_read_snapshot",
+              "score": 3,
+              "snippet": "567:     @property\n568:     def is_on(self) -> bool | None:\n569:         \"\"\"Return true if light is on.\"\"\"\n570:         return self._read_wrapper(self._switch_wrapper)\n571: \n572:     async def async_turn_on(self, **kwargs: Any) -> None:"
+            }
+          ],
+          "preferred_runtime_roles": [
+            "runtime_read"
+          ],
+          "required_context": [
+            "runtime_update_path"
+          ],
+          "required_path_signals": [
+            "property_function:is_on",
+            "state_accessor_property:is_on",
+            "state_accessor_call:self._read_wrapper"
+          ],
+          "required_runtime_roles": [
+            "runtime_read"
+          ],
+          "reviewer_status": "draft",
+          "rule_id": "tuya:light_runtime_status_read",
+          "runtime_archetypes": [
+            "cloud_runtime_read",
+            "entity_wrapper_read",
+            "coordinator_update_path"
+          ],
+          "runtime_path_evidence": [
+            "runtime_function:is_on",
+            "runtime_call:_read_wrapper",
+            "runtime_call:self._read_wrapper",
+            "path_signal:property_function:is_on",
+            "path_signal:state_accessor_property:is_on",
+            "path_signal:state_accessor_call:self._read_wrapper"
+          ],
+          "source_file_paths": [
+            "data/repo_snapshot/tuya/light.py"
+          ],
+          "source_unresolved_action_ids": [
+            "A2",
+            "A3",
+            "A4"
+          ],
+          "strength": "MEDIUM",
+          "why_not_more_general": "same runtime idiom appears in one file across multiple unresolved actions",
+          "why_not_setup": [
+            "exclude_role:setup:async_setup_entry",
+            "exclude_role:runtime_write:async_turn_off",
+            "exclude_role:runtime_write:async_turn_on",
+            "exclude_role:property_getter:is_on",
+            "exclude_role:property_getter:hs_color",
+            "exclude_path_signal:setup_function:async_setup_entry",
+            "exclude_path_signal:setup_call:async_add_entities",
+            "exclude_path_signal:setup_call:async_dispatcher_connect"
+          ]
+        },
+        {
+          "action_kind": "status",
+          "allow_accessor_fallback": false,
+          "binding_hints": {
+            "boost_target_tokens": [
+              "energy_audit_strip_1",
+              "tuya:switch.energy_audit_strip_1.status",
+              "energy_audit_strip_2",
+              "tuya:switch.energy_audit_strip_2.status",
+              "energy_audit_strip_3",
+              "tuya:switch.energy_audit_strip_3.status",
+              "energy_audit_strip_4",
+              "tuya:switch.energy_audit_strip_4.status"
+            ],
+            "phase": "RUNTIME",
+            "preferred_action_kinds": [
+              "status",
+              "poll_update"
+            ],
+            "required_service_tokens": []
+          },
+          "call_patterns": [],
+          "confidence": {
+            "base": 0.7,
+            "boost_if_imports": [
+              "__future__",
+              "const",
+              "entity",
+              "homeassistant",
+              "tuya_device_handlers",
+              "tuya_sharing"
+            ],
+            "boost_if_names": [
+              "status",
+              "_process_device_update"
+            ],
+            "emit_threshold": 0.7
+          },
+          "family": "CLOUD_STATUS_CALL",
+          "file_globs": [
+            "tuya/switch.py"
+          ],
+          "forbidden_context": [
+            "setup_function",
+            "dunder_init",
+            "entity_property_getter"
+          ],
+          "forbidden_path_signals": [
+            "setup_function:async_setup_entry",
+            "setup_call:async_add_entities",
+            "setup_call:async_dispatcher_connect",
+            "control_function:async_turn_on",
+            "control_call:self._async_send_wrapper_updates",
+            "awaited_control_call:self._async_send_wrapper_updates",
+            "control_function:async_turn_off",
+            "property_function:is_on"
+          ],
+          "forbidden_runtime_roles": [
+            "runtime_write",
+            "setup",
+            "property_getter",
+            "helper"
+          ],
+          "function_name_patterns": [
+            "_process_device_update"
+          ],
+          "generalization_scope": "file_specific",
+          "generalizes_actions": [
+            "A5",
+            "A6",
+            "A7",
+            "A8"
+          ],
+          "integration": "tuya",
+          "negative_call_patterns": [
+            "async_discover_device",
+            "async_on_unload",
+            "async_add_entities",
+            "async_dispatcher_connect",
+            "extend",
+            "tuyaswitchentity"
+          ],
+          "negative_evidence": [
+            "negative_function:async_setup_entry",
+            "negative_function:async_turn_on",
+            "negative_function:async_turn_off",
+            "negative_function:is_on",
+            "negative_function:async_discover_device",
+            "negative_call:async_discover_device",
+            "negative_call:async_on_unload",
+            "negative_call:async_add_entities",
+            "negative_call:async_dispatcher_connect",
+            "negative_call:get"
+          ],
+          "negative_function_patterns": [
+            "async_setup_entry",
+            "async_turn_on",
+            "async_turn_off",
+            "is_on",
+            "async_discover_device",
+            "async_set_*"
+          ],
+          "negative_prototypes": [
+            {
+              "call_chains": [
+                "async_discover_device",
+                "entry.async_on_unload",
+                "async_add_entities",
+                "async_dispatcher_connect",
+                "switches.get",
+                "entities.extend",
+                "tuyaswitchentity",
+                "dpcodebooleanwrapper.find_dpcode"
+              ],
+              "call_patterns": [
+                "async_discover_device",
+                "async_on_unload",
+                "async_add_entities",
+                "async_dispatcher_connect",
+                "get",
+                "extend",
+                "tuyaswitchentity",
+                "find_dpcode"
+              ],
+              "file_path": "data/repo_snapshot/tuya/switch.py",
+              "function_name": "async_setup_entry",
+              "path_kind": "setup_path",
+              "path_signals": [
+                "setup_function:async_setup_entry",
+                "setup_call:async_add_entities",
+                "setup_call:async_dispatcher_connect",
+                "connect_call:async_dispatcher_connect"
+              ],
+              "prototype_kind": "negative_setup",
+              "role_hint": "setup",
+              "score": -8,
+              "snippet": "907: \n908: async def async_setup_entry(\n909:     hass: HomeAssistant,\n910:     entry: TuyaConfigEntry,\n911:     async_add_entities: AddConfigEntryEntitiesCallback,\n912: ) -> None:\n913:     \"\"\"Set up tuya sensors dynamically through tuya discovery.\"\"\"\n914:     manager = entry.runtime_data.manager\n915: \n916:     @callback\n917:     def async_discover_device(device_ids: list[str]) -> None:\n918:         \"\"\"Discover and add a discovered tuya sensor.\"\"\"\n919:         entities: list[TuyaSwitchEntity] = []\n920:         for device_id in device_ids:"
+            },
+            {
+              "call_chains": [
+                "self._async_send_wrapper_updates"
+              ],
+              "call_patterns": [
+                "_async_send_wrapper_updates"
+              ],
+              "file_path": "data/repo_snapshot/tuya/switch.py",
+              "function_name": "async_turn_on",
+              "path_kind": "control_path",
+              "path_signals": [
+                "control_function:async_turn_on",
+                "control_call:self._async_send_wrapper_updates",
+                "awaited_control_call:self._async_send_wrapper_updates"
+              ],
+              "prototype_kind": "negative_control",
+              "role_hint": "runtime_write",
+              "score": -12,
+              "snippet": "976: \n977:     async def async_turn_on(self, **kwargs: Any) -> None:\n978:         \"\"\"Turn the switch on.\"\"\"\n979:         await self._async_send_wrapper_updates(self._dpcode_wrapper, True)\n980: \n981:     async def async_turn_off(self, **kwargs: Any) -> None:"
+            },
+            {
+              "call_chains": [
+                "self._async_send_wrapper_updates"
+              ],
+              "call_patterns": [
+                "_async_send_wrapper_updates"
+              ],
+              "file_path": "data/repo_snapshot/tuya/switch.py",
+              "function_name": "async_turn_off",
+              "path_kind": "control_path",
+              "path_signals": [
+                "control_function:async_turn_off",
+                "control_call:self._async_send_wrapper_updates",
+                "awaited_control_call:self._async_send_wrapper_updates"
+              ],
+              "prototype_kind": "negative_control",
+              "role_hint": "runtime_write",
+              "score": -12,
+              "snippet": "980: \n981:     async def async_turn_off(self, **kwargs: Any) -> None:\n982:         \"\"\"Turn the switch off.\"\"\"\n983:         await self._async_send_wrapper_updates(self._dpcode_wrapper, False)"
+            },
+            {
+              "call_chains": [
+                "self._read_wrapper"
+              ],
+              "call_patterns": [
+                "_read_wrapper"
+              ],
+              "file_path": "data/repo_snapshot/tuya/switch.py",
+              "function_name": "is_on",
+              "path_kind": "property_path",
+              "path_signals": [
+                "property_function:is_on",
+                "state_accessor_property:is_on",
+                "state_accessor_call:self._read_wrapper"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "property_getter",
+              "score": -10,
+              "snippet": "958:     @property\n959:     def is_on(self) -> bool | None:\n960:         \"\"\"Return true if switch is on.\"\"\"\n961:         return self._read_wrapper(self._dpcode_wrapper)\n962: \n963:     async def _process_device_update("
+            },
+            {
+              "call_chains": [
+                "async_add_entities",
+                "switches.get",
+                "entities.extend",
+                "tuyaswitchentity",
+                "dpcodebooleanwrapper.find_dpcode"
+              ],
+              "call_patterns": [
+                "async_add_entities",
+                "get",
+                "extend",
+                "tuyaswitchentity",
+                "find_dpcode"
+              ],
+              "file_path": "data/repo_snapshot/tuya/switch.py",
+              "function_name": "async_discover_device",
+              "path_kind": "helper_path",
+              "path_signals": [
+                "setup_call:async_add_entities"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "helper",
+              "score": -4,
+              "snippet": "916:     @callback\n917:     def async_discover_device(device_ids: list[str]) -> None:\n918:         \"\"\"Discover and add a discovered tuya sensor.\"\"\"\n919:         entities: list[TuyaSwitchEntity] = []\n920:         for device_id in device_ids:\n921:             device = manager.device_map[device_id]\n922:             if descriptions := SWITCHES.get(device.category):\n923:                 entities.extend(\n924:                     TuyaSwitchEntity(device, manager, description, dpcode_wrapper)\n925:                     for description in descriptions\n926:                     if (\n927:                         dpcode_wrapper := DPCodeBooleanWrapper.find_dpcode(\n928:                             device, description.key, prefer_function=True\n929:                         )"
+            }
+          ],
+          "origin_action_id": null,
+          "origin_cluster_id": "tuya__switch__cloud_status_call__status__cloud",
+          "phase": "RUNTIME",
+          "positive_prototypes": [
+            {
+              "call_chains": [
+                "self._dpcode_wrapper.skip_update"
+              ],
+              "call_patterns": [
+                "skip_update"
+              ],
+              "file_path": "data/repo_snapshot/tuya/switch.py",
+              "function_name": "_process_device_update",
+              "path_kind": "read_path",
+              "path_signals": [
+                "update_callback_function:_process_device_update"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 8,
+              "snippet": "962: \n963:     async def _process_device_update(\n964:         self,\n965:         updated_status_properties: list[str],\n966:         dp_timestamps: dict[str, int] | None,\n967:     ) -> bool:\n968:         \"\"\"Called when Tuya device sends an update with updated properties.\n969: \n970:         Returns True if the Home Assistant state should be written,\n971:         or False if the state write should be skipped.\n972:         \"\"\"\n973:         return not self._dpcode_wrapper.skip_update(\n974:             self.device, updated_status_properties, dp_timestamps\n975:         )"
+            }
+          ],
+          "preferred_runtime_roles": [
+            "runtime_read"
+          ],
+          "required_context": [
+            "runtime_update_path"
+          ],
+          "required_path_signals": [
+            "update_callback_function:_process_device_update"
+          ],
+          "required_runtime_roles": [
+            "runtime_read"
+          ],
+          "reviewer_status": "draft",
+          "rule_id": "tuya:switch_runtime_status_read",
+          "runtime_archetypes": [
+            "cloud_runtime_read",
+            "entity_wrapper_read",
+            "coordinator_update_path"
+          ],
+          "runtime_path_evidence": [
+            "runtime_function:_process_device_update",
+            "runtime_call:skip_update",
+            "runtime_call:self._dpcode_wrapper.skip_update",
+            "path_signal:update_callback_function:_process_device_update"
+          ],
+          "source_file_paths": [
+            "data/repo_snapshot/tuya/switch.py"
+          ],
+          "source_unresolved_action_ids": [
+            "A6",
+            "A7",
+            "A8"
+          ],
+          "strength": "MEDIUM",
+          "why_not_more_general": "same runtime idiom appears in one file across multiple unresolved actions",
+          "why_not_setup": [
+            "exclude_role:setup:async_setup_entry",
+            "exclude_role:runtime_write:async_turn_on",
+            "exclude_role:runtime_write:async_turn_off",
+            "exclude_role:property_getter:is_on",
+            "exclude_role:helper:async_discover_device",
+            "exclude_path_signal:setup_function:async_setup_entry",
+            "exclude_path_signal:setup_call:async_add_entities",
+            "exclude_path_signal:setup_call:async_dispatcher_connect"
+          ]
+        }
+      ],
+      "schema_version": "m1_grounding_profile/v3",
+      "version": "draft_llm_v3"
+    },
+    {
+      "integration": "webostv",
+      "runtime_families": [
+        {
+          "action_kind": "get_state",
+          "allow_accessor_fallback": false,
+          "binding_hints": {
+            "boost_target_tokens": [
+              "energy_audit_tv",
+              "webostv:media_player.energy_audit_tv",
+              "webostv_local"
+            ],
+            "phase": "RUNTIME",
+            "preferred_action_kinds": [
+              "read",
+              "local_api_read"
+            ],
+            "required_service_tokens": []
+          },
+          "call_patterns": [],
+          "confidence": {
+            "base": 0.7,
+            "boost_if_imports": [
+              "__future__",
+              "aiowebostv",
+              "asyncio",
+              "collections",
+              "const",
+              "contextlib"
+            ],
+            "boost_if_names": [
+              "get_state",
+              "_update_states",
+              "async_added_to_hass",
+              "_update_sources"
+            ],
+            "emit_threshold": 0.7
+          },
+          "family": "LOCAL_API_READ",
+          "file_globs": [
+            "webostv/media_player.py"
+          ],
+          "forbidden_context": [
+            "dunder_init"
+          ],
+          "forbidden_path_signals": [
+            "setup_function:async_setup_entry",
+            "setup_call:async_add_entities",
+            "control_function:async_play_media",
+            "control_call:self._client.set_channel",
+            "awaited_control_call:self._client.set_channel",
+            "control_function:async_mute_volume",
+            "control_call:self._client.set_mute",
+            "awaited_control_call:self._client.set_mute"
+          ],
+          "forbidden_runtime_roles": [
+            "runtime_write",
+            "setup",
+            "property_getter",
+            "helper"
+          ],
+          "function_name_patterns": [
+            "_update_states",
+            "async_added_to_hass",
+            "_update_sources"
+          ],
+          "generalization_scope": "file_specific",
+          "generalizes_actions": [
+            "A18"
+          ],
+          "integration": "webostv",
+          "negative_call_patterns": [
+            "async_add_entities",
+            "lgwebosmediaplayerentity",
+            "set_channel",
+            "_logger.debug",
+            "media_id.lower",
+            "self._client.set_channel"
+          ],
+          "negative_evidence": [
+            "negative_function:async_setup_entry",
+            "negative_function:async_play_media",
+            "negative_function:async_mute_volume",
+            "negative_function:supported_features",
+            "negative_function:cmd",
+            "negative_call:async_add_entities",
+            "negative_call:lgwebosmediaplayerentity",
+            "negative_call:debug",
+            "negative_call:lower",
+            "negative_call:set_channel"
+          ],
+          "negative_function_patterns": [
+            "async_setup_entry",
+            "async_play_media",
+            "async_mute_volume",
+            "supported_features",
+            "cmd",
+            "async_turn_on"
+          ],
+          "negative_prototypes": [
+            {
+              "call_chains": [
+                "async_add_entities",
+                "lgwebosmediaplayerentity"
+              ],
+              "call_patterns": [
+                "async_add_entities",
+                "lgwebosmediaplayerentity"
+              ],
+              "file_path": "data/repo_snapshot/webostv/media_player.py",
+              "function_name": "async_setup_entry",
+              "path_kind": "setup_path",
+              "path_signals": [
+                "setup_function:async_setup_entry",
+                "setup_call:async_add_entities"
+              ],
+              "prototype_kind": "negative_setup",
+              "role_hint": "setup",
+              "score": -10,
+              "snippet": "66: \n67: async def async_setup_entry(\n68:     hass: HomeAssistant,\n69:     entry: WebOsTvConfigEntry,\n70:     async_add_entities: AddConfigEntryEntitiesCallback,\n71: ) -> None:\n72:     \"\"\"Set up the LG webOS TV platform.\"\"\"\n73: \n74:     async_add_entities([LgWebOSMediaPlayerEntity(entry)])\n75: \n76:"
+            },
+            {
+              "call_chains": [
+                "_logger.debug",
+                "media_id.lower",
+                "lower",
+                "self._client.set_channel"
+              ],
+              "call_patterns": [
+                "debug",
+                "lower",
+                "set_channel"
+              ],
+              "file_path": "data/repo_snapshot/webostv/media_player.py",
+              "function_name": "async_play_media",
+              "path_kind": "control_path",
+              "path_signals": [
+                "control_function:async_play_media",
+                "control_call:self._client.set_channel",
+                "awaited_control_call:self._client.set_channel"
+              ],
+              "prototype_kind": "negative_control",
+              "role_hint": "runtime_write",
+              "score": -12,
+              "snippet": "405:     @cmd\n406:     async def async_play_media(\n407:         self, media_type: MediaType | str, media_id: str, **kwargs: Any\n408:     ) -> None:\n409:         \"\"\"Play a piece of media.\"\"\"\n410:         _LOGGER.debug(\"Call play media type <%s>, Id <%s>\", media_type, media_id)\n411: \n412:         if media_type == MediaType.CHANNEL and self._client.tv_state.channels:\n413:             _LOGGER.debug(\"Searching channel\")\n414:             partial_match_channel_id = None\n415:             perfect_match_channel_id = None\n416: \n417:             for channel in self._client.tv_state.channels:\n418:                 if media_id == channel[\"channelNumber\"]:"
+            },
+            {
+              "call_chains": [
+                "self._client.set_mute"
+              ],
+              "call_patterns": [
+                "set_mute"
+              ],
+              "file_path": "data/repo_snapshot/webostv/media_player.py",
+              "function_name": "async_mute_volume",
+              "path_kind": "control_path",
+              "path_signals": [
+                "control_function:async_mute_volume",
+                "control_call:self._client.set_mute",
+                "awaited_control_call:self._client.set_mute"
+              ],
+              "prototype_kind": "negative_control",
+              "role_hint": "runtime_write",
+              "score": -12,
+              "snippet": "370:     @cmd\n371:     async def async_mute_volume(self, mute: bool) -> None:\n372:         \"\"\"Send mute command.\"\"\"\n373:         await self._client.set_mute(mute)\n374: \n375:     @cmd"
+            },
+            {
+              "call_chains": [],
+              "call_patterns": [],
+              "file_path": "data/repo_snapshot/webostv/media_player.py",
+              "function_name": "supported_features",
+              "path_kind": "property_path",
+              "path_signals": [
+                "property_function:supported_features"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "property_getter",
+              "score": -10,
+              "snippet": "337:     @property\n338:     def supported_features(self) -> MediaPlayerEntityFeature:\n339:         \"\"\"Flag media player features that are supported.\"\"\"\n340:         if self._turn_on:\n341:             return self._supported_features | MediaPlayerEntityFeature.TURN_ON\n342: \n343:         return self._supported_features\n344: \n345:     @cmd"
+            },
+            {
+              "call_chains": [
+                "wraps",
+                "homeassistanterror",
+                "func",
+                "str"
+              ],
+              "call_patterns": [
+                "wraps",
+                "homeassistanterror",
+                "func",
+                "str"
+              ],
+              "file_path": "data/repo_snapshot/webostv/media_player.py",
+              "function_name": "cmd",
+              "path_kind": "helper_path",
+              "path_signals": [],
+              "prototype_kind": "negative_helper",
+              "role_hint": "helper",
+              "score": -4,
+              "snippet": "76: \n77: def cmd[_R, **_P](\n78:     func: Callable[Concatenate[LgWebOSMediaPlayerEntity, _P], Coroutine[Any, Any, _R]],\n79: ) -> Callable[Concatenate[LgWebOSMediaPlayerEntity, _P], Coroutine[Any, Any, _R]]:\n80:     \"\"\"Catch command exceptions.\"\"\"\n81: \n82:     @wraps(func)\n83:     async def cmd_wrapper(\n84:         self: LgWebOSMediaPlayerEntity, *args: _P.args, **kwargs: _P.kwargs\n85:     ) -> _R:\n86:         \"\"\"Wrap all command methods.\"\"\"\n87:         if self.state is MediaPlayerState.OFF and func.__name__ != \"async_turn_off\":\n88:             raise HomeAssistantError(\n89:                 translation_domain=DOMAIN,"
+            }
+          ],
+          "origin_action_id": "A18",
+          "origin_cluster_id": "webostv__media_player__local_api_read__get_state__local",
+          "phase": "RUNTIME",
+          "positive_prototypes": [
+            {
+              "call_chains": [
+                "self._update_sources",
+                "cast",
+                "sorted",
+                "deviceinfo",
+                "tv_info.software.get",
+                "tv_state.current_channel.get",
+                "icon.startswith",
+                "tv_info.system.get"
+              ],
+              "call_patterns": [
+                "_update_sources",
+                "cast",
+                "sorted",
+                "deviceinfo",
+                "get",
+                "startswith"
+              ],
+              "file_path": "data/repo_snapshot/webostv/media_player.py",
+              "function_name": "_update_states",
+              "path_kind": "read_path",
+              "path_signals": [
+                "read_function:_update_states"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 8,
+              "snippet": "172: \n173:     def _update_states(self) -> None:\n174:         \"\"\"Update entity state attributes.\"\"\"\n175:         tv_state = self._client.tv_state\n176:         self._update_sources()\n177: \n178:         self._attr_state = (\n179:             MediaPlayerState.ON if tv_state.is_on else MediaPlayerState.OFF\n180:         )\n181:         self._attr_is_volume_muted = cast(bool, tv_state.muted)\n182: \n183:         self._attr_volume_level = None\n184:         if tv_state.volume is not None:\n185:             self._attr_volume_level = tv_state.volume / 100.0"
+            },
+            {
+              "call_chains": [],
+              "call_patterns": [],
+              "file_path": "data/repo_snapshot/webostv/media_player.py",
+              "function_name": "async_added_to_hass",
+              "path_kind": "read_path",
+              "path_signals": [
+                "service_registration_call:self._client.register_state_update_callback",
+                "service_registration_call:self._turn_on.async_register"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 6,
+              "snippet": "137: \n138:     async def async_added_to_hass(self) -> None:\n139:         \"\"\"Connect and subscribe to dispatcher signals and state updates.\"\"\"\n140:         await super().async_added_to_hass()\n141: \n142:         if (entry := self.registry_entry) and entry.device_id:\n143:             self.async_on_remove(\n144:                 self._turn_on.async_register(\n145:                     self.hass, async_get_turn_on_trigger(entry.device_id)\n146:                 )\n147:             )\n148: \n149:         await self._client.register_state_update_callback(\n150:             self.async_handle_state_update"
+            },
+            {
+              "call_chains": [
+                "tv_state.apps.values",
+                "tv_state.inputs.values",
+                "any",
+                "find"
+              ],
+              "call_patterns": [
+                "values",
+                "any",
+                "find"
+              ],
+              "file_path": "data/repo_snapshot/webostv/media_player.py",
+              "function_name": "_update_sources",
+              "path_kind": "read_path",
+              "path_signals": [],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 6,
+              "snippet": "257: \n258:     def _update_sources(self) -> None:\n259:         \"\"\"Update list of sources from current source, apps, inputs and configured list.\"\"\"\n260:         tv_state = self._client.tv_state\n261:         source_list = self._source_list\n262:         self._source_list = {}\n263:         conf_sources = self._sources\n264: \n265:         found_live_tv = False\n266:         for app in tv_state.apps.values():\n267:             if app[\"id\"] == LIVE_TV_APP_ID:\n268:                 found_live_tv = True\n269:             if app[\"id\"] == tv_state.current_app_id:\n270:                 self._current_source = app[\"title\"]"
+            }
+          ],
+          "preferred_runtime_roles": [
+            "runtime_read"
+          ],
+          "required_context": [
+            "runtime_path"
+          ],
+          "required_path_signals": [
+            "read_function:_update_states"
+          ],
+          "required_runtime_roles": [
+            "runtime_read"
+          ],
+          "reviewer_status": "draft",
+          "rule_id": "webostv:media_player_local_api_read",
+          "runtime_archetypes": [
+            "local_bridge_getter",
+            "runtime_read"
+          ],
+          "runtime_path_evidence": [
+            "runtime_function:_update_states",
+            "runtime_function:async_added_to_hass",
+            "runtime_function:_update_sources",
+            "runtime_call:_update_sources",
+            "runtime_call:cast",
+            "runtime_call:sorted",
+            "runtime_call:deviceinfo",
+            "runtime_call:get",
+            "runtime_call:startswith",
+            "runtime_call:self._update_sources"
+          ],
+          "source_file_paths": [
+            "data/repo_snapshot/webostv/media_player.py"
+          ],
+          "source_unresolved_action_ids": [
+            "A18"
+          ],
+          "strength": "MEDIUM",
+          "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+          "why_not_setup": [
+            "exclude_role:setup:async_setup_entry",
+            "exclude_role:runtime_write:async_play_media",
+            "exclude_role:runtime_write:async_mute_volume",
+            "exclude_role:property_getter:supported_features",
+            "exclude_role:helper:cmd",
+            "exclude_path_signal:setup_function:async_setup_entry",
+            "exclude_path_signal:setup_call:async_add_entities",
+            "exclude_path_signal:control_function:async_play_media"
+          ]
+        }
+      ],
+      "schema_version": "m1_grounding_profile/v3",
+      "version": "draft_llm_v3"
+    }
+  ],
+  "generated_at": "2026-04-12T08:55:51.032840+00:00",
+  "heuristic_baseline_proposal_count": 9,
+  "llm_request": {
+    "base_url": "http://127.0.0.1:9",
+    "max_attempts": 0,
+    "mode": "per_cluster_refine",
+    "model": "gpt-5",
+    "retry_backoff_s": 0.5,
+    "timeout_s": 45
+  },
+  "prompt_version": "m1_detector_builder_prompt/v3",
+  "proposal_count": 9,
+  "proposal_items": [
+    {
+      "family": "LOCAL_API_READ",
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A17"
+      ],
+      "integration": "denonavr",
+      "llm_decision": "heuristic_accept",
+      "origin_action_id": "A17",
+      "origin_cluster_id": "denonavr__media_player__local_api_read__get_state__local",
+      "proposal_rule_id": "denonavr:media_player_local_api_read"
+    },
+    {
+      "family": "CLOUD_STATUS_CALL",
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A11",
+        "A12"
+      ],
+      "integration": "ecobee",
+      "llm_decision": "heuristic_accept",
+      "origin_action_id": null,
+      "origin_cluster_id": "ecobee__climate__cloud_status_call__read_runtime__cloud",
+      "proposal_rule_id": "ecobee:climate_runtime_status_read"
+    },
+    {
+      "family": "CLOUD_STATUS_CALL",
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A13"
+      ],
+      "integration": "smartthings",
+      "llm_decision": "heuristic_accept",
+      "origin_action_id": "A13",
+      "origin_cluster_id": "smartthings__entity__cloud_status_call__read_runtime__cloud",
+      "proposal_rule_id": "smartthings:entity_runtime_status_read"
+    },
+    {
+      "family": "LOCAL_API_READ",
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A14",
+        "A15",
+        "A16"
+      ],
+      "integration": "tplink",
+      "llm_decision": "heuristic_accept",
+      "origin_action_id": null,
+      "origin_cluster_id": "tplink__entity__local_api_read__get_state__local",
+      "proposal_rule_id": "tplink:entity_local_api_read"
+    },
+    {
+      "family": "STATE_WRITE",
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A20"
+      ],
+      "integration": "tplink",
+      "llm_decision": "heuristic_accept",
+      "origin_action_id": "A20",
+      "origin_cluster_id": "tplink__entity__state_write__write__ha",
+      "proposal_rule_id": "tplink:entity_runtime_writeback"
+    },
+    {
+      "family": "CLOUD_STATUS_CALL",
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A9",
+        "A10"
+      ],
+      "integration": "tuya",
+      "llm_decision": "heuristic_accept",
+      "origin_action_id": "A9",
+      "origin_cluster_id": "tuya__climate__cloud_status_call__status__cloud",
+      "proposal_rule_id": "tuya:climate_runtime_status_read"
+    },
+    {
+      "family": "CLOUD_STATUS_CALL",
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "integration": "tuya",
+      "llm_decision": "heuristic_accept",
+      "origin_action_id": null,
+      "origin_cluster_id": "tuya__light__cloud_status_call__status__cloud",
+      "proposal_rule_id": "tuya:light_runtime_status_read"
+    },
+    {
+      "family": "CLOUD_STATUS_CALL",
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A5",
+        "A6",
+        "A7",
+        "A8"
+      ],
+      "integration": "tuya",
+      "llm_decision": "heuristic_accept",
+      "origin_action_id": null,
+      "origin_cluster_id": "tuya__switch__cloud_status_call__status__cloud",
+      "proposal_rule_id": "tuya:switch_runtime_status_read"
+    },
+    {
+      "family": "LOCAL_API_READ",
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A18"
+      ],
+      "integration": "webostv",
+      "llm_decision": "heuristic_accept",
+      "origin_action_id": "A18",
+      "origin_cluster_id": "webostv__media_player__local_api_read__get_state__local",
+      "proposal_rule_id": "webostv:media_player_local_api_read"
+    }
+  ],
+  "request_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "schema_version": "m1_detector_draft/v3",
+  "source_report_sha256": "310779295be6eabaa0bba3053a1f609d38c2dbdc9d9097cd70d1d690ae0c89cf",
+  "source_report_version": "m1_unresolved_grounding_report/v3",
+  "workflow": {
+    "mode": "offline_llm_assisted_then_deterministic_execute",
+    "next_step": "Review detector_profile_drafts, then pass resulting JSON via validation.grounding_profile_paths."
+  }
+}

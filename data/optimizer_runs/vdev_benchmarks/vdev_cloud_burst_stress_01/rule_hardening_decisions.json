@@ -1,0 +1,55 @@
+{
+  "auto_hardening": {
+    "rule_coord_refresh_9c4aca1990": {
+      "hardening_reason": "promoted_by_validation",
+      "hardening_state": "HARD"
+    },
+    "rule_entry_setup_91e19cefcb": {
+      "hardening_reason": "insufficient_coverage",
+      "hardening_state": "SOFT"
+    },
+    "rule_entry_unload_da7471ab82": {
+      "hardening_reason": "insufficient_coverage",
+      "hardening_state": "SOFT"
+    },
+    "rule_general_fa9e50150b": {
+      "hardening_reason": "insufficient_coverage",
+      "hardening_state": "SOFT"
+    },
+    "rule_lifecycle_79ea0726ef": {
+      "hardening_reason": "insufficient_coverage",
+      "hardening_state": "SOFT"
+    },
+    "rule_state_write_b839bfafd0": {
+      "hardening_reason": "promoted_by_validation",
+      "hardening_state": "HARD"
+    },
+    "rule_subscribe_a84e504152": {
+      "hardening_reason": "insufficient_coverage",
+      "hardening_state": "SOFT"
+    },
+    "rule_unsubscribe_2897b3e3e9": {
+      "hardening_reason": "promoted_by_validation",
+      "hardening_state": "HARD"
+    }
+  },
+  "rollback": {
+    "final_counterexample_count": 0,
+    "iterations": 0,
+    "log": [],
+    "max_steps": 6,
+    "priority_chain": [
+      "reduce_parallelism",
+      "disable_session_reuse",
+      "disable_batching",
+      "enforce_min_gap_no_overlap",
+      "rule_patch",
+      "constraint_patch"
+    ]
+  },
+  "thresholds": {
+    "hardening_min_coverage": 0.85,
+    "hardening_min_pass_rate": 0.98
+  },
+  "validation_stats_path": "data/optimizer_runs/vdev_benchmarks/vdev_cloud_burst_stress_01/validation_stats.json"
+}

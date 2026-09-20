@@ -1,0 +1,205 @@
+{
+  "meta": {
+    "action_lanes": {
+      "A_cloud_001": "CLOUD",
+      "A_cloud_002": "CLOUD",
+      "A_cloud_003": "CLOUD",
+      "A_cloud_004": "CLOUD",
+      "A_cloud_005": "CLOUD",
+      "A_cloud_006": "CLOUD",
+      "A_cloud_007": "CLOUD",
+      "A_cloud_008": "CLOUD",
+      "A_cloud_009": "CLOUD",
+      "A_cloud_010": "CLOUD",
+      "A_cloud_011": "CLOUD",
+      "A_cloud_012": "CLOUD",
+      "A_cloud_013": "CLOUD",
+      "A_cloud_014": "CLOUD",
+      "A_cloud_015": "CLOUD",
+      "A_cloud_016": "CLOUD",
+      "A_cloud_017": "CLOUD",
+      "A_cloud_018": "CLOUD",
+      "A_cloud_019": "CLOUD",
+      "A_cloud_020": "CLOUD",
+      "A_cloud_021": "CLOUD",
+      "A_cloud_022": "CLOUD",
+      "A_cloud_023": "CLOUD",
+      "A_cloud_024": "CLOUD",
+      "A_cloud_025": "CLOUD",
+      "A_cloud_026": "CLOUD",
+      "A_cloud_027": "CLOUD",
+      "A_cloud_028": "CLOUD",
+      "A_cloud_029": "CLOUD",
+      "A_cloud_030": "CLOUD",
+      "A_cloud_031": "CLOUD",
+      "A_cloud_032": "CLOUD",
+      "A_cloud_033": "CLOUD",
+      "A_ha_cloud": "HA"
+    },
+    "baseline": "naive_topo_parallel",
+    "micro_applicable": false,
+    "node_kind": "action_id",
+    "policy": {
+      "ble_parallel": 1,
+      "cloud_parallel": 4,
+      "local_parallel": 4,
+      "max_parallel": 4
+    }
+  },
+  "ordered_batches": [
+    {
+      "batch_id": "naive_batch_000",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_cloud_001",
+          "A_cloud_002",
+          "A_cloud_003",
+          "A_cloud_004"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_001",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_cloud_005",
+          "A_cloud_006",
+          "A_cloud_007",
+          "A_cloud_008"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_002",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_cloud_009",
+          "A_cloud_010",
+          "A_cloud_011",
+          "A_cloud_012"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_003",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_cloud_013",
+          "A_cloud_014",
+          "A_cloud_015",
+          "A_cloud_016"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_004",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_cloud_017",
+          "A_cloud_018",
+          "A_cloud_019",
+          "A_cloud_020"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_005",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_cloud_021",
+          "A_cloud_022",
+          "A_cloud_023",
+          "A_cloud_024"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_006",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_cloud_025",
+          "A_cloud_026",
+          "A_cloud_027",
+          "A_cloud_028"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_007",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_cloud_029",
+          "A_cloud_030",
+          "A_cloud_031",
+          "A_cloud_032"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_008",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_cloud_033"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_009",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_ha_cloud"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    }
+  ]
+}

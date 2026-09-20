@@ -1,0 +1,928 @@
+{
+  "dependency_candidates": [
+    [
+      "msf06_001_ble_op",
+      "msf06_005_ble_disconnect",
+      "EXCEPTION_DEP"
+    ],
+    [
+      "msf06_002_ble_op",
+      "msf06_006_ble_disconnect",
+      "DATA_DEP"
+    ],
+    [
+      "msf06_003_ble_op",
+      "msf06_007_ble_disconnect",
+      "CONTROL_DEP"
+    ],
+    [
+      "msf06_004_ble_op",
+      "msf06_008_ble_disconnect",
+      "DATA_DEP"
+    ]
+  ],
+  "msfs": [
+    {
+      "action_refs": [
+        "A12"
+      ],
+      "critical": true,
+      "exceptions": [
+        "UpdateFailed"
+      ],
+      "inputs": [
+        "Exception",
+        "UpdateFailed",
+        "err",
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "BLE_LOCAL",
+      "msf_id": "msf01_000_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "e3b5e3c6:_async_update_data:0:92",
+        "e3b5e3c6:_async_update_data:1.0:94",
+        "e3b5e3c6:_async_update_data:1.0:96",
+        "e3b5e3c6:_async_update_data:1:93",
+        "e3b5e3c6:_async_update_data:2:97"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A12",
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": "ble:airthings_ble:ble_safety_airthings",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "ble_op"
+      ]
+    },
+    {
+      "action_refs": [
+        "A14"
+      ],
+      "critical": true,
+      "exceptions": [
+        "Exception"
+      ],
+      "inputs": [
+        "APIClient",
+        "APIConnectionError",
+        "CLIENT_INFO",
+        "_LOGGER",
+        "entry",
+        "exc",
+        "hass",
+        "host",
+        "noise_psk",
+        "password",
+        "port",
+        "zeroconf_instance"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": "BLE_LOCAL",
+      "msf_id": "msf03_000_ble_connect",
+      "msf_type": "PREPARE",
+      "node_ids": [
+        "199997a2:_async_clear_dynamic_encryption_key:10.0:136",
+        "199997a2:_async_clear_dynamic_encryption_key:10.0:145",
+        "199997a2:_async_clear_dynamic_encryption_key:10.0:152",
+        "199997a2:_async_clear_dynamic_encryption_key:10.1.0:139",
+        "199997a2:_async_clear_dynamic_encryption_key:10.1.1:143",
+        "199997a2:_async_clear_dynamic_encryption_key:10.1:138",
+        "199997a2:_async_clear_dynamic_encryption_key:10.1:150",
+        "199997a2:_async_clear_dynamic_encryption_key:10:135",
+        "199997a2:_async_clear_dynamic_encryption_key:9:125"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "primary_action_ref": "A14",
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": "ble:switchbot:ble_safety_esphome_connect",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "ble_connect",
+        "external_call_ble"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf03_001_entry_unload",
+      "msf_type": "CLEANUP",
+      "node_ids": [
+        "199997a2:async_unload_entry:0:84"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "entry_unload"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf03_002_entry_unload",
+      "msf_type": "CLEANUP",
+      "node_ids": [
+        "199997a2:async_remove_entry:0:94"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "entry_unload"
+      ]
+    },
+    {
+      "action_refs": [
+        "A15"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "async_track_state_change_event",
+        "attribute",
+        "entity_id",
+        "hass",
+        "partial",
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": "BLE_LOCAL",
+      "msf_id": "msf06_000_subscribe",
+      "msf_type": "PREPARE",
+      "node_ids": [
+        "f20e5673:async_on_state_subscription:2:480"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A15",
+      "required_guards": [],
+      "resource_instance_tag": "ble:switchbot:ble_safety_esphome_subscribe",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "subscribe"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [
+        "Exception"
+      ],
+      "inputs": [
+        "APIConnectionError",
+        "InvalidAuthAPIError",
+        "_LOGGER",
+        "err",
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf06_001_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "f20e5673:on_connect:1.0:504",
+        "f20e5673:on_connect:1.0:506",
+        "f20e5673:on_connect:1.0:509",
+        "f20e5673:on_connect:1.1:507",
+        "f20e5673:on_connect:1.1:513",
+        "f20e5673:on_connect:1:503"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": null,
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "ble_op",
+        "external_call_ble"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf06_002_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "f20e5673:_on_connect:17.2:617",
+        "f20e5673:_on_connect:7:553"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": null,
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "ble_op",
+        "external_call_ble"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf06_003_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "f20e5673:_start_reauth_and_disconnect:2:806"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": null,
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "ble_op",
+        "external_call_ble"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "entry"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf06_004_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "f20e5673:cleanup_instance:1:1369",
+        "f20e5673:cleanup_instance:5:1374"
+      ],
+      "outputs": [
+        "data"
+      ],
+      "phase": "RUNTIME",
+      "primary_action_ref": null,
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "ble_op",
+        "external_call_ble"
+      ]
+    },
+    {
+      "action_refs": [
+        "A15"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": "BLE_LOCAL",
+      "msf_id": "msf06_005_ble_disconnect",
+      "msf_type": "CLEANUP",
+      "node_ids": [
+        "f20e5673:on_connect:1.1:513"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A15",
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": "ble:switchbot:ble_safety_esphome_subscribe",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "ble_disconnect",
+        "external_call_ble"
+      ]
+    },
+    {
+      "action_refs": [
+        "A15"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "cli"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": "BLE_LOCAL",
+      "msf_id": "msf06_006_ble_disconnect",
+      "msf_type": "CLEANUP",
+      "node_ids": [
+        "f20e5673:_on_connect:17.2:617"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A15",
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": "ble:switchbot:ble_safety_esphome_subscribe",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "ble_disconnect",
+        "external_call_ble"
+      ]
+    },
+    {
+      "action_refs": [
+        "A15"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": "BLE_LOCAL",
+      "msf_id": "msf06_007_ble_disconnect",
+      "msf_type": "CLEANUP",
+      "node_ids": [
+        "f20e5673:_start_reauth_and_disconnect:2:806"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A15",
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": "ble:switchbot:ble_safety_esphome_subscribe",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "ble_disconnect",
+        "external_call_ble"
+      ]
+    },
+    {
+      "action_refs": [
+        "A15"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "data"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": "BLE_LOCAL",
+      "msf_id": "msf06_008_ble_disconnect",
+      "msf_type": "CLEANUP",
+      "node_ids": [
+        "f20e5673:cleanup_instance:5:1374"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A15",
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": "ble:switchbot:ble_safety_esphome_subscribe",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "ble_disconnect",
+        "external_call_ble"
+      ]
+    },
+    {
+      "action_refs": [
+        "A17"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "is_aggregate_sink": true,
+      "is_shared_infra": false,
+      "lane_tag": "WRITEBACK_OVERALL",
+      "msf_id": "msf07_000_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "9da22f42:_handle_device_update:3:186"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A17",
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "resource_instance_tag": "sensor.vdev_ble_safety_sweep_routine_01_overall",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "ESPHomeDashboardUpdateEntity",
+        "async_add_entities",
+        "callback",
+        "dashboard",
+        "device_name",
+        "entry_data",
+        "unsubs"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf07_001_entry_setup",
+      "msf_type": "INIT",
+      "node_ids": [
+        "9da22f42:async_setup_entry:7:71"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "entry_setup",
+        "external_call_cloud",
+        "unsubscribe"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "unsubs"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf07_002_unsubscribe",
+      "msf_type": "CLEANUP",
+      "node_ids": [
+        "9da22f42:_async_setup_update_entity:4:82"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "unsubscribe"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "ESPHomeDashboardUpdateEntity",
+        "async_add_entities",
+        "callback",
+        "dashboard",
+        "device_name",
+        "entry_data",
+        "unsubs"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf07_003_unsubscribe",
+      "msf_type": "CLEANUP",
+      "node_ids": [
+        "9da22f42:async_setup_entry:7:71"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "external_call_cloud",
+        "unsubscribe"
+      ]
+    },
+    {
+      "action_refs": [
+        "A13"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "EntityDescription",
+        "PassiveBluetoothDataUpdate",
+        "PassiveBluetoothEntityKey",
+        "SENSOR_DESCRIPTIONS",
+        "_device_key_to_bluetooth_entity_key",
+        "dict",
+        "sensor_device_info_to_hass_device_info",
+        "sensor_update"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "BLE_LOCAL",
+      "msf_id": "msf09_000_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "bb8906f4:sensor_update_to_bluetooth_data_update:0:173",
+        "bb8906f4:sensor_update_to_bluetooth_data_update:1:174",
+        "bb8906f4:sensor_update_to_bluetooth_data_update:2:175",
+        "bb8906f4:sensor_update_to_bluetooth_data_update:3.0:177",
+        "bb8906f4:sensor_update_to_bluetooth_data_update:3.1:178",
+        "bb8906f4:sensor_update_to_bluetooth_data_update:3:176",
+        "bb8906f4:sensor_update_to_bluetooth_data_update:4.0:180",
+        "bb8906f4:sensor_update_to_bluetooth_data_update:4.1.0:182",
+        "bb8906f4:sensor_update_to_bluetooth_data_update:4.1:181",
+        "bb8906f4:sensor_update_to_bluetooth_data_update:4:179",
+        "bb8906f4:sensor_update_to_bluetooth_data_update:5:184"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A13",
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": "ble:ruuvitag_ble:ble_safety_ruuvitag",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "ble_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "bool",
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "BLE_LOCAL",
+      "msf_id": "msf10_000_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "0e4b12a7:_handle_coordinator_update:0:136",
+        "0e4b12a7:_handle_coordinator_update:0:217",
+        "0e4b12a7:_handle_coordinator_update:0:305",
+        "0e4b12a7:_handle_coordinator_update:1:137",
+        "0e4b12a7:_handle_coordinator_update:1:218",
+        "0e4b12a7:_handle_coordinator_update:1:306",
+        "0e4b12a7:_handle_coordinator_update:2:138",
+        "0e4b12a7:_handle_coordinator_update:2:219",
+        "0e4b12a7:_handle_coordinator_update:2:307",
+        "0e4b12a7:_handle_coordinator_update:3:139",
+        "0e4b12a7:_handle_coordinator_update:3:220",
+        "0e4b12a7:_handle_coordinator_update:3:308",
+        "0e4b12a7:_handle_coordinator_update:4:140",
+        "0e4b12a7:_handle_coordinator_update:4:223",
+        "0e4b12a7:_handle_coordinator_update:4:309",
+        "0e4b12a7:_handle_coordinator_update:5:142",
+        "0e4b12a7:_handle_coordinator_update:5:224",
+        "0e4b12a7:_handle_coordinator_update:5:311",
+        "0e4b12a7:_handle_coordinator_update:6:225",
+        "0e4b12a7:async_stop_cover:2:118",
+        "0e4b12a7:async_stop_cover:2:287",
+        "0e4b12a7:async_stop_cover_tilt:2:203"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A1",
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": "ble:switchbot:ble_safety_curtain_1",
+      "secondary_action_refs": [
+        "A2",
+        "A3"
+      ],
+      "side_effect_sig": [
+        "ble_op",
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [
+        "A16"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "WRITEBACK_BLE",
+      "msf_id": "msf11_000_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "9425188b:async_oscillate:3:101",
+        "9425188b:async_set_percentage:3:92",
+        "9425188b:async_set_preset_mode:3:161",
+        "9425188b:async_set_preset_mode:3:83",
+        "9425188b:async_turn_off:3:125",
+        "9425188b:async_turn_off:3:187",
+        "9425188b:async_turn_on:3:118",
+        "9425188b:async_turn_on:3:179"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A16",
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "resource_instance_tag": "sensor.vdev_ble_safety_sweep_routine_01_ble_lane",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf12_000_entry_unload",
+      "msf_type": "CLEANUP",
+      "node_ids": [
+        "f8314a32:async_unload_entry:0:191"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "entry_unload"
+      ]
+    },
+    {
+      "action_refs": [
+        "A4",
+        "A10",
+        "A11",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "CoreState",
+        "async_ble_device_from_address",
+        "bool",
+        "data",
+        "hass",
+        "last_poll",
+        "service_info"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "BLE_LOCAL",
+      "msf_id": "msf12_001_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "f8314a32:_needs_poll:0:137"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A4",
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": "ble:switchbot:ble_safety_door_window_1",
+      "secondary_action_refs": [
+        "A10",
+        "A11",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9"
+      ],
+      "side_effect_sig": [
+        "ble_op"
+      ]
+    },
+    {
+      "action_refs": [
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "BINARY_SENSOR_DESCRIPTIONS",
+        "PassiveBluetoothDataUpdate",
+        "device_key_to_bluetooth_entity_key",
+        "sensor_device_info_to_hass_device_info",
+        "sensor_update"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "BLE_LOCAL",
+      "msf_id": "msf13_000_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "d9c4917e:sensor_update_to_bluetooth_data_update:0:111",
+        "d9c4917e:sensor_update_to_bluetooth_data_update:1:112"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A4",
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": "ble:switchbot:ble_safety_door_window_1",
+      "secondary_action_refs": [
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9"
+      ],
+      "side_effect_sig": [
+        "ble_op"
+      ]
+    },
+    {
+      "action_refs": [
+        "A4",
+        "A10",
+        "A11",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "EVENT_PROPERTIES",
+        "EVENT_TYPE",
+        "event",
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "BLE_LOCAL",
+      "msf_id": "msf15_000_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "ab8f4bde:_async_handle_event:0:179",
+        "ab8f4bde:_async_handle_event:1:180"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A4",
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": "ble:switchbot:ble_safety_door_window_1",
+      "secondary_action_refs": [
+        "A10",
+        "A11",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9"
+      ],
+      "side_effect_sig": [
+        "ble_op",
+        "state_write"
+      ]
+    }
+  ],
+  "summary": {
+    "build_status": "OK",
+    "critical_action_ids": [
+      "A1",
+      "A10",
+      "A11",
+      "A12",
+      "A13",
+      "A14",
+      "A15",
+      "A16",
+      "A17",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9"
+    ],
+    "missing_critical_action_ids": [],
+    "multi_bound_nonshared_msf_ids": [],
+    "resolved_action_refs": [
+      "A1",
+      "A10",
+      "A11",
+      "A12",
+      "A13",
+      "A14",
+      "A15",
+      "A16",
+      "A17",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9"
+    ],
+    "resolved_runtime_action_count": 16,
+    "resolved_runtime_action_refs": [
+      "A1",
+      "A10",
+      "A11",
+      "A12",
+      "A13",
+      "A15",
+      "A16",
+      "A17",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9"
+    ]
+  }
+}

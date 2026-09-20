@@ -1,0 +1,350 @@
+{
+  "canonicalization_version": "v1",
+  "certificate_id": "cert_9b85bfabe63b",
+  "counterexamples": [],
+  "differential_summary": {
+    "compare_meta": {
+      "canonicalization_version": "v1",
+      "commutable_ops": [
+        "COALESCE_STATE_WRITE",
+        "COORD_REFRESH",
+        "STATE_WRITE"
+      ],
+      "config_hash": "79c751b77470c0ed",
+      "equivalence_rules": [],
+      "parallel_action_scopes": [
+        [
+          "A10",
+          "A11",
+          "A12"
+        ],
+        [
+          "A4",
+          "A5",
+          "A6",
+          "A7"
+        ],
+        [
+          "A8",
+          "A9"
+        ]
+      ]
+    },
+    "counterexample_count": 0,
+    "earliest_violation_summary": {
+      "dominant_target": null,
+      "top_anchors": [],
+      "top_targets": []
+    },
+    "focus_terms": [
+      "ble:airthings_ble:bad_air_morning_sensor",
+      "ble:switchbot:air_purifier_living_room",
+      "ble:switchbot:bad_air_curtain_left",
+      "ble:switchbot:bad_air_curtain_right",
+      "tuya:climate.living_room_bad_air_ac.status",
+      "tuya:climate.bedroom_bad_air_ac.status",
+      "netatmo:station.bad_air_runtime",
+      "sensor.vdev_bad_air_morning_recovery_01_ble_lane",
+      "sensor.vdev_bad_air_morning_recovery_01_cloud_lane",
+      "sensor.vdev_bad_air_morning_recovery_01_local_lane",
+      "sensor.vdev_bad_air_morning_recovery_01_overall",
+      "sensor.vdev_bad_air_morning_recovery_01_ble_lane",
+      "sensor.vdev_bad_air_morning_recovery_01_cloud_lane",
+      "sensor.vdev_bad_air_morning_recovery_01_local_lane",
+      "sensor.vdev_bad_air_morning_recovery_01_overall",
+      "floweaver.run_bad_air_morning_recovery_01",
+      "BLE_GATT_OP",
+      "BLE_OP",
+      "CLOUD_HTTP_CALL",
+      "CLOUD_OP",
+      "CLOUD_STATUS_CALL",
+      "LOCAL_API_READ",
+      "POLL_UPDATE",
+      "STATE_WRITE"
+    ],
+    "hardening_threshold": {
+      "min_coverage": 0.85,
+      "min_pass_rate": 0.98
+    },
+    "rollback_applied_kinds": [],
+    "rollback_iterations": 0,
+    "rollback_max_steps": 6,
+    "rule_stats": {
+      "naive_topo_check_only": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": 1.0,
+        "last_updated_at": "2026-07-06T12:34:35.912322+00:00",
+        "m6_alignment": {
+          "alignment_status_counts": {
+            "PROVED": 1
+          },
+          "final_counterexample_scenarios": [],
+          "matched_scenarios": [
+            "vdev_bad_air_morning_recovery_01"
+          ],
+          "resource_preserved_scenarios": [
+            "vdev_bad_air_morning_recovery_01"
+          ],
+          "rollback_touched": false,
+          "strict_pass_scenarios": [
+            "vdev_bad_air_morning_recovery_01"
+          ],
+          "tolerant_pass_scenarios": [
+            "vdev_bad_air_morning_recovery_01"
+          ]
+        },
+        "n_applied": 1,
+        "n_counterexamples": 0,
+        "n_matched": 1,
+        "n_success": 1,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": 1.0,
+        "rule_id": "naive_topo_check_only",
+        "trace_preserved_rate": 1.0
+      }
+    },
+    "runtime_policy_summary": [],
+    "scenario_total": 1,
+    "strict_pass": 1,
+    "tolerant_pass": 1
+  },
+  "generated_at": "2026-07-06T12:34:35.912322+00:00",
+  "hard_edge_proof": {
+    "acyclic": true,
+    "edge_count": 0,
+    "edges": []
+  },
+  "integration": "vdev_bad_air_morning_recovery_01",
+  "mssu_signatures": [
+    {
+      "mssu_id": "m001",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m002",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m003",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m004",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m005",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m006",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m007",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m008",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m009",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m010",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m011",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m012",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m013",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    }
+  ],
+  "plan_summary": {
+    "action_count": 13,
+    "batch_count": 7,
+    "batches": [
+      {
+        "batch_id": "naive_batch_000",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_001",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_002",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_003",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          4
+        ],
+        "guard_count": 0,
+        "max_group_size": 4,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_004",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          2
+        ],
+        "guard_count": 0,
+        "max_group_size": 2,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_005",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          3
+        ],
+        "guard_count": 0,
+        "max_group_size": 3,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_006",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      }
+    ],
+    "forced_pick_batch_count": 0,
+    "group_count": 7,
+    "max_group_size": 4,
+    "policy": {
+      "ble_parallel": 1,
+      "cloud_parallel": 4,
+      "local_parallel": 4,
+      "max_parallel": 4
+    },
+    "policy_snapshot": {}
+  },
+  "profile_version": "naive_topo_parallel/v1",
+  "schema_version": "execution_certificate/v1",
+  "soft_constraints": []
+}

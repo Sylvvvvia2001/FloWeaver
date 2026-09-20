@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "floweaver"
+version = "0.1.0"
+description = "Constraint-aware routine optimization for Home Assistant"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+
+[tool.setuptools]
+packages = ["dsl", "runtime", "profile_builder", "optimizer"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+addopts = "-q"
+testpaths = ["tests"]

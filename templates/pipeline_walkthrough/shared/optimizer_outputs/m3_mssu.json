@@ -1,0 +1,414 @@
+{
+  "dependency_candidates": [],
+  "mssus": [
+    {
+      "action_refs": [
+        "A2"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "mssu_id": "mssu00_000_cloud_op",
+      "mssu_type": "ACT",
+      "node_ids": [
+        "3bfe9039:_async_update_data:0:30",
+        "3bfe9039:_async_update_data:1:31"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "required_guards": [
+        "resource_available"
+      ],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_ble",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A1"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "mssu_id": "mssu00_001_ble_op",
+      "mssu_type": "ACT",
+      "node_ids": [
+        "3bfe9039:_async_update_data:0:30",
+        "3bfe9039:_async_update_data:1:31"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "required_guards": [
+        "resource_available"
+      ],
+      "side_effect_sig": [
+        "ble_op",
+        "external_call_ble",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A1"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "mssu_id": "mssu00_002_ble_op",
+      "mssu_type": "ACT",
+      "node_ids": [
+        "3bfe9039:_async_update_data:0:30",
+        "3bfe9039:_async_update_data:1:31"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "required_guards": [
+        "resource_available"
+      ],
+      "side_effect_sig": [
+        "ble_op",
+        "external_call_ble",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A1"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "mssu_id": "mssu00_003_ble_op",
+      "mssu_type": "ACT",
+      "node_ids": [
+        "3bfe9039:_async_update_data:0:30",
+        "3bfe9039:_async_update_data:1:31"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "required_guards": [
+        "resource_available"
+      ],
+      "side_effect_sig": [
+        "ble_op",
+        "external_call_ble",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "DemoCoordinator",
+        "DemoEntity",
+        "hass"
+      ],
+      "mssu_id": "mssu00_004_entry_setup",
+      "mssu_type": "INIT",
+      "node_ids": [
+        "3bfe9039:async_setup_entry:0:5",
+        "3bfe9039:async_setup_entry:1:6",
+        "3bfe9039:async_setup_entry:2:7",
+        "3bfe9039:async_setup_entry:3:8"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "required_guards": [],
+      "side_effect_sig": [
+        "entry_setup",
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "DemoCoordinator",
+        "DemoEntity",
+        "hass"
+      ],
+      "mssu_id": "mssu00_005_coord_refresh",
+      "mssu_type": "SYNC",
+      "node_ids": [
+        "3bfe9039:async_setup_entry:0:5",
+        "3bfe9039:async_setup_entry:1:6",
+        "3bfe9039:async_setup_entry:2:7",
+        "3bfe9039:async_setup_entry:3:8"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "required_guards": [],
+      "side_effect_sig": [
+        "coord_refresh",
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [
+        "A3"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "DemoCoordinator",
+        "DemoEntity",
+        "hass"
+      ],
+      "mssu_id": "mssu00_006_state_write",
+      "mssu_type": "UPDATE",
+      "node_ids": [
+        "3bfe9039:async_setup_entry:0:5",
+        "3bfe9039:async_setup_entry:1:6",
+        "3bfe9039:async_setup_entry:2:7",
+        "3bfe9039:async_setup_entry:3:8"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "side_effect_sig": [
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "entry",
+        "hass"
+      ],
+      "mssu_id": "mssu00_007_entry_unload",
+      "mssu_type": "CLEANUP",
+      "node_ids": [
+        "3bfe9039:async_unload_entry:0:15",
+        "3bfe9039:async_unload_entry:1:16"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "required_guards": [],
+      "side_effect_sig": [
+        "entry_unload",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A2"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "entry",
+        "hass"
+      ],
+      "mssu_id": "mssu00_008_cloud_op",
+      "mssu_type": "ACT",
+      "node_ids": [
+        "3bfe9039:async_unload_entry:0:15",
+        "3bfe9039:async_unload_entry:1:16"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "required_guards": [
+        "resource_available"
+      ],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A2"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "entry",
+        "hass"
+      ],
+      "mssu_id": "mssu00_009_cloud_op",
+      "mssu_type": "ACT",
+      "node_ids": [
+        "3bfe9039:async_unload_entry:0:15",
+        "3bfe9039:async_unload_entry:1:16"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "required_guards": [
+        "resource_available"
+      ],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "DemoCloudEntity",
+        "cloud_client"
+      ],
+      "mssu_id": "mssu01_000_entry_setup",
+      "mssu_type": "INIT",
+      "node_ids": [
+        "ac792e94:async_setup_entry:0:5",
+        "ac792e94:async_setup_entry:1:6",
+        "ac792e94:async_setup_entry:2:7"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "required_guards": [],
+      "side_effect_sig": [
+        "entry_setup",
+        "external_call_cloud",
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [
+        "A2"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "DemoCloudEntity",
+        "cloud_client"
+      ],
+      "mssu_id": "mssu01_001_cloud_op",
+      "mssu_type": "ACT",
+      "node_ids": [
+        "ac792e94:async_setup_entry:0:5",
+        "ac792e94:async_setup_entry:1:6",
+        "ac792e94:async_setup_entry:2:7"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "required_guards": [
+        "resource_available"
+      ],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud",
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [
+        "A3"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "DemoCloudEntity",
+        "cloud_client"
+      ],
+      "mssu_id": "mssu01_002_state_write",
+      "mssu_type": "UPDATE",
+      "node_ids": [
+        "ac792e94:async_setup_entry:0:5",
+        "ac792e94:async_setup_entry:1:6",
+        "ac792e94:async_setup_entry:2:7"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "side_effect_sig": [
+        "external_call_cloud",
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "entry",
+        "hass"
+      ],
+      "mssu_id": "mssu01_003_entry_unload",
+      "mssu_type": "CLEANUP",
+      "node_ids": [
+        "ac792e94:async_unload_entry:0:12",
+        "ac792e94:async_unload_entry:1:13"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "required_guards": [],
+      "side_effect_sig": [
+        "entry_unload",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A2"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "entry",
+        "hass"
+      ],
+      "mssu_id": "mssu01_004_cloud_op",
+      "mssu_type": "ACT",
+      "node_ids": [
+        "ac792e94:async_unload_entry:0:12",
+        "ac792e94:async_unload_entry:1:13"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "required_guards": [
+        "resource_available"
+      ],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A2"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "entry",
+        "hass"
+      ],
+      "mssu_id": "mssu01_005_cloud_op",
+      "mssu_type": "ACT",
+      "node_ids": [
+        "ac792e94:async_unload_entry:0:12",
+        "ac792e94:async_unload_entry:1:13"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "required_guards": [
+        "resource_available"
+      ],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    }
+  ]
+}

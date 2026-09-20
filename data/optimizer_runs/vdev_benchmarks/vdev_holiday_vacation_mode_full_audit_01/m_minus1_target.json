@@ -1,0 +1,2820 @@
+{
+  "constraints": {
+    "optimization_knobs": {
+      "allow_concurrency": true,
+      "max_concurrency": {
+        "ble": 1,
+        "cloud": 4,
+        "local": 6,
+        "total": 10
+      }
+    },
+    "source_protocols": [
+      "BLE",
+      "CLOUD",
+      "HA",
+      "LOCAL"
+    ]
+  },
+  "critical_action_ids": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "A8",
+    "A9",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15",
+    "A16",
+    "A17",
+    "A18",
+    "A19",
+    "A20",
+    "A21",
+    "A22",
+    "A23",
+    "A24",
+    "A25",
+    "A26",
+    "A27",
+    "A28",
+    "A29",
+    "A30",
+    "A31",
+    "A32",
+    "A33",
+    "A34",
+    "A35",
+    "A36",
+    "A37",
+    "A38"
+  ],
+  "entrypoint": {
+    "kind": "ha_service",
+    "service": {
+      "domain": "vibeaura",
+      "name": "run_holiday_vacation_mode_full_audit_01"
+    }
+  },
+  "hard_dependencies": [
+    {
+      "after": "A14",
+      "before": "A13",
+      "reason": "transport_connect_before_subscription"
+    },
+    {
+      "after": "A35",
+      "before": "A1",
+      "reason": "ble_write_depends_on_a1"
+    },
+    {
+      "after": "A35",
+      "before": "A2",
+      "reason": "ble_write_depends_on_a2"
+    },
+    {
+      "after": "A35",
+      "before": "A3",
+      "reason": "ble_write_depends_on_a3"
+    },
+    {
+      "after": "A35",
+      "before": "A4",
+      "reason": "ble_write_depends_on_a4"
+    },
+    {
+      "after": "A35",
+      "before": "A5",
+      "reason": "ble_write_depends_on_a5"
+    },
+    {
+      "after": "A35",
+      "before": "A6",
+      "reason": "ble_write_depends_on_a6"
+    },
+    {
+      "after": "A35",
+      "before": "A7",
+      "reason": "ble_write_depends_on_a7"
+    },
+    {
+      "after": "A35",
+      "before": "A8",
+      "reason": "ble_write_depends_on_a8"
+    },
+    {
+      "after": "A35",
+      "before": "A9",
+      "reason": "ble_write_depends_on_a9"
+    },
+    {
+      "after": "A35",
+      "before": "A10",
+      "reason": "ble_write_depends_on_a10"
+    },
+    {
+      "after": "A35",
+      "before": "A11",
+      "reason": "ble_write_depends_on_a11"
+    },
+    {
+      "after": "A35",
+      "before": "A12",
+      "reason": "ble_write_depends_on_a12"
+    },
+    {
+      "after": "A35",
+      "before": "A13",
+      "reason": "ble_write_depends_on_a13"
+    },
+    {
+      "after": "A35",
+      "before": "A14",
+      "reason": "ble_write_depends_on_a14"
+    },
+    {
+      "after": "A36",
+      "before": "A15",
+      "reason": "cloud_write_depends_on_a15"
+    },
+    {
+      "after": "A36",
+      "before": "A16",
+      "reason": "cloud_write_depends_on_a16"
+    },
+    {
+      "after": "A36",
+      "before": "A17",
+      "reason": "cloud_write_depends_on_a17"
+    },
+    {
+      "after": "A36",
+      "before": "A18",
+      "reason": "cloud_write_depends_on_a18"
+    },
+    {
+      "after": "A36",
+      "before": "A19",
+      "reason": "cloud_write_depends_on_a19"
+    },
+    {
+      "after": "A36",
+      "before": "A20",
+      "reason": "cloud_write_depends_on_a20"
+    },
+    {
+      "after": "A36",
+      "before": "A21",
+      "reason": "cloud_write_depends_on_a21"
+    },
+    {
+      "after": "A36",
+      "before": "A22",
+      "reason": "cloud_write_depends_on_a22"
+    },
+    {
+      "after": "A36",
+      "before": "A23",
+      "reason": "cloud_write_depends_on_a23"
+    },
+    {
+      "after": "A36",
+      "before": "A24",
+      "reason": "cloud_write_depends_on_a24"
+    },
+    {
+      "after": "A36",
+      "before": "A25",
+      "reason": "cloud_write_depends_on_a25"
+    },
+    {
+      "after": "A36",
+      "before": "A26",
+      "reason": "cloud_write_depends_on_a26"
+    },
+    {
+      "after": "A37",
+      "before": "A27",
+      "reason": "local_write_depends_on_a27"
+    },
+    {
+      "after": "A37",
+      "before": "A28",
+      "reason": "local_write_depends_on_a28"
+    },
+    {
+      "after": "A37",
+      "before": "A29",
+      "reason": "local_write_depends_on_a29"
+    },
+    {
+      "after": "A37",
+      "before": "A30",
+      "reason": "local_write_depends_on_a30"
+    },
+    {
+      "after": "A37",
+      "before": "A31",
+      "reason": "local_write_depends_on_a31"
+    },
+    {
+      "after": "A37",
+      "before": "A32",
+      "reason": "local_write_depends_on_a32"
+    },
+    {
+      "after": "A37",
+      "before": "A33",
+      "reason": "local_write_depends_on_a33"
+    },
+    {
+      "after": "A37",
+      "before": "A34",
+      "reason": "local_write_depends_on_a34"
+    },
+    {
+      "after": "A38",
+      "before": "A35",
+      "reason": "overall_write_depends_on_ble_lane"
+    },
+    {
+      "after": "A38",
+      "before": "A36",
+      "reason": "overall_write_depends_on_cloud_lane"
+    },
+    {
+      "after": "A38",
+      "before": "A37",
+      "reason": "overall_write_depends_on_local_lane"
+    }
+  ],
+  "meta": {
+    "benchmark": {
+      "focus_areas": [
+        "Large BLE safety and environment sweep",
+        "Cloud burst grouping with security state",
+        "Local media and plug packing",
+        "Holiday audit summary"
+      ],
+      "group": "Profile Coverage - Realistic Stress Routines",
+      "story": "Before a holiday trip, the routine performs the largest whole-home audit across curtains, doors, windows, environmental sensors, ESPHome transport, local lights, plugs, TVs, and cloud HVAC or security systems.",
+      "strengths": [
+        "Large realistic stress benchmark with all three lanes.",
+        "BLE connect-before-subscribe is embedded in a long BLE safety sweep.",
+        "Cloud and local frontiers are both dense enough to reveal scheduler weaknesses."
+      ]
+    },
+    "name": "Holiday Vacation Mode Full Audit",
+    "spec_version": "0.1",
+    "vdev_id": "vdev_holiday_vacation_mode_full_audit_01"
+  },
+  "objectives": {
+    "metrics": {
+      "e2e_latency_ms": {
+        "p95": 5200
+      }
+    },
+    "primary": "minimize_tail_latency_for_profile_coverage_routine"
+  },
+  "soft_dependencies": [
+    {
+      "after": "A2",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A3",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A4",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A5",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A6",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A7",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A8",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A9",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A10",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A11",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A12",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A13",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A14",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A3",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A4",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A5",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A6",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A7",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A8",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A9",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A10",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A11",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A12",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A13",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A14",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A4",
+      "before": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A5",
+      "before": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A6",
+      "before": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A7",
+      "before": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A8",
+      "before": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A9",
+      "before": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A10",
+      "before": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A11",
+      "before": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A12",
+      "before": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A13",
+      "before": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A14",
+      "before": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A5",
+      "before": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A6",
+      "before": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A7",
+      "before": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A8",
+      "before": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A9",
+      "before": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A10",
+      "before": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A11",
+      "before": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A12",
+      "before": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A13",
+      "before": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A14",
+      "before": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A6",
+      "before": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A7",
+      "before": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A8",
+      "before": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A9",
+      "before": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A10",
+      "before": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A11",
+      "before": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A12",
+      "before": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A13",
+      "before": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A14",
+      "before": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A7",
+      "before": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A8",
+      "before": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A9",
+      "before": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A10",
+      "before": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A11",
+      "before": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A12",
+      "before": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A13",
+      "before": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A14",
+      "before": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A8",
+      "before": "A7",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A9",
+      "before": "A7",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A10",
+      "before": "A7",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A11",
+      "before": "A7",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A12",
+      "before": "A7",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A13",
+      "before": "A7",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A14",
+      "before": "A7",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A9",
+      "before": "A8",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A10",
+      "before": "A8",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A11",
+      "before": "A8",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A12",
+      "before": "A8",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A13",
+      "before": "A8",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A14",
+      "before": "A8",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A10",
+      "before": "A9",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A11",
+      "before": "A9",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A12",
+      "before": "A9",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A13",
+      "before": "A9",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A14",
+      "before": "A9",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A11",
+      "before": "A10",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A12",
+      "before": "A10",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A13",
+      "before": "A10",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A14",
+      "before": "A10",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A12",
+      "before": "A11",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A13",
+      "before": "A11",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A14",
+      "before": "A11",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A13",
+      "before": "A12",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A14",
+      "before": "A12",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A14",
+      "before": "A13",
+      "reason": "shared_radio_or_transport_budget"
+    }
+  ],
+  "source_scope": {
+    "commit": "HEAD",
+    "domains": [
+      "blink",
+      "ecobee",
+      "esphome",
+      "hue",
+      "qingping",
+      "roku",
+      "sensorpush",
+      "switchbot",
+      "tplink",
+      "tuya",
+      "webostv",
+      "xiaomi_ble"
+    ],
+    "entrypoints": [
+      {
+        "kind": "ha_service",
+        "service": {
+          "domain": "vibeaura",
+          "name": "run_holiday_vacation_mode_full_audit_01"
+        }
+      }
+    ],
+    "file_bindings": [
+      {
+        "device_id": "ble:switchbot:holiday_curtain_1",
+        "file_path": "data/repo_snapshot/switchbot/cover.py",
+        "integration": "switchbot",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:holiday_curtain_2",
+        "file_path": "data/repo_snapshot/switchbot/cover.py",
+        "integration": "switchbot",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:holiday_curtain_3",
+        "file_path": "data/repo_snapshot/switchbot/cover.py",
+        "integration": "switchbot",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:holiday_curtain_4",
+        "file_path": "data/repo_snapshot/switchbot/cover.py",
+        "integration": "switchbot",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:holiday_door_window_1",
+        "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:holiday_door_window_2",
+        "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:holiday_door_window_3",
+        "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:holiday_door_window_4",
+        "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:holiday_door_window_5",
+        "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:qingping:holiday_temp_1",
+        "file_path": "data/repo_snapshot/qingping/sensor.py",
+        "integration": "qingping",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:sensorpush:holiday_temp_2",
+        "file_path": "data/repo_snapshot/sensorpush/sensor.py",
+        "integration": "sensorpush",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:sensorpush:holiday_temp_3",
+        "file_path": "data/repo_snapshot/sensorpush/sensor.py",
+        "integration": "sensorpush",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:holiday_esphome_connect",
+        "file_path": "data/repo_snapshot/esphome/__init__.py",
+        "integration": "esphome",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:holiday_esphome_subscribe",
+        "file_path": "data/repo_snapshot/esphome/manager.py",
+        "integration": "esphome",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.holiday_light_1.status",
+        "file_path": "data/repo_snapshot/tuya/light.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.holiday_light_2.status",
+        "file_path": "data/repo_snapshot/tuya/light.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.holiday_light_3.status",
+        "file_path": "data/repo_snapshot/tuya/light.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.holiday_light_4.status",
+        "file_path": "data/repo_snapshot/tuya/light.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.holiday_strip_1.status",
+        "file_path": "data/repo_snapshot/tuya/switch.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.holiday_strip_2.status",
+        "file_path": "data/repo_snapshot/tuya/switch.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.holiday_strip_3.status",
+        "file_path": "data/repo_snapshot/tuya/switch.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.holiday_strip_4.status",
+        "file_path": "data/repo_snapshot/tuya/switch.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:climate.holiday_ac_1.status",
+        "file_path": "data/repo_snapshot/tuya/climate.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:climate.holiday_ac_2.status",
+        "file_path": "data/repo_snapshot/tuya/climate.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ecobee:thermostat.holiday",
+        "file_path": "data/repo_snapshot/ecobee/climate.py",
+        "integration": "ecobee",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "blink:security.holiday",
+        "file_path": "data/repo_snapshot/blink/sensor.py",
+        "integration": "blink",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:holiday_light_group_1",
+        "file_path": "data/repo_snapshot/hue/v2/group.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:holiday_light_group_2",
+        "file_path": "data/repo_snapshot/hue/v2/group.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:holiday_light_group_3",
+        "file_path": "data/repo_snapshot/hue/v2/group.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tplink:plug.holiday_1",
+        "file_path": "data/repo_snapshot/tplink/entity.py",
+        "integration": "tplink",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tplink:plug.holiday_2",
+        "file_path": "data/repo_snapshot/tplink/entity.py",
+        "integration": "tplink",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tplink:plug.holiday_3",
+        "file_path": "data/repo_snapshot/tplink/entity.py",
+        "integration": "tplink",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "webostv:media_player.holiday_tv",
+        "file_path": "data/repo_snapshot/webostv/media_player.py",
+        "integration": "webostv",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "roku:media_player.holiday_roku",
+        "file_path": "data/repo_snapshot/roku/media_player.py",
+        "integration": "roku",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_holiday_vacation_mode_full_audit_01_ble_lane",
+        "file_path": "data/repo_snapshot/switchbot/fan.py",
+        "integration": "switchbot",
+        "protocols": [
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_holiday_vacation_mode_full_audit_01_cloud_lane",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_holiday_vacation_mode_full_audit_01_local_lane",
+        "file_path": "data/repo_snapshot/tplink/entity.py",
+        "integration": "tplink",
+        "protocols": [
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_holiday_vacation_mode_full_audit_01_overall",
+        "file_path": "data/repo_snapshot/esphome/update.py",
+        "integration": "esphome",
+        "protocols": [
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:holiday_door_window_1",
+        "file_path": "data/repo_snapshot/xiaomi_ble/event.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:holiday_door_window_1",
+        "file_path": "data/repo_snapshot/xiaomi_ble/__init__.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:holiday_door_window_2",
+        "file_path": "data/repo_snapshot/xiaomi_ble/event.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:holiday_door_window_2",
+        "file_path": "data/repo_snapshot/xiaomi_ble/__init__.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:holiday_door_window_3",
+        "file_path": "data/repo_snapshot/xiaomi_ble/event.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:holiday_door_window_3",
+        "file_path": "data/repo_snapshot/xiaomi_ble/__init__.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:holiday_door_window_4",
+        "file_path": "data/repo_snapshot/xiaomi_ble/event.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:holiday_door_window_4",
+        "file_path": "data/repo_snapshot/xiaomi_ble/__init__.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:holiday_door_window_5",
+        "file_path": "data/repo_snapshot/xiaomi_ble/event.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:holiday_door_window_5",
+        "file_path": "data/repo_snapshot/xiaomi_ble/__init__.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:qingping:holiday_temp_1",
+        "file_path": "data/repo_snapshot/qingping/binary_sensor.py",
+        "integration": "qingping",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:qingping:holiday_temp_1",
+        "file_path": "data/repo_snapshot/qingping/config_flow.py",
+        "integration": "qingping",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:sensorpush:holiday_temp_2",
+        "file_path": "data/repo_snapshot/sensorpush/config_flow.py",
+        "integration": "sensorpush",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:sensorpush:holiday_temp_3",
+        "file_path": "data/repo_snapshot/sensorpush/config_flow.py",
+        "integration": "sensorpush",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:holiday_esphome_connect",
+        "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+        "integration": "esphome",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:holiday_esphome_connect",
+        "file_path": "data/repo_snapshot/esphome/climate.py",
+        "integration": "esphome",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.holiday_light_1.status",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.holiday_light_1.status",
+        "file_path": "data/repo_snapshot/tuya/__init__.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.holiday_light_2.status",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.holiday_light_2.status",
+        "file_path": "data/repo_snapshot/tuya/__init__.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.holiday_light_3.status",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.holiday_light_3.status",
+        "file_path": "data/repo_snapshot/tuya/__init__.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.holiday_light_4.status",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.holiday_light_4.status",
+        "file_path": "data/repo_snapshot/tuya/__init__.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.holiday_strip_1.status",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.holiday_strip_1.status",
+        "file_path": "data/repo_snapshot/tuya/__init__.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.holiday_strip_2.status",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.holiday_strip_2.status",
+        "file_path": "data/repo_snapshot/tuya/__init__.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.holiday_strip_3.status",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.holiday_strip_3.status",
+        "file_path": "data/repo_snapshot/tuya/__init__.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.holiday_strip_4.status",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.holiday_strip_4.status",
+        "file_path": "data/repo_snapshot/tuya/__init__.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:climate.holiday_ac_1.status",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:climate.holiday_ac_1.status",
+        "file_path": "data/repo_snapshot/tuya/__init__.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:climate.holiday_ac_2.status",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:climate.holiday_ac_2.status",
+        "file_path": "data/repo_snapshot/tuya/__init__.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:holiday_light_group_1",
+        "file_path": "data/repo_snapshot/hue/v2/entity.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:holiday_light_group_1",
+        "file_path": "data/repo_snapshot/hue/v2/binary_sensor.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:holiday_light_group_2",
+        "file_path": "data/repo_snapshot/hue/v2/entity.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:holiday_light_group_2",
+        "file_path": "data/repo_snapshot/hue/v2/binary_sensor.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:holiday_light_group_3",
+        "file_path": "data/repo_snapshot/hue/v2/entity.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:holiday_light_group_3",
+        "file_path": "data/repo_snapshot/hue/v2/binary_sensor.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "roku:media_player.holiday_roku",
+        "file_path": "data/repo_snapshot/roku/coordinator.py",
+        "integration": "roku",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "roku:media_player.holiday_roku",
+        "file_path": "data/repo_snapshot/roku/browse_media.py",
+        "integration": "roku",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      }
+    ],
+    "files": [
+      "data/repo_snapshot/blink/sensor.py",
+      "data/repo_snapshot/ecobee/climate.py",
+      "data/repo_snapshot/esphome/__init__.py",
+      "data/repo_snapshot/esphome/assist_satellite.py",
+      "data/repo_snapshot/esphome/climate.py",
+      "data/repo_snapshot/esphome/manager.py",
+      "data/repo_snapshot/esphome/update.py",
+      "data/repo_snapshot/hue/v2/binary_sensor.py",
+      "data/repo_snapshot/hue/v2/entity.py",
+      "data/repo_snapshot/hue/v2/group.py",
+      "data/repo_snapshot/qingping/binary_sensor.py",
+      "data/repo_snapshot/qingping/config_flow.py",
+      "data/repo_snapshot/qingping/sensor.py",
+      "data/repo_snapshot/roku/browse_media.py",
+      "data/repo_snapshot/roku/coordinator.py",
+      "data/repo_snapshot/roku/media_player.py",
+      "data/repo_snapshot/sensorpush/config_flow.py",
+      "data/repo_snapshot/sensorpush/sensor.py",
+      "data/repo_snapshot/switchbot/cover.py",
+      "data/repo_snapshot/switchbot/fan.py",
+      "data/repo_snapshot/tplink/entity.py",
+      "data/repo_snapshot/tuya/__init__.py",
+      "data/repo_snapshot/tuya/climate.py",
+      "data/repo_snapshot/tuya/entity.py",
+      "data/repo_snapshot/tuya/light.py",
+      "data/repo_snapshot/tuya/switch.py",
+      "data/repo_snapshot/webostv/media_player.py",
+      "data/repo_snapshot/xiaomi_ble/__init__.py",
+      "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+      "data/repo_snapshot/xiaomi_ble/event.py"
+    ],
+    "platforms": [
+      "binary_sensor",
+      "climate",
+      "cover",
+      "esphome",
+      "light",
+      "manager",
+      "media_player",
+      "sensor",
+      "switch"
+    ],
+    "protocols": [
+      "BLE",
+      "CLOUD",
+      "HA",
+      "LOCAL"
+    ],
+    "repo_path": "data/repo_snapshot"
+  },
+  "target_anchors": {
+    "anchor_ops": [
+      "BLE_CONNECT",
+      "BLE_GATT_OP",
+      "BLE_NOTIFY_SUBSCRIBE",
+      "BLE_OP",
+      "CLOUD_HTTP_CALL",
+      "CLOUD_OP",
+      "CLOUD_STATUS_CALL",
+      "LOCAL_API_READ",
+      "POLL_UPDATE",
+      "STATE_WRITE",
+      "SUBSCRIBE"
+    ],
+    "characteristics": [],
+    "device_ids": [
+      "ble:switchbot:holiday_curtain_1",
+      "ble:switchbot:holiday_curtain_2",
+      "ble:switchbot:holiday_curtain_3",
+      "ble:switchbot:holiday_curtain_4",
+      "ble:switchbot:holiday_door_window_1",
+      "ble:switchbot:holiday_door_window_2",
+      "ble:switchbot:holiday_door_window_3",
+      "ble:switchbot:holiday_door_window_4",
+      "ble:switchbot:holiday_door_window_5",
+      "ble:qingping:holiday_temp_1",
+      "ble:sensorpush:holiday_temp_2",
+      "ble:sensorpush:holiday_temp_3",
+      "ble:switchbot:holiday_esphome_connect",
+      "ble:switchbot:holiday_esphome_subscribe"
+    ],
+    "endpoints": [
+      "tuya:light.holiday_light_1.status",
+      "tuya:light.holiday_light_2.status",
+      "tuya:light.holiday_light_3.status",
+      "tuya:light.holiday_light_4.status",
+      "tuya:switch.holiday_strip_1.status",
+      "tuya:switch.holiday_strip_2.status",
+      "tuya:switch.holiday_strip_3.status",
+      "tuya:switch.holiday_strip_4.status",
+      "tuya:climate.holiday_ac_1.status",
+      "tuya:climate.holiday_ac_2.status",
+      "ecobee:thermostat.holiday",
+      "blink:security.holiday"
+    ],
+    "entities": [
+      "sensor.vdev_holiday_vacation_mode_full_audit_01_ble_lane",
+      "sensor.vdev_holiday_vacation_mode_full_audit_01_cloud_lane",
+      "sensor.vdev_holiday_vacation_mode_full_audit_01_local_lane",
+      "sensor.vdev_holiday_vacation_mode_full_audit_01_overall"
+    ],
+    "required_state_writes": [
+      "sensor.vdev_holiday_vacation_mode_full_audit_01_ble_lane",
+      "sensor.vdev_holiday_vacation_mode_full_audit_01_cloud_lane",
+      "sensor.vdev_holiday_vacation_mode_full_audit_01_local_lane",
+      "sensor.vdev_holiday_vacation_mode_full_audit_01_overall"
+    ],
+    "service_entrypoints": [
+      "vibeaura.run_holiday_vacation_mode_full_audit_01"
+    ]
+  },
+  "validation": {
+    "differential_tests": {
+      "enabled": true,
+      "runs_per_scenario": 2,
+      "scenarios": [
+        "baseline_happy_path",
+        "fault_cloud_429",
+        "fault_ble_disconnect"
+      ]
+    },
+    "fault_model": {
+      "ble_disconnect": true,
+      "cloud_429": true,
+      "network_jitter": true
+    },
+    "llm_detector": {
+      "enabled": true,
+      "max_attempts": 0,
+      "retry_backoff_s": 0.5,
+      "timeout_s": 45
+    },
+    "observation": {
+      "canonicalization_version": "v1",
+      "equivalence_whitelist": [
+        "COALESCE_STATE_WRITE"
+      ],
+      "semantic_ops": [
+        "ENTRY_SETUP",
+        "COORD_REFRESH",
+        "STATE_WRITE",
+        "SUBSCRIBE",
+        "UNSUBSCRIBE",
+        "MQTT_SUBSCRIBE",
+        "BLE_CONNECT",
+        "BLE_DISCONNECT",
+        "BLE_NOTIFY_SUBSCRIBE",
+        "BLE_OP",
+        "BLE_GATT_OP",
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_429_CHECK",
+        "CLOUD_BACKOFF_SLEEP",
+        "CLOUD_BATCH_CALL",
+        "CLOUD_SESSION_REUSE",
+        "LOCAL_API_READ",
+        "POLL_UPDATE"
+      ]
+    },
+    "profile_version": "ha_profile_default",
+    "sampling": {},
+    "source_protocols": [
+      "BLE",
+      "CLOUD",
+      "HA",
+      "LOCAL"
+    ]
+  },
+  "vdev_actions": [
+    {
+      "action_id": "A1",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:switchbot:holiday_curtain_1"
+        },
+        "domain": "cover",
+        "kind": "ha_service_call",
+        "service": "refresh_cover"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:switchbot:holiday_curtain_1",
+        "id": "ble:switchbot:holiday_curtain_1",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "refresh_cover"
+    },
+    {
+      "action_id": "A2",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:switchbot:holiday_curtain_2"
+        },
+        "domain": "cover",
+        "kind": "ha_service_call",
+        "service": "refresh_cover"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:switchbot:holiday_curtain_2",
+        "id": "ble:switchbot:holiday_curtain_2",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "refresh_cover"
+    },
+    {
+      "action_id": "A3",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:switchbot:holiday_curtain_3"
+        },
+        "domain": "cover",
+        "kind": "ha_service_call",
+        "service": "refresh_cover"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:switchbot:holiday_curtain_3",
+        "id": "ble:switchbot:holiday_curtain_3",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "refresh_cover"
+    },
+    {
+      "action_id": "A4",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:switchbot:holiday_curtain_4"
+        },
+        "domain": "cover",
+        "kind": "ha_service_call",
+        "service": "refresh_cover"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:switchbot:holiday_curtain_4",
+        "id": "ble:switchbot:holiday_curtain_4",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "refresh_cover"
+    },
+    {
+      "action_id": "A5",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:switchbot:holiday_door_window_1"
+        },
+        "domain": "binary_sensor",
+        "kind": "ha_service_call",
+        "service": "read_sensor"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:switchbot:holiday_door_window_1",
+        "id": "ble:switchbot:holiday_door_window_1",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "read_sensor"
+    },
+    {
+      "action_id": "A6",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:switchbot:holiday_door_window_2"
+        },
+        "domain": "binary_sensor",
+        "kind": "ha_service_call",
+        "service": "read_sensor"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:switchbot:holiday_door_window_2",
+        "id": "ble:switchbot:holiday_door_window_2",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "read_sensor"
+    },
+    {
+      "action_id": "A7",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:switchbot:holiday_door_window_3"
+        },
+        "domain": "binary_sensor",
+        "kind": "ha_service_call",
+        "service": "read_sensor"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:switchbot:holiday_door_window_3",
+        "id": "ble:switchbot:holiday_door_window_3",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "read_sensor"
+    },
+    {
+      "action_id": "A8",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:switchbot:holiday_door_window_4"
+        },
+        "domain": "binary_sensor",
+        "kind": "ha_service_call",
+        "service": "read_sensor"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:switchbot:holiday_door_window_4",
+        "id": "ble:switchbot:holiday_door_window_4",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "read_sensor"
+    },
+    {
+      "action_id": "A9",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:switchbot:holiday_door_window_5"
+        },
+        "domain": "binary_sensor",
+        "kind": "ha_service_call",
+        "service": "read_sensor"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:switchbot:holiday_door_window_5",
+        "id": "ble:switchbot:holiday_door_window_5",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "read_sensor"
+    },
+    {
+      "action_id": "A10",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:qingping:holiday_temp_1"
+        },
+        "domain": "sensor",
+        "kind": "ha_service_call",
+        "service": "read_sensor"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:qingping:holiday_temp_1",
+        "id": "ble:qingping:holiday_temp_1",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "read_sensor"
+    },
+    {
+      "action_id": "A11",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:sensorpush:holiday_temp_2"
+        },
+        "domain": "sensor",
+        "kind": "ha_service_call",
+        "service": "read_sensor"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:sensorpush:holiday_temp_2",
+        "id": "ble:sensorpush:holiday_temp_2",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "read_sensor"
+    },
+    {
+      "action_id": "A12",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:sensorpush:holiday_temp_3"
+        },
+        "domain": "sensor",
+        "kind": "ha_service_call",
+        "service": "read_sensor"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:sensorpush:holiday_temp_3",
+        "id": "ble:sensorpush:holiday_temp_3",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "read_sensor"
+    },
+    {
+      "action_id": "A13",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:switchbot:holiday_esphome_connect"
+        },
+        "domain": "esphome",
+        "kind": "ha_service_call",
+        "service": "connect"
+      },
+      "marker_hints": [
+        "BLE_CONNECT",
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:switchbot:holiday_esphome_connect",
+        "id": "ble:switchbot:holiday_esphome_connect",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "connect"
+    },
+    {
+      "action_id": "A14",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:switchbot:holiday_esphome_subscribe"
+        },
+        "domain": "manager",
+        "kind": "ha_service_call",
+        "service": "subscribe"
+      },
+      "marker_hints": [
+        "BLE_NOTIFY_SUBSCRIBE",
+        "SUBSCRIBE",
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:switchbot:holiday_esphome_subscribe",
+        "id": "ble:switchbot:holiday_esphome_subscribe",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "subscribe"
+    },
+    {
+      "action_id": "A15",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:light.holiday_light_1.status",
+          "endpoint_group_key": "holiday_vacation_mode_full_audit_01_tuya_light",
+          "host_group_key": "tuya"
+        },
+        "domain": "light",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:light.holiday_light_1.status",
+        "id": "tuya:light.holiday_light_1.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A16",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:light.holiday_light_2.status",
+          "endpoint_group_key": "holiday_vacation_mode_full_audit_01_tuya_light",
+          "host_group_key": "tuya"
+        },
+        "domain": "light",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:light.holiday_light_2.status",
+        "id": "tuya:light.holiday_light_2.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A17",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:light.holiday_light_3.status",
+          "endpoint_group_key": "holiday_vacation_mode_full_audit_01_tuya_light",
+          "host_group_key": "tuya"
+        },
+        "domain": "light",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:light.holiday_light_3.status",
+        "id": "tuya:light.holiday_light_3.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A18",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:light.holiday_light_4.status",
+          "endpoint_group_key": "holiday_vacation_mode_full_audit_01_tuya_light",
+          "host_group_key": "tuya"
+        },
+        "domain": "light",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:light.holiday_light_4.status",
+        "id": "tuya:light.holiday_light_4.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A19",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:switch.holiday_strip_1.status",
+          "endpoint_group_key": "holiday_vacation_mode_full_audit_01_tuya_switch",
+          "host_group_key": "tuya"
+        },
+        "domain": "switch",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:switch.holiday_strip_1.status",
+        "id": "tuya:switch.holiday_strip_1.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A20",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:switch.holiday_strip_2.status",
+          "endpoint_group_key": "holiday_vacation_mode_full_audit_01_tuya_switch",
+          "host_group_key": "tuya"
+        },
+        "domain": "switch",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:switch.holiday_strip_2.status",
+        "id": "tuya:switch.holiday_strip_2.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A21",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:switch.holiday_strip_3.status",
+          "endpoint_group_key": "holiday_vacation_mode_full_audit_01_tuya_switch",
+          "host_group_key": "tuya"
+        },
+        "domain": "switch",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:switch.holiday_strip_3.status",
+        "id": "tuya:switch.holiday_strip_3.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A22",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:switch.holiday_strip_4.status",
+          "endpoint_group_key": "holiday_vacation_mode_full_audit_01_tuya_switch",
+          "host_group_key": "tuya"
+        },
+        "domain": "switch",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:switch.holiday_strip_4.status",
+        "id": "tuya:switch.holiday_strip_4.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A23",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:climate.holiday_ac_1.status",
+          "endpoint_group_key": "holiday_vacation_mode_full_audit_01_tuya_climate",
+          "host_group_key": "tuya"
+        },
+        "domain": "climate",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:climate.holiday_ac_1.status",
+        "id": "tuya:climate.holiday_ac_1.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A24",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:climate.holiday_ac_2.status",
+          "endpoint_group_key": "holiday_vacation_mode_full_audit_01_tuya_climate",
+          "host_group_key": "tuya"
+        },
+        "domain": "climate",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:climate.holiday_ac_2.status",
+        "id": "tuya:climate.holiday_ac_2.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A25",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "ecobee:thermostat.holiday",
+          "endpoint_group_key": "holiday_vacation_mode_full_audit_01_ecobee",
+          "host_group_key": "ecobee"
+        },
+        "domain": "climate",
+        "kind": "ha_service_call",
+        "provider": "ecobee",
+        "service": "read_runtime"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "POLL_UPDATE",
+        "CLOUD_HTTP_CALL"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "ecobee",
+      "side_effects": [],
+      "target": {
+        "endpoint": "ecobee:thermostat.holiday",
+        "id": "ecobee:thermostat.holiday",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "read_runtime"
+    },
+    {
+      "action_id": "A26",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "blink:security.holiday",
+          "endpoint_group_key": "holiday_vacation_mode_full_audit_01_blink",
+          "host_group_key": "blink"
+        },
+        "domain": "sensor",
+        "kind": "ha_service_call",
+        "provider": "blink",
+        "service": "read_runtime"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "POLL_UPDATE",
+        "CLOUD_HTTP_CALL"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "blink",
+      "side_effects": [],
+      "target": {
+        "endpoint": "blink:security.holiday",
+        "id": "blink:security.holiday",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "read_runtime"
+    },
+    {
+      "action_id": "A27",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "hue:bridge_1:holiday_light_group_1",
+          "endpoint_group_key": "bridge_1",
+          "host_group_key": "hue_bridge_1"
+        },
+        "domain": "light",
+        "kind": "ha_service_call",
+        "provider": "hue_local",
+        "service": "get_state"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "protocol": "LOCAL",
+      "provider": "hue_local",
+      "side_effects": [],
+      "target": {
+        "endpoint": "hue:bridge_1:holiday_light_group_1",
+        "id": "hue:bridge_1:holiday_light_group_1",
+        "kind": "local_endpoint",
+        "provider": "hue_local"
+      },
+      "target_kind": "local_endpoint",
+      "type": "get_state"
+    },
+    {
+      "action_id": "A28",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "hue:bridge_1:holiday_light_group_2",
+          "endpoint_group_key": "bridge_1",
+          "host_group_key": "hue_bridge_1"
+        },
+        "domain": "light",
+        "kind": "ha_service_call",
+        "provider": "hue_local",
+        "service": "get_state"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "protocol": "LOCAL",
+      "provider": "hue_local",
+      "side_effects": [],
+      "target": {
+        "endpoint": "hue:bridge_1:holiday_light_group_2",
+        "id": "hue:bridge_1:holiday_light_group_2",
+        "kind": "local_endpoint",
+        "provider": "hue_local"
+      },
+      "target_kind": "local_endpoint",
+      "type": "get_state"
+    },
+    {
+      "action_id": "A29",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "hue:bridge_1:holiday_light_group_3",
+          "endpoint_group_key": "bridge_1",
+          "host_group_key": "hue_bridge_1"
+        },
+        "domain": "light",
+        "kind": "ha_service_call",
+        "provider": "hue_local",
+        "service": "get_state"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "protocol": "LOCAL",
+      "provider": "hue_local",
+      "side_effects": [],
+      "target": {
+        "endpoint": "hue:bridge_1:holiday_light_group_3",
+        "id": "hue:bridge_1:holiday_light_group_3",
+        "kind": "local_endpoint",
+        "provider": "hue_local"
+      },
+      "target_kind": "local_endpoint",
+      "type": "get_state"
+    },
+    {
+      "action_id": "A30",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tplink:plug.holiday_1",
+          "endpoint_group_key": "holiday_vacation_mode_full_audit_01_tplink",
+          "host_group_key": "tplink_local"
+        },
+        "domain": "switch",
+        "kind": "ha_service_call",
+        "provider": "tplink_local",
+        "service": "get_state"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "protocol": "LOCAL",
+      "provider": "tplink_local",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tplink:plug.holiday_1",
+        "id": "tplink:plug.holiday_1",
+        "kind": "local_endpoint",
+        "provider": "tplink_local"
+      },
+      "target_kind": "local_endpoint",
+      "type": "get_state"
+    },
+    {
+      "action_id": "A31",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tplink:plug.holiday_2",
+          "endpoint_group_key": "holiday_vacation_mode_full_audit_01_tplink",
+          "host_group_key": "tplink_local"
+        },
+        "domain": "switch",
+        "kind": "ha_service_call",
+        "provider": "tplink_local",
+        "service": "get_state"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "protocol": "LOCAL",
+      "provider": "tplink_local",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tplink:plug.holiday_2",
+        "id": "tplink:plug.holiday_2",
+        "kind": "local_endpoint",
+        "provider": "tplink_local"
+      },
+      "target_kind": "local_endpoint",
+      "type": "get_state"
+    },
+    {
+      "action_id": "A32",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tplink:plug.holiday_3",
+          "endpoint_group_key": "holiday_vacation_mode_full_audit_01_tplink",
+          "host_group_key": "tplink_local"
+        },
+        "domain": "switch",
+        "kind": "ha_service_call",
+        "provider": "tplink_local",
+        "service": "get_state"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "protocol": "LOCAL",
+      "provider": "tplink_local",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tplink:plug.holiday_3",
+        "id": "tplink:plug.holiday_3",
+        "kind": "local_endpoint",
+        "provider": "tplink_local"
+      },
+      "target_kind": "local_endpoint",
+      "type": "get_state"
+    },
+    {
+      "action_id": "A33",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "webostv:media_player.holiday_tv",
+          "endpoint_group_key": "holiday_vacation_mode_full_audit_01_webostv",
+          "host_group_key": "webostv_local"
+        },
+        "domain": "media_player",
+        "kind": "ha_service_call",
+        "provider": "webostv_local",
+        "service": "get_state"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "protocol": "LOCAL",
+      "provider": "webostv_local",
+      "side_effects": [],
+      "target": {
+        "endpoint": "webostv:media_player.holiday_tv",
+        "id": "webostv:media_player.holiday_tv",
+        "kind": "local_endpoint",
+        "provider": "webostv_local"
+      },
+      "target_kind": "local_endpoint",
+      "type": "get_state"
+    },
+    {
+      "action_id": "A34",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "roku:media_player.holiday_roku",
+          "endpoint_group_key": "holiday_vacation_mode_full_audit_01_roku",
+          "host_group_key": "roku_local"
+        },
+        "domain": "media_player",
+        "kind": "ha_service_call",
+        "provider": "roku_local",
+        "service": "get_state"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "protocol": "LOCAL",
+      "provider": "roku_local",
+      "side_effects": [],
+      "target": {
+        "endpoint": "roku:media_player.holiday_roku",
+        "id": "roku:media_player.holiday_roku",
+        "kind": "local_endpoint",
+        "provider": "roku_local"
+      },
+      "target_kind": "local_endpoint",
+      "type": "get_state"
+    },
+    {
+      "action_id": "A35",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "entity_id": "sensor.vdev_holiday_vacation_mode_full_audit_01_ble_lane"
+        },
+        "domain": "sensor",
+        "kind": "ha_service_call",
+        "service": "publish"
+      },
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "protocol": "HA",
+      "side_effects": [
+        "state_write"
+      ],
+      "target": {
+        "entity_id": "sensor.vdev_holiday_vacation_mode_full_audit_01_ble_lane",
+        "id": "sensor.vdev_holiday_vacation_mode_full_audit_01_ble_lane",
+        "kind": "ha_entity"
+      },
+      "target_kind": "ha_entity",
+      "type": "write"
+    },
+    {
+      "action_id": "A36",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "entity_id": "sensor.vdev_holiday_vacation_mode_full_audit_01_cloud_lane"
+        },
+        "domain": "sensor",
+        "kind": "ha_service_call",
+        "service": "publish"
+      },
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "protocol": "HA",
+      "side_effects": [
+        "state_write"
+      ],
+      "target": {
+        "entity_id": "sensor.vdev_holiday_vacation_mode_full_audit_01_cloud_lane",
+        "id": "sensor.vdev_holiday_vacation_mode_full_audit_01_cloud_lane",
+        "kind": "ha_entity"
+      },
+      "target_kind": "ha_entity",
+      "type": "write"
+    },
+    {
+      "action_id": "A37",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "entity_id": "sensor.vdev_holiday_vacation_mode_full_audit_01_local_lane"
+        },
+        "domain": "sensor",
+        "kind": "ha_service_call",
+        "service": "publish"
+      },
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "protocol": "HA",
+      "side_effects": [
+        "state_write"
+      ],
+      "target": {
+        "entity_id": "sensor.vdev_holiday_vacation_mode_full_audit_01_local_lane",
+        "id": "sensor.vdev_holiday_vacation_mode_full_audit_01_local_lane",
+        "kind": "ha_entity"
+      },
+      "target_kind": "ha_entity",
+      "type": "write"
+    },
+    {
+      "action_id": "A38",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "entity_id": "sensor.vdev_holiday_vacation_mode_full_audit_01_overall"
+        },
+        "domain": "sensor",
+        "kind": "ha_service_call",
+        "service": "publish"
+      },
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "protocol": "HA",
+      "side_effects": [
+        "state_write"
+      ],
+      "target": {
+        "entity_id": "sensor.vdev_holiday_vacation_mode_full_audit_01_overall",
+        "id": "sensor.vdev_holiday_vacation_mode_full_audit_01_overall",
+        "kind": "ha_entity"
+      },
+      "target_kind": "ha_entity",
+      "type": "write"
+    }
+  ]
+}

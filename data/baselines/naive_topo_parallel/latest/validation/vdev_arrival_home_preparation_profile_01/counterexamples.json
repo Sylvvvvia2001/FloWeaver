@@ -1,0 +1,199 @@
+[
+  {
+    "alignment_status": "PARTIAL",
+    "counterexample_id": "cex_359b79b0e0",
+    "culprit_ids": [
+      "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:switchbot:arrival_relay_node"
+    ],
+    "diff_summary": {
+      "baseline_state_at_divergence": {
+        "exception_category": null,
+        "resource_keys": [
+          "connection:ble:switchbot:arrival_air_node"
+        ],
+        "state_writes": {}
+      },
+      "baseline_trace_prefix": [
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A1"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:entry_motion_arrival",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A2"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:arrival_curtain_left",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A3"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:arrival_curtain_right",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_CONNECT",
+          "params_abst": {
+            "action_id": "A4"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:arrival_air_node",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_NOTIFY_SUBSCRIBE",
+          "params_abst": {
+            "action_id": "A5"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:arrival_relay_node",
+          "ts": 0.0
+        }
+      ],
+      "counterexample_verdict": "DIFF_FOUND",
+      "divergence_point": {
+        "details": {
+          "compare_meta": {
+            "canonicalization_version": "v1",
+            "commutable_ops": [
+              "COORD_REFRESH",
+              "STATE_WRITE"
+            ],
+            "config_hash": "9285a670239fb92a",
+            "equivalence_rules": [],
+            "parallel_action_scopes": []
+          },
+          "diff_hunks": [
+            {
+              "anchor": "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:switchbot:arrival_relay_node",
+              "baseline_ops": [
+                "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:switchbot:arrival_relay_node"
+              ],
+              "optimized_ops": [],
+              "severity": "MEDIUM"
+            }
+          ]
+        },
+        "kind": "SPLIT",
+        "reason": "trace_prefix_mismatch",
+        "step": 5,
+        "useg_node_id": "useg_0004"
+      },
+      "environment_assumptions": {
+        "path_assumptions": [
+          "scenario:vdev_arrival_home_preparation_profile_01"
+        ],
+        "resource_assumptions": [
+          "connection:ble:switchbot:arrival_air_node"
+        ],
+        "suspicious_region_id": "sr_001"
+      },
+      "hunks": [
+        {
+          "anchor": "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:switchbot:arrival_relay_node",
+          "baseline_ops": [
+            "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:switchbot:arrival_relay_node"
+          ],
+          "optimized_ops": [],
+          "severity": "MEDIUM"
+        },
+        {
+          "anchor": "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:switchbot:arrival_relay_node",
+          "baseline_ops": [],
+          "optimized_ops": [
+            "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:switchbot:arrival_relay_node"
+          ],
+          "severity": "MEDIUM"
+        }
+      ],
+      "inferred_by": "check_observation_schema_or_alignment_rule",
+      "input_assumptions": {},
+      "kind": "order_violation",
+      "minimal_conditions": [
+        "scenario:vdev_arrival_home_preparation_profile_01",
+        "resource:connection:ble:switchbot:arrival_air_node"
+      ],
+      "optimized_state_at_divergence": {
+        "exception_category": null,
+        "resource_keys": [
+          "connection:ble:switchbot:arrival_air_node"
+        ],
+        "state_writes": {}
+      },
+      "optimized_trace_prefix": [
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A1"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:entry_motion_arrival",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A2"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:arrival_curtain_left",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A3"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:arrival_curtain_right",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_CONNECT",
+          "params_abst": {
+            "action_id": "A4"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:arrival_air_node",
+          "ts": 0.0
+        }
+      ],
+      "refinement_hint": "check_observation_schema_or_alignment_rule",
+      "suspicious_region_id": "sr_001",
+      "violated_property": "TRACE_MISMATCH"
+    },
+    "execution_plan_hash": "f111c3a1aa33",
+    "scenario_id": "vdev_arrival_home_preparation_profile_01",
+    "suspicious_region_count": 3,
+    "trust_plan_hash": "f111c3a1aa33",
+    "violated_assertion": "observable_semantic_equivalence"
+  }
+]

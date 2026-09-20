@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_overnight_quiet_hours_snapshot_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Overnight Quiet-Hours Snapshot"
+}

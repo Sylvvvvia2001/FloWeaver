@@ -1,0 +1,324 @@
+{
+  "added_savings_ms": 270,
+  "added_savings_ratio": 0.06136363636363636,
+  "case_name": "Overnight Health & Safety Monitoring Routine",
+  "group": "Night and Energy Monitoring Routines",
+  "original_estimated_latency_ms": 4400,
+  "policy": {
+    "allow_adv_prepare_during_connect_capabilities": [
+      "adv_anchor_safe"
+    ],
+    "allow_adv_prepare_during_connect_for_sources": [
+      "switchbot",
+      "xiaomi_ble"
+    ],
+    "allow_adv_prepare_overlap": true,
+    "allow_connect_prepare_overlap": false,
+    "allow_same_device_adv_overlap": false,
+    "allow_same_session_adv_overlap": false,
+    "allow_subscribe_like_adv_overlap": false,
+    "allow_subscribe_like_adv_overlap_capabilities": [
+      "subscribe_adv_overlap_safe"
+    ],
+    "allow_subscribe_like_adv_overlap_sources": [
+      "esphome"
+    ],
+    "allow_unknown_source_adv_overlap": false,
+    "assume_connectable_controller_available": true,
+    "assume_shared_scanner_available": true,
+    "connectable_slot_limit": 1,
+    "control_like_min_corridor_latency_ms": 1800,
+    "control_like_min_corridor_length": 3,
+    "current_xfer_slot_cost": 1,
+    "enforce_connection_slot_guard": true,
+    "generic_min_corridor_latency_ms": 1800,
+    "generic_min_corridor_length": 3,
+    "kind_capability_overrides": {
+      "connect": [
+        "session_chain_ble_op"
+      ],
+      "read_sensor": [
+        "read_like_ble_op"
+      ],
+      "read_status": [
+        "read_like_ble_op"
+      ],
+      "refresh_cover": [
+        "read_like_ble_op"
+      ],
+      "set_cover_position": [
+        "control_like_ble_op"
+      ],
+      "set_percentage": [
+        "control_like_ble_op"
+      ],
+      "subscribe": [
+        "session_chain_ble_op"
+      ],
+      "turn_off": [
+        "control_like_ble_op"
+      ],
+      "turn_on": [
+        "control_like_ble_op"
+      ]
+    },
+    "max_lookahead_actions": 1,
+    "min_corridor_latency_ms": 1800,
+    "min_corridor_length": 3,
+    "next_connect_prepare_slot_cost": 1,
+    "prepare_adv_timeout_ms": 120,
+    "prepare_connect_timeout_ms": 180,
+    "prepare_must_be_side_effect_free": true,
+    "read_like_min_corridor_latency_ms": 1200,
+    "read_like_min_corridor_length": 2,
+    "require_connectable_controller_for_connect_prep": true,
+    "require_shared_scanner": true,
+    "require_source_resolution_for_adv_overlap": true,
+    "session_chain_min_corridor_latency_ms": 1400,
+    "session_chain_min_corridor_length": 2,
+    "source_capability_overrides": {
+      "esphome": [
+        "subscribe_adv_overlap_safe"
+      ],
+      "switchbot": [
+        "adv_anchor_safe"
+      ],
+      "xiaomi_ble": [
+        "adv_anchor_safe"
+      ]
+    }
+  },
+  "refined_estimated_latency_ms": 4130,
+  "selected_corridors": [
+    {
+      "action_ids": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "batch_ids": [
+        "batch_000",
+        "batch_001",
+        "batch_002",
+        "batch_003"
+      ],
+      "corridor_id": "corridor_00",
+      "latency_saved_ms": 270,
+      "original_latency_ms": 3000,
+      "overlap_candidate_pairs": 3,
+      "refined_events": [
+        {
+          "action_id": "A1",
+          "end_ms": 90,
+          "phase": "PREPARE_ADV_SIDE",
+          "start_ms": 0
+        },
+        {
+          "action_id": "A1",
+          "end_ms": 225,
+          "phase": "PREPARE_CONNECT_SIDE",
+          "start_ms": 90
+        },
+        {
+          "action_id": "A1",
+          "end_ms": 675,
+          "phase": "BLE_XFER",
+          "start_ms": 225
+        },
+        {
+          "action_id": "A1",
+          "end_ms": 750,
+          "phase": "BLE_SETTLE",
+          "start_ms": 675
+        },
+        {
+          "action_id": "A2",
+          "end_ms": 180,
+          "phase": "PREPARE_ADV_SIDE",
+          "start_ms": 90
+        },
+        {
+          "action_id": "A2",
+          "end_ms": 885,
+          "phase": "PREPARE_CONNECT_SIDE",
+          "start_ms": 750
+        },
+        {
+          "action_id": "A2",
+          "end_ms": 1335,
+          "phase": "BLE_XFER",
+          "start_ms": 885
+        },
+        {
+          "action_id": "A2",
+          "end_ms": 1410,
+          "phase": "BLE_SETTLE",
+          "start_ms": 1335
+        },
+        {
+          "action_id": "A3",
+          "end_ms": 840,
+          "phase": "PREPARE_ADV_SIDE",
+          "start_ms": 750
+        },
+        {
+          "action_id": "A3",
+          "end_ms": 1545,
+          "phase": "PREPARE_CONNECT_SIDE",
+          "start_ms": 1410
+        },
+        {
+          "action_id": "A3",
+          "end_ms": 1995,
+          "phase": "BLE_XFER",
+          "start_ms": 1545
+        },
+        {
+          "action_id": "A3",
+          "end_ms": 2070,
+          "phase": "BLE_SETTLE",
+          "start_ms": 1995
+        },
+        {
+          "action_id": "A4",
+          "end_ms": 1500,
+          "phase": "PREPARE_ADV_SIDE",
+          "start_ms": 1410
+        },
+        {
+          "action_id": "A4",
+          "end_ms": 2205,
+          "phase": "PREPARE_CONNECT_SIDE",
+          "start_ms": 2070
+        },
+        {
+          "action_id": "A4",
+          "end_ms": 2655,
+          "phase": "BLE_XFER",
+          "start_ms": 2205
+        },
+        {
+          "action_id": "A4",
+          "end_ms": 2730,
+          "phase": "BLE_SETTLE",
+          "start_ms": 2655
+        }
+      ],
+      "refined_latency_ms": 2730,
+      "serial_events": [
+        {
+          "action_id": "A1",
+          "end_ms": 90,
+          "phase": "PREPARE_ADV_SIDE",
+          "start_ms": 0
+        },
+        {
+          "action_id": "A1",
+          "end_ms": 225,
+          "phase": "PREPARE_CONNECT_SIDE",
+          "start_ms": 90
+        },
+        {
+          "action_id": "A1",
+          "end_ms": 675,
+          "phase": "BLE_XFER",
+          "start_ms": 225
+        },
+        {
+          "action_id": "A1",
+          "end_ms": 750,
+          "phase": "BLE_SETTLE",
+          "start_ms": 675
+        },
+        {
+          "action_id": "A2",
+          "end_ms": 840,
+          "phase": "PREPARE_ADV_SIDE",
+          "start_ms": 750
+        },
+        {
+          "action_id": "A2",
+          "end_ms": 975,
+          "phase": "PREPARE_CONNECT_SIDE",
+          "start_ms": 840
+        },
+        {
+          "action_id": "A2",
+          "end_ms": 1425,
+          "phase": "BLE_XFER",
+          "start_ms": 975
+        },
+        {
+          "action_id": "A2",
+          "end_ms": 1500,
+          "phase": "BLE_SETTLE",
+          "start_ms": 1425
+        },
+        {
+          "action_id": "A3",
+          "end_ms": 1590,
+          "phase": "PREPARE_ADV_SIDE",
+          "start_ms": 1500
+        },
+        {
+          "action_id": "A3",
+          "end_ms": 1725,
+          "phase": "PREPARE_CONNECT_SIDE",
+          "start_ms": 1590
+        },
+        {
+          "action_id": "A3",
+          "end_ms": 2175,
+          "phase": "BLE_XFER",
+          "start_ms": 1725
+        },
+        {
+          "action_id": "A3",
+          "end_ms": 2250,
+          "phase": "BLE_SETTLE",
+          "start_ms": 2175
+        },
+        {
+          "action_id": "A4",
+          "end_ms": 2340,
+          "phase": "PREPARE_ADV_SIDE",
+          "start_ms": 2250
+        },
+        {
+          "action_id": "A4",
+          "end_ms": 2475,
+          "phase": "PREPARE_CONNECT_SIDE",
+          "start_ms": 2340
+        },
+        {
+          "action_id": "A4",
+          "end_ms": 2925,
+          "phase": "BLE_XFER",
+          "start_ms": 2475
+        },
+        {
+          "action_id": "A4",
+          "end_ms": 3000,
+          "phase": "BLE_SETTLE",
+          "start_ms": 2925
+        }
+      ],
+      "validation": {
+        "coarse_completion_order_preserved": true,
+        "connectable_constraints_ok": true,
+        "lookahead_depth_ok": true,
+        "passed": true,
+        "phase_order_valid": true,
+        "reasons": [],
+        "rollback_constraints_ok": true,
+        "scanner_constraints_ok": true,
+        "slot_constraints_ok": true,
+        "type_constraints_ok": true,
+        "xfer_serialized": true
+      }
+    }
+  ],
+  "target_path": "data/targets/vdev_benchmarks/vdev_overnight_health_safety_monitoring_01.json",
+  "vdev_id": "vdev_overnight_health_safety_monitoring_01"
+}

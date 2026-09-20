@@ -1,0 +1,67 @@
+{
+  "constraints": {
+    "optimization_knobs": {
+      "allow_concurrency": true
+    }
+  },
+  "critical_action_ids": [
+    "A0"
+  ],
+  "entrypoint": {
+    "kind": "function",
+    "name": "async_setup_entry"
+  },
+  "hard_dependencies": [],
+  "objectives": {
+    "primary": "minimize_tail_latency"
+  },
+  "soft_dependencies": [],
+  "source_scope": {
+    "commit": "HEAD",
+    "domains": [
+      "demo"
+    ],
+    "entrypoints": [
+      {
+        "kind": "function",
+        "name": "async_setup_entry"
+      }
+    ],
+    "files": [
+      "data/repo_snapshot/demo_integration.py"
+    ],
+    "platforms": [],
+    "repo_path": "data/repo_snapshot"
+  },
+  "target_anchors": {
+    "anchor_ops": [
+      "STATE_WRITE",
+      "COORD_REFRESH"
+    ],
+    "characteristics": [],
+    "device_ids": [],
+    "endpoints": [],
+    "entities": [],
+    "service_entrypoints": []
+  },
+  "validation": {
+    "differential_tests": {
+      "enabled": true
+    }
+  },
+  "vdev_actions": [
+    {
+      "action_id": "A0",
+      "critical": true,
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "protocol": "HA",
+      "target": {
+        "id": "fallback",
+        "kind": "ha_entity"
+      },
+      "type": "write"
+    }
+  ]
+}

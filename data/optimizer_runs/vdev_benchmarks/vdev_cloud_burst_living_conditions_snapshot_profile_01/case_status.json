@@ -1,0 +1,197 @@
+{
+  "vdev_id": "vdev_cloud_burst_living_conditions_snapshot_profile_01",
+  "name": "Cloud Burst Living Conditions Snapshot Profile Coverage",
+  "group": "Profile Coverage - Realistic Stress Routines",
+  "target_path": "data/targets/vdev_benchmarks/vdev_cloud_burst_living_conditions_snapshot_profile_01.json",
+  "run_dir": "data/optimizer_runs/vdev_benchmarks/vdev_cloud_burst_living_conditions_snapshot_profile_01",
+  "strict_pass": 6,
+  "tolerant_pass": 6,
+  "counterexample_count": 0,
+  "batch_count": 14,
+  "parallel_groups": {
+    "batch_000": [
+      [
+        "A1",
+        "A10"
+      ],
+      [
+        "A2"
+      ],
+      [
+        "A3"
+      ]
+    ],
+    "batch_001": [
+      [
+        "A4"
+      ]
+    ],
+    "batch_002": [
+      [
+        "A5"
+      ]
+    ],
+    "batch_003": [
+      [
+        "A6"
+      ]
+    ],
+    "batch_004": [
+      [
+        "A7"
+      ]
+    ],
+    "batch_005": [
+      [
+        "A8"
+      ]
+    ],
+    "batch_006": [
+      [
+        "A9"
+      ]
+    ],
+    "batch_007": [
+      [
+        "A11"
+      ]
+    ],
+    "batch_008": [
+      [
+        "A12"
+      ]
+    ],
+    "batch_009": [
+      [
+        "A13"
+      ]
+    ],
+    "batch_010": [
+      [
+        "A14"
+      ],
+      [
+        "A15"
+      ],
+      [
+        "A16"
+      ],
+      [
+        "A17"
+      ],
+      [
+        "A18"
+      ]
+    ],
+    "batch_011": [
+      [
+        "A19"
+      ]
+    ],
+    "batch_012": [
+      [
+        "A20"
+      ],
+      [
+        "A21"
+      ]
+    ],
+    "batch_013": [
+      [
+        "A22"
+      ]
+    ]
+  },
+  "batching_buckets": {
+    "batch_000": [
+      {
+        "bucket": "tuya",
+        "chunks": 1,
+        "group_key": "host",
+        "max_batch_size": 3,
+        "max_wait_ms": 40,
+        "members": [
+          "A1",
+          "A10"
+        ],
+        "rule_kind": "SAME_SESSION_GROUP",
+        "size": 2
+      }
+    ],
+    "batch_001": [],
+    "batch_002": [],
+    "batch_003": [],
+    "batch_004": [],
+    "batch_005": [],
+    "batch_006": [],
+    "batch_007": [],
+    "batch_008": [],
+    "batch_009": [],
+    "batch_010": [],
+    "batch_011": [],
+    "batch_012": [],
+    "batch_013": []
+  },
+  "triggered_fallbacks": [
+    {
+      "fallback": "serialize_local_api_reads",
+      "kind": "SAME_SESSION_GROUP",
+      "params": {
+        "group_key": "endpoint",
+        "reuse_window_ms": 5000,
+        "rule_id": "rule_protocol_local_api_budget",
+        "template_kind": "SAME_SESSION_GROUP"
+      },
+      "scope": [
+        "A18",
+        "A19"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:CONTROL_DEP"
+      },
+      "scope": [
+        "A16",
+        "A20"
+      ]
+    },
+    {
+      "fallback": "force_topological_local_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:DATA_DEP"
+      },
+      "scope": [
+        "A16"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:CONTROL_DEP"
+      },
+      "scope": [
+        "A18",
+        "A21"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:CONTROL_DEP"
+      },
+      "scope": [
+        "A19",
+        "A21"
+      ]
+    }
+  ],
+  "unknown_protocol_actions": [],
+  "status": "ok",
+  "run_id": "28a76fe6a26b4035bb294da0c1c85f93"
+}

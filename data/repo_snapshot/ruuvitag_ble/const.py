@@ -1,0 +1,3 @@
+
+
+DOMAIN = "ruuvitag_ble"

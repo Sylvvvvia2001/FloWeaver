@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_party_preparation_full_sweep_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Party Preparation Full Sweep"
+}

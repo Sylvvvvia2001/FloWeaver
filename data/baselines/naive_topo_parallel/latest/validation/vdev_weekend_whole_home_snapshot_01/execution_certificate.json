@@ -1,0 +1,792 @@
+{
+  "canonicalization_version": "v1",
+  "certificate_id": "cert_31e80b21262a",
+  "counterexamples": [
+    {
+      "alignment_status": "PARTIAL",
+      "counterexample_id": "cex_d681d2eb79",
+      "culprit_ids": [
+        "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:esphome:relay_node_1"
+      ],
+      "diff_summary": {
+        "baseline_state_at_divergence": {
+          "exception_category": null,
+          "resource_keys": [
+            "connection:ble:esphome:air_node_1"
+          ],
+          "state_writes": {}
+        },
+        "baseline_trace_prefix": [
+          {
+            "corr_id": null,
+            "op": "BLE_GATT_OP",
+            "params_abst": {
+              "action_id": "A1"
+            },
+            "phase": "RUNTIME",
+            "provider": "BLE",
+            "target": "ble:switchbot:curtain_living_room",
+            "ts": 0.0
+          },
+          {
+            "corr_id": null,
+            "op": "BLE_GATT_OP",
+            "params_abst": {
+              "action_id": "A2"
+            },
+            "phase": "RUNTIME",
+            "provider": "BLE",
+            "target": "ble:switchbot:curtain_bedroom",
+            "ts": 0.0
+          },
+          {
+            "corr_id": null,
+            "op": "BLE_GATT_OP",
+            "params_abst": {
+              "action_id": "A3"
+            },
+            "phase": "RUNTIME",
+            "provider": "BLE",
+            "target": "ble:switchbot:curtain_study",
+            "ts": 0.0
+          },
+          {
+            "corr_id": null,
+            "op": "BLE_GATT_OP",
+            "params_abst": {
+              "action_id": "A4"
+            },
+            "phase": "RUNTIME",
+            "provider": "BLE",
+            "target": "ble:xiaomi_ble:temp_sensor_living_room",
+            "ts": 0.0
+          },
+          {
+            "corr_id": null,
+            "op": "BLE_GATT_OP",
+            "params_abst": {
+              "action_id": "A5"
+            },
+            "phase": "RUNTIME",
+            "provider": "BLE",
+            "target": "ble:xiaomi_ble:temp_sensor_bedroom",
+            "ts": 0.0
+          },
+          {
+            "corr_id": null,
+            "op": "BLE_GATT_OP",
+            "params_abst": {
+              "action_id": "A6"
+            },
+            "phase": "RUNTIME",
+            "provider": "BLE",
+            "target": "ble:xiaomi_ble:motion_sensor_hallway",
+            "ts": 0.0
+          },
+          {
+            "corr_id": null,
+            "op": "BLE_CONNECT",
+            "params_abst": {
+              "action_id": "A7"
+            },
+            "phase": "RUNTIME",
+            "provider": "BLE",
+            "target": "ble:esphome:air_node_1",
+            "ts": 0.0
+          },
+          {
+            "corr_id": null,
+            "op": "BLE_NOTIFY_SUBSCRIBE",
+            "params_abst": {
+              "action_id": "A8"
+            },
+            "phase": "RUNTIME",
+            "provider": "BLE",
+            "target": "ble:esphome:relay_node_1",
+            "ts": 0.0
+          }
+        ],
+        "counterexample_verdict": "DIFF_FOUND",
+        "divergence_point": {
+          "details": {
+            "compare_meta": {
+              "canonicalization_version": "v1",
+              "commutable_ops": [
+                "COORD_REFRESH",
+                "STATE_WRITE"
+              ],
+              "config_hash": "9285a670239fb92a",
+              "equivalence_rules": [],
+              "parallel_action_scopes": []
+            },
+            "diff_hunks": [
+              {
+                "anchor": "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:esphome:relay_node_1",
+                "baseline_ops": [
+                  "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:esphome:relay_node_1"
+                ],
+                "optimized_ops": [],
+                "severity": "MEDIUM"
+              }
+            ]
+          },
+          "kind": "SPLIT",
+          "reason": "trace_prefix_mismatch",
+          "step": 8,
+          "useg_node_id": "useg_0007"
+        },
+        "environment_assumptions": {
+          "path_assumptions": [
+            "scenario:vdev_weekend_whole_home_snapshot_01"
+          ],
+          "resource_assumptions": [
+            "connection:ble:esphome:air_node_1"
+          ],
+          "suspicious_region_id": "sr_001"
+        },
+        "hunks": [
+          {
+            "anchor": "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:esphome:relay_node_1",
+            "baseline_ops": [
+              "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:esphome:relay_node_1"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          },
+          {
+            "anchor": "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:esphome:relay_node_1",
+            "baseline_ops": [],
+            "optimized_ops": [
+              "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:esphome:relay_node_1"
+            ],
+            "severity": "MEDIUM"
+          }
+        ],
+        "inferred_by": "check_observation_schema_or_alignment_rule",
+        "input_assumptions": {},
+        "kind": "order_violation",
+        "minimal_conditions": [
+          "scenario:vdev_weekend_whole_home_snapshot_01",
+          "resource:connection:ble:esphome:air_node_1"
+        ],
+        "optimized_state_at_divergence": {
+          "exception_category": null,
+          "resource_keys": [
+            "connection:ble:esphome:air_node_1"
+          ],
+          "state_writes": {}
+        },
+        "optimized_trace_prefix": [
+          {
+            "corr_id": null,
+            "op": "BLE_GATT_OP",
+            "params_abst": {
+              "action_id": "A1"
+            },
+            "phase": "RUNTIME",
+            "provider": "BLE",
+            "target": "ble:switchbot:curtain_living_room",
+            "ts": 0.0
+          },
+          {
+            "corr_id": null,
+            "op": "BLE_GATT_OP",
+            "params_abst": {
+              "action_id": "A2"
+            },
+            "phase": "RUNTIME",
+            "provider": "BLE",
+            "target": "ble:switchbot:curtain_bedroom",
+            "ts": 0.0
+          },
+          {
+            "corr_id": null,
+            "op": "BLE_GATT_OP",
+            "params_abst": {
+              "action_id": "A3"
+            },
+            "phase": "RUNTIME",
+            "provider": "BLE",
+            "target": "ble:switchbot:curtain_study",
+            "ts": 0.0
+          },
+          {
+            "corr_id": null,
+            "op": "BLE_GATT_OP",
+            "params_abst": {
+              "action_id": "A4"
+            },
+            "phase": "RUNTIME",
+            "provider": "BLE",
+            "target": "ble:xiaomi_ble:temp_sensor_living_room",
+            "ts": 0.0
+          },
+          {
+            "corr_id": null,
+            "op": "BLE_GATT_OP",
+            "params_abst": {
+              "action_id": "A5"
+            },
+            "phase": "RUNTIME",
+            "provider": "BLE",
+            "target": "ble:xiaomi_ble:temp_sensor_bedroom",
+            "ts": 0.0
+          },
+          {
+            "corr_id": null,
+            "op": "BLE_GATT_OP",
+            "params_abst": {
+              "action_id": "A6"
+            },
+            "phase": "RUNTIME",
+            "provider": "BLE",
+            "target": "ble:xiaomi_ble:motion_sensor_hallway",
+            "ts": 0.0
+          },
+          {
+            "corr_id": null,
+            "op": "BLE_CONNECT",
+            "params_abst": {
+              "action_id": "A7"
+            },
+            "phase": "RUNTIME",
+            "provider": "BLE",
+            "target": "ble:esphome:air_node_1",
+            "ts": 0.0
+          }
+        ],
+        "refinement_hint": "check_observation_schema_or_alignment_rule",
+        "suspicious_region_id": "sr_001",
+        "violated_property": "TRACE_MISMATCH"
+      },
+      "execution_plan_hash": "5b30067c68b7",
+      "scenario_id": "vdev_weekend_whole_home_snapshot_01",
+      "suspicious_region_count": 3,
+      "trust_plan_hash": "5b30067c68b7",
+      "violated_assertion": "observable_semantic_equivalence"
+    }
+  ],
+  "differential_summary": {
+    "compare_meta": {
+      "canonicalization_version": "v1",
+      "commutable_ops": [
+        "COALESCE_STATE_WRITE",
+        "COORD_REFRESH",
+        "STATE_WRITE"
+      ],
+      "config_hash": "b177162fb54a8dbe",
+      "equivalence_rules": [],
+      "parallel_action_scopes": [
+        [
+          "A10",
+          "A11",
+          "A7",
+          "A9"
+        ],
+        [
+          "A12",
+          "A13",
+          "A14",
+          "A8"
+        ],
+        [
+          "A15",
+          "A16",
+          "A17",
+          "A18"
+        ],
+        [
+          "A20",
+          "A21",
+          "A22"
+        ]
+      ]
+    },
+    "counterexample_count": 1,
+    "earliest_violation_summary": {
+      "dominant_target": "ble:esphome:relay_node_1",
+      "top_anchors": [
+        [
+          "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:esphome:relay_node_1",
+          1
+        ]
+      ],
+      "top_targets": [
+        [
+          "ble:esphome:relay_node_1",
+          1
+        ]
+      ]
+    },
+    "focus_terms": [
+      "ble:switchbot:curtain_living_room",
+      "ble:switchbot:curtain_bedroom",
+      "ble:switchbot:curtain_study",
+      "ble:xiaomi_ble:temp_sensor_living_room",
+      "ble:xiaomi_ble:temp_sensor_bedroom",
+      "ble:xiaomi_ble:motion_sensor_hallway",
+      "ble:esphome:air_node_1",
+      "ble:esphome:relay_node_1",
+      "tuya:light.living_room_1.status",
+      "tuya:light.living_room_2.status",
+      "tuya:light.bedroom_1.status",
+      "tuya:climate.living_room.status",
+      "tuya:climate.bedroom.status",
+      "tuya:switch.energy_strip_tv.status",
+      "tuya:switch.energy_strip_study.status",
+      "sensor.vdev_weekend_ble_lane",
+      "sensor.vdev_weekend_cloud_lane",
+      "sensor.vdev_weekend_local_lane",
+      "sensor.vdev_weekend_overall",
+      "sensor.vdev_weekend_ble_lane",
+      "sensor.vdev_weekend_cloud_lane",
+      "sensor.vdev_weekend_local_lane",
+      "sensor.vdev_weekend_overall",
+      "floweaver.run_weekend_whole_home_snapshot_01",
+      "BLE_CONNECT",
+      "BLE_GATT_OP",
+      "BLE_NOTIFY_SUBSCRIBE",
+      "BLE_OP",
+      "CLOUD_HTTP_CALL",
+      "CLOUD_OP",
+      "CLOUD_STATUS_CALL",
+      "LOCAL_API_READ",
+      "MQTT_SUBSCRIBE",
+      "STATE_WRITE",
+      "SUBSCRIBE"
+    ],
+    "hardening_threshold": {
+      "min_coverage": 0.85,
+      "min_pass_rate": 0.98
+    },
+    "rollback_applied_kinds": [],
+    "rollback_iterations": 0,
+    "rollback_max_steps": 6,
+    "rule_stats": {
+      "naive_topo_check_only": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": 0.0,
+        "last_updated_at": "2026-07-06T12:34:37.256635+00:00",
+        "m6_alignment": {
+          "alignment_status_counts": {
+            "PARTIAL": 1
+          },
+          "final_counterexample_scenarios": [],
+          "matched_scenarios": [
+            "vdev_weekend_whole_home_snapshot_01"
+          ],
+          "resource_preserved_scenarios": [],
+          "rollback_touched": false,
+          "strict_pass_scenarios": [],
+          "tolerant_pass_scenarios": []
+        },
+        "n_applied": 1,
+        "n_counterexamples": 0,
+        "n_matched": 1,
+        "n_success": 0,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": 0.0,
+        "rule_id": "naive_topo_check_only",
+        "trace_preserved_rate": 0.0
+      }
+    },
+    "runtime_policy_summary": [],
+    "scenario_total": 1,
+    "strict_pass": 0,
+    "tolerant_pass": 0
+  },
+  "generated_at": "2026-07-06T12:34:37.256635+00:00",
+  "hard_edge_proof": {
+    "acyclic": true,
+    "edge_count": 0,
+    "edges": []
+  },
+  "integration": "vdev_weekend_whole_home_snapshot_01",
+  "mssu_signatures": [
+    {
+      "mssu_id": "m001",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m002",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m003",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m004",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m005",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m006",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m007",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m008",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m009",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m010",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m011",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m012",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m013",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m014",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m015",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m016",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m017",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m018",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m019",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m020",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m021",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m022",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m023",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    }
+  ],
+  "plan_summary": {
+    "action_count": 23,
+    "batch_count": 12,
+    "batches": [
+      {
+        "batch_id": "naive_batch_000",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_001",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_002",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_003",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_004",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_005",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_006",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          4
+        ],
+        "guard_count": 0,
+        "max_group_size": 4,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_007",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          4
+        ],
+        "guard_count": 0,
+        "max_group_size": 4,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_008",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          4
+        ],
+        "guard_count": 0,
+        "max_group_size": 4,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_009",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_010",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          3
+        ],
+        "guard_count": 0,
+        "max_group_size": 3,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_011",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      }
+    ],
+    "forced_pick_batch_count": 0,
+    "group_count": 12,
+    "max_group_size": 4,
+    "policy": {
+      "ble_parallel": 1,
+      "cloud_parallel": 4,
+      "local_parallel": 4,
+      "max_parallel": 4
+    },
+    "policy_snapshot": {}
+  },
+  "profile_version": "naive_topo_parallel/v1",
+  "schema_version": "execution_certificate/v1",
+  "soft_constraints": []
+}

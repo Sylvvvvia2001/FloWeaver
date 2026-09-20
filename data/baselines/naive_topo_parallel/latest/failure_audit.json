@@ -1,0 +1,190 @@
+{
+  "counts": {
+    "read_write_independent_reorder": 9
+  },
+  "details": [
+    {
+      "case_id": "vdev_arrival_comfort_preparation_01",
+      "classification": "read_write_independent_reorder",
+      "sample_pairs": [
+        [
+          "A6",
+          "A7"
+        ],
+        [
+          "A6",
+          "A8"
+        ],
+        [
+          "A6",
+          "A9"
+        ]
+      ]
+    },
+    {
+      "case_id": "vdev_arrival_home_preparation_profile_01",
+      "classification": "read_write_independent_reorder",
+      "sample_pairs": [
+        [
+          "A5",
+          "A6"
+        ],
+        [
+          "A5",
+          "A7"
+        ],
+        [
+          "A5",
+          "A8"
+        ]
+      ]
+    },
+    {
+      "case_id": "vdev_arrive_home_lighting_climate_prep_01",
+      "classification": "read_write_independent_reorder",
+      "sample_pairs": [
+        [
+          "A6",
+          "A7"
+        ],
+        [
+          "A6",
+          "A8"
+        ],
+        [
+          "A6",
+          "A9"
+        ]
+      ]
+    },
+    {
+      "case_id": "vdev_holiday_vacation_mode_full_audit_01",
+      "classification": "read_write_independent_reorder",
+      "sample_pairs": [
+        [
+          "A14",
+          "A15"
+        ],
+        [
+          "A14",
+          "A16"
+        ],
+        [
+          "A14",
+          "A17"
+        ]
+      ]
+    },
+    {
+      "case_id": "vdev_morning_wakeup_readiness_01",
+      "classification": "read_write_independent_reorder",
+      "sample_pairs": [
+        [
+          "A7",
+          "A8"
+        ],
+        [
+          "A7",
+          "A9"
+        ],
+        [
+          "A7",
+          "A10"
+        ]
+      ]
+    },
+    {
+      "case_id": "vdev_morning_wakeup_readiness_profile_01",
+      "classification": "read_write_independent_reorder",
+      "sample_pairs": [
+        [
+          "A8",
+          "A9"
+        ],
+        [
+          "A8",
+          "A10"
+        ],
+        [
+          "A8",
+          "A11"
+        ]
+      ]
+    },
+    {
+      "case_id": "vdev_weekend_whole_home_snapshot_01",
+      "classification": "read_write_independent_reorder",
+      "sample_pairs": [
+        [
+          "A8",
+          "A9"
+        ],
+        [
+          "A8",
+          "A10"
+        ],
+        [
+          "A8",
+          "A11"
+        ]
+      ]
+    },
+    {
+      "case_id": "vdev_weekend_whole_home_snapshot_extended_01",
+      "classification": "read_write_independent_reorder",
+      "sample_pairs": [
+        [
+          "A8",
+          "A9"
+        ],
+        [
+          "A8",
+          "A10"
+        ],
+        [
+          "A8",
+          "A11"
+        ]
+      ]
+    },
+    {
+      "case_id": "vdev_weekend_whole_home_snapshot_profile_01",
+      "classification": "read_write_independent_reorder",
+      "sample_pairs": [
+        [
+          "A8",
+          "A9"
+        ],
+        [
+          "A8",
+          "A10"
+        ],
+        [
+          "A8",
+          "A11"
+        ]
+      ]
+    }
+  ],
+  "examples": {
+    "read_write_independent_reorder": {
+      "case_id": "vdev_arrival_comfort_preparation_01",
+      "classification": "read_write_independent_reorder",
+      "sample_pairs": [
+        [
+          "A6",
+          "A7"
+        ],
+        [
+          "A6",
+          "A8"
+        ],
+        [
+          "A6",
+          "A9"
+        ]
+      ]
+    }
+  },
+  "failed_case_count": 9
+}

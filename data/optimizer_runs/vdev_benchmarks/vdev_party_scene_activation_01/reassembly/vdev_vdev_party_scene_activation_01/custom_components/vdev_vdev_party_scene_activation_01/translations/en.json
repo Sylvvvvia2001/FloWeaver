@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_party_scene_activation_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Party Scene Activation Routine"
+}

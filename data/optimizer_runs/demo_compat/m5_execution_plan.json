@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "critical_boost": {
+      "msf00_000_coord_refresh": 1,
+      "msf00_001_entry_setup": 0,
+      "msf00_002_coord_refresh": 1,
+      "msf00_003_state_write": 1
+    },
+    "critical_score": {
+      "msf00_000_coord_refresh": 1.0,
+      "msf00_001_entry_setup": 1.0,
+      "msf00_002_coord_refresh": 1.0,
+      "msf00_003_state_write": 1.0
+    },
+    "objectives": {
+      "primary": "minimize_tail_latency"
+    },
+    "policy": {
+      "ble_parallel": 1,
+      "cloud_parallel": 3,
+      "default_qps": 5.0,
+      "max_parallel": 4
+    },
+    "soft_summary": {}
+  },
+  "ordered_batches": [
+    {
+      "batch_id": "batch_000",
+      "constraints": [],
+      "fallback": {
+        "COALESCE_STATE_WRITE": "disable_optimization_for_scope"
+      },
+      "guards": [
+        "runtime_metrics_available",
+        "runtime_metrics_available"
+      ],
+      "parallel_groups": [
+        [
+          "msf00_000_coord_refresh",
+          "msf00_002_coord_refresh",
+          "msf00_003_state_write",
+          "msf00_001_entry_setup"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 4,
+        "max_qps": 5.0
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true
+      }
+    }
+  ]
+}

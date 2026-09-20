@@ -1,0 +1,9 @@
+{
+  "codeowners": [],
+  "dependencies": [],
+  "documentation": "https://example.invalid/vibeaura/vdev",
+  "domain": "vdev_vdev_dinner_preparation_readiness_01",
+  "name": "Dinner Preparation Readiness",
+  "requirements": [],
+  "version": "0.1.0"
+}

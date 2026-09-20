@@ -1,0 +1,361 @@
+{
+  "edge_count": 9,
+  "edges": [
+    {
+      "dst_locations": [
+        "data/repo_snapshot/tuya/entity.py:63",
+        "data/repo_snapshot/tuya/entity.py:76"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/entity.py:76",
+          "marker_id": "marker_5718cbb36c",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf04_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf07_001_cloud_op"
+      },
+      "origin": {
+        "dependency": "A1->A9",
+        "details": [
+          "vdev_dep:A1->A9",
+          "cloud_write_depends_on_a1"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tuya/light.py:467",
+        "data/repo_snapshot/tuya/light.py:468",
+        "data/repo_snapshot/tuya/light.py:469",
+        "data/repo_snapshot/tuya/light.py:470"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/light.py:470",
+          "marker_id": "marker_ecddbca34e",
+          "marker_type": "CLOUD_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/tuya/entity.py:63",
+        "data/repo_snapshot/tuya/entity.py:76"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/entity.py:76",
+          "marker_id": "marker_5718cbb36c",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf04_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf09_001_cloud_op"
+      },
+      "origin": {
+        "dependency": "A2->A9",
+        "details": [
+          "vdev_dep:A2->A9",
+          "cloud_write_depends_on_a2"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tuya/switch.py:919",
+        "data/repo_snapshot/tuya/switch.py:920",
+        "data/repo_snapshot/tuya/switch.py:921",
+        "data/repo_snapshot/tuya/switch.py:922"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/switch.py:922",
+          "marker_id": "marker_47f9feae06",
+          "marker_type": "CLOUD_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/tuya/entity.py:63",
+        "data/repo_snapshot/tuya/entity.py:76"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/entity.py:76",
+          "marker_id": "marker_5718cbb36c",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf04_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf02_000_cloud_op"
+      },
+      "origin": {
+        "dependency": "A3->A9",
+        "details": [
+          "vdev_dep:A3->A9",
+          "cloud_write_depends_on_a3"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tuya/climate.py:129",
+        "data/repo_snapshot/tuya/climate.py:132",
+        "data/repo_snapshot/tuya/climate.py:135",
+        "data/repo_snapshot/tuya/climate.py:138",
+        "data/repo_snapshot/tuya/climate.py:143",
+        "data/repo_snapshot/tuya/climate.py:148",
+        "data/repo_snapshot/tuya/climate.py:149",
+        "data/repo_snapshot/tuya/climate.py:150"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:150",
+          "marker_id": "marker_a9d59478a4",
+          "marker_type": "CLOUD_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/tuya/entity.py:63",
+        "data/repo_snapshot/tuya/entity.py:76"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/entity.py:76",
+          "marker_id": "marker_5718cbb36c",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf04_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf08_001_cloud_op"
+      },
+      "origin": {
+        "dependency": "A4->A9",
+        "details": [
+          "vdev_dep:A4->A9",
+          "cloud_write_depends_on_a4"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tuya/sensor.py:1655",
+        "data/repo_snapshot/tuya/sensor.py:1656",
+        "data/repo_snapshot/tuya/sensor.py:1657",
+        "data/repo_snapshot/tuya/sensor.py:1658"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/sensor.py:1658",
+          "marker_id": "marker_9fbba56a83",
+          "marker_type": "CLOUD_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/tuya/entity.py:63",
+        "data/repo_snapshot/tuya/entity.py:76"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/entity.py:76",
+          "marker_id": "marker_5718cbb36c",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf04_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf03_001_cloud_op"
+      },
+      "origin": {
+        "dependency": "A5->A9",
+        "details": [
+          "vdev_dep:A5->A9",
+          "cloud_write_depends_on_a5"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tuya/cover.py:182",
+        "data/repo_snapshot/tuya/cover.py:183",
+        "data/repo_snapshot/tuya/cover.py:184",
+        "data/repo_snapshot/tuya/cover.py:185"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/cover.py:185",
+          "marker_id": "marker_139686e0a3",
+          "marker_type": "CLOUD_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/tuya/entity.py:63",
+        "data/repo_snapshot/tuya/entity.py:76"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/entity.py:76",
+          "marker_id": "marker_5718cbb36c",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf04_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf06_000_cloud_op"
+      },
+      "origin": {
+        "dependency": "A6->A9",
+        "details": [
+          "vdev_dep:A6->A9",
+          "cloud_write_depends_on_a6"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tuya/fan.py:182",
+        "data/repo_snapshot/tuya/fan.py:228",
+        "data/repo_snapshot/tuya/fan.py:229"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/fan.py:229",
+          "marker_id": "marker_74a71d9ca9",
+          "marker_type": "CLOUD_OP"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/fan.py:182",
+          "marker_id": "marker_c267cdad72",
+          "marker_type": "CLOUD_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/tuya/entity.py:63",
+        "data/repo_snapshot/tuya/entity.py:76"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/entity.py:76",
+          "marker_id": "marker_5718cbb36c",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf04_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf01_001_cloud_op"
+      },
+      "origin": {
+        "dependency": "A7->A9",
+        "details": [
+          "vdev_dep:A7->A9",
+          "cloud_write_depends_on_a7"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tuya/binary_sensor.py:420",
+        "data/repo_snapshot/tuya/binary_sensor.py:421",
+        "data/repo_snapshot/tuya/binary_sensor.py:422",
+        "data/repo_snapshot/tuya/binary_sensor.py:423"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/binary_sensor.py:423",
+          "marker_id": "marker_f2891e6adf",
+          "marker_type": "CLOUD_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/tuya/entity.py:63",
+        "data/repo_snapshot/tuya/entity.py:76"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/entity.py:76",
+          "marker_id": "marker_5718cbb36c",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf04_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf05_001_cloud_op"
+      },
+      "origin": {
+        "dependency": "A8->A9",
+        "details": [
+          "vdev_dep:A8->A9",
+          "cloud_write_depends_on_a8"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tuya/event.py:126",
+        "data/repo_snapshot/tuya/event.py:127",
+        "data/repo_snapshot/tuya/event.py:128",
+        "data/repo_snapshot/tuya/event.py:129"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/event.py:129",
+          "marker_id": "marker_21e2321342",
+          "marker_type": "CLOUD_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/esphome/update.py:186"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/esphome/update.py:186",
+          "marker_id": "marker_767e7c72f5",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf00_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf04_000_state_write"
+      },
+      "origin": {
+        "dependency": "A9->A10",
+        "details": [
+          "vdev_dep:A9->A10",
+          "overall_write_depends_on_cloud_lane"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tuya/entity.py:63",
+        "data/repo_snapshot/tuya/entity.py:76"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/entity.py:76",
+          "marker_id": "marker_5718cbb36c",
+          "marker_type": "STATE_WRITE"
+        }
+      ]
+    }
+  ]
+}

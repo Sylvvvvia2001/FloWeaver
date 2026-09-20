@@ -1,0 +1,9 @@
+{
+  "codeowners": [],
+  "dependencies": [],
+  "documentation": "https://example.invalid/vibeaura/vdev",
+  "domain": "vdev_vdev_school_day_quiet_start_check_01",
+  "name": "School-Day Quiet Start Check",
+  "requirements": [],
+  "version": "0.1.0"
+}

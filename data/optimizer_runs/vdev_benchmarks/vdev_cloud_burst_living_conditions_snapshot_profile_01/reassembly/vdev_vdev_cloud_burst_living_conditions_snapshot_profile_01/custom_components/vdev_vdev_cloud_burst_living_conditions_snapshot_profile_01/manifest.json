@@ -1,0 +1,9 @@
+{
+  "codeowners": [],
+  "dependencies": [],
+  "documentation": "https://example.invalid/vibeaura/vdev",
+  "domain": "vdev_vdev_cloud_burst_living_conditions_snapshot_profile_01",
+  "name": "Cloud Burst Living Conditions Snapshot Profile Coverage",
+  "requirements": [],
+  "version": "0.1.0"
+}

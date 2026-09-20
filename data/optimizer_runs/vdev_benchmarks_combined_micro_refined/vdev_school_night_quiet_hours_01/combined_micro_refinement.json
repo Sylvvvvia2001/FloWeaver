@@ -1,0 +1,65 @@
+{
+  "accepted_corridors": [
+    {
+      "action_ids": [
+        "A10",
+        "A11"
+      ],
+      "batch_ids": [
+        "batch_006",
+        "batch_007"
+      ],
+      "corridor_id": "corridor_00",
+      "latency_saved_ms": 25,
+      "source": "API",
+      "validation_passed": true
+    },
+    {
+      "action_ids": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5"
+      ],
+      "batch_ids": [
+        "batch_000",
+        "batch_001",
+        "batch_002",
+        "batch_003",
+        "batch_004"
+      ],
+      "corridor_id": "corridor_00",
+      "latency_saved_ms": 348,
+      "source": "BLE",
+      "validation_passed": true
+    }
+  ],
+  "api_added_savings_ms": 25,
+  "ble_added_savings_ms": 348,
+  "case_name": "School-Night Quiet Hours Routine",
+  "combined_added_savings_ms": 373,
+  "combined_added_savings_ratio": 0.08038793103448276,
+  "combined_refined_estimated_latency_ms": 4267,
+  "conflict_count": 0,
+  "group": "Night and Energy Monitoring Routines",
+  "original_estimated_latency_ms": 4640,
+  "rejected_corridors": [],
+  "target_path": "data/targets/vdev_benchmarks/vdev_school_night_quiet_hours_01.json",
+  "validation": {
+    "api_constraints_ok": true,
+    "batch_order_preserved": true,
+    "ble_constraints_ok": true,
+    "component_validations_ok": true,
+    "conflict_free": true,
+    "contiguous_coverage_ok": true,
+    "event_loop_constraints_ok": true,
+    "passed": true,
+    "projection_ok": true,
+    "reasons": [],
+    "savings_consistency_ok": true,
+    "simulated_event_count": 37,
+    "simulated_total_ms": 4267
+  },
+  "vdev_id": "vdev_school_night_quiet_hours_01"
+}

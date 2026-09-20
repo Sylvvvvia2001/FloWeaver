@@ -1,0 +1,44 @@
+{
+  "created_at": "2026-07-06T08:14:02.413290+00:00",
+  "datasets": {
+    "long-chain": {
+      "agreement_pct": 100.0,
+      "device_side_state_match_pct": 100.0,
+      "exception_match_pct": 100.0,
+      "home_assistant_state_fields": 220,
+      "independent_oracle_passed": 50,
+      "paired_runs": 50,
+      "platform_side_state_match_pct": 100.0,
+      "required_event_match_pct": 100.0,
+      "resource_lifecycle_match_pct": 100.0,
+      "routine_level_state_match_pct": 100.0,
+      "routines": 10,
+      "timing_only_difference_pct": 100.0,
+      "validator_accepted_executions": 50,
+      "vendor_device_api_coverage_pct": 35.29,
+      "vendor_device_api_fields": 120
+    },
+    "smart-home": {
+      "agreement_pct": 100.0,
+      "device_side_state_match_pct": 100.0,
+      "exception_match_pct": 100.0,
+      "home_assistant_state_fields": 510,
+      "independent_oracle_passed": 100,
+      "paired_runs": 100,
+      "platform_side_state_match_pct": 100.0,
+      "required_event_match_pct": 100.0,
+      "resource_lifecycle_match_pct": 100.0,
+      "routine_level_state_match_pct": 100.0,
+      "routines": 20,
+      "timing_only_difference_pct": 85.0,
+      "validator_accepted_executions": 100,
+      "vendor_device_api_coverage_pct": 37.8,
+      "vendor_device_api_fields": 310
+    }
+  },
+  "note": "Simulated mode validates the audit pipeline and file formats; it is not a real-device result.",
+  "oracle_mode": "simulated",
+  "overall_agreement_pct": 100.0,
+  "paired_runs": 150,
+  "routines": 30
+}

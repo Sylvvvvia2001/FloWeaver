@@ -1,0 +1,385 @@
+{
+  "counterexample_summary": {
+    "count": 0
+  },
+  "created_at": "2026-04-12T08:54:16.558961+00:00",
+  "integration": "vdev_leaving_home_safety_check_01",
+  "plan_summary": {
+    "action_count": 16,
+    "batch_count": 16,
+    "batches": [
+      {
+        "batch_id": "batch_000",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_001",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_002",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_003",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_004",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_005",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_006",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_007",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_008",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_009",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_010",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_011",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_012",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_013",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_014",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_015",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      }
+    ],
+    "forced_pick_batch_count": 0,
+    "group_count": 16,
+    "max_group_size": 1,
+    "policy": {
+      "ble_parallel": 1,
+      "cloud_parallel": 3,
+      "default_qps": 5.0,
+      "local_parallel": 6,
+      "max_parallel": 9
+    },
+    "policy_snapshot": {}
+  },
+  "replay_summary": {
+    "phase": "finalize",
+    "strict_pass": 6,
+    "tolerant_pass": 6,
+    "total": 6
+  },
+  "rollback_iterations": 4,
+  "schema_version": "execution_certificate/v1",
+  "status": "COMPLETED"
+}

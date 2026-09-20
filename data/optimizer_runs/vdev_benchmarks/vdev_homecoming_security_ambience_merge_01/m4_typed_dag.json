@@ -1,0 +1,3309 @@
+{
+  "diagnostics": {
+    "m6_rollback": [
+      {
+        "changes": [
+          {
+            "from": [
+              {
+                "enforced": true,
+                "expr": "true",
+                "kind": "MIN_GAP",
+                "scope": [
+                  "A1",
+                  "A2"
+                ]
+              },
+              {
+                "enforced": true,
+                "expr": "ble_conn_success_rate_ok",
+                "kind": "SAME_SESSION_GROUP",
+                "scope": [
+                  "A1",
+                  "A2"
+                ]
+              },
+              {
+                "enforced": true,
+                "expr": "ble_conn_success_rate_ok",
+                "kind": "MIN_GAP",
+                "scope": [
+                  "A1",
+                  "A2"
+                ]
+              }
+            ],
+            "path": "batch:batch_000.guards",
+            "to": [
+              {
+                "enforced": true,
+                "expr": "true",
+                "kind": "MIN_GAP",
+                "scope": [
+                  "A1",
+                  "A2"
+                ]
+              },
+              {
+                "enforced": true,
+                "expr": "ble_conn_success_rate_ok",
+                "kind": "SAME_SESSION_GROUP",
+                "scope": [
+                  "A1",
+                  "A2"
+                ]
+              },
+              {
+                "enforced": true,
+                "expr": "ble_conn_success_rate_ok",
+                "kind": "MIN_GAP",
+                "scope": [
+                  "A1",
+                  "A2"
+                ]
+              },
+              {
+                "enforced": true,
+                "expr": "resource_constrained",
+                "kind": "BUDGET_K",
+                "scope": []
+              }
+            ]
+          },
+          {
+            "from": {
+              "adaptive_controls": [
+                {
+                  "action": "preserve_action_order",
+                  "kind": "MIN_GAP",
+                  "params": {
+                    "reason": "shared_radio_or_transport_budget"
+                  },
+                  "scope": [
+                    "A1"
+                  ]
+                }
+              ],
+              "batch_rules": [
+                {
+                  "group_key": "endpoint",
+                  "idempotent_only": true,
+                  "max_batch_size": 3,
+                  "max_wait_ms": 40,
+                  "scope": [
+                    "A3",
+                    "A5"
+                  ]
+                }
+              ],
+              "batch_size": 1,
+              "batching_buckets": [],
+              "burst": 10,
+              "forced_pick": false,
+              "forced_pick_blocked_kinds": [],
+              "forced_pick_target": [],
+              "max_qps": 5.0,
+              "min_gap_before_ms": 0,
+              "min_gap_rules": [],
+              "trust_policy_blocks": [
+                {
+                  "fallback_actions": [
+                    "preserve_action_order"
+                  ],
+                  "guard_kinds": [
+                    "MIN_GAP",
+                    "SAME_SESSION_GROUP"
+                  ],
+                  "policy_block": "ble_local_policy",
+                  "scope": [
+                    "A1",
+                    "A2"
+                  ]
+                }
+              ],
+              "window_ms": 1000
+            },
+            "path": "batch:batch_000.rate_policy",
+            "to": {
+              "adaptive_controls": [
+                {
+                  "action": "preserve_action_order",
+                  "kind": "MIN_GAP",
+                  "params": {
+                    "reason": "shared_radio_or_transport_budget"
+                  },
+                  "scope": [
+                    "A1"
+                  ]
+                }
+              ],
+              "batch_rules": [
+                {
+                  "group_key": "endpoint",
+                  "idempotent_only": true,
+                  "max_batch_size": 3,
+                  "max_wait_ms": 40,
+                  "scope": [
+                    "A3",
+                    "A5"
+                  ]
+                }
+              ],
+              "batch_size": 1,
+              "batching_buckets": [],
+              "burst": 10,
+              "forced_pick": false,
+              "forced_pick_blocked_kinds": [],
+              "forced_pick_target": [],
+              "max_qps": 1.0,
+              "min_gap_before_ms": 0,
+              "min_gap_rules": [],
+              "trust_policy_blocks": [
+                {
+                  "fallback_actions": [
+                    "preserve_action_order"
+                  ],
+                  "guard_kinds": [
+                    "MIN_GAP",
+                    "SAME_SESSION_GROUP"
+                  ],
+                  "policy_block": "ble_local_policy",
+                  "scope": [
+                    "A1",
+                    "A2"
+                  ]
+                }
+              ],
+              "window_ms": 1000
+            }
+          },
+          {
+            "from": [
+              {
+                "enforced": true,
+                "expr": "true",
+                "kind": "MIN_GAP",
+                "scope": [
+                  "A1",
+                  "A2"
+                ]
+              },
+              {
+                "enforced": true,
+                "expr": "ble_conn_success_rate_ok",
+                "kind": "SAME_SESSION_GROUP",
+                "scope": [
+                  "A1",
+                  "A2"
+                ]
+              },
+              {
+                "enforced": true,
+                "expr": "ble_conn_success_rate_ok",
+                "kind": "MIN_GAP",
+                "scope": [
+                  "A1",
+                  "A2"
+                ]
+              },
+              {
+                "enforced": true,
+                "expr": "latency_budget_allows_batching AND 429_rate_low",
+                "kind": "BATCH_GROUP",
+                "scope": [
+                  "A3",
+                  "A5"
+                ]
+              },
+              {
+                "enforced": true,
+                "expr": "latency_budget_allows_batching AND 429_rate_low",
+                "kind": "SAME_SESSION_GROUP",
+                "scope": [
+                  "A3",
+                  "A5"
+                ]
+              },
+              {
+                "enforced": true,
+                "expr": "true",
+                "kind": "SOFT_ORDER",
+                "scope": [
+                  "A12",
+                  "A7"
+                ]
+              }
+            ],
+            "path": "batch:batch_001.guards",
+            "to": [
+              {
+                "enforced": true,
+                "expr": "true",
+                "kind": "MIN_GAP",
+                "scope": [
+                  "A1",
+                  "A2"
+                ]
+              },
+              {
+                "enforced": true,
+                "expr": "ble_conn_success_rate_ok",
+                "kind": "SAME_SESSION_GROUP",
+                "scope": [
+                  "A1",
+                  "A2"
+                ]
+              },
+              {
+                "enforced": true,
+                "expr": "ble_conn_success_rate_ok",
+                "kind": "MIN_GAP",
+                "scope": [
+                  "A1",
+                  "A2"
+                ]
+              },
+              {
+                "enforced": true,
+                "expr": "latency_budget_allows_batching AND 429_rate_low",
+                "kind": "BATCH_GROUP",
+                "scope": [
+                  "A3",
+                  "A5"
+                ]
+              },
+              {
+                "enforced": true,
+                "expr": "latency_budget_allows_batching AND 429_rate_low",
+                "kind": "SAME_SESSION_GROUP",
+                "scope": [
+                  "A3",
+                  "A5"
+                ]
+              },
+              {
+                "enforced": true,
+                "expr": "true",
+                "kind": "SOFT_ORDER",
+                "scope": [
+                  "A12",
+                  "A7"
+                ]
+              },
+              {
+                "enforced": true,
+                "expr": "resource_constrained",
+                "kind": "BUDGET_K",
+                "scope": []
+              }
+            ]
+          },
+          {
+            "from": {
+              "adaptive_controls": [
+                {
+                  "action": "preserve_action_order",
+                  "kind": "MIN_GAP",
+                  "params": {
+                    "reason": "shared_radio_or_transport_budget"
+                  },
+                  "scope": [
+                    "A2"
+                  ]
+                },
+                {
+                  "action": "serialize_local_api_reads",
+                  "kind": "SAME_SESSION_GROUP",
+                  "params": {
+                    "group_key": "endpoint",
+                    "reuse_window_ms": 5000,
+                    "rule_id": "rule_protocol_local_api_budget",
+                    "template_kind": "SAME_SESSION_GROUP"
+                  },
+                  "scope": [
+                    "A7"
+                  ]
+                },
+                {
+                  "action": "preserve_action_order",
+                  "kind": "SOFT_ORDER",
+                  "params": {
+                    "reason": "candidate:CONTROL_DEP"
+                  },
+                  "scope": [
+                    "A7"
+                  ]
+                }
+              ],
+              "batch_rules": [
+                {
+                  "group_key": "endpoint",
+                  "idempotent_only": true,
+                  "max_batch_size": 3,
+                  "max_wait_ms": 40,
+                  "scope": [
+                    "A3",
+                    "A5"
+                  ]
+                }
+              ],
+              "batch_size": 6,
+              "batching_buckets": [
+                {
+                  "bucket": "tuya",
+                  "chunks": 1,
+                  "group_key": "host",
+                  "max_batch_size": 3,
+                  "max_wait_ms": 40,
+                  "members": [
+                    "A3",
+                    "A5"
+                  ],
+                  "rule_kind": "SAME_SESSION_GROUP",
+                  "size": 2
+                }
+              ],
+              "burst": 10,
+              "forced_pick": false,
+              "forced_pick_blocked_kinds": [],
+              "forced_pick_target": [],
+              "max_qps": 5.0,
+              "min_gap_before_ms": 100,
+              "min_gap_rules": [
+                {
+                  "after": "A2",
+                  "before": "A1",
+                  "gap_ms": 100
+                }
+              ],
+              "trust_policy_blocks": [
+                {
+                  "fallback_actions": [
+                    "preserve_action_order"
+                  ],
+                  "guard_kinds": [
+                    "MIN_GAP",
+                    "SAME_SESSION_GROUP"
+                  ],
+                  "policy_block": "ble_local_policy",
+                  "scope": [
+                    "A1",
+                    "A2"
+                  ]
+                },
+                {
+                  "fallback_actions": [],
+                  "guard_kinds": [
+                    "BATCH_GROUP",
+                    "SAME_SESSION_GROUP"
+                  ],
+                  "policy_block": "cloud_policy",
+                  "scope": [
+                    "A3",
+                    "A5"
+                  ]
+                },
+                {
+                  "fallback_actions": [
+                    "preserve_action_order",
+                    "serialize_local_api_reads"
+                  ],
+                  "guard_kinds": [],
+                  "policy_block": "local_policy",
+                  "scope": [
+                    "A7"
+                  ]
+                }
+              ],
+              "window_ms": 1000
+            },
+            "path": "batch:batch_001.rate_policy",
+            "to": {
+              "adaptive_controls": [
+                {
+                  "action": "preserve_action_order",
+                  "kind": "MIN_GAP",
+                  "params": {
+                    "reason": "shared_radio_or_transport_budget"
+                  },
+                  "scope": [
+                    "A2"
+                  ]
+                },
+                {
+                  "action": "serialize_local_api_reads",
+                  "kind": "SAME_SESSION_GROUP",
+                  "params": {
+                    "group_key": "endpoint",
+                    "reuse_window_ms": 5000,
+                    "rule_id": "rule_protocol_local_api_budget",
+                    "template_kind": "SAME_SESSION_GROUP"
+                  },
+                  "scope": [
+                    "A7"
+                  ]
+                },
+                {
+                  "action": "preserve_action_order",
+                  "kind": "SOFT_ORDER",
+                  "params": {
+                    "reason": "candidate:CONTROL_DEP"
+                  },
+                  "scope": [
+                    "A7"
+                  ]
+                }
+              ],
+              "batch_rules": [
+                {
+                  "group_key": "endpoint",
+                  "idempotent_only": true,
+                  "max_batch_size": 3,
+                  "max_wait_ms": 40,
+                  "scope": [
+                    "A3",
+                    "A5"
+                  ]
+                }
+              ],
+              "batch_size": 6,
+              "batching_buckets": [
+                {
+                  "bucket": "tuya",
+                  "chunks": 1,
+                  "group_key": "host",
+                  "max_batch_size": 3,
+                  "max_wait_ms": 40,
+                  "members": [
+                    "A3",
+                    "A5"
+                  ],
+                  "rule_kind": "SAME_SESSION_GROUP",
+                  "size": 2
+                }
+              ],
+              "burst": 10,
+              "forced_pick": false,
+              "forced_pick_blocked_kinds": [],
+              "forced_pick_target": [],
+              "max_qps": 1.0,
+              "min_gap_before_ms": 100,
+              "min_gap_rules": [
+                {
+                  "after": "A2",
+                  "before": "A1",
+                  "gap_ms": 100
+                }
+              ],
+              "trust_policy_blocks": [
+                {
+                  "fallback_actions": [
+                    "preserve_action_order"
+                  ],
+                  "guard_kinds": [
+                    "MIN_GAP",
+                    "SAME_SESSION_GROUP"
+                  ],
+                  "policy_block": "ble_local_policy",
+                  "scope": [
+                    "A1",
+                    "A2"
+                  ]
+                },
+                {
+                  "fallback_actions": [],
+                  "guard_kinds": [
+                    "BATCH_GROUP",
+                    "SAME_SESSION_GROUP"
+                  ],
+                  "policy_block": "cloud_policy",
+                  "scope": [
+                    "A3",
+                    "A5"
+                  ]
+                },
+                {
+                  "fallback_actions": [
+                    "preserve_action_order",
+                    "serialize_local_api_reads"
+                  ],
+                  "guard_kinds": [],
+                  "policy_block": "local_policy",
+                  "scope": [
+                    "A7"
+                  ]
+                }
+              ],
+              "window_ms": 1000
+            }
+          },
+          {
+            "from": [
+              {
+                "enforced": true,
+                "expr": "true",
+                "kind": "SOFT_ORDER",
+                "scope": [
+                  "A12",
+                  "A8"
+                ]
+              }
+            ],
+            "path": "batch:batch_002.guards",
+            "to": [
+              {
+                "enforced": true,
+                "expr": "true",
+                "kind": "SOFT_ORDER",
+                "scope": [
+                  "A12",
+                  "A8"
+                ]
+              },
+              {
+                "enforced": true,
+                "expr": "resource_constrained",
+                "kind": "BUDGET_K",
+                "scope": []
+              }
+            ]
+          },
+          {
+            "from": {
+              "adaptive_controls": [
+                {
+                  "action": "serialize_local_api_reads",
+                  "kind": "SAME_SESSION_GROUP",
+                  "params": {
+                    "group_key": "endpoint",
+                    "reuse_window_ms": 5000,
+                    "rule_id": "rule_protocol_local_api_budget",
+                    "template_kind": "SAME_SESSION_GROUP"
+                  },
+                  "scope": [
+                    "A8"
+                  ]
+                },
+                {
+                  "action": "preserve_action_order",
+                  "kind": "SOFT_ORDER",
+                  "params": {
+                    "reason": "candidate:CONTROL_DEP"
+                  },
+                  "scope": [
+                    "A8"
+                  ]
+                }
+              ],
+              "batch_rules": [
+                {
+                  "group_key": "endpoint",
+                  "idempotent_only": true,
+                  "max_batch_size": 3,
+                  "max_wait_ms": 40,
+                  "scope": [
+                    "A3",
+                    "A5"
+                  ]
+                }
+              ],
+              "batch_size": 1,
+              "batching_buckets": [],
+              "burst": 10,
+              "forced_pick": false,
+              "forced_pick_blocked_kinds": [],
+              "forced_pick_target": [],
+              "max_qps": 5.0,
+              "min_gap_before_ms": 0,
+              "min_gap_rules": [],
+              "trust_policy_blocks": [
+                {
+                  "fallback_actions": [
+                    "preserve_action_order",
+                    "serialize_local_api_reads"
+                  ],
+                  "guard_kinds": [],
+                  "policy_block": "local_policy",
+                  "scope": [
+                    "A8"
+                  ]
+                }
+              ],
+              "window_ms": 1000
+            },
+            "path": "batch:batch_002.rate_policy",
+            "to": {
+              "adaptive_controls": [
+                {
+                  "action": "serialize_local_api_reads",
+                  "kind": "SAME_SESSION_GROUP",
+                  "params": {
+                    "group_key": "endpoint",
+                    "reuse_window_ms": 5000,
+                    "rule_id": "rule_protocol_local_api_budget",
+                    "template_kind": "SAME_SESSION_GROUP"
+                  },
+                  "scope": [
+                    "A8"
+                  ]
+                },
+                {
+                  "action": "preserve_action_order",
+                  "kind": "SOFT_ORDER",
+                  "params": {
+                    "reason": "candidate:CONTROL_DEP"
+                  },
+                  "scope": [
+                    "A8"
+                  ]
+                }
+              ],
+              "batch_rules": [
+                {
+                  "group_key": "endpoint",
+                  "idempotent_only": true,
+                  "max_batch_size": 3,
+                  "max_wait_ms": 40,
+                  "scope": [
+                    "A3",
+                    "A5"
+                  ]
+                }
+              ],
+              "batch_size": 1,
+              "batching_buckets": [],
+              "burst": 10,
+              "forced_pick": false,
+              "forced_pick_blocked_kinds": [],
+              "forced_pick_target": [],
+              "max_qps": 1.0,
+              "min_gap_before_ms": 0,
+              "min_gap_rules": [],
+              "trust_policy_blocks": [
+                {
+                  "fallback_actions": [
+                    "preserve_action_order",
+                    "serialize_local_api_reads"
+                  ],
+                  "guard_kinds": [],
+                  "policy_block": "local_policy",
+                  "scope": [
+                    "A8"
+                  ]
+                }
+              ],
+              "window_ms": 1000
+            }
+          },
+          {
+            "from": [
+              {
+                "enforced": true,
+                "expr": "true",
+                "kind": "SOFT_ORDER",
+                "scope": [
+                  "A12",
+                  "A9"
+                ]
+              }
+            ],
+            "path": "batch:batch_003.guards",
+            "to": [
+              {
+                "enforced": true,
+                "expr": "true",
+                "kind": "SOFT_ORDER",
+                "scope": [
+                  "A12",
+                  "A9"
+                ]
+              },
+              {
+                "enforced": true,
+                "expr": "resource_constrained",
+                "kind": "BUDGET_K",
+                "scope": []
+              }
+            ]
+          },
+          {
+            "from": {
+              "adaptive_controls": [
+                {
+                  "action": "serialize_local_api_reads",
+                  "kind": "SAME_SESSION_GROUP",
+                  "params": {
+                    "group_key": "endpoint",
+                    "reuse_window_ms": 5000,
+                    "rule_id": "rule_protocol_local_api_budget",
+                    "template_kind": "SAME_SESSION_GROUP"
+                  },
+                  "scope": [
+                    "A9"
+                  ]
+                },
+                {
+                  "action": "preserve_action_order",
+                  "kind": "SOFT_ORDER",
+                  "params": {
+                    "reason": "candidate:CONTROL_DEP"
+                  },
+                  "scope": [
+                    "A9"
+                  ]
+                }
+              ],
+              "batch_rules": [
+                {
+                  "group_key": "endpoint",
+                  "idempotent_only": true,
+                  "max_batch_size": 3,
+                  "max_wait_ms": 40,
+                  "scope": [
+                    "A3",
+                    "A5"
+                  ]
+                }
+              ],
+              "batch_size": 1,
+              "batching_buckets": [],
+              "burst": 10,
+              "forced_pick": false,
+              "forced_pick_blocked_kinds": [],
+              "forced_pick_target": [],
+              "max_qps": 5.0,
+              "min_gap_before_ms": 0,
+              "min_gap_rules": [],
+              "trust_policy_blocks": [
+                {
+                  "fallback_actions": [
+                    "preserve_action_order",
+                    "serialize_local_api_reads"
+                  ],
+                  "guard_kinds": [],
+                  "policy_block": "local_policy",
+                  "scope": [
+                    "A9"
+                  ]
+                }
+              ],
+              "window_ms": 1000
+            },
+            "path": "batch:batch_003.rate_policy",
+            "to": {
+              "adaptive_controls": [
+                {
+                  "action": "serialize_local_api_reads",
+                  "kind": "SAME_SESSION_GROUP",
+                  "params": {
+                    "group_key": "endpoint",
+                    "reuse_window_ms": 5000,
+                    "rule_id": "rule_protocol_local_api_budget",
+                    "template_kind": "SAME_SESSION_GROUP"
+                  },
+                  "scope": [
+                    "A9"
+                  ]
+                },
+                {
+                  "action": "preserve_action_order",
+                  "kind": "SOFT_ORDER",
+                  "params": {
+                    "reason": "candidate:CONTROL_DEP"
+                  },
+                  "scope": [
+                    "A9"
+                  ]
+                }
+              ],
+              "batch_rules": [
+                {
+                  "group_key": "endpoint",
+                  "idempotent_only": true,
+                  "max_batch_size": 3,
+                  "max_wait_ms": 40,
+                  "scope": [
+                    "A3",
+                    "A5"
+                  ]
+                }
+              ],
+              "batch_size": 1,
+              "batching_buckets": [],
+              "burst": 10,
+              "forced_pick": false,
+              "forced_pick_blocked_kinds": [],
+              "forced_pick_target": [],
+              "max_qps": 1.0,
+              "min_gap_before_ms": 0,
+              "min_gap_rules": [],
+              "trust_policy_blocks": [
+                {
+                  "fallback_actions": [
+                    "preserve_action_order",
+                    "serialize_local_api_reads"
+                  ],
+                  "guard_kinds": [],
+                  "policy_block": "local_policy",
+                  "scope": [
+                    "A9"
+                  ]
+                }
+              ],
+              "window_ms": 1000
+            }
+          },
+          {
+            "from": [
+              {
+                "enforced": true,
+                "expr": "true",
+                "kind": "SOFT_ORDER",
+                "scope": [
+                  "A12",
+                  "A7",
+                  "A8",
+                  "A9"
+                ]
+              }
+            ],
+            "path": "batch:batch_004.guards",
+            "to": [
+              {
+                "enforced": true,
+                "expr": "true",
+                "kind": "SOFT_ORDER",
+                "scope": [
+                  "A12",
+                  "A7",
+                  "A8",
+                  "A9"
+                ]
+              },
+              {
+                "enforced": true,
+                "expr": "resource_constrained",
+                "kind": "BUDGET_K",
+                "scope": []
+              }
+            ]
+          },
+          {
+            "from": {
+              "adaptive_controls": [
+                {
+                  "action": "preserve_action_order",
+                  "kind": "SOFT_ORDER",
+                  "params": {
+                    "reason": "candidate:CONTROL_DEP"
+                  },
+                  "scope": [
+                    "A12"
+                  ]
+                }
+              ],
+              "batch_rules": [
+                {
+                  "group_key": "endpoint",
+                  "idempotent_only": true,
+                  "max_batch_size": 3,
+                  "max_wait_ms": 40,
+                  "scope": [
+                    "A3",
+                    "A5"
+                  ]
+                }
+              ],
+              "batch_size": 3,
+              "batching_buckets": [],
+              "burst": 10,
+              "forced_pick": false,
+              "forced_pick_blocked_kinds": [],
+              "forced_pick_target": [],
+              "max_qps": 5.0,
+              "min_gap_before_ms": 0,
+              "min_gap_rules": [],
+              "trust_policy_blocks": [
+                {
+                  "fallback_actions": [
+                    "preserve_action_order"
+                  ],
+                  "guard_kinds": [],
+                  "policy_block": "writeback_local_policy",
+                  "scope": [
+                    "A12"
+                  ]
+                }
+              ],
+              "window_ms": 1000
+            },
+            "path": "batch:batch_004.rate_policy",
+            "to": {
+              "adaptive_controls": [
+                {
+                  "action": "preserve_action_order",
+                  "kind": "SOFT_ORDER",
+                  "params": {
+                    "reason": "candidate:CONTROL_DEP"
+                  },
+                  "scope": [
+                    "A12"
+                  ]
+                }
+              ],
+              "batch_rules": [
+                {
+                  "group_key": "endpoint",
+                  "idempotent_only": true,
+                  "max_batch_size": 3,
+                  "max_wait_ms": 40,
+                  "scope": [
+                    "A3",
+                    "A5"
+                  ]
+                }
+              ],
+              "batch_size": 3,
+              "batching_buckets": [],
+              "burst": 10,
+              "forced_pick": false,
+              "forced_pick_blocked_kinds": [],
+              "forced_pick_target": [],
+              "max_qps": 1.0,
+              "min_gap_before_ms": 0,
+              "min_gap_rules": [],
+              "trust_policy_blocks": [
+                {
+                  "fallback_actions": [
+                    "preserve_action_order"
+                  ],
+                  "guard_kinds": [],
+                  "policy_block": "writeback_local_policy",
+                  "scope": [
+                    "A12"
+                  ]
+                }
+              ],
+              "window_ms": 1000
+            }
+          },
+          {
+            "from": [],
+            "path": "batch:batch_005.guards",
+            "to": [
+              {
+                "enforced": true,
+                "expr": "resource_constrained",
+                "kind": "BUDGET_K",
+                "scope": []
+              }
+            ]
+          },
+          {
+            "from": {
+              "adaptive_controls": [],
+              "batch_rules": [
+                {
+                  "group_key": "endpoint",
+                  "idempotent_only": true,
+                  "max_batch_size": 3,
+                  "max_wait_ms": 40,
+                  "scope": [
+                    "A3",
+                    "A5"
+                  ]
+                }
+              ],
+              "batch_size": 1,
+              "batching_buckets": [],
+              "burst": 10,
+              "forced_pick": false,
+              "forced_pick_blocked_kinds": [],
+              "forced_pick_target": [],
+              "max_qps": 5.0,
+              "min_gap_before_ms": 0,
+              "min_gap_rules": [],
+              "trust_policy_blocks": [],
+              "window_ms": 1000
+            },
+            "path": "batch:batch_005.rate_policy",
+            "to": {
+              "adaptive_controls": [],
+              "batch_rules": [
+                {
+                  "group_key": "endpoint",
+                  "idempotent_only": true,
+                  "max_batch_size": 3,
+                  "max_wait_ms": 40,
+                  "scope": [
+                    "A3",
+                    "A5"
+                  ]
+                }
+              ],
+              "batch_size": 1,
+              "batching_buckets": [],
+              "burst": 10,
+              "forced_pick": false,
+              "forced_pick_blocked_kinds": [],
+              "forced_pick_target": [],
+              "max_qps": 1.0,
+              "min_gap_before_ms": 0,
+              "min_gap_rules": [],
+              "trust_policy_blocks": [],
+              "window_ms": 1000
+            }
+          }
+        ],
+        "kind": "plan_patch",
+        "level": "LEVEL_1",
+        "reason": {
+          "counterexample_ids": [
+            "cex_d472ea0ffc",
+            "cex_554975eb7b",
+            "cex_595bbaa60a",
+            "cex_291d50a400",
+            "cex_9f380126b6",
+            "cex_66add5d2d3"
+          ],
+          "culprit_anchors": [
+            "RUNTIME:CLOUD:CLOUD_STATUS_CALL:tuya:light.hallway_homecoming.status"
+          ],
+          "scenario_ids": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ]
+        },
+        "strategy": "enforce_min_gap_no_overlap"
+      },
+      {
+        "changes": [
+          {
+            "from": 10,
+            "path": "meta.policy.max_parallel",
+            "to": 9
+          },
+          {
+            "from": 4,
+            "path": "meta.policy.cloud_parallel",
+            "to": 3
+          }
+        ],
+        "kind": "plan_patch",
+        "level": "LEVEL_1",
+        "reason": {
+          "counterexample_ids": [
+            "cex_d472ea0ffc",
+            "cex_554975eb7b",
+            "cex_595bbaa60a",
+            "cex_291d50a400",
+            "cex_9f380126b6",
+            "cex_66add5d2d3"
+          ],
+          "culprit_anchors": [
+            "RUNTIME:CLOUD:CLOUD_STATUS_CALL:tuya:light.hallway_homecoming.status"
+          ],
+          "scenario_ids": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ]
+        },
+        "strategy": "reduce_parallelism"
+      },
+      {
+        "changes": [
+          {
+            "from": {
+              "max_age_s": 20,
+              "reuse": true,
+              "session_groups": [
+                {
+                  "group_key": "device_id",
+                  "scope": [
+                    "A1",
+                    "A2"
+                  ]
+                },
+                {
+                  "group_key": "host",
+                  "scope": [
+                    "A3",
+                    "A5"
+                  ]
+                }
+              ]
+            },
+            "path": "batch:batch_000.session_policy",
+            "to": {
+              "max_age_s": 0,
+              "reuse": false,
+              "session_groups": [
+                {
+                  "group_key": "device_id",
+                  "scope": [
+                    "A1",
+                    "A2"
+                  ]
+                },
+                {
+                  "group_key": "host",
+                  "scope": [
+                    "A3",
+                    "A5"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "from": {
+              "max_age_s": 20,
+              "reuse": true,
+              "session_groups": [
+                {
+                  "group_key": "device_id",
+                  "scope": [
+                    "A1",
+                    "A2"
+                  ]
+                },
+                {
+                  "group_key": "host",
+                  "scope": [
+                    "A3",
+                    "A5"
+                  ]
+                }
+              ]
+            },
+            "path": "batch:batch_001.session_policy",
+            "to": {
+              "max_age_s": 0,
+              "reuse": false,
+              "session_groups": [
+                {
+                  "group_key": "device_id",
+                  "scope": [
+                    "A1",
+                    "A2"
+                  ]
+                },
+                {
+                  "group_key": "host",
+                  "scope": [
+                    "A3",
+                    "A5"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "from": {
+              "max_age_s": 20,
+              "reuse": true,
+              "session_groups": [
+                {
+                  "group_key": "device_id",
+                  "scope": [
+                    "A1",
+                    "A2"
+                  ]
+                },
+                {
+                  "group_key": "host",
+                  "scope": [
+                    "A3",
+                    "A5"
+                  ]
+                }
+              ]
+            },
+            "path": "batch:batch_002.session_policy",
+            "to": {
+              "max_age_s": 0,
+              "reuse": false,
+              "session_groups": [
+                {
+                  "group_key": "device_id",
+                  "scope": [
+                    "A1",
+                    "A2"
+                  ]
+                },
+                {
+                  "group_key": "host",
+                  "scope": [
+                    "A3",
+                    "A5"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "from": {
+              "max_age_s": 20,
+              "reuse": true,
+              "session_groups": [
+                {
+                  "group_key": "device_id",
+                  "scope": [
+                    "A1",
+                    "A2"
+                  ]
+                },
+                {
+                  "group_key": "host",
+                  "scope": [
+                    "A3",
+                    "A5"
+                  ]
+                }
+              ]
+            },
+            "path": "batch:batch_003.session_policy",
+            "to": {
+              "max_age_s": 0,
+              "reuse": false,
+              "session_groups": [
+                {
+                  "group_key": "device_id",
+                  "scope": [
+                    "A1",
+                    "A2"
+                  ]
+                },
+                {
+                  "group_key": "host",
+                  "scope": [
+                    "A3",
+                    "A5"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "from": {
+              "max_age_s": 20,
+              "reuse": true,
+              "session_groups": [
+                {
+                  "group_key": "device_id",
+                  "scope": [
+                    "A1",
+                    "A2"
+                  ]
+                },
+                {
+                  "group_key": "host",
+                  "scope": [
+                    "A3",
+                    "A5"
+                  ]
+                }
+              ]
+            },
+            "path": "batch:batch_004.session_policy",
+            "to": {
+              "max_age_s": 0,
+              "reuse": false,
+              "session_groups": [
+                {
+                  "group_key": "device_id",
+                  "scope": [
+                    "A1",
+                    "A2"
+                  ]
+                },
+                {
+                  "group_key": "host",
+                  "scope": [
+                    "A3",
+                    "A5"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "from": {
+              "max_age_s": 20,
+              "reuse": true,
+              "session_groups": [
+                {
+                  "group_key": "device_id",
+                  "scope": [
+                    "A1",
+                    "A2"
+                  ]
+                },
+                {
+                  "group_key": "host",
+                  "scope": [
+                    "A3",
+                    "A5"
+                  ]
+                }
+              ]
+            },
+            "path": "batch:batch_005.session_policy",
+            "to": {
+              "max_age_s": 0,
+              "reuse": false,
+              "session_groups": [
+                {
+                  "group_key": "device_id",
+                  "scope": [
+                    "A1",
+                    "A2"
+                  ]
+                },
+                {
+                  "group_key": "host",
+                  "scope": [
+                    "A3",
+                    "A5"
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "kind": "plan_patch",
+        "level": "LEVEL_1",
+        "reason": {
+          "counterexample_ids": [
+            "cex_d472ea0ffc",
+            "cex_554975eb7b",
+            "cex_595bbaa60a",
+            "cex_291d50a400",
+            "cex_9f380126b6",
+            "cex_66add5d2d3"
+          ],
+          "culprit_anchors": [
+            "RUNTIME:CLOUD:CLOUD_STATUS_CALL:tuya:light.hallway_homecoming.status"
+          ],
+          "scenario_ids": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ]
+        },
+        "strategy": "disable_session_reuse"
+      },
+      {
+        "changes": [
+          {
+            "from_batch_count": 6,
+            "path": "ordered_batches",
+            "to_batch_count": 13
+          }
+        ],
+        "kind": "plan_patch",
+        "level": "LEVEL_1",
+        "reason": {
+          "counterexample_ids": [
+            "cex_d472ea0ffc",
+            "cex_554975eb7b",
+            "cex_595bbaa60a",
+            "cex_291d50a400",
+            "cex_9f380126b6",
+            "cex_66add5d2d3"
+          ],
+          "culprit_anchors": [
+            "RUNTIME:CLOUD:CLOUD_STATUS_CALL:tuya:light.hallway_homecoming.status"
+          ],
+          "scenario_ids": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ]
+        },
+        "strategy": "disable_batching"
+      }
+    ],
+    "removed_hard_edges": [],
+    "warnings": []
+  },
+  "hard_edges": [
+    {
+      "dst_msf": "msf06_000_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A1->A10",
+        "ble_write_depends_on_a1"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf11_001_ble_op"
+    },
+    {
+      "dst_msf": "msf06_000_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A2->A10",
+        "ble_write_depends_on_a2"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf05_000_ble_op"
+    },
+    {
+      "dst_msf": "msf09_000_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A4->A11",
+        "cloud_write_depends_on_a4"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf07_002_cloud_status_call"
+    },
+    {
+      "dst_msf": "msf09_000_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A5->A11",
+        "cloud_write_depends_on_a5"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf08_000_cloud_http_call"
+    },
+    {
+      "dst_msf": "msf09_000_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A6->A11",
+        "cloud_write_depends_on_a6"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf00_005_cloud_status_call"
+    },
+    {
+      "dst_msf": "msf02_000_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A9->A12",
+        "local_write_depends_on_a9"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf02_001_local_api_read"
+    },
+    {
+      "dst_msf": "msf01_000_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A10->A13",
+        "overall_write_depends_on_ble_lane"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf06_000_state_write"
+    },
+    {
+      "dst_msf": "msf01_000_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A11->A13",
+        "overall_write_depends_on_cloud_lane"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf09_000_state_write"
+    },
+    {
+      "dst_msf": "msf01_000_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A12->A13",
+        "overall_write_depends_on_local_lane"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf02_000_state_write"
+    }
+  ],
+  "nodes": {
+    "msf00_000_entry_setup": {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "ATTR_ENTITY_ID",
+        "ATTR_FAN_MIN_ON_TIME",
+        "ATTR_RESUME_ALL",
+        "ATTR_VACATION_NAME",
+        "ServiceCall",
+        "data",
+        "index",
+        "service",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf00_000_entry_setup",
+      "msf_type": "INIT",
+      "node_ids": [
+        "92f94299:async_setup_entry:2:212",
+        "92f94299:async_setup_entry:3.0:215",
+        "92f94299:async_setup_entry:6:234",
+        "92f94299:async_setup_entry:7:244",
+        "92f94299:async_setup_entry:8:255",
+        "92f94299:async_setup_entry:9:272"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "entry_setup",
+        "external_call_cloud",
+        "state_write"
+      ]
+    },
+    "msf00_001_state_write": {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "ATTR_ENTITY_ID",
+        "ServiceCall",
+        "entities",
+        "service"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": null,
+      "msf_id": "msf00_001_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "92f94299:async_setup_entry:6:234"
+      ],
+      "outputs": [
+        "entity_id",
+        "thermostat"
+      ],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "state_write"
+      ]
+    },
+    "msf00_002_state_write": {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "ATTR_ENTITY_ID",
+        "ATTR_VACATION_NAME",
+        "ServiceCall",
+        "entities",
+        "service"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": null,
+      "msf_id": "msf00_002_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "92f94299:async_setup_entry:7:244"
+      ],
+      "outputs": [
+        "entity_id",
+        "thermostat",
+        "vacation_name"
+      ],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "state_write"
+      ]
+    },
+    "msf00_003_state_write": {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "ATTR_ENTITY_ID",
+        "ATTR_FAN_MIN_ON_TIME",
+        "ServiceCall",
+        "entities",
+        "service",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": null,
+      "msf_id": "msf00_003_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "92f94299:async_setup_entry:8:255"
+      ],
+      "outputs": [
+        "entity",
+        "entity_id",
+        "fan_min_on_time",
+        "target_thermostats",
+        "thermostat"
+      ],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "external_call_cloud",
+        "state_write"
+      ]
+    },
+    "msf00_004_state_write": {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "ATTR_ENTITY_ID",
+        "ATTR_RESUME_ALL",
+        "ServiceCall",
+        "entities",
+        "service"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": null,
+      "msf_id": "msf00_004_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "92f94299:async_setup_entry:9:272"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "external_call_cloud",
+        "state_write"
+      ]
+    },
+    "msf00_005_cloud_status_call": {
+      "action_refs": [
+        "A6"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf00_005_cloud_status_call",
+      "msf_type": "ACT",
+      "node_ids": [
+        "92f94299:async_update:2:399"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A6",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "ecobee:thermostat.homecoming_1",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_status_call"
+      ]
+    },
+    "msf01_000_state_write": {
+      "action_refs": [
+        "A13"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "is_aggregate_sink": true,
+      "is_shared_infra": false,
+      "lane_tag": "WRITEBACK_OVERALL",
+      "msf_id": "msf01_000_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "9da22f42:_handle_device_update:3:186"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A13",
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "resource_instance_tag": "sensor.vdev_homecoming_security_ambience_merge_overall",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "state_write"
+      ]
+    },
+    "msf01_001_entry_setup": {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "ESPHomeDashboardUpdateEntity",
+        "async_add_entities",
+        "callback",
+        "dashboard",
+        "device_name",
+        "entry_data",
+        "unsubs"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf01_001_entry_setup",
+      "msf_type": "INIT",
+      "node_ids": [
+        "9da22f42:async_setup_entry:7:71"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "entry_setup",
+        "external_call_cloud",
+        "unsubscribe"
+      ]
+    },
+    "msf01_002_unsubscribe": {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "unsubs"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf01_002_unsubscribe",
+      "msf_type": "CLEANUP",
+      "node_ids": [
+        "9da22f42:_async_setup_update_entity:4:82"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "unsubscribe"
+      ]
+    },
+    "msf01_003_unsubscribe": {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "ESPHomeDashboardUpdateEntity",
+        "async_add_entities",
+        "callback",
+        "dashboard",
+        "device_name",
+        "entry_data",
+        "unsubs"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf01_003_unsubscribe",
+      "msf_type": "CLEANUP",
+      "node_ids": [
+        "9da22f42:async_setup_entry:7:71"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "external_call_cloud",
+        "unsubscribe"
+      ]
+    },
+    "msf02_000_state_write": {
+      "action_refs": [
+        "A12"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "WRITEBACK",
+      "msf_id": "msf02_000_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "0960d80b:_handle_event:5:138"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A12",
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "resource_instance_tag": "sensor.vdev_homecoming_security_ambience_merge_local_lane",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "state_write"
+      ]
+    },
+    "msf02_001_local_api_read": {
+      "action_refs": [
+        "A7",
+        "A8",
+        "A9"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": null,
+      "msf_id": "msf02_001_local_api_read",
+      "msf_type": "ACT",
+      "node_ids": [
+        "0960d80b:on_update:0:122"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A7",
+      "required_guards": [],
+      "resource_instance_tag": "hue:bridge_1:entry_light_homecoming",
+      "secondary_action_refs": [
+        "A8",
+        "A9"
+      ],
+      "side_effect_sig": [
+        "local_api_read"
+      ]
+    },
+    "msf02_002_local_api_read": {
+      "action_refs": [
+        "A7",
+        "A8",
+        "A9"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "EventType",
+        "er",
+        "event_type",
+        "resource",
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": null,
+      "msf_id": "msf02_002_local_api_read",
+      "msf_type": "ACT",
+      "node_ids": [
+        "0960d80b:_handle_event:0:127",
+        "0960d80b:_handle_event:1.0.0:131",
+        "0960d80b:_handle_event:1.0.1:132",
+        "0960d80b:_handle_event:1.0:130",
+        "0960d80b:_handle_event:1.1:133",
+        "0960d80b:_handle_event:1:128",
+        "0960d80b:_handle_event:2:135",
+        "0960d80b:_handle_event:3:136",
+        "0960d80b:_handle_event:4:137",
+        "0960d80b:_handle_event:5:138"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A7",
+      "required_guards": [],
+      "resource_instance_tag": "hue:bridge_1:entry_light_homecoming",
+      "secondary_action_refs": [
+        "A8",
+        "A9"
+      ],
+      "side_effect_sig": [
+        "local_api_read",
+        "state_write"
+      ]
+    },
+    "msf03_000_local_api_read": {
+      "action_refs": [
+        "A7",
+        "A8",
+        "A9"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": null,
+      "msf_id": "msf03_000_local_api_read",
+      "msf_type": "ACT",
+      "node_ids": [
+        "51425972:_update_values:7:240"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A7",
+      "required_guards": [],
+      "resource_instance_tag": "hue:bridge_1:entry_light_homecoming",
+      "secondary_action_refs": [
+        "A8",
+        "A9"
+      ],
+      "side_effect_sig": [
+        "local_api_read"
+      ]
+    },
+    "msf04_000_local_api_read": {
+      "action_refs": [
+        "A7",
+        "A8",
+        "A9"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": null,
+      "msf_id": "msf04_000_local_api_read",
+      "msf_type": "ACT",
+      "node_ids": [
+        "a30bdb9a:is_on:0:137",
+        "a30bdb9a:is_on:1:138"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A7",
+      "required_guards": [],
+      "resource_instance_tag": "hue:bridge_1:entry_light_homecoming",
+      "secondary_action_refs": [
+        "A8",
+        "A9"
+      ],
+      "side_effect_sig": [
+        "local_api_read"
+      ]
+    },
+    "msf05_000_ble_op": {
+      "action_refs": [
+        "A2"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "ATTR_POSITION",
+        "ATTR_TILT_POSITION",
+        "bool",
+        "kwargs",
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "BLE_LOCAL",
+      "msf_id": "msf05_000_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "0e4b12a7:async_close_cover:1:337",
+        "0e4b12a7:async_close_cover:2:107",
+        "0e4b12a7:async_close_cover:2:277",
+        "0e4b12a7:async_close_cover:3:108",
+        "0e4b12a7:async_close_cover_tilt:2:195",
+        "0e4b12a7:async_open_cover:1:331",
+        "0e4b12a7:async_open_cover:2:267",
+        "0e4b12a7:async_open_cover:2:96",
+        "0e4b12a7:async_open_cover:3:97",
+        "0e4b12a7:async_open_cover_tilt:2:187",
+        "0e4b12a7:async_set_cover_position:1:126",
+        "0e4b12a7:async_set_cover_position:1:296",
+        "0e4b12a7:async_set_cover_position:3:129",
+        "0e4b12a7:async_set_cover_position:3:298",
+        "0e4b12a7:async_set_cover_tilt_position:1:209",
+        "0e4b12a7:async_set_cover_tilt_position:3:212",
+        "0e4b12a7:async_stop_cover:2:118",
+        "0e4b12a7:async_stop_cover:2:287",
+        "0e4b12a7:async_stop_cover_tilt:2:203"
+      ],
+      "outputs": [
+        "position"
+      ],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A2",
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": "ble:switchbot:curtain_entry_homecoming",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "ble_op",
+        "external_call_cloud"
+      ]
+    },
+    "msf06_000_state_write": {
+      "action_refs": [
+        "A10"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "WRITEBACK_BLE",
+      "msf_id": "msf06_000_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "9425188b:async_oscillate:3:101",
+        "9425188b:async_set_percentage:3:92",
+        "9425188b:async_set_preset_mode:3:161",
+        "9425188b:async_set_preset_mode:3:83",
+        "9425188b:async_turn_off:3:125",
+        "9425188b:async_turn_off:3:187",
+        "9425188b:async_turn_on:3:118",
+        "9425188b:async_turn_on:3:179"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A10",
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "resource_instance_tag": "sensor.vdev_homecoming_security_ambience_merge_ble_lane",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "state_write"
+      ]
+    },
+    "msf07_000_entry_unload": {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf07_000_entry_unload",
+      "msf_type": "CLEANUP",
+      "node_ids": [
+        "81cc0e11:async_unload_entry:0:134"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "entry_unload"
+      ]
+    },
+    "msf07_001_entry_unload": {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf07_001_entry_unload",
+      "msf_type": "CLEANUP",
+      "node_ids": [
+        "81cc0e11:async_remove_entry:0:144"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "entry_unload"
+      ]
+    },
+    "msf07_002_cloud_status_call": {
+      "action_refs": [
+        "A3",
+        "A4"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "CONF_TOKEN_INFO",
+        "LOGGER",
+        "TUYA_HA_SIGNAL_UPDATE_ENTITY",
+        "async_update_entry",
+        "callback",
+        "device",
+        "dispatcher_send",
+        "dp_timestamps",
+        "self",
+        "token_info",
+        "updated_status_properties"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf07_002_cloud_status_call",
+      "msf_type": "ACT",
+      "node_ids": [
+        "81cc0e11:update_device:0:176",
+        "81cc0e11:update_device:1:177",
+        "81cc0e11:update_device:2:186",
+        "81cc0e11:update_token:0:238",
+        "81cc0e11:update_token:1:239",
+        "81cc0e11:update_token:2:251",
+        "81cc0e11:update_token:3:255"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A3",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:light.entry_homecoming.status",
+      "secondary_action_refs": [
+        "A4"
+      ],
+      "side_effect_sig": [
+        "cloud_status_call"
+      ]
+    },
+    "msf08_000_cloud_http_call": {
+      "action_refs": [
+        "A5"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "ClimateEntityFeature",
+        "HVACMode",
+        "TuyaClimateHVACMode",
+        "TuyaClimateSwingMode",
+        "_HA_TO_TUYA_HVACMODE_MAPPINGS",
+        "_HA_TO_TUYA_SWING_MAPPINGS",
+        "_TUYA_TO_HA_HVACMODE_MAPPINGS",
+        "_TUYA_TO_HA_SWING_MAPPINGS",
+        "cast",
+        "description",
+        "hvac_mode",
+        "hvac_mode_wrapper",
+        "list",
+        "self",
+        "swing_mode",
+        "swing_wrapper",
+        "switch_wrapper"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf08_000_cloud_http_call",
+      "msf_type": "ACT",
+      "node_ids": [
+        "8e4c1745:__init__:16.1.0:308",
+        "8e4c1745:__init__:16.1:307",
+        "8e4c1745:__init__:16:305",
+        "8e4c1745:__init__:20.1:340",
+        "8e4c1745:__init__:20:338",
+        "8e4c1745:async_set_hvac_mode:1:355",
+        "8e4c1745:async_set_hvac_mode:3:362",
+        "8e4c1745:async_set_swing_mode:1:386",
+        "8e4c1745:hvac_mode:4:430",
+        "8e4c1745:hvac_mode:5:431",
+        "8e4c1745:swing_mode:1:446",
+        "8e4c1745:swing_mode:2:447"
+      ],
+      "outputs": [
+        "ha_mode"
+      ],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A5",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:climate.living_homecoming.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_http_call",
+        "external_call_cloud"
+      ]
+    },
+    "msf08_006_cloud_op": {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "HVACMode",
+        "TuyaClimateHVACMode",
+        "_TUYA_TO_HA_HVACMODE_MAPPINGS",
+        "cast",
+        "hvac_mode_wrapper",
+        "list",
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf08_006_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "8e4c1745:__init__:16.1.0:308",
+        "8e4c1745:__init__:16.1:307"
+      ],
+      "outputs": [
+        "ha_mode"
+      ],
+      "phase": "RUNTIME",
+      "primary_action_ref": null,
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    "msf08_007_cloud_op": {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "TuyaClimateSwingMode",
+        "_TUYA_TO_HA_SWING_MAPPINGS",
+        "cast",
+        "list",
+        "self",
+        "swing_wrapper"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf08_007_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "8e4c1745:__init__:20.1:340"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": null,
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    "msf08_008_cloud_op": {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "_HA_TO_TUYA_HVACMODE_MAPPINGS",
+        "commands",
+        "hvac_mode",
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf08_008_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "8e4c1745:async_set_hvac_mode:3:362"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": null,
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    "msf08_009_cloud_op": {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "_HA_TO_TUYA_HVACMODE_MAPPINGS",
+        "commands",
+        "hvac_mode",
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf08_009_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "8e4c1745:async_set_hvac_mode:3:362"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": null,
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    "msf08_010_cloud_op": {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "_HA_TO_TUYA_SWING_MAPPINGS",
+        "self",
+        "swing_mode"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf08_010_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "8e4c1745:async_set_swing_mode:1:386"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": null,
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    "msf08_011_cloud_op": {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "_TUYA_TO_HA_HVACMODE_MAPPINGS",
+        "tuya_mode"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf08_011_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "8e4c1745:hvac_mode:5:431"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": null,
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    "msf08_012_cloud_op": {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "_TUYA_TO_HA_SWING_MAPPINGS",
+        "tuya_value"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf08_012_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "8e4c1745:swing_mode:2:447"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": null,
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    "msf09_000_state_write": {
+      "action_refs": [
+        "A11"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "dp_timestamps",
+        "self",
+        "updated_status_properties"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "WRITEBACK_CLOUD",
+      "msf_id": "msf09_000_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "a073d609:_handle_state_update:1.0:76",
+        "a073d609:_handle_state_update:1:63"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A11",
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "resource_instance_tag": "sensor.vdev_homecoming_security_ambience_merge_cloud_lane",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "state_write"
+      ]
+    },
+    "msf09_001_cloud_op": {
+      "action_refs": [
+        "A3"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "LOGGER",
+        "commands",
+        "self",
+        "value",
+        "wrapper"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf09_001_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "a073d609:_async_send_commands:1:92",
+        "a073d609:_async_send_commands:3:95",
+        "a073d609:_async_send_wrapper_updates:2:111",
+        "a073d609:_read_wrapper:2:103"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A3",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:light.entry_homecoming.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op"
+      ]
+    },
+    "msf10_000_cloud_http_call": {
+      "action_refs": [
+        "A3"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "ATTR_BRIGHTNESS",
+        "ATTR_HS_COLOR",
+        "ColorTempWrapper",
+        "DPCodeBooleanWrapper",
+        "DPCodeEnumWrapper",
+        "LIGHTS",
+        "TuyaLightEntity",
+        "_get_brightness_wrapper",
+        "_get_color_data_wrapper",
+        "async_add_entities",
+        "callback",
+        "device_ids",
+        "entry",
+        "kwargs",
+        "list",
+        "manager",
+        "self",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf10_000_cloud_http_call",
+      "msf_type": "ACT",
+      "node_ids": [
+        "67d079e8:async_discover_device:1:467",
+        "67d079e8:async_discover_device:2.0:469",
+        "67d079e8:async_discover_device:2.1:470",
+        "67d079e8:async_discover_device:2:468",
+        "67d079e8:async_setup_entry:1:462",
+        "67d079e8:async_setup_entry:2:465",
+        "67d079e8:async_turn_on:4.1:608",
+        "67d079e8:async_turn_on:4.2:611"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A3",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:light.entry_homecoming.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_http_call",
+        "external_call_cloud"
+      ]
+    },
+    "msf10_004_entry_setup": {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "ColorTempWrapper",
+        "DPCodeBooleanWrapper",
+        "DPCodeEnumWrapper",
+        "LIGHTS",
+        "TuyaLightEntity",
+        "_get_brightness_wrapper",
+        "_get_color_data_wrapper",
+        "async_add_entities",
+        "callback",
+        "device_ids",
+        "entry",
+        "list",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf10_004_entry_setup",
+      "msf_type": "INIT",
+      "node_ids": [
+        "67d079e8:async_setup_entry:1:462",
+        "67d079e8:async_setup_entry:2:465"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "entry_setup",
+        "external_call_cloud"
+      ]
+    },
+    "msf10_005_cloud_status_call": {
+      "action_refs": [
+        "A3",
+        "A4"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf10_005_cloud_status_call",
+      "msf_type": "ACT",
+      "node_ids": [
+        "67d079e8:is_on:0:569",
+        "67d079e8:is_on:1:570"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A3",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:light.entry_homecoming.status",
+      "secondary_action_refs": [
+        "A4"
+      ],
+      "side_effect_sig": [
+        "cloud_status_call"
+      ]
+    },
+    "msf11_000_entry_unload": {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf11_000_entry_unload",
+      "msf_type": "CLEANUP",
+      "node_ids": [
+        "f8314a32:async_unload_entry:0:191"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "entry_unload"
+      ]
+    },
+    "msf11_001_ble_op": {
+      "action_refs": [
+        "A1"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "CoreState",
+        "async_ble_device_from_address",
+        "bool",
+        "data",
+        "hass",
+        "last_poll",
+        "service_info"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "BLE_LOCAL",
+      "msf_id": "msf11_001_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "f8314a32:_needs_poll:0:137"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A1",
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": "ble:xiaomi_ble:motion_sensor_homecoming",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "ble_op"
+      ]
+    },
+    "msf12_000_ble_op": {
+      "action_refs": [
+        "A1"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "BINARY_SENSOR_DESCRIPTIONS",
+        "PassiveBluetoothDataUpdate",
+        "device_key_to_bluetooth_entity_key",
+        "sensor_device_info_to_hass_device_info",
+        "sensor_update"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "BLE_LOCAL",
+      "msf_id": "msf12_000_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "d9c4917e:sensor_update_to_bluetooth_data_update:0:111",
+        "d9c4917e:sensor_update_to_bluetooth_data_update:1:112"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A1",
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": "ble:xiaomi_ble:motion_sensor_homecoming",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "ble_op"
+      ]
+    },
+    "msf13_000_ble_op": {
+      "action_refs": [
+        "A1"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "EVENT_PROPERTIES",
+        "EVENT_TYPE",
+        "event",
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "BLE_LOCAL",
+      "msf_id": "msf13_000_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "ab8f4bde:_async_handle_event:0:179",
+        "ab8f4bde:_async_handle_event:1:180"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A1",
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": "ble:xiaomi_ble:motion_sensor_homecoming",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "ble_op",
+        "state_write"
+      ]
+    }
+  },
+  "resources": {
+    "BLE": {
+      "type": "slot_pool"
+    },
+    "CLOUD": {
+      "type": "rate_budget"
+    },
+    "HA": {
+      "type": "event_loop"
+    }
+  },
+  "soft_constraints": [
+    {
+      "fallback": "preserve_action_order",
+      "guard": "true",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "msf05_000_ble_op",
+        "msf11_001_ble_op"
+      ]
+    },
+    {
+      "fallback": "serialize_ble_ops_and_disable_reuse",
+      "guard": "ble_timeout_rate_high OR ble_overlap_risk_high",
+      "kind": "BUDGET_K",
+      "params": {
+        "limit": 1,
+        "mode": "soft_cap",
+        "resource": "BLE",
+        "rule_id": "rule_protocol_ble_budget_overlap",
+        "template_kind": "BUDGET_K"
+      },
+      "scope": [
+        "msf05_000_ble_op",
+        "msf11_001_ble_op",
+        "msf12_000_ble_op",
+        "msf13_000_ble_op"
+      ]
+    },
+    {
+      "fallback": "serialize_ble_ops_and_disable_reuse",
+      "guard": "ble_timeout_rate_high OR ble_overlap_risk_high",
+      "kind": "NO_OVERLAP",
+      "params": {
+        "max_parallel": 1,
+        "resource": "BLE_AIRTIME",
+        "risk_feature": "conn_event_overlap",
+        "rule_id": "rule_protocol_ble_budget_overlap",
+        "template_kind": "NO_OVERLAP"
+      },
+      "scope": [
+        "msf05_000_ble_op",
+        "msf11_001_ble_op",
+        "msf12_000_ble_op",
+        "msf13_000_ble_op"
+      ]
+    },
+    {
+      "fallback": "disable_ble_reuse_and_insert_gap",
+      "guard": "ble_conn_success_rate_ok",
+      "kind": "SAME_SESSION_GROUP",
+      "params": {
+        "group_key": "device_id",
+        "reuse_window_ms": 3000,
+        "rule_id": "rule_protocol_ble_reuse_gap",
+        "template_kind": "SAME_SESSION_GROUP"
+      },
+      "scope": [
+        "msf05_000_ble_op",
+        "msf11_001_ble_op",
+        "msf12_000_ble_op",
+        "msf13_000_ble_op"
+      ]
+    },
+    {
+      "fallback": "disable_ble_reuse_and_insert_gap",
+      "guard": "ble_conn_success_rate_ok",
+      "kind": "MIN_GAP",
+      "params": {
+        "gap_ms": 100,
+        "reason": "cooldown",
+        "rule_id": "rule_protocol_ble_reuse_gap",
+        "template_kind": "MIN_GAP"
+      },
+      "scope": [
+        "msf05_000_ble_op",
+        "msf11_001_ble_op",
+        "msf12_000_ble_op",
+        "msf13_000_ble_op"
+      ]
+    },
+    {
+      "fallback": "serialize_local_api_reads",
+      "guard": "local_endpoint_reachable",
+      "kind": "BUDGET_K",
+      "params": {
+        "limit": 4,
+        "resource": "LOCAL_PARALLEL",
+        "rule_id": "rule_protocol_local_api_budget",
+        "template_kind": "BUDGET_K"
+      },
+      "scope": [
+        "msf02_001_local_api_read",
+        "msf02_002_local_api_read",
+        "msf03_000_local_api_read",
+        "msf04_000_local_api_read"
+      ]
+    },
+    {
+      "fallback": "serialize_local_api_reads",
+      "guard": "local_endpoint_reachable",
+      "kind": "SAME_SESSION_GROUP",
+      "params": {
+        "group_key": "endpoint",
+        "reuse_window_ms": 5000,
+        "rule_id": "rule_protocol_local_api_budget",
+        "template_kind": "SAME_SESSION_GROUP"
+      },
+      "scope": [
+        "msf02_001_local_api_read",
+        "msf02_002_local_api_read",
+        "msf03_000_local_api_read",
+        "msf04_000_local_api_read"
+      ]
+    },
+    {
+      "fallback": "reduce_qps_and_parallelism",
+      "guard": "recent_429_rate_high",
+      "kind": "BUDGET_K",
+      "params": {
+        "limit": 4,
+        "resource": "CLOUD_PARALLEL",
+        "rule_id": "rule_protocol_cloud_budget_rate",
+        "template_kind": "BUDGET_K"
+      },
+      "scope": [
+        "msf08_000_cloud_http_call",
+        "msf08_006_cloud_op",
+        "msf08_007_cloud_op",
+        "msf08_008_cloud_op",
+        "msf08_009_cloud_op",
+        "msf08_010_cloud_op",
+        "msf08_011_cloud_op",
+        "msf08_012_cloud_op",
+        "msf09_001_cloud_op",
+        "msf10_000_cloud_http_call"
+      ]
+    },
+    {
+      "fallback": "reduce_qps_and_parallelism",
+      "guard": "recent_429_rate_high",
+      "kind": "RATE_LIMIT",
+      "params": {
+        "burst": 8,
+        "max_qps": 5.0,
+        "rule_id": "rule_protocol_cloud_budget_rate",
+        "template_kind": "RATE_LIMIT",
+        "window_ms": 1000
+      },
+      "scope": [
+        "msf08_000_cloud_http_call",
+        "msf08_006_cloud_op",
+        "msf08_007_cloud_op",
+        "msf08_008_cloud_op",
+        "msf08_009_cloud_op",
+        "msf08_010_cloud_op",
+        "msf08_011_cloud_op",
+        "msf08_012_cloud_op",
+        "msf09_001_cloud_op",
+        "msf10_000_cloud_http_call"
+      ]
+    },
+    {
+      "fallback": "backoff_then_shrink_batch",
+      "guard": "recent_429_rate_high",
+      "kind": "BACKOFF_WINDOW",
+      "params": {
+        "base_ms": 200,
+        "factor": 2.0,
+        "max_ms": 2000,
+        "rule_id": "rule_protocol_cloud_backoff",
+        "template_kind": "BACKOFF_WINDOW"
+      },
+      "scope": [
+        "msf08_000_cloud_http_call",
+        "msf08_006_cloud_op",
+        "msf08_007_cloud_op",
+        "msf08_008_cloud_op",
+        "msf08_009_cloud_op",
+        "msf08_010_cloud_op",
+        "msf08_011_cloud_op",
+        "msf08_012_cloud_op",
+        "msf09_001_cloud_op",
+        "msf10_000_cloud_http_call"
+      ]
+    },
+    {
+      "fallback": "disable_batching_use_singleton_calls",
+      "guard": "latency_budget_allows_batching AND 429_rate_low",
+      "kind": "BATCH_GROUP",
+      "params": {
+        "group_key": "endpoint",
+        "idempotent_only": true,
+        "max_batch_size": 20,
+        "max_wait_ms": 80,
+        "rule_id": "rule_protocol_cloud_batch_reuse",
+        "template_kind": "BATCH_GROUP"
+      },
+      "scope": [
+        "msf08_000_cloud_http_call",
+        "msf08_006_cloud_op",
+        "msf08_007_cloud_op",
+        "msf08_008_cloud_op",
+        "msf08_009_cloud_op",
+        "msf08_010_cloud_op",
+        "msf08_011_cloud_op",
+        "msf08_012_cloud_op",
+        "msf09_001_cloud_op",
+        "msf10_000_cloud_http_call"
+      ]
+    },
+    {
+      "fallback": "disable_batching_use_singleton_calls",
+      "guard": "latency_budget_allows_batching AND 429_rate_low",
+      "kind": "SAME_SESSION_GROUP",
+      "params": {
+        "group_key": "host",
+        "reuse_window_ms": 10000,
+        "rule_id": "rule_protocol_cloud_batch_reuse",
+        "template_kind": "SAME_SESSION_GROUP"
+      },
+      "scope": [
+        "msf08_000_cloud_http_call",
+        "msf08_006_cloud_op",
+        "msf08_007_cloud_op",
+        "msf08_008_cloud_op",
+        "msf08_009_cloud_op",
+        "msf08_010_cloud_op",
+        "msf08_011_cloud_op",
+        "msf08_012_cloud_op",
+        "msf09_001_cloud_op",
+        "msf10_000_cloud_http_call"
+      ]
+    },
+    {
+      "fallback": "reduce_parallelism",
+      "guard": "resource_constrained",
+      "kind": "BUDGET_K",
+      "params": {
+        "limit": 1,
+        "resource": "BLE"
+      },
+      "scope": [
+        "msf05_000_ble_op",
+        "msf11_001_ble_op",
+        "msf12_000_ble_op",
+        "msf13_000_ble_op"
+      ]
+    },
+    {
+      "fallback": "reduce_parallelism",
+      "guard": "resource_constrained",
+      "kind": "BUDGET_K",
+      "params": {
+        "limit": 4,
+        "resource": "CLOUD"
+      },
+      "scope": [
+        "msf00_005_cloud_status_call",
+        "msf07_002_cloud_status_call",
+        "msf08_000_cloud_http_call",
+        "msf08_006_cloud_op",
+        "msf08_007_cloud_op",
+        "msf08_008_cloud_op",
+        "msf08_009_cloud_op",
+        "msf08_010_cloud_op",
+        "msf08_011_cloud_op",
+        "msf08_012_cloud_op",
+        "msf09_001_cloud_op",
+        "msf10_000_cloud_http_call",
+        "msf10_005_cloud_status_call"
+      ]
+    },
+    {
+      "fallback": "reduce_parallelism",
+      "guard": "resource_constrained",
+      "kind": "BUDGET_K",
+      "params": {
+        "limit": 6,
+        "resource": "LOCAL"
+      },
+      "scope": [
+        "msf00_005_cloud_status_call",
+        "msf01_000_state_write",
+        "msf02_000_state_write",
+        "msf02_001_local_api_read",
+        "msf02_002_local_api_read",
+        "msf03_000_local_api_read",
+        "msf04_000_local_api_read",
+        "msf05_000_ble_op",
+        "msf06_000_state_write",
+        "msf07_002_cloud_status_call",
+        "msf08_000_cloud_http_call",
+        "msf08_006_cloud_op",
+        "msf08_007_cloud_op",
+        "msf08_008_cloud_op",
+        "msf08_009_cloud_op",
+        "msf08_010_cloud_op",
+        "msf08_011_cloud_op",
+        "msf08_012_cloud_op",
+        "msf09_000_state_write",
+        "msf09_001_cloud_op",
+        "msf10_000_cloud_http_call",
+        "msf10_005_cloud_status_call",
+        "msf11_001_ble_op",
+        "msf12_000_ble_op",
+        "msf13_000_ble_op"
+      ]
+    },
+    {
+      "fallback": "reduce_parallelism",
+      "guard": "resource_constrained",
+      "kind": "BUDGET_K",
+      "params": {
+        "limit": 10,
+        "resource": "TOTAL"
+      },
+      "scope": [
+        "msf00_005_cloud_status_call",
+        "msf01_000_state_write",
+        "msf02_000_state_write",
+        "msf02_001_local_api_read",
+        "msf02_002_local_api_read",
+        "msf03_000_local_api_read",
+        "msf04_000_local_api_read",
+        "msf05_000_ble_op",
+        "msf06_000_state_write",
+        "msf07_002_cloud_status_call",
+        "msf08_000_cloud_http_call",
+        "msf08_006_cloud_op",
+        "msf08_007_cloud_op",
+        "msf08_008_cloud_op",
+        "msf08_009_cloud_op",
+        "msf08_010_cloud_op",
+        "msf08_011_cloud_op",
+        "msf08_012_cloud_op",
+        "msf09_000_state_write",
+        "msf09_001_cloud_op",
+        "msf10_000_cloud_http_call",
+        "msf10_005_cloud_status_call",
+        "msf11_001_ble_op",
+        "msf12_000_ble_op",
+        "msf13_000_ble_op"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "guard": "true",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:DATA_DEP"
+      },
+      "scope": [
+        "msf00_000_entry_setup",
+        "msf00_001_state_write"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "guard": "true",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:DATA_DEP"
+      },
+      "scope": [
+        "msf00_000_entry_setup",
+        "msf00_002_state_write"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "guard": "true",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:DATA_DEP"
+      },
+      "scope": [
+        "msf00_000_entry_setup",
+        "msf00_003_state_write"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "guard": "true",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:DATA_DEP"
+      },
+      "scope": [
+        "msf00_000_entry_setup",
+        "msf00_004_state_write"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "guard": "true",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:DATA_DEP"
+      },
+      "scope": [
+        "msf00_001_state_write",
+        "msf00_002_state_write"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "guard": "true",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:DATA_DEP"
+      },
+      "scope": [
+        "msf00_002_state_write",
+        "msf00_003_state_write"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "guard": "true",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:DATA_DEP"
+      },
+      "scope": [
+        "msf00_003_state_write",
+        "msf00_004_state_write"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "guard": "true",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:CONTROL_DEP"
+      },
+      "scope": [
+        "msf02_000_state_write",
+        "msf02_002_local_api_read"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "guard": "true",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "template:rule_entry_unload_9d31450f19:0:template_binding_failed_fallback"
+      },
+      "scope": [
+        "msf01_001_entry_setup",
+        "msf07_000_entry_unload"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "guard": "true",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "template:rule_entry_unload_9d31450f19:0:template_binding_failed_fallback"
+      },
+      "scope": [
+        "msf01_002_unsubscribe",
+        "msf07_000_entry_unload"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "guard": "true",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "template:rule_entry_unload_9d31450f19:0:template_binding_failed_fallback"
+      },
+      "scope": [
+        "msf01_003_unsubscribe",
+        "msf07_000_entry_unload"
+      ]
+    }
+  ]
+}

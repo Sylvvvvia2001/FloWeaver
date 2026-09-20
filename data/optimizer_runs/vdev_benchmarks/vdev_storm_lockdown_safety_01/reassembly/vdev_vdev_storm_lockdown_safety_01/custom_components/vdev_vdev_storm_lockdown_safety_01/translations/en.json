@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_storm_lockdown_safety_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Storm Lockdown Safety Routine"
+}

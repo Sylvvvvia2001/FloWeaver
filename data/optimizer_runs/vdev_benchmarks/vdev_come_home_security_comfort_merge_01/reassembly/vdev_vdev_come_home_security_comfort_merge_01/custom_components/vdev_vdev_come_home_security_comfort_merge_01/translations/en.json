@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_come_home_security_comfort_merge_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Come-Home Security and Comfort Merge"
+}

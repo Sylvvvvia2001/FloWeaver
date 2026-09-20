@@ -1,0 +1,164 @@
+{
+  "canonicalization_version": "v1",
+  "certificate_id": "cert_d0fb987e6298",
+  "counterexamples": [
+    {
+      "alignment_status": "PROVED",
+      "counterexample_id": "cex_e01ff416b2",
+      "culprit_ids": [
+        "RUNTIME:LOCAL:DEVICE_COMMAND:smart-home:232:m1:actuator"
+      ],
+      "diff_summary": {
+        "baseline_state_at_divergence": {},
+        "baseline_trace_prefix": [],
+        "counterexample_verdict": "TRACE_ONLY",
+        "divergence_point": {
+          "scenario_id": "mut_007"
+        },
+        "environment_assumptions": {},
+        "hunks": [
+          {
+            "anchor": "RUNTIME:LOCAL:DEVICE_COMMAND:smart-home:232:m1:actuator",
+            "baseline_ops": [
+              "RUNTIME:LOCAL:DEVICE_COMMAND:smart-home:232:m1:actuator"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          },
+          {
+            "anchor": "RUNTIME:LOCAL:DEVICE_COMMAND:smart-home:232:m1:actuator",
+            "baseline_ops": [],
+            "optimized_ops": [
+              "RUNTIME:LOCAL:DEVICE_COMMAND:smart-home:232:m1:actuator"
+            ],
+            "severity": "MEDIUM"
+          }
+        ],
+        "inferred_by": "multiset_equal_but_order_diff",
+        "input_assumptions": {},
+        "kind": "order_violation",
+        "minimal_conditions": [],
+        "optimized_state_at_divergence": {},
+        "optimized_trace_prefix": [],
+        "refinement_hint": "trace_compare_only",
+        "suspicious_region_id": null,
+        "violated_property": "TRACE_MISMATCH"
+      },
+      "execution_plan_hash": null,
+      "scenario_id": "mut_007",
+      "suspicious_region_count": 0,
+      "trust_plan_hash": null,
+      "violated_assertion": "observable_semantic_equivalence"
+    }
+  ],
+  "differential_summary": {
+    "compare_meta": {
+      "canonicalization_version": "v1",
+      "commutable_ops": [
+        "COORD_REFRESH",
+        "STATE_WRITE"
+      ],
+      "config_hash": "9285a670239fb92a",
+      "equivalence_rules": [],
+      "parallel_action_scopes": []
+    },
+    "counterexample_count": 1,
+    "earliest_violation_summary": {
+      "dominant_target": "smart:home:232:m1:actuator",
+      "top_anchors": [
+        [
+          "RUNTIME:LOCAL:DEVICE_COMMAND:smart-home:232:m1:actuator",
+          1
+        ]
+      ],
+      "top_targets": [
+        [
+          "smart:home:232:m1:actuator",
+          1
+        ]
+      ]
+    },
+    "focus_terms": [
+      "smart-home:232:m1:actuator",
+      "smart-home:232:m1:sensor",
+      "smart-home:232:m1:summary",
+      "DEVICE_COMMAND",
+      "READ_SENSOR",
+      "STATE_WRITE"
+    ],
+    "hardening_threshold": {
+      "min_coverage": 0.85,
+      "min_pass_rate": 0.98
+    },
+    "rollback_applied_kinds": [],
+    "rollback_iterations": 0,
+    "rollback_max_steps": 1,
+    "rule_stats": {
+      "rule_M1_dependent_action_swap": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": 0.0,
+        "last_updated_at": "2026-07-06T09:51:06.912203+00:00",
+        "m6_alignment": {
+          "alignment_status_counts": {
+            "PROVED": 1
+          },
+          "final_counterexample_scenarios": [
+            "mut_007"
+          ],
+          "matched_scenarios": [
+            "mut_007"
+          ],
+          "resource_preserved_scenarios": [
+            "mut_007"
+          ],
+          "rollback_touched": false,
+          "strict_pass_scenarios": [],
+          "tolerant_pass_scenarios": []
+        },
+        "n_applied": 1,
+        "n_counterexamples": 1,
+        "n_matched": 1,
+        "n_success": 0,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": 1.0,
+        "rule_id": "rule_M1_dependent_action_swap",
+        "trace_preserved_rate": 0.0
+      }
+    },
+    "runtime_policy_summary": [],
+    "scenario_total": 1,
+    "strict_pass": 0,
+    "tolerant_pass": 0
+  },
+  "generated_at": "2026-07-06T09:51:06.912203+00:00",
+  "hard_edge_proof": {
+    "acyclic": true,
+    "edge_count": 0,
+    "edges": []
+  },
+  "integration": "mut_007",
+  "mssu_signatures": [
+    {
+      "mssu_id": "m01",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m02",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m03",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    }
+  ],
+  "plan_summary": {},
+  "profile_version": "mutation_suite/v1",
+  "schema_version": "execution_certificate/v1",
+  "soft_constraints": []
+}

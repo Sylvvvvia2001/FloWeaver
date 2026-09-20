@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "action_lanes": {
+      "A_ha_local": "HA",
+      "A_local_001": "LOCAL"
+    },
+    "baseline": "naive_topo_parallel",
+    "micro_applicable": false,
+    "node_kind": "action_id",
+    "policy": {
+      "ble_parallel": 1,
+      "cloud_parallel": 4,
+      "local_parallel": 4,
+      "max_parallel": 4
+    }
+  },
+  "ordered_batches": [
+    {
+      "batch_id": "naive_batch_000",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_local_001"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_001",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_ha_local"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    }
+  ]
+}

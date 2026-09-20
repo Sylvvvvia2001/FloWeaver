@@ -1,0 +1,306 @@
+{
+  "canonicalization_version": "v1",
+  "certificate_id": "cert_cc15678c2ce9",
+  "counterexamples": [
+    {
+      "counterexample_id": "cex_e128af86b9",
+      "culprit_ids": [
+        "SETUP:HA:SUBSCRIBE:async_setup_entry:9"
+      ],
+      "diff_summary": {
+        "hunks": [
+          {
+            "anchor": "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+            "baseline_ops": [
+              "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+              "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:15",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:16",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          }
+        ]
+      },
+      "scenario_id": "lifecycle_nominal",
+      "violated_assertion": "observable_semantic_equivalence"
+    },
+    {
+      "counterexample_id": "cex_b2d6fce331",
+      "culprit_ids": [
+        "SETUP:HA:SUBSCRIBE:async_setup_entry:9"
+      ],
+      "diff_summary": {
+        "hunks": [
+          {
+            "anchor": "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+            "baseline_ops": [
+              "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+              "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:15",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:16",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          }
+        ]
+      },
+      "scenario_id": "push_nominal",
+      "violated_assertion": "observable_semantic_equivalence"
+    },
+    {
+      "counterexample_id": "cex_c80aa606ae",
+      "culprit_ids": [
+        "SETUP:HA:SUBSCRIBE:async_setup_entry:9"
+      ],
+      "diff_summary": {
+        "hunks": [
+          {
+            "anchor": "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+            "baseline_ops": [
+              "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+              "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:15",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:16",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          }
+        ]
+      },
+      "scenario_id": "ble_disconnect",
+      "violated_assertion": "observable_semantic_equivalence"
+    },
+    {
+      "counterexample_id": "cex_4115513189",
+      "culprit_ids": [
+        "SETUP:HA:SUBSCRIBE:async_setup_entry:9"
+      ],
+      "diff_summary": {
+        "hunks": [
+          {
+            "anchor": "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+            "baseline_ops": [
+              "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+              "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:15",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:16",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          }
+        ]
+      },
+      "scenario_id": "cloud_429",
+      "violated_assertion": "observable_semantic_equivalence"
+    },
+    {
+      "counterexample_id": "cex_bfbf738c28",
+      "culprit_ids": [
+        "SETUP:HA:SUBSCRIBE:async_setup_entry:9"
+      ],
+      "diff_summary": {
+        "hunks": [
+          {
+            "anchor": "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+            "baseline_ops": [
+              "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+              "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:15",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:16",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          }
+        ]
+      },
+      "scenario_id": "token_expired",
+      "violated_assertion": "observable_semantic_equivalence"
+    },
+    {
+      "counterexample_id": "cex_9da320b51d",
+      "culprit_ids": [
+        "SETUP:HA:SUBSCRIBE:async_setup_entry:9"
+      ],
+      "diff_summary": {
+        "hunks": [
+          {
+            "anchor": "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+            "baseline_ops": [
+              "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+              "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:15",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:16",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          }
+        ]
+      },
+      "scenario_id": "random_jitter_0",
+      "violated_assertion": "observable_semantic_equivalence"
+    },
+    {
+      "counterexample_id": "cex_6908c4555d",
+      "culprit_ids": [
+        "SETUP:HA:SUBSCRIBE:async_setup_entry:9"
+      ],
+      "diff_summary": {
+        "hunks": [
+          {
+            "anchor": "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+            "baseline_ops": [
+              "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+              "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:15",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:16",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          }
+        ]
+      },
+      "scenario_id": "random_jitter_1",
+      "violated_assertion": "observable_semantic_equivalence"
+    }
+  ],
+  "differential_summary": {
+    "counterexample_count": 7,
+    "focus_terms": [
+      "STATE_WRITE",
+      "COORD_REFRESH"
+    ],
+    "rule_stats": {
+      "rule_coord_refresh_9c4aca1990": {
+        "coverage": 0.0,
+        "has_must_evidence": 0.0,
+        "pass_rate": 0.0
+      },
+      "rule_entry_setup_91e19cefcb": {
+        "coverage": 0.0,
+        "has_must_evidence": 0.0,
+        "pass_rate": 0.0
+      },
+      "rule_entry_unload_da7471ab82": {
+        "coverage": 1.0,
+        "has_must_evidence": 0.0,
+        "pass_rate": 0.0
+      },
+      "rule_general_fa9e50150b": {
+        "coverage": 0.0,
+        "has_must_evidence": 1.0,
+        "pass_rate": 0.0
+      },
+      "rule_lifecycle_79ea0726ef": {
+        "coverage": 0.0,
+        "has_must_evidence": 1.0,
+        "pass_rate": 0.0
+      },
+      "rule_state_write_b839bfafd0": {
+        "coverage": 0.0,
+        "has_must_evidence": 0.0,
+        "pass_rate": 0.0
+      },
+      "rule_subscribe_a84e504152": {
+        "coverage": 1.0,
+        "has_must_evidence": 0.0,
+        "pass_rate": 0.0
+      },
+      "rule_unsubscribe_2897b3e3e9": {
+        "coverage": 0.0,
+        "has_must_evidence": 0.0,
+        "pass_rate": 0.0
+      }
+    },
+    "scenario_total": 7,
+    "strict_pass": 0,
+    "tolerant_pass": 0
+  },
+  "generated_at": "2026-03-06T06:06:28.152881+00:00",
+  "hard_edge_proof": {
+    "acyclic": true,
+    "edge_count": 0,
+    "edges": []
+  },
+  "integration": "demo",
+  "msf_signatures": [
+    {
+      "msf_id": "msf00_000_coord_refresh",
+      "phase": "RUNTIME",
+      "side_effect_sig": [
+        "coord_refresh"
+      ],
+      "type": "SYNC"
+    },
+    {
+      "msf_id": "msf00_001_entry_setup",
+      "phase": "SETUP",
+      "side_effect_sig": [
+        "entry_setup",
+        "state_write"
+      ],
+      "type": "INIT"
+    },
+    {
+      "msf_id": "msf00_002_coord_refresh",
+      "phase": "SETUP",
+      "side_effect_sig": [
+        "coord_refresh",
+        "state_write"
+      ],
+      "type": "SYNC"
+    },
+    {
+      "msf_id": "msf00_003_state_write",
+      "phase": "SETUP",
+      "side_effect_sig": [
+        "state_write"
+      ],
+      "type": "UPDATE"
+    }
+  ],
+  "profile_version": "ha_profile_default",
+  "schema_version": "execution_certificate/v1",
+  "soft_constraints": [
+    {
+      "fallback": "disable_optimization_for_scope",
+      "guard": "runtime_metrics_available",
+      "kind": "COALESCE_STATE_WRITE",
+      "params": {
+        "window_ms": 120
+      },
+      "scope": [
+        "msf00_001_entry_setup",
+        "msf00_002_coord_refresh",
+        "msf00_003_state_write"
+      ]
+    },
+    {
+      "fallback": "disable_optimization_for_scope",
+      "guard": "runtime_metrics_available",
+      "kind": "COALESCE_STATE_WRITE",
+      "params": {
+        "window_ms": 120
+      },
+      "scope": [
+        "msf00_001_entry_setup",
+        "msf00_002_coord_refresh",
+        "msf00_003_state_write"
+      ]
+    }
+  ]
+}

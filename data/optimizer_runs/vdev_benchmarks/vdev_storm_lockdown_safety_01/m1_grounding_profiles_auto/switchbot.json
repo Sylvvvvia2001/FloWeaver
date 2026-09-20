@@ -1,0 +1,260 @@
+{
+  "integration": "switchbot",
+  "runtime_families": [
+    {
+      "action_kind": "set_cover_position",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "ble:switchbot:roller_shade_entry",
+          "roller_shade_entry",
+          "ble:switchbot:roller_shade_living_room",
+          "roller_shade_living_room",
+          "ble:switchbot:roller_shade_study",
+          "roller_shade_study"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "control",
+          "set_cover_position"
+        ],
+        "required_service_tokens": [
+          "set_cover_position"
+        ]
+      },
+      "call_patterns": [
+        "set_position",
+        "self._device.set_position"
+      ],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "const",
+          "coordinator",
+          "entity",
+          "homeassistant",
+          "logging"
+        ],
+        "boost_if_names": [
+          "set_cover_position",
+          "async_set_cover_position",
+          "set_position",
+          "self._device.set_position"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "BLE_OP",
+      "file_globs": [
+        "switchbot/cover.py"
+      ],
+      "forbidden_context": [
+        "dunder_init"
+      ],
+      "forbidden_path_signals": [
+        "setup_function:async_setup_entry",
+        "setup_call:async_add_entities",
+        "property_function:is_closed"
+      ],
+      "forbidden_runtime_roles": [
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "async_set_cover_position"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "integration": "switchbot",
+      "negative_call_patterns": [
+        "async_add_entities",
+        "switchbotgaragedooropenerentity",
+        "switchbotblindtiltentity",
+        "switchbotrollershadeentity",
+        "switchbotcurtainentity",
+        "door_open"
+      ],
+      "negative_evidence": [
+        "negative_function:async_setup_entry",
+        "negative_function:is_closed",
+        "negative_function:_get_curtain_speed",
+        "negative_call:isinstance",
+        "negative_call:async_add_entities",
+        "negative_call:switchbotgaragedooropenerentity",
+        "negative_call:switchbotblindtiltentity",
+        "negative_call:switchbotrollershadeentity",
+        "negative_call:switchbotcurtainentity",
+        "negative_call:door_open"
+      ],
+      "negative_function_patterns": [
+        "async_setup_entry",
+        "is_closed",
+        "_get_curtain_speed"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [
+            "isinstance",
+            "async_add_entities",
+            "switchbotgaragedooropenerentity",
+            "switchbotblindtiltentity",
+            "switchbotrollershadeentity",
+            "switchbotcurtainentity"
+          ],
+          "call_patterns": [
+            "isinstance",
+            "async_add_entities",
+            "switchbotgaragedooropenerentity",
+            "switchbotblindtiltentity",
+            "switchbotrollershadeentity",
+            "switchbotcurtainentity"
+          ],
+          "file_path": "data/repo_snapshot/switchbot/cover.py",
+          "function_name": "async_setup_entry",
+          "path_kind": "setup_path",
+          "path_signals": [
+            "setup_function:async_setup_entry",
+            "setup_call:async_add_entities"
+          ],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -10,
+          "snippet": "31: \n32: async def async_setup_entry(\n33:     hass: HomeAssistant,\n34:     entry: SwitchbotConfigEntry,\n35:     async_add_entities: AddConfigEntryEntitiesCallback,\n36: ) -> None:\n37:     \"\"\"Set up Switchbot curtain based on a config entry.\"\"\"\n38:     coordinator = entry.runtime_data\n39:     if isinstance(coordinator.device, switchbot.SwitchbotGarageDoorOpener):\n40:         async_add_entities([SwitchbotGarageDoorOpenerEntity(coordinator)])\n41:     elif isinstance(coordinator.device, switchbot.SwitchbotBlindTilt):\n42:         async_add_entities([SwitchBotBlindTiltEntity(coordinator)])\n43:     elif isinstance(coordinator.device, switchbot.SwitchbotRollerShade):\n44:         async_add_entities([SwitchBotRollerShadeEntity(coordinator)])"
+        },
+        {
+          "call_chains": [
+            "self._device.door_open"
+          ],
+          "call_patterns": [
+            "door_open"
+          ],
+          "file_path": "data/repo_snapshot/switchbot/cover.py",
+          "function_name": "is_closed",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:is_closed"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "323:     @property\n324:     def is_closed(self) -> bool | None:\n325:         \"\"\"Return true if cover is closed, else False.\"\"\"\n326:         return not self._device.door_open()\n327: \n328:     @exception_handler"
+        },
+        {
+          "call_chains": [
+            "int",
+            "self.coordinator.config_entry.options.get"
+          ],
+          "call_patterns": [
+            "int",
+            "get"
+          ],
+          "file_path": "data/repo_snapshot/switchbot/cover.py",
+          "function_name": "_get_curtain_speed",
+          "path_kind": "helper_path",
+          "path_signals": [],
+          "prototype_kind": "negative_helper",
+          "role_hint": "helper",
+          "score": -4,
+          "snippet": "68:     @callback\n69:     def _get_curtain_speed(self) -> int:\n70:         \"\"\"Return the configured curtain speed.\"\"\"\n71:         return int(\n72:             self.coordinator.config_entry.options.get(\n73:                 CONF_CURTAIN_SPEED, DEFAULT_CURTAIN_SPEED\n74:             )\n75:         )\n76: \n77:     async def async_added_to_hass(self) -> None:"
+        }
+      ],
+      "origin_action_id": null,
+      "origin_cluster_id": "switchbot__cover__ble_op__set_cover_position__ble",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [
+            "kwargs.get",
+            "_logger.debug",
+            "bool",
+            "self._device.is_opening",
+            "self._device.is_closing",
+            "self.async_write_ha_state",
+            "self._device.set_position"
+          ],
+          "call_patterns": [
+            "get",
+            "debug",
+            "bool",
+            "is_opening",
+            "is_closing",
+            "async_write_ha_state",
+            "set_position"
+          ],
+          "file_path": "data/repo_snapshot/switchbot/cover.py",
+          "function_name": "async_set_cover_position",
+          "path_kind": "control_path",
+          "path_signals": [
+            "state_write_function:async_set_cover_position",
+            "control_function:async_set_cover_position",
+            "state_write_call:self.async_write_ha_state",
+            "control_call:self._device.set_position",
+            "awaited_control_call:self._device.set_position"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_write",
+          "score": 15,
+          "snippet": "123:     @exception_handler\n124:     async def async_set_cover_position(self, **kwargs: Any) -> None:\n125:         \"\"\"Move the cover shutter to a specific position.\"\"\"\n126:         position = kwargs.get(ATTR_POSITION)\n127: \n128:         _LOGGER.debug(\"Switchbot to move at %d %s\", position, self._address)\n129:         self._last_run_success = bool(await self._device.set_position(position))\n130:         self._attr_is_opening = self._device.is_opening()\n131:         self._attr_is_closing = self._device.is_closing()\n132:         self.async_write_ha_state()\n133: \n134:     @callback"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_write"
+      ],
+      "required_context": [
+        "runtime_path"
+      ],
+      "required_path_signals": [
+        "state_write_function:async_set_cover_position",
+        "control_function:async_set_cover_position",
+        "state_write_call:self.async_write_ha_state",
+        "control_call:self._device.set_position",
+        "awaited_control_call:self._device.set_position"
+      ],
+      "required_runtime_roles": [
+        "runtime_write"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "switchbot:cover_runtime_set_cover_position_control",
+      "runtime_archetypes": [
+        "ble_runtime_control",
+        "device_control_path"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:async_set_cover_position",
+        "runtime_call:get",
+        "runtime_call:debug",
+        "runtime_call:bool",
+        "runtime_call:is_opening",
+        "runtime_call:is_closing",
+        "runtime_call:async_write_ha_state",
+        "runtime_call:set_position",
+        "runtime_call:kwargs.get",
+        "runtime_call:_logger.debug"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/switchbot/cover.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A2",
+        "A3"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "same runtime idiom appears in one file across multiple unresolved actions",
+      "why_not_setup": [
+        "exclude_role:setup:async_setup_entry",
+        "exclude_role:property_getter:is_closed",
+        "exclude_role:helper:_get_curtain_speed",
+        "exclude_path_signal:setup_function:async_setup_entry",
+        "exclude_path_signal:setup_call:async_add_entities",
+        "exclude_path_signal:property_function:is_closed"
+      ]
+    }
+  ],
+  "schema_version": "m1_grounding_profile/v3",
+  "version": "draft_llm_v3"
+}

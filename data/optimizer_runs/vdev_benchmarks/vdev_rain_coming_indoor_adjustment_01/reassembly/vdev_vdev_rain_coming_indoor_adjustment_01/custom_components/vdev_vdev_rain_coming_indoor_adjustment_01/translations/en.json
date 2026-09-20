@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_rain_coming_indoor_adjustment_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Rain-Coming Indoor Adjustment"
+}

@@ -1,0 +1,1341 @@
+[
+  {
+    "category": "lifecycle",
+    "confidence": 0.8,
+    "effect": {
+      "kind": "ordering_or_constraint",
+      "scope": "lifecycle"
+    },
+    "evidence_ids": [
+      "CODE_00177968e6",
+      "CODE_01a4dcd6eb",
+      "CODE_02513ac8f4",
+      "CODE_071b5fbe37",
+      "CODE_07e5b32c46",
+      "CODE_0a708ea0ff",
+      "CODE_0d0301a092",
+      "CODE_0e0ee5cd62",
+      "CODE_1019cf367e",
+      "CODE_11babc01d3",
+      "CODE_12a6f410a8",
+      "CODE_15ca0b08de",
+      "CODE_1992ee1750",
+      "CODE_1b42dd7737",
+      "CODE_1b91dd67d9",
+      "CODE_1d6ce486a1",
+      "CODE_1f2d5dbcad",
+      "CODE_1fd003eeee",
+      "CODE_219f026a1a",
+      "CODE_23576aced4",
+      "CODE_25fde8a905",
+      "CODE_26085cb328",
+      "CODE_27b331e7d0",
+      "CODE_28a9935f4c",
+      "CODE_2b152aa90a",
+      "CODE_2b21000d6d",
+      "CODE_2b8d17799a",
+      "CODE_2c852b6cc3",
+      "CODE_2d6ae443d8",
+      "CODE_2dd71e6af5",
+      "CODE_2dde703bd7",
+      "CODE_2de8fe4879",
+      "CODE_32667d4b78",
+      "CODE_330a05d29b",
+      "CODE_332439db6a",
+      "CODE_384e3c9a0e",
+      "CODE_388da03d18",
+      "CODE_3a50e29f33",
+      "CODE_3acd98dd82",
+      "CODE_3d3861b14a"
+    ],
+    "extractor_version": "profile_builder_norm/v2",
+    "fallback": "disable_optimization_for_scope",
+    "guard": "runtime_metrics_available",
+    "hard_edge_templates": [
+      {
+        "dst": "COORD_REFRESH",
+        "kind": "HARD_LIFECYCLE",
+        "src": "ENTRY_SETUP"
+      }
+    ],
+    "hardening_reason": null,
+    "hardening_state": "UNKNOWN",
+    "marker_hints": [
+      "ENTRY_SETUP",
+      "COORD_REFRESH"
+    ],
+    "match_pattern": {
+      "dominant_pattern": "ENTRY_SETUP",
+      "topic": "lifecycle"
+    },
+    "normalization_flags": [
+      "canonicalized_rule_v1",
+      "deterministic_rule_v1",
+      "evidence_cap_applied_v1"
+    ],
+    "provenance": {
+      "bucket_key": [
+        "lifecycle",
+        "ENTRY_SETUP",
+        "COORD_REFRESH",
+        "HARD_LIFECYCLE"
+      ],
+      "cluster_id": "cluster:general:0",
+      "evidence_cap_kept": 40,
+      "evidence_cap_policy": "representative_prefix_after_canonical_sort",
+      "evidence_cap_total": 471,
+      "merged_from_rule_ids": [
+        "rule_general_209df39611",
+        "rule_general_37d3b973da",
+        "rule_migration_f9fe2ce9e2",
+        "rule_reconfigure_flow_10e742e733",
+        "rule_reauth_flow_ef5d6c88a1",
+        "rule_entry_setup_44b83d5f0e",
+        "rule_entry_setup_0b2117ab82",
+        "rule_entry_setup_e317de35bd",
+        "rule_entry_setup_6ce4725b12",
+        "rule_entry_setup_b448be402e",
+        "rule_entry_setup_11a1532946",
+        "rule_entry_setup_5bd730ecac",
+        "rule_entry_setup_a23876f59e",
+        "rule_entry_setup_3d6acdb812",
+        "rule_entry_setup_bff3a3b5b0",
+        "rule_entry_setup_eeac93f9b9",
+        "rule_entry_setup_c57d46e106",
+        "rule_entry_setup_850c222955",
+        "rule_entry_setup_f07790504a",
+        "rule_entry_setup_7d2e2aa5f7",
+        "rule_entry_setup_6c2a83f4b9",
+        "rule_entry_setup_58003adcca",
+        "rule_entry_setup_7628c404be",
+        "rule_entry_setup_030cf4781d",
+        "rule_entry_setup_52758bf225",
+        "rule_entry_setup_9ae8047eeb",
+        "rule_entry_setup_f109271421",
+        "rule_entry_setup_710f6cfc43",
+        "rule_entry_setup_cbc700aa52",
+        "rule_entry_setup_c81ccb2b62",
+        "rule_entry_setup_f31a427576",
+        "rule_entry_setup_168e904768",
+        "rule_entry_setup_43a757bd89",
+        "rule_entry_setup_5b2bfed1bc",
+        "rule_entry_setup_b8d1249558",
+        "rule_entry_setup_693985e26b",
+        "rule_entry_setup_f9c1cc26ff",
+        "rule_entry_setup_18379a742e",
+        "rule_entry_setup_99e3e5f5f5",
+        "rule_entry_setup_41e791e42f",
+        "rule_entry_setup_8660811a39",
+        "rule_entry_setup_d80649925b",
+        "rule_entry_setup_7bce68d016",
+        "rule_entry_setup_379e20c061",
+        "rule_entry_setup_67b98ee910",
+        "rule_entry_setup_0cb3354c26",
+        "rule_entry_setup_cdeb78b13f",
+        "rule_entry_setup_0ce0c8f09b",
+        "rule_entry_setup_5115d32489",
+        "rule_entry_setup_92f8349d99",
+        "rule_entry_setup_b3a58cc5d6",
+        "rule_entry_setup_2178765d49",
+        "rule_entry_setup_7925235282",
+        "rule_entry_setup_9737f60630",
+        "rule_entry_setup_fd0161b1f5",
+        "rule_entry_setup_e90645e729",
+        "rule_entry_setup_a446aec6be",
+        "rule_entry_setup_9eb7fbf126",
+        "rule_entry_setup_f99dbcee97",
+        "rule_entry_setup_1126f2dd1f",
+        "rule_entry_setup_28bbc39843",
+        "rule_entry_setup_20440b37c8",
+        "rule_entry_setup_24ab576dbe",
+        "rule_coordinator_68707559c5",
+        "rule_manifest_meta_c79fdd7bae",
+        "rule_call_constraint_79d9c9620e",
+        "rule_call_constraint_762bb2a714",
+        "rule_call_constraint_c08705ffda",
+        "rule_call_constraint_43124388ff",
+        "rule_call_constraint_acc102943b",
+        "rule_call_constraint_8c65389601"
+      ],
+      "merged_titles": [
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh",
+        "Entry setup precedes first refresh"
+      ],
+      "source_rule_kind": "deterministic"
+    },
+    "rule_id": "rule_general_209df39611",
+    "semantic_tag": "lifecycle:lifecycle:entry_setup",
+    "soft_constraint_templates": [],
+    "source_commit": null,
+    "source_type": "profile_builder_rule",
+    "status": "SOFT",
+    "title": "Entry setup precedes first refresh",
+    "validation_summary": {}
+  },
+  {
+    "category": "lifecycle",
+    "confidence": 0.8,
+    "effect": {
+      "kind": "ordering_or_constraint",
+      "scope": "cleanup"
+    },
+    "evidence_ids": [
+      "CODE_06526143a4",
+      "CODE_0dc99a79cf",
+      "CODE_2693e4d0ab",
+      "CODE_283d44870f",
+      "CODE_288895f958",
+      "CODE_2bfe4c6bb0",
+      "CODE_2df93a73d7",
+      "CODE_2fe7ecebe9",
+      "CODE_30aebc3ae1",
+      "CODE_383c1d128b",
+      "CODE_3a30ce734c",
+      "CODE_402c2a979a",
+      "CODE_42f00367b4",
+      "CODE_478ddc622d",
+      "CODE_4f104ef32c",
+      "CODE_621838399f",
+      "CODE_63f037cf36",
+      "CODE_6affa46777",
+      "CODE_6ce5c8fef1",
+      "CODE_72b209f34d",
+      "CODE_7aa04670ef",
+      "CODE_9452ec33c3",
+      "CODE_9cc9cfba06",
+      "CODE_b2256753d6",
+      "CODE_b821b7d04b",
+      "CODE_b9361eb577",
+      "CODE_beb4c8afe9",
+      "CODE_c48e86c614",
+      "CODE_c900a54a7f",
+      "CODE_ca45ca8bbb",
+      "CODE_ca89aa59df",
+      "CODE_ce80392669",
+      "CODE_d676cd9d47",
+      "CODE_dde45f43cb",
+      "CODE_ee9c75e9db",
+      "CODE_f26292575b",
+      "CODE_f8a045348f",
+      "CODE_f973fcf217",
+      "CODE_faa0728aeb",
+      "CODE_fd71e1d0bd"
+    ],
+    "extractor_version": "profile_builder_norm/v2",
+    "fallback": "disable_optimization_for_scope",
+    "guard": "runtime_metrics_available",
+    "hard_edge_templates": [
+      {
+        "dst": "ENTRY_UNLOAD",
+        "kind": "HARD_LIFECYCLE",
+        "src": "UNSUBSCRIBE"
+      }
+    ],
+    "hardening_reason": null,
+    "hardening_state": "UNKNOWN",
+    "marker_hints": [
+      "ENTRY_UNLOAD",
+      "UNSUBSCRIBE"
+    ],
+    "match_pattern": {
+      "dominant_pattern": "ENTRY_UNLOAD",
+      "topic": "cleanup"
+    },
+    "normalization_flags": [
+      "canonicalized_rule_v1",
+      "deterministic_rule_v1",
+      "evidence_cap_applied_v1"
+    ],
+    "provenance": {
+      "bucket_key": [
+        "lifecycle",
+        "UNSUBSCRIBE",
+        "ENTRY_UNLOAD",
+        "HARD_LIFECYCLE"
+      ],
+      "cluster_id": "cluster:entry_unload:0",
+      "evidence_cap_kept": 40,
+      "evidence_cap_policy": "representative_prefix_after_canonical_sort",
+      "evidence_cap_total": 158,
+      "merged_from_rule_ids": [
+        "rule_entry_unload_9d31450f19",
+        "rule_entry_unload_c88ecc39d3",
+        "rule_entry_unload_5029d0dc3c",
+        "rule_entry_unload_f3771a9976",
+        "rule_entry_unload_00085ba295",
+        "rule_entry_unload_f21733f8ee",
+        "rule_entry_unload_69d2d2c069",
+        "rule_entry_unload_92433ca309",
+        "rule_entry_unload_3bd5c64af9",
+        "rule_entry_unload_c47f2dea5f",
+        "rule_entry_unload_3ab84d22fe",
+        "rule_entry_unload_25ccff6937",
+        "rule_entry_unload_db2fdd611c",
+        "rule_entry_unload_62b8d2b2e5",
+        "rule_entry_unload_93fcfb685b",
+        "rule_entry_unload_e182b03867",
+        "rule_entry_unload_4791a931bd",
+        "rule_entry_unload_95c636d29c",
+        "rule_unsubscribe_24c58f24f6",
+        "rule_unsubscribe_933fe2daeb",
+        "rule_unload_cleanup_06cee22b5f"
+      ],
+      "merged_titles": [
+        "Unsubscribe before entry unload",
+        "Unsubscribe before entry unload",
+        "Unsubscribe before entry unload",
+        "Unsubscribe before entry unload",
+        "Unsubscribe before entry unload",
+        "Unsubscribe before entry unload",
+        "Unsubscribe before entry unload",
+        "Unsubscribe before entry unload",
+        "Unsubscribe before entry unload",
+        "Unsubscribe before entry unload",
+        "Unsubscribe before entry unload",
+        "Unsubscribe before entry unload",
+        "Unsubscribe before entry unload",
+        "Unsubscribe before entry unload",
+        "Unsubscribe before entry unload",
+        "Unsubscribe before entry unload",
+        "Unsubscribe before entry unload",
+        "Unsubscribe before entry unload",
+        "Unsubscribe before entry unload",
+        "Unsubscribe before entry unload",
+        "Unsubscribe before entry unload"
+      ],
+      "source_rule_kind": "deterministic"
+    },
+    "rule_id": "rule_entry_unload_9d31450f19",
+    "semantic_tag": "lifecycle:cleanup:entry_unload",
+    "soft_constraint_templates": [],
+    "source_commit": null,
+    "source_type": "profile_builder_rule",
+    "status": "SOFT",
+    "title": "Unsubscribe before entry unload",
+    "validation_summary": {}
+  },
+  {
+    "category": "observable",
+    "confidence": 0.8,
+    "effect": {
+      "kind": "ordering_or_constraint",
+      "scope": "state_write"
+    },
+    "evidence_ids": [
+      "CODE_066ca9ca96",
+      "CODE_06868504b4",
+      "CODE_09597de5ee",
+      "CODE_0a9add8ec1",
+      "CODE_0b117e2597",
+      "CODE_0b373ed36a",
+      "CODE_0b66cdde66",
+      "CODE_0befdd852f",
+      "CODE_0c8b02d23d",
+      "CODE_0e29f7a9d2",
+      "CODE_0e35d9de19",
+      "CODE_0eb3ff6b00",
+      "CODE_0ffe0f085c",
+      "CODE_12a49c7cfe",
+      "CODE_1579352e0e",
+      "CODE_1627ba61be",
+      "CODE_1731aa8869",
+      "CODE_1789db83f2",
+      "CODE_18065d7af8",
+      "CODE_183fda248c",
+      "CODE_1c14b9a068",
+      "CODE_204b640620",
+      "CODE_20744683cc",
+      "CODE_20c59a24ce",
+      "CODE_240ec48b5b",
+      "CODE_2876027335",
+      "CODE_287898ba89",
+      "CODE_2a28c8e29e",
+      "CODE_2aa09274ad",
+      "CODE_2b4ca9622e",
+      "CODE_2dd0d2d52f",
+      "CODE_2ec5cfdebe",
+      "CODE_3055eeccca",
+      "CODE_3381fb86fc",
+      "CODE_33e9425180",
+      "CODE_35dc6ef91a",
+      "CODE_36206f49b1",
+      "CODE_389c2670a3",
+      "CODE_38b1d633fd",
+      "CODE_38e6b1840b"
+    ],
+    "extractor_version": "profile_builder_norm/v2",
+    "fallback": "disable_optimization_for_scope",
+    "guard": "crosses_observation_boundary OR affects_entity_state",
+    "hard_edge_templates": [],
+    "hardening_reason": null,
+    "hardening_state": "UNKNOWN",
+    "marker_hints": [
+      "STATE_WRITE"
+    ],
+    "match_pattern": {
+      "dominant_pattern": "STATE_WRITE",
+      "topic": "state_write"
+    },
+    "normalization_flags": [
+      "canonicalized_rule_v1",
+      "deterministic_rule_v1",
+      "evidence_cap_applied_v1"
+    ],
+    "provenance": {
+      "cluster_id": "cluster:state_write:0",
+      "evidence_cap_kept": 40,
+      "evidence_cap_policy": "representative_prefix_after_canonical_sort",
+      "evidence_cap_total": 179,
+      "merged_from_rule_ids": [
+        "rule_state_write_3038cae0b8",
+        "rule_state_write_710958756b",
+        "rule_state_write_dce2fc9a6d",
+        "rule_state_write_0a604697f0",
+        "rule_state_write_3518d4ff7d",
+        "rule_state_write_070a7bff57",
+        "rule_state_write_858848311f",
+        "rule_state_write_5022dfb269",
+        "rule_state_write_976c5290aa",
+        "rule_state_write_18d16b7eea",
+        "rule_state_write_1dc0ca0d22",
+        "rule_state_write_d1c1cbb913",
+        "rule_state_write_f16e98ec08",
+        "rule_state_write_701bcc3726",
+        "rule_state_write_ce1f54d593",
+        "rule_state_write_129fa5c0e7"
+      ],
+      "merged_titles": [
+        "State write is observable",
+        "State write is observable",
+        "State write is observable",
+        "State write is observable",
+        "State write is observable",
+        "State write is observable",
+        "State write is observable",
+        "State write is observable",
+        "State write is observable",
+        "State write is observable",
+        "State write is observable",
+        "State write is observable",
+        "State write is observable",
+        "State write is observable",
+        "State write is observable",
+        "State write is observable"
+      ],
+      "source_rule_kind": "deterministic"
+    },
+    "rule_id": "rule_state_write_3038cae0b8",
+    "semantic_tag": "observable:state_write:state_write",
+    "soft_constraint_templates": [],
+    "source_commit": null,
+    "source_type": "profile_builder_rule",
+    "status": "SOFT",
+    "title": "State write is observable",
+    "validation_summary": {}
+  },
+  {
+    "category": "lifecycle",
+    "confidence": 0.8,
+    "effect": {
+      "kind": "ordering_or_constraint",
+      "scope": "lifecycle"
+    },
+    "evidence_ids": [
+      "CODE_02eb774fd1",
+      "CODE_0c06635c29",
+      "CODE_1141f5ef47",
+      "CODE_5a07007210",
+      "CODE_618bbae268",
+      "CODE_809211cab6",
+      "CODE_8936f1a89e",
+      "CODE_8be11201a1",
+      "CODE_ad462c4c07",
+      "CODE_cd64826bf2",
+      "CODE_d7485bbc02",
+      "CODE_e65115b112",
+      "CODE_fc77e2e5b8",
+      "DOC_05241d6274",
+      "DOC_159a6d012b",
+      "DOC_99dacb941f"
+    ],
+    "extractor_version": "profile_builder_norm/v2",
+    "fallback": "disable_optimization_for_scope",
+    "guard": "runtime_metrics_available",
+    "hard_edge_templates": [
+      {
+        "dst": "STATE_WRITE",
+        "kind": "HARD_LIFECYCLE",
+        "src": "COORD_REFRESH"
+      }
+    ],
+    "hardening_reason": null,
+    "hardening_state": "UNKNOWN",
+    "marker_hints": [
+      "COORD_REFRESH",
+      "STATE_WRITE"
+    ],
+    "match_pattern": {
+      "dominant_pattern": "COORD_REFRESH",
+      "topic": "lifecycle"
+    },
+    "normalization_flags": [
+      "canonicalized_rule_v1",
+      "deterministic_rule_v1"
+    ],
+    "provenance": {
+      "bucket_key": [
+        "lifecycle",
+        "COORD_REFRESH",
+        "STATE_WRITE",
+        "HARD_LIFECYCLE"
+      ],
+      "cluster_id": "cluster:coord_refresh:0",
+      "merged_from_rule_ids": [
+        "rule_coord_refresh_0d5b7bb134",
+        "rule_coord_refresh_ed2454a31f"
+      ],
+      "merged_titles": [
+        "Coordinator refresh precedes state write",
+        "Coordinator refresh precedes state write"
+      ],
+      "source_rule_kind": "deterministic"
+    },
+    "rule_id": "rule_coord_refresh_0d5b7bb134",
+    "semantic_tag": "lifecycle:lifecycle:coord_refresh",
+    "soft_constraint_templates": [],
+    "source_commit": null,
+    "source_type": "profile_builder_rule",
+    "status": "SOFT",
+    "title": "Coordinator refresh precedes state write",
+    "validation_summary": {}
+  },
+  {
+    "category": "cleanup",
+    "confidence": 0.8,
+    "effect": {
+      "kind": "ordering_or_constraint",
+      "scope": "cleanup"
+    },
+    "evidence_ids": [
+      "CODE_2fc0fe11b4",
+      "CODE_527c14ed92",
+      "CODE_70ba6f82dc",
+      "CODE_7b496e9cc2",
+      "CODE_97c2a8dad0",
+      "CODE_99c47b0c4f",
+      "CODE_a564eb12e1",
+      "CODE_a5b865d7ee",
+      "CODE_be863363e5",
+      "CODE_ca0b51b57f",
+      "CODE_e98eee6722",
+      "DOC_05241d6274",
+      "DOC_159a6d012b",
+      "DOC_305c3ec13c",
+      "DOC_38dd414dbd",
+      "DOC_99dacb941f"
+    ],
+    "extractor_version": "profile_builder_norm/v2",
+    "fallback": "disable_optimization_for_scope",
+    "guard": "runtime_metrics_available",
+    "hard_edge_templates": [
+      {
+        "dst": "UNSUBSCRIBE",
+        "kind": "HARD_LIFECYCLE",
+        "src": "SUBSCRIBE"
+      }
+    ],
+    "hardening_reason": null,
+    "hardening_state": "UNKNOWN",
+    "marker_hints": [
+      "SUBSCRIBE",
+      "UNSUBSCRIBE"
+    ],
+    "match_pattern": {
+      "dominant_pattern": "SUBSCRIBE",
+      "topic": "cleanup"
+    },
+    "normalization_flags": [
+      "canonicalized_rule_v1",
+      "deterministic_rule_v1"
+    ],
+    "provenance": {
+      "cluster_id": "cluster:subscribe:0",
+      "merged_from_rule_ids": [
+        "rule_subscribe_ab1fa62e3a",
+        "rule_subscribe_f7295817f2"
+      ],
+      "merged_titles": [
+        "Subscription cleanup pairing",
+        "Subscription cleanup pairing"
+      ],
+      "source_rule_kind": "deterministic"
+    },
+    "rule_id": "rule_subscribe_ab1fa62e3a",
+    "semantic_tag": "cleanup:cleanup:subscribe",
+    "soft_constraint_templates": [],
+    "source_commit": null,
+    "source_type": "profile_builder_rule",
+    "status": "SOFT",
+    "title": "Subscription cleanup pairing",
+    "validation_summary": {}
+  },
+  {
+    "category": "protocol",
+    "confidence": 0.95,
+    "effect": {
+      "kind": "ordering_or_constraint",
+      "scope": "protocol_ble"
+    },
+    "evidence_ids": [
+      "CODE_0b1626dcf4",
+      "CODE_0ce4fb7724",
+      "CODE_20c5afd0b1",
+      "CODE_321f89e8e1",
+      "CODE_76df369368",
+      "CODE_8f86ffa5eb",
+      "CODE_b547e01a85",
+      "CODE_eaede40a1d"
+    ],
+    "extractor_version": "profile_builder_norm/v2",
+    "fallback": "serialize_ble_ops_and_disable_reuse",
+    "guard": "ble_timeout_rate_high OR ble_overlap_risk_high",
+    "hard_edge_templates": [],
+    "hardening_reason": null,
+    "hardening_state": "UNKNOWN",
+    "marker_hints": [
+      "BLE_CONNECT",
+      "BLE_GATT_OP",
+      "BLE_OP"
+    ],
+    "match_pattern": {
+      "dominant_pattern": "BLE_GATT_OP",
+      "topic": "protocol_ble"
+    },
+    "normalization_flags": [
+      "canonicalized_rule_v1",
+      "protocol_rule_v1"
+    ],
+    "provenance": {
+      "bucket_key": [
+        "protocol",
+        "protocol_ble",
+        "BLE_GATT_OP",
+        [
+          "BUDGET_K",
+          "NO_OVERLAP"
+        ]
+      ],
+      "code_score": 30.0,
+      "doc_score": 21.2,
+      "merged_from_rule_ids": [
+        "rule_protocol_ble_budget_overlap"
+      ],
+      "merged_titles": [
+        "BLE overlap control"
+      ],
+      "source_rule_kind": "protocol_synthesis",
+      "test_score": 0.0,
+      "total_score": 51.2
+    },
+    "rule_id": "rule_protocol_ble_budget_overlap",
+    "semantic_tag": "protocol:protocol_ble:ble_gatt_op",
+    "soft_constraint_templates": [
+      {
+        "kind": "BUDGET_K",
+        "params": {
+          "limit": 1,
+          "mode": "soft_cap",
+          "resource": "BLE"
+        },
+        "scope": [
+          "BLE_CONNECT",
+          "BLE_GATT_OP",
+          "BLE_OP"
+        ]
+      },
+      {
+        "kind": "NO_OVERLAP",
+        "params": {
+          "max_parallel": 1,
+          "resource": "BLE_AIRTIME",
+          "risk_feature": "conn_event_overlap"
+        },
+        "scope": [
+          "BLE_CONNECT",
+          "BLE_GATT_OP",
+          "BLE_OP"
+        ]
+      }
+    ],
+    "source_commit": null,
+    "source_type": "profile_builder_rule",
+    "status": "SOFT",
+    "title": "BLE overlap control",
+    "validation_summary": {}
+  },
+  {
+    "category": "protocol",
+    "confidence": 0.93,
+    "effect": {
+      "kind": "ordering_or_constraint",
+      "scope": "protocol_ble"
+    },
+    "evidence_ids": [
+      "CODE_0b1626dcf4",
+      "CODE_0ce4fb7724",
+      "CODE_20c5afd0b1",
+      "CODE_321f89e8e1",
+      "CODE_76df369368",
+      "CODE_8f86ffa5eb",
+      "CODE_b547e01a85",
+      "CODE_eaede40a1d"
+    ],
+    "extractor_version": "profile_builder_norm/v2",
+    "fallback": "disable_ble_reuse_and_insert_gap",
+    "guard": "ble_conn_success_rate_ok",
+    "hard_edge_templates": [],
+    "hardening_reason": null,
+    "hardening_state": "UNKNOWN",
+    "marker_hints": [
+      "BLE_GATT_OP",
+      "BLE_DISCONNECT",
+      "BLE_CONNECT",
+      "BLE_OP"
+    ],
+    "match_pattern": {
+      "dominant_pattern": "BLE_CONNECT",
+      "topic": "protocol_ble"
+    },
+    "normalization_flags": [
+      "canonicalized_rule_v1",
+      "protocol_rule_v1"
+    ],
+    "provenance": {
+      "bucket_key": [
+        "protocol",
+        "protocol_ble",
+        "BLE_CONNECT",
+        [
+          "MIN_GAP",
+          "SAME_SESSION_GROUP"
+        ]
+      ],
+      "code_score": 30.0,
+      "doc_score": 21.2,
+      "merged_from_rule_ids": [
+        "rule_protocol_ble_reuse_gap"
+      ],
+      "merged_titles": [
+        "BLE session reuse cooldown"
+      ],
+      "source_rule_kind": "protocol_synthesis",
+      "test_score": 0.0,
+      "total_score": 51.2
+    },
+    "rule_id": "rule_protocol_ble_reuse_gap",
+    "semantic_tag": "protocol:protocol_ble:ble_connect",
+    "soft_constraint_templates": [
+      {
+        "kind": "SAME_SESSION_GROUP",
+        "params": {
+          "group_key": "device_id",
+          "reuse_window_ms": 3000
+        },
+        "scope": [
+          "BLE_GATT_OP",
+          "BLE_OP"
+        ]
+      },
+      {
+        "kind": "MIN_GAP",
+        "params": {
+          "gap_ms": 100,
+          "reason": "cooldown"
+        },
+        "scope": [
+          "BLE_DISCONNECT",
+          "BLE_CONNECT",
+          "BLE_OP"
+        ]
+      }
+    ],
+    "source_commit": null,
+    "source_type": "profile_builder_rule",
+    "status": "SOFT",
+    "title": "BLE session reuse cooldown",
+    "validation_summary": {}
+  },
+  {
+    "category": "protocol",
+    "confidence": 0.93,
+    "effect": {
+      "kind": "ordering_or_constraint",
+      "scope": "protocol_local"
+    },
+    "evidence_ids": [
+      "CODE_06dbc84c73",
+      "CODE_25fd7d0af0",
+      "CODE_31e7a37fd5",
+      "CODE_578c107420",
+      "CODE_8709798131",
+      "CODE_9ed248a8df",
+      "CODE_d152df1395",
+      "CODE_e4c210591b"
+    ],
+    "extractor_version": "profile_builder_norm/v2",
+    "fallback": "serialize_local_api_reads",
+    "guard": "local_endpoint_reachable",
+    "hard_edge_templates": [],
+    "hardening_reason": null,
+    "hardening_state": "UNKNOWN",
+    "marker_hints": [
+      "LOCAL_API_READ"
+    ],
+    "match_pattern": {
+      "dominant_pattern": "LOCAL_API_READ",
+      "topic": "protocol_local"
+    },
+    "normalization_flags": [
+      "canonicalized_rule_v1",
+      "protocol_rule_v1"
+    ],
+    "provenance": {
+      "bucket_key": [
+        "protocol",
+        "protocol_local",
+        "LOCAL_API_READ",
+        [
+          "BUDGET_K",
+          "SAME_SESSION_GROUP"
+        ]
+      ],
+      "code_score": 52.8,
+      "doc_score": 12.75,
+      "merged_from_rule_ids": [
+        "rule_protocol_local_api_budget"
+      ],
+      "merged_titles": [
+        "Local API read budget"
+      ],
+      "source_rule_kind": "protocol_synthesis",
+      "test_score": 0.0,
+      "total_score": 65.55
+    },
+    "rule_id": "rule_protocol_local_api_budget",
+    "semantic_tag": "protocol:protocol_local:local_api_read",
+    "soft_constraint_templates": [
+      {
+        "kind": "BUDGET_K",
+        "params": {
+          "limit": 4,
+          "resource": "LOCAL_PARALLEL"
+        },
+        "scope": [
+          "LOCAL_API_READ"
+        ]
+      },
+      {
+        "kind": "SAME_SESSION_GROUP",
+        "params": {
+          "group_key": "endpoint",
+          "reuse_window_ms": 5000
+        },
+        "scope": [
+          "LOCAL_API_READ"
+        ]
+      }
+    ],
+    "source_commit": null,
+    "source_type": "profile_builder_rule",
+    "status": "SOFT",
+    "title": "Local API read budget",
+    "validation_summary": {}
+  },
+  {
+    "category": "protocol",
+    "confidence": 0.95,
+    "effect": {
+      "kind": "ordering_or_constraint",
+      "scope": "protocol_cloud"
+    },
+    "evidence_ids": [
+      "CODE_1ac90b67bb",
+      "CODE_371b453ad6",
+      "CODE_46d1320760",
+      "CODE_590cd77c5f",
+      "CODE_74db006567",
+      "CODE_a21d4f5cc0",
+      "CODE_afa03061bb",
+      "CODE_d7d618fac3"
+    ],
+    "extractor_version": "profile_builder_norm/v2",
+    "fallback": "reduce_qps_and_parallelism",
+    "guard": "recent_429_rate_high",
+    "hard_edge_templates": [],
+    "hardening_reason": null,
+    "hardening_state": "UNKNOWN",
+    "marker_hints": [
+      "CLOUD_HTTP_CALL",
+      "CLOUD_OP"
+    ],
+    "match_pattern": {
+      "dominant_pattern": "CLOUD_HTTP_CALL",
+      "topic": "protocol_cloud"
+    },
+    "normalization_flags": [
+      "canonicalized_rule_v1",
+      "protocol_rule_v1"
+    ],
+    "provenance": {
+      "bucket_key": [
+        "protocol",
+        "protocol_cloud",
+        "CLOUD_HTTP_CALL",
+        [
+          "BUDGET_K",
+          "RATE_LIMIT"
+        ]
+      ],
+      "code_score": 254.8,
+      "doc_score": 14.55,
+      "merged_from_rule_ids": [
+        "rule_protocol_cloud_budget_rate"
+      ],
+      "merged_titles": [
+        "Cloud parallel budget and rate limit"
+      ],
+      "source_rule_kind": "protocol_synthesis",
+      "test_score": 20.4,
+      "total_score": 289.75
+    },
+    "rule_id": "rule_protocol_cloud_budget_rate",
+    "semantic_tag": "protocol:protocol_cloud:cloud_http_call",
+    "soft_constraint_templates": [
+      {
+        "kind": "BUDGET_K",
+        "params": {
+          "limit": 4,
+          "resource": "CLOUD_PARALLEL"
+        },
+        "scope": [
+          "CLOUD_HTTP_CALL",
+          "CLOUD_OP"
+        ]
+      },
+      {
+        "kind": "RATE_LIMIT",
+        "params": {
+          "burst": 8,
+          "max_qps": 5.0,
+          "window_ms": 1000
+        },
+        "scope": [
+          "CLOUD_HTTP_CALL",
+          "CLOUD_OP"
+        ]
+      }
+    ],
+    "source_commit": null,
+    "source_type": "profile_builder_rule",
+    "status": "SOFT",
+    "title": "Cloud parallel budget and rate limit",
+    "validation_summary": {}
+  },
+  {
+    "category": "protocol",
+    "confidence": 0.93,
+    "effect": {
+      "kind": "ordering_or_constraint",
+      "scope": "protocol_cloud"
+    },
+    "evidence_ids": [
+      "CODE_1ac90b67bb",
+      "CODE_371b453ad6",
+      "CODE_46d1320760",
+      "CODE_590cd77c5f",
+      "CODE_74db006567",
+      "CODE_a21d4f5cc0",
+      "CODE_afa03061bb",
+      "CODE_d7d618fac3"
+    ],
+    "extractor_version": "profile_builder_norm/v2",
+    "fallback": "backoff_then_shrink_batch",
+    "guard": "recent_429_rate_high",
+    "hard_edge_templates": [],
+    "hardening_reason": null,
+    "hardening_state": "UNKNOWN",
+    "marker_hints": [
+      "CLOUD_HTTP_CALL",
+      "CLOUD_429_CHECK",
+      "CLOUD_BACKOFF_SLEEP",
+      "CLOUD_OP"
+    ],
+    "match_pattern": {
+      "dominant_pattern": "CLOUD_429_CHECK",
+      "topic": "protocol_cloud"
+    },
+    "normalization_flags": [
+      "canonicalized_rule_v1",
+      "protocol_rule_v1"
+    ],
+    "provenance": {
+      "bucket_key": [
+        "protocol",
+        "protocol_cloud",
+        "CLOUD_429_CHECK",
+        [
+          "BACKOFF_WINDOW"
+        ]
+      ],
+      "code_score": 254.8,
+      "doc_score": 14.55,
+      "merged_from_rule_ids": [
+        "rule_protocol_cloud_backoff"
+      ],
+      "merged_titles": [
+        "Cloud 429 backoff window"
+      ],
+      "source_rule_kind": "protocol_synthesis",
+      "test_score": 20.4,
+      "total_score": 289.75
+    },
+    "rule_id": "rule_protocol_cloud_backoff",
+    "semantic_tag": "protocol:protocol_cloud:cloud_429_check",
+    "soft_constraint_templates": [
+      {
+        "kind": "BACKOFF_WINDOW",
+        "params": {
+          "base_ms": 200,
+          "factor": 2.0,
+          "max_ms": 2000
+        },
+        "scope": [
+          "CLOUD_HTTP_CALL",
+          "CLOUD_OP"
+        ]
+      }
+    ],
+    "source_commit": null,
+    "source_type": "profile_builder_rule",
+    "status": "SOFT",
+    "title": "Cloud 429 backoff window",
+    "validation_summary": {}
+  },
+  {
+    "category": "protocol",
+    "confidence": 0.91,
+    "effect": {
+      "kind": "ordering_or_constraint",
+      "scope": "protocol_cloud"
+    },
+    "evidence_ids": [
+      "CODE_1ac90b67bb",
+      "CODE_371b453ad6",
+      "CODE_46d1320760",
+      "CODE_590cd77c5f",
+      "CODE_74db006567",
+      "CODE_a21d4f5cc0",
+      "CODE_afa03061bb",
+      "CODE_d7d618fac3"
+    ],
+    "extractor_version": "profile_builder_norm/v2",
+    "fallback": "disable_batching_use_singleton_calls",
+    "guard": "latency_budget_allows_batching AND 429_rate_low",
+    "hard_edge_templates": [],
+    "hardening_reason": null,
+    "hardening_state": "UNKNOWN",
+    "marker_hints": [
+      "CLOUD_HTTP_CALL",
+      "CLOUD_BATCH_CALL",
+      "CLOUD_SESSION_REUSE",
+      "CLOUD_OP"
+    ],
+    "match_pattern": {
+      "dominant_pattern": "CLOUD_BATCH_CALL",
+      "topic": "protocol_cloud"
+    },
+    "normalization_flags": [
+      "canonicalized_rule_v1",
+      "protocol_rule_v1"
+    ],
+    "provenance": {
+      "bucket_key": [
+        "protocol",
+        "protocol_cloud",
+        "CLOUD_BATCH_CALL",
+        [
+          "BATCH_GROUP",
+          "SAME_SESSION_GROUP"
+        ]
+      ],
+      "code_score": 254.8,
+      "doc_score": 14.55,
+      "merged_from_rule_ids": [
+        "rule_protocol_cloud_batch_reuse"
+      ],
+      "merged_titles": [
+        "Cloud batching and session reuse"
+      ],
+      "source_rule_kind": "protocol_synthesis",
+      "test_score": 20.4,
+      "total_score": 289.75
+    },
+    "rule_id": "rule_protocol_cloud_batch_reuse",
+    "semantic_tag": "protocol:protocol_cloud:cloud_batch_call",
+    "soft_constraint_templates": [
+      {
+        "kind": "BATCH_GROUP",
+        "params": {
+          "group_key": "endpoint",
+          "idempotent_only": true,
+          "max_batch_size": 20,
+          "max_wait_ms": 80
+        },
+        "scope": [
+          "CLOUD_HTTP_CALL",
+          "CLOUD_OP"
+        ]
+      },
+      {
+        "kind": "SAME_SESSION_GROUP",
+        "params": {
+          "group_key": "host",
+          "reuse_window_ms": 10000
+        },
+        "scope": [
+          "CLOUD_HTTP_CALL",
+          "CLOUD_OP"
+        ]
+      }
+    ],
+    "source_commit": null,
+    "source_type": "profile_builder_rule",
+    "status": "SOFT",
+    "title": "Cloud batching and session reuse",
+    "validation_summary": {}
+  },
+  {
+    "category": "protocol",
+    "confidence": 0.95,
+    "effect": {
+      "kind": "ordering_or_constraint",
+      "scope": "protocol_cloud"
+    },
+    "evidence_ids": [
+      "CODE_1ac90b67bb",
+      "CODE_371b453ad6",
+      "CODE_46d1320760",
+      "CODE_590cd77c5f",
+      "CODE_74db006567",
+      "CODE_a21d4f5cc0",
+      "CODE_afa03061bb",
+      "CODE_d7d618fac3"
+    ],
+    "extractor_version": "profile_builder_norm/v2",
+    "fallback": "disable_optimization_for_scope",
+    "guard": "runtime_metrics_available",
+    "hard_edge_templates": [
+      {
+        "dst": "CLOUD_HTTP_CALL",
+        "kind": "HARD_LIFECYCLE",
+        "params": {
+          "pair_key": "host"
+        },
+        "src": "CLOUD_TOKEN_REFRESH"
+      }
+    ],
+    "hardening_reason": null,
+    "hardening_state": "UNKNOWN",
+    "marker_hints": [
+      "CLOUD_TOKEN_REFRESH",
+      "CLOUD_HTTP_CALL",
+      "CLOUD_OP"
+    ],
+    "match_pattern": {
+      "dominant_pattern": "CLOUD_TOKEN_REFRESH",
+      "topic": "protocol_cloud"
+    },
+    "normalization_flags": [
+      "canonicalized_rule_v1",
+      "protocol_rule_v1"
+    ],
+    "provenance": {
+      "bucket_key": [
+        "protocol",
+        "protocol_cloud",
+        "CLOUD_TOKEN_REFRESH",
+        []
+      ],
+      "code_score": 254.8,
+      "doc_score": 14.55,
+      "merged_from_rule_ids": [
+        "rule_protocol_cloud_refresh_before_call"
+      ],
+      "merged_titles": [
+        "Cloud token refresh precedence"
+      ],
+      "source_rule_kind": "protocol_synthesis",
+      "test_score": 20.4,
+      "total_score": 289.75
+    },
+    "rule_id": "rule_protocol_cloud_refresh_before_call",
+    "semantic_tag": "protocol:protocol_cloud:cloud_token_refresh",
+    "soft_constraint_templates": [],
+    "source_commit": null,
+    "source_type": "profile_builder_rule",
+    "status": "SOFT",
+    "title": "Cloud token refresh precedence",
+    "validation_summary": {}
+  },
+  {
+    "category": "protocol",
+    "confidence": 0.95,
+    "effect": {
+      "kind": "ordering_or_constraint",
+      "scope": "protocol_ble"
+    },
+    "evidence_ids": [
+      "CODE_0b1626dcf4",
+      "CODE_20c5afd0b1",
+      "CODE_3a2e19f06d",
+      "CODE_43b22656b1",
+      "CODE_5b8bec898c",
+      "CODE_76df369368",
+      "CODE_8f86ffa5eb",
+      "CODE_b547e01a85"
+    ],
+    "extractor_version": "profile_builder_norm/v2",
+    "fallback": "disable_optimization_for_scope",
+    "guard": "runtime_metrics_available",
+    "hard_edge_templates": [
+      {
+        "dst": "BLE_GATT_OP",
+        "kind": "HARD_LIFECYCLE",
+        "params": {
+          "pair_key": "device_id"
+        },
+        "src": "BLE_CONNECT"
+      },
+      {
+        "dst": "BLE_DISCONNECT",
+        "kind": "HARD_LIFECYCLE",
+        "params": {
+          "pair_key": "device_id"
+        },
+        "src": "BLE_GATT_OP"
+      }
+    ],
+    "hardening_reason": null,
+    "hardening_state": "UNKNOWN",
+    "marker_hints": [
+      "BLE_CONNECT",
+      "BLE_GATT_OP",
+      "BLE_DISCONNECT",
+      "BLE_OP"
+    ],
+    "match_pattern": {
+      "dominant_pattern": "BLE_GATT_OP",
+      "topic": "protocol_ble"
+    },
+    "normalization_flags": [
+      "canonicalized_rule_v1",
+      "protocol_rule_v1"
+    ],
+    "provenance": {
+      "bucket_key": [
+        "protocol",
+        "protocol_ble",
+        "BLE_GATT_OP",
+        []
+      ],
+      "code_score": 30.0,
+      "doc_score": 21.2,
+      "merged_from_rule_ids": [
+        "rule_protocol_ble_connect_op_disconnect"
+      ],
+      "merged_titles": [
+        "BLE connect/op/disconnect sequence"
+      ],
+      "source_rule_kind": "protocol_synthesis",
+      "test_score": 0.0,
+      "total_score": 51.2
+    },
+    "rule_id": "rule_protocol_ble_connect_op_disconnect",
+    "semantic_tag": "protocol:protocol_ble:ble_gatt_op",
+    "soft_constraint_templates": [],
+    "source_commit": null,
+    "source_type": "profile_builder_rule",
+    "status": "SOFT",
+    "title": "BLE connect precedes GATT operations",
+    "validation_summary": {}
+  }
+]

@@ -1,0 +1,1043 @@
+[
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/ecobee/climate.py",
+    "function_name": "async_setup_entry",
+    "line_end": 345,
+    "line_start": 204,
+    "marker_id": "marker_5cdbba7a82",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_op_hint_only"
+    ],
+    "file_path": "data/repo_snapshot/ecobee/climate.py",
+    "function_name": "async_setup_entry",
+    "line_end": 241,
+    "line_start": 241,
+    "marker_id": "marker_5aa46f6002",
+    "marker_type": "STATE_WRITE",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_op_hint_only"
+    ],
+    "file_path": "data/repo_snapshot/ecobee/climate.py",
+    "function_name": "async_setup_entry",
+    "line_end": 252,
+    "line_start": 252,
+    "marker_id": "marker_46c43eefcf",
+    "marker_type": "STATE_WRITE",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_op_hint_only"
+    ],
+    "file_path": "data/repo_snapshot/ecobee/climate.py",
+    "function_name": "async_setup_entry",
+    "line_end": 270,
+    "line_start": 270,
+    "marker_id": "marker_10deb709e5",
+    "marker_type": "STATE_WRITE",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_op_hint_only"
+    ],
+    "file_path": "data/repo_snapshot/ecobee/climate.py",
+    "function_name": "async_setup_entry",
+    "line_end": 287,
+    "line_start": 287,
+    "marker_id": "marker_95c81b4242",
+    "marker_type": "STATE_WRITE",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match",
+      "binding_hint_target_token",
+      "binding_hint_action_id"
+    ],
+    "binding_score": 1.29,
+    "evidence": [
+      "grounding_profile:ecobee:CLOUD_STATUS_CALL",
+      "grounding_profile:boost_imports",
+      "grounding_profile:boost_names",
+      "grounding_profile:boost_target_tokens",
+      "grounding_profile_rule:ecobee:climate_runtime_status_read",
+      "grounding_profile:match=call",
+      "grounding_profile:score:1.00",
+      "grounding_profile:runtime_path:runtime_function:async_update",
+      "grounding_profile:runtime_path:runtime_call:get_thermostat",
+      "grounding_profile:runtime_path:runtime_call:update",
+      "grounding_profile:runtime_path:runtime_call:self.data.ecobee.get_thermostat",
+      "grounding_profile:negative:negative_function:async_setup_entry",
+      "grounding_profile:negative:negative_function:set_preset_mode",
+      "grounding_profile:negative:negative_function:set_temperature",
+      "grounding_profile:negative:negative_function:fan",
+      "grounding_profile:why_not_setup:exclude_role:setup:async_setup_entry",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:set_preset_mode",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:set_temperature",
+      "grounding_profile:why_not_setup:exclude_role:property_getter:fan",
+      "grounding_profile:reviewer_status:draft",
+      "related_actions:A9",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match",
+      "action_match:binding_hint_target_token",
+      "action_match:binding_hint_action_id"
+    ],
+    "file_path": "data/repo_snapshot/ecobee/climate.py",
+    "function_name": "async_update",
+    "line_end": 399,
+    "line_start": 399,
+    "marker_id": "marker_acc1836129",
+    "marker_type": "CLOUD_STATUS_CALL",
+    "phase": "RUNTIME",
+    "primary_action_id": "A9",
+    "related_action_ids": [
+      "A9"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/ecobee/sensor.py",
+    "function_name": "async_setup_entry",
+    "line_end": 90,
+    "line_start": 74,
+    "marker_id": "marker_709cde9a44",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match",
+      "binding_hint_target_token",
+      "binding_hint_action_id"
+    ],
+    "binding_score": 1.29,
+    "evidence": [
+      "grounding_profile:ecobee:CLOUD_STATUS_CALL",
+      "grounding_profile:boost_imports",
+      "grounding_profile:boost_names",
+      "grounding_profile_rule:ecobee:sensor_runtime_status_read",
+      "grounding_profile:match=call",
+      "grounding_profile:score:0.95",
+      "grounding_profile:runtime_path:runtime_function:async_update",
+      "grounding_profile:runtime_path:runtime_call:get_remote_sensors",
+      "grounding_profile:runtime_path:runtime_call:update",
+      "grounding_profile:runtime_path:runtime_call:get_thermostat",
+      "grounding_profile:negative:negative_function:async_setup_entry",
+      "grounding_profile:negative:negative_function:unique_id",
+      "grounding_profile:negative:negative_function:device_info",
+      "grounding_profile:negative:negative_call:async_add_entities",
+      "grounding_profile:why_not_setup:exclude_role:setup:async_setup_entry",
+      "grounding_profile:why_not_setup:exclude_role:property_getter:unique_id",
+      "grounding_profile:why_not_setup:exclude_role:property_getter:device_info",
+      "grounding_profile:why_not_setup:exclude_path_signal:setup_function:async_setup_entry",
+      "grounding_profile:reviewer_status:draft",
+      "related_actions:A10",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match",
+      "action_match:binding_hint_target_token",
+      "action_match:binding_hint_action_id"
+    ],
+    "file_path": "data/repo_snapshot/ecobee/sensor.py",
+    "function_name": "async_update",
+    "line_end": 181,
+    "line_start": 181,
+    "marker_id": "marker_11dcfc6eb3",
+    "marker_type": "CLOUD_STATUS_CALL",
+    "phase": "RUNTIME",
+    "primary_action_id": "A10",
+    "related_action_ids": [
+      "A10"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match",
+      "binding_hint_target_token",
+      "binding_hint_action_id"
+    ],
+    "binding_score": 1.29,
+    "evidence": [
+      "grounding_profile:ecobee:CLOUD_STATUS_CALL",
+      "grounding_profile:boost_imports",
+      "grounding_profile:boost_names",
+      "grounding_profile:boost_target_tokens",
+      "grounding_profile_rule:ecobee:sensor_runtime_status_read",
+      "grounding_profile:match=call",
+      "grounding_profile:score:1.00",
+      "grounding_profile:runtime_path:runtime_function:async_update",
+      "grounding_profile:runtime_path:runtime_call:get_remote_sensors",
+      "grounding_profile:runtime_path:runtime_call:update",
+      "grounding_profile:runtime_path:runtime_call:get_thermostat",
+      "grounding_profile:negative:negative_function:async_setup_entry",
+      "grounding_profile:negative:negative_function:unique_id",
+      "grounding_profile:negative:negative_function:device_info",
+      "grounding_profile:negative:negative_call:async_add_entities",
+      "grounding_profile:why_not_setup:exclude_role:setup:async_setup_entry",
+      "grounding_profile:why_not_setup:exclude_role:property_getter:unique_id",
+      "grounding_profile:why_not_setup:exclude_role:property_getter:device_info",
+      "grounding_profile:why_not_setup:exclude_path_signal:setup_function:async_setup_entry",
+      "grounding_profile:reviewer_status:draft",
+      "related_actions:A10",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match",
+      "action_match:binding_hint_target_token",
+      "action_match:binding_hint_action_id"
+    ],
+    "file_path": "data/repo_snapshot/ecobee/sensor.py",
+    "function_name": "async_update",
+    "line_end": 190,
+    "line_start": 190,
+    "marker_id": "marker_8a61b61920",
+    "marker_type": "CLOUD_STATUS_CALL",
+    "phase": "RUNTIME",
+    "primary_action_id": "A10",
+    "related_action_ids": [
+      "A10"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "call:unsubscribe"
+    ],
+    "file_path": "data/repo_snapshot/esphome/update.py",
+    "function_name": "_async_setup_update_entity",
+    "line_end": 83,
+    "line_start": 83,
+    "marker_id": "marker_0057872025",
+    "marker_type": "UNSUBSCRIBE",
+    "phase": "TEARDOWN",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_seed",
+      "related_actions:A12",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/esphome/update.py",
+    "function_name": "_handle_device_update",
+    "line_end": 186,
+    "line_start": 186,
+    "marker_id": "marker_767e7c72f5",
+    "marker_type": "STATE_WRITE",
+    "phase": "RUNTIME",
+    "primary_action_id": "A12",
+    "related_action_ids": [
+      "A12"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/esphome/update.py",
+    "function_name": "async_setup_entry",
+    "line_end": 102,
+    "line_start": 48,
+    "marker_id": "marker_ce22d7b81f",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "call:unsubscribe"
+    ],
+    "file_path": "data/repo_snapshot/esphome/update.py",
+    "function_name": "async_setup_entry",
+    "line_end": 83,
+    "line_start": 83,
+    "marker_id": "marker_8364d61ffe",
+    "marker_type": "UNSUBSCRIBE",
+    "phase": "TEARDOWN",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:protocol:cloud_http_call",
+      "target_anchor_seed",
+      "context_missing:module_hints",
+      "related_actions:A7",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "__init__",
+    "line_end": 309,
+    "line_start": 309,
+    "marker_id": "marker_1de9a6c786",
+    "marker_type": "CLOUD_HTTP_CALL",
+    "phase": "RUNTIME",
+    "primary_action_id": "A7",
+    "related_action_ids": [
+      "A7"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:protocol:cloud_http_call",
+      "target_anchor_seed",
+      "context_missing:module_hints",
+      "related_actions:A7",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "__init__",
+    "line_end": 345,
+    "line_start": 345,
+    "marker_id": "marker_8ffa4b296f",
+    "marker_type": "CLOUD_HTTP_CALL",
+    "phase": "RUNTIME",
+    "primary_action_id": "A7",
+    "related_action_ids": [
+      "A7"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match",
+      "binding_hint_action_kind",
+      "binding_hint_target_token",
+      "binding_hint_action_id",
+      "generalized_profile_secondary_binding"
+    ],
+    "binding_score": 1.49,
+    "evidence": [
+      "grounding_profile:tuya:CLOUD_STATUS_CALL",
+      "grounding_profile:boost_imports",
+      "grounding_profile:boost_names",
+      "grounding_profile_rule:tuya:climate_runtime_status_read",
+      "grounding_profile:match=call",
+      "grounding_profile:score:0.95",
+      "grounding_profile:runtime_path:runtime_function:_get_temperature_wrappers",
+      "grounding_profile:runtime_path:runtime_call:find_dpcode",
+      "grounding_profile:runtime_path:runtime_call:_get_temperature_wrapper",
+      "grounding_profile:runtime_path:runtime_call:read_device_status",
+      "grounding_profile:negative:negative_function:async_setup_entry",
+      "grounding_profile:negative:negative_function:async_turn_on",
+      "grounding_profile:negative:negative_function:async_turn_off",
+      "grounding_profile:negative:negative_function:fan_mode",
+      "grounding_profile:why_not_setup:exclude_role:setup:async_setup_entry",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:async_turn_on",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:async_turn_off",
+      "grounding_profile:why_not_setup:exclude_role:property_getter:fan_mode",
+      "grounding_profile:reviewer_status:draft",
+      "related_actions:A7,A8",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match",
+      "action_match:binding_hint_action_kind",
+      "action_match:binding_hint_target_token",
+      "action_match:binding_hint_action_id",
+      "action_match:generalized_profile_secondary_binding"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "_get_temperature_wrappers",
+    "line_end": 152,
+    "line_start": 150,
+    "marker_id": "marker_36002290a2",
+    "marker_type": "CLOUD_STATUS_CALL",
+    "phase": "SETUP",
+    "primary_action_id": "A7",
+    "related_action_ids": [
+      "A7",
+      "A8"
+    ],
+    "secondary_action_ids": [
+      "A8"
+    ],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:protocol:cloud_http_call",
+      "target_anchor_seed",
+      "context_missing:module_hints",
+      "related_actions:A7",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "async_set_hvac_mode",
+    "line_end": 364,
+    "line_start": 364,
+    "marker_id": "marker_e5303f6c04",
+    "marker_type": "CLOUD_HTTP_CALL",
+    "phase": "RUNTIME",
+    "primary_action_id": "A7",
+    "related_action_ids": [
+      "A7"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:protocol:cloud_http_call",
+      "target_anchor_seed",
+      "context_missing:module_hints",
+      "related_actions:A7",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "async_set_swing_mode",
+    "line_end": 386,
+    "line_start": 386,
+    "marker_id": "marker_6bd50376d1",
+    "marker_type": "CLOUD_HTTP_CALL",
+    "phase": "RUNTIME",
+    "primary_action_id": "A7",
+    "related_action_ids": [
+      "A7"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "async_setup_entry",
+    "line_end": 253,
+    "line_start": 198,
+    "marker_id": "marker_40c3f5103e",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:protocol:cloud_http_call",
+      "target_anchor_seed",
+      "context_missing:module_hints",
+      "related_actions:A7",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "hvac_mode",
+    "line_end": 431,
+    "line_start": 431,
+    "marker_id": "marker_60a9b40dcb",
+    "marker_type": "CLOUD_HTTP_CALL",
+    "phase": "RUNTIME",
+    "primary_action_id": "A7",
+    "related_action_ids": [
+      "A7"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:protocol:cloud_http_call",
+      "target_anchor_seed",
+      "context_missing:module_hints",
+      "related_actions:A7",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "swing_mode",
+    "line_end": 447,
+    "line_start": 447,
+    "marker_id": "marker_f9a02ab387",
+    "marker_type": "CLOUD_HTTP_CALL",
+    "phase": "RUNTIME",
+    "primary_action_id": "A7",
+    "related_action_ids": [
+      "A7"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_seed",
+      "related_actions:A11",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/entity.py",
+    "function_name": "_handle_state_update",
+    "line_end": 76,
+    "line_start": 76,
+    "marker_id": "marker_5718cbb36c",
+    "marker_type": "STATE_WRITE",
+    "phase": "RUNTIME",
+    "primary_action_id": "A11",
+    "related_action_ids": [
+      "A11"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:protocol:cloud_http_call",
+      "target_anchor_seed",
+      "context_missing:module_hints",
+      "related_actions:A1",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/light.py",
+    "function_name": "async_discover_device",
+    "line_end": 470,
+    "line_start": 470,
+    "marker_id": "marker_1b751f584b",
+    "marker_type": "CLOUD_HTTP_CALL",
+    "phase": "SETUP",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/tuya/light.py",
+    "function_name": "async_setup_entry",
+    "line_end": 506,
+    "line_start": 456,
+    "marker_id": "marker_b3fb0fdc6c",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:protocol:cloud_http_call",
+      "target_anchor_seed",
+      "context_missing:module_hints",
+      "related_actions:A1",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/light.py",
+    "function_name": "async_setup_entry",
+    "line_end": 470,
+    "line_start": 470,
+    "marker_id": "marker_6ceebf98ce",
+    "marker_type": "CLOUD_HTTP_CALL",
+    "phase": "SETUP",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:protocol:cloud_http_call",
+      "target_anchor_seed",
+      "context_missing:module_hints",
+      "related_actions:A1",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/light.py",
+    "function_name": "async_turn_on",
+    "line_end": 608,
+    "line_start": 608,
+    "marker_id": "marker_9477e26632",
+    "marker_type": "CLOUD_HTTP_CALL",
+    "phase": "RUNTIME",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:protocol:cloud_http_call",
+      "target_anchor_seed",
+      "context_missing:module_hints",
+      "related_actions:A1",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/light.py",
+    "function_name": "async_turn_on",
+    "line_end": 611,
+    "line_start": 611,
+    "marker_id": "marker_ab26f3c7a9",
+    "marker_type": "CLOUD_HTTP_CALL",
+    "phase": "RUNTIME",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match",
+      "binding_hint_action_kind",
+      "binding_hint_target_token",
+      "binding_hint_action_id",
+      "generalized_profile_secondary_binding"
+    ],
+    "binding_score": 1.49,
+    "evidence": [
+      "grounding_profile:tuya:CLOUD_STATUS_CALL",
+      "grounding_profile:boost_imports",
+      "grounding_profile:boost_names",
+      "grounding_profile_rule:tuya:light_runtime_status_read",
+      "grounding_profile:match=function",
+      "grounding_profile:score:0.95",
+      "grounding_profile:runtime_path:runtime_function:is_on",
+      "grounding_profile:runtime_path:runtime_call:_read_wrapper",
+      "grounding_profile:runtime_path:runtime_call:self._read_wrapper",
+      "grounding_profile:runtime_path:path_signal:property_function:is_on",
+      "grounding_profile:negative:negative_function:async_setup_entry",
+      "grounding_profile:negative:negative_function:async_turn_off",
+      "grounding_profile:negative:negative_function:async_turn_on",
+      "grounding_profile:negative:negative_function:is_on",
+      "grounding_profile:why_not_setup:exclude_role:setup:async_setup_entry",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:async_turn_off",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:async_turn_on",
+      "grounding_profile:why_not_setup:exclude_role:property_getter:is_on",
+      "grounding_profile:reviewer_status:draft",
+      "related_actions:A1,A2,A3",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match",
+      "action_match:binding_hint_action_kind",
+      "action_match:binding_hint_target_token",
+      "action_match:binding_hint_action_id",
+      "action_match:generalized_profile_secondary_binding"
+    ],
+    "file_path": "data/repo_snapshot/tuya/light.py",
+    "function_name": "is_on",
+    "line_end": 570,
+    "line_start": 568,
+    "marker_id": "marker_38491c12cd",
+    "marker_type": "CLOUD_STATUS_CALL",
+    "phase": "RUNTIME",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "secondary_action_ids": [
+      "A2",
+      "A3"
+    ],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match",
+      "binding_hint_action_kind",
+      "binding_hint_target_token",
+      "binding_hint_action_id",
+      "generalized_profile_secondary_binding"
+    ],
+    "binding_score": 1.49,
+    "evidence": [
+      "grounding_profile:tuya:CLOUD_STATUS_CALL",
+      "grounding_profile:boost_imports",
+      "grounding_profile:boost_names",
+      "grounding_profile_rule:tuya:switch_runtime_status_read",
+      "grounding_profile:match=function",
+      "grounding_profile:score:0.95",
+      "grounding_profile:runtime_path:runtime_function:_process_device_update",
+      "grounding_profile:runtime_path:runtime_call:skip_update",
+      "grounding_profile:runtime_path:runtime_call:self._dpcode_wrapper.skip_update",
+      "grounding_profile:runtime_path:path_signal:update_callback_function:_process_device_update",
+      "grounding_profile:negative:negative_function:async_setup_entry",
+      "grounding_profile:negative:negative_function:async_turn_on",
+      "grounding_profile:negative:negative_function:async_turn_off",
+      "grounding_profile:negative:negative_function:is_on",
+      "grounding_profile:why_not_setup:exclude_role:setup:async_setup_entry",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:async_turn_on",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:async_turn_off",
+      "grounding_profile:why_not_setup:exclude_role:property_getter:is_on",
+      "grounding_profile:reviewer_status:draft",
+      "related_actions:A4,A5,A6",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match",
+      "action_match:binding_hint_action_kind",
+      "action_match:binding_hint_target_token",
+      "action_match:binding_hint_action_id",
+      "action_match:generalized_profile_secondary_binding"
+    ],
+    "file_path": "data/repo_snapshot/tuya/switch.py",
+    "function_name": "_process_device_update",
+    "line_end": 975,
+    "line_start": 963,
+    "marker_id": "marker_6601025770",
+    "marker_type": "CLOUD_STATUS_CALL",
+    "phase": "RUNTIME",
+    "primary_action_id": "A4",
+    "related_action_ids": [
+      "A4",
+      "A5",
+      "A6"
+    ],
+    "secondary_action_ids": [
+      "A5",
+      "A6"
+    ],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:protocol:cloud_http_call",
+      "target_anchor_seed",
+      "context_missing:module_hints",
+      "related_actions:A4",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/switch.py",
+    "function_name": "async_discover_device",
+    "line_end": 922,
+    "line_start": 922,
+    "marker_id": "marker_77fdf39f18",
+    "marker_type": "CLOUD_HTTP_CALL",
+    "phase": "SETUP",
+    "primary_action_id": "A4",
+    "related_action_ids": [
+      "A4"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/tuya/switch.py",
+    "function_name": "async_setup_entry",
+    "line_end": 939,
+    "line_start": 908,
+    "marker_id": "marker_63cc69fb3d",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:protocol:cloud_http_call",
+      "target_anchor_seed",
+      "context_missing:module_hints",
+      "related_actions:A4",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/switch.py",
+    "function_name": "async_setup_entry",
+    "line_end": 922,
+    "line_start": 922,
+    "marker_id": "marker_daaee061ab",
+    "marker_type": "CLOUD_HTTP_CALL",
+    "phase": "SETUP",
+    "primary_action_id": "A4",
+    "related_action_ids": [
+      "A4"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  }
+]

@@ -1,0 +1,757 @@
+{
+  "integration": "nanoleaf",
+  "runtime_families": [
+    {
+      "action_kind": "get_state",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "living_room_arrival",
+          "nanoleaf:panel.living_room_arrival",
+          "nanoleaf_local",
+          "panel"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "read",
+          "local_api_read"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "aionanoleaf2",
+          "collections",
+          "const",
+          "homeassistant",
+          "logging"
+        ],
+        "boost_if_names": [
+          "get_state",
+          "async_step_link"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "LOCAL_API_READ",
+      "file_globs": [
+        "nanoleaf/config_flow.py"
+      ],
+      "forbidden_context": [
+        "dunder_init"
+      ],
+      "forbidden_path_signals": [
+        "setup_function:async_setup_finish",
+        "control_function:async_setup_finish",
+        "control_call:self.async_set_unique_id",
+        "awaited_control_call:self.async_set_unique_id",
+        "control_function:_async_discovery_handler",
+        "control_function:async_turn_on",
+        "control_function:async_turn_off",
+        "control_function:async_open_cover"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "async_step_link"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A11"
+      ],
+      "integration": "nanoleaf",
+      "negative_call_patterns": [
+        "_abort_if_unique_id_configured",
+        "async_create_entry",
+        "async_set_unique_id",
+        "get_info",
+        "async_abort",
+        "exception"
+      ],
+      "negative_evidence": [
+        "negative_function:async_setup_finish",
+        "negative_function:_async_discovery_handler",
+        "negative_function:async_step_ssdp",
+        "negative_function:async_step_user",
+        "negative_call:_abort_if_unique_id_configured",
+        "negative_call:async_create_entry",
+        "negative_call:async_set_unique_id",
+        "negative_call:debug",
+        "negative_call:get_info",
+        "negative_call:async_abort"
+      ],
+      "negative_function_patterns": [
+        "async_setup_finish",
+        "_async_discovery_handler",
+        "async_step_ssdp",
+        "async_step_user",
+        "async_turn_on",
+        "async_turn_off"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [
+            "self._abort_if_unique_id_configured",
+            "self.async_create_entry",
+            "self.async_set_unique_id",
+            "_logger.debug",
+            "self.nanoleaf.get_info",
+            "self.async_abort",
+            "_logger.exception",
+            "self.discovery_conf.pop"
+          ],
+          "call_patterns": [
+            "_abort_if_unique_id_configured",
+            "async_create_entry",
+            "async_set_unique_id",
+            "debug",
+            "get_info",
+            "async_abort",
+            "exception",
+            "pop"
+          ],
+          "file_path": "data/repo_snapshot/nanoleaf/config_flow.py",
+          "function_name": "async_setup_finish",
+          "path_kind": "setup_path",
+          "path_signals": [
+            "setup_function:async_setup_finish",
+            "control_function:async_setup_finish",
+            "read_function:async_setup_finish",
+            "control_call:self.async_set_unique_id",
+            "read_call:self.nanoleaf.get_info",
+            "awaited_control_call:self.async_set_unique_id",
+            "awaited_read_call:self.nanoleaf.get_info"
+          ],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -15,
+          "snippet": "190: \n191:     async def async_setup_finish(\n192:         self, discovery_integration_import: bool = False\n193:     ) -> ConfigFlowResult:\n194:         \"\"\"Finish Nanoleaf config flow.\"\"\"\n195:         try:\n196:             await self.nanoleaf.get_info()\n197:         except Unavailable:\n198:             return self.async_abort(reason=\"cannot_connect\")\n199:         except InvalidToken:\n200:             return self.async_abort(reason=\"invalid_token\")\n201:         except Exception:\n202:             _LOGGER.exception(\n203:                 \"Unknown error connecting with Nanoleaf at %s\", self.nanoleaf.host"
+        },
+        {
+          "call_chains": [
+            "self._abort_if_unique_id_configured",
+            "nanoleaf",
+            "self.async_set_unique_id",
+            "self.hass.async_add_executor_job",
+            "self.discovery_conf.get",
+            "get",
+            "_logger.warning",
+            "async_get_clientsession"
+          ],
+          "call_patterns": [
+            "_abort_if_unique_id_configured",
+            "nanoleaf",
+            "async_set_unique_id",
+            "async_add_executor_job",
+            "get",
+            "warning",
+            "async_get_clientsession",
+            "async_step_link"
+          ],
+          "file_path": "data/repo_snapshot/nanoleaf/config_flow.py",
+          "function_name": "_async_discovery_handler",
+          "path_kind": "control_path",
+          "path_signals": [
+            "control_function:_async_discovery_handler",
+            "control_call:self.async_set_unique_id",
+            "awaited_control_call:self.async_set_unique_id"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -12,
+          "snippet": "131: \n132:     async def _async_discovery_handler(\n133:         self, host: str, name: str, device_id: str\n134:     ) -> ConfigFlowResult:\n135:         \"\"\"Handle Nanoleaf discovery.\"\"\"\n136:         # The name is unique and printed on the device and cannot be changed.\n137:         await self.async_set_unique_id(name)\n138:         self._abort_if_unique_id_configured({CONF_HOST: host})\n139: \n140:         # Import from discovery integration\n141:         self.device_id = device_id\n142:         self.discovery_conf = await self.hass.async_add_executor_job(\n143:             load_json_object, self.hass.config.path(CONFIG_FILE)\n144:         )"
+        },
+        {
+          "call_chains": [
+            "_logger.debug",
+            "self._async_discovery_handler"
+          ],
+          "call_patterns": [
+            "debug",
+            "_async_discovery_handler"
+          ],
+          "file_path": "data/repo_snapshot/nanoleaf/config_flow.py",
+          "function_name": "async_step_ssdp",
+          "path_kind": "helper_path",
+          "path_signals": [],
+          "prototype_kind": "negative_helper",
+          "role_hint": "helper",
+          "score": -4,
+          "snippet": "120: \n121:     async def async_step_ssdp(\n122:         self, discovery_info: SsdpServiceInfo\n123:     ) -> ConfigFlowResult:\n124:         \"\"\"Handle Nanoleaf SSDP discovery.\"\"\"\n125:         _LOGGER.debug(\"SSDP discovered: %s\", discovery_info)\n126:         return await self._async_discovery_handler(\n127:             discovery_info.ssdp_headers[\"_host\"],\n128:             discovery_info.ssdp_headers[\"nl-devicename\"],\n129:             discovery_info.ssdp_headers[\"nl-deviceid\"],\n130:         )\n131: \n132:     async def _async_discovery_handler("
+        },
+        {
+          "call_chains": [
+            "self._async_abort_entries_match",
+            "nanoleaf",
+            "self.async_show_form",
+            "async_get_clientsession",
+            "self.async_step_link",
+            "self.nanoleaf.authorize",
+            "_logger.exception"
+          ],
+          "call_patterns": [
+            "_async_abort_entries_match",
+            "nanoleaf",
+            "async_show_form",
+            "async_get_clientsession",
+            "async_step_link",
+            "authorize",
+            "exception"
+          ],
+          "file_path": "data/repo_snapshot/nanoleaf/config_flow.py",
+          "function_name": "async_step_user",
+          "path_kind": "connect_path",
+          "path_signals": [],
+          "prototype_kind": "negative_helper",
+          "role_hint": "runtime_connect",
+          "score": 3,
+          "snippet": "53: \n54:     async def async_step_user(\n55:         self, user_input: dict[str, Any] | None = None\n56:     ) -> ConfigFlowResult:\n57:         \"\"\"Handle Nanoleaf flow initiated by the user.\"\"\"\n58:         if user_input is None:\n59:             return self.async_show_form(\n60:                 step_id=\"user\", data_schema=USER_SCHEMA, last_step=False\n61:             )\n62:         self._async_abort_entries_match({CONF_HOST: user_input[CONF_HOST]})\n63:         self.nanoleaf = Nanoleaf(\n64:             async_get_clientsession(self.hass), user_input[CONF_HOST]\n65:         )\n66:         try:"
+        }
+      ],
+      "origin_action_id": "A11",
+      "origin_cluster_id": "nanoleaf__config_flow__local_api_read__get_state__local",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [
+            "self.async_show_form",
+            "self.async_update_reload_and_abort",
+            "self.async_setup_finish",
+            "self.nanoleaf.authorize",
+            "self.async_abort",
+            "_logger.exception",
+            "self._get_reauth_entry"
+          ],
+          "call_patterns": [
+            "async_show_form",
+            "async_update_reload_and_abort",
+            "async_setup_finish",
+            "authorize",
+            "async_abort",
+            "exception",
+            "_get_reauth_entry"
+          ],
+          "file_path": "data/repo_snapshot/nanoleaf/config_flow.py",
+          "function_name": "async_step_link",
+          "path_kind": "read_path",
+          "path_signals": [],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 6,
+          "snippet": "163: \n164:     async def async_step_link(\n165:         self, user_input: dict[str, Any] | None = None\n166:     ) -> ConfigFlowResult:\n167:         \"\"\"Handle Nanoleaf link step.\"\"\"\n168:         if user_input is None:\n169:             return self.async_show_form(step_id=\"link\")\n170: \n171:         try:\n172:             await self.nanoleaf.authorize()\n173:         except Unauthorized:\n174:             return self.async_show_form(\n175:                 step_id=\"link\", errors={\"base\": \"not_allowing_new_tokens\"}\n176:             )"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read"
+      ],
+      "required_context": [
+        "runtime_path"
+      ],
+      "required_path_signals": [],
+      "required_runtime_roles": [
+        "runtime_read"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "nanoleaf:config_flow_local_api_read",
+      "runtime_archetypes": [
+        "local_bridge_getter",
+        "runtime_read"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:async_step_link",
+        "runtime_call:async_show_form",
+        "runtime_call:async_update_reload_and_abort",
+        "runtime_call:async_setup_finish",
+        "runtime_call:authorize",
+        "runtime_call:async_abort",
+        "runtime_call:exception",
+        "runtime_call:_get_reauth_entry",
+        "runtime_call:self.async_show_form",
+        "runtime_call:self.async_update_reload_and_abort"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/nanoleaf/config_flow.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A11"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+      "why_not_setup": [
+        "exclude_role:setup:async_setup_finish",
+        "exclude_role:runtime_write:_async_discovery_handler",
+        "exclude_role:helper:async_step_ssdp",
+        "exclude_path_signal:setup_function:async_setup_finish",
+        "exclude_path_signal:control_function:async_setup_finish",
+        "exclude_path_signal:control_call:self.async_set_unique_id",
+        "exclude_path_signal:awaited_control_call:self.async_set_unique_id",
+        "exclude_path_signal:control_function:_async_discovery_handler"
+      ]
+    },
+    {
+      "action_kind": "get_state",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "living_room_arrival",
+          "nanoleaf:panel.living_room_arrival",
+          "nanoleaf_local",
+          "panel"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "read",
+          "local_api_read"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [
+        "get_info",
+        "self.nanoleaf.get_info"
+      ],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "aionanoleaf2",
+          "datetime",
+          "homeassistant",
+          "logging"
+        ],
+        "boost_if_names": [
+          "get_state",
+          "_async_update_data",
+          "get_info",
+          "self.nanoleaf.get_info"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "LOCAL_API_READ",
+      "file_globs": [
+        "nanoleaf/coordinator.py"
+      ],
+      "forbidden_context": [
+        "dunder_init"
+      ],
+      "forbidden_path_signals": [
+        "control_function:async_turn_on",
+        "control_function:async_turn_off",
+        "control_function:async_open_cover",
+        "control_function:async_close_cover",
+        "control_function:async_set_cover_position",
+        "control_function:set_state",
+        "setup_function:async_setup_entry",
+        "state_accessor_property:state"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "_async_update_data"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A11"
+      ],
+      "integration": "nanoleaf",
+      "negative_call_patterns": [
+        "__init__",
+        "super",
+        "timedelta",
+        "_async_send_commands",
+        "_async_send_wrapper_updates",
+        "async_turn_on"
+      ],
+      "negative_evidence": [
+        "negative_function:__init__",
+        "negative_call:__init__",
+        "negative_call:super",
+        "negative_call:timedelta",
+        "negative_path_signal:control_function:async_turn_on",
+        "negative_path_signal:control_call:self._nanoleaf.set_effect",
+        "negative_path_signal:control_call:self._nanoleaf.turn_on",
+        "negative_path_signal:control_call:self._nanoleaf.set_hue",
+        "negative_path_signal:control_call:self._nanoleaf.set_saturation",
+        "negative_path_signal:control_call:self._nanoleaf.set_brightness"
+      ],
+      "negative_function_patterns": [
+        "__init__",
+        "async_turn_on",
+        "async_turn_off",
+        "async_set_*",
+        "async_open_*",
+        "async_close_*"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [
+            "__init__",
+            "super",
+            "timedelta"
+          ],
+          "call_patterns": [
+            "__init__",
+            "super",
+            "timedelta"
+          ],
+          "file_path": "data/repo_snapshot/nanoleaf/coordinator.py",
+          "function_name": "__init__",
+          "path_kind": "setup_path",
+          "path_signals": [],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -6,
+          "snippet": "22: \n23:     def __init__(\n24:         self, hass: HomeAssistant, config_entry: NanoleafConfigEntry, nanoleaf: Nanoleaf\n25:     ) -> None:\n26:         \"\"\"Initialize the Nanoleaf data coordinator.\"\"\"\n27:         super().__init__(\n28:             hass,\n29:             _LOGGER,\n30:             config_entry=config_entry,\n31:             name=\"Nanoleaf\",\n32:             update_interval=timedelta(minutes=1),\n33:         )\n34:         self.nanoleaf = nanoleaf\n35:"
+        }
+      ],
+      "origin_action_id": "A11",
+      "origin_cluster_id": "nanoleaf__coordinator__local_api_read__get_state__local",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [
+            "self.nanoleaf.get_info"
+          ],
+          "call_patterns": [
+            "get_info"
+          ],
+          "file_path": "data/repo_snapshot/nanoleaf/coordinator.py",
+          "function_name": "_async_update_data",
+          "path_kind": "read_path",
+          "path_signals": [
+            "read_function:_async_update_data",
+            "read_call:self.nanoleaf.get_info",
+            "awaited_read_call:self.nanoleaf.get_info"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 8,
+          "snippet": "35: \n36:     async def _async_update_data(self) -> None:\n37:         try:\n38:             await self.nanoleaf.get_info()\n39:         except Unavailable as err:\n40:             raise UpdateFailed from err\n41:         except InvalidToken as err:\n42:             raise ConfigEntryAuthFailed from err"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read"
+      ],
+      "required_context": [
+        "runtime_path"
+      ],
+      "required_path_signals": [
+        "read_function:_async_update_data",
+        "read_call:self.nanoleaf.get_info",
+        "awaited_read_call:self.nanoleaf.get_info"
+      ],
+      "required_runtime_roles": [
+        "runtime_read"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "nanoleaf:coordinator_local_api_read",
+      "runtime_archetypes": [
+        "local_bridge_getter",
+        "runtime_read"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:_async_update_data",
+        "runtime_call:get_info",
+        "runtime_call:self.nanoleaf.get_info",
+        "path_signal:read_function:_async_update_data",
+        "path_signal:read_call:self.nanoleaf.get_info",
+        "path_signal:awaited_read_call:self.nanoleaf.get_info"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/nanoleaf/coordinator.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A11"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+      "why_not_setup": [
+        "exclude_role:setup:__init__",
+        "exclude_control_path_for_read_like_action"
+      ]
+    },
+    {
+      "action_kind": "get_state",
+      "allow_accessor_fallback": true,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "living_room_arrival",
+          "nanoleaf:panel.living_room_arrival",
+          "nanoleaf_local",
+          "panel"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "read",
+          "local_api_read"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "coordinator",
+          "entity",
+          "homeassistant",
+          "typing"
+        ],
+        "boost_if_names": [
+          "get_state",
+          "is_on"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "LOCAL_API_READ",
+      "file_globs": [
+        "nanoleaf/light.py"
+      ],
+      "forbidden_context": [
+        "dunder_init"
+      ],
+      "forbidden_path_signals": [
+        "setup_function:async_setup_entry",
+        "setup_call:async_add_entities",
+        "control_function:async_turn_on",
+        "control_call:self._nanoleaf.set_effect",
+        "control_call:self._nanoleaf.turn_on",
+        "control_call:self._nanoleaf.set_hue",
+        "control_call:self._nanoleaf.set_saturation",
+        "control_call:self._nanoleaf.set_brightness"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "is_on"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A11"
+      ],
+      "integration": "nanoleaf",
+      "negative_call_patterns": [
+        "async_add_entities",
+        "nanoleaflight",
+        "async_refresh",
+        "valueerror",
+        "set_effect",
+        "turn_on"
+      ],
+      "negative_evidence": [
+        "negative_function:async_setup_entry",
+        "negative_function:async_turn_on",
+        "negative_function:async_turn_off",
+        "negative_function:is_on",
+        "negative_function:effect",
+        "negative_call:async_add_entities",
+        "negative_call:nanoleaflight",
+        "negative_call:get",
+        "negative_call:async_refresh",
+        "negative_call:valueerror"
+      ],
+      "negative_function_patterns": [
+        "async_setup_entry",
+        "async_turn_on",
+        "async_turn_off",
+        "effect",
+        "async_set_*",
+        "async_open_*"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [
+            "async_add_entities",
+            "nanoleaflight"
+          ],
+          "call_patterns": [
+            "async_add_entities",
+            "nanoleaflight"
+          ],
+          "file_path": "data/repo_snapshot/nanoleaf/light.py",
+          "function_name": "async_setup_entry",
+          "path_kind": "setup_path",
+          "path_signals": [
+            "setup_function:async_setup_entry",
+            "setup_call:async_add_entities"
+          ],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -10,
+          "snippet": "26: \n27: async def async_setup_entry(\n28:     hass: HomeAssistant,\n29:     entry: NanoleafConfigEntry,\n30:     async_add_entities: AddConfigEntryEntitiesCallback,\n31: ) -> None:\n32:     \"\"\"Set up the Nanoleaf light.\"\"\"\n33:     async_add_entities([NanoleafLight(entry.runtime_data)])\n34: \n35:"
+        },
+        {
+          "call_chains": [
+            "kwargs.get",
+            "self.coordinator.async_refresh",
+            "valueerror",
+            "self._nanoleaf.set_effect",
+            "self._nanoleaf.turn_on",
+            "self._nanoleaf.set_hue",
+            "self._nanoleaf.set_saturation",
+            "self._nanoleaf.set_brightness"
+          ],
+          "call_patterns": [
+            "get",
+            "async_refresh",
+            "valueerror",
+            "set_effect",
+            "turn_on",
+            "set_hue",
+            "set_saturation",
+            "set_brightness"
+          ],
+          "file_path": "data/repo_snapshot/nanoleaf/light.py",
+          "function_name": "async_turn_on",
+          "path_kind": "control_path",
+          "path_signals": [
+            "control_function:async_turn_on",
+            "control_call:self._nanoleaf.set_effect",
+            "control_call:self._nanoleaf.turn_on",
+            "control_call:self._nanoleaf.set_hue",
+            "control_call:self._nanoleaf.set_saturation",
+            "control_call:self._nanoleaf.set_brightness",
+            "control_call:self._nanoleaf.set_color_temperature",
+            "awaited_control_call:self._nanoleaf.set_effect",
+            "awaited_control_call:self._nanoleaf.turn_on",
+            "awaited_control_call:self._nanoleaf.set_hue"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -12,
+          "snippet": "96: \n97:     async def async_turn_on(self, **kwargs: Any) -> None:\n98:         \"\"\"Instruct the light to turn on.\"\"\"\n99:         brightness = kwargs.get(ATTR_BRIGHTNESS)\n100:         hs_color = kwargs.get(ATTR_HS_COLOR)\n101:         color_temp_kelvin = kwargs.get(ATTR_COLOR_TEMP_KELVIN)\n102:         effect = kwargs.get(ATTR_EFFECT)\n103:         transition = kwargs.get(ATTR_TRANSITION)\n104: \n105:         if effect:\n106:             if effect not in self.effect_list:\n107:                 raise ValueError(\n108:                     f\"Attempting to apply effect not in the effect list: '{effect}'\"\n109:                 )"
+        },
+        {
+          "call_chains": [
+            "kwargs.get",
+            "self._nanoleaf.turn_off",
+            "self.coordinator.async_refresh",
+            "int"
+          ],
+          "call_patterns": [
+            "get",
+            "turn_off",
+            "async_refresh",
+            "int"
+          ],
+          "file_path": "data/repo_snapshot/nanoleaf/light.py",
+          "function_name": "async_turn_off",
+          "path_kind": "control_path",
+          "path_signals": [
+            "control_function:async_turn_off",
+            "control_call:self._nanoleaf.turn_off",
+            "awaited_control_call:self._nanoleaf.turn_off"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -12,
+          "snippet": "129: \n130:     async def async_turn_off(self, **kwargs: Any) -> None:\n131:         \"\"\"Instruct the light to turn off.\"\"\"\n132:         transition: float | None = kwargs.get(ATTR_TRANSITION)\n133:         await self._nanoleaf.turn_off(None if transition is None else int(transition))\n134:         await self.coordinator.async_refresh()"
+        },
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/nanoleaf/light.py",
+          "function_name": "is_on",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:is_on"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "77:     @property\n78:     def is_on(self) -> bool:\n79:         \"\"\"Return true if light is on.\"\"\"\n80:         return self._nanoleaf.is_on\n81: \n82:     @property"
+        },
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/nanoleaf/light.py",
+          "function_name": "effect",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:effect"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "61:     @property\n62:     def effect(self) -> str | None:\n63:         \"\"\"Return the current effect.\"\"\"\n64:         # The API returns the *Solid* effect if the Nanoleaf is in HS or CT mode.\n65:         # The effects *Static* and *Dynamic* are not supported by Home Assistant.\n66:         # These reserved effects are implicitly set and are not in the effect_list.\n67:         # https://forum.nanoleaf.me/docs/openapi#_byoot0bams8f\n68:         return (\n69:             None if self._nanoleaf.effect in RESERVED_EFFECTS else self._nanoleaf.effect\n70:         )\n71: \n72:     @property"
+        }
+      ],
+      "origin_action_id": "A11",
+      "origin_cluster_id": "nanoleaf__light__local_api_read__get_state__local",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/nanoleaf/light.py",
+          "function_name": "is_on",
+          "path_kind": "read_path",
+          "path_signals": [
+            "property_function:is_on"
+          ],
+          "prototype_kind": "synthetic_accessor_positive",
+          "role_hint": "runtime_read_snapshot",
+          "score": 3,
+          "snippet": "77:     @property\n78:     def is_on(self) -> bool:\n79:         \"\"\"Return true if light is on.\"\"\"\n80:         return self._nanoleaf.is_on\n81: \n82:     @property"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read"
+      ],
+      "required_context": [
+        "runtime_path"
+      ],
+      "required_path_signals": [
+        "property_function:is_on"
+      ],
+      "required_runtime_roles": [
+        "runtime_read"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "nanoleaf:light_local_api_read",
+      "runtime_archetypes": [
+        "local_bridge_getter",
+        "runtime_read"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:is_on",
+        "path_signal:property_function:is_on",
+        "path_signal:read_function:_async_update_data",
+        "path_signal:read_call:self.nanoleaf.get_info",
+        "path_signal:awaited_read_call:self.nanoleaf.get_info"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/nanoleaf/light.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A11"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+      "why_not_setup": [
+        "exclude_role:setup:async_setup_entry",
+        "exclude_role:runtime_write:async_turn_on",
+        "exclude_role:runtime_write:async_turn_off",
+        "exclude_role:property_getter:is_on",
+        "exclude_role:property_getter:effect",
+        "exclude_path_signal:setup_function:async_setup_entry",
+        "exclude_path_signal:setup_call:async_add_entities",
+        "exclude_path_signal:control_function:async_turn_on"
+      ]
+    }
+  ],
+  "schema_version": "m1_grounding_profile/v3",
+  "version": "draft_llm_v3"
+}

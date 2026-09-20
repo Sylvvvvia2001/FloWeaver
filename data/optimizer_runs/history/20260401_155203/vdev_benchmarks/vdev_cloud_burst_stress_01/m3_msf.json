@@ -1,0 +1,1316 @@
+{
+  "dependency_candidates": [
+    [
+      "msf01_000_entry_setup",
+      "msf01_002_cloud_op",
+      "DATA_DEP"
+    ],
+    [
+      "msf02_003_cloud_op",
+      "msf02_001_cloud_op",
+      "DATA_DEP"
+    ],
+    [
+      "msf03_000_entry_setup",
+      "msf03_002_cloud_op",
+      "DATA_DEP"
+    ],
+    [
+      "msf05_000_entry_setup",
+      "msf05_002_cloud_op",
+      "DATA_DEP"
+    ],
+    [
+      "msf07_000_entry_setup",
+      "msf07_002_cloud_op",
+      "DATA_DEP"
+    ],
+    [
+      "msf07_003_cloud_op",
+      "msf07_006_cloud_op",
+      "DATA_DEP"
+    ],
+    [
+      "msf07_006_cloud_op",
+      "msf07_003_cloud_op",
+      "CONTROL_DEP"
+    ],
+    [
+      "msf08_000_entry_setup",
+      "msf08_002_cloud_op",
+      "DATA_DEP"
+    ],
+    [
+      "msf09_000_entry_setup",
+      "msf09_002_cloud_op",
+      "DATA_DEP"
+    ]
+  ],
+  "msfs": [
+    {
+      "action_refs": [
+        "A10"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "is_aggregate_sink": true,
+      "is_shared_infra": false,
+      "lane_tag": "WRITEBACK_OVERALL",
+      "msf_id": "msf00_000_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "9da22f42:_handle_device_update:3:186"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A10",
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "resource_instance_tag": "sensor.vdev_cloud_burst_overall",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "ESPHomeDashboardUpdateEntity",
+        "async_add_entities",
+        "callback",
+        "dashboard",
+        "device_name",
+        "entry_data",
+        "unsubs"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf00_001_entry_setup",
+      "msf_type": "INIT",
+      "node_ids": [
+        "9da22f42:async_setup_entry:7:71"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "entry_setup",
+        "external_call_cloud",
+        "unsubscribe"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "unsubs"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf00_002_unsubscribe",
+      "msf_type": "CLEANUP",
+      "node_ids": [
+        "9da22f42:_async_setup_update_entity:4:82"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "unsubscribe"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "ESPHomeDashboardUpdateEntity",
+        "async_add_entities",
+        "callback",
+        "dashboard",
+        "device_name",
+        "entry_data",
+        "unsubs"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf00_003_unsubscribe",
+      "msf_type": "CLEANUP",
+      "node_ids": [
+        "9da22f42:async_setup_entry:7:71"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "external_call_cloud",
+        "unsubscribe"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "BINARY_SENSORS",
+        "TuyaBinarySensorEntity",
+        "_get_dpcode_wrapper",
+        "async_add_entities",
+        "callback",
+        "device_ids",
+        "entry",
+        "list",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf01_000_entry_setup",
+      "msf_type": "INIT",
+      "node_ids": [
+        "1b349f20:async_setup_entry:1:415",
+        "1b349f20:async_setup_entry:2:418"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "entry_setup",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A7"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "BINARY_SENSORS",
+        "TuyaBinarySensorEntity",
+        "_get_dpcode_wrapper",
+        "device_ids",
+        "list",
+        "manager"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf01_001_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "1b349f20:async_discover_device:1:420",
+        "1b349f20:async_discover_device:2.0:422",
+        "1b349f20:async_discover_device:2.1:423",
+        "1b349f20:async_discover_device:2:421"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": "A7",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:climate.master_bedroom.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A7"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "BINARY_SENSORS",
+        "TuyaBinarySensorEntity",
+        "_get_dpcode_wrapper",
+        "async_add_entities",
+        "callback",
+        "device_ids",
+        "list",
+        "manager",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf01_002_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "1b349f20:async_setup_entry:2:418"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": "A7",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:climate.master_bedroom.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A3"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "DPCode",
+        "DPCodeEnumWrapper",
+        "DPCodeIntegerWrapper",
+        "device"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf02_000_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "8e4c1745:_get_temperature_wrappers:1:129",
+        "8e4c1745:_get_temperature_wrappers:2:132",
+        "8e4c1745:_get_temperature_wrappers:3:135",
+        "8e4c1745:_get_temperature_wrappers:4:138",
+        "8e4c1745:_get_temperature_wrappers:5.0.0.0:150",
+        "8e4c1745:_get_temperature_wrappers:5.0.0:149",
+        "8e4c1745:_get_temperature_wrappers:5.0:148",
+        "8e4c1745:_get_temperature_wrappers:5:143"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": "A3",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:light.bedroom_1.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op"
+      ]
+    },
+    {
+      "action_refs": [
+        "A3"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "ClimateEntityFeature",
+        "HVACMode",
+        "TuyaClimateHVACMode",
+        "TuyaClimateSwingMode",
+        "_HA_TO_TUYA_HVACMODE_MAPPINGS",
+        "_HA_TO_TUYA_SWING_MAPPINGS",
+        "_TUYA_TO_HA_HVACMODE_MAPPINGS",
+        "_TUYA_TO_HA_SWING_MAPPINGS",
+        "cast",
+        "commands",
+        "description",
+        "hvac_mode",
+        "hvac_mode_wrapper",
+        "list",
+        "self",
+        "swing_mode",
+        "swing_wrapper",
+        "switch_wrapper"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf02_001_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "8e4c1745:__init__:16.1.0:308",
+        "8e4c1745:__init__:16.1:307",
+        "8e4c1745:__init__:16:305",
+        "8e4c1745:__init__:20.1:340",
+        "8e4c1745:__init__:20:338",
+        "8e4c1745:async_set_hvac_mode:3.0:367",
+        "8e4c1745:async_set_hvac_mode:3:362",
+        "8e4c1745:async_set_swing_mode:1:386",
+        "8e4c1745:hvac_mode:4:430",
+        "8e4c1745:hvac_mode:5:431",
+        "8e4c1745:swing_mode:1:446",
+        "8e4c1745:swing_mode:2:447"
+      ],
+      "outputs": [
+        "ha_mode",
+        "tuya_mode"
+      ],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A3",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:light.bedroom_1.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A3"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "HVACMode",
+        "commands",
+        "hvac_mode",
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf02_003_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "8e4c1745:async_set_hvac_mode:1:355",
+        "8e4c1745:async_set_hvac_mode:2.0:357",
+        "8e4c1745:async_set_hvac_mode:2:356",
+        "8e4c1745:async_set_hvac_mode:4:370"
+      ],
+      "outputs": [
+        "commands"
+      ],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A3",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:light.bedroom_1.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "COVERS",
+        "DPCode",
+        "TuyaCoverEntity",
+        "_get_instruction_wrapper",
+        "async_add_entities",
+        "callback",
+        "device_ids",
+        "entry",
+        "list",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf03_000_entry_setup",
+      "msf_type": "INIT",
+      "node_ids": [
+        "27112d2d:async_setup_entry:1:177",
+        "27112d2d:async_setup_entry:2:180"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "entry_setup",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A5"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "COVERS",
+        "DPCode",
+        "TuyaCoverEntity",
+        "_get_instruction_wrapper",
+        "device_ids",
+        "list",
+        "manager"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf03_001_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "27112d2d:async_discover_device:1:182",
+        "27112d2d:async_discover_device:2.0:184",
+        "27112d2d:async_discover_device:2.1:185",
+        "27112d2d:async_discover_device:2:183"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": "A5",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:switch.energy_strip_2.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A5"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "COVERS",
+        "DPCode",
+        "TuyaCoverEntity",
+        "_get_instruction_wrapper",
+        "async_add_entities",
+        "callback",
+        "device_ids",
+        "list",
+        "manager",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf03_002_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "27112d2d:async_setup_entry:2:180"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": "A5",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:switch.energy_strip_2.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A5"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf03_003_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "27112d2d:async_close_cover:1.0:308",
+        "27112d2d:async_close_cover:1:307",
+        "27112d2d:async_open_cover:1.0:292",
+        "27112d2d:async_open_cover:1:291"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A5",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:switch.energy_strip_2.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op"
+      ]
+    },
+    {
+      "action_refs": [
+        "A9"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "dp_timestamps",
+        "self",
+        "updated_status_properties"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "WRITEBACK",
+      "msf_id": "msf04_000_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "a073d609:_handle_state_update:1.0:76",
+        "a073d609:_handle_state_update:1:63"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A9",
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "resource_instance_tag": "sensor.vdev_cloud_burst_lane",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "EVENTS",
+        "TuyaEventEntity",
+        "async_add_entities",
+        "callback",
+        "device_ids",
+        "entry",
+        "list",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf05_000_entry_setup",
+      "msf_type": "INIT",
+      "node_ids": [
+        "bf29f2f0:async_setup_entry:1:121",
+        "bf29f2f0:async_setup_entry:2:124"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "entry_setup",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A8"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "EVENTS",
+        "TuyaEventEntity",
+        "device_ids",
+        "list",
+        "manager"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf05_001_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "bf29f2f0:async_discover_device:1:126",
+        "bf29f2f0:async_discover_device:2.0:128",
+        "bf29f2f0:async_discover_device:2.1:129",
+        "bf29f2f0:async_discover_device:2:127"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": "A8",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:climate.guest_room.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A8"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "EVENTS",
+        "TuyaEventEntity",
+        "async_add_entities",
+        "callback",
+        "device_ids",
+        "list",
+        "manager",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf05_002_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "bf29f2f0:async_setup_entry:2:124"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": "A8",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:climate.guest_room.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A8"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "dp_timestamps",
+        "self",
+        "updated_status_properties"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf05_003_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "bf29f2f0:_process_device_update:1:180"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A8",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:climate.guest_room.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op"
+      ]
+    },
+    {
+      "action_refs": [
+        "A6"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "_HA_TO_TUYA_DIRECTION_MAPPINGS",
+        "_TUYA_TO_HA_DIRECTION_MAPPINGS",
+        "direction",
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf06_000_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "7127a953:async_set_direction:1:182",
+        "7127a953:current_direction:1:228",
+        "7127a953:current_direction:2:229"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A6",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:switch.energy_strip_3.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A6"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "commands",
+        "percentage",
+        "preset_mode",
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf06_001_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "7127a953:async_turn_on:2:203",
+        "7127a953:async_turn_on:3.0:206",
+        "7127a953:async_turn_on:3:205",
+        "7127a953:async_turn_on:4.0:211",
+        "7127a953:async_turn_on:4:210",
+        "7127a953:async_turn_on:5:214"
+      ],
+      "outputs": [
+        "commands"
+      ],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A6",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:switch.energy_strip_3.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "ColorTempWrapper",
+        "DPCodeBooleanWrapper",
+        "DPCodeEnumWrapper",
+        "LIGHTS",
+        "TuyaLightEntity",
+        "_get_brightness_wrapper",
+        "_get_color_data_wrapper",
+        "async_add_entities",
+        "callback",
+        "device_ids",
+        "entry",
+        "list",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf07_000_entry_setup",
+      "msf_type": "INIT",
+      "node_ids": [
+        "67d079e8:async_setup_entry:1:462",
+        "67d079e8:async_setup_entry:2:465"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "entry_setup",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A1"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "ColorTempWrapper",
+        "DPCodeBooleanWrapper",
+        "DPCodeEnumWrapper",
+        "LIGHTS",
+        "TuyaLightEntity",
+        "_get_brightness_wrapper",
+        "_get_color_data_wrapper",
+        "device_ids",
+        "list",
+        "manager"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf07_001_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "67d079e8:async_discover_device:1:467",
+        "67d079e8:async_discover_device:2.0:469",
+        "67d079e8:async_discover_device:2.1:470",
+        "67d079e8:async_discover_device:2:468"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": "A1",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:light.living_room_1.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A1"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "ColorTempWrapper",
+        "DPCodeBooleanWrapper",
+        "DPCodeEnumWrapper",
+        "LIGHTS",
+        "TuyaLightEntity",
+        "_get_brightness_wrapper",
+        "_get_color_data_wrapper",
+        "async_add_entities",
+        "callback",
+        "device_ids",
+        "list",
+        "manager",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf07_002_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "67d079e8:async_setup_entry:2:465"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": "A1",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:light.living_room_1.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A1"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "ATTR_COLOR_TEMP_KELVIN",
+        "ATTR_WHITE",
+        "WorkMode",
+        "commands",
+        "kwargs",
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf07_003_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "67d079e8:async_turn_on:1:574",
+        "67d079e8:async_turn_on:2.0:579",
+        "67d079e8:async_turn_on:2:576",
+        "67d079e8:async_turn_on:3.0:586",
+        "67d079e8:async_turn_on:3:585",
+        "67d079e8:async_turn_on:4.0.0.0:626",
+        "67d079e8:async_turn_on:4.0.1:628",
+        "67d079e8:async_turn_on:4.1.0:609",
+        "67d079e8:async_turn_on:4.2.0:612",
+        "67d079e8:async_turn_on:4.3:614",
+        "67d079e8:async_turn_on:5:632"
+      ],
+      "outputs": [
+        "brightness",
+        "commands"
+      ],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A1",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:light.living_room_1.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op"
+      ]
+    },
+    {
+      "action_refs": [
+        "A1"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "ATTR_BRIGHTNESS",
+        "ATTR_COLOR_TEMP_KELVIN",
+        "ATTR_HS_COLOR",
+        "ATTR_WHITE",
+        "ColorMode",
+        "WorkMode",
+        "commands",
+        "kwargs",
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf07_006_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "67d079e8:async_turn_on:4.0.0:602",
+        "67d079e8:async_turn_on:4.0:601",
+        "67d079e8:async_turn_on:4.1:608",
+        "67d079e8:async_turn_on:4.2:611",
+        "67d079e8:async_turn_on:4:592"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A1",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:light.living_room_1.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "SENSORS",
+        "TuyaSensorEntity",
+        "_get_dpcode_wrapper",
+        "async_add_entities",
+        "callback",
+        "device_ids",
+        "entry",
+        "list",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf08_000_entry_setup",
+      "msf_type": "INIT",
+      "node_ids": [
+        "960e735a:async_setup_entry:1:1650",
+        "960e735a:async_setup_entry:2:1653"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "entry_setup",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A4"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "SENSORS",
+        "TuyaSensorEntity",
+        "_get_dpcode_wrapper",
+        "device_ids",
+        "list",
+        "manager"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf08_001_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "960e735a:async_discover_device:1:1655",
+        "960e735a:async_discover_device:2.0:1657",
+        "960e735a:async_discover_device:2.1:1658",
+        "960e735a:async_discover_device:2:1656"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": "A4",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:switch.energy_strip_1.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A4"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "SENSORS",
+        "TuyaSensorEntity",
+        "_get_dpcode_wrapper",
+        "async_add_entities",
+        "callback",
+        "device_ids",
+        "list",
+        "manager",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf08_002_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "960e735a:async_setup_entry:2:1653"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": "A4",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:switch.energy_strip_1.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A4"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "DEVICE_CLASS_UNITS",
+        "self",
+        "uoms"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf08_003_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "960e735a:_validate_device_class_unit:1.1:1735",
+        "960e735a:_validate_device_class_unit:1.2:1736"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A4",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:switch.energy_strip_1.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "DPCodeBooleanWrapper",
+        "SWITCHES",
+        "TuyaSwitchEntity",
+        "async_add_entities",
+        "callback",
+        "device_ids",
+        "entry",
+        "list",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf09_000_entry_setup",
+      "msf_type": "INIT",
+      "node_ids": [
+        "9cfce7a4:async_setup_entry:1:914",
+        "9cfce7a4:async_setup_entry:2:917"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "entry_setup",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A2"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "DPCodeBooleanWrapper",
+        "SWITCHES",
+        "TuyaSwitchEntity",
+        "device_ids",
+        "list",
+        "manager"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf09_001_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "9cfce7a4:async_discover_device:1:919",
+        "9cfce7a4:async_discover_device:2.0:921",
+        "9cfce7a4:async_discover_device:2.1:922",
+        "9cfce7a4:async_discover_device:2:920"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": "A2",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:light.living_room_2.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A2"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "DPCodeBooleanWrapper",
+        "SWITCHES",
+        "TuyaSwitchEntity",
+        "async_add_entities",
+        "callback",
+        "device_ids",
+        "list",
+        "manager",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf09_002_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "9cfce7a4:async_setup_entry:2:917"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": "A2",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:light.living_room_2.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    }
+  ],
+  "summary": {
+    "build_status": "OK",
+    "critical_action_ids": [
+      "A1",
+      "A10",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9"
+    ],
+    "missing_critical_action_ids": [],
+    "multi_bound_nonshared_msf_ids": [],
+    "resolved_action_refs": [
+      "A1",
+      "A10",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9"
+    ],
+    "resolved_runtime_action_count": 8,
+    "resolved_runtime_action_refs": [
+      "A1",
+      "A10",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A8",
+      "A9"
+    ]
+  }
+}

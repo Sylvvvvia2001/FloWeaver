@@ -1,0 +1,1406 @@
+{
+  "vdev_id": "vdev_ble_safety_sweep_routine_01",
+  "name": "BLE Safety Sweep Routine",
+  "group": "Profile Coverage - Realistic Stress Routines",
+  "target_path": "data/targets/vdev_benchmarks/vdev_ble_safety_sweep_routine_01.json",
+  "run_dir": "data/optimizer_runs/vdev_benchmarks/vdev_ble_safety_sweep_routine_01",
+  "strict_pass": 6,
+  "tolerant_pass": 6,
+  "counterexample_count": 0,
+  "batch_count": 17,
+  "parallel_groups": {
+    "batch_000": [
+      [
+        "A1"
+      ]
+    ],
+    "batch_001": [
+      [
+        "A2"
+      ]
+    ],
+    "batch_002": [
+      [
+        "A3"
+      ]
+    ],
+    "batch_003": [
+      [
+        "A4"
+      ]
+    ],
+    "batch_004": [
+      [
+        "A5"
+      ]
+    ],
+    "batch_005": [
+      [
+        "A6"
+      ]
+    ],
+    "batch_006": [
+      [
+        "A7"
+      ]
+    ],
+    "batch_007": [
+      [
+        "A8"
+      ]
+    ],
+    "batch_008": [
+      [
+        "A9"
+      ]
+    ],
+    "batch_009": [
+      [
+        "A10"
+      ]
+    ],
+    "batch_010": [
+      [
+        "A11"
+      ]
+    ],
+    "batch_011": [
+      [
+        "A12"
+      ]
+    ],
+    "batch_012": [
+      [
+        "A13"
+      ]
+    ],
+    "batch_013": [
+      [
+        "A14"
+      ]
+    ],
+    "batch_014": [
+      [
+        "A15"
+      ]
+    ],
+    "batch_015": [
+      [
+        "A16"
+      ]
+    ],
+    "batch_016": [
+      [
+        "A17"
+      ]
+    ]
+  },
+  "batching_buckets": {
+    "batch_000": [],
+    "batch_001": [],
+    "batch_002": [],
+    "batch_003": [],
+    "batch_004": [],
+    "batch_005": [],
+    "batch_006": [],
+    "batch_007": [],
+    "batch_008": [],
+    "batch_009": [],
+    "batch_010": [],
+    "batch_011": [],
+    "batch_012": [],
+    "batch_013": [],
+    "batch_014": [],
+    "batch_015": [],
+    "batch_016": []
+  },
+  "triggered_fallbacks": [
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A2",
+        "A3"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A10",
+        "A11",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A12",
+        "A2",
+        "A3"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A13",
+        "A2",
+        "A3"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A14",
+        "A2",
+        "A3"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A15",
+        "A2",
+        "A3"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A10",
+        "A11",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A10",
+        "A11",
+        "A12",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A10",
+        "A11",
+        "A13",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A10",
+        "A11",
+        "A14",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A10",
+        "A11",
+        "A15",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A12",
+        "A13"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A12",
+        "A14"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A13",
+        "A14"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "template:rule_protocol_ble_connect_op_disconnect:1:missing_scope_tokens"
+      },
+      "scope": [
+        "A15"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:DATA_DEP"
+      },
+      "scope": [
+        "A15"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:CONTROL_DEP"
+      },
+      "scope": [
+        "A15"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "template:rule_protocol_ble_connect_op_disconnect:0:cross_action_scope_filtered"
+      },
+      "scope": [
+        "A13",
+        "A14"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "template:rule_protocol_ble_connect_op_disconnect:1:cross_action_scope_filtered"
+      },
+      "scope": [
+        "A12",
+        "A15"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "template:rule_protocol_ble_connect_op_disconnect:1:cross_action_scope_filtered"
+      },
+      "scope": [
+        "A13",
+        "A15"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "template:rule_protocol_ble_connect_op_disconnect:1:cross_action_scope_filtered"
+      },
+      "scope": [
+        "A1",
+        "A15",
+        "A2",
+        "A3"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "template:rule_protocol_ble_connect_op_disconnect:1:cross_action_scope_filtered"
+      },
+      "scope": [
+        "A10",
+        "A11",
+        "A15",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "template:rule_protocol_ble_connect_op_disconnect:1:cross_action_scope_filtered"
+      },
+      "scope": [
+        "A15",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A2"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A3"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A4"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A5"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A6"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A7"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A8"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A9"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A10"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A11"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A12"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A13"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A14"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A2",
+        "A3"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A2",
+        "A4"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A2",
+        "A5"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A2",
+        "A6"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A2",
+        "A7"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A2",
+        "A8"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A2",
+        "A9"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A10",
+        "A2"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A11",
+        "A2"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A12",
+        "A2"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A13",
+        "A2"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A14",
+        "A2"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A3",
+        "A5"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A3",
+        "A6"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A3",
+        "A7"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A3",
+        "A8"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A3",
+        "A9"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A10",
+        "A3"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A11",
+        "A3"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A12",
+        "A3"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A13",
+        "A3"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A14",
+        "A3"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A4",
+        "A5"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A4",
+        "A6"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A4",
+        "A7"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A4",
+        "A8"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A4",
+        "A9"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A10",
+        "A4"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A11",
+        "A4"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A12",
+        "A4"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A13",
+        "A4"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A14",
+        "A4"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A5",
+        "A6"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A5",
+        "A7"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A5",
+        "A8"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A5",
+        "A9"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A10",
+        "A5"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A11",
+        "A5"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A12",
+        "A5"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A13",
+        "A5"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A14",
+        "A5"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A6",
+        "A7"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A6",
+        "A8"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A6",
+        "A9"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A10",
+        "A6"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A11",
+        "A6"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A12",
+        "A6"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A13",
+        "A6"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A14",
+        "A6"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A7",
+        "A8"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A7",
+        "A9"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A10",
+        "A7"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A11",
+        "A7"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A12",
+        "A7"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A13",
+        "A7"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A14",
+        "A7"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A8",
+        "A9"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A10",
+        "A8"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A11",
+        "A8"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A12",
+        "A8"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A13",
+        "A8"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A14",
+        "A8"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A10",
+        "A9"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A11",
+        "A9"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A12",
+        "A9"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A13",
+        "A9"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A14",
+        "A9"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A10",
+        "A11"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A10",
+        "A12"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A10",
+        "A13"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A10",
+        "A14"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A11",
+        "A12"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A11",
+        "A13"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A11",
+        "A14"
+      ]
+    }
+  ],
+  "unknown_protocol_actions": [],
+  "status": "ok",
+  "run_id": "c83c366f4a6d4bd795f4bfd50f317df2"
+}

@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_kids_room_night_safety_check_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Kids' Room Night Safety Check"
+}

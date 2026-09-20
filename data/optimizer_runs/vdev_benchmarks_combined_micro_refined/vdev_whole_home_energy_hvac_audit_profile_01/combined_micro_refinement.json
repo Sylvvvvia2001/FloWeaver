@@ -1,0 +1,84 @@
+{
+  "accepted_corridors": [
+    {
+      "action_ids": [
+        "A1",
+        "A5",
+        "A2",
+        "A3",
+        "A4",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A11",
+        "A12",
+        "A13"
+      ],
+      "batch_ids": [
+        "batch_000",
+        "batch_001",
+        "batch_002",
+        "batch_003",
+        "batch_004",
+        "batch_005",
+        "batch_006",
+        "batch_007",
+        "batch_008",
+        "batch_009"
+      ],
+      "corridor_id": "corridor_00",
+      "latency_saved_ms": 810,
+      "source": "API",
+      "validation_passed": true
+    },
+    {
+      "action_ids": [
+        "A14",
+        "A15",
+        "A16",
+        "A17",
+        "A18"
+      ],
+      "batch_ids": [
+        "batch_010",
+        "batch_011",
+        "batch_012",
+        "batch_013",
+        "batch_014"
+      ],
+      "corridor_id": "corridor_01",
+      "latency_saved_ms": 100,
+      "source": "API",
+      "validation_passed": true
+    }
+  ],
+  "api_added_savings_ms": 910,
+  "ble_added_savings_ms": 0,
+  "case_name": "Whole-Home Energy and HVAC Audit Profile Coverage",
+  "combined_added_savings_ms": 910,
+  "combined_added_savings_ratio": 0.2013274336283186,
+  "combined_refined_estimated_latency_ms": 3610,
+  "conflict_count": 0,
+  "group": "Profile Coverage - Monitoring and Audit Routines",
+  "original_estimated_latency_ms": 4520,
+  "rejected_corridors": [],
+  "target_path": "data/targets/vdev_benchmarks/vdev_whole_home_energy_hvac_audit_profile_01.json",
+  "validation": {
+    "api_constraints_ok": true,
+    "batch_order_preserved": true,
+    "ble_constraints_ok": true,
+    "component_validations_ok": true,
+    "conflict_free": true,
+    "contiguous_coverage_ok": true,
+    "event_loop_constraints_ok": true,
+    "passed": true,
+    "projection_ok": true,
+    "reasons": [],
+    "savings_consistency_ok": true,
+    "simulated_event_count": 147,
+    "simulated_total_ms": 3610
+  },
+  "vdev_id": "vdev_whole_home_energy_hvac_audit_profile_01"
+}

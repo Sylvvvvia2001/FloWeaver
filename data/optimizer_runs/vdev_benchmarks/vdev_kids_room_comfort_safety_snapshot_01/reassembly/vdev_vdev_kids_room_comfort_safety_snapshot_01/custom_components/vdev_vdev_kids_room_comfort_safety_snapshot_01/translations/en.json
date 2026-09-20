@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_kids_room_comfort_safety_snapshot_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Kids' Room Comfort and Safety Snapshot"
+}

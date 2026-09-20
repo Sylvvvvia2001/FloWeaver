@@ -1,0 +1,151 @@
+mutation_id,dataset,routine_id,routine_name,latency_group,protocol_modality,rollback_layer_count,mutation_type,mutation_label,expected_compatible_categories,valid_mutation,selection_index
+mut_001,smart-home,16,Turn on Home Connect Hood light on a special day,"G1:(0,3]",Cloud,0,M1_dependent_action_swap,Dependent-action swap,order_violation,1,0
+mut_002,smart-home,86,Turn on Philips Hue lights when you arrive home,"G1:(0,3]",Local,3,M1_dependent_action_swap,Dependent-action swap,order_violation,1,1
+mut_003,smart-home,122,Turn on Hue and Kasa lights when you arrive home,"G1:(0,3]",Local,2,M1_dependent_action_swap,Dependent-action swap,order_violation,1,2
+mut_004,smart-home,143,Disarm Blink when the first person arrives home,"G1:(0,3]",Cloud,0,M1_dependent_action_swap,Dependent-action swap,order_violation,1,3
+mut_005,smart-home,211,Turn on Hue and Nanoleaf lights at sunset,"G2:(3,6]",Local,1,M1_dependent_action_swap,Dependent-action swap,order_violation,1,4
+mut_006,smart-home,228,Activate Home Connect fridge sabbath mode every Friday,"G3:(6,9]",Cloud,2,M1_dependent_action_swap,Dependent-action swap,order_violation,1,5
+mut_007,smart-home,232,Turn off my TP-Link Kasa plug when there's an electricity price spike,"G2:(3,6]",Local,2,M1_dependent_action_swap,Dependent-action swap,order_violation,1,6
+mut_008,smart-home,72,Arm Blink system and run SwitchBot scene when you leave home,"G3:(6,9]",BLE+Cloud,2,M1_dependent_action_swap,Dependent-action swap,order_violation,1,7
+mut_009,smart-home,212,Blink Philips Hue lights and notify if fridge door left open,"G3:(6,9]",Local+Cloud,1,M1_dependent_action_swap,Dependent-action swap,order_violation,1,8
+mut_010,smart-home,248,Switch your ecobee to your chosen comfort profile as you arrive home,"G3:(6,9]",Cloud,2,M1_dependent_action_swap,Dependent-action swap,order_violation,1,9
+mut_011,smart-home,205,Send Roborock home and disarm Blink when a Webhook event fires,"G4:(9,+)",Cloud,0,M1_dependent_action_swap,Dependent-action swap,order_violation,1,10
+mut_012,smart-home,240,Open SwitchBot curtains when your Smart Bed alarm rings,"G4:(9,+)",BLE,2,M1_dependent_action_swap,Dependent-action swap,order_violation,1,11
+mut_013,smart-home,vdev_weekend_whole_home_snapshot_01,Weekend Whole-Home Snapshot Routine,"G1:(0,3]",BLE+Local+Cloud,,M1_dependent_action_swap,Dependent-action swap,order_violation,1,12
+mut_014,smart-home,vdev_vacation_departure_final_audit_01,Vacation Departure Final Audit,"G1:(0,3]",BLE+Local+Cloud,,M1_dependent_action_swap,Dependent-action swap,order_violation,1,13
+mut_015,long-chain,86,Turn on Philips Hue lights when you arrive home [3x long-chain],"G3:(6,9]",Local,1,M1_dependent_action_swap,Dependent-action swap,order_violation,1,14
+mut_016,long-chain,122,Turn on Hue and Kasa lights when you arrive home [3x long-chain],"G3:(6,9]",Local,1,M1_dependent_action_swap,Dependent-action swap,order_violation,1,15
+mut_017,long-chain,210,Turn off Hue and Nanoleaf lights at bedtime [3x long-chain],"G4:(9,+)",Local,2,M1_dependent_action_swap,Dependent-action swap,order_violation,1,16
+mut_018,long-chain,234,Toggle Kasa lights with Button widget [3x long-chain],"G4:(9,+)",Local,0,M1_dependent_action_swap,Dependent-action swap,order_violation,1,17
+mut_019,long-chain,215,Arm Blink and start Roborock when a Webhook event arrives [3x long-chain],"G4:(9,+)",Cloud,2,M1_dependent_action_swap,Dependent-action swap,order_violation,1,18
+mut_020,long-chain,203,Turn on SmartThings scene and Hue lights when arriving home [3x long-chain],"G4:(9,+)",Local+Cloud,3,M1_dependent_action_swap,Dependent-action swap,order_violation,1,19
+mut_021,smart-home,16,Turn on Home Connect Hood light on a special day,"G1:(0,3]",Cloud,0,M2_premature_state_writeback,Premature state writeback,"order_violation,semantic_delta",1,0
+mut_022,smart-home,86,Turn on Philips Hue lights when you arrive home,"G1:(0,3]",Local,3,M2_premature_state_writeback,Premature state writeback,"order_violation,semantic_delta",1,1
+mut_023,smart-home,122,Turn on Hue and Kasa lights when you arrive home,"G1:(0,3]",Local,2,M2_premature_state_writeback,Premature state writeback,"order_violation,semantic_delta",1,2
+mut_024,smart-home,143,Disarm Blink when the first person arrives home,"G1:(0,3]",Cloud,0,M2_premature_state_writeback,Premature state writeback,"order_violation,semantic_delta",1,3
+mut_025,smart-home,211,Turn on Hue and Nanoleaf lights at sunset,"G2:(3,6]",Local,1,M2_premature_state_writeback,Premature state writeback,"order_violation,semantic_delta",1,4
+mut_026,smart-home,228,Activate Home Connect fridge sabbath mode every Friday,"G3:(6,9]",Cloud,2,M2_premature_state_writeback,Premature state writeback,"order_violation,semantic_delta",1,5
+mut_027,smart-home,232,Turn off my TP-Link Kasa plug when there's an electricity price spike,"G2:(3,6]",Local,2,M2_premature_state_writeback,Premature state writeback,"order_violation,semantic_delta",1,6
+mut_028,smart-home,72,Arm Blink system and run SwitchBot scene when you leave home,"G3:(6,9]",BLE+Cloud,2,M2_premature_state_writeback,Premature state writeback,"order_violation,semantic_delta",1,7
+mut_029,smart-home,212,Blink Philips Hue lights and notify if fridge door left open,"G3:(6,9]",Local+Cloud,1,M2_premature_state_writeback,Premature state writeback,"order_violation,semantic_delta",1,8
+mut_030,smart-home,248,Switch your ecobee to your chosen comfort profile as you arrive home,"G3:(6,9]",Cloud,2,M2_premature_state_writeback,Premature state writeback,"order_violation,semantic_delta",1,9
+mut_031,smart-home,205,Send Roborock home and disarm Blink when a Webhook event fires,"G4:(9,+)",Cloud,0,M2_premature_state_writeback,Premature state writeback,"order_violation,semantic_delta",1,10
+mut_032,smart-home,240,Open SwitchBot curtains when your Smart Bed alarm rings,"G4:(9,+)",BLE,2,M2_premature_state_writeback,Premature state writeback,"order_violation,semantic_delta",1,11
+mut_033,smart-home,vdev_weekend_whole_home_snapshot_01,Weekend Whole-Home Snapshot Routine,"G1:(0,3]",BLE+Local+Cloud,,M2_premature_state_writeback,Premature state writeback,"order_violation,semantic_delta",1,12
+mut_034,smart-home,vdev_vacation_departure_final_audit_01,Vacation Departure Final Audit,"G1:(0,3]",BLE+Local+Cloud,,M2_premature_state_writeback,Premature state writeback,"order_violation,semantic_delta",1,13
+mut_035,long-chain,86,Turn on Philips Hue lights when you arrive home [3x long-chain],"G3:(6,9]",Local,1,M2_premature_state_writeback,Premature state writeback,"order_violation,semantic_delta",1,14
+mut_036,long-chain,122,Turn on Hue and Kasa lights when you arrive home [3x long-chain],"G3:(6,9]",Local,1,M2_premature_state_writeback,Premature state writeback,"order_violation,semantic_delta",1,15
+mut_037,long-chain,210,Turn off Hue and Nanoleaf lights at bedtime [3x long-chain],"G4:(9,+)",Local,2,M2_premature_state_writeback,Premature state writeback,"order_violation,semantic_delta",1,16
+mut_038,long-chain,234,Toggle Kasa lights with Button widget [3x long-chain],"G4:(9,+)",Local,0,M2_premature_state_writeback,Premature state writeback,"order_violation,semantic_delta",1,17
+mut_039,long-chain,215,Arm Blink and start Roborock when a Webhook event arrives [3x long-chain],"G4:(9,+)",Cloud,2,M2_premature_state_writeback,Premature state writeback,"order_violation,semantic_delta",1,18
+mut_040,long-chain,203,Turn on SmartThings scene and Hue lights when arriving home [3x long-chain],"G4:(9,+)",Local+Cloud,3,M2_premature_state_writeback,Premature state writeback,"order_violation,semantic_delta",1,19
+mut_041,smart-home,16,Turn on Home Connect Hood light on a special day,"G1:(0,3]",Cloud,0,M3_missing_refresh_status_query,Missing refresh/status query,missing_prerequisite,1,0
+mut_042,smart-home,86,Turn on Philips Hue lights when you arrive home,"G1:(0,3]",Local,3,M3_missing_refresh_status_query,Missing refresh/status query,missing_prerequisite,1,1
+mut_043,smart-home,122,Turn on Hue and Kasa lights when you arrive home,"G1:(0,3]",Local,2,M3_missing_refresh_status_query,Missing refresh/status query,missing_prerequisite,1,2
+mut_044,smart-home,143,Disarm Blink when the first person arrives home,"G1:(0,3]",Cloud,0,M3_missing_refresh_status_query,Missing refresh/status query,missing_prerequisite,1,3
+mut_045,smart-home,211,Turn on Hue and Nanoleaf lights at sunset,"G2:(3,6]",Local,1,M3_missing_refresh_status_query,Missing refresh/status query,missing_prerequisite,1,4
+mut_046,smart-home,228,Activate Home Connect fridge sabbath mode every Friday,"G3:(6,9]",Cloud,2,M3_missing_refresh_status_query,Missing refresh/status query,missing_prerequisite,1,5
+mut_047,smart-home,232,Turn off my TP-Link Kasa plug when there's an electricity price spike,"G2:(3,6]",Local,2,M3_missing_refresh_status_query,Missing refresh/status query,missing_prerequisite,1,6
+mut_048,smart-home,72,Arm Blink system and run SwitchBot scene when you leave home,"G3:(6,9]",BLE+Cloud,2,M3_missing_refresh_status_query,Missing refresh/status query,missing_prerequisite,1,7
+mut_049,smart-home,212,Blink Philips Hue lights and notify if fridge door left open,"G3:(6,9]",Local+Cloud,1,M3_missing_refresh_status_query,Missing refresh/status query,missing_prerequisite,1,8
+mut_050,smart-home,248,Switch your ecobee to your chosen comfort profile as you arrive home,"G3:(6,9]",Cloud,2,M3_missing_refresh_status_query,Missing refresh/status query,missing_prerequisite,1,9
+mut_051,smart-home,205,Send Roborock home and disarm Blink when a Webhook event fires,"G4:(9,+)",Cloud,0,M3_missing_refresh_status_query,Missing refresh/status query,missing_prerequisite,1,10
+mut_052,smart-home,240,Open SwitchBot curtains when your Smart Bed alarm rings,"G4:(9,+)",BLE,2,M3_missing_refresh_status_query,Missing refresh/status query,missing_prerequisite,1,11
+mut_053,smart-home,vdev_weekend_whole_home_snapshot_01,Weekend Whole-Home Snapshot Routine,"G1:(0,3]",BLE+Local+Cloud,,M3_missing_refresh_status_query,Missing refresh/status query,missing_prerequisite,1,12
+mut_054,smart-home,vdev_vacation_departure_final_audit_01,Vacation Departure Final Audit,"G1:(0,3]",BLE+Local+Cloud,,M3_missing_refresh_status_query,Missing refresh/status query,missing_prerequisite,1,13
+mut_055,long-chain,86,Turn on Philips Hue lights when you arrive home [3x long-chain],"G3:(6,9]",Local,1,M3_missing_refresh_status_query,Missing refresh/status query,missing_prerequisite,1,14
+mut_056,long-chain,122,Turn on Hue and Kasa lights when you arrive home [3x long-chain],"G3:(6,9]",Local,1,M3_missing_refresh_status_query,Missing refresh/status query,missing_prerequisite,1,15
+mut_057,long-chain,210,Turn off Hue and Nanoleaf lights at bedtime [3x long-chain],"G4:(9,+)",Local,2,M3_missing_refresh_status_query,Missing refresh/status query,missing_prerequisite,1,16
+mut_058,long-chain,234,Toggle Kasa lights with Button widget [3x long-chain],"G4:(9,+)",Local,0,M3_missing_refresh_status_query,Missing refresh/status query,missing_prerequisite,1,17
+mut_059,long-chain,215,Arm Blink and start Roborock when a Webhook event arrives [3x long-chain],"G4:(9,+)",Cloud,2,M3_missing_refresh_status_query,Missing refresh/status query,missing_prerequisite,1,18
+mut_060,long-chain,203,Turn on SmartThings scene and Hue lights when arriving home [3x long-chain],"G4:(9,+)",Local+Cloud,3,M3_missing_refresh_status_query,Missing refresh/status query,missing_prerequisite,1,19
+mut_061,smart-home,72,Arm Blink system and run SwitchBot scene when you leave home,"G3:(6,9]",BLE+Cloud,2,M4_ble_serialization_violation,BLE serialization violation,"order_violation,semantic_delta",1,0
+mut_062,smart-home,72,Arm Blink system and run SwitchBot scene when you leave home,"G3:(6,9]",BLE+Cloud,2,M4_ble_serialization_violation,BLE serialization violation,"order_violation,semantic_delta",1,1
+mut_063,smart-home,72,Arm Blink system and run SwitchBot scene when you leave home,"G3:(6,9]",BLE+Cloud,2,M4_ble_serialization_violation,BLE serialization violation,"order_violation,semantic_delta",1,2
+mut_064,smart-home,240,Open SwitchBot curtains when your Smart Bed alarm rings,"G4:(9,+)",BLE,2,M4_ble_serialization_violation,BLE serialization violation,"order_violation,semantic_delta",1,3
+mut_065,smart-home,240,Open SwitchBot curtains when your Smart Bed alarm rings,"G4:(9,+)",BLE,2,M4_ble_serialization_violation,BLE serialization violation,"order_violation,semantic_delta",1,4
+mut_066,smart-home,vdev_morning_wakeup_readiness_01,Morning Wake-Up Readiness Routine,"G1:(0,3]",BLE+Local+Cloud,,M4_ble_serialization_violation,BLE serialization violation,"order_violation,semantic_delta",1,5
+mut_067,smart-home,vdev_morning_wakeup_readiness_01,Morning Wake-Up Readiness Routine,"G1:(0,3]",BLE+Local+Cloud,,M4_ble_serialization_violation,BLE serialization violation,"order_violation,semantic_delta",1,6
+mut_068,smart-home,vdev_morning_wakeup_readiness_01,Morning Wake-Up Readiness Routine,"G1:(0,3]",BLE+Local+Cloud,,M4_ble_serialization_violation,BLE serialization violation,"order_violation,semantic_delta",1,7
+mut_069,smart-home,vdev_weekend_whole_home_snapshot_01,Weekend Whole-Home Snapshot Routine,"G1:(0,3]",BLE+Local+Cloud,,M4_ble_serialization_violation,BLE serialization violation,"order_violation,semantic_delta",1,8
+mut_070,smart-home,vdev_weekend_whole_home_snapshot_01,Weekend Whole-Home Snapshot Routine,"G1:(0,3]",BLE+Local+Cloud,,M4_ble_serialization_violation,BLE serialization violation,"order_violation,semantic_delta",1,9
+mut_071,smart-home,vdev_vacation_departure_final_audit_01,Vacation Departure Final Audit,"G1:(0,3]",BLE+Local+Cloud,,M4_ble_serialization_violation,BLE serialization violation,"order_violation,semantic_delta",1,10
+mut_072,smart-home,vdev_vacation_departure_final_audit_01,Vacation Departure Final Audit,"G1:(0,3]",BLE+Local+Cloud,,M4_ble_serialization_violation,BLE serialization violation,"order_violation,semantic_delta",1,11
+mut_073,smart-home,16,Turn on Home Connect Hood light on a special day,"G1:(0,3]",Cloud,0,M5_cloud_rate_session_violation,Cloud rate/session violation,missing_prerequisite,1,0
+mut_074,smart-home,58,Blink Philips Hue lights and notify if fridge door left open,"G1:(0,3]",Local+Cloud,2,M5_cloud_rate_session_violation,Cloud rate/session violation,missing_prerequisite,1,1
+mut_075,smart-home,143,Disarm Blink when the first person arrives home,"G1:(0,3]",Cloud,0,M5_cloud_rate_session_violation,Cloud rate/session violation,missing_prerequisite,1,2
+mut_076,smart-home,116,Turn on Hue lights when Netatmo temperature rises above threshold,"G2:(3,6]",Local+Cloud,3,M5_cloud_rate_session_violation,Cloud rate/session violation,missing_prerequisite,1,3
+mut_077,smart-home,228,Activate Home Connect fridge sabbath mode every Friday,"G3:(6,9]",Cloud,2,M5_cloud_rate_session_violation,Cloud rate/session violation,missing_prerequisite,1,4
+mut_078,smart-home,284,Get IFTTT notification when freezer temperature is high,"G2:(3,6]",Cloud,1,M5_cloud_rate_session_violation,Cloud rate/session violation,missing_prerequisite,1,5
+mut_079,smart-home,72,Arm Blink system and run SwitchBot scene when you leave home,"G3:(6,9]",BLE+Cloud,2,M5_cloud_rate_session_violation,Cloud rate/session violation,missing_prerequisite,1,6
+mut_080,smart-home,212,Blink Philips Hue lights and notify if fridge door left open,"G3:(6,9]",Local+Cloud,1,M5_cloud_rate_session_violation,Cloud rate/session violation,missing_prerequisite,1,7
+mut_081,smart-home,248,Switch your ecobee to your chosen comfort profile as you arrive home,"G3:(6,9]",Cloud,2,M5_cloud_rate_session_violation,Cloud rate/session violation,missing_prerequisite,1,8
+mut_082,smart-home,202,Color-loop Hue lights when Netatmo CO2 gets high,"G4:(9,+)",Local+Cloud,1,M5_cloud_rate_session_violation,Cloud rate/session violation,missing_prerequisite,1,9
+mut_083,smart-home,205,Send Roborock home and disarm Blink when a Webhook event fires,"G4:(9,+)",Cloud,0,M5_cloud_rate_session_violation,Cloud rate/session violation,missing_prerequisite,1,10
+mut_084,smart-home,vdev_morning_wakeup_readiness_01,Morning Wake-Up Readiness Routine,"G1:(0,3]",BLE+Local+Cloud,,M5_cloud_rate_session_violation,Cloud rate/session violation,missing_prerequisite,1,11
+mut_085,smart-home,vdev_weekend_whole_home_snapshot_01,Weekend Whole-Home Snapshot Routine,"G1:(0,3]",BLE+Local+Cloud,,M5_cloud_rate_session_violation,Cloud rate/session violation,missing_prerequisite,1,12
+mut_086,smart-home,vdev_vacation_departure_final_audit_01,Vacation Departure Final Audit,"G1:(0,3]",BLE+Local+Cloud,,M5_cloud_rate_session_violation,Cloud rate/session violation,missing_prerequisite,1,13
+mut_087,long-chain,205,Send Roborock home and disarm Blink when a Webhook event fires [3x long-chain],"G4:(9,+)",Cloud,2,M5_cloud_rate_session_violation,Cloud rate/session violation,missing_prerequisite,1,14
+mut_088,long-chain,215,Arm Blink and start Roborock when a Webhook event arrives [3x long-chain],"G4:(9,+)",Cloud,2,M5_cloud_rate_session_violation,Cloud rate/session violation,missing_prerequisite,1,15
+mut_089,long-chain,203,Turn on SmartThings scene and Hue lights when arriving home [3x long-chain],"G4:(9,+)",Local+Cloud,3,M5_cloud_rate_session_violation,Cloud rate/session violation,missing_prerequisite,1,16
+mut_090,long-chain,213,Turn off SmartThings scene and Hue lights when leaving home [3x long-chain],"G4:(9,+)",Local+Cloud,3,M5_cloud_rate_session_violation,Cloud rate/session violation,missing_prerequisite,1,17
+mut_091,smart-home,16,Turn on Home Connect Hood light on a special day,"G1:(0,3]",Cloud,0,M6_wrong_batching_writeback_merge,Wrong batching/writeback merge,"missing_prerequisite,order_violation,semantic_delta",1,0
+mut_092,smart-home,86,Turn on Philips Hue lights when you arrive home,"G1:(0,3]",Local,3,M6_wrong_batching_writeback_merge,Wrong batching/writeback merge,"missing_prerequisite,order_violation,semantic_delta",1,1
+mut_093,smart-home,122,Turn on Hue and Kasa lights when you arrive home,"G1:(0,3]",Local,2,M6_wrong_batching_writeback_merge,Wrong batching/writeback merge,"missing_prerequisite,order_violation,semantic_delta",1,2
+mut_094,smart-home,143,Disarm Blink when the first person arrives home,"G1:(0,3]",Cloud,0,M6_wrong_batching_writeback_merge,Wrong batching/writeback merge,"missing_prerequisite,order_violation,semantic_delta",1,3
+mut_095,smart-home,211,Turn on Hue and Nanoleaf lights at sunset,"G2:(3,6]",Local,1,M6_wrong_batching_writeback_merge,Wrong batching/writeback merge,"missing_prerequisite,order_violation,semantic_delta",1,4
+mut_096,smart-home,228,Activate Home Connect fridge sabbath mode every Friday,"G3:(6,9]",Cloud,2,M6_wrong_batching_writeback_merge,Wrong batching/writeback merge,"missing_prerequisite,order_violation,semantic_delta",1,5
+mut_097,smart-home,232,Turn off my TP-Link Kasa plug when there's an electricity price spike,"G2:(3,6]",Local,2,M6_wrong_batching_writeback_merge,Wrong batching/writeback merge,"missing_prerequisite,order_violation,semantic_delta",1,6
+mut_098,smart-home,72,Arm Blink system and run SwitchBot scene when you leave home,"G3:(6,9]",BLE+Cloud,2,M6_wrong_batching_writeback_merge,Wrong batching/writeback merge,"missing_prerequisite,order_violation,semantic_delta",1,7
+mut_099,smart-home,212,Blink Philips Hue lights and notify if fridge door left open,"G3:(6,9]",Local+Cloud,1,M6_wrong_batching_writeback_merge,Wrong batching/writeback merge,"missing_prerequisite,order_violation,semantic_delta",1,8
+mut_100,smart-home,248,Switch your ecobee to your chosen comfort profile as you arrive home,"G3:(6,9]",Cloud,2,M6_wrong_batching_writeback_merge,Wrong batching/writeback merge,"missing_prerequisite,order_violation,semantic_delta",1,9
+mut_101,smart-home,205,Send Roborock home and disarm Blink when a Webhook event fires,"G4:(9,+)",Cloud,0,M6_wrong_batching_writeback_merge,Wrong batching/writeback merge,"missing_prerequisite,order_violation,semantic_delta",1,10
+mut_102,smart-home,240,Open SwitchBot curtains when your Smart Bed alarm rings,"G4:(9,+)",BLE,2,M6_wrong_batching_writeback_merge,Wrong batching/writeback merge,"missing_prerequisite,order_violation,semantic_delta",1,11
+mut_103,smart-home,vdev_weekend_whole_home_snapshot_01,Weekend Whole-Home Snapshot Routine,"G1:(0,3]",BLE+Local+Cloud,,M6_wrong_batching_writeback_merge,Wrong batching/writeback merge,"missing_prerequisite,order_violation,semantic_delta",1,12
+mut_104,smart-home,vdev_vacation_departure_final_audit_01,Vacation Departure Final Audit,"G1:(0,3]",BLE+Local+Cloud,,M6_wrong_batching_writeback_merge,Wrong batching/writeback merge,"missing_prerequisite,order_violation,semantic_delta",1,13
+mut_105,long-chain,86,Turn on Philips Hue lights when you arrive home [3x long-chain],"G3:(6,9]",Local,1,M6_wrong_batching_writeback_merge,Wrong batching/writeback merge,"missing_prerequisite,order_violation,semantic_delta",1,14
+mut_106,long-chain,122,Turn on Hue and Kasa lights when you arrive home [3x long-chain],"G3:(6,9]",Local,1,M6_wrong_batching_writeback_merge,Wrong batching/writeback merge,"missing_prerequisite,order_violation,semantic_delta",1,15
+mut_107,long-chain,210,Turn off Hue and Nanoleaf lights at bedtime [3x long-chain],"G4:(9,+)",Local,2,M6_wrong_batching_writeback_merge,Wrong batching/writeback merge,"missing_prerequisite,order_violation,semantic_delta",1,16
+mut_108,long-chain,234,Toggle Kasa lights with Button widget [3x long-chain],"G4:(9,+)",Local,0,M6_wrong_batching_writeback_merge,Wrong batching/writeback merge,"missing_prerequisite,order_violation,semantic_delta",1,17
+mut_109,long-chain,215,Arm Blink and start Roborock when a Webhook event arrives [3x long-chain],"G4:(9,+)",Cloud,2,M6_wrong_batching_writeback_merge,Wrong batching/writeback merge,"missing_prerequisite,order_violation,semantic_delta",1,18
+mut_110,long-chain,203,Turn on SmartThings scene and Hue lights when arriving home [3x long-chain],"G4:(9,+)",Local+Cloud,3,M6_wrong_batching_writeback_merge,Wrong batching/writeback merge,"missing_prerequisite,order_violation,semantic_delta",1,19
+mut_111,smart-home,16,Turn on Home Connect Hood light on a special day,"G1:(0,3]",Cloud,0,M7_same_device_ordering_violation,Same-device ordering violation,order_violation,1,0
+mut_112,smart-home,86,Turn on Philips Hue lights when you arrive home,"G1:(0,3]",Local,3,M7_same_device_ordering_violation,Same-device ordering violation,order_violation,1,1
+mut_113,smart-home,122,Turn on Hue and Kasa lights when you arrive home,"G1:(0,3]",Local,2,M7_same_device_ordering_violation,Same-device ordering violation,order_violation,1,2
+mut_114,smart-home,143,Disarm Blink when the first person arrives home,"G1:(0,3]",Cloud,0,M7_same_device_ordering_violation,Same-device ordering violation,order_violation,1,3
+mut_115,smart-home,211,Turn on Hue and Nanoleaf lights at sunset,"G2:(3,6]",Local,1,M7_same_device_ordering_violation,Same-device ordering violation,order_violation,1,4
+mut_116,smart-home,228,Activate Home Connect fridge sabbath mode every Friday,"G3:(6,9]",Cloud,2,M7_same_device_ordering_violation,Same-device ordering violation,order_violation,1,5
+mut_117,smart-home,232,Turn off my TP-Link Kasa plug when there's an electricity price spike,"G2:(3,6]",Local,2,M7_same_device_ordering_violation,Same-device ordering violation,order_violation,1,6
+mut_118,smart-home,72,Arm Blink system and run SwitchBot scene when you leave home,"G3:(6,9]",BLE+Cloud,2,M7_same_device_ordering_violation,Same-device ordering violation,order_violation,1,7
+mut_119,smart-home,212,Blink Philips Hue lights and notify if fridge door left open,"G3:(6,9]",Local+Cloud,1,M7_same_device_ordering_violation,Same-device ordering violation,order_violation,1,8
+mut_120,smart-home,248,Switch your ecobee to your chosen comfort profile as you arrive home,"G3:(6,9]",Cloud,2,M7_same_device_ordering_violation,Same-device ordering violation,order_violation,1,9
+mut_121,smart-home,205,Send Roborock home and disarm Blink when a Webhook event fires,"G4:(9,+)",Cloud,0,M7_same_device_ordering_violation,Same-device ordering violation,order_violation,1,10
+mut_122,smart-home,240,Open SwitchBot curtains when your Smart Bed alarm rings,"G4:(9,+)",BLE,2,M7_same_device_ordering_violation,Same-device ordering violation,order_violation,1,11
+mut_123,smart-home,vdev_weekend_whole_home_snapshot_01,Weekend Whole-Home Snapshot Routine,"G1:(0,3]",BLE+Local+Cloud,,M7_same_device_ordering_violation,Same-device ordering violation,order_violation,1,12
+mut_124,smart-home,vdev_vacation_departure_final_audit_01,Vacation Departure Final Audit,"G1:(0,3]",BLE+Local+Cloud,,M7_same_device_ordering_violation,Same-device ordering violation,order_violation,1,13
+mut_125,long-chain,86,Turn on Philips Hue lights when you arrive home [3x long-chain],"G3:(6,9]",Local,1,M7_same_device_ordering_violation,Same-device ordering violation,order_violation,1,14
+mut_126,long-chain,122,Turn on Hue and Kasa lights when you arrive home [3x long-chain],"G3:(6,9]",Local,1,M7_same_device_ordering_violation,Same-device ordering violation,order_violation,1,15
+mut_127,long-chain,210,Turn off Hue and Nanoleaf lights at bedtime [3x long-chain],"G4:(9,+)",Local,2,M7_same_device_ordering_violation,Same-device ordering violation,order_violation,1,16
+mut_128,long-chain,234,Toggle Kasa lights with Button widget [3x long-chain],"G4:(9,+)",Local,0,M7_same_device_ordering_violation,Same-device ordering violation,order_violation,1,17
+mut_129,long-chain,215,Arm Blink and start Roborock when a Webhook event arrives [3x long-chain],"G4:(9,+)",Cloud,2,M7_same_device_ordering_violation,Same-device ordering violation,order_violation,1,18
+mut_130,long-chain,203,Turn on SmartThings scene and Hue lights when arriving home [3x long-chain],"G4:(9,+)",Local+Cloud,3,M7_same_device_ordering_violation,Same-device ordering violation,order_violation,1,19
+mut_131,smart-home,16,Turn on Home Connect Hood light on a special day,"G1:(0,3]",Cloud,0,M8_cleanup_lifecycle_violation,Cleanup/lifecycle violation,"missing_prerequisite,order_violation,semantic_delta",1,0
+mut_132,smart-home,86,Turn on Philips Hue lights when you arrive home,"G1:(0,3]",Local,3,M8_cleanup_lifecycle_violation,Cleanup/lifecycle violation,"missing_prerequisite,order_violation,semantic_delta",1,1
+mut_133,smart-home,122,Turn on Hue and Kasa lights when you arrive home,"G1:(0,3]",Local,2,M8_cleanup_lifecycle_violation,Cleanup/lifecycle violation,"missing_prerequisite,order_violation,semantic_delta",1,2
+mut_134,smart-home,143,Disarm Blink when the first person arrives home,"G1:(0,3]",Cloud,0,M8_cleanup_lifecycle_violation,Cleanup/lifecycle violation,"missing_prerequisite,order_violation,semantic_delta",1,3
+mut_135,smart-home,211,Turn on Hue and Nanoleaf lights at sunset,"G2:(3,6]",Local,1,M8_cleanup_lifecycle_violation,Cleanup/lifecycle violation,"missing_prerequisite,order_violation,semantic_delta",1,4
+mut_136,smart-home,228,Activate Home Connect fridge sabbath mode every Friday,"G3:(6,9]",Cloud,2,M8_cleanup_lifecycle_violation,Cleanup/lifecycle violation,"missing_prerequisite,order_violation,semantic_delta",1,5
+mut_137,smart-home,232,Turn off my TP-Link Kasa plug when there's an electricity price spike,"G2:(3,6]",Local,2,M8_cleanup_lifecycle_violation,Cleanup/lifecycle violation,"missing_prerequisite,order_violation,semantic_delta",1,6
+mut_138,smart-home,72,Arm Blink system and run SwitchBot scene when you leave home,"G3:(6,9]",BLE+Cloud,2,M8_cleanup_lifecycle_violation,Cleanup/lifecycle violation,"missing_prerequisite,order_violation,semantic_delta",1,7
+mut_139,smart-home,212,Blink Philips Hue lights and notify if fridge door left open,"G3:(6,9]",Local+Cloud,1,M8_cleanup_lifecycle_violation,Cleanup/lifecycle violation,"missing_prerequisite,order_violation,semantic_delta",1,8
+mut_140,smart-home,248,Switch your ecobee to your chosen comfort profile as you arrive home,"G3:(6,9]",Cloud,2,M8_cleanup_lifecycle_violation,Cleanup/lifecycle violation,"missing_prerequisite,order_violation,semantic_delta",1,9
+mut_141,smart-home,205,Send Roborock home and disarm Blink when a Webhook event fires,"G4:(9,+)",Cloud,0,M8_cleanup_lifecycle_violation,Cleanup/lifecycle violation,"missing_prerequisite,order_violation,semantic_delta",1,10
+mut_142,smart-home,240,Open SwitchBot curtains when your Smart Bed alarm rings,"G4:(9,+)",BLE,2,M8_cleanup_lifecycle_violation,Cleanup/lifecycle violation,"missing_prerequisite,order_violation,semantic_delta",1,11
+mut_143,smart-home,vdev_weekend_whole_home_snapshot_01,Weekend Whole-Home Snapshot Routine,"G1:(0,3]",BLE+Local+Cloud,,M8_cleanup_lifecycle_violation,Cleanup/lifecycle violation,"missing_prerequisite,order_violation,semantic_delta",1,12
+mut_144,smart-home,vdev_vacation_departure_final_audit_01,Vacation Departure Final Audit,"G1:(0,3]",BLE+Local+Cloud,,M8_cleanup_lifecycle_violation,Cleanup/lifecycle violation,"missing_prerequisite,order_violation,semantic_delta",1,13
+mut_145,long-chain,86,Turn on Philips Hue lights when you arrive home [3x long-chain],"G3:(6,9]",Local,1,M8_cleanup_lifecycle_violation,Cleanup/lifecycle violation,"missing_prerequisite,order_violation,semantic_delta",1,14
+mut_146,long-chain,122,Turn on Hue and Kasa lights when you arrive home [3x long-chain],"G3:(6,9]",Local,1,M8_cleanup_lifecycle_violation,Cleanup/lifecycle violation,"missing_prerequisite,order_violation,semantic_delta",1,15
+mut_147,long-chain,210,Turn off Hue and Nanoleaf lights at bedtime [3x long-chain],"G4:(9,+)",Local,2,M8_cleanup_lifecycle_violation,Cleanup/lifecycle violation,"missing_prerequisite,order_violation,semantic_delta",1,16
+mut_148,long-chain,154,Turn off Hue and Kasa lights when you leave home [3x long-chain],"G3:(6,9]",Local,1,M8_cleanup_lifecycle_violation,Cleanup/lifecycle violation,"missing_prerequisite,order_violation,semantic_delta",1,17
+mut_149,long-chain,189,Turn on Hue and Nanoleaf lights at sunset [3x long-chain],"G2:(3,6]",Local,1,M8_cleanup_lifecycle_violation,Cleanup/lifecycle violation,"missing_prerequisite,order_violation,semantic_delta",1,18
+mut_150,smart-home,210,Turn off Hue and Nanoleaf lights at bedtime,"G3:(6,9]",Local,2,M8_cleanup_lifecycle_violation,Cleanup/lifecycle violation,"missing_prerequisite,order_violation,semantic_delta",1,19

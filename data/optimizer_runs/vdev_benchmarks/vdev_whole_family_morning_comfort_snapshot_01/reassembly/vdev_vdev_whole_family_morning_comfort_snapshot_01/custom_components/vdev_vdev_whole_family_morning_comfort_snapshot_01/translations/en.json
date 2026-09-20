@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_whole_family_morning_comfort_snapshot_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Whole-Family Morning Comfort Snapshot"
+}

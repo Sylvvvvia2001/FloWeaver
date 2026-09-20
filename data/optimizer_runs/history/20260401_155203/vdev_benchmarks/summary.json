@@ -1,0 +1,493 @@
+{
+  "profile_path": "data/profiles/default/ha_profile.json",
+  "cases": [
+    {
+      "vdev_id": "vdev_ble_sensor_sweep_01",
+      "name": "BLE Sensor Sweep Supervisor",
+      "target_path": "data/targets/vdev_benchmarks/vdev_ble_sensor_sweep_01.json",
+      "run_dir": "data/optimizer_runs/vdev_benchmarks/vdev_ble_sensor_sweep_01",
+      "status": "error",
+      "error": "GroundingCoverageError('GROUNDING_FAILED:M1 critical actions not grounded into code markers: A2, A5, A6')"
+    },
+    {
+      "vdev_id": "vdev_ble_lighting_snapshot_01",
+      "name": "Multi-Room BLE Lighting Snapshot",
+      "target_path": "data/targets/vdev_benchmarks/vdev_ble_lighting_snapshot_01.json",
+      "run_dir": "data/optimizer_runs/vdev_benchmarks/vdev_ble_lighting_snapshot_01",
+      "status": "error",
+      "error": "GroundingCoverageError('GROUNDING_FAILED:M1 critical actions not grounded into code markers: A1, A2, A3, A4')"
+    },
+    {
+      "vdev_id": "vdev_tuya_cloud_fleet_01",
+      "name": "Tuya Cloud Fleet Snapshot",
+      "target_path": "data/targets/vdev_benchmarks/vdev_tuya_cloud_fleet_01.json",
+      "run_dir": "data/optimizer_runs/vdev_benchmarks/vdev_tuya_cloud_fleet_01",
+      "strict_pass": 6,
+      "tolerant_pass": 6,
+      "counterexample_count": 0,
+      "batch_count": 4,
+      "parallel_groups": {
+        "batch_000": [
+          [
+            "A1",
+            "A2"
+          ],
+          [
+            "A3",
+            "A4"
+          ]
+        ],
+        "batch_001": [
+          [
+            "A5",
+            "A6"
+          ]
+        ],
+        "batch_002": [
+          [
+            "A7"
+          ]
+        ],
+        "batch_003": [
+          [
+            "A8"
+          ]
+        ]
+      },
+      "batching_buckets": {
+        "batch_000": [
+          {
+            "bucket": "tuya|cloud_lane",
+            "chunks": 2,
+            "group_key": "endpoint",
+            "max_batch_size": 2,
+            "max_wait_ms": 40,
+            "members": [
+              "A1",
+              "A2",
+              "A3",
+              "A4"
+            ],
+            "rule_kind": "BATCH_GROUP",
+            "size": 4
+          }
+        ],
+        "batch_001": [
+          {
+            "bucket": "tuya|cloud_lane",
+            "chunks": 1,
+            "group_key": "endpoint",
+            "max_batch_size": 2,
+            "max_wait_ms": 40,
+            "members": [
+              "A5",
+              "A6"
+            ],
+            "rule_kind": "BATCH_GROUP",
+            "size": 2
+          }
+        ],
+        "batch_002": [],
+        "batch_003": []
+      },
+      "triggered_fallbacks": [
+        {
+          "fallback": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:DATA_DEP"
+          },
+          "scope": [
+            "A4"
+          ]
+        },
+        {
+          "fallback": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:DATA_DEP"
+          },
+          "scope": [
+            "A5"
+          ]
+        },
+        {
+          "fallback": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:DATA_DEP"
+          },
+          "scope": [
+            "A1"
+          ]
+        },
+        {
+          "fallback": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:CONTROL_DEP"
+          },
+          "scope": [
+            "A1"
+          ]
+        },
+        {
+          "fallback": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:DATA_DEP"
+          },
+          "scope": [
+            "A3"
+          ]
+        },
+        {
+          "fallback": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:DATA_DEP"
+          },
+          "scope": [
+            "A2"
+          ]
+        }
+      ],
+      "unknown_protocol_actions": [],
+      "status": "ok"
+    },
+    {
+      "vdev_id": "vdev_cloud_hybrid_lane_01",
+      "name": "Cloud Status + Control Hybrid",
+      "target_path": "data/targets/vdev_benchmarks/vdev_cloud_hybrid_lane_01.json",
+      "run_dir": "data/optimizer_runs/vdev_benchmarks/vdev_cloud_hybrid_lane_01",
+      "status": "error",
+      "error": "GroundingCoverageError('GROUNDING_FAILED:M1 critical actions not grounded into code markers: A3, A4')"
+    },
+    {
+      "vdev_id": "vdev_presence_comfort_mixed_01",
+      "name": "Hybrid Presence & Comfort Supervisor",
+      "target_path": "data/targets/vdev_benchmarks/vdev_presence_comfort_mixed_01.json",
+      "run_dir": "data/optimizer_runs/vdev_benchmarks/vdev_presence_comfort_mixed_01",
+      "status": "error",
+      "error": "GroundingCoverageError('GROUNDING_FAILED:M1 critical actions not grounded into code markers: A1, A2, A6')"
+    },
+    {
+      "vdev_id": "vdev_mixed_curtain_air_energy_01",
+      "name": "Curtain + Air + Energy Mixed Supervisor",
+      "target_path": "data/targets/vdev_benchmarks/vdev_mixed_curtain_air_energy_01.json",
+      "run_dir": "data/optimizer_runs/vdev_benchmarks/vdev_mixed_curtain_air_energy_01",
+      "strict_pass": 6,
+      "tolerant_pass": 6,
+      "counterexample_count": 0,
+      "batch_count": 7,
+      "parallel_groups": {
+        "batch_000": [
+          [
+            "A1"
+          ]
+        ],
+        "batch_001": [
+          [
+            "A2"
+          ]
+        ],
+        "batch_002": [
+          [
+            "A3"
+          ]
+        ],
+        "batch_003": [
+          [
+            "A4",
+            "A5"
+          ],
+          [
+            "A6"
+          ]
+        ],
+        "batch_004": [
+          [
+            "A7"
+          ]
+        ],
+        "batch_005": [
+          [
+            "A8"
+          ]
+        ],
+        "batch_006": [
+          [
+            "A9"
+          ]
+        ]
+      },
+      "batching_buckets": {
+        "batch_000": [],
+        "batch_001": [],
+        "batch_002": [],
+        "batch_003": [
+          {
+            "bucket": "tuya|cloud_lane",
+            "chunks": 2,
+            "group_key": "endpoint",
+            "max_batch_size": 2,
+            "max_wait_ms": 40,
+            "members": [
+              "A4",
+              "A5",
+              "A6"
+            ],
+            "rule_kind": "BATCH_GROUP",
+            "size": 3
+          }
+        ],
+        "batch_004": [],
+        "batch_005": [],
+        "batch_006": []
+      },
+      "triggered_fallbacks": [
+        {
+          "fallback": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A1",
+            "A2"
+          ]
+        },
+        {
+          "fallback": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:DATA_DEP"
+          },
+          "scope": [
+            "A4"
+          ]
+        },
+        {
+          "fallback": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:DATA_DEP"
+          },
+          "scope": [
+            "A6"
+          ]
+        },
+        {
+          "fallback": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:CONTROL_DEP"
+          },
+          "scope": [
+            "A6"
+          ]
+        },
+        {
+          "fallback": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:DATA_DEP"
+          },
+          "scope": [
+            "A5"
+          ]
+        }
+      ],
+      "unknown_protocol_actions": [],
+      "status": "ok"
+    },
+    {
+      "vdev_id": "vdev_cross_transport_hue_ble_tuya_01",
+      "name": "Hue–BLE–Tuya Cross-Transport Snapshot",
+      "target_path": "data/targets/vdev_benchmarks/vdev_cross_transport_hue_ble_tuya_01.json",
+      "run_dir": "data/optimizer_runs/vdev_benchmarks/vdev_cross_transport_hue_ble_tuya_01",
+      "status": "error",
+      "error": "GroundingCoverageError('GROUNDING_FAILED:M1 critical actions not grounded into code markers: A1, A3, A4, A8')"
+    },
+    {
+      "vdev_id": "vdev_monitoring_fabric_mqtt_ble_cloud_01",
+      "name": "MQTT + BLE + Cloud Monitoring Fabric",
+      "target_path": "data/targets/vdev_benchmarks/vdev_monitoring_fabric_mqtt_ble_cloud_01.json",
+      "run_dir": "data/optimizer_runs/vdev_benchmarks/vdev_monitoring_fabric_mqtt_ble_cloud_01",
+      "status": "error",
+      "error": "GroundingCoverageError('GROUNDING_FAILED:M1 critical actions not grounded into code markers: A1, A3, A4, A8')"
+    },
+    {
+      "vdev_id": "vdev_ble_congestion_stress_01",
+      "name": "BLE Congestion Stress vDev",
+      "target_path": "data/targets/vdev_benchmarks/vdev_ble_congestion_stress_01.json",
+      "run_dir": "data/optimizer_runs/vdev_benchmarks/vdev_ble_congestion_stress_01",
+      "status": "error",
+      "error": "GroundingCoverageError('GROUNDING_FAILED:M1 critical actions not grounded into code markers: A2, A4, A5, A6')"
+    },
+    {
+      "vdev_id": "vdev_cloud_burst_stress_01",
+      "name": "Cloud Burst Stress vDev",
+      "target_path": "data/targets/vdev_benchmarks/vdev_cloud_burst_stress_01.json",
+      "run_dir": "data/optimizer_runs/vdev_benchmarks/vdev_cloud_burst_stress_01",
+      "strict_pass": 6,
+      "tolerant_pass": 6,
+      "counterexample_count": 0,
+      "batch_count": 4,
+      "parallel_groups": {
+        "batch_000": [
+          [
+            "A1",
+            "A2"
+          ],
+          [
+            "A3",
+            "A4"
+          ]
+        ],
+        "batch_001": [
+          [
+            "A5",
+            "A6"
+          ],
+          [
+            "A7",
+            "A8"
+          ]
+        ],
+        "batch_002": [
+          [
+            "A9"
+          ]
+        ],
+        "batch_003": [
+          [
+            "A10"
+          ]
+        ]
+      },
+      "batching_buckets": {
+        "batch_000": [
+          {
+            "bucket": "tuya|cloud_burst",
+            "chunks": 2,
+            "group_key": "endpoint",
+            "max_batch_size": 2,
+            "max_wait_ms": 40,
+            "members": [
+              "A1",
+              "A2",
+              "A3",
+              "A4"
+            ],
+            "rule_kind": "BATCH_GROUP",
+            "size": 4
+          }
+        ],
+        "batch_001": [
+          {
+            "bucket": "tuya|cloud_burst",
+            "chunks": 2,
+            "group_key": "endpoint",
+            "max_batch_size": 2,
+            "max_wait_ms": 40,
+            "members": [
+              "A5",
+              "A6",
+              "A7",
+              "A8"
+            ],
+            "rule_kind": "BATCH_GROUP",
+            "size": 4
+          }
+        ],
+        "batch_002": [],
+        "batch_003": []
+      },
+      "triggered_fallbacks": [
+        {
+          "fallback": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:DATA_DEP"
+          },
+          "scope": [
+            "A7"
+          ]
+        },
+        {
+          "fallback": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:DATA_DEP"
+          },
+          "scope": [
+            "A3"
+          ]
+        },
+        {
+          "fallback": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:DATA_DEP"
+          },
+          "scope": [
+            "A5"
+          ]
+        },
+        {
+          "fallback": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:DATA_DEP"
+          },
+          "scope": [
+            "A8"
+          ]
+        },
+        {
+          "fallback": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:DATA_DEP"
+          },
+          "scope": [
+            "A1"
+          ]
+        },
+        {
+          "fallback": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:CONTROL_DEP"
+          },
+          "scope": [
+            "A1"
+          ]
+        },
+        {
+          "fallback": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:DATA_DEP"
+          },
+          "scope": [
+            "A4"
+          ]
+        },
+        {
+          "fallback": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:DATA_DEP"
+          },
+          "scope": [
+            "A2"
+          ]
+        }
+      ],
+      "unknown_protocol_actions": [],
+      "status": "ok"
+    }
+  ]
+}

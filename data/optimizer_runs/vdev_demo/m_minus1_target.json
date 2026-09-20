@@ -1,0 +1,230 @@
+{
+  "constraints": {
+    "optimization_knobs": {
+      "allow_concurrency": true,
+      "max_concurrency": {
+        "ble": 1,
+        "cloud": 4,
+        "total": 6
+      }
+    }
+  },
+  "critical_action_ids": [
+    "A1",
+    "A2",
+    "A3"
+  ],
+  "entrypoint": {
+    "kind": "ha_service",
+    "service": {
+      "domain": "vibeaura",
+      "name": "run"
+    }
+  },
+  "hard_dependencies": [
+    {
+      "after": "A3",
+      "before": "A1",
+      "reason": "write_depends_on_read"
+    },
+    {
+      "after": "A3",
+      "before": "A2",
+      "reason": "write_depends_on_api"
+    }
+  ],
+  "meta": {
+    "name": "Demo VDev",
+    "spec_version": "0.1",
+    "vdev_id": "vdev_demo_01"
+  },
+  "objectives": {
+    "metrics": {
+      "e2e_latency_ms": {
+        "p95": 1500
+      }
+    },
+    "primary": "minimize_tail_latency"
+  },
+  "soft_dependencies": [
+    {
+      "after": "A2",
+      "before": "A1",
+      "reason": "ble_and_cloud_overlap_risk"
+    }
+  ],
+  "source_scope": {
+    "commit": "HEAD",
+    "domains": [
+      "demo_ble",
+      "demo_cloud"
+    ],
+    "entrypoints": [
+      {
+        "kind": "ha_service",
+        "service": {
+          "domain": "vibeaura",
+          "name": "run"
+        }
+      }
+    ],
+    "file_bindings": [
+      {
+        "device_id": "ble:aa:bb:cc",
+        "file_path": "data/repo_snapshot/demo_integration.py",
+        "integration": "demo_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:device.control",
+        "file_path": "data/repo_snapshot/demo_cloud_integration.py",
+        "integration": "demo_cloud",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      }
+    ],
+    "files": [
+      "data/repo_snapshot/demo_integration.py",
+      "data/repo_snapshot/demo_cloud_integration.py"
+    ],
+    "platforms": [
+      "sensor",
+      "switch"
+    ],
+    "repo_path": "data/repo_snapshot"
+  },
+  "target_anchors": {
+    "anchor_ops": [
+      "BLE_OP",
+      "CLOUD_OP",
+      "STATE_WRITE"
+    ],
+    "characteristics": [],
+    "device_ids": [
+      "ble:aa:bb:cc"
+    ],
+    "endpoints": [
+      "tuya:device.control"
+    ],
+    "entities": [
+      "sensor.vdev_x"
+    ],
+    "service_entrypoints": [
+      "vibeaura.run"
+    ]
+  },
+  "validation": {
+    "differential_tests": {
+      "enabled": true,
+      "runs_per_scenario": 2,
+      "scenarios": [
+        "baseline_happy_path",
+        "fault_cloud_429",
+        "fault_ble_disconnect"
+      ]
+    },
+    "fault_model": {
+      "ble_disconnect": true,
+      "cloud_429": true,
+      "network_jitter": true
+    },
+    "observation": {
+      "canonicalization_version": "v1",
+      "equivalence_whitelist": [
+        "COALESCE_STATE_WRITE"
+      ],
+      "semantic_ops": [
+        "ENTRY_SETUP",
+        "COORD_REFRESH",
+        "STATE_WRITE",
+        "SUBSCRIBE",
+        "UNSUBSCRIBE"
+      ]
+    },
+    "profile_version": "ha_profile_default",
+    "sampling": {}
+  },
+  "vdev_actions": [
+    {
+      "action_id": "A1",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:aa:bb:cc"
+        },
+        "domain": "ble_proxy",
+        "kind": "ha_service_call",
+        "service": "read"
+      },
+      "marker_hints": [
+        "BLE_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "id": "ble:aa:bb:cc",
+        "kind": "ble_device"
+      },
+      "type": "read"
+    },
+    {
+      "action_id": "A2",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:device.control"
+        },
+        "domain": "tuya",
+        "kind": "ha_service_call",
+        "service": "call_api"
+      },
+      "marker_hints": [
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "side_effects": [],
+      "target": {
+        "id": "tuya:device.control",
+        "kind": "cloud_endpoint"
+      },
+      "type": "call_api"
+    },
+    {
+      "action_id": "A3",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "entity_id": "sensor.vdev_x"
+        },
+        "domain": "homeassistant",
+        "kind": "ha_service_call",
+        "service": "update_entity"
+      },
+      "marker_hints": [
+        "STATE_WRITE",
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "protocol": "HA",
+      "side_effects": [
+        "state_write"
+      ],
+      "target": {
+        "entity_id": "sensor.vdev_x",
+        "id": "sensor.vdev_x",
+        "kind": "ha_entity"
+      },
+      "type": "write"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "access_token": "REDACTED_ACCESS_TOKEN",
+  "token_type": "Bearer",
+  "expires_in": 3599,
+  "refresh_token": "REDACTED_REFRESH_TOKEN",
+  "scope": "smartWrite"
+}

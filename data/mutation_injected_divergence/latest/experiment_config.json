@@ -1,0 +1,16 @@
+{
+  "false_positive_definition": "accepted without rejection or counterexample before rollback repair",
+  "manifest": "data/independent_device_state_audit/latest/sampling_manifest.csv",
+  "mode": "synthetic_mutation_replay",
+  "mutation_targets": {
+    "M1_dependent_action_swap": 20,
+    "M2_premature_state_writeback": 20,
+    "M3_missing_refresh_status_query": 20,
+    "M4_ble_serialization_violation": 12,
+    "M5_cloud_rate_session_violation": 18,
+    "M6_wrong_batching_writeback_merge": 20,
+    "M7_same_device_ordering_violation": 20,
+    "M8_cleanup_lifecycle_violation": 20
+  },
+  "rollback_repair": "not attempted; this script measures initial validation detection only"
+}

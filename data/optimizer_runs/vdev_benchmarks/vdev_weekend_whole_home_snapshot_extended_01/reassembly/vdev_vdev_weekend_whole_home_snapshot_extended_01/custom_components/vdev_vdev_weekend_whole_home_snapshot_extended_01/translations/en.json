@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_weekend_whole_home_snapshot_extended_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Weekend Whole-Home Snapshot Extended"
+}

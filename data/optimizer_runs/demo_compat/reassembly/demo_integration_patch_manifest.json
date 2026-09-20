@@ -1,0 +1,16 @@
+{
+  "injection_points": {
+    "runtime": 29,
+    "setup": 4,
+    "teardown": 14
+  },
+  "msf_ids": [
+    "msf00_000_coord_refresh",
+    "msf00_001_entry_setup",
+    "msf00_002_coord_refresh",
+    "msf00_003_state_write"
+  ],
+  "note": "MVP emits sidecar wrapper and patch manifest; source file remains unchanged.",
+  "source_path": "data/repo_snapshot/demo_integration.py",
+  "wrapper_module": "data/optimizer_runs/demo_compat/reassembly/demo_integration_vibeaura_wrapper.py"
+}

@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_tuya_cloud_fleet_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Tuya Cloud Fleet Snapshot"
+}

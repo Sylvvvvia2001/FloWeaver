@@ -1,0 +1,193 @@
+{
+  "integration": "mqtt",
+  "runtime_families": [
+    {
+      "action_kind": "read_last_message",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "mqtt:weather_station_home",
+          "weather_station_home"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "subscribe",
+          "read",
+          "read_last_message"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "client",
+          "collections",
+          "const",
+          "dataclasses",
+          "functools"
+        ],
+        "boost_if_names": [
+          "read_last_message",
+          "async_prepare_subscribe_topics",
+          "resubscribe_if_necessary"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "MQTT_SUBSCRIBE",
+      "file_globs": [
+        "mqtt/subscription.py"
+      ],
+      "forbidden_context": [
+        "setup_function",
+        "dunder_init"
+      ],
+      "forbidden_path_signals": [
+        "control_function:async_turn_on",
+        "control_function:async_turn_off",
+        "control_function:async_open_cover",
+        "control_function:async_close_cover",
+        "control_function:async_set_cover_position",
+        "control_function:set_state",
+        "setup_function:async_setup_entry",
+        "state_accessor_property:state"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "async_prepare_subscribe_topics",
+        "resubscribe_if_necessary"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A22"
+      ],
+      "integration": "mqtt",
+      "negative_call_patterns": [
+        "_async_send_commands",
+        "_async_send_wrapper_updates",
+        "async_turn_on",
+        "async_turn_off",
+        "async_open_*",
+        "async_close_*"
+      ],
+      "negative_evidence": [
+        "negative_family_constraint:exclude_control_path_for_read_semantics"
+      ],
+      "negative_function_patterns": [
+        "async_turn_on",
+        "async_turn_off",
+        "async_set_*",
+        "async_open_*",
+        "async_close_*",
+        "async_stop_*"
+      ],
+      "negative_prototypes": [],
+      "origin_action_id": "A22",
+      "origin_cluster_id": "mqtt__subscription__mqtt_subscribe__read_last_message__local",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/mqtt/subscription.py",
+          "function_name": "async_prepare_subscribe_topics",
+          "path_kind": "subscription_path",
+          "path_signals": [
+            "subscription_function:async_prepare_subscribe_topics",
+            "subscription_call:requested.resubscribe_if_necessary",
+            "subscription_call:remaining.unsubscribe_callback"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_subscribe",
+          "score": 7,
+          "snippet": "86: @callback\n87: def async_prepare_subscribe_topics(\n88:     hass: HomeAssistant,\n89:     sub_state: dict[str, EntitySubscription] | None,\n90:     topics: dict[str, dict[str, Any]],\n91: ) -> dict[str, EntitySubscription]:\n92:     \"\"\"Prepare (re)subscribe to a set of MQTT topics.\n93: \n94:     State is kept in sub_state and a dictionary mapping from the subscription\n95:     key to the subscription state.\n96: \n97:     After this function has been called, async_subscribe_topics must be called to\n98:     finalize any new subscriptions.\n99:"
+        },
+        {
+          "call_chains": [
+            "debug_info.add_subscription",
+            "self._should_resubscribe",
+            "other.unsubscribe_callback",
+            "debug_info.remove_subscription",
+            "str"
+          ],
+          "call_patterns": [
+            "add_subscription",
+            "_should_resubscribe",
+            "unsubscribe_callback",
+            "remove_subscription",
+            "str"
+          ],
+          "file_path": "data/repo_snapshot/mqtt/subscription.py",
+          "function_name": "resubscribe_if_necessary",
+          "path_kind": "subscription_path",
+          "path_signals": [
+            "subscription_function:resubscribe_if_necessary",
+            "subscription_call:self._should_resubscribe",
+            "subscription_call:other.unsubscribe_callback"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_subscribe",
+          "score": 7,
+          "snippet": "31: \n32:     def resubscribe_if_necessary(\n33:         self, hass: HomeAssistant, other: EntitySubscription | None\n34:     ) -> None:\n35:         \"\"\"Re-subscribe to the new topic if necessary.\"\"\"\n36:         if not self._should_resubscribe(other):\n37:             if TYPE_CHECKING:\n38:                 assert other\n39:             self.unsubscribe_callback = other.unsubscribe_callback\n40:             return\n41: \n42:         if other is not None and other.unsubscribe_callback is not None:\n43:             other.unsubscribe_callback()\n44:             # Clear debug data if it exists"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read",
+        "runtime_subscribe"
+      ],
+      "required_context": [
+        "runtime_path",
+        "subscription_path"
+      ],
+      "required_path_signals": [
+        "subscription_function:async_prepare_subscribe_topics",
+        "subscription_call:requested.resubscribe_if_necessary",
+        "subscription_call:remaining.unsubscribe_callback",
+        "subscription_function:resubscribe_if_necessary",
+        "subscription_call:self._should_resubscribe",
+        "subscription_call:other.unsubscribe_callback"
+      ],
+      "required_runtime_roles": [
+        "runtime_read",
+        "runtime_subscribe"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "mqtt:subscription_runtime_subscribe",
+      "runtime_archetypes": [
+        "mqtt_message_read",
+        "subscription_listener"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:async_prepare_subscribe_topics",
+        "runtime_function:resubscribe_if_necessary",
+        "runtime_call:add_subscription",
+        "runtime_call:_should_resubscribe",
+        "runtime_call:unsubscribe_callback",
+        "runtime_call:remove_subscription",
+        "runtime_call:str",
+        "runtime_call:debug_info.add_subscription",
+        "runtime_call:self._should_resubscribe",
+        "runtime_call:other.unsubscribe_callback"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/mqtt/subscription.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A22"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+      "why_not_setup": [
+        "exclude_control_path_for_read_like_action"
+      ]
+    }
+  ],
+  "schema_version": "m1_grounding_profile/v3",
+  "version": "draft_llm_v3"
+}

@@ -1,0 +1,94 @@
+{
+  "accepted_corridors": [
+    {
+      "action_ids": [
+        "A9",
+        "A10",
+        "A12",
+        "A11",
+        "A13",
+        "A14",
+        "A15"
+      ],
+      "batch_ids": [
+        "batch_008",
+        "batch_009",
+        "batch_010",
+        "batch_011"
+      ],
+      "corridor_id": "corridor_00",
+      "latency_saved_ms": 249,
+      "source": "API",
+      "validation_passed": true
+    },
+    {
+      "action_ids": [
+        "A19",
+        "A20",
+        "A21"
+      ],
+      "batch_ids": [
+        "batch_013",
+        "batch_014",
+        "batch_015"
+      ],
+      "corridor_id": "corridor_01",
+      "latency_saved_ms": 50,
+      "source": "API",
+      "validation_passed": true
+    },
+    {
+      "action_ids": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8"
+      ],
+      "batch_ids": [
+        "batch_000",
+        "batch_001",
+        "batch_002",
+        "batch_003",
+        "batch_004",
+        "batch_005",
+        "batch_006",
+        "batch_007"
+      ],
+      "corridor_id": "corridor_00",
+      "latency_saved_ms": 654,
+      "source": "BLE",
+      "validation_passed": true
+    }
+  ],
+  "api_added_savings_ms": 299,
+  "ble_added_savings_ms": 654,
+  "case_name": "Vacation-Mode House Sweep",
+  "combined_added_savings_ms": 953,
+  "combined_added_savings_ratio": 0.109919261822376,
+  "combined_refined_estimated_latency_ms": 7717,
+  "conflict_count": 0,
+  "group": "Whole-Home Survey and Audit Routines",
+  "original_estimated_latency_ms": 8670,
+  "rejected_corridors": [],
+  "target_path": "data/targets/vdev_benchmarks/vdev_vacation_mode_house_sweep_01.json",
+  "validation": {
+    "api_constraints_ok": true,
+    "batch_order_preserved": true,
+    "ble_constraints_ok": true,
+    "component_validations_ok": true,
+    "conflict_free": true,
+    "contiguous_coverage_ok": true,
+    "event_loop_constraints_ok": true,
+    "passed": true,
+    "projection_ok": true,
+    "reasons": [],
+    "savings_consistency_ok": true,
+    "simulated_event_count": 100,
+    "simulated_total_ms": 7717
+  },
+  "vdev_id": "vdev_vacation_mode_house_sweep_01"
+}

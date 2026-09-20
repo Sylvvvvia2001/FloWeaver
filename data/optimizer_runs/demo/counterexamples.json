@@ -1,0 +1,386 @@
+[
+  {
+    "counterexample_id": "cex_4547031c61",
+    "culprit_ids": [
+      "RUNTIME:HA:CLOUD_OP:tuya:device.control",
+      "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+      "SETUP:HA:SUBSCRIBE:async_setup_entry:9"
+    ],
+    "diff_summary": {
+      "hunks": [
+        {
+          "anchor": "RUNTIME:HA:CLOUD_OP:tuya:device.control",
+          "baseline_ops": [
+            "RUNTIME:HA:CLOUD_OP:tuya:device.control",
+            "RUNTIME:HA:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:HA:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:HA:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27",
+            "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+            "SETUP:HA:CLOUD_OP:tuya:device.control"
+          ],
+          "optimized_ops": [
+            "RUNTIME:BLE:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:BLE:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:BLE:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:CLOUD:CLOUD_OP:tuya:device.control",
+            "SETUP:CLOUD:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:CLOUD:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:CLOUD:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:CLOUD:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:CLOUD:CLOUD_OP:tuya:device.control"
+          ],
+          "severity": "MEDIUM"
+        },
+        {
+          "anchor": "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+          "baseline_ops": [
+            "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+            "SETUP:HA:COORD_REFRESH:async_setup_entry:6"
+          ],
+          "optimized_ops": [],
+          "severity": "MEDIUM"
+        },
+        {
+          "anchor": "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+          "baseline_ops": [
+            "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+            "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:11",
+            "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:15",
+            "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+            "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18",
+            "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18"
+          ],
+          "optimized_ops": [],
+          "severity": "MEDIUM"
+        }
+      ]
+    },
+    "scenario_id": "baseline_happy_path__run0",
+    "violated_assertion": "observable_semantic_equivalence"
+  },
+  {
+    "counterexample_id": "cex_4630afca11",
+    "culprit_ids": [
+      "RUNTIME:HA:CLOUD_OP:tuya:device.control",
+      "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+      "SETUP:HA:SUBSCRIBE:async_setup_entry:9"
+    ],
+    "diff_summary": {
+      "hunks": [
+        {
+          "anchor": "RUNTIME:HA:CLOUD_OP:tuya:device.control",
+          "baseline_ops": [
+            "RUNTIME:HA:CLOUD_OP:tuya:device.control",
+            "RUNTIME:HA:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:HA:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:HA:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27",
+            "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+            "SETUP:HA:CLOUD_OP:tuya:device.control"
+          ],
+          "optimized_ops": [
+            "RUNTIME:BLE:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:BLE:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:BLE:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:CLOUD:CLOUD_OP:tuya:device.control",
+            "SETUP:CLOUD:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:CLOUD:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:CLOUD:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:CLOUD:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:CLOUD:CLOUD_OP:tuya:device.control"
+          ],
+          "severity": "MEDIUM"
+        },
+        {
+          "anchor": "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+          "baseline_ops": [
+            "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+            "SETUP:HA:COORD_REFRESH:async_setup_entry:6"
+          ],
+          "optimized_ops": [],
+          "severity": "MEDIUM"
+        },
+        {
+          "anchor": "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+          "baseline_ops": [
+            "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+            "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:11",
+            "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:15",
+            "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+            "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18",
+            "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18"
+          ],
+          "optimized_ops": [],
+          "severity": "MEDIUM"
+        }
+      ]
+    },
+    "scenario_id": "baseline_happy_path__run1",
+    "violated_assertion": "observable_semantic_equivalence"
+  },
+  {
+    "counterexample_id": "cex_5abb102efe",
+    "culprit_ids": [
+      "RUNTIME:HA:CLOUD_OP:tuya:device.control",
+      "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+      "SETUP:HA:SUBSCRIBE:async_setup_entry:9"
+    ],
+    "diff_summary": {
+      "hunks": [
+        {
+          "anchor": "RUNTIME:HA:CLOUD_OP:tuya:device.control",
+          "baseline_ops": [
+            "RUNTIME:HA:CLOUD_OP:tuya:device.control",
+            "RUNTIME:HA:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:HA:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:HA:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27",
+            "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+            "SETUP:HA:CLOUD_OP:tuya:device.control"
+          ],
+          "optimized_ops": [
+            "RUNTIME:BLE:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:BLE:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:BLE:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:CLOUD:CLOUD_OP:tuya:device.control",
+            "SETUP:CLOUD:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:CLOUD:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:CLOUD:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:CLOUD:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:CLOUD:CLOUD_OP:tuya:device.control"
+          ],
+          "severity": "MEDIUM"
+        },
+        {
+          "anchor": "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+          "baseline_ops": [
+            "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+            "SETUP:HA:COORD_REFRESH:async_setup_entry:6"
+          ],
+          "optimized_ops": [],
+          "severity": "MEDIUM"
+        },
+        {
+          "anchor": "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+          "baseline_ops": [
+            "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+            "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:11",
+            "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:15",
+            "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+            "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18",
+            "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18"
+          ],
+          "optimized_ops": [],
+          "severity": "MEDIUM"
+        }
+      ]
+    },
+    "scenario_id": "fault_cloud_429__run0",
+    "violated_assertion": "observable_semantic_equivalence"
+  },
+  {
+    "counterexample_id": "cex_bc737d8e9f",
+    "culprit_ids": [
+      "RUNTIME:HA:CLOUD_OP:tuya:device.control",
+      "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+      "SETUP:HA:SUBSCRIBE:async_setup_entry:9"
+    ],
+    "diff_summary": {
+      "hunks": [
+        {
+          "anchor": "RUNTIME:HA:CLOUD_OP:tuya:device.control",
+          "baseline_ops": [
+            "RUNTIME:HA:CLOUD_OP:tuya:device.control",
+            "RUNTIME:HA:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:HA:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:HA:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27",
+            "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+            "SETUP:HA:CLOUD_OP:tuya:device.control"
+          ],
+          "optimized_ops": [
+            "RUNTIME:BLE:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:BLE:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:BLE:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:CLOUD:CLOUD_OP:tuya:device.control",
+            "SETUP:CLOUD:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:CLOUD:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:CLOUD:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:CLOUD:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:CLOUD:CLOUD_OP:tuya:device.control"
+          ],
+          "severity": "MEDIUM"
+        },
+        {
+          "anchor": "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+          "baseline_ops": [
+            "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+            "SETUP:HA:COORD_REFRESH:async_setup_entry:6"
+          ],
+          "optimized_ops": [],
+          "severity": "MEDIUM"
+        },
+        {
+          "anchor": "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+          "baseline_ops": [
+            "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+            "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:11",
+            "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:15",
+            "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+            "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18",
+            "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18"
+          ],
+          "optimized_ops": [],
+          "severity": "MEDIUM"
+        }
+      ]
+    },
+    "scenario_id": "fault_cloud_429__run1",
+    "violated_assertion": "observable_semantic_equivalence"
+  },
+  {
+    "counterexample_id": "cex_6a72fe2431",
+    "culprit_ids": [
+      "RUNTIME:HA:CLOUD_OP:tuya:device.control",
+      "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+      "SETUP:HA:SUBSCRIBE:async_setup_entry:9"
+    ],
+    "diff_summary": {
+      "hunks": [
+        {
+          "anchor": "RUNTIME:HA:CLOUD_OP:tuya:device.control",
+          "baseline_ops": [
+            "RUNTIME:HA:CLOUD_OP:tuya:device.control",
+            "RUNTIME:HA:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:HA:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:HA:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27",
+            "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+            "SETUP:HA:CLOUD_OP:tuya:device.control"
+          ],
+          "optimized_ops": [
+            "RUNTIME:BLE:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:BLE:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:BLE:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:CLOUD:CLOUD_OP:tuya:device.control",
+            "SETUP:CLOUD:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:CLOUD:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:CLOUD:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:CLOUD:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:CLOUD:CLOUD_OP:tuya:device.control"
+          ],
+          "severity": "MEDIUM"
+        },
+        {
+          "anchor": "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+          "baseline_ops": [
+            "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+            "SETUP:HA:COORD_REFRESH:async_setup_entry:6"
+          ],
+          "optimized_ops": [],
+          "severity": "MEDIUM"
+        },
+        {
+          "anchor": "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+          "baseline_ops": [
+            "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+            "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:11",
+            "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:15",
+            "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+            "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18",
+            "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18"
+          ],
+          "optimized_ops": [],
+          "severity": "MEDIUM"
+        }
+      ]
+    },
+    "scenario_id": "fault_ble_disconnect__run0",
+    "violated_assertion": "observable_semantic_equivalence"
+  },
+  {
+    "counterexample_id": "cex_eda8c6574d",
+    "culprit_ids": [
+      "RUNTIME:HA:CLOUD_OP:tuya:device.control",
+      "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+      "SETUP:HA:SUBSCRIBE:async_setup_entry:9"
+    ],
+    "diff_summary": {
+      "hunks": [
+        {
+          "anchor": "RUNTIME:HA:CLOUD_OP:tuya:device.control",
+          "baseline_ops": [
+            "RUNTIME:HA:CLOUD_OP:tuya:device.control",
+            "RUNTIME:HA:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:HA:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:HA:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27",
+            "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+            "SETUP:HA:CLOUD_OP:tuya:device.control"
+          ],
+          "optimized_ops": [
+            "RUNTIME:BLE:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:BLE:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:BLE:BLE_OP:ble:aa:bb:cc",
+            "RUNTIME:CLOUD:CLOUD_OP:tuya:device.control",
+            "SETUP:CLOUD:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:CLOUD:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:CLOUD:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:CLOUD:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:CLOUD:CLOUD_OP:tuya:device.control"
+          ],
+          "severity": "MEDIUM"
+        },
+        {
+          "anchor": "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+          "baseline_ops": [
+            "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+            "SETUP:HA:COORD_REFRESH:async_setup_entry:6"
+          ],
+          "optimized_ops": [],
+          "severity": "MEDIUM"
+        },
+        {
+          "anchor": "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+          "baseline_ops": [
+            "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+            "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:11",
+            "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:15",
+            "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+            "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+            "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18",
+            "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18"
+          ],
+          "optimized_ops": [],
+          "severity": "MEDIUM"
+        }
+      ]
+    },
+    "scenario_id": "fault_ble_disconnect__run1",
+    "violated_assertion": "observable_semantic_equivalence"
+  }
+]

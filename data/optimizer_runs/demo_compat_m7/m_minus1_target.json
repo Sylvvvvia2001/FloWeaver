@@ -1,0 +1,85 @@
+{
+  "constraints": {
+    "optimization_knobs": {
+      "allow_concurrency": true
+    }
+  },
+  "critical_action_ids": [
+    "A0"
+  ],
+  "entrypoint": {
+    "kind": "function",
+    "name": "async_setup_entry"
+  },
+  "hard_dependencies": [],
+  "meta": {
+    "name": "Fallback VDev",
+    "spec_version": "fallback",
+    "vdev_id": "fallback_vdev"
+  },
+  "objectives": {
+    "name": "Fallback VDev",
+    "primary": "minimize_tail_latency"
+  },
+  "soft_dependencies": [],
+  "source_scope": {
+    "commit": "HEAD",
+    "domains": [
+      "demo"
+    ],
+    "entrypoints": [
+      {
+        "kind": "function",
+        "name": "async_setup_entry"
+      }
+    ],
+    "files": [
+      "data/repo_snapshot/demo_integration.py"
+    ],
+    "platforms": [],
+    "repo_path": "data/repo_snapshot"
+  },
+  "target_anchors": {
+    "anchor_ops": [
+      "STATE_WRITE",
+      "COORD_REFRESH"
+    ],
+    "characteristics": [],
+    "device_ids": [],
+    "endpoints": [],
+    "entities": [
+      "sensor.vdev_fallback"
+    ],
+    "service_entrypoints": []
+  },
+  "validation": {
+    "differential_tests": {
+      "enabled": true
+    }
+  },
+  "vdev_actions": [
+    {
+      "action_id": "A0",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "entity_id": "sensor.vdev_fallback"
+        },
+        "domain": "homeassistant",
+        "kind": "ha_service_call",
+        "service": "update_entity"
+      },
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "protocol": "HA",
+      "target": {
+        "entity_id": "sensor.vdev_fallback",
+        "id": "sensor.vdev_fallback",
+        "kind": "ha_entity"
+      },
+      "type": "write"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "codeowners": [],
+  "dependencies": [],
+  "documentation": "https://example.invalid/vibeaura/vdev",
+  "domain": "vdev_vdev_demo_01",
+  "integration_type": "service",
+  "iot_class": "local_polling",
+  "name": "Demo VDev",
+  "requirements": [],
+  "version": "0.1.0"
+}

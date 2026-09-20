@@ -1,0 +1,4048 @@
+{
+  "meta": {
+    "action_lanes": {
+      "A1": "BLE_LOCAL",
+      "A10": "CLOUD",
+      "A11": "CLOUD",
+      "A12": "CLOUD",
+      "A13": "CLOUD",
+      "A14": "CLOUD",
+      "A15": "CLOUD",
+      "A16": "CLOUD",
+      "A17": "CLOUD",
+      "A18": "CLOUD",
+      "A19": "CLOUD",
+      "A2": "BLE_LOCAL",
+      "A20": "LOCAL",
+      "A21": "LOCAL",
+      "A22": "LOCAL",
+      "A23": "WRITEBACK_BLE",
+      "A24": "WRITEBACK_CLOUD",
+      "A25": "WRITEBACK_LOCAL",
+      "A26": "WRITEBACK_OVERALL",
+      "A3": "BLE_LOCAL",
+      "A4": "BLE_LOCAL",
+      "A5": "BLE_LOCAL",
+      "A6": "BLE_LOCAL",
+      "A7": "CLOUD",
+      "A8": "CLOUD",
+      "A9": "CLOUD"
+    },
+    "action_phase": {
+      "A1": "control",
+      "A10": "post_control_verification",
+      "A11": "post_control_verification",
+      "A12": "post_control_verification",
+      "A13": "post_control_verification",
+      "A14": "post_control_verification",
+      "A15": "post_control_verification",
+      "A16": "post_control_verification",
+      "A17": "post_control_verification",
+      "A18": "post_control_verification",
+      "A19": "post_control_verification",
+      "A2": "control",
+      "A20": "post_control_verification",
+      "A21": "post_control_verification",
+      "A22": "post_control_verification",
+      "A23": "writeback",
+      "A24": "writeback",
+      "A25": "writeback",
+      "A26": "writeback",
+      "A3": "control",
+      "A4": "control",
+      "A5": "post_control_verification",
+      "A6": "post_control_verification",
+      "A7": "post_control_verification",
+      "A8": "post_control_verification",
+      "A9": "post_control_verification"
+    },
+    "action_to_msfs": {
+      "A1": [
+        "msf04_000_ble_op",
+        "msf04_012_ble_op",
+        "msf04_013_ble_op"
+      ],
+      "A10": [
+        "msf10_001_cloud_op",
+        "msf10_002_cloud_op",
+        "msf10_003_cloud_op"
+      ],
+      "A11": [
+        "msf07_000_cloud_op",
+        "msf07_001_cloud_op"
+      ],
+      "A12": [
+        "msf07_008_cloud_op",
+        "msf07_009_cloud_op"
+      ],
+      "A13": [
+        "msf09_000_cloud_op",
+        "msf09_001_cloud_op"
+      ],
+      "A14": [
+        "msf10_005_cloud_status_call"
+      ],
+      "A15": [
+        "msf10_005_cloud_status_call"
+      ],
+      "A16": [
+        "msf10_005_cloud_status_call"
+      ],
+      "A17": [
+        "msf10_005_cloud_status_call"
+      ],
+      "A18": [
+        "msf07_007_cloud_status_call"
+      ],
+      "A19": [
+        "msf00_005_cloud_status_call"
+      ],
+      "A2": [
+        "msf04_012_ble_op",
+        "msf04_013_ble_op"
+      ],
+      "A20": [
+        "msf02_000_local_api_read"
+      ],
+      "A21": [
+        "msf06_005_local_api_read"
+      ],
+      "A22": [
+        "msf03_000_mqtt_subscribe",
+        "msf03_001_mqtt_subscribe"
+      ],
+      "A23": [
+        "msf05_000_state_write"
+      ],
+      "A24": [
+        "msf08_000_state_write"
+      ],
+      "A25": [
+        "msf06_000_state_write"
+      ],
+      "A26": [
+        "msf01_000_state_write"
+      ],
+      "A3": [
+        "msf04_012_ble_op",
+        "msf04_013_ble_op"
+      ],
+      "A4": [
+        "msf04_012_ble_op",
+        "msf04_013_ble_op"
+      ],
+      "A5": [
+        "msf11_000_ble_op"
+      ],
+      "A6": [
+        "msf12_000_ble_op"
+      ],
+      "A7": [
+        "msf10_006_cloud_op",
+        "msf10_007_cloud_op",
+        "msf10_008_cloud_op",
+        "msf10_009_cloud_op",
+        "msf10_010_cloud_op",
+        "msf10_011_cloud_op",
+        "msf10_012_cloud_op"
+      ],
+      "A8": [
+        "msf10_006_cloud_op",
+        "msf10_007_cloud_op",
+        "msf10_008_cloud_op",
+        "msf10_009_cloud_op",
+        "msf10_010_cloud_op",
+        "msf10_011_cloud_op",
+        "msf10_012_cloud_op"
+      ],
+      "A9": [
+        "msf10_006_cloud_op",
+        "msf10_007_cloud_op",
+        "msf10_008_cloud_op",
+        "msf10_009_cloud_op",
+        "msf10_010_cloud_op",
+        "msf10_011_cloud_op",
+        "msf10_012_cloud_op"
+      ]
+    },
+    "ble_micro_refinement": {
+      "corridors": [
+        {
+          "action_ids": [
+            "A1",
+            "A2",
+            "A3",
+            "A4"
+          ],
+          "batch_ids": [
+            "batch_000",
+            "batch_001",
+            "batch_002",
+            "batch_003"
+          ],
+          "corridor_id": "corridor_00",
+          "latency_saved_ms": 342,
+          "original_latency_ms": 3800,
+          "overlap_candidate_pairs": 3,
+          "profile_class": "control_like",
+          "refined_latency_ms": 3458,
+          "validation_passed": true
+        },
+        {
+          "action_ids": [
+            "A5",
+            "A6"
+          ],
+          "batch_ids": [
+            "batch_004",
+            "batch_005"
+          ],
+          "corridor_id": "corridor_01",
+          "latency_saved_ms": 90,
+          "original_latency_ms": 1500,
+          "overlap_candidate_pairs": 1,
+          "profile_class": "read_like",
+          "refined_latency_ms": 1410,
+          "validation_passed": true
+        }
+      ],
+      "enabled": true,
+      "micro_phases": [
+        "PREPARE_ADV_SIDE",
+        "PREPARE_CONNECT_SIDE",
+        "BLE_XFER",
+        "BLE_SETTLE"
+      ],
+      "policy": {
+        "allow_adv_prepare_during_connect_capabilities": [
+          "adv_anchor_safe"
+        ],
+        "allow_adv_prepare_during_connect_for_sources": [
+          "switchbot",
+          "xiaomi_ble"
+        ],
+        "allow_adv_prepare_overlap": true,
+        "allow_connect_prepare_overlap": false,
+        "allow_same_device_adv_overlap": false,
+        "allow_same_session_adv_overlap": false,
+        "allow_subscribe_like_adv_overlap": false,
+        "allow_subscribe_like_adv_overlap_capabilities": [
+          "subscribe_adv_overlap_safe"
+        ],
+        "allow_subscribe_like_adv_overlap_sources": [
+          "esphome"
+        ],
+        "allow_unknown_source_adv_overlap": false,
+        "assume_connectable_controller_available": true,
+        "assume_shared_scanner_available": true,
+        "connectable_slot_limit": 1,
+        "control_like_min_corridor_latency_ms": 1800,
+        "control_like_min_corridor_length": 3,
+        "current_xfer_slot_cost": 1,
+        "enforce_connection_slot_guard": true,
+        "generic_min_corridor_latency_ms": 1800,
+        "generic_min_corridor_length": 3,
+        "kind_capability_overrides": {
+          "connect": [
+            "session_chain_ble_op"
+          ],
+          "read_sensor": [
+            "read_like_ble_op"
+          ],
+          "read_status": [
+            "read_like_ble_op"
+          ],
+          "refresh_cover": [
+            "read_like_ble_op"
+          ],
+          "set_cover_position": [
+            "control_like_ble_op"
+          ],
+          "set_percentage": [
+            "control_like_ble_op"
+          ],
+          "subscribe": [
+            "session_chain_ble_op"
+          ],
+          "turn_off": [
+            "control_like_ble_op"
+          ],
+          "turn_on": [
+            "control_like_ble_op"
+          ]
+        },
+        "max_lookahead_actions": 1,
+        "min_corridor_latency_ms": 1800,
+        "min_corridor_length": 3,
+        "next_connect_prepare_slot_cost": 1,
+        "prepare_adv_timeout_ms": 120,
+        "prepare_connect_timeout_ms": 180,
+        "prepare_must_be_side_effect_free": true,
+        "read_like_min_corridor_latency_ms": 1200,
+        "read_like_min_corridor_length": 2,
+        "require_connectable_controller_for_connect_prep": true,
+        "require_shared_scanner": true,
+        "require_source_resolution_for_adv_overlap": true,
+        "session_chain_min_corridor_latency_ms": 1400,
+        "session_chain_min_corridor_length": 2,
+        "source_capability_overrides": {
+          "esphome": [
+            "subscribe_adv_overlap_safe"
+          ],
+          "switchbot": [
+            "adv_anchor_safe"
+          ],
+          "xiaomi_ble": [
+            "adv_anchor_safe"
+          ]
+        }
+      },
+      "strategy": "ha_conservative_adv_prepare_overlap"
+    },
+    "critical_boost": {
+      "A1": 1,
+      "A10": 1,
+      "A11": 1,
+      "A12": 1,
+      "A13": 1,
+      "A14": 1,
+      "A15": 1,
+      "A16": 1,
+      "A17": 1,
+      "A18": 1,
+      "A19": 1,
+      "A2": 1,
+      "A20": 1,
+      "A21": 1,
+      "A22": 1,
+      "A23": 1,
+      "A24": 1,
+      "A25": 1,
+      "A26": 1,
+      "A3": 1,
+      "A4": 1,
+      "A5": 1,
+      "A6": 1,
+      "A7": 1,
+      "A8": 1,
+      "A9": 1
+    },
+    "critical_score": {
+      "A1": 3.0,
+      "A10": 4.0,
+      "A11": 4.0,
+      "A12": 4.0,
+      "A13": 3.0,
+      "A14": 3.0,
+      "A15": 3.0,
+      "A16": 3.0,
+      "A17": 3.0,
+      "A18": 3.0,
+      "A19": 3.0,
+      "A2": 3.0,
+      "A20": 3.0,
+      "A21": 3.0,
+      "A22": 3.0,
+      "A23": 2.0,
+      "A24": 2.0,
+      "A25": 2.0,
+      "A26": 1.0,
+      "A3": 3.0,
+      "A4": 3.0,
+      "A5": 3.0,
+      "A6": 3.0,
+      "A7": 4.0,
+      "A8": 4.0,
+      "A9": 4.0
+    },
+    "cycle_report": [],
+    "cycle_resolution": [],
+    "derived_policy": {
+      "ble_limit": 1,
+      "budget_rules": [],
+      "cloud_limit": 4,
+      "latency_budget_ms": 4300,
+      "local_limit": 6,
+      "max_qps": 5.0,
+      "rate_limit_burst": 10,
+      "rate_limit_window_ms": 1000,
+      "reuse_enabled": true,
+      "reuse_window_ms": 20000,
+      "total_limit": 10,
+      "triggered_fallbacks": [
+        {
+          "fallback": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A1",
+            "A2",
+            "A3",
+            "A4"
+          ]
+        },
+        {
+          "fallback": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A1",
+            "A5"
+          ]
+        },
+        {
+          "fallback": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A1",
+            "A6"
+          ]
+        },
+        {
+          "fallback": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A1",
+            "A2",
+            "A3",
+            "A4",
+            "A5"
+          ]
+        },
+        {
+          "fallback": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A1",
+            "A2",
+            "A3",
+            "A4",
+            "A6"
+          ]
+        },
+        {
+          "fallback": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A5",
+            "A6"
+          ]
+        },
+        {
+          "fallback": "preserve_action_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:CONTROL_DEP"
+          },
+          "scope": [
+            "A21",
+            "A25"
+          ]
+        },
+        {
+          "fallback": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:DATA_DEP"
+          },
+          "scope": [
+            "A11",
+            "A18"
+          ]
+        },
+        {
+          "fallback": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:DATA_DEP"
+          },
+          "scope": [
+            "A11",
+            "A12"
+          ]
+        },
+        {
+          "fallback": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:DATA_DEP"
+          },
+          "scope": [
+            "A10"
+          ]
+        },
+        {
+          "fallback": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:CONTROL_DEP"
+          },
+          "scope": [
+            "A10",
+            "A7",
+            "A8",
+            "A9"
+          ]
+        },
+        {
+          "fallback": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:DATA_DEP"
+          },
+          "scope": [
+            "A7",
+            "A8",
+            "A9"
+          ]
+        },
+        {
+          "fallback": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:CONTROL_DEP"
+          },
+          "scope": [
+            "A7",
+            "A8",
+            "A9"
+          ]
+        },
+        {
+          "fallback": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A1",
+            "A2"
+          ]
+        },
+        {
+          "fallback": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A1",
+            "A3"
+          ]
+        },
+        {
+          "fallback": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A1",
+            "A4"
+          ]
+        },
+        {
+          "fallback": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A2",
+            "A3"
+          ]
+        },
+        {
+          "fallback": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A2",
+            "A4"
+          ]
+        },
+        {
+          "fallback": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A2",
+            "A5"
+          ]
+        },
+        {
+          "fallback": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A2",
+            "A6"
+          ]
+        },
+        {
+          "fallback": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A3",
+            "A4"
+          ]
+        },
+        {
+          "fallback": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A3",
+            "A5"
+          ]
+        },
+        {
+          "fallback": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A3",
+            "A6"
+          ]
+        },
+        {
+          "fallback": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A4",
+            "A5"
+          ]
+        },
+        {
+          "fallback": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A4",
+            "A6"
+          ]
+        }
+      ],
+      "unknown_limit": 1
+    },
+    "fat_actions": [],
+    "node_kind": "action_id",
+    "objectives": {
+      "metrics": {
+        "e2e_latency_ms": {
+          "p95": 4300
+        },
+        "lane_completion_ms": {
+          "ble_lane_p95": 1700,
+          "cloud_lane_p95": 2700,
+          "local_lane_p95": 650
+        }
+      },
+      "primary": "minimize_movie_scene_blackout_latency_without_breaking_verify_order"
+    },
+    "observable_anchor_priority": {
+      "A1": 0,
+      "A10": 9,
+      "A11": 10,
+      "A12": 11,
+      "A13": 12,
+      "A14": 13,
+      "A15": 14,
+      "A16": 15,
+      "A17": 16,
+      "A18": 17,
+      "A19": 18,
+      "A2": 1,
+      "A20": 19,
+      "A21": 20,
+      "A22": 21,
+      "A23": 22,
+      "A24": 23,
+      "A25": 24,
+      "A26": 25,
+      "A3": 2,
+      "A4": 3,
+      "A5": 4,
+      "A6": 5,
+      "A7": 6,
+      "A8": 7,
+      "A9": 8
+    },
+    "policy": {
+      "ble_parallel": 1,
+      "cloud_parallel": 4,
+      "default_qps": 5.0,
+      "local_parallel": 6,
+      "max_parallel": 10
+    },
+    "policy_snapshot": {
+      "adaptive_controls": {
+        "active_constraints": [
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A2",
+              "A3",
+              "A4"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A2",
+              "A3",
+              "A4"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A2",
+              "A3",
+              "A4"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A5"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A6"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A2",
+              "A3",
+              "A4"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A2",
+              "A3",
+              "A4"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A2",
+              "A3",
+              "A4",
+              "A5"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A2",
+              "A3",
+              "A4",
+              "A6"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A2",
+              "A3",
+              "A4"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A2",
+              "A3",
+              "A4",
+              "A5"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A2",
+              "A3",
+              "A4",
+              "A6"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A2",
+              "A3",
+              "A4",
+              "A5"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A2",
+              "A3",
+              "A4",
+              "A6"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A5",
+              "A6"
+            ]
+          },
+          {
+            "enforced": false,
+            "fallback": "reduce_parallelism",
+            "guard": "resource_constrained",
+            "kind": "BUDGET_K",
+            "params": {
+              "limit": 1,
+              "resource": "BLE"
+            },
+            "scope": [
+              "A1",
+              "A2",
+              "A3",
+              "A4",
+              "A5",
+              "A6"
+            ]
+          },
+          {
+            "enforced": false,
+            "fallback": "reduce_parallelism",
+            "guard": "resource_constrained",
+            "kind": "BUDGET_K",
+            "params": {
+              "limit": 4,
+              "resource": "CLOUD"
+            },
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A13",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A18",
+              "A19",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "enforced": false,
+            "fallback": "reduce_parallelism",
+            "guard": "resource_constrained",
+            "kind": "BUDGET_K",
+            "params": {
+              "limit": 6,
+              "resource": "LOCAL"
+            },
+            "scope": [
+              "A1",
+              "A10",
+              "A11",
+              "A12",
+              "A13",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A18",
+              "A19",
+              "A2",
+              "A20",
+              "A21",
+              "A22",
+              "A23",
+              "A24",
+              "A25",
+              "A26",
+              "A3",
+              "A4",
+              "A5",
+              "A6",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "enforced": false,
+            "fallback": "reduce_parallelism",
+            "guard": "resource_constrained",
+            "kind": "BUDGET_K",
+            "params": {
+              "limit": 10,
+              "resource": "TOTAL"
+            },
+            "scope": [
+              "A1",
+              "A10",
+              "A11",
+              "A12",
+              "A13",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A18",
+              "A19",
+              "A2",
+              "A20",
+              "A21",
+              "A22",
+              "A23",
+              "A24",
+              "A25",
+              "A26",
+              "A3",
+              "A4",
+              "A5",
+              "A6",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:CONTROL_DEP"
+            },
+            "scope": [
+              "A21",
+              "A25"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:DATA_DEP"
+            },
+            "scope": [
+              "A11",
+              "A18"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:DATA_DEP"
+            },
+            "scope": [
+              "A11",
+              "A12"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:DATA_DEP"
+            },
+            "scope": [
+              "A11",
+              "A12"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:DATA_DEP"
+            },
+            "scope": [
+              "A10"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:CONTROL_DEP"
+            },
+            "scope": [
+              "A10",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:DATA_DEP"
+            },
+            "scope": [
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:DATA_DEP"
+            },
+            "scope": [
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:DATA_DEP"
+            },
+            "scope": [
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:DATA_DEP"
+            },
+            "scope": [
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:DATA_DEP"
+            },
+            "scope": [
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:DATA_DEP"
+            },
+            "scope": [
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:CONTROL_DEP"
+            },
+            "scope": [
+              "A10",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:CONTROL_DEP"
+            },
+            "scope": [
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:CONTROL_DEP"
+            },
+            "scope": [
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A2"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A3"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A4"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A5"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A6"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A2",
+              "A3"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A2",
+              "A4"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A2",
+              "A5"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A2",
+              "A6"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A3",
+              "A4"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A3",
+              "A5"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A3",
+              "A6"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A4",
+              "A5"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A4",
+              "A6"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A5",
+              "A6"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "shrink_batch_not_disable",
+            "guard": "latency_budget_allows_batching AND 429_rate_low",
+            "kind": "BATCH_GROUP",
+            "params": {
+              "group_key": "endpoint",
+              "idempotent_only": true,
+              "max_batch_size": 3,
+              "max_wait_ms": 40
+            },
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "shrink_batch_not_disable",
+            "guard": "latency_budget_allows_batching AND 429_rate_low",
+            "kind": "SAME_SESSION_GROUP",
+            "params": {
+              "group_key": "host",
+              "reuse_window_ms": 10000
+            },
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A13",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A18",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ],
+        "triggered_fallbacks": [
+          {
+            "fallback": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A2",
+              "A3",
+              "A4"
+            ]
+          },
+          {
+            "fallback": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A5"
+            ]
+          },
+          {
+            "fallback": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A6"
+            ]
+          },
+          {
+            "fallback": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A2",
+              "A3",
+              "A4",
+              "A5"
+            ]
+          },
+          {
+            "fallback": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A2",
+              "A3",
+              "A4",
+              "A6"
+            ]
+          },
+          {
+            "fallback": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A5",
+              "A6"
+            ]
+          },
+          {
+            "fallback": "preserve_action_order",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:CONTROL_DEP"
+            },
+            "scope": [
+              "A21",
+              "A25"
+            ]
+          },
+          {
+            "fallback": "force_topological_local_order",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:DATA_DEP"
+            },
+            "scope": [
+              "A11",
+              "A18"
+            ]
+          },
+          {
+            "fallback": "force_topological_local_order",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:DATA_DEP"
+            },
+            "scope": [
+              "A11",
+              "A12"
+            ]
+          },
+          {
+            "fallback": "force_topological_local_order",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:DATA_DEP"
+            },
+            "scope": [
+              "A10"
+            ]
+          },
+          {
+            "fallback": "force_topological_local_order",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:CONTROL_DEP"
+            },
+            "scope": [
+              "A10",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "fallback": "force_topological_local_order",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:DATA_DEP"
+            },
+            "scope": [
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "fallback": "force_topological_local_order",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:CONTROL_DEP"
+            },
+            "scope": [
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "fallback": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A2"
+            ]
+          },
+          {
+            "fallback": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A3"
+            ]
+          },
+          {
+            "fallback": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A4"
+            ]
+          },
+          {
+            "fallback": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A2",
+              "A3"
+            ]
+          },
+          {
+            "fallback": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A2",
+              "A4"
+            ]
+          },
+          {
+            "fallback": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A2",
+              "A5"
+            ]
+          },
+          {
+            "fallback": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A2",
+              "A6"
+            ]
+          },
+          {
+            "fallback": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A3",
+              "A4"
+            ]
+          },
+          {
+            "fallback": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A3",
+              "A5"
+            ]
+          },
+          {
+            "fallback": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A3",
+              "A6"
+            ]
+          },
+          {
+            "fallback": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A4",
+              "A5"
+            ]
+          },
+          {
+            "fallback": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A4",
+              "A6"
+            ]
+          }
+        ]
+      },
+      "batch_policy": {
+        "bucket_key_stats": [
+          {
+            "bucket_key_hit_rate": 1.0,
+            "bucket_key_hits": 10,
+            "cloud_actions": 10,
+            "group_key": "endpoint",
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope_size": 10
+          }
+        ],
+        "latency_budget_ms": 4300,
+        "rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ]
+      },
+      "budget_rules": [],
+      "budgets": {
+        "ble": 1,
+        "cloud": 4,
+        "local": 6,
+        "total": 10,
+        "unknown": 1
+      },
+      "rate_limit": {
+        "burst": 10,
+        "max_qps": 5.0,
+        "window_ms": 1000
+      },
+      "reuse_policy": {
+        "enabled": true,
+        "reuse_window_ms": 20000,
+        "session_rules": [
+          {
+            "group_key": "host",
+            "reuse_window_ms": 10000,
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A13",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A18",
+              "A7",
+              "A8",
+              "A9"
+            ],
+            "scope_set": [
+              "A10",
+              "A11",
+              "A12",
+              "A13",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A18",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ]
+      },
+      "schema_version": "m5_policy_snapshot/v1",
+      "versions": {
+        "canonicalization_version": "v1",
+        "profile_version": "ha_profile_default"
+      }
+    },
+    "soft_summary": {
+      "BUDGET_K": [
+        {
+          "limit": 1,
+          "resource": "BLE"
+        },
+        {
+          "limit": 4,
+          "resource": "CLOUD"
+        },
+        {
+          "limit": 6,
+          "resource": "LOCAL"
+        },
+        {
+          "limit": 10,
+          "resource": "TOTAL"
+        }
+      ],
+      "MIN_GAP": [
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        }
+      ],
+      "SOFT_ORDER": [
+        {
+          "reason": "candidate:CONTROL_DEP"
+        },
+        {
+          "reason": "candidate:DATA_DEP"
+        },
+        {
+          "reason": "candidate:DATA_DEP"
+        },
+        {
+          "reason": "candidate:DATA_DEP"
+        },
+        {
+          "reason": "candidate:DATA_DEP"
+        },
+        {
+          "reason": "candidate:CONTROL_DEP"
+        },
+        {
+          "reason": "candidate:DATA_DEP"
+        },
+        {
+          "reason": "candidate:DATA_DEP"
+        },
+        {
+          "reason": "candidate:DATA_DEP"
+        },
+        {
+          "reason": "candidate:DATA_DEP"
+        },
+        {
+          "reason": "candidate:DATA_DEP"
+        },
+        {
+          "reason": "candidate:DATA_DEP"
+        },
+        {
+          "reason": "candidate:CONTROL_DEP"
+        },
+        {
+          "reason": "candidate:CONTROL_DEP"
+        },
+        {
+          "reason": "candidate:CONTROL_DEP"
+        }
+      ]
+    },
+    "transitive_reduction": [
+      {
+        "kind": "transitive_reduction",
+        "removed_dst_action": "A24",
+        "removed_kinds": [
+          "HARD_CONTROL"
+        ],
+        "removed_src_action": "A10"
+      },
+      {
+        "kind": "transitive_reduction",
+        "removed_dst_action": "A24",
+        "removed_kinds": [
+          "HARD_CONTROL"
+        ],
+        "removed_src_action": "A11"
+      },
+      {
+        "kind": "transitive_reduction",
+        "removed_dst_action": "A24",
+        "removed_kinds": [
+          "HARD_CONTROL"
+        ],
+        "removed_src_action": "A12"
+      },
+      {
+        "kind": "transitive_reduction",
+        "removed_dst_action": "A24",
+        "removed_kinds": [
+          "HARD_CONTROL"
+        ],
+        "removed_src_action": "A7"
+      },
+      {
+        "kind": "transitive_reduction",
+        "removed_dst_action": "A24",
+        "removed_kinds": [
+          "HARD_CONTROL"
+        ],
+        "removed_src_action": "A8"
+      },
+      {
+        "kind": "transitive_reduction",
+        "removed_dst_action": "A24",
+        "removed_kinds": [
+          "HARD_CONTROL"
+        ],
+        "removed_src_action": "A9"
+      }
+    ],
+    "unknown_protocol_actions": []
+  },
+  "ordered_batches": [
+    {
+      "batch_id": "batch_000",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A1"
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A2",
+            "A3",
+            "A4"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A5"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A6"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A2",
+            "A3",
+            "A4",
+            "A5"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A2",
+            "A3",
+            "A4",
+            "A6"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A2"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A3"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A4"
+          ]
+        }
+      ],
+      "parallel_groups": [
+        [
+          "A1"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [
+          {
+            "action": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1"
+            ]
+          }
+        ],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ],
+        "batch_size": 1,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "host",
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A13",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A18",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_001",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A2"
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A2",
+            "A3",
+            "A4"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A2",
+            "A3",
+            "A4",
+            "A5"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A2",
+            "A3",
+            "A4",
+            "A6"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A2"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A2",
+            "A3"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A2",
+            "A4"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A2",
+            "A5"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A2",
+            "A6"
+          ]
+        }
+      ],
+      "parallel_groups": [
+        [
+          "A2"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [
+          {
+            "action": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A2"
+            ]
+          }
+        ],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ],
+        "batch_size": 1,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [
+          {
+            "after": "A2",
+            "before": "A1",
+            "gap_ms": 0
+          }
+        ],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "host",
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A13",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A18",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_002",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A3"
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A2",
+            "A3",
+            "A4"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A2",
+            "A3",
+            "A4",
+            "A5"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A2",
+            "A3",
+            "A4",
+            "A6"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A3"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A2",
+            "A3"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A3",
+            "A4"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A3",
+            "A5"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A3",
+            "A6"
+          ]
+        }
+      ],
+      "parallel_groups": [
+        [
+          "A3"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [
+          {
+            "action": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A3"
+            ]
+          }
+        ],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ],
+        "batch_size": 1,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [
+          {
+            "after": "A3",
+            "before": "A1",
+            "gap_ms": 0
+          },
+          {
+            "after": "A3",
+            "before": "A2",
+            "gap_ms": 0
+          }
+        ],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "host",
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A13",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A18",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_003",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A4"
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A2",
+            "A3",
+            "A4"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A2",
+            "A3",
+            "A4",
+            "A5"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A2",
+            "A3",
+            "A4",
+            "A6"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A4"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A2",
+            "A4"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A3",
+            "A4"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A4",
+            "A5"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A4",
+            "A6"
+          ]
+        }
+      ],
+      "parallel_groups": [
+        [
+          "A4"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [
+          {
+            "action": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A4"
+            ]
+          }
+        ],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ],
+        "batch_size": 1,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [
+          {
+            "after": "A4",
+            "before": "A1",
+            "gap_ms": 0
+          },
+          {
+            "after": "A4",
+            "before": "A2",
+            "gap_ms": 0
+          },
+          {
+            "after": "A4",
+            "before": "A3",
+            "gap_ms": 0
+          }
+        ],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "host",
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A13",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A18",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_004",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A5"
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A5"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A2",
+            "A3",
+            "A4",
+            "A5"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A5",
+            "A6"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A2",
+            "A5"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A3",
+            "A5"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A4",
+            "A5"
+          ]
+        }
+      ],
+      "parallel_groups": [
+        [
+          "A5"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [
+          {
+            "action": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A5"
+            ]
+          }
+        ],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ],
+        "batch_size": 1,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [
+          {
+            "after": "A5",
+            "before": "A1",
+            "gap_ms": 0
+          },
+          {
+            "after": "A5",
+            "before": "A2",
+            "gap_ms": 0
+          },
+          {
+            "after": "A5",
+            "before": "A3",
+            "gap_ms": 0
+          },
+          {
+            "after": "A5",
+            "before": "A4",
+            "gap_ms": 0
+          }
+        ],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "host",
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A13",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A18",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_005",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A6"
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A6"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A2",
+            "A3",
+            "A4",
+            "A6"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A5",
+            "A6"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A2",
+            "A6"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A3",
+            "A6"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A4",
+            "A6"
+          ]
+        }
+      ],
+      "parallel_groups": [
+        [
+          "A6"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [
+          {
+            "action": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A6"
+            ]
+          }
+        ],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ],
+        "batch_size": 1,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [
+          {
+            "after": "A6",
+            "before": "A1",
+            "gap_ms": 0
+          },
+          {
+            "after": "A6",
+            "before": "A2",
+            "gap_ms": 0
+          },
+          {
+            "after": "A6",
+            "before": "A3",
+            "gap_ms": 0
+          },
+          {
+            "after": "A6",
+            "before": "A4",
+            "gap_ms": 0
+          },
+          {
+            "after": "A6",
+            "before": "A5",
+            "gap_ms": 0
+          }
+        ],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "host",
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A13",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A18",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_006",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [
+        {
+          "action": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:CONTROL_DEP"
+          },
+          "scope": [
+            "A10",
+            "A7",
+            "A8",
+            "A9"
+          ]
+        },
+        {
+          "action": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:DATA_DEP"
+          },
+          "scope": [
+            "A7",
+            "A8",
+            "A9"
+          ]
+        },
+        {
+          "action": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:CONTROL_DEP"
+          },
+          "scope": [
+            "A7",
+            "A8",
+            "A9"
+          ]
+        },
+        {
+          "action": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:DATA_DEP"
+          },
+          "scope": [
+            "A10"
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "SOFT_ORDER",
+          "scope": [
+            "A10",
+            "A7",
+            "A8",
+            "A9"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "SOFT_ORDER",
+          "scope": [
+            "A7",
+            "A8",
+            "A9"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "latency_budget_allows_batching AND 429_rate_low",
+          "kind": "BATCH_GROUP",
+          "scope": [
+            "A10",
+            "A11",
+            "A12",
+            "A14",
+            "A15",
+            "A16",
+            "A17",
+            "A7",
+            "A8",
+            "A9"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "latency_budget_allows_batching AND 429_rate_low",
+          "kind": "SAME_SESSION_GROUP",
+          "scope": [
+            "A10",
+            "A11",
+            "A12",
+            "A13",
+            "A14",
+            "A15",
+            "A16",
+            "A17",
+            "A18",
+            "A7",
+            "A8",
+            "A9"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "SOFT_ORDER",
+          "scope": [
+            "A10"
+          ]
+        }
+      ],
+      "parallel_groups": [
+        [
+          "A7",
+          "A8",
+          "A9"
+        ],
+        [
+          "A10"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [
+          {
+            "action": "force_topological_local_order",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:CONTROL_DEP"
+            },
+            "scope": [
+              "A10",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "action": "force_topological_local_order",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:DATA_DEP"
+            },
+            "scope": [
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "action": "force_topological_local_order",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:CONTROL_DEP"
+            },
+            "scope": [
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "action": "force_topological_local_order",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:DATA_DEP"
+            },
+            "scope": [
+              "A10"
+            ]
+          }
+        ],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ],
+        "batch_size": 4,
+        "batching_buckets": [
+          {
+            "bucket": "tuya|movie_light_controls",
+            "chunks": 2,
+            "group_key": "endpoint",
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "members": [
+              "A7",
+              "A8",
+              "A9",
+              "A10"
+            ],
+            "rule_kind": "BATCH_GROUP",
+            "size": 4
+          }
+        ],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "host",
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A13",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A18",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_007",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [
+        {
+          "action": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:DATA_DEP"
+          },
+          "scope": [
+            "A11"
+          ]
+        },
+        {
+          "action": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:DATA_DEP"
+          },
+          "scope": [
+            "A11",
+            "A12"
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "SOFT_ORDER",
+          "scope": [
+            "A11",
+            "A18"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "SOFT_ORDER",
+          "scope": [
+            "A11",
+            "A12"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "latency_budget_allows_batching AND 429_rate_low",
+          "kind": "BATCH_GROUP",
+          "scope": [
+            "A10",
+            "A11",
+            "A12",
+            "A14",
+            "A15",
+            "A16",
+            "A17",
+            "A7",
+            "A8",
+            "A9"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "latency_budget_allows_batching AND 429_rate_low",
+          "kind": "SAME_SESSION_GROUP",
+          "scope": [
+            "A10",
+            "A11",
+            "A12",
+            "A13",
+            "A14",
+            "A15",
+            "A16",
+            "A17",
+            "A18",
+            "A7",
+            "A8",
+            "A9"
+          ]
+        }
+      ],
+      "parallel_groups": [
+        [
+          "A11",
+          "A12"
+        ],
+        [
+          "A13"
+        ],
+        [
+          "A14"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [
+          {
+            "action": "force_topological_local_order",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:DATA_DEP"
+            },
+            "scope": [
+              "A11"
+            ]
+          },
+          {
+            "action": "force_topological_local_order",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:DATA_DEP"
+            },
+            "scope": [
+              "A11",
+              "A12"
+            ]
+          }
+        ],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ],
+        "batch_size": 4,
+        "batching_buckets": [
+          {
+            "bucket": "tuya|movie_hvac_controls",
+            "chunks": 1,
+            "group_key": "endpoint",
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "members": [
+              "A11",
+              "A12"
+            ],
+            "rule_kind": "BATCH_GROUP",
+            "size": 2
+          }
+        ],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "host",
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A13",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A18",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_008",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [
+        {
+          "action": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:DATA_DEP"
+          },
+          "scope": [
+            "A18"
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "enforced": true,
+          "expr": "latency_budget_allows_batching AND 429_rate_low",
+          "kind": "BATCH_GROUP",
+          "scope": [
+            "A10",
+            "A11",
+            "A12",
+            "A14",
+            "A15",
+            "A16",
+            "A17",
+            "A7",
+            "A8",
+            "A9"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "latency_budget_allows_batching AND 429_rate_low",
+          "kind": "SAME_SESSION_GROUP",
+          "scope": [
+            "A10",
+            "A11",
+            "A12",
+            "A13",
+            "A14",
+            "A15",
+            "A16",
+            "A17",
+            "A18",
+            "A7",
+            "A8",
+            "A9"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "SOFT_ORDER",
+          "scope": [
+            "A11",
+            "A18"
+          ]
+        }
+      ],
+      "parallel_groups": [
+        [
+          "A15",
+          "A16",
+          "A17"
+        ],
+        [
+          "A18"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [
+          {
+            "action": "force_topological_local_order",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:DATA_DEP"
+            },
+            "scope": [
+              "A18"
+            ]
+          }
+        ],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ],
+        "batch_size": 4,
+        "batching_buckets": [
+          {
+            "bucket": "tuya|movie_light_verify",
+            "chunks": 1,
+            "group_key": "endpoint",
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "members": [
+              "A15",
+              "A16",
+              "A17"
+            ],
+            "rule_kind": "BATCH_GROUP",
+            "size": 3
+          }
+        ],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "host",
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A13",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A18",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_009",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:CONTROL_DEP"
+          },
+          "scope": [
+            "A21"
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "SOFT_ORDER",
+          "scope": [
+            "A21",
+            "A25"
+          ]
+        }
+      ],
+      "parallel_groups": [
+        [
+          "A19"
+        ],
+        [
+          "A20",
+          "A21",
+          "A22"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [
+          {
+            "action": "preserve_action_order",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:CONTROL_DEP"
+            },
+            "scope": [
+              "A21"
+            ]
+          }
+        ],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ],
+        "batch_size": 4,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "host",
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A13",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A18",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_010",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:CONTROL_DEP"
+          },
+          "scope": [
+            "A25"
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "SOFT_ORDER",
+          "scope": [
+            "A21",
+            "A25"
+          ]
+        }
+      ],
+      "parallel_groups": [
+        [
+          "A23"
+        ],
+        [
+          "A24"
+        ],
+        [
+          "A25"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [
+          {
+            "action": "preserve_action_order",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:CONTROL_DEP"
+            },
+            "scope": [
+              "A25"
+            ]
+          }
+        ],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ],
+        "batch_size": 3,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "host",
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A13",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A18",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_011",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A26"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ],
+        "batch_size": 1,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "host",
+            "scope": [
+              "A10",
+              "A11",
+              "A12",
+              "A13",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A18",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

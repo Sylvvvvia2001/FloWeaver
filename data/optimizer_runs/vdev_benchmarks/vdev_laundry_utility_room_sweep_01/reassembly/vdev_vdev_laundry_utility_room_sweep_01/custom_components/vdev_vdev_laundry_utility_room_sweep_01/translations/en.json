@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_laundry_utility_room_sweep_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Laundry and Utility Room Sweep"
+}

@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "action_to_msfs": {
+      "A0": [
+        "msf00_003_state_write"
+      ]
+    },
+    "critical_boost": {
+      "A0": 1
+    },
+    "critical_score": {
+      "A0": 1.0
+    },
+    "node_kind": "action_id",
+    "objectives": {
+      "name": "Fallback VDev",
+      "primary": "minimize_tail_latency"
+    },
+    "policy": {
+      "ble_parallel": 1,
+      "cloud_parallel": 3,
+      "default_qps": 5.0,
+      "max_parallel": 4
+    },
+    "soft_summary": {}
+  },
+  "ordered_batches": [
+    {
+      "batch_id": "batch_000",
+      "constraints": [],
+      "fallback": {
+        "COALESCE_STATE_WRITE": "disable_optimization_for_scope"
+      },
+      "guards": [
+        "runtime_metrics_available",
+        "runtime_metrics_available"
+      ],
+      "parallel_groups": [
+        [
+          "A0"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 5.0
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true
+      }
+    }
+  ]
+}

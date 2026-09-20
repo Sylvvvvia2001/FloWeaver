@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_late_night_entertainment_shutdown_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Late-Night Entertainment Shutdown"
+}

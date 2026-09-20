@@ -1,0 +1,425 @@
+{
+  "integration": "qingping",
+  "runtime_families": [
+    {
+      "action_kind": "read_sensor",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "ble:qingping:climate_audit_qingping_1",
+          "climate_audit_qingping_1",
+          "ble:qingping:climate_audit_qingping_2",
+          "climate_audit_qingping_2"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "control",
+          "read_sensor"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "device",
+          "homeassistant",
+          "qingping_ble"
+        ],
+        "boost_if_names": [
+          "read_sensor",
+          "sensor_update_to_bluetooth_data_update"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "BLE_OP",
+      "file_globs": [
+        "qingping/binary_sensor.py"
+      ],
+      "forbidden_context": [
+        "dunder_init"
+      ],
+      "forbidden_path_signals": [
+        "setup_function:async_setup_entry",
+        "property_function:is_on",
+        "control_function:async_turn_on",
+        "control_function:async_turn_off",
+        "control_function:async_open_cover",
+        "control_function:async_close_cover",
+        "control_function:async_set_cover_position",
+        "control_function:set_state"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "sensor_update_to_bluetooth_data_update"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A4",
+        "A5"
+      ],
+      "integration": "qingping",
+      "negative_call_patterns": [
+        "passivebluetoothdataprocessor",
+        "async_on_unload",
+        "async_add_entities_listener",
+        "async_register_processor",
+        "entry.async_on_unload",
+        "processor.async_add_entities_listener"
+      ],
+      "negative_evidence": [
+        "negative_function:async_setup_entry",
+        "negative_function:is_on",
+        "negative_call:passivebluetoothdataprocessor",
+        "negative_call:async_on_unload",
+        "negative_call:async_add_entities_listener",
+        "negative_call:async_register_processor",
+        "negative_call:entry.async_on_unload",
+        "negative_call:processor.async_add_entities_listener",
+        "negative_call:coordinator.async_register_processor",
+        "negative_call:get"
+      ],
+      "negative_function_patterns": [
+        "async_setup_entry",
+        "is_on",
+        "async_turn_on",
+        "async_turn_off",
+        "async_set_*",
+        "async_open_*"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [
+            "passivebluetoothdataprocessor",
+            "entry.async_on_unload",
+            "processor.async_add_entities_listener",
+            "coordinator.async_register_processor"
+          ],
+          "call_patterns": [
+            "passivebluetoothdataprocessor",
+            "async_on_unload",
+            "async_add_entities_listener",
+            "async_register_processor"
+          ],
+          "file_path": "data/repo_snapshot/qingping/binary_sensor.py",
+          "function_name": "async_setup_entry",
+          "path_kind": "setup_path",
+          "path_signals": [
+            "setup_function:async_setup_entry",
+            "subscription_call:processor.async_add_entities_listener",
+            "service_registration_call:coordinator.async_register_processor"
+          ],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -8,
+          "snippet": "73: \n74: async def async_setup_entry(\n75:     hass: HomeAssistant,\n76:     entry: QingpingConfigEntry,\n77:     async_add_entities: AddConfigEntryEntitiesCallback,\n78: ) -> None:\n79:     \"\"\"Set up the Qingping BLE sensors.\"\"\"\n80:     coordinator = entry.runtime_data\n81:     processor = PassiveBluetoothDataProcessor(sensor_update_to_bluetooth_data_update)\n82:     entry.async_on_unload(\n83:         processor.async_add_entities_listener(\n84:             QingpingBluetoothSensorEntity, async_add_entities\n85:         )\n86:     )"
+        },
+        {
+          "call_chains": [
+            "self.processor.entity_data.get"
+          ],
+          "call_patterns": [
+            "get"
+          ],
+          "file_path": "data/repo_snapshot/qingping/binary_sensor.py",
+          "function_name": "is_on",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:is_on"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "100:     @property\n101:     def is_on(self) -> bool | None:\n102:         \"\"\"Return the native value.\"\"\"\n103:         return self.processor.entity_data.get(self.entity_key)"
+        }
+      ],
+      "origin_action_id": null,
+      "origin_cluster_id": "qingping__binary_sensor__ble_op__read_sensor__ble",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [
+            "passivebluetoothdataupdate",
+            "sensor_device_info_to_hass_device_info",
+            "device_key_to_bluetooth_entity_key",
+            "sensor_update.devices.items",
+            "sensor_update.binary_entity_descriptions.items",
+            "sensor_update.binary_entity_values.items"
+          ],
+          "call_patterns": [
+            "passivebluetoothdataupdate",
+            "sensor_device_info_to_hass_device_info",
+            "device_key_to_bluetooth_entity_key",
+            "items"
+          ],
+          "file_path": "data/repo_snapshot/qingping/binary_sensor.py",
+          "function_name": "sensor_update_to_bluetooth_data_update",
+          "path_kind": "read_path",
+          "path_signals": [],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 6,
+          "snippet": "46: \n47: def sensor_update_to_bluetooth_data_update(\n48:     sensor_update: SensorUpdate,\n49: ) -> PassiveBluetoothDataUpdate:\n50:     \"\"\"Convert a sensor update to a bluetooth data update.\"\"\"\n51:     return PassiveBluetoothDataUpdate(\n52:         devices={\n53:             device_id: sensor_device_info_to_hass_device_info(device_info)\n54:             for device_id, device_info in sensor_update.devices.items()\n55:         },\n56:         entity_descriptions={\n57:             device_key_to_bluetooth_entity_key(device_key): BINARY_SENSOR_DESCRIPTIONS[\n58:                 description.device_class\n59:             ]"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read"
+      ],
+      "required_context": [
+        "runtime_path"
+      ],
+      "required_path_signals": [],
+      "required_runtime_roles": [
+        "runtime_read"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "qingping:binary_sensor_runtime_read_sensor_control",
+      "runtime_archetypes": [
+        "ble_runtime_read"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:sensor_update_to_bluetooth_data_update",
+        "runtime_call:passivebluetoothdataupdate",
+        "runtime_call:sensor_device_info_to_hass_device_info",
+        "runtime_call:device_key_to_bluetooth_entity_key",
+        "runtime_call:items",
+        "runtime_call:sensor_update.devices.items",
+        "runtime_call:sensor_update.binary_entity_descriptions.items",
+        "runtime_call:sensor_update.binary_entity_values.items"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/qingping/binary_sensor.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A4",
+        "A5"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "same runtime idiom appears in one file across multiple unresolved actions",
+      "why_not_setup": [
+        "exclude_role:setup:async_setup_entry",
+        "exclude_role:property_getter:is_on",
+        "exclude_path_signal:setup_function:async_setup_entry",
+        "exclude_path_signal:property_function:is_on",
+        "exclude_control_path_for_read_like_action"
+      ]
+    },
+    {
+      "action_kind": "read_sensor",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "ble:qingping:climate_audit_qingping_1",
+          "climate_audit_qingping_1",
+          "ble:qingping:climate_audit_qingping_2",
+          "climate_audit_qingping_2"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "control",
+          "read_sensor"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "device",
+          "homeassistant",
+          "qingping_ble"
+        ],
+        "boost_if_names": [
+          "read_sensor",
+          "sensor_update_to_bluetooth_data_update"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "BLE_OP",
+      "file_globs": [
+        "qingping/sensor.py"
+      ],
+      "forbidden_context": [
+        "dunder_init"
+      ],
+      "forbidden_path_signals": [
+        "setup_function:async_setup_entry",
+        "property_function:native_value",
+        "control_function:async_turn_on",
+        "control_function:async_turn_off",
+        "control_function:async_open_cover",
+        "control_function:async_close_cover",
+        "control_function:async_set_cover_position",
+        "control_function:set_state"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "sensor_update_to_bluetooth_data_update"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A4",
+        "A5"
+      ],
+      "integration": "qingping",
+      "negative_call_patterns": [
+        "passivebluetoothdataprocessor",
+        "async_on_unload",
+        "async_add_entities_listener",
+        "async_register_processor",
+        "entry.async_on_unload",
+        "processor.async_add_entities_listener"
+      ],
+      "negative_evidence": [
+        "negative_function:async_setup_entry",
+        "negative_function:native_value",
+        "negative_call:passivebluetoothdataprocessor",
+        "negative_call:async_on_unload",
+        "negative_call:async_add_entities_listener",
+        "negative_call:async_register_processor",
+        "negative_call:entry.async_on_unload",
+        "negative_call:processor.async_add_entities_listener",
+        "negative_call:coordinator.async_register_processor",
+        "negative_call:get"
+      ],
+      "negative_function_patterns": [
+        "async_setup_entry",
+        "native_value",
+        "async_turn_on",
+        "async_turn_off",
+        "async_set_*",
+        "async_open_*"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [
+            "passivebluetoothdataprocessor",
+            "entry.async_on_unload",
+            "processor.async_add_entities_listener",
+            "coordinator.async_register_processor"
+          ],
+          "call_patterns": [
+            "passivebluetoothdataprocessor",
+            "async_on_unload",
+            "async_add_entities_listener",
+            "async_register_processor"
+          ],
+          "file_path": "data/repo_snapshot/qingping/sensor.py",
+          "function_name": "async_setup_entry",
+          "path_kind": "setup_path",
+          "path_signals": [
+            "setup_function:async_setup_entry",
+            "subscription_call:processor.async_add_entities_listener",
+            "service_registration_call:coordinator.async_register_processor"
+          ],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -8,
+          "snippet": "141: \n142: async def async_setup_entry(\n143:     hass: HomeAssistant,\n144:     entry: QingpingConfigEntry,\n145:     async_add_entities: AddConfigEntryEntitiesCallback,\n146: ) -> None:\n147:     \"\"\"Set up the Qingping BLE sensors.\"\"\"\n148:     coordinator = entry.runtime_data\n149:     processor = PassiveBluetoothDataProcessor(sensor_update_to_bluetooth_data_update)\n150:     entry.async_on_unload(\n151:         processor.async_add_entities_listener(\n152:             QingpingBluetoothSensorEntity, async_add_entities\n153:         )\n154:     )"
+        },
+        {
+          "call_chains": [
+            "self.processor.entity_data.get"
+          ],
+          "call_patterns": [
+            "get"
+          ],
+          "file_path": "data/repo_snapshot/qingping/sensor.py",
+          "function_name": "native_value",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:native_value"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "168:     @property\n169:     def native_value(self) -> int | float | None:\n170:         \"\"\"Return the native value.\"\"\"\n171:         return self.processor.entity_data.get(self.entity_key)"
+        }
+      ],
+      "origin_action_id": null,
+      "origin_cluster_id": "qingping__sensor__ble_op__read_sensor__ble",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [
+            "passivebluetoothdataupdate",
+            "sensor_device_info_to_hass_device_info",
+            "device_key_to_bluetooth_entity_key",
+            "sensor_update.devices.items",
+            "sensor_update.entity_descriptions.items",
+            "sensor_update.entity_values.items"
+          ],
+          "call_patterns": [
+            "passivebluetoothdataupdate",
+            "sensor_device_info_to_hass_device_info",
+            "device_key_to_bluetooth_entity_key",
+            "items"
+          ],
+          "file_path": "data/repo_snapshot/qingping/sensor.py",
+          "function_name": "sensor_update_to_bluetooth_data_update",
+          "path_kind": "read_path",
+          "path_signals": [],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 6,
+          "snippet": "114: \n115: def sensor_update_to_bluetooth_data_update(\n116:     sensor_update: SensorUpdate,\n117: ) -> PassiveBluetoothDataUpdate:\n118:     \"\"\"Convert a sensor update to a bluetooth data update.\"\"\"\n119:     return PassiveBluetoothDataUpdate(\n120:         devices={\n121:             device_id: sensor_device_info_to_hass_device_info(device_info)\n122:             for device_id, device_info in sensor_update.devices.items()\n123:         },\n124:         entity_descriptions={\n125:             device_key_to_bluetooth_entity_key(device_key): SENSOR_DESCRIPTIONS[\n126:                 (description.device_class, description.native_unit_of_measurement)\n127:             ]"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read"
+      ],
+      "required_context": [
+        "runtime_path"
+      ],
+      "required_path_signals": [],
+      "required_runtime_roles": [
+        "runtime_read"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "qingping:sensor_runtime_read_sensor_control",
+      "runtime_archetypes": [
+        "ble_runtime_read"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:sensor_update_to_bluetooth_data_update",
+        "runtime_call:passivebluetoothdataupdate",
+        "runtime_call:sensor_device_info_to_hass_device_info",
+        "runtime_call:device_key_to_bluetooth_entity_key",
+        "runtime_call:items",
+        "runtime_call:sensor_update.devices.items",
+        "runtime_call:sensor_update.entity_descriptions.items",
+        "runtime_call:sensor_update.entity_values.items"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/qingping/sensor.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A4",
+        "A5"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "same runtime idiom appears in one file across multiple unresolved actions",
+      "why_not_setup": [
+        "exclude_role:setup:async_setup_entry",
+        "exclude_role:property_getter:native_value",
+        "exclude_path_signal:setup_function:async_setup_entry",
+        "exclude_path_signal:property_function:native_value",
+        "exclude_control_path_for_read_like_action"
+      ]
+    }
+  ],
+  "schema_version": "m1_grounding_profile/v3",
+  "version": "draft_llm_v3"
+}

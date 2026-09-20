@@ -1,0 +1,231 @@
+{
+  "integration": "xiaomi_ble",
+  "runtime_families": [
+    {
+      "action_kind": "read_sensor",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "ble:switchbot:kids_room_window_night",
+          "kids_room_window_night",
+          "switchbot"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "control",
+          "read_sensor"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "coordinator",
+          "device",
+          "homeassistant",
+          "types",
+          "xiaomi_ble"
+        ],
+        "boost_if_names": [
+          "read_sensor",
+          "sensor_update_to_bluetooth_data_update"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "BLE_OP",
+      "file_globs": [
+        "xiaomi_ble/binary_sensor.py"
+      ],
+      "forbidden_context": [
+        "dunder_init"
+      ],
+      "forbidden_path_signals": [
+        "setup_function:async_setup_entry",
+        "property_function:is_on",
+        "property_function:available",
+        "control_function:async_turn_on",
+        "control_function:async_turn_off",
+        "control_function:async_open_cover",
+        "control_function:async_close_cover",
+        "control_function:async_set_cover_position"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "sensor_update_to_bluetooth_data_update"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A4"
+      ],
+      "integration": "xiaomi_ble",
+      "negative_call_patterns": [
+        "xiaomipassivebluetoothdataprocessor",
+        "async_on_unload",
+        "async_add_entities_listener",
+        "async_register_processor",
+        "entry.async_on_unload",
+        "processor.async_add_entities_listener"
+      ],
+      "negative_evidence": [
+        "negative_function:async_setup_entry",
+        "negative_function:is_on",
+        "negative_function:available",
+        "negative_call:xiaomipassivebluetoothdataprocessor",
+        "negative_call:async_on_unload",
+        "negative_call:async_add_entities_listener",
+        "negative_call:async_register_processor",
+        "negative_call:entry.async_on_unload",
+        "negative_call:processor.async_add_entities_listener",
+        "negative_call:coordinator.async_register_processor"
+      ],
+      "negative_function_patterns": [
+        "async_setup_entry",
+        "is_on",
+        "available",
+        "async_turn_on",
+        "async_turn_off",
+        "async_set_*"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [
+            "xiaomipassivebluetoothdataprocessor",
+            "entry.async_on_unload",
+            "processor.async_add_entities_listener",
+            "coordinator.async_register_processor"
+          ],
+          "call_patterns": [
+            "xiaomipassivebluetoothdataprocessor",
+            "async_on_unload",
+            "async_add_entities_listener",
+            "async_register_processor"
+          ],
+          "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+          "function_name": "async_setup_entry",
+          "path_kind": "setup_path",
+          "path_signals": [
+            "setup_function:async_setup_entry",
+            "subscription_call:processor.async_add_entities_listener",
+            "service_registration_call:coordinator.async_register_processor"
+          ],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -8,
+          "snippet": "134: \n135: async def async_setup_entry(\n136:     hass: HomeAssistant,\n137:     entry: XiaomiBLEConfigEntry,\n138:     async_add_entities: AddConfigEntryEntitiesCallback,\n139: ) -> None:\n140:     \"\"\"Set up the Xiaomi BLE sensors.\"\"\"\n141:     coordinator = entry.runtime_data\n142:     processor = XiaomiPassiveBluetoothDataProcessor(\n143:         sensor_update_to_bluetooth_data_update\n144:     )\n145:     entry.async_on_unload(\n146:         processor.async_add_entities_listener(\n147:             XiaomiBluetoothSensorEntity, async_add_entities"
+        },
+        {
+          "call_chains": [
+            "self.processor.entity_data.get"
+          ],
+          "call_patterns": [
+            "get"
+          ],
+          "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+          "function_name": "is_on",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:is_on"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "161:     @property\n162:     def is_on(self) -> bool | None:\n163:         \"\"\"Return the native value.\"\"\"\n164:         return self.processor.entity_data.get(self.entity_key)\n165: \n166:     @property"
+        },
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+          "function_name": "available",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:available"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "166:     @property\n167:     def available(self) -> bool:\n168:         \"\"\"Return True if entity is available.\"\"\"\n169:         return self.processor.coordinator.sleepy_device or super().available"
+        }
+      ],
+      "origin_action_id": "A4",
+      "origin_cluster_id": "xiaomi_ble__binary_sensor__ble_op__read_sensor__ble",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [
+            "passivebluetoothdataupdate",
+            "sensor_device_info_to_hass_device_info",
+            "device_key_to_bluetooth_entity_key",
+            "sensor_update.devices.items",
+            "sensor_update.binary_entity_descriptions.items",
+            "sensor_update.binary_entity_values.items"
+          ],
+          "call_patterns": [
+            "passivebluetoothdataupdate",
+            "sensor_device_info_to_hass_device_info",
+            "device_key_to_bluetooth_entity_key",
+            "items"
+          ],
+          "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+          "function_name": "sensor_update_to_bluetooth_data_update",
+          "path_kind": "read_path",
+          "path_signals": [],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 6,
+          "snippet": "107: \n108: def sensor_update_to_bluetooth_data_update(\n109:     sensor_update: SensorUpdate,\n110: ) -> PassiveBluetoothDataUpdate[bool | None]:\n111:     \"\"\"Convert a sensor update to a bluetooth data update.\"\"\"\n112:     return PassiveBluetoothDataUpdate(\n113:         devices={\n114:             device_id: sensor_device_info_to_hass_device_info(device_info)\n115:             for device_id, device_info in sensor_update.devices.items()\n116:         },\n117:         entity_descriptions={\n118:             device_key_to_bluetooth_entity_key(device_key): BINARY_SENSOR_DESCRIPTIONS[\n119:                 description.device_class\n120:             ]"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read"
+      ],
+      "required_context": [
+        "runtime_path"
+      ],
+      "required_path_signals": [],
+      "required_runtime_roles": [
+        "runtime_read"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "xiaomi_ble:binary_sensor_runtime_read_sensor_control",
+      "runtime_archetypes": [
+        "ble_runtime_read"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:sensor_update_to_bluetooth_data_update",
+        "runtime_call:passivebluetoothdataupdate",
+        "runtime_call:sensor_device_info_to_hass_device_info",
+        "runtime_call:device_key_to_bluetooth_entity_key",
+        "runtime_call:items",
+        "runtime_call:sensor_update.devices.items",
+        "runtime_call:sensor_update.binary_entity_descriptions.items",
+        "runtime_call:sensor_update.binary_entity_values.items"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/xiaomi_ble/binary_sensor.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A4"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+      "why_not_setup": [
+        "exclude_role:setup:async_setup_entry",
+        "exclude_role:property_getter:is_on",
+        "exclude_role:property_getter:available",
+        "exclude_path_signal:setup_function:async_setup_entry",
+        "exclude_path_signal:property_function:is_on",
+        "exclude_path_signal:property_function:available",
+        "exclude_control_path_for_read_like_action"
+      ]
+    }
+  ],
+  "schema_version": "m1_grounding_profile/v3",
+  "version": "draft_llm_v3"
+}

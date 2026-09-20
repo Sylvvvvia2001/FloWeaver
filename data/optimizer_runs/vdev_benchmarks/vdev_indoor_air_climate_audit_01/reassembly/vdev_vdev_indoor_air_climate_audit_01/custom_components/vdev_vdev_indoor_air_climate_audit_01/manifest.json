@@ -1,0 +1,9 @@
+{
+  "codeowners": [],
+  "dependencies": [],
+  "documentation": "https://example.invalid/vibeaura/vdev",
+  "domain": "vdev_vdev_indoor_air_climate_audit_01",
+  "name": "Indoor Air and Climate Audit",
+  "requirements": [],
+  "version": "0.1.0"
+}

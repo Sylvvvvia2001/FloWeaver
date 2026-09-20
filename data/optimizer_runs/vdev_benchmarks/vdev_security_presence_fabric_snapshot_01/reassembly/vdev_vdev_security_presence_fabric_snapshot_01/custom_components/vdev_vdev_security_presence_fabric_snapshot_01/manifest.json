@@ -1,0 +1,9 @@
+{
+  "codeowners": [],
+  "dependencies": [],
+  "documentation": "https://example.invalid/vibeaura/vdev",
+  "domain": "vdev_vdev_security_presence_fabric_snapshot_01",
+  "name": "Security and Presence Fabric Snapshot",
+  "requirements": [],
+  "version": "0.1.0"
+}

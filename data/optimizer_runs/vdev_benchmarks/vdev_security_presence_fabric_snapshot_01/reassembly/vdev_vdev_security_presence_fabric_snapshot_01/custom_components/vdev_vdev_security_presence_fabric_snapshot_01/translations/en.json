@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_security_presence_fabric_snapshot_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Security and Presence Fabric Snapshot"
+}

@@ -1,0 +1,111 @@
+{
+  "generated_at": "2026-07-06T09:51:10.238648+00:00",
+  "producer": "optimizer.m6_trust",
+  "rules": [
+    {
+      "avg_latency_delta_ms": null,
+      "final_state_preserved_rate": 0.0,
+      "last_updated_at": "2026-07-06T09:51:10.238648+00:00",
+      "m6_alignment": {
+        "alignment_status_counts": {
+          "VIOLATED": 1
+        },
+        "final_counterexample_scenarios": [
+          "mut_147"
+        ],
+        "matched_scenarios": [
+          "mut_147"
+        ],
+        "resource_preserved_scenarios": [],
+        "rollback_touched": false,
+        "strict_pass_scenarios": [],
+        "tolerant_pass_scenarios": []
+      },
+      "n_applied": 1,
+      "n_counterexamples": 1,
+      "n_matched": 1,
+      "n_success": 0,
+      "p95_latency_delta_ms": null,
+      "resource_protocol_preserved_rate": 0.0,
+      "rule_id": "rule_M8_cleanup_lifecycle_violation",
+      "trace_preserved_rate": 0.0
+    }
+  ],
+  "schema_version": "validation_stats/v1",
+  "source_contract": {
+    "field_alignment": {
+      "avg_latency_delta_ms": {
+        "derivation": "Optional per-rule latency delta; null when replay does not emit stable latency signals.",
+        "m6_source": [
+          "execution_certificate.json:differential_summary.runtime_policy_summary"
+        ]
+      },
+      "final_state_preserved_rate": {
+        "derivation": "Fraction of matched scenarios with tolerant semantic equivalence.",
+        "m6_source": [
+          "m6_trace_compare.jsonl:tolerant_equal"
+        ]
+      },
+      "last_updated_at": {
+        "derivation": "Timestamp of the trust aggregation pass.",
+        "m6_source": [
+          "execution_certificate.json:generated_at"
+        ]
+      },
+      "n_applied": {
+        "derivation": "Count of matched scenarios evaluated under trust for this rule.",
+        "m6_source": [
+          "m6_trace_compare.jsonl:scenario_id",
+          "m6_trace_compare.jsonl:iteration"
+        ]
+      },
+      "n_counterexamples": {
+        "derivation": "Count of final or rollback-attributed counterexamples mapped to the rule.",
+        "m6_source": [
+          "counterexamples.json[*].scenario_id",
+          "rollback_log.json"
+        ]
+      },
+      "n_matched": {
+        "derivation": "Count of scenarios whose trace or diff signature intersects the rule marker hints.",
+        "m6_source": [
+          "m6_trace_compare.jsonl:scenario_id",
+          "m6_trace_compare.jsonl:diff_signature"
+        ]
+      },
+      "n_success": {
+        "derivation": "Count of matched scenarios that preserve final observable behavior.",
+        "m6_source": [
+          "m6_trace_compare.jsonl:tolerant_equal"
+        ]
+      },
+      "p95_latency_delta_ms": {
+        "derivation": "Optional per-rule p95 latency delta; null when replay does not emit stable latency signals.",
+        "m6_source": [
+          "execution_certificate.json:differential_summary.runtime_policy_summary"
+        ]
+      },
+      "resource_protocol_preserved_rate": {
+        "derivation": "Fraction of matched scenarios whose alignment verdict is PROVED with no suspicious regions.",
+        "m6_source": [
+          "m6_trace_compare.jsonl:alignment_status",
+          "m6_trace_compare.jsonl:suspicious_region_count"
+        ]
+      },
+      "trace_preserved_rate": {
+        "derivation": "Fraction of matched scenarios with strict trace preservation.",
+        "m6_source": [
+          "m6_trace_compare.jsonl:strict_equal"
+        ]
+      }
+    },
+    "intended_upstream": "M6 trust aggregation",
+    "m6_output_files": [
+      "m6_trace_compare.jsonl",
+      "execution_certificate.json",
+      "counterexamples.json",
+      "rollback_log.json",
+      "rule_hardening_decisions.json"
+    ]
+  }
+}

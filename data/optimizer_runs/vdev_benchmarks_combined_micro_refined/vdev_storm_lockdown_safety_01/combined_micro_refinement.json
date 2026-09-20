@@ -1,0 +1,102 @@
+{
+  "accepted_corridors": [
+    {
+      "action_ids": [
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14"
+      ],
+      "batch_ids": [
+        "batch_006",
+        "batch_007",
+        "batch_008"
+      ],
+      "corridor_id": "corridor_00",
+      "latency_saved_ms": 240,
+      "source": "API",
+      "validation_passed": true
+    },
+    {
+      "action_ids": [
+        "A15",
+        "A16",
+        "A17",
+        "A18"
+      ],
+      "batch_ids": [
+        "batch_009",
+        "batch_010",
+        "batch_011",
+        "batch_012"
+      ],
+      "corridor_id": "corridor_01",
+      "latency_saved_ms": 249,
+      "source": "API",
+      "validation_passed": true
+    },
+    {
+      "action_ids": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "batch_ids": [
+        "batch_000",
+        "batch_001",
+        "batch_002",
+        "batch_003"
+      ],
+      "corridor_id": "corridor_00",
+      "latency_saved_ms": 324,
+      "source": "BLE",
+      "validation_passed": true
+    },
+    {
+      "action_ids": [
+        "A5",
+        "A6"
+      ],
+      "batch_ids": [
+        "batch_004",
+        "batch_005"
+      ],
+      "corridor_id": "corridor_01",
+      "latency_saved_ms": 90,
+      "source": "BLE",
+      "validation_passed": true
+    }
+  ],
+  "api_added_savings_ms": 489,
+  "ble_added_savings_ms": 414,
+  "case_name": "Storm Lockdown Safety Routine",
+  "combined_added_savings_ms": 903,
+  "combined_added_savings_ratio": 0.10214932126696832,
+  "combined_refined_estimated_latency_ms": 7937,
+  "conflict_count": 0,
+  "group": "Scene Activation and Comfort Control Routines",
+  "original_estimated_latency_ms": 8840,
+  "rejected_corridors": [],
+  "target_path": "data/targets/vdev_benchmarks/vdev_storm_lockdown_safety_01.json",
+  "validation": {
+    "api_constraints_ok": true,
+    "batch_order_preserved": true,
+    "ble_constraints_ok": true,
+    "component_validations_ok": true,
+    "conflict_free": true,
+    "contiguous_coverage_ok": true,
+    "event_loop_constraints_ok": true,
+    "passed": true,
+    "projection_ok": true,
+    "reasons": [],
+    "savings_consistency_ok": true,
+    "simulated_event_count": 106,
+    "simulated_total_ms": 7937
+  },
+  "vdev_id": "vdev_storm_lockdown_safety_01"
+}

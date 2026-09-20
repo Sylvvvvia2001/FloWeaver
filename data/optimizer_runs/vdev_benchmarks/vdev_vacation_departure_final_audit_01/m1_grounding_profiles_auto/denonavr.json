@@ -1,0 +1,304 @@
+{
+  "integration": "denonavr",
+  "runtime_families": [
+    {
+      "action_kind": "get_state",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "denonavr:media_player.vacation_avr",
+          "denonavr_local",
+          "vacation_avr"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "read",
+          "local_api_read"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [
+        "async_update",
+        "receiver.async_update"
+      ],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "collections",
+          "const",
+          "datetime",
+          "denonavr",
+          "functools"
+        ],
+        "boost_if_names": [
+          "get_state",
+          "async_update",
+          "async_update_audyssey",
+          "receiver.async_update"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "LOCAL_API_READ",
+      "file_globs": [
+        "denonavr/media_player.py"
+      ],
+      "forbidden_context": [
+        "dunder_init"
+      ],
+      "forbidden_path_signals": [
+        "setup_function:async_setup_entry",
+        "setup_call:async_add_entities",
+        "control_function:async_select_source",
+        "control_call:self._receiver.async_set_input_func",
+        "awaited_control_call:self._receiver.async_set_input_func",
+        "control_function:async_set_volume_level",
+        "control_call:self._receiver.async_set_volume",
+        "awaited_control_call:self._receiver.async_set_volume"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "async_update",
+        "async_update_audyssey"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A29"
+      ],
+      "integration": "denonavr",
+      "negative_call_patterns": [
+        "async_add_entities",
+        "denondevice",
+        "config_entry.options.get",
+        "receiver.zones.values",
+        "_logger.debug",
+        "entities.append"
+      ],
+      "negative_evidence": [
+        "negative_function:async_setup_entry",
+        "negative_function:async_select_source",
+        "negative_function:async_set_volume_level",
+        "negative_function:state",
+        "negative_function:source",
+        "negative_call:get",
+        "negative_call:values",
+        "negative_call:debug",
+        "negative_call:async_add_entities",
+        "negative_call:append"
+      ],
+      "negative_function_patterns": [
+        "async_setup_entry",
+        "async_select_source",
+        "async_set_volume_level",
+        "state",
+        "source",
+        "async_turn_on"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [
+            "config_entry.options.get",
+            "receiver.zones.values",
+            "_logger.debug",
+            "async_add_entities",
+            "entities.append",
+            "denondevice"
+          ],
+          "call_patterns": [
+            "get",
+            "values",
+            "debug",
+            "async_add_entities",
+            "append",
+            "denondevice"
+          ],
+          "file_path": "data/repo_snapshot/denonavr/media_player.py",
+          "function_name": "async_setup_entry",
+          "path_kind": "setup_path",
+          "path_signals": [
+            "setup_function:async_setup_entry",
+            "setup_call:async_add_entities"
+          ],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -10,
+          "snippet": "104: \n105: async def async_setup_entry(\n106:     hass: HomeAssistant,\n107:     config_entry: DenonavrConfigEntry,\n108:     async_add_entities: AddConfigEntryEntitiesCallback,\n109: ) -> None:\n110:     \"\"\"Set up the DenonAVR receiver from a config entry.\"\"\"\n111:     entities = []\n112:     receiver = config_entry.runtime_data\n113:     update_audyssey = config_entry.options.get(\n114:         CONF_UPDATE_AUDYSSEY, DEFAULT_UPDATE_AUDYSSEY\n115:     )\n116:     for receiver_zone in receiver.zones.values():\n117:         if config_entry.data[CONF_SERIAL_NUMBER] is not None:"
+        },
+        {
+          "call_chains": [
+            "self._receiver.async_set_input_func"
+          ],
+          "call_patterns": [
+            "async_set_input_func"
+          ],
+          "file_path": "data/repo_snapshot/denonavr/media_player.py",
+          "function_name": "async_select_source",
+          "path_kind": "control_path",
+          "path_signals": [
+            "control_function:async_select_source",
+            "control_call:self._receiver.async_set_input_func",
+            "awaited_control_call:self._receiver.async_set_input_func"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -20,
+          "snippet": "425:     @async_log_errors\n426:     async def async_select_source(self, source: str) -> None:\n427:         \"\"\"Select input source.\"\"\"\n428:         await self._receiver.async_set_input_func(source)\n429: \n430:     @async_log_errors"
+        },
+        {
+          "call_chains": [
+            "float",
+            "self._receiver.async_set_volume"
+          ],
+          "call_patterns": [
+            "float",
+            "async_set_volume"
+          ],
+          "file_path": "data/repo_snapshot/denonavr/media_player.py",
+          "function_name": "async_set_volume_level",
+          "path_kind": "control_path",
+          "path_signals": [
+            "control_function:async_set_volume_level",
+            "control_call:self._receiver.async_set_volume",
+            "awaited_control_call:self._receiver.async_set_volume"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -12,
+          "snippet": "455:     @async_log_errors\n456:     async def async_set_volume_level(self, volume: float) -> None:\n457:         \"\"\"Set volume level, range 0..1.\"\"\"\n458:         # Volume has to be sent in a format like -50.0. Minimum is -80.0,\n459:         # maximum is 18.0\n460:         volume_denon = float((volume * 100) - 80)\n461:         if volume_denon > 18:\n462:             volume_denon = float(18)\n463:         await self._receiver.async_set_volume(volume_denon)\n464: \n465:     @async_log_errors"
+        },
+        {
+          "call_chains": [
+            "denon_state_mapping.get"
+          ],
+          "call_patterns": [
+            "get"
+          ],
+          "file_path": "data/repo_snapshot/denonavr/media_player.py",
+          "function_name": "state",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:state"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "297:     @property\n298:     def state(self) -> MediaPlayerState | None:\n299:         \"\"\"Return the state of the device.\"\"\"\n300:         return DENON_STATE_MAPPING.get(self._receiver.state)\n301: \n302:     @property"
+        },
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/denonavr/media_player.py",
+          "function_name": "source",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:source"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "321:     @property\n322:     def source(self) -> str | None:\n323:         \"\"\"Return the current input source.\"\"\"\n324:         return self._receiver.input_func\n325: \n326:     @property"
+        }
+      ],
+      "origin_action_id": "A29",
+      "origin_cluster_id": "denonavr__media_player__local_api_read__get_state__local",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [
+            "receiver.async_update",
+            "receiver.async_update_audyssey"
+          ],
+          "call_patterns": [
+            "async_update",
+            "async_update_audyssey"
+          ],
+          "file_path": "data/repo_snapshot/denonavr/media_player.py",
+          "function_name": "async_update",
+          "path_kind": "read_path",
+          "path_signals": [
+            "read_function:async_update",
+            "read_call:receiver.async_update",
+            "awaited_read_call:receiver.async_update"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 8,
+          "snippet": "282:     @async_log_errors\n283:     async def async_update(self) -> None:\n284:         \"\"\"Get the latest status information from device.\"\"\"\n285:         receiver = self._receiver\n286: \n287:         # We skip the update if telnet is healthy.\n288:         # When telnet recovers it automatically updates all properties.\n289:         if receiver.telnet_connected and receiver.telnet_healthy:\n290:             return\n291: \n292:         await receiver.async_update()\n293: \n294:         if self._update_audyssey:\n295:             await receiver.async_update_audyssey()"
+        },
+        {
+          "call_chains": [
+            "self._receiver.async_update_audyssey"
+          ],
+          "call_patterns": [
+            "async_update_audyssey"
+          ],
+          "file_path": "data/repo_snapshot/denonavr/media_player.py",
+          "function_name": "async_update_audyssey",
+          "path_kind": "read_path",
+          "path_signals": [],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 6,
+          "snippet": "475:     @async_log_errors\n476:     async def async_update_audyssey(self) -> None:\n477:         \"\"\"Get the latest audyssey information from device.\"\"\"\n478:         await self._receiver.async_update_audyssey()\n479: \n480:     @async_log_errors"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read"
+      ],
+      "required_context": [
+        "runtime_path"
+      ],
+      "required_path_signals": [
+        "read_function:async_update",
+        "read_call:receiver.async_update",
+        "awaited_read_call:receiver.async_update"
+      ],
+      "required_runtime_roles": [
+        "runtime_read"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "denonavr:media_player_local_api_read",
+      "runtime_archetypes": [
+        "local_bridge_getter",
+        "runtime_read"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:async_update",
+        "runtime_function:async_update_audyssey",
+        "runtime_call:async_update",
+        "runtime_call:async_update_audyssey",
+        "runtime_call:receiver.async_update",
+        "runtime_call:receiver.async_update_audyssey",
+        "runtime_call:self._receiver.async_update_audyssey",
+        "path_signal:read_function:async_update",
+        "path_signal:read_call:receiver.async_update",
+        "path_signal:awaited_read_call:receiver.async_update"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/denonavr/media_player.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A29"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+      "why_not_setup": [
+        "exclude_role:setup:async_setup_entry",
+        "exclude_role:runtime_write:async_select_source",
+        "exclude_role:runtime_write:async_set_volume_level",
+        "exclude_role:property_getter:state",
+        "exclude_role:property_getter:source",
+        "exclude_path_signal:setup_function:async_setup_entry",
+        "exclude_path_signal:setup_call:async_add_entities",
+        "exclude_path_signal:control_function:async_select_source"
+      ]
+    }
+  ],
+  "schema_version": "m1_grounding_profile/v3",
+  "version": "draft_llm_v3"
+}

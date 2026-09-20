@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_vacation_mode_house_sweep_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Vacation-Mode House Sweep"
+}

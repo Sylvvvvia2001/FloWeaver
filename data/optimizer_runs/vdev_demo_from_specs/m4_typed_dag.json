@@ -1,0 +1,760 @@
+{
+  "diagnostics": {
+    "removed_hard_edges": [],
+    "warnings": []
+  },
+  "hard_edges": [
+    {
+      "dst_msf": "msf00_006_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A1->A3",
+        "write_depends_on_read"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf00_001_ble_op"
+    },
+    {
+      "dst_msf": "msf01_002_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A1->A3",
+        "write_depends_on_read"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf00_001_ble_op"
+    },
+    {
+      "dst_msf": "msf00_006_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A1->A3",
+        "write_depends_on_read"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf00_002_ble_op"
+    },
+    {
+      "dst_msf": "msf01_002_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A1->A3",
+        "write_depends_on_read"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf00_002_ble_op"
+    },
+    {
+      "dst_msf": "msf00_006_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A1->A3",
+        "write_depends_on_read"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf00_003_ble_op"
+    },
+    {
+      "dst_msf": "msf01_002_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A1->A3",
+        "write_depends_on_read"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf00_003_ble_op"
+    },
+    {
+      "dst_msf": "msf00_006_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A2->A3",
+        "write_depends_on_api"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf00_000_cloud_op"
+    },
+    {
+      "dst_msf": "msf01_002_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A2->A3",
+        "write_depends_on_api"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf00_000_cloud_op"
+    },
+    {
+      "dst_msf": "msf00_006_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A2->A3",
+        "write_depends_on_api"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf00_008_cloud_op"
+    },
+    {
+      "dst_msf": "msf01_002_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A2->A3",
+        "write_depends_on_api"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf00_008_cloud_op"
+    },
+    {
+      "dst_msf": "msf00_006_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A2->A3",
+        "write_depends_on_api"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf00_009_cloud_op"
+    },
+    {
+      "dst_msf": "msf01_002_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A2->A3",
+        "write_depends_on_api"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf00_009_cloud_op"
+    },
+    {
+      "dst_msf": "msf00_006_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A2->A3",
+        "write_depends_on_api"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf01_001_cloud_op"
+    },
+    {
+      "dst_msf": "msf01_002_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A2->A3",
+        "write_depends_on_api"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf01_001_cloud_op"
+    },
+    {
+      "dst_msf": "msf00_006_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A2->A3",
+        "write_depends_on_api"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf01_004_cloud_op"
+    },
+    {
+      "dst_msf": "msf01_002_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A2->A3",
+        "write_depends_on_api"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf01_004_cloud_op"
+    },
+    {
+      "dst_msf": "msf00_006_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A2->A3",
+        "write_depends_on_api"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf01_005_cloud_op"
+    },
+    {
+      "dst_msf": "msf01_002_state_write",
+      "guardable": false,
+      "justification": [
+        "vdev_dep:A2->A3",
+        "write_depends_on_api"
+      ],
+      "kind": "HARD_CONTROL",
+      "src_msf": "msf01_005_cloud_op"
+    }
+  ],
+  "nodes": {
+    "msf00_000_cloud_op": {
+      "action_refs": [
+        "A2"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "msf_id": "msf00_000_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "3bfe9039:_async_update_data:0:30",
+        "3bfe9039:_async_update_data:1:31"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "required_guards": [
+        "resource_available"
+      ],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_ble",
+        "external_call_cloud"
+      ]
+    },
+    "msf00_001_ble_op": {
+      "action_refs": [
+        "A1"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "msf_id": "msf00_001_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "3bfe9039:_async_update_data:0:30",
+        "3bfe9039:_async_update_data:1:31"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "required_guards": [
+        "resource_available"
+      ],
+      "side_effect_sig": [
+        "ble_op",
+        "external_call_ble",
+        "external_call_cloud"
+      ]
+    },
+    "msf00_002_ble_op": {
+      "action_refs": [
+        "A1"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "msf_id": "msf00_002_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "3bfe9039:_async_update_data:0:30",
+        "3bfe9039:_async_update_data:1:31"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "required_guards": [
+        "resource_available"
+      ],
+      "side_effect_sig": [
+        "ble_op",
+        "external_call_ble",
+        "external_call_cloud"
+      ]
+    },
+    "msf00_003_ble_op": {
+      "action_refs": [
+        "A1"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "msf_id": "msf00_003_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "3bfe9039:_async_update_data:0:30",
+        "3bfe9039:_async_update_data:1:31"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "required_guards": [
+        "resource_available"
+      ],
+      "side_effect_sig": [
+        "ble_op",
+        "external_call_ble",
+        "external_call_cloud"
+      ]
+    },
+    "msf00_004_entry_setup": {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "DemoCoordinator",
+        "DemoEntity",
+        "hass"
+      ],
+      "msf_id": "msf00_004_entry_setup",
+      "msf_type": "INIT",
+      "node_ids": [
+        "3bfe9039:async_setup_entry:0:5",
+        "3bfe9039:async_setup_entry:1:6",
+        "3bfe9039:async_setup_entry:2:7",
+        "3bfe9039:async_setup_entry:3:8"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "required_guards": [],
+      "side_effect_sig": [
+        "entry_setup",
+        "state_write"
+      ]
+    },
+    "msf00_005_coord_refresh": {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "DemoCoordinator",
+        "DemoEntity",
+        "hass"
+      ],
+      "msf_id": "msf00_005_coord_refresh",
+      "msf_type": "SYNC",
+      "node_ids": [
+        "3bfe9039:async_setup_entry:0:5",
+        "3bfe9039:async_setup_entry:1:6",
+        "3bfe9039:async_setup_entry:2:7",
+        "3bfe9039:async_setup_entry:3:8"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "required_guards": [],
+      "side_effect_sig": [
+        "coord_refresh",
+        "state_write"
+      ]
+    },
+    "msf00_006_state_write": {
+      "action_refs": [
+        "A3"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "DemoCoordinator",
+        "DemoEntity",
+        "hass"
+      ],
+      "msf_id": "msf00_006_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "3bfe9039:async_setup_entry:0:5",
+        "3bfe9039:async_setup_entry:1:6",
+        "3bfe9039:async_setup_entry:2:7",
+        "3bfe9039:async_setup_entry:3:8"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "side_effect_sig": [
+        "state_write"
+      ]
+    },
+    "msf00_007_entry_unload": {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "entry",
+        "hass"
+      ],
+      "msf_id": "msf00_007_entry_unload",
+      "msf_type": "CLEANUP",
+      "node_ids": [
+        "3bfe9039:async_unload_entry:0:15",
+        "3bfe9039:async_unload_entry:1:16"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "required_guards": [],
+      "side_effect_sig": [
+        "entry_unload",
+        "external_call_cloud"
+      ]
+    },
+    "msf00_008_cloud_op": {
+      "action_refs": [
+        "A2"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "entry",
+        "hass"
+      ],
+      "msf_id": "msf00_008_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "3bfe9039:async_unload_entry:0:15",
+        "3bfe9039:async_unload_entry:1:16"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "required_guards": [
+        "resource_available"
+      ],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    "msf00_009_cloud_op": {
+      "action_refs": [
+        "A2"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "entry",
+        "hass"
+      ],
+      "msf_id": "msf00_009_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "3bfe9039:async_unload_entry:0:15",
+        "3bfe9039:async_unload_entry:1:16"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "required_guards": [
+        "resource_available"
+      ],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    "msf01_000_entry_setup": {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "DemoCloudEntity",
+        "cloud_client"
+      ],
+      "msf_id": "msf01_000_entry_setup",
+      "msf_type": "INIT",
+      "node_ids": [
+        "ac792e94:async_setup_entry:0:5",
+        "ac792e94:async_setup_entry:1:6",
+        "ac792e94:async_setup_entry:2:7"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "required_guards": [],
+      "side_effect_sig": [
+        "entry_setup",
+        "external_call_cloud",
+        "state_write"
+      ]
+    },
+    "msf01_001_cloud_op": {
+      "action_refs": [
+        "A2"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "DemoCloudEntity",
+        "cloud_client"
+      ],
+      "msf_id": "msf01_001_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "ac792e94:async_setup_entry:0:5",
+        "ac792e94:async_setup_entry:1:6",
+        "ac792e94:async_setup_entry:2:7"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "required_guards": [
+        "resource_available"
+      ],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud",
+        "state_write"
+      ]
+    },
+    "msf01_002_state_write": {
+      "action_refs": [
+        "A3"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "DemoCloudEntity",
+        "cloud_client"
+      ],
+      "msf_id": "msf01_002_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "ac792e94:async_setup_entry:0:5",
+        "ac792e94:async_setup_entry:1:6",
+        "ac792e94:async_setup_entry:2:7"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "side_effect_sig": [
+        "external_call_cloud",
+        "state_write"
+      ]
+    },
+    "msf01_003_entry_unload": {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "entry",
+        "hass"
+      ],
+      "msf_id": "msf01_003_entry_unload",
+      "msf_type": "CLEANUP",
+      "node_ids": [
+        "ac792e94:async_unload_entry:0:12",
+        "ac792e94:async_unload_entry:1:13"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "required_guards": [],
+      "side_effect_sig": [
+        "entry_unload",
+        "external_call_cloud"
+      ]
+    },
+    "msf01_004_cloud_op": {
+      "action_refs": [
+        "A2"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "entry",
+        "hass"
+      ],
+      "msf_id": "msf01_004_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "ac792e94:async_unload_entry:0:12",
+        "ac792e94:async_unload_entry:1:13"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "required_guards": [
+        "resource_available"
+      ],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    "msf01_005_cloud_op": {
+      "action_refs": [
+        "A2"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "entry",
+        "hass"
+      ],
+      "msf_id": "msf01_005_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "ac792e94:async_unload_entry:0:12",
+        "ac792e94:async_unload_entry:1:13"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "required_guards": [
+        "resource_available"
+      ],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    }
+  },
+  "resources": {
+    "BLE": {
+      "type": "slot_pool"
+    },
+    "CLOUD": {
+      "type": "rate_budget"
+    },
+    "HA": {
+      "type": "event_loop"
+    }
+  },
+  "soft_constraints": [
+    {
+      "fallback": "preserve_action_order",
+      "guard": "true",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "ble_and_cloud_overlap_risk"
+      },
+      "scope": [
+        "msf00_000_cloud_op",
+        "msf00_003_ble_op",
+        "msf01_004_cloud_op",
+        "msf00_008_cloud_op",
+        "msf01_005_cloud_op",
+        "msf01_001_cloud_op",
+        "msf00_009_cloud_op",
+        "msf00_001_ble_op",
+        "msf00_002_ble_op"
+      ]
+    },
+    {
+      "fallback": "disable_optimization_for_scope",
+      "guard": "runtime_metrics_available",
+      "kind": "COALESCE_STATE_WRITE",
+      "params": {
+        "window_ms": 120
+      },
+      "scope": [
+        "msf00_004_entry_setup",
+        "msf00_005_coord_refresh",
+        "msf00_006_state_write",
+        "msf01_000_entry_setup",
+        "msf01_001_cloud_op",
+        "msf01_002_state_write"
+      ]
+    },
+    {
+      "fallback": "disable_optimization_for_scope",
+      "guard": "runtime_metrics_available",
+      "kind": "COALESCE_STATE_WRITE",
+      "params": {
+        "window_ms": 120
+      },
+      "scope": [
+        "msf00_004_entry_setup",
+        "msf00_005_coord_refresh",
+        "msf00_006_state_write",
+        "msf01_000_entry_setup",
+        "msf01_001_cloud_op",
+        "msf01_002_state_write"
+      ]
+    },
+    {
+      "fallback": "reduce_parallelism",
+      "guard": "resource_constrained",
+      "kind": "BUDGET_K",
+      "params": {
+        "limit": 1,
+        "resource": "BLE"
+      },
+      "scope": [
+        "msf00_000_cloud_op",
+        "msf00_001_ble_op",
+        "msf00_002_ble_op",
+        "msf00_003_ble_op",
+        "msf00_006_state_write",
+        "msf00_008_cloud_op",
+        "msf00_009_cloud_op",
+        "msf01_001_cloud_op",
+        "msf01_002_state_write",
+        "msf01_004_cloud_op",
+        "msf01_005_cloud_op"
+      ]
+    },
+    {
+      "fallback": "reduce_parallelism",
+      "guard": "resource_constrained",
+      "kind": "BUDGET_K",
+      "params": {
+        "limit": 4,
+        "resource": "CLOUD"
+      },
+      "scope": [
+        "msf00_000_cloud_op",
+        "msf00_001_ble_op",
+        "msf00_002_ble_op",
+        "msf00_003_ble_op",
+        "msf00_006_state_write",
+        "msf00_008_cloud_op",
+        "msf00_009_cloud_op",
+        "msf01_001_cloud_op",
+        "msf01_002_state_write",
+        "msf01_004_cloud_op",
+        "msf01_005_cloud_op"
+      ]
+    },
+    {
+      "fallback": "reduce_parallelism",
+      "guard": "resource_constrained",
+      "kind": "BUDGET_K",
+      "params": {
+        "limit": 6,
+        "resource": "TOTAL"
+      },
+      "scope": [
+        "msf00_000_cloud_op",
+        "msf00_001_ble_op",
+        "msf00_002_ble_op",
+        "msf00_003_ble_op",
+        "msf00_006_state_write",
+        "msf00_008_cloud_op",
+        "msf00_009_cloud_op",
+        "msf01_001_cloud_op",
+        "msf01_002_state_write",
+        "msf01_004_cloud_op",
+        "msf01_005_cloud_op"
+      ]
+    },
+    {
+      "fallback": "set_ble_parallelism_to_1",
+      "guard": "ble_timeout_rate_high",
+      "kind": "NO_OVERLAP",
+      "params": {
+        "max_parallel": 1,
+        "resource": "BLE"
+      },
+      "scope": [
+        "msf00_001_ble_op",
+        "msf00_002_ble_op",
+        "msf00_003_ble_op"
+      ]
+    },
+    {
+      "fallback": "reduce_qps_and_batch_size",
+      "guard": "recent_429_rate_high",
+      "kind": "BACKOFF_WINDOW",
+      "params": {
+        "base_ms": 200,
+        "factor": 2.0
+      },
+      "scope": [
+        "msf00_000_cloud_op",
+        "msf00_008_cloud_op",
+        "msf00_009_cloud_op",
+        "msf01_001_cloud_op",
+        "msf01_004_cloud_op",
+        "msf01_005_cloud_op"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "action_lanes": {
+      "A_ble_001": "BLE",
+      "A_ble_002": "BLE",
+      "A_ble_003": "BLE",
+      "A_cloud_001": "CLOUD",
+      "A_ha_ble": "HA",
+      "A_ha_cloud": "HA",
+      "A_ha_overall": "HA"
+    },
+    "baseline": "naive_topo_parallel",
+    "micro_applicable": false,
+    "node_kind": "action_id",
+    "policy": {
+      "ble_parallel": 1,
+      "cloud_parallel": 4,
+      "local_parallel": 4,
+      "max_parallel": 4
+    }
+  },
+  "ordered_batches": [
+    {
+      "batch_id": "naive_batch_000",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_ble_001"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_001",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_ble_002"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_002",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_ble_003",
+          "A_cloud_001"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_003",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_ha_ble",
+          "A_ha_cloud"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_004",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_ha_overall"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    }
+  ]
+}

@@ -1,0 +1,1496 @@
+{
+  "canonicalization_version": "v1",
+  "certificate_id": "cert_f6f591affc3d",
+  "counterexamples": [],
+  "differential_summary": {
+    "compare_meta": {
+      "canonicalization_version": "v1",
+      "commutable_ops": [
+        "COALESCE_STATE_WRITE",
+        "COORD_REFRESH",
+        "STATE_WRITE"
+      ],
+      "config_hash": "73dc0f43df05f421",
+      "equivalence_rules": [],
+      "parallel_action_scopes": []
+    },
+    "counterexample_count": 0,
+    "earliest_violation_summary": {
+      "dominant_target": null,
+      "top_anchors": [],
+      "top_targets": []
+    },
+    "focus_terms": [
+      "tuya:light.energy_audit_1.status",
+      "tuya:light.energy_audit_2.status",
+      "tuya:light.energy_audit_3.status",
+      "tuya:switch.energy_audit_1.status",
+      "tuya:switch.energy_audit_2.status",
+      "tuya:switch.energy_audit_3.status",
+      "tuya:climate.energy_audit_master.status",
+      "tuya:climate.energy_audit_guest.status",
+      "ecobee:thermostat.energy_audit_1",
+      "ecobee:thermostat.energy_audit_2",
+      "sensor.vdev_energy_hvac_audit_expanded_cloud_lane",
+      "sensor.vdev_energy_hvac_audit_expanded_local_lane",
+      "sensor.vdev_energy_hvac_audit_expanded_overall",
+      "sensor.vdev_energy_hvac_audit_expanded_cloud_lane",
+      "sensor.vdev_energy_hvac_audit_expanded_local_lane",
+      "sensor.vdev_energy_hvac_audit_expanded_overall",
+      "vibeaura.run_energy_hvac_audit_expanded_01",
+      "CLOUD_HTTP_CALL",
+      "CLOUD_OP",
+      "CLOUD_STATUS_CALL",
+      "LOCAL_API_READ",
+      "POLL_UPDATE",
+      "STATE_WRITE"
+    ],
+    "hardening_threshold": {
+      "min_coverage": 0.85,
+      "min_pass_rate": 0.98
+    },
+    "rollback_applied_kinds": [
+      "plan_patch",
+      "plan_patch",
+      "plan_patch",
+      "plan_patch"
+    ],
+    "rollback_iterations": 4,
+    "rollback_max_steps": 6,
+    "rule_stats": {
+      "rule_coord_refresh_0d5b7bb134": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": 1.0,
+        "last_updated_at": "2026-04-12T08:55:32.710860+00:00",
+        "m6_alignment": {
+          "alignment_status_counts": {
+            "PROVED": 6
+          },
+          "final_counterexample_scenarios": [],
+          "matched_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ],
+          "resource_preserved_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ],
+          "rollback_touched": false,
+          "strict_pass_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ],
+          "tolerant_pass_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ]
+        },
+        "n_applied": 6,
+        "n_counterexamples": 0,
+        "n_matched": 6,
+        "n_success": 6,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": 1.0,
+        "rule_id": "rule_coord_refresh_0d5b7bb134",
+        "trace_preserved_rate": 1.0
+      },
+      "rule_entry_unload_9d31450f19": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": null,
+        "last_updated_at": "2026-04-12T08:55:32.710860+00:00",
+        "m6_alignment": {
+          "alignment_status_counts": {},
+          "final_counterexample_scenarios": [],
+          "matched_scenarios": [],
+          "resource_preserved_scenarios": [],
+          "rollback_touched": false,
+          "strict_pass_scenarios": [],
+          "tolerant_pass_scenarios": []
+        },
+        "n_applied": 0,
+        "n_counterexamples": 0,
+        "n_matched": 0,
+        "n_success": 0,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": null,
+        "rule_id": "rule_entry_unload_9d31450f19",
+        "trace_preserved_rate": null
+      },
+      "rule_general_209df39611": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": null,
+        "last_updated_at": "2026-04-12T08:55:32.710860+00:00",
+        "m6_alignment": {
+          "alignment_status_counts": {},
+          "final_counterexample_scenarios": [],
+          "matched_scenarios": [],
+          "resource_preserved_scenarios": [],
+          "rollback_touched": false,
+          "strict_pass_scenarios": [],
+          "tolerant_pass_scenarios": []
+        },
+        "n_applied": 0,
+        "n_counterexamples": 0,
+        "n_matched": 0,
+        "n_success": 0,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": null,
+        "rule_id": "rule_general_209df39611",
+        "trace_preserved_rate": null
+      },
+      "rule_protocol_ble_budget_overlap": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": null,
+        "last_updated_at": "2026-04-12T08:55:32.710860+00:00",
+        "m6_alignment": {
+          "alignment_status_counts": {},
+          "final_counterexample_scenarios": [],
+          "matched_scenarios": [],
+          "resource_preserved_scenarios": [],
+          "rollback_touched": false,
+          "strict_pass_scenarios": [],
+          "tolerant_pass_scenarios": []
+        },
+        "n_applied": 0,
+        "n_counterexamples": 0,
+        "n_matched": 0,
+        "n_success": 0,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": null,
+        "rule_id": "rule_protocol_ble_budget_overlap",
+        "trace_preserved_rate": null
+      },
+      "rule_protocol_ble_connect_op_disconnect": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": null,
+        "last_updated_at": "2026-04-12T08:55:32.710860+00:00",
+        "m6_alignment": {
+          "alignment_status_counts": {},
+          "final_counterexample_scenarios": [],
+          "matched_scenarios": [],
+          "resource_preserved_scenarios": [],
+          "rollback_touched": false,
+          "strict_pass_scenarios": [],
+          "tolerant_pass_scenarios": []
+        },
+        "n_applied": 0,
+        "n_counterexamples": 0,
+        "n_matched": 0,
+        "n_success": 0,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": null,
+        "rule_id": "rule_protocol_ble_connect_op_disconnect",
+        "trace_preserved_rate": null
+      },
+      "rule_protocol_ble_reuse_gap": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": null,
+        "last_updated_at": "2026-04-12T08:55:32.710860+00:00",
+        "m6_alignment": {
+          "alignment_status_counts": {},
+          "final_counterexample_scenarios": [],
+          "matched_scenarios": [],
+          "resource_preserved_scenarios": [],
+          "rollback_touched": false,
+          "strict_pass_scenarios": [],
+          "tolerant_pass_scenarios": []
+        },
+        "n_applied": 0,
+        "n_counterexamples": 0,
+        "n_matched": 0,
+        "n_success": 0,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": null,
+        "rule_id": "rule_protocol_ble_reuse_gap",
+        "trace_preserved_rate": null
+      },
+      "rule_protocol_cloud_backoff": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": 1.0,
+        "last_updated_at": "2026-04-12T08:55:32.710860+00:00",
+        "m6_alignment": {
+          "alignment_status_counts": {
+            "PROVED": 6
+          },
+          "final_counterexample_scenarios": [],
+          "matched_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ],
+          "resource_preserved_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ],
+          "rollback_touched": false,
+          "strict_pass_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ],
+          "tolerant_pass_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ]
+        },
+        "n_applied": 6,
+        "n_counterexamples": 0,
+        "n_matched": 6,
+        "n_success": 6,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": 1.0,
+        "rule_id": "rule_protocol_cloud_backoff",
+        "trace_preserved_rate": 1.0
+      },
+      "rule_protocol_cloud_batch_reuse": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": 1.0,
+        "last_updated_at": "2026-04-12T08:55:32.710860+00:00",
+        "m6_alignment": {
+          "alignment_status_counts": {
+            "PROVED": 6
+          },
+          "final_counterexample_scenarios": [],
+          "matched_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ],
+          "resource_preserved_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ],
+          "rollback_touched": false,
+          "strict_pass_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ],
+          "tolerant_pass_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ]
+        },
+        "n_applied": 6,
+        "n_counterexamples": 0,
+        "n_matched": 6,
+        "n_success": 6,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": 1.0,
+        "rule_id": "rule_protocol_cloud_batch_reuse",
+        "trace_preserved_rate": 1.0
+      },
+      "rule_protocol_cloud_budget_rate": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": 1.0,
+        "last_updated_at": "2026-04-12T08:55:32.710860+00:00",
+        "m6_alignment": {
+          "alignment_status_counts": {
+            "PROVED": 6
+          },
+          "final_counterexample_scenarios": [],
+          "matched_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ],
+          "resource_preserved_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ],
+          "rollback_touched": false,
+          "strict_pass_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ],
+          "tolerant_pass_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ]
+        },
+        "n_applied": 6,
+        "n_counterexamples": 0,
+        "n_matched": 6,
+        "n_success": 6,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": 1.0,
+        "rule_id": "rule_protocol_cloud_budget_rate",
+        "trace_preserved_rate": 1.0
+      },
+      "rule_protocol_cloud_refresh_before_call": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": 1.0,
+        "last_updated_at": "2026-04-12T08:55:32.710860+00:00",
+        "m6_alignment": {
+          "alignment_status_counts": {
+            "PROVED": 6
+          },
+          "final_counterexample_scenarios": [],
+          "matched_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ],
+          "resource_preserved_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ],
+          "rollback_touched": false,
+          "strict_pass_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ],
+          "tolerant_pass_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ]
+        },
+        "n_applied": 6,
+        "n_counterexamples": 0,
+        "n_matched": 6,
+        "n_success": 6,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": 1.0,
+        "rule_id": "rule_protocol_cloud_refresh_before_call",
+        "trace_preserved_rate": 1.0
+      },
+      "rule_protocol_local_api_budget": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": 1.0,
+        "last_updated_at": "2026-04-12T08:55:32.710860+00:00",
+        "m6_alignment": {
+          "alignment_status_counts": {
+            "PROVED": 6
+          },
+          "final_counterexample_scenarios": [],
+          "matched_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ],
+          "resource_preserved_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ],
+          "rollback_touched": false,
+          "strict_pass_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ],
+          "tolerant_pass_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ]
+        },
+        "n_applied": 6,
+        "n_counterexamples": 0,
+        "n_matched": 6,
+        "n_success": 6,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": 1.0,
+        "rule_id": "rule_protocol_local_api_budget",
+        "trace_preserved_rate": 1.0
+      },
+      "rule_state_write_3038cae0b8": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": 1.0,
+        "last_updated_at": "2026-04-12T08:55:32.710860+00:00",
+        "m6_alignment": {
+          "alignment_status_counts": {
+            "PROVED": 6
+          },
+          "final_counterexample_scenarios": [],
+          "matched_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ],
+          "resource_preserved_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ],
+          "rollback_touched": false,
+          "strict_pass_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ],
+          "tolerant_pass_scenarios": [
+            "baseline_happy_path__run0",
+            "baseline_happy_path__run1",
+            "fault_cloud_429__run0",
+            "fault_cloud_429__run1",
+            "fault_ble_disconnect__run0",
+            "fault_ble_disconnect__run1"
+          ]
+        },
+        "n_applied": 6,
+        "n_counterexamples": 0,
+        "n_matched": 6,
+        "n_success": 6,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": 1.0,
+        "rule_id": "rule_state_write_3038cae0b8",
+        "trace_preserved_rate": 1.0
+      },
+      "rule_subscribe_ab1fa62e3a": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": null,
+        "last_updated_at": "2026-04-12T08:55:32.710860+00:00",
+        "m6_alignment": {
+          "alignment_status_counts": {},
+          "final_counterexample_scenarios": [],
+          "matched_scenarios": [],
+          "resource_preserved_scenarios": [],
+          "rollback_touched": false,
+          "strict_pass_scenarios": [],
+          "tolerant_pass_scenarios": []
+        },
+        "n_applied": 0,
+        "n_counterexamples": 0,
+        "n_matched": 0,
+        "n_success": 0,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": null,
+        "rule_id": "rule_subscribe_ab1fa62e3a",
+        "trace_preserved_rate": null
+      }
+    },
+    "runtime_policy_summary": [],
+    "scenario_total": 6,
+    "strict_pass": 6,
+    "tolerant_pass": 6
+  },
+  "generated_at": "2026-04-12T08:55:32.710860+00:00",
+  "hard_edge_proof": {
+    "acyclic": true,
+    "edge_count": 10,
+    "edges": [
+      {
+        "dst_msf": "msf04_000_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A1->A13",
+          "cloud_write_depends_on_a1"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf05_000_cloud_http_call"
+      },
+      {
+        "dst_msf": "msf04_000_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A3->A13",
+          "cloud_write_depends_on_a3"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf05_005_cloud_status_call"
+      },
+      {
+        "dst_msf": "msf04_000_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A4->A13",
+          "cloud_write_depends_on_a4"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf06_000_cloud_http_call"
+      },
+      {
+        "dst_msf": "msf04_000_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A6->A13",
+          "cloud_write_depends_on_a6"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf06_003_cloud_status_call"
+      },
+      {
+        "dst_msf": "msf04_000_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A7->A13",
+          "cloud_write_depends_on_a7"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf03_000_cloud_http_call"
+      },
+      {
+        "dst_msf": "msf04_000_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A8->A13",
+          "cloud_write_depends_on_a8"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf03_006_cloud_status_call"
+      },
+      {
+        "dst_msf": "msf04_000_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A10->A13",
+          "cloud_write_depends_on_a10"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf00_005_cloud_status_call"
+      },
+      {
+        "dst_msf": "msf02_000_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A12->A14",
+          "local_write_depends_on_a12"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf02_005_local_api_read"
+      },
+      {
+        "dst_msf": "msf01_000_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A13->A15",
+          "overall_write_depends_on_cloud_lane"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf04_000_state_write"
+      },
+      {
+        "dst_msf": "msf01_000_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A14->A15",
+          "overall_write_depends_on_local_lane"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf02_000_state_write"
+      }
+    ]
+  },
+  "integration": "vdev_energy_hvac_audit_expanded_01",
+  "msf_signatures": [
+    {
+      "msf_id": "msf00_000_entry_setup",
+      "phase": "SETUP",
+      "side_effect_sig": [
+        "entry_setup",
+        "external_call_cloud",
+        "state_write"
+      ],
+      "type": "INIT"
+    },
+    {
+      "msf_id": "msf00_001_state_write",
+      "phase": "SETUP",
+      "side_effect_sig": [
+        "state_write"
+      ],
+      "type": "UPDATE"
+    },
+    {
+      "msf_id": "msf00_002_state_write",
+      "phase": "SETUP",
+      "side_effect_sig": [
+        "state_write"
+      ],
+      "type": "UPDATE"
+    },
+    {
+      "msf_id": "msf00_003_state_write",
+      "phase": "SETUP",
+      "side_effect_sig": [
+        "external_call_cloud",
+        "state_write"
+      ],
+      "type": "UPDATE"
+    },
+    {
+      "msf_id": "msf00_004_state_write",
+      "phase": "SETUP",
+      "side_effect_sig": [
+        "external_call_cloud",
+        "state_write"
+      ],
+      "type": "UPDATE"
+    },
+    {
+      "msf_id": "msf00_005_cloud_status_call",
+      "phase": "RUNTIME",
+      "side_effect_sig": [
+        "cloud_status_call"
+      ],
+      "type": "ACT"
+    },
+    {
+      "msf_id": "msf01_000_state_write",
+      "phase": "RUNTIME",
+      "side_effect_sig": [
+        "state_write"
+      ],
+      "type": "UPDATE"
+    },
+    {
+      "msf_id": "msf01_001_entry_setup",
+      "phase": "SETUP",
+      "side_effect_sig": [
+        "entry_setup",
+        "external_call_cloud",
+        "unsubscribe"
+      ],
+      "type": "INIT"
+    },
+    {
+      "msf_id": "msf01_002_unsubscribe",
+      "phase": "TEARDOWN",
+      "side_effect_sig": [
+        "unsubscribe"
+      ],
+      "type": "CLEANUP"
+    },
+    {
+      "msf_id": "msf01_003_unsubscribe",
+      "phase": "TEARDOWN",
+      "side_effect_sig": [
+        "external_call_cloud",
+        "unsubscribe"
+      ],
+      "type": "CLEANUP"
+    },
+    {
+      "msf_id": "msf02_000_state_write",
+      "phase": "RUNTIME",
+      "side_effect_sig": [
+        "state_write"
+      ],
+      "type": "UPDATE"
+    },
+    {
+      "msf_id": "msf02_005_local_api_read",
+      "phase": "RUNTIME",
+      "side_effect_sig": [
+        "local_api_read"
+      ],
+      "type": "ACT"
+    },
+    {
+      "msf_id": "msf03_000_cloud_http_call",
+      "phase": "RUNTIME",
+      "side_effect_sig": [
+        "cloud_http_call",
+        "external_call_cloud"
+      ],
+      "type": "ACT"
+    },
+    {
+      "msf_id": "msf03_006_cloud_status_call",
+      "phase": "SETUP",
+      "side_effect_sig": [
+        "cloud_status_call"
+      ],
+      "type": "ACT"
+    },
+    {
+      "msf_id": "msf04_000_state_write",
+      "phase": "RUNTIME",
+      "side_effect_sig": [
+        "state_write"
+      ],
+      "type": "UPDATE"
+    },
+    {
+      "msf_id": "msf05_000_cloud_http_call",
+      "phase": "RUNTIME",
+      "side_effect_sig": [
+        "cloud_http_call",
+        "external_call_cloud"
+      ],
+      "type": "ACT"
+    },
+    {
+      "msf_id": "msf05_004_entry_setup",
+      "phase": "SETUP",
+      "side_effect_sig": [
+        "entry_setup",
+        "external_call_cloud"
+      ],
+      "type": "INIT"
+    },
+    {
+      "msf_id": "msf05_005_cloud_status_call",
+      "phase": "RUNTIME",
+      "side_effect_sig": [
+        "cloud_status_call"
+      ],
+      "type": "ACT"
+    },
+    {
+      "msf_id": "msf06_000_cloud_http_call",
+      "phase": "SETUP",
+      "side_effect_sig": [
+        "cloud_http_call",
+        "external_call_cloud"
+      ],
+      "type": "ACT"
+    },
+    {
+      "msf_id": "msf06_002_entry_setup",
+      "phase": "SETUP",
+      "side_effect_sig": [
+        "entry_setup",
+        "external_call_cloud"
+      ],
+      "type": "INIT"
+    },
+    {
+      "msf_id": "msf06_003_cloud_status_call",
+      "phase": "RUNTIME",
+      "side_effect_sig": [
+        "cloud_status_call"
+      ],
+      "type": "ACT"
+    }
+  ],
+  "plan_summary": {
+    "action_count": 15,
+    "batch_count": 15,
+    "batches": [
+      {
+        "batch_id": "batch_000",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_001",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_002",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_003",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_004",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_005",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_006",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_007",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_008",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_009",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_010",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_011",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_012",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_013",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      },
+      {
+        "batch_id": "batch_014",
+        "constraint_kinds": [],
+        "fallback_count": 2,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": 1.0,
+          "window_ms": null
+        },
+        "session_policy": {
+          "max_age_s": 0,
+          "reuse": false
+        }
+      }
+    ],
+    "forced_pick_batch_count": 0,
+    "group_count": 15,
+    "max_group_size": 1,
+    "policy": {
+      "ble_parallel": 1,
+      "cloud_parallel": 3,
+      "default_qps": 5.0,
+      "local_parallel": 6,
+      "max_parallel": 9
+    },
+    "policy_snapshot": {}
+  },
+  "profile_version": "ha_profile_default",
+  "schema_version": "execution_certificate/v1",
+  "soft_constraints": [
+    {
+      "fallback": "serialize_local_api_reads",
+      "guard": "local_endpoint_reachable",
+      "kind": "BUDGET_K",
+      "params": {
+        "limit": 4,
+        "resource": "LOCAL_PARALLEL",
+        "rule_id": "rule_protocol_local_api_budget",
+        "template_kind": "BUDGET_K"
+      },
+      "scope": [
+        "msf02_005_local_api_read"
+      ]
+    },
+    {
+      "fallback": "serialize_local_api_reads",
+      "guard": "local_endpoint_reachable",
+      "kind": "SAME_SESSION_GROUP",
+      "params": {
+        "group_key": "endpoint",
+        "reuse_window_ms": 5000,
+        "rule_id": "rule_protocol_local_api_budget",
+        "template_kind": "SAME_SESSION_GROUP"
+      },
+      "scope": [
+        "msf02_005_local_api_read"
+      ]
+    },
+    {
+      "fallback": "reduce_qps_and_parallelism",
+      "guard": "recent_429_rate_high",
+      "kind": "BUDGET_K",
+      "params": {
+        "limit": 4,
+        "resource": "CLOUD_PARALLEL",
+        "rule_id": "rule_protocol_cloud_budget_rate",
+        "template_kind": "BUDGET_K"
+      },
+      "scope": [
+        "msf03_000_cloud_http_call",
+        "msf05_000_cloud_http_call",
+        "msf06_000_cloud_http_call"
+      ]
+    },
+    {
+      "fallback": "reduce_qps_and_parallelism",
+      "guard": "recent_429_rate_high",
+      "kind": "RATE_LIMIT",
+      "params": {
+        "burst": 8,
+        "max_qps": 5.0,
+        "rule_id": "rule_protocol_cloud_budget_rate",
+        "template_kind": "RATE_LIMIT",
+        "window_ms": 1000
+      },
+      "scope": [
+        "msf03_000_cloud_http_call",
+        "msf05_000_cloud_http_call",
+        "msf06_000_cloud_http_call"
+      ]
+    },
+    {
+      "fallback": "backoff_then_shrink_batch",
+      "guard": "recent_429_rate_high",
+      "kind": "BACKOFF_WINDOW",
+      "params": {
+        "base_ms": 200,
+        "factor": 2.0,
+        "max_ms": 2000,
+        "rule_id": "rule_protocol_cloud_backoff",
+        "template_kind": "BACKOFF_WINDOW"
+      },
+      "scope": [
+        "msf03_000_cloud_http_call",
+        "msf05_000_cloud_http_call",
+        "msf06_000_cloud_http_call"
+      ]
+    },
+    {
+      "fallback": "disable_batching_use_singleton_calls",
+      "guard": "latency_budget_allows_batching AND 429_rate_low",
+      "kind": "BATCH_GROUP",
+      "params": {
+        "group_key": "endpoint",
+        "idempotent_only": true,
+        "max_batch_size": 20,
+        "max_wait_ms": 80,
+        "rule_id": "rule_protocol_cloud_batch_reuse",
+        "template_kind": "BATCH_GROUP"
+      },
+      "scope": [
+        "msf03_000_cloud_http_call",
+        "msf05_000_cloud_http_call",
+        "msf06_000_cloud_http_call"
+      ]
+    },
+    {
+      "fallback": "disable_batching_use_singleton_calls",
+      "guard": "latency_budget_allows_batching AND 429_rate_low",
+      "kind": "SAME_SESSION_GROUP",
+      "params": {
+        "group_key": "host",
+        "reuse_window_ms": 10000,
+        "rule_id": "rule_protocol_cloud_batch_reuse",
+        "template_kind": "SAME_SESSION_GROUP"
+      },
+      "scope": [
+        "msf03_000_cloud_http_call",
+        "msf05_000_cloud_http_call",
+        "msf06_000_cloud_http_call"
+      ]
+    },
+    {
+      "fallback": "reduce_parallelism",
+      "guard": "resource_constrained",
+      "kind": "BUDGET_K",
+      "params": {
+        "limit": 1,
+        "resource": "BLE"
+      },
+      "scope": [
+        "msf00_005_cloud_status_call",
+        "msf01_000_state_write",
+        "msf02_000_state_write",
+        "msf02_005_local_api_read",
+        "msf03_000_cloud_http_call",
+        "msf03_006_cloud_status_call",
+        "msf04_000_state_write",
+        "msf05_000_cloud_http_call",
+        "msf05_005_cloud_status_call",
+        "msf06_000_cloud_http_call",
+        "msf06_003_cloud_status_call"
+      ]
+    },
+    {
+      "fallback": "reduce_parallelism",
+      "guard": "resource_constrained",
+      "kind": "BUDGET_K",
+      "params": {
+        "limit": 4,
+        "resource": "CLOUD"
+      },
+      "scope": [
+        "msf00_005_cloud_status_call",
+        "msf03_000_cloud_http_call",
+        "msf03_006_cloud_status_call",
+        "msf05_000_cloud_http_call",
+        "msf05_005_cloud_status_call",
+        "msf06_000_cloud_http_call",
+        "msf06_003_cloud_status_call"
+      ]
+    },
+    {
+      "fallback": "reduce_parallelism",
+      "guard": "resource_constrained",
+      "kind": "BUDGET_K",
+      "params": {
+        "limit": 6,
+        "resource": "LOCAL"
+      },
+      "scope": [
+        "msf00_005_cloud_status_call",
+        "msf01_000_state_write",
+        "msf02_000_state_write",
+        "msf02_005_local_api_read",
+        "msf03_000_cloud_http_call",
+        "msf03_006_cloud_status_call",
+        "msf04_000_state_write",
+        "msf05_000_cloud_http_call",
+        "msf05_005_cloud_status_call",
+        "msf06_000_cloud_http_call",
+        "msf06_003_cloud_status_call"
+      ]
+    },
+    {
+      "fallback": "reduce_parallelism",
+      "guard": "resource_constrained",
+      "kind": "BUDGET_K",
+      "params": {
+        "limit": 10,
+        "resource": "TOTAL"
+      },
+      "scope": [
+        "msf00_005_cloud_status_call",
+        "msf01_000_state_write",
+        "msf02_000_state_write",
+        "msf02_005_local_api_read",
+        "msf03_000_cloud_http_call",
+        "msf03_006_cloud_status_call",
+        "msf04_000_state_write",
+        "msf05_000_cloud_http_call",
+        "msf05_005_cloud_status_call",
+        "msf06_000_cloud_http_call",
+        "msf06_003_cloud_status_call"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "guard": "true",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:DATA_DEP"
+      },
+      "scope": [
+        "msf00_000_entry_setup",
+        "msf00_001_state_write"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "guard": "true",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:DATA_DEP"
+      },
+      "scope": [
+        "msf00_000_entry_setup",
+        "msf00_002_state_write"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "guard": "true",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:DATA_DEP"
+      },
+      "scope": [
+        "msf00_000_entry_setup",
+        "msf00_003_state_write"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "guard": "true",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:DATA_DEP"
+      },
+      "scope": [
+        "msf00_000_entry_setup",
+        "msf00_004_state_write"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "guard": "true",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:DATA_DEP"
+      },
+      "scope": [
+        "msf00_001_state_write",
+        "msf00_002_state_write"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "guard": "true",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:DATA_DEP"
+      },
+      "scope": [
+        "msf00_002_state_write",
+        "msf00_003_state_write"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "guard": "true",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:DATA_DEP"
+      },
+      "scope": [
+        "msf00_003_state_write",
+        "msf00_004_state_write"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "guard": "true",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:CONTROL_DEP"
+      },
+      "scope": [
+        "msf02_000_state_write",
+        "msf02_005_local_api_read"
+      ]
+    }
+  ]
+}

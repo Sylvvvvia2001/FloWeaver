@@ -1,0 +1,35 @@
+{
+  "strict_equal": false,
+  "tolerant_equal": false,
+  "scenario_id": "baseline_happy_path",
+  "baseline_contract": {
+    "canonicalization_version": "v1",
+    "passed": true,
+    "failed_ops": [],
+    "missing_required_state_writes": []
+  },
+  "optimized_contract": {
+    "canonicalization_version": "v1",
+    "passed": true,
+    "failed_ops": [],
+    "missing_required_state_writes": []
+  },
+  "diff_signature": [
+    {
+      "anchor": "RUNTIME:BLE:BLE_CONNECT:ble:aa:bb:cc",
+      "baseline_ops": [
+        "RUNTIME:BLE:BLE_CONNECT:ble:aa:bb:cc",
+        "RUNTIME:CLOUD:CLOUD_HTTP_CALL:tuya:device.control"
+      ],
+      "optimized_ops": [
+        "RUNTIME:CLOUD:CLOUD_HTTP_CALL:tuya:device.control",
+        "RUNTIME:BLE:BLE_CONNECT:ble:aa:bb:cc"
+      ],
+      "severity": "MEDIUM"
+    }
+  ],
+  "compare_meta": {
+    "canonicalization_version": "v1",
+    "config_hash": "template_demo_v1"
+  }
+}

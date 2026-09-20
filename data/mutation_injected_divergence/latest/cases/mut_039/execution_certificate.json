@@ -1,0 +1,230 @@
+{
+  "canonicalization_version": "v1",
+  "certificate_id": "cert_f304e46a0560",
+  "counterexamples": [
+    {
+      "alignment_status": "PARTIAL",
+      "counterexample_id": "cex_0914b5e560",
+      "culprit_ids": [
+        "RUNTIME:HA:STATE_WRITE:long-chain:215:m2:entity"
+      ],
+      "diff_summary": {
+        "baseline_state_at_divergence": {
+          "exception_category": null,
+          "resource_keys": [],
+          "state_writes": {}
+        },
+        "baseline_trace_prefix": [],
+        "counterexample_verdict": "DIFF_FOUND",
+        "divergence_point": {
+          "details": {
+            "compare_meta": {
+              "canonicalization_version": "v1",
+              "commutable_ops": [
+                "COORD_REFRESH",
+                "STATE_WRITE"
+              ],
+              "config_hash": "9285a670239fb92a",
+              "equivalence_rules": [],
+              "parallel_action_scopes": []
+            },
+            "diff_hunks": [
+              {
+                "anchor": "RUNTIME:HA:STATE_WRITE:long-chain:215:m2:entity",
+                "baseline_ops": [],
+                "optimized_ops": [
+                  "RUNTIME:HA:STATE_WRITE:long-chain:215:m2:entity"
+                ],
+                "severity": "HIGH"
+              }
+            ]
+          },
+          "kind": "SPLIT",
+          "reason": "trace_prefix_mismatch",
+          "step": 1,
+          "useg_node_id": "useg_0000"
+        },
+        "environment_assumptions": {
+          "framework_events": [
+            "runtime"
+          ],
+          "path_assumptions": [
+            "scenario:mut_039"
+          ],
+          "suspicious_region_id": "sr_004",
+          "toggle_assumptions": {
+            "mutation_type": "M2_premature_state_writeback"
+          }
+        },
+        "hunks": [
+          {
+            "anchor": "RUNTIME:HA:STATE_WRITE:long-chain:215:m2:entity",
+            "baseline_ops": [
+              "RUNTIME:HA:STATE_WRITE:long-chain:215:m2:entity"
+            ],
+            "optimized_ops": [],
+            "severity": "HIGH"
+          },
+          {
+            "anchor": "RUNTIME:HA:STATE_WRITE:long-chain:215:m2:entity",
+            "baseline_ops": [],
+            "optimized_ops": [
+              "RUNTIME:HA:STATE_WRITE:long-chain:215:m2:entity"
+            ],
+            "severity": "HIGH"
+          }
+        ],
+        "inferred_by": "check_observation_schema_or_alignment_rule",
+        "input_assumptions": {
+          "symbolic_inputs": {
+            "scenario_id": "mut_039"
+          }
+        },
+        "kind": "order_violation",
+        "minimal_conditions": [
+          "scenario:mut_039",
+          "symbolic_inputs.scenario_id=mut_039",
+          "toggle_assumptions.mutation_type=M2_premature_state_writeback",
+          "framework_event:runtime"
+        ],
+        "optimized_state_at_divergence": {
+          "exception_category": null,
+          "resource_keys": [],
+          "state_writes": {
+            "long-chain:215:m2:entity": {
+              "action_id": "A_write"
+            }
+          }
+        },
+        "optimized_trace_prefix": [
+          {
+            "corr_id": null,
+            "op": "STATE_WRITE",
+            "params_abst": {
+              "action_id": "A_write"
+            },
+            "phase": "RUNTIME",
+            "provider": "HA",
+            "target": "long-chain:215:m2:entity",
+            "ts": 0.0
+          }
+        ],
+        "refinement_hint": "check_observation_schema_or_alignment_rule",
+        "suspicious_region_id": "sr_004",
+        "violated_property": "TRACE_MISMATCH"
+      },
+      "execution_plan_hash": null,
+      "scenario_id": "mut_039",
+      "suspicious_region_count": 5,
+      "trust_plan_hash": null,
+      "violated_assertion": "observable_semantic_equivalence"
+    }
+  ],
+  "differential_summary": {
+    "compare_meta": {
+      "canonicalization_version": "v1",
+      "commutable_ops": [
+        "COORD_REFRESH",
+        "STATE_WRITE"
+      ],
+      "config_hash": "9285a670239fb92a",
+      "equivalence_rules": [],
+      "parallel_action_scopes": []
+    },
+    "counterexample_count": 1,
+    "earliest_violation_summary": {
+      "dominant_target": "long:chain:215:m2:entity",
+      "top_anchors": [
+        [
+          "RUNTIME:HA:STATE_WRITE:long-chain:215:m2:entity",
+          1
+        ]
+      ],
+      "top_targets": [
+        [
+          "long:chain:215:m2:entity",
+          1
+        ]
+      ]
+    },
+    "focus_terms": [
+      "long-chain:215:m2:device",
+      "long-chain:215:m2:entity",
+      "DEVICE_COMMAND",
+      "RESPONSE_RECV",
+      "STATE_WRITE"
+    ],
+    "hardening_threshold": {
+      "min_coverage": 0.85,
+      "min_pass_rate": 0.98
+    },
+    "rollback_applied_kinds": [],
+    "rollback_iterations": 0,
+    "rollback_max_steps": 1,
+    "rule_stats": {
+      "rule_M2_premature_state_writeback": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": 0.0,
+        "last_updated_at": "2026-07-06T09:51:07.631544+00:00",
+        "m6_alignment": {
+          "alignment_status_counts": {
+            "PARTIAL": 1
+          },
+          "final_counterexample_scenarios": [
+            "mut_039"
+          ],
+          "matched_scenarios": [
+            "mut_039"
+          ],
+          "resource_preserved_scenarios": [],
+          "rollback_touched": false,
+          "strict_pass_scenarios": [],
+          "tolerant_pass_scenarios": []
+        },
+        "n_applied": 1,
+        "n_counterexamples": 1,
+        "n_matched": 1,
+        "n_success": 0,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": 0.0,
+        "rule_id": "rule_M2_premature_state_writeback",
+        "trace_preserved_rate": 0.0
+      }
+    },
+    "runtime_policy_summary": [],
+    "scenario_total": 1,
+    "strict_pass": 0,
+    "tolerant_pass": 0
+  },
+  "generated_at": "2026-07-06T09:51:07.631544+00:00",
+  "hard_edge_proof": {
+    "acyclic": true,
+    "edge_count": 0,
+    "edges": []
+  },
+  "integration": "mut_039",
+  "mssu_signatures": [
+    {
+      "mssu_id": "m01",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m02",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m03",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    }
+  ],
+  "plan_summary": {},
+  "profile_version": "mutation_suite/v1",
+  "schema_version": "execution_certificate/v1",
+  "soft_constraints": []
+}

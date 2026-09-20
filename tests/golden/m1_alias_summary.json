@@ -1,0 +1,9 @@
+{
+  "kinds": [
+    "ENTRY_SETUP",
+    "STATE_WRITE",
+    "SUBSCRIBE"
+  ],
+  "direct": 0,
+  "alias": 2
+}

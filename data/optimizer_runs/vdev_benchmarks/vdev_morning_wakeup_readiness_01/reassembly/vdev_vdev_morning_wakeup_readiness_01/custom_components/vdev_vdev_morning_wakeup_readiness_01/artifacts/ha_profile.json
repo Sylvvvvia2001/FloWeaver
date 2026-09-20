@@ -1,0 +1,3619 @@
+{
+  "created_at": "2026-04-12T07:29:04.897270+00:00",
+  "lifecycle_templates": [
+    {
+      "edge_kind": "HARD_LIFECYCLE",
+      "requires": [
+        "SUBSCRIBE",
+        "UNSUBSCRIBE"
+      ],
+      "template_id": "pair:subscribe_unsubscribe"
+    },
+    {
+      "edge_kind": "HARD_LIFECYCLE",
+      "requires_order": [
+        "COORD_REFRESH",
+        "STATE_WRITE"
+      ],
+      "template_id": "precedence:first_refresh_before_state_write"
+    },
+    {
+      "edge_kind": "HARD_LIFECYCLE",
+      "requires": [
+        "LOCK_ACQUIRE",
+        "LOCK_RELEASE"
+      ],
+      "template_id": "pair:acquire_release"
+    },
+    {
+      "edge_kind": "HARD_LIFECYCLE",
+      "requires_order": [
+        "ENTRY_SETUP",
+        "COORD_REFRESH"
+      ],
+      "template_id": "rule:rule_general_209df39611:0"
+    },
+    {
+      "edge_kind": "HARD_LIFECYCLE",
+      "requires_order": [
+        "UNSUBSCRIBE",
+        "ENTRY_UNLOAD"
+      ],
+      "template_id": "rule:rule_entry_unload_9d31450f19:0"
+    },
+    {
+      "edge_kind": "HARD_LIFECYCLE",
+      "params": {
+        "pair_key": "host"
+      },
+      "requires_order": [
+        "CLOUD_TOKEN_REFRESH",
+        "CLOUD_HTTP_CALL"
+      ],
+      "template_id": "rule:rule_protocol_cloud_refresh_before_call:0"
+    },
+    {
+      "edge_kind": "HARD_LIFECYCLE",
+      "params": {
+        "pair_key": "device_id"
+      },
+      "requires_order": [
+        "BLE_CONNECT",
+        "BLE_GATT_OP"
+      ],
+      "template_id": "rule:rule_protocol_ble_connect_op_disconnect:0"
+    },
+    {
+      "edge_kind": "HARD_LIFECYCLE",
+      "params": {
+        "pair_key": "device_id"
+      },
+      "requires_order": [
+        "BLE_GATT_OP",
+        "BLE_DISCONNECT"
+      ],
+      "template_id": "rule:rule_protocol_ble_connect_op_disconnect:1"
+    }
+  ],
+  "marker_detectors": [
+    {
+      "id": "func:async_setup_entry",
+      "match": {
+        "function_names": [
+          "async_setup_entry"
+        ]
+      },
+      "phase": "SETUP",
+      "strength": "STRONG",
+      "type": "ENTRY_SETUP"
+    },
+    {
+      "id": "func:async_unload_entry",
+      "match": {
+        "function_names": [
+          "async_unload_entry",
+          "async_remove_entry"
+        ]
+      },
+      "phase": "TEARDOWN",
+      "strength": "STRONG",
+      "type": "ENTRY_UNLOAD"
+    },
+    {
+      "id": "call:state_write",
+      "match": {
+        "call_attrs": [
+          "async_write_ha_state",
+          "schedule_update_ha_state"
+        ]
+      },
+      "phase": "RUNTIME",
+      "strength": "STRONG",
+      "type": "STATE_WRITE"
+    },
+    {
+      "id": "call:coordinator_refresh",
+      "match": {
+        "call_attrs": [
+          "async_config_entry_first_refresh",
+          "_async_update_data",
+          "_async_setup"
+        ]
+      },
+      "phase": "RUNTIME",
+      "strength": "STRONG",
+      "type": "COORD_REFRESH"
+    },
+    {
+      "id": "call:subscribe",
+      "match": {
+        "call_attrs": [
+          "dispatcher_connect",
+          "async_track_state_change_event",
+          "add_listener"
+        ]
+      },
+      "phase": "RUNTIME",
+      "strength": "MEDIUM",
+      "type": "SUBSCRIBE"
+    },
+    {
+      "id": "call:unsubscribe",
+      "match": {
+        "call_attrs": [
+          "unsub",
+          "unsubscribe"
+        ]
+      },
+      "phase": "TEARDOWN",
+      "strength": "MEDIUM",
+      "type": "UNSUBSCRIBE"
+    },
+    {
+      "id": "call:ble",
+      "match": {
+        "call_attrs": [
+          "connect",
+          "disconnect",
+          "read_gatt_char",
+          "write_gatt_char"
+        ]
+      },
+      "phase": "RUNTIME",
+      "strength": "STRONG",
+      "type": "BLE_OP"
+    },
+    {
+      "id": "call:cloud",
+      "match": {
+        "call_attrs": [
+          "get",
+          "post",
+          "request",
+          "call_api"
+        ]
+      },
+      "phase": "RUNTIME",
+      "strength": "STRONG",
+      "type": "CLOUD_OP"
+    },
+    {
+      "id": "call:protocol:ble_connect",
+      "match": {
+        "call_attrs": [
+          "connect"
+        ],
+        "module_hints": [
+          "bleak",
+          "bluetooth",
+          "gatt"
+        ]
+      },
+      "phase": "RUNTIME",
+      "promotion_state": "BASELINE",
+      "strength": "STRONG",
+      "type": "BLE_CONNECT"
+    },
+    {
+      "id": "call:protocol:ble_disconnect",
+      "match": {
+        "call_attrs": [
+          "disconnect",
+          "close"
+        ],
+        "module_hints": [
+          "bleak",
+          "bluetooth",
+          "gatt"
+        ]
+      },
+      "phase": "RUNTIME",
+      "promotion_state": "BASELINE",
+      "strength": "MEDIUM",
+      "type": "BLE_DISCONNECT"
+    },
+    {
+      "id": "call:protocol:ble_gatt_op",
+      "match": {
+        "call_attrs": [
+          "read_gatt_char",
+          "write_gatt_char",
+          "start_notify",
+          "stop_notify",
+          "notify"
+        ],
+        "module_hints": [
+          "bleak",
+          "bluetooth",
+          "gatt"
+        ]
+      },
+      "phase": "RUNTIME",
+      "promotion_state": "BASELINE",
+      "strength": "STRONG",
+      "type": "BLE_GATT_OP"
+    },
+    {
+      "id": "call:protocol:ble_retry_or_timeout",
+      "match": {
+        "call_attrs": [
+          "sleep",
+          "wait_for",
+          "retry",
+          "timeout"
+        ],
+        "module_hints": [
+          "bleak",
+          "bluetooth",
+          "gatt"
+        ]
+      },
+      "phase": "RUNTIME",
+      "promotion_state": "PROVISIONAL",
+      "strength": "WEAK",
+      "type": "BLE_RETRY_OR_TIMEOUT"
+    },
+    {
+      "id": "call:protocol:ble_scan",
+      "match": {
+        "call_attrs": [
+          "scan",
+          "discover",
+          "discover_services"
+        ],
+        "module_hints": [
+          "bleak",
+          "bluetooth",
+          "gatt"
+        ]
+      },
+      "phase": "RUNTIME",
+      "promotion_state": "PROVISIONAL",
+      "strength": "MEDIUM",
+      "type": "BLE_SCAN"
+    },
+    {
+      "id": "call:protocol:cloud_429_check",
+      "match": {
+        "call_attrs": [
+          "raise_for_status",
+          "request",
+          "call_api"
+        ],
+        "module_hints": [
+          "aiohttp",
+          "httpx",
+          "requests",
+          "urllib3"
+        ]
+      },
+      "phase": "RUNTIME",
+      "promotion_state": "PROVISIONAL",
+      "strength": "WEAK",
+      "type": "CLOUD_429_CHECK"
+    },
+    {
+      "id": "call:protocol:cloud_backoff_sleep",
+      "match": {
+        "call_attrs": [
+          "sleep"
+        ],
+        "module_hints": [
+          "aiohttp",
+          "httpx",
+          "requests",
+          "urllib3"
+        ]
+      },
+      "phase": "RUNTIME",
+      "promotion_state": "PROVISIONAL",
+      "strength": "WEAK",
+      "type": "CLOUD_BACKOFF_SLEEP"
+    },
+    {
+      "id": "call:protocol:cloud_batch_call",
+      "match": {
+        "call_attrs": [
+          "batch",
+          "batch_call",
+          "batch_request",
+          "bulk",
+          "send_commands",
+          "update_devices"
+        ],
+        "module_hints": [
+          "aiohttp",
+          "httpx",
+          "requests",
+          "urllib3"
+        ]
+      },
+      "phase": "RUNTIME",
+      "promotion_state": "PROVISIONAL",
+      "strength": "MEDIUM",
+      "type": "CLOUD_BATCH_CALL"
+    },
+    {
+      "id": "call:protocol:cloud_http_call",
+      "match": {
+        "call_attrs": [
+          "request",
+          "get",
+          "post",
+          "put",
+          "patch",
+          "delete"
+        ],
+        "module_hints": [
+          "aiohttp",
+          "httpx",
+          "requests",
+          "urllib3"
+        ]
+      },
+      "phase": "RUNTIME",
+      "promotion_state": "BASELINE",
+      "strength": "STRONG",
+      "type": "CLOUD_HTTP_CALL"
+    },
+    {
+      "id": "call:protocol:cloud_session_reuse",
+      "match": {
+        "call_attrs": [
+          "send_commands",
+          "update_device_cache",
+          "refresh_mq",
+          "query_scenes",
+          "trigger_scene",
+          "request",
+          "call_api"
+        ],
+        "module_hints": [
+          "aiohttp",
+          "httpx",
+          "requests",
+          "urllib3",
+          "manager"
+        ]
+      },
+      "phase": "RUNTIME",
+      "promotion_state": "PROVISIONAL",
+      "strength": "STRONG",
+      "type": "CLOUD_SESSION_REUSE"
+    },
+    {
+      "id": "call:protocol:cloud_token_refresh",
+      "match": {
+        "call_attrs": [
+          "login",
+          "authenticate",
+          "auth",
+          "refresh",
+          "refresh_token",
+          "oauth"
+        ],
+        "module_hints": [
+          "aiohttp",
+          "httpx",
+          "requests",
+          "urllib3"
+        ]
+      },
+      "phase": "RUNTIME",
+      "promotion_state": "PROVISIONAL",
+      "strength": "MEDIUM",
+      "type": "CLOUD_TOKEN_REFRESH"
+    },
+    {
+      "id": "call:protocol:local_api_read",
+      "match": {
+        "call_attrs": [
+          "request",
+          "get",
+          "async_get",
+          "fetch",
+          "async_fetch",
+          "update",
+          "async_update",
+          "refresh",
+          "async_refresh"
+        ],
+        "module_hints": [
+          "aiohttp",
+          "httpx",
+          "requests",
+          "websocket"
+        ]
+      },
+      "phase": "RUNTIME",
+      "promotion_state": "PROVISIONAL",
+      "strength": "MEDIUM",
+      "type": "LOCAL_API_READ"
+    }
+  ],
+  "profile_heuristics": [
+    {
+      "guard": "crosses_observation_boundary OR affects_entity_state",
+      "heuristic_kind": "STATE_WRITE_COALESCE_WINDOW",
+      "params": {
+        "window_ms": 120
+      },
+      "source": "cold_start_default"
+    }
+  ],
+  "profile_id": "ha_profile_default",
+  "provenance": {
+    "docs_root": "data/docs_snapshot",
+    "evidence_count": {
+      "code": 918,
+      "docs": 62,
+      "tests": 683
+    },
+    "gate_disabled": 0,
+    "gate_enabled": 13,
+    "profile_enhancements": {
+      "baseline_protocol_detectors_added": [
+        "BLE_CONNECT",
+        "BLE_DISCONNECT",
+        "BLE_GATT_OP",
+        "CLOUD_HTTP_CALL"
+      ],
+      "baseline_protocol_detectors_added_count": 4,
+      "derived_lifecycle_templates": [
+        {
+          "dst": "COORD_REFRESH",
+          "edge_kind": "HARD_LIFECYCLE",
+          "params": {},
+          "rule_id": "rule_general_209df39611",
+          "src": "ENTRY_SETUP",
+          "template_id": "rule:rule_general_209df39611:0"
+        },
+        {
+          "dst": "ENTRY_UNLOAD",
+          "edge_kind": "HARD_LIFECYCLE",
+          "params": {},
+          "rule_id": "rule_entry_unload_9d31450f19",
+          "src": "UNSUBSCRIBE",
+          "template_id": "rule:rule_entry_unload_9d31450f19:0"
+        },
+        {
+          "dst": "CLOUD_HTTP_CALL",
+          "edge_kind": "HARD_LIFECYCLE",
+          "params": {
+            "pair_key": "host"
+          },
+          "rule_id": "rule_protocol_cloud_refresh_before_call",
+          "src": "CLOUD_TOKEN_REFRESH",
+          "template_id": "rule:rule_protocol_cloud_refresh_before_call:0"
+        },
+        {
+          "dst": "BLE_GATT_OP",
+          "edge_kind": "HARD_LIFECYCLE",
+          "params": {
+            "pair_key": "device_id"
+          },
+          "rule_id": "rule_protocol_ble_connect_op_disconnect",
+          "src": "BLE_CONNECT",
+          "template_id": "rule:rule_protocol_ble_connect_op_disconnect:0"
+        },
+        {
+          "dst": "BLE_DISCONNECT",
+          "edge_kind": "HARD_LIFECYCLE",
+          "params": {
+            "pair_key": "device_id"
+          },
+          "rule_id": "rule_protocol_ble_connect_op_disconnect",
+          "src": "BLE_GATT_OP",
+          "template_id": "rule:rule_protocol_ble_connect_op_disconnect:1"
+        }
+      ],
+      "marker_detector_policy": "default_plus_protocol_from_profile_builder",
+      "protocol_detectors_added": [
+        "BLE_CONNECT",
+        "BLE_DISCONNECT",
+        "BLE_GATT_OP",
+        "CLOUD_HTTP_CALL",
+        "BLE_RETRY_OR_TIMEOUT",
+        "BLE_SCAN",
+        "CLOUD_429_CHECK",
+        "CLOUD_BACKOFF_SLEEP",
+        "CLOUD_BATCH_CALL",
+        "CLOUD_SESSION_REUSE",
+        "CLOUD_TOKEN_REFRESH",
+        "LOCAL_API_READ"
+      ],
+      "protocol_detectors_added_count": 12,
+      "provisional_protocol_detectors_added": [
+        "BLE_RETRY_OR_TIMEOUT",
+        "BLE_SCAN",
+        "CLOUD_429_CHECK",
+        "CLOUD_BACKOFF_SLEEP",
+        "CLOUD_BATCH_CALL",
+        "CLOUD_SESSION_REUSE",
+        "CLOUD_TOKEN_REFRESH",
+        "LOCAL_API_READ"
+      ],
+      "provisional_protocol_detectors_added_count": 8,
+      "rule_evidence_policy": {
+        "max_evidence_per_rule": 40,
+        "overflow": "cap_representative_evidence_and_keep_full_evidence_bank"
+      },
+      "rule_marker_hints": [
+        "BLE_CONNECT",
+        "BLE_DISCONNECT",
+        "BLE_GATT_OP",
+        "BLE_OP",
+        "CLOUD_429_CHECK",
+        "CLOUD_BACKOFF_SLEEP",
+        "CLOUD_BATCH_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP",
+        "CLOUD_SESSION_REUSE",
+        "CLOUD_TOKEN_REFRESH",
+        "COORD_REFRESH",
+        "ENTRY_SETUP",
+        "ENTRY_UNLOAD",
+        "LOCAL_API_READ",
+        "STATE_WRITE",
+        "SUBSCRIBE",
+        "UNSUBSCRIBE"
+      ]
+    },
+    "profile_quality": {
+      "framework_or_test_signal_count": 1251,
+      "integration_count": 35,
+      "per_integration": [
+        {
+          "code_evidence": 6,
+          "family_counts": {
+            "HA_FRAMEWORK": 6,
+            "TEST_BEHAVIOR": 13
+          },
+          "file_count": 5,
+          "integration": "airthings_ble",
+          "iot_class": "local_polling",
+          "protocol_evidence": 0,
+          "test_evidence": 13,
+          "top_anchors": [
+            [
+              "TEST_ENTRY_SETUP",
+              13
+            ],
+            [
+              "COORD_REFRESH",
+              3
+            ],
+            [
+              "ENTRY_SETUP",
+              2
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 3,
+          "family_counts": {
+            "HA_FRAMEWORK": 3,
+            "TEST_BEHAVIOR": 10
+          },
+          "file_count": 3,
+          "integration": "aranet",
+          "iot_class": "local_push",
+          "protocol_evidence": 0,
+          "test_evidence": 10,
+          "top_anchors": [
+            [
+              "TEST_ENTRY_SETUP",
+              5
+            ],
+            [
+              "TEST_ENTRY_UNLOAD",
+              5
+            ],
+            [
+              "ENTRY_SETUP",
+              2
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 18,
+          "family_counts": {
+            "CLOUD": 6,
+            "HA_FRAMEWORK": 12,
+            "TEST_BEHAVIOR": 7
+          },
+          "file_count": 11,
+          "integration": "blink",
+          "iot_class": "cloud_polling",
+          "protocol_evidence": 6,
+          "test_evidence": 7,
+          "top_anchors": [
+            [
+              "ENTRY_SETUP",
+              6
+            ],
+            [
+              "TEST_ENTRY_SETUP",
+              6
+            ],
+            [
+              "CLOUD_TOKEN_REFRESH",
+              3
+            ],
+            [
+              "CLOUD_HTTP_CALL",
+              3
+            ],
+            [
+              "COORD_REFRESH",
+              3
+            ],
+            [
+              "STATE_WRITE",
+              2
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ],
+            [
+              "TEST_ENTRY_UNLOAD",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 6,
+          "family_counts": {
+            "BLE": 2,
+            "HA_FRAMEWORK": 4,
+            "TEST_BEHAVIOR": 34
+          },
+          "file_count": 8,
+          "integration": "bluetooth",
+          "iot_class": "local_push",
+          "protocol_evidence": 2,
+          "test_evidence": 34,
+          "top_anchors": [
+            [
+              "TEST_ENTRY_SETUP",
+              21
+            ],
+            [
+              "TEST_ENTRY_UNLOAD",
+              13
+            ],
+            [
+              "ENTRY_SETUP",
+              1
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ],
+            [
+              "BLE_OP",
+              1
+            ],
+            [
+              "BLE_RETRY_OR_TIMEOUT",
+              1
+            ],
+            [
+              "STATE_WRITE",
+              1
+            ],
+            [
+              "UNSUBSCRIBE",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 7,
+          "family_counts": {
+            "HA_FRAMEWORK": 5,
+            "LOCAL_API": 2
+          },
+          "file_count": 5,
+          "integration": "control4",
+          "iot_class": "local_polling",
+          "protocol_evidence": 2,
+          "test_evidence": 0,
+          "top_anchors": [
+            [
+              "ENTRY_SETUP",
+              4
+            ],
+            [
+              "LOCAL_API_READ",
+              2
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 21,
+          "family_counts": {
+            "HA_FRAMEWORK": 19,
+            "LOCAL_API": 2,
+            "TEST_BEHAVIOR": 3
+          },
+          "file_count": 18,
+          "integration": "deconz",
+          "iot_class": "local_push",
+          "protocol_evidence": 2,
+          "test_evidence": 3,
+          "top_anchors": [
+            [
+              "ENTRY_SETUP",
+              15
+            ],
+            [
+              "STATE_WRITE",
+              2
+            ],
+            [
+              "LOCAL_API_READ",
+              2
+            ],
+            [
+              "TEST_ENTRY_UNLOAD",
+              2
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ],
+            [
+              "UNSUBSCRIBE",
+              1
+            ],
+            [
+              "TEST_ENTRY_SETUP",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 5,
+          "family_counts": {
+            "HA_FRAMEWORK": 4,
+            "LOCAL_API": 1,
+            "TEST_BEHAVIOR": 5
+          },
+          "file_count": 5,
+          "integration": "denonavr",
+          "iot_class": "local_push",
+          "protocol_evidence": 1,
+          "test_evidence": 5,
+          "top_anchors": [
+            [
+              "TEST_CLIENT_CALL_CONSTRAINT",
+              3
+            ],
+            [
+              "ENTRY_SETUP",
+              2
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ],
+            [
+              "STATE_WRITE",
+              1
+            ],
+            [
+              "LOCAL_API_READ",
+              1
+            ],
+            [
+              "TEST_ENTRY_SETUP",
+              1
+            ],
+            [
+              "TEST_STATE_WRITE",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 47,
+          "family_counts": {
+            "CLOUD": 33,
+            "HA_FRAMEWORK": 14
+          },
+          "file_count": 11,
+          "integration": "ecobee",
+          "iot_class": "cloud_polling",
+          "protocol_evidence": 33,
+          "test_evidence": 0,
+          "top_anchors": [
+            [
+              "CLOUD_HTTP_CALL",
+              25
+            ],
+            [
+              "ENTRY_SETUP",
+              9
+            ],
+            [
+              "CLOUD_BATCH_CALL",
+              4
+            ],
+            [
+              "STATE_WRITE",
+              4
+            ],
+            [
+              "CLOUD_SESSION_USE",
+              2
+            ],
+            [
+              "CLOUD_TOKEN_REFRESH",
+              2
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 44,
+          "family_counts": {
+            "BLE": 13,
+            "HA_FRAMEWORK": 19,
+            "LOCAL_API": 12,
+            "OTHER": 1,
+            "TEST_BEHAVIOR": 69
+          },
+          "file_count": 24,
+          "integration": "esphome",
+          "iot_class": "local_push",
+          "protocol_evidence": 25,
+          "test_evidence": 70,
+          "top_anchors": [
+            [
+              "TEST_EXPECTED_SINGLE_CALL",
+              21
+            ],
+            [
+              "TEST_ENTRY_UNLOAD",
+              18
+            ],
+            [
+              "TEST_ENTRY_SETUP",
+              15
+            ],
+            [
+              "LOCAL_API_READ",
+              12
+            ],
+            [
+              "TEST_CALL_SUPPRESSION",
+              12
+            ],
+            [
+              "STATE_WRITE",
+              9
+            ],
+            [
+              "ENTRY_SETUP",
+              5
+            ],
+            [
+              "BLE_OP",
+              5
+            ]
+          ]
+        },
+        {
+          "code_evidence": 6,
+          "family_counts": {
+            "HA_FRAMEWORK": 6,
+            "TEST_BEHAVIOR": 19
+          },
+          "file_count": 7,
+          "integration": "govee_ble",
+          "iot_class": "local_push",
+          "protocol_evidence": 0,
+          "test_evidence": 19,
+          "top_anchors": [
+            [
+              "TEST_ENTRY_SETUP",
+              10
+            ],
+            [
+              "TEST_ENTRY_UNLOAD",
+              9
+            ],
+            [
+              "ENTRY_SETUP",
+              4
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ],
+            [
+              "STATE_WRITE",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 84,
+          "family_counts": {
+            "CLOUD": 67,
+            "HA_FRAMEWORK": 18,
+            "OTHER": 1,
+            "TEST_BEHAVIOR": 10
+          },
+          "file_count": 21,
+          "integration": "home_connect",
+          "iot_class": "cloud_push",
+          "protocol_evidence": 67,
+          "test_evidence": 12,
+          "top_anchors": [
+            [
+              "CLOUD_SESSION_USE",
+              24
+            ],
+            [
+              "CLOUD_HTTP_CALL",
+              20
+            ],
+            [
+              "ENTRY_SETUP",
+              10
+            ],
+            [
+              "STATE_WRITE",
+              6
+            ],
+            [
+              "CLOUD_SESSION_REUSE",
+              4
+            ],
+            [
+              "CLOUD_BACKOFF_HINT",
+              4
+            ],
+            [
+              "CLOUD_SESSION_HINT",
+              3
+            ],
+            [
+              "CLOUD_SESSION_STORE",
+              3
+            ]
+          ]
+        },
+        {
+          "code_evidence": 35,
+          "family_counts": {
+            "HA_FRAMEWORK": 35,
+            "TEST_BEHAVIOR": 11
+          },
+          "file_count": 23,
+          "integration": "homekit_controller",
+          "iot_class": "local_push",
+          "protocol_evidence": 0,
+          "test_evidence": 11,
+          "top_anchors": [
+            [
+              "ENTRY_SETUP",
+              17
+            ],
+            [
+              "SUBSCRIBE",
+              14
+            ],
+            [
+              "TEST_ENTRY_SETUP",
+              8
+            ],
+            [
+              "TEST_ENTRY_UNLOAD",
+              3
+            ],
+            [
+              "ENTRY_UNLOAD",
+              2
+            ],
+            [
+              "STATE_WRITE",
+              2
+            ]
+          ]
+        },
+        {
+          "code_evidence": 24,
+          "family_counts": {
+            "HA_FRAMEWORK": 17,
+            "LOCAL_API": 7,
+            "TEST_BEHAVIOR": 2
+          },
+          "file_count": 19,
+          "integration": "hue",
+          "iot_class": "local_push",
+          "protocol_evidence": 7,
+          "test_evidence": 2,
+          "top_anchors": [
+            [
+              "ENTRY_SETUP",
+              14
+            ],
+            [
+              "LOCAL_API_READ",
+              7
+            ],
+            [
+              "STATE_WRITE",
+              2
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ],
+            [
+              "TEST_ENTRY_SETUP",
+              1
+            ],
+            [
+              "TEST_ENTRY_UNLOAD",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 12,
+          "family_counts": {
+            "BLE": 8,
+            "HA_FRAMEWORK": 4,
+            "TEST_BEHAVIOR": 1
+          },
+          "file_count": 4,
+          "integration": "hue_ble",
+          "iot_class": "local_push",
+          "protocol_evidence": 8,
+          "test_evidence": 1,
+          "top_anchors": [
+            [
+              "ENTRY_SETUP",
+              2
+            ],
+            [
+              "BLE_CONNECT",
+              2
+            ],
+            [
+              "BLE_GATT_OP",
+              2
+            ],
+            [
+              "BLE_OP",
+              2
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ],
+            [
+              "BLE_REUSE_CONTEXT",
+              1
+            ],
+            [
+              "BLE_DISCONNECT",
+              1
+            ],
+            [
+              "STATE_WRITE",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 3,
+          "family_counts": {
+            "HA_FRAMEWORK": 3,
+            "TEST_BEHAVIOR": 9
+          },
+          "file_count": 3,
+          "integration": "inkbird",
+          "iot_class": "local_push",
+          "protocol_evidence": 0,
+          "test_evidence": 9,
+          "top_anchors": [
+            [
+              "TEST_ENTRY_SETUP",
+              5
+            ],
+            [
+              "TEST_ENTRY_UNLOAD",
+              4
+            ],
+            [
+              "ENTRY_SETUP",
+              2
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 3,
+          "family_counts": {
+            "HA_FRAMEWORK": 3,
+            "TEST_BEHAVIOR": 7
+          },
+          "file_count": 4,
+          "integration": "mopeka",
+          "iot_class": "local_push",
+          "protocol_evidence": 0,
+          "test_evidence": 7,
+          "top_anchors": [
+            [
+              "TEST_ENTRY_SETUP",
+              4
+            ],
+            [
+              "TEST_ENTRY_UNLOAD",
+              3
+            ],
+            [
+              "ENTRY_SETUP",
+              2
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 85,
+          "family_counts": {
+            "HA_FRAMEWORK": 83,
+            "LOCAL_API": 2,
+            "OTHER": 1,
+            "TEST_BEHAVIOR": 33
+          },
+          "file_count": 42,
+          "integration": "mqtt",
+          "iot_class": "local_push",
+          "protocol_evidence": 2,
+          "test_evidence": 34,
+          "top_anchors": [
+            [
+              "STATE_WRITE",
+              52
+            ],
+            [
+              "ENTRY_SETUP",
+              27
+            ],
+            [
+              "TEST_ENTRY_SETUP",
+              21
+            ],
+            [
+              "TEST_ENTRY_UNLOAD",
+              6
+            ],
+            [
+              "TEST_CALL_SUPPRESSION",
+              5
+            ],
+            [
+              "UNSUBSCRIBE",
+              3
+            ],
+            [
+              "LOCAL_API_READ",
+              2
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 8,
+          "family_counts": {
+            "HA_FRAMEWORK": 8,
+            "OTHER": 1
+          },
+          "file_count": 6,
+          "integration": "nanoleaf",
+          "iot_class": "local_push",
+          "protocol_evidence": 0,
+          "test_evidence": 1,
+          "top_anchors": [
+            [
+              "ENTRY_SETUP",
+              4
+            ],
+            [
+              "COORD_REFRESH",
+              2
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ],
+            [
+              "STATE_WRITE",
+              1
+            ],
+            [
+              "SUBSCRIBE_PAIRING",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 65,
+          "family_counts": {
+            "CLOUD": 31,
+            "HA_FRAMEWORK": 34,
+            "TEST_BEHAVIOR": 58
+          },
+          "file_count": 28,
+          "integration": "netatmo",
+          "iot_class": "cloud_polling",
+          "protocol_evidence": 31,
+          "test_evidence": 58,
+          "top_anchors": [
+            [
+              "TEST_ENTRY_SETUP",
+              52
+            ],
+            [
+              "CLOUD_HTTP_CALL",
+              22
+            ],
+            [
+              "STATE_WRITE",
+              16
+            ],
+            [
+              "ENTRY_SETUP",
+              11
+            ],
+            [
+              "TEST_ENTRY_UNLOAD",
+              6
+            ],
+            [
+              "UNSUBSCRIBE",
+              5
+            ],
+            [
+              "CLOUD_SESSION_USE",
+              4
+            ],
+            [
+              "CLOUD_BATCH_CALL",
+              3
+            ]
+          ]
+        },
+        {
+          "code_evidence": 3,
+          "family_counts": {
+            "HA_FRAMEWORK": 3,
+            "TEST_BEHAVIOR": 6
+          },
+          "file_count": 3,
+          "integration": "oralb",
+          "iot_class": "local_push",
+          "protocol_evidence": 0,
+          "test_evidence": 6,
+          "top_anchors": [
+            [
+              "TEST_ENTRY_SETUP",
+              3
+            ],
+            [
+              "TEST_ENTRY_UNLOAD",
+              3
+            ],
+            [
+              "ENTRY_SETUP",
+              2
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 16,
+          "family_counts": {
+            "HA_FRAMEWORK": 15,
+            "LOCAL_API": 1,
+            "TEST_BEHAVIOR": 6
+          },
+          "file_count": 10,
+          "integration": "philips_js",
+          "iot_class": "local_polling",
+          "protocol_evidence": 1,
+          "test_evidence": 6,
+          "top_anchors": [
+            [
+              "STATE_WRITE",
+              7
+            ],
+            [
+              "ENTRY_SETUP",
+              6
+            ],
+            [
+              "TEST_ENTRY_SETUP",
+              6
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ],
+            [
+              "COORD_REFRESH",
+              1
+            ],
+            [
+              "LOCAL_API_READ",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 4,
+          "family_counts": {
+            "HA_FRAMEWORK": 4,
+            "TEST_BEHAVIOR": 8
+          },
+          "file_count": 5,
+          "integration": "qingping",
+          "iot_class": "local_push",
+          "protocol_evidence": 0,
+          "test_evidence": 8,
+          "top_anchors": [
+            [
+              "TEST_ENTRY_SETUP",
+              4
+            ],
+            [
+              "TEST_ENTRY_UNLOAD",
+              4
+            ],
+            [
+              "ENTRY_SETUP",
+              3
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 20,
+          "family_counts": {
+            "CLOUD": 1,
+            "HA_FRAMEWORK": 16,
+            "LOCAL_API": 3,
+            "TEST_BEHAVIOR": 20
+          },
+          "file_count": 14,
+          "integration": "roborock",
+          "iot_class": "local_polling",
+          "protocol_evidence": 4,
+          "test_evidence": 20,
+          "top_anchors": [
+            [
+              "TEST_ENTRY_SETUP",
+              18
+            ],
+            [
+              "ENTRY_SETUP",
+              10
+            ],
+            [
+              "COORD_REFRESH",
+              3
+            ],
+            [
+              "LOCAL_API_READ",
+              3
+            ],
+            [
+              "ENTRY_UNLOAD",
+              2
+            ],
+            [
+              "TEST_ENTRY_UNLOAD",
+              2
+            ],
+            [
+              "CLOUD_SESSION_CLOSE",
+              1
+            ],
+            [
+              "STATE_WRITE",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 9,
+          "family_counts": {
+            "HA_FRAMEWORK": 9,
+            "TEST_BEHAVIOR": 7
+          },
+          "file_count": 10,
+          "integration": "roku",
+          "iot_class": "local_polling",
+          "protocol_evidence": 0,
+          "test_evidence": 7,
+          "top_anchors": [
+            [
+              "ENTRY_SETUP",
+              6
+            ],
+            [
+              "TEST_ENTRY_SETUP",
+              6
+            ],
+            [
+              "COORD_REFRESH",
+              2
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ],
+            [
+              "TEST_ENTRY_UNLOAD",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 3,
+          "family_counts": {
+            "HA_FRAMEWORK": 3,
+            "TEST_BEHAVIOR": 2
+          },
+          "file_count": 3,
+          "integration": "ruuvitag_ble",
+          "iot_class": "local_push",
+          "protocol_evidence": 0,
+          "test_evidence": 2,
+          "top_anchors": [
+            [
+              "ENTRY_SETUP",
+              2
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ],
+            [
+              "TEST_ENTRY_SETUP",
+              1
+            ],
+            [
+              "TEST_ENTRY_UNLOAD",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 3,
+          "family_counts": {
+            "HA_FRAMEWORK": 3,
+            "TEST_BEHAVIOR": 2
+          },
+          "file_count": 3,
+          "integration": "sensorpush",
+          "iot_class": "local_push",
+          "protocol_evidence": 0,
+          "test_evidence": 2,
+          "top_anchors": [
+            [
+              "ENTRY_SETUP",
+              2
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ],
+            [
+              "TEST_ENTRY_SETUP",
+              1
+            ],
+            [
+              "TEST_ENTRY_UNLOAD",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 94,
+          "family_counts": {
+            "CLOUD": 71,
+            "HA_FRAMEWORK": 23,
+            "TEST_BEHAVIOR": 12
+          },
+          "file_count": 26,
+          "integration": "smartthings",
+          "iot_class": "cloud_push",
+          "protocol_evidence": 71,
+          "test_evidence": 12,
+          "top_anchors": [
+            [
+              "CLOUD_HTTP_CALL",
+              44
+            ],
+            [
+              "ENTRY_SETUP",
+              20
+            ],
+            [
+              "CLOUD_BATCH_CALL",
+              11
+            ],
+            [
+              "TEST_ENTRY_SETUP",
+              11
+            ],
+            [
+              "CLOUD_SESSION_USE",
+              5
+            ],
+            [
+              "CLOUD_SESSION_REUSE",
+              4
+            ],
+            [
+              "CLOUD_SESSION_HINT",
+              4
+            ],
+            [
+              "CLOUD_SESSION_STORE",
+              2
+            ]
+          ]
+        },
+        {
+          "code_evidence": 4,
+          "family_counts": {
+            "HA_FRAMEWORK": 4,
+            "TEST_BEHAVIOR": 5
+          },
+          "file_count": 4,
+          "integration": "snooz",
+          "iot_class": "local_push",
+          "protocol_evidence": 0,
+          "test_evidence": 5,
+          "top_anchors": [
+            [
+              "TEST_ENTRY_UNLOAD",
+              3
+            ],
+            [
+              "ENTRY_SETUP",
+              2
+            ],
+            [
+              "TEST_ENTRY_SETUP",
+              2
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ],
+            [
+              "STATE_WRITE",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 74,
+          "family_counts": {
+            "BLE": 32,
+            "HA_FRAMEWORK": 42,
+            "TEST_BEHAVIOR": 85
+          },
+          "file_count": 33,
+          "integration": "switchbot",
+          "iot_class": "local_push",
+          "protocol_evidence": 32,
+          "test_evidence": 85,
+          "top_anchors": [
+            [
+              "TEST_ENTRY_SETUP",
+              70
+            ],
+            [
+              "STATE_WRITE",
+              27
+            ],
+            [
+              "BLE_OP",
+              16
+            ],
+            [
+              "TEST_ENTRY_UNLOAD",
+              15
+            ],
+            [
+              "ENTRY_SETUP",
+              14
+            ],
+            [
+              "BLE_GATT_OP",
+              14
+            ],
+            [
+              "BLE_DISCONNECT",
+              2
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 3,
+          "family_counts": {
+            "HA_FRAMEWORK": 3,
+            "TEST_BEHAVIOR": 2
+          },
+          "file_count": 3,
+          "integration": "thermobeacon",
+          "iot_class": "local_push",
+          "protocol_evidence": 0,
+          "test_evidence": 2,
+          "top_anchors": [
+            [
+              "ENTRY_SETUP",
+              2
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ],
+            [
+              "TEST_ENTRY_SETUP",
+              1
+            ],
+            [
+              "TEST_ENTRY_UNLOAD",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 24,
+          "family_counts": {
+            "BLE": 6,
+            "HA_FRAMEWORK": 15,
+            "LOCAL_API": 3,
+            "TEST_BEHAVIOR": 84
+          },
+          "file_count": 24,
+          "integration": "tplink",
+          "iot_class": "local_polling",
+          "protocol_evidence": 9,
+          "test_evidence": 84,
+          "top_anchors": [
+            [
+              "TEST_ENTRY_SETUP",
+              79
+            ],
+            [
+              "ENTRY_SETUP",
+              13
+            ],
+            [
+              "TEST_STATE_WRITE",
+              4
+            ],
+            [
+              "BLE_OP",
+              3
+            ],
+            [
+              "BLE_SCAN",
+              3
+            ],
+            [
+              "LOCAL_API_READ",
+              3
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ],
+            [
+              "COORD_REFRESH",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 102,
+          "family_counts": {
+            "CLOUD": 95,
+            "HA_FRAMEWORK": 22
+          },
+          "file_count": 36,
+          "integration": "tuya",
+          "iot_class": "cloud_push",
+          "protocol_evidence": 95,
+          "test_evidence": 15,
+          "top_anchors": [
+            [
+              "CLOUD_HTTP_CALL",
+              30
+            ],
+            [
+              "CLOUD_SESSION_HINT",
+              27
+            ],
+            [
+              "CLOUD_BATCH_CALL",
+              26
+            ],
+            [
+              "ENTRY_SETUP",
+              19
+            ],
+            [
+              "CLOUD_SESSION_USE",
+              4
+            ],
+            [
+              "CLOUD_SESSION_REUSE",
+              3
+            ],
+            [
+              "CLOUD_SESSION_CREATE",
+              3
+            ],
+            [
+              "ENTRY_UNLOAD",
+              2
+            ]
+          ]
+        },
+        {
+          "code_evidence": 8,
+          "family_counts": {
+            "CLOUD": 1,
+            "HA_FRAMEWORK": 5,
+            "LOCAL_API": 2,
+            "TEST_BEHAVIOR": 13
+          },
+          "file_count": 5,
+          "integration": "webostv",
+          "iot_class": "local_push",
+          "protocol_evidence": 3,
+          "test_evidence": 13,
+          "top_anchors": [
+            [
+              "TEST_CALL_SUPPRESSION",
+              6
+            ],
+            [
+              "TEST_CLIENT_CALL_CONSTRAINT",
+              5
+            ],
+            [
+              "ENTRY_SETUP",
+              2
+            ],
+            [
+              "LOCAL_API_READ",
+              2
+            ],
+            [
+              "TEST_EXPECTED_SINGLE_CALL",
+              2
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ],
+            [
+              "STATE_WRITE",
+              1
+            ],
+            [
+              "CLOUD_SESSION_CLOSE",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 8,
+          "family_counts": {
+            "BLE": 2,
+            "HA_FRAMEWORK": 6,
+            "TEST_BEHAVIOR": 80
+          },
+          "file_count": 10,
+          "integration": "xiaomi_ble",
+          "iot_class": "local_push",
+          "protocol_evidence": 2,
+          "test_evidence": 80,
+          "top_anchors": [
+            [
+              "TEST_ENTRY_UNLOAD",
+              46
+            ],
+            [
+              "TEST_ENTRY_SETUP",
+              34
+            ],
+            [
+              "ENTRY_SETUP",
+              4
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ],
+            [
+              "BLE_GATT_OP",
+              1
+            ],
+            [
+              "BLE_OP",
+              1
+            ],
+            [
+              "STATE_WRITE",
+              1
+            ]
+          ]
+        },
+        {
+          "code_evidence": 61,
+          "family_counts": {
+            "BLE": 2,
+            "CLOUD": 2,
+            "HA_FRAMEWORK": 57,
+            "LOCAL_API": 1,
+            "TEST_BEHAVIOR": 39
+          },
+          "file_count": 27,
+          "integration": "zha",
+          "iot_class": "local_polling",
+          "protocol_evidence": 5,
+          "test_evidence": 40,
+          "top_anchors": [
+            [
+              "STATE_WRITE",
+              38
+            ],
+            [
+              "TEST_ENTRY_SETUP",
+              25
+            ],
+            [
+              "ENTRY_SETUP",
+              16
+            ],
+            [
+              "TEST_ENTRY_UNLOAD",
+              14
+            ],
+            [
+              "UNSUBSCRIBE",
+              2
+            ],
+            [
+              "ENTRY_UNLOAD",
+              1
+            ],
+            [
+              "CLOUD_SESSION_CLOSE",
+              1
+            ],
+            [
+              "BLE_OP",
+              1
+            ]
+          ]
+        }
+      ],
+      "policy": "manifest_iot_class_plus_protocol_signal_v1",
+      "protocol_signal_count": 627,
+      "protocol_to_framework_signal_ratio": 0.501,
+      "top_anchors": [
+        [
+          "TEST_ENTRY_SETUP",
+          441
+        ],
+        [
+          "ENTRY_SETUP",
+          262
+        ],
+        [
+          "CLOUD_HTTP_CALL",
+          236
+        ],
+        [
+          "STATE_WRITE",
+          201
+        ],
+        [
+          "TEST_ENTRY_UNLOAD",
+          178
+        ],
+        [
+          "CLOUD_SESSION_USE",
+          78
+        ],
+        [
+          "CLOUD_BATCH_CALL",
+          70
+        ],
+        [
+          "LOCAL_API_READ",
+          66
+        ],
+        [
+          "CLOUD_SESSION_HINT",
+          43
+        ],
+        [
+          "ENTRY_UNLOAD",
+          40
+        ],
+        [
+          "BLE_OP",
+          36
+        ],
+        [
+          "TEST_CALL_SUPPRESSION",
+          29
+        ],
+        [
+          "TEST_EXPECTED_SINGLE_CALL",
+          26
+        ],
+        [
+          "COORD_REFRESH",
+          21
+        ],
+        [
+          "BLE_GATT_OP",
+          21
+        ],
+        [
+          "UNSUBSCRIBE",
+          16
+        ]
+      ],
+      "totals_by_family": {
+        "BLE": 77,
+        "CLOUD": 484,
+        "HA_FRAMEWORK": 555,
+        "LOCAL_API": 66,
+        "OTHER": 6,
+        "TEST_BEHAVIOR": 696
+      },
+      "weak_coverage": [
+        {
+          "integration": "airthings_ble",
+          "iot_class": "local_polling",
+          "reason": "no_protocol_level_code_or_test_evidence"
+        },
+        {
+          "integration": "aranet",
+          "iot_class": "local_push",
+          "reason": "no_protocol_level_code_or_test_evidence"
+        },
+        {
+          "integration": "control4",
+          "iot_class": "local_polling",
+          "reason": "missing_code_or_test_evidence"
+        },
+        {
+          "integration": "ecobee",
+          "iot_class": "cloud_polling",
+          "reason": "missing_code_or_test_evidence"
+        },
+        {
+          "integration": "govee_ble",
+          "iot_class": "local_push",
+          "reason": "no_protocol_level_code_or_test_evidence"
+        },
+        {
+          "integration": "homekit_controller",
+          "iot_class": "local_push",
+          "reason": "no_protocol_level_code_or_test_evidence"
+        },
+        {
+          "integration": "inkbird",
+          "iot_class": "local_push",
+          "reason": "no_protocol_level_code_or_test_evidence"
+        },
+        {
+          "integration": "mopeka",
+          "iot_class": "local_push",
+          "reason": "no_protocol_level_code_or_test_evidence"
+        },
+        {
+          "integration": "nanoleaf",
+          "iot_class": "local_push",
+          "reason": "no_protocol_level_code_or_test_evidence"
+        },
+        {
+          "integration": "oralb",
+          "iot_class": "local_push",
+          "reason": "no_protocol_level_code_or_test_evidence"
+        },
+        {
+          "integration": "qingping",
+          "iot_class": "local_push",
+          "reason": "no_protocol_level_code_or_test_evidence"
+        },
+        {
+          "integration": "roku",
+          "iot_class": "local_polling",
+          "reason": "no_protocol_level_code_or_test_evidence"
+        },
+        {
+          "integration": "ruuvitag_ble",
+          "iot_class": "local_push",
+          "reason": "no_protocol_level_code_or_test_evidence"
+        },
+        {
+          "integration": "sensorpush",
+          "iot_class": "local_push",
+          "reason": "no_protocol_level_code_or_test_evidence"
+        },
+        {
+          "integration": "snooz",
+          "iot_class": "local_push",
+          "reason": "no_protocol_level_code_or_test_evidence"
+        },
+        {
+          "integration": "thermobeacon",
+          "iot_class": "local_push",
+          "reason": "no_protocol_level_code_or_test_evidence"
+        }
+      ],
+      "weak_coverage_count": 16
+    },
+    "repo_root": "data/repo_snapshot",
+    "risk_warnings": [
+      "No validation_stats provided; all gate-enabled rules kept SOFT (conservative cold-start mode)."
+    ],
+    "tests_root": "data/tests_snapshot",
+    "validation_stats_count": 0,
+    "validation_stats_path": null
+  },
+  "rules": [
+    {
+      "category": "lifecycle",
+      "confidence": 0.8,
+      "effect": {
+        "kind": "ordering_or_constraint",
+        "scope": "lifecycle"
+      },
+      "evidence_ids": [
+        "CODE_00177968e6",
+        "CODE_01a4dcd6eb",
+        "CODE_02513ac8f4",
+        "CODE_071b5fbe37",
+        "CODE_07e5b32c46",
+        "CODE_0a708ea0ff",
+        "CODE_0d0301a092",
+        "CODE_0e0ee5cd62",
+        "CODE_1019cf367e",
+        "CODE_11babc01d3",
+        "CODE_12a6f410a8",
+        "CODE_15ca0b08de",
+        "CODE_1992ee1750",
+        "CODE_1b42dd7737",
+        "CODE_1b91dd67d9",
+        "CODE_1d6ce486a1",
+        "CODE_1f2d5dbcad",
+        "CODE_1fd003eeee",
+        "CODE_219f026a1a",
+        "CODE_23576aced4",
+        "CODE_25fde8a905",
+        "CODE_26085cb328",
+        "CODE_27b331e7d0",
+        "CODE_28a9935f4c",
+        "CODE_2b152aa90a",
+        "CODE_2b21000d6d",
+        "CODE_2b8d17799a",
+        "CODE_2c852b6cc3",
+        "CODE_2d6ae443d8",
+        "CODE_2dd71e6af5",
+        "CODE_2dde703bd7",
+        "CODE_2de8fe4879",
+        "CODE_32667d4b78",
+        "CODE_330a05d29b",
+        "CODE_332439db6a",
+        "CODE_384e3c9a0e",
+        "CODE_388da03d18",
+        "CODE_3a50e29f33",
+        "CODE_3acd98dd82",
+        "CODE_3d3861b14a"
+      ],
+      "extractor_version": "profile_builder_norm/v2",
+      "fallback": "disable_optimization_for_scope",
+      "guard": "runtime_metrics_available",
+      "hard_edge_templates": [
+        {
+          "dst": "COORD_REFRESH",
+          "kind": "HARD_LIFECYCLE",
+          "src": "ENTRY_SETUP"
+        }
+      ],
+      "hardening_reason": "cold_start_no_validation_stats",
+      "hardening_state": "SOFT",
+      "marker_hints": [
+        "ENTRY_SETUP",
+        "COORD_REFRESH"
+      ],
+      "match_pattern": {
+        "dominant_pattern": "ENTRY_SETUP",
+        "topic": "lifecycle"
+      },
+      "normalization_flags": [
+        "canonicalized_rule_v1",
+        "deterministic_rule_v1",
+        "evidence_cap_applied_v1"
+      ],
+      "provenance": {
+        "bucket_key": [
+          "lifecycle",
+          "ENTRY_SETUP",
+          "COORD_REFRESH",
+          "HARD_LIFECYCLE"
+        ],
+        "cluster_id": "cluster:general:0",
+        "evidence_cap_kept": 40,
+        "evidence_cap_policy": "representative_prefix_after_canonical_sort",
+        "evidence_cap_total": 471,
+        "merged_from_rule_ids": [
+          "rule_general_209df39611",
+          "rule_general_37d3b973da",
+          "rule_migration_f9fe2ce9e2",
+          "rule_reconfigure_flow_10e742e733",
+          "rule_reauth_flow_ef5d6c88a1",
+          "rule_entry_setup_44b83d5f0e",
+          "rule_entry_setup_0b2117ab82",
+          "rule_entry_setup_e317de35bd",
+          "rule_entry_setup_6ce4725b12",
+          "rule_entry_setup_b448be402e",
+          "rule_entry_setup_11a1532946",
+          "rule_entry_setup_5bd730ecac",
+          "rule_entry_setup_a23876f59e",
+          "rule_entry_setup_3d6acdb812",
+          "rule_entry_setup_bff3a3b5b0",
+          "rule_entry_setup_eeac93f9b9",
+          "rule_entry_setup_c57d46e106",
+          "rule_entry_setup_850c222955",
+          "rule_entry_setup_f07790504a",
+          "rule_entry_setup_7d2e2aa5f7",
+          "rule_entry_setup_6c2a83f4b9",
+          "rule_entry_setup_58003adcca",
+          "rule_entry_setup_7628c404be",
+          "rule_entry_setup_030cf4781d",
+          "rule_entry_setup_52758bf225",
+          "rule_entry_setup_9ae8047eeb",
+          "rule_entry_setup_f109271421",
+          "rule_entry_setup_710f6cfc43",
+          "rule_entry_setup_cbc700aa52",
+          "rule_entry_setup_c81ccb2b62",
+          "rule_entry_setup_f31a427576",
+          "rule_entry_setup_168e904768",
+          "rule_entry_setup_43a757bd89",
+          "rule_entry_setup_5b2bfed1bc",
+          "rule_entry_setup_b8d1249558",
+          "rule_entry_setup_693985e26b",
+          "rule_entry_setup_f9c1cc26ff",
+          "rule_entry_setup_18379a742e",
+          "rule_entry_setup_99e3e5f5f5",
+          "rule_entry_setup_41e791e42f",
+          "rule_entry_setup_8660811a39",
+          "rule_entry_setup_d80649925b",
+          "rule_entry_setup_7bce68d016",
+          "rule_entry_setup_379e20c061",
+          "rule_entry_setup_67b98ee910",
+          "rule_entry_setup_0cb3354c26",
+          "rule_entry_setup_cdeb78b13f",
+          "rule_entry_setup_0ce0c8f09b",
+          "rule_entry_setup_5115d32489",
+          "rule_entry_setup_92f8349d99",
+          "rule_entry_setup_b3a58cc5d6",
+          "rule_entry_setup_2178765d49",
+          "rule_entry_setup_7925235282",
+          "rule_entry_setup_9737f60630",
+          "rule_entry_setup_fd0161b1f5",
+          "rule_entry_setup_e90645e729",
+          "rule_entry_setup_a446aec6be",
+          "rule_entry_setup_9eb7fbf126",
+          "rule_entry_setup_f99dbcee97",
+          "rule_entry_setup_1126f2dd1f",
+          "rule_entry_setup_28bbc39843",
+          "rule_entry_setup_20440b37c8",
+          "rule_entry_setup_24ab576dbe",
+          "rule_coordinator_68707559c5",
+          "rule_manifest_meta_c79fdd7bae",
+          "rule_call_constraint_79d9c9620e",
+          "rule_call_constraint_762bb2a714",
+          "rule_call_constraint_c08705ffda",
+          "rule_call_constraint_43124388ff",
+          "rule_call_constraint_acc102943b",
+          "rule_call_constraint_8c65389601"
+        ],
+        "merged_titles": [
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh",
+          "Entry setup precedes first refresh"
+        ],
+        "source_rule_kind": "deterministic"
+      },
+      "rule_id": "rule_general_209df39611",
+      "semantic_tag": "lifecycle:lifecycle:entry_setup",
+      "soft_constraint_templates": [],
+      "source_commit": null,
+      "source_type": "profile_builder_rule",
+      "status": "SOFT",
+      "title": "Entry setup precedes first refresh",
+      "validation_summary": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": null,
+        "last_updated_at": null,
+        "n_applied": 0,
+        "n_counterexamples": 0,
+        "n_matched": 0,
+        "n_success": 0,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": null,
+        "stats_state": "MISSING",
+        "trace_preserved_rate": null
+      }
+    },
+    {
+      "category": "lifecycle",
+      "confidence": 0.8,
+      "effect": {
+        "kind": "ordering_or_constraint",
+        "scope": "cleanup"
+      },
+      "evidence_ids": [
+        "CODE_06526143a4",
+        "CODE_0dc99a79cf",
+        "CODE_2693e4d0ab",
+        "CODE_283d44870f",
+        "CODE_288895f958",
+        "CODE_2bfe4c6bb0",
+        "CODE_2df93a73d7",
+        "CODE_2fe7ecebe9",
+        "CODE_30aebc3ae1",
+        "CODE_383c1d128b",
+        "CODE_3a30ce734c",
+        "CODE_402c2a979a",
+        "CODE_42f00367b4",
+        "CODE_478ddc622d",
+        "CODE_4f104ef32c",
+        "CODE_621838399f",
+        "CODE_63f037cf36",
+        "CODE_6affa46777",
+        "CODE_6ce5c8fef1",
+        "CODE_72b209f34d",
+        "CODE_7aa04670ef",
+        "CODE_9452ec33c3",
+        "CODE_9cc9cfba06",
+        "CODE_b2256753d6",
+        "CODE_b821b7d04b",
+        "CODE_b9361eb577",
+        "CODE_beb4c8afe9",
+        "CODE_c48e86c614",
+        "CODE_c900a54a7f",
+        "CODE_ca45ca8bbb",
+        "CODE_ca89aa59df",
+        "CODE_ce80392669",
+        "CODE_d676cd9d47",
+        "CODE_dde45f43cb",
+        "CODE_ee9c75e9db",
+        "CODE_f26292575b",
+        "CODE_f8a045348f",
+        "CODE_f973fcf217",
+        "CODE_faa0728aeb",
+        "CODE_fd71e1d0bd"
+      ],
+      "extractor_version": "profile_builder_norm/v2",
+      "fallback": "disable_optimization_for_scope",
+      "guard": "runtime_metrics_available",
+      "hard_edge_templates": [
+        {
+          "dst": "ENTRY_UNLOAD",
+          "kind": "HARD_LIFECYCLE",
+          "src": "UNSUBSCRIBE"
+        }
+      ],
+      "hardening_reason": "cold_start_no_validation_stats",
+      "hardening_state": "SOFT",
+      "marker_hints": [
+        "ENTRY_UNLOAD",
+        "UNSUBSCRIBE"
+      ],
+      "match_pattern": {
+        "dominant_pattern": "ENTRY_UNLOAD",
+        "topic": "cleanup"
+      },
+      "normalization_flags": [
+        "canonicalized_rule_v1",
+        "deterministic_rule_v1",
+        "evidence_cap_applied_v1"
+      ],
+      "provenance": {
+        "bucket_key": [
+          "lifecycle",
+          "UNSUBSCRIBE",
+          "ENTRY_UNLOAD",
+          "HARD_LIFECYCLE"
+        ],
+        "cluster_id": "cluster:entry_unload:0",
+        "evidence_cap_kept": 40,
+        "evidence_cap_policy": "representative_prefix_after_canonical_sort",
+        "evidence_cap_total": 158,
+        "merged_from_rule_ids": [
+          "rule_entry_unload_9d31450f19",
+          "rule_entry_unload_c88ecc39d3",
+          "rule_entry_unload_5029d0dc3c",
+          "rule_entry_unload_f3771a9976",
+          "rule_entry_unload_00085ba295",
+          "rule_entry_unload_f21733f8ee",
+          "rule_entry_unload_69d2d2c069",
+          "rule_entry_unload_92433ca309",
+          "rule_entry_unload_3bd5c64af9",
+          "rule_entry_unload_c47f2dea5f",
+          "rule_entry_unload_3ab84d22fe",
+          "rule_entry_unload_25ccff6937",
+          "rule_entry_unload_db2fdd611c",
+          "rule_entry_unload_62b8d2b2e5",
+          "rule_entry_unload_93fcfb685b",
+          "rule_entry_unload_e182b03867",
+          "rule_entry_unload_4791a931bd",
+          "rule_entry_unload_95c636d29c",
+          "rule_unsubscribe_24c58f24f6",
+          "rule_unsubscribe_933fe2daeb",
+          "rule_unload_cleanup_06cee22b5f"
+        ],
+        "merged_titles": [
+          "Unsubscribe before entry unload",
+          "Unsubscribe before entry unload",
+          "Unsubscribe before entry unload",
+          "Unsubscribe before entry unload",
+          "Unsubscribe before entry unload",
+          "Unsubscribe before entry unload",
+          "Unsubscribe before entry unload",
+          "Unsubscribe before entry unload",
+          "Unsubscribe before entry unload",
+          "Unsubscribe before entry unload",
+          "Unsubscribe before entry unload",
+          "Unsubscribe before entry unload",
+          "Unsubscribe before entry unload",
+          "Unsubscribe before entry unload",
+          "Unsubscribe before entry unload",
+          "Unsubscribe before entry unload",
+          "Unsubscribe before entry unload",
+          "Unsubscribe before entry unload",
+          "Unsubscribe before entry unload",
+          "Unsubscribe before entry unload",
+          "Unsubscribe before entry unload"
+        ],
+        "source_rule_kind": "deterministic"
+      },
+      "rule_id": "rule_entry_unload_9d31450f19",
+      "semantic_tag": "lifecycle:cleanup:entry_unload",
+      "soft_constraint_templates": [],
+      "source_commit": null,
+      "source_type": "profile_builder_rule",
+      "status": "SOFT",
+      "title": "Unsubscribe before entry unload",
+      "validation_summary": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": null,
+        "last_updated_at": null,
+        "n_applied": 0,
+        "n_counterexamples": 0,
+        "n_matched": 0,
+        "n_success": 0,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": null,
+        "stats_state": "MISSING",
+        "trace_preserved_rate": null
+      }
+    },
+    {
+      "category": "observable",
+      "confidence": 0.8,
+      "effect": {
+        "kind": "ordering_or_constraint",
+        "scope": "state_write"
+      },
+      "evidence_ids": [
+        "CODE_066ca9ca96",
+        "CODE_06868504b4",
+        "CODE_09597de5ee",
+        "CODE_0a9add8ec1",
+        "CODE_0b117e2597",
+        "CODE_0b373ed36a",
+        "CODE_0b66cdde66",
+        "CODE_0befdd852f",
+        "CODE_0c8b02d23d",
+        "CODE_0e29f7a9d2",
+        "CODE_0e35d9de19",
+        "CODE_0eb3ff6b00",
+        "CODE_0ffe0f085c",
+        "CODE_12a49c7cfe",
+        "CODE_1579352e0e",
+        "CODE_1627ba61be",
+        "CODE_1731aa8869",
+        "CODE_1789db83f2",
+        "CODE_18065d7af8",
+        "CODE_183fda248c",
+        "CODE_1c14b9a068",
+        "CODE_204b640620",
+        "CODE_20744683cc",
+        "CODE_20c59a24ce",
+        "CODE_240ec48b5b",
+        "CODE_2876027335",
+        "CODE_287898ba89",
+        "CODE_2a28c8e29e",
+        "CODE_2aa09274ad",
+        "CODE_2b4ca9622e",
+        "CODE_2dd0d2d52f",
+        "CODE_2ec5cfdebe",
+        "CODE_3055eeccca",
+        "CODE_3381fb86fc",
+        "CODE_33e9425180",
+        "CODE_35dc6ef91a",
+        "CODE_36206f49b1",
+        "CODE_389c2670a3",
+        "CODE_38b1d633fd",
+        "CODE_38e6b1840b"
+      ],
+      "extractor_version": "profile_builder_norm/v2",
+      "fallback": "disable_optimization_for_scope",
+      "guard": "crosses_observation_boundary OR affects_entity_state",
+      "hard_edge_templates": [],
+      "hardening_reason": "cold_start_no_validation_stats",
+      "hardening_state": "SOFT",
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "match_pattern": {
+        "dominant_pattern": "STATE_WRITE",
+        "topic": "state_write"
+      },
+      "normalization_flags": [
+        "canonicalized_rule_v1",
+        "deterministic_rule_v1",
+        "evidence_cap_applied_v1"
+      ],
+      "provenance": {
+        "cluster_id": "cluster:state_write:0",
+        "evidence_cap_kept": 40,
+        "evidence_cap_policy": "representative_prefix_after_canonical_sort",
+        "evidence_cap_total": 179,
+        "merged_from_rule_ids": [
+          "rule_state_write_3038cae0b8",
+          "rule_state_write_710958756b",
+          "rule_state_write_dce2fc9a6d",
+          "rule_state_write_0a604697f0",
+          "rule_state_write_3518d4ff7d",
+          "rule_state_write_070a7bff57",
+          "rule_state_write_858848311f",
+          "rule_state_write_5022dfb269",
+          "rule_state_write_976c5290aa",
+          "rule_state_write_18d16b7eea",
+          "rule_state_write_1dc0ca0d22",
+          "rule_state_write_d1c1cbb913",
+          "rule_state_write_f16e98ec08",
+          "rule_state_write_701bcc3726",
+          "rule_state_write_ce1f54d593",
+          "rule_state_write_129fa5c0e7"
+        ],
+        "merged_titles": [
+          "State write is observable",
+          "State write is observable",
+          "State write is observable",
+          "State write is observable",
+          "State write is observable",
+          "State write is observable",
+          "State write is observable",
+          "State write is observable",
+          "State write is observable",
+          "State write is observable",
+          "State write is observable",
+          "State write is observable",
+          "State write is observable",
+          "State write is observable",
+          "State write is observable",
+          "State write is observable"
+        ],
+        "source_rule_kind": "deterministic"
+      },
+      "rule_id": "rule_state_write_3038cae0b8",
+      "semantic_tag": "observable:state_write:state_write",
+      "soft_constraint_templates": [],
+      "source_commit": null,
+      "source_type": "profile_builder_rule",
+      "status": "SOFT",
+      "title": "State write is observable",
+      "validation_summary": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": null,
+        "last_updated_at": null,
+        "n_applied": 0,
+        "n_counterexamples": 0,
+        "n_matched": 0,
+        "n_success": 0,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": null,
+        "stats_state": "MISSING",
+        "trace_preserved_rate": null
+      }
+    },
+    {
+      "category": "lifecycle",
+      "confidence": 0.8,
+      "effect": {
+        "kind": "ordering_or_constraint",
+        "scope": "lifecycle"
+      },
+      "evidence_ids": [
+        "CODE_02eb774fd1",
+        "CODE_0c06635c29",
+        "CODE_1141f5ef47",
+        "CODE_5a07007210",
+        "CODE_618bbae268",
+        "CODE_809211cab6",
+        "CODE_8936f1a89e",
+        "CODE_8be11201a1",
+        "CODE_ad462c4c07",
+        "CODE_cd64826bf2",
+        "CODE_d7485bbc02",
+        "CODE_e65115b112",
+        "CODE_fc77e2e5b8",
+        "DOC_05241d6274",
+        "DOC_159a6d012b",
+        "DOC_99dacb941f"
+      ],
+      "extractor_version": "profile_builder_norm/v2",
+      "fallback": "disable_optimization_for_scope",
+      "guard": "runtime_metrics_available",
+      "hard_edge_templates": [
+        {
+          "dst": "STATE_WRITE",
+          "kind": "HARD_LIFECYCLE",
+          "src": "COORD_REFRESH"
+        }
+      ],
+      "hardening_reason": "cold_start_no_validation_stats",
+      "hardening_state": "SOFT",
+      "marker_hints": [
+        "COORD_REFRESH",
+        "STATE_WRITE"
+      ],
+      "match_pattern": {
+        "dominant_pattern": "COORD_REFRESH",
+        "topic": "lifecycle"
+      },
+      "normalization_flags": [
+        "canonicalized_rule_v1",
+        "deterministic_rule_v1"
+      ],
+      "provenance": {
+        "bucket_key": [
+          "lifecycle",
+          "COORD_REFRESH",
+          "STATE_WRITE",
+          "HARD_LIFECYCLE"
+        ],
+        "cluster_id": "cluster:coord_refresh:0",
+        "merged_from_rule_ids": [
+          "rule_coord_refresh_0d5b7bb134",
+          "rule_coord_refresh_ed2454a31f"
+        ],
+        "merged_titles": [
+          "Coordinator refresh precedes state write",
+          "Coordinator refresh precedes state write"
+        ],
+        "source_rule_kind": "deterministic"
+      },
+      "rule_id": "rule_coord_refresh_0d5b7bb134",
+      "semantic_tag": "lifecycle:lifecycle:coord_refresh",
+      "soft_constraint_templates": [],
+      "source_commit": null,
+      "source_type": "profile_builder_rule",
+      "status": "SOFT",
+      "title": "Coordinator refresh precedes state write",
+      "validation_summary": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": null,
+        "last_updated_at": null,
+        "n_applied": 0,
+        "n_counterexamples": 0,
+        "n_matched": 0,
+        "n_success": 0,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": null,
+        "stats_state": "MISSING",
+        "trace_preserved_rate": null
+      }
+    },
+    {
+      "category": "cleanup",
+      "confidence": 0.8,
+      "effect": {
+        "kind": "ordering_or_constraint",
+        "scope": "cleanup"
+      },
+      "evidence_ids": [
+        "CODE_2fc0fe11b4",
+        "CODE_527c14ed92",
+        "CODE_70ba6f82dc",
+        "CODE_7b496e9cc2",
+        "CODE_97c2a8dad0",
+        "CODE_99c47b0c4f",
+        "CODE_a564eb12e1",
+        "CODE_a5b865d7ee",
+        "CODE_be863363e5",
+        "CODE_ca0b51b57f",
+        "CODE_e98eee6722",
+        "DOC_05241d6274",
+        "DOC_159a6d012b",
+        "DOC_305c3ec13c",
+        "DOC_38dd414dbd",
+        "DOC_99dacb941f"
+      ],
+      "extractor_version": "profile_builder_norm/v2",
+      "fallback": "disable_optimization_for_scope",
+      "guard": "runtime_metrics_available",
+      "hard_edge_templates": [
+        {
+          "dst": "UNSUBSCRIBE",
+          "kind": "HARD_LIFECYCLE",
+          "src": "SUBSCRIBE"
+        }
+      ],
+      "hardening_reason": "cold_start_no_validation_stats",
+      "hardening_state": "SOFT",
+      "marker_hints": [
+        "SUBSCRIBE",
+        "UNSUBSCRIBE"
+      ],
+      "match_pattern": {
+        "dominant_pattern": "SUBSCRIBE",
+        "topic": "cleanup"
+      },
+      "normalization_flags": [
+        "canonicalized_rule_v1",
+        "deterministic_rule_v1"
+      ],
+      "provenance": {
+        "cluster_id": "cluster:subscribe:0",
+        "merged_from_rule_ids": [
+          "rule_subscribe_ab1fa62e3a",
+          "rule_subscribe_f7295817f2"
+        ],
+        "merged_titles": [
+          "Subscription cleanup pairing",
+          "Subscription cleanup pairing"
+        ],
+        "source_rule_kind": "deterministic"
+      },
+      "rule_id": "rule_subscribe_ab1fa62e3a",
+      "semantic_tag": "cleanup:cleanup:subscribe",
+      "soft_constraint_templates": [],
+      "source_commit": null,
+      "source_type": "profile_builder_rule",
+      "status": "SOFT",
+      "title": "Subscription cleanup pairing",
+      "validation_summary": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": null,
+        "last_updated_at": null,
+        "n_applied": 0,
+        "n_counterexamples": 0,
+        "n_matched": 0,
+        "n_success": 0,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": null,
+        "stats_state": "MISSING",
+        "trace_preserved_rate": null
+      }
+    },
+    {
+      "category": "protocol",
+      "confidence": 0.95,
+      "effect": {
+        "kind": "ordering_or_constraint",
+        "scope": "protocol_ble"
+      },
+      "evidence_ids": [
+        "CODE_0b1626dcf4",
+        "CODE_0ce4fb7724",
+        "CODE_20c5afd0b1",
+        "CODE_321f89e8e1",
+        "CODE_76df369368",
+        "CODE_8f86ffa5eb",
+        "CODE_b547e01a85",
+        "CODE_eaede40a1d"
+      ],
+      "extractor_version": "profile_builder_norm/v2",
+      "fallback": "serialize_ble_ops_and_disable_reuse",
+      "guard": "ble_timeout_rate_high OR ble_overlap_risk_high",
+      "hard_edge_templates": [],
+      "hardening_reason": "cold_start_no_validation_stats",
+      "hardening_state": "SOFT",
+      "marker_hints": [
+        "BLE_CONNECT",
+        "BLE_GATT_OP",
+        "BLE_OP"
+      ],
+      "match_pattern": {
+        "dominant_pattern": "BLE_GATT_OP",
+        "topic": "protocol_ble"
+      },
+      "normalization_flags": [
+        "canonicalized_rule_v1",
+        "protocol_rule_v1"
+      ],
+      "provenance": {
+        "bucket_key": [
+          "protocol",
+          "protocol_ble",
+          "BLE_GATT_OP",
+          [
+            "BUDGET_K",
+            "NO_OVERLAP"
+          ]
+        ],
+        "code_score": 30.0,
+        "doc_score": 21.2,
+        "merged_from_rule_ids": [
+          "rule_protocol_ble_budget_overlap"
+        ],
+        "merged_titles": [
+          "BLE overlap control"
+        ],
+        "source_rule_kind": "protocol_synthesis",
+        "test_score": 0.0,
+        "total_score": 51.2
+      },
+      "rule_id": "rule_protocol_ble_budget_overlap",
+      "semantic_tag": "protocol:protocol_ble:ble_gatt_op",
+      "soft_constraint_templates": [
+        {
+          "kind": "BUDGET_K",
+          "params": {
+            "limit": 1,
+            "mode": "soft_cap",
+            "resource": "BLE"
+          },
+          "scope": [
+            "BLE_CONNECT",
+            "BLE_GATT_OP",
+            "BLE_OP"
+          ]
+        },
+        {
+          "kind": "NO_OVERLAP",
+          "params": {
+            "max_parallel": 1,
+            "resource": "BLE_AIRTIME",
+            "risk_feature": "conn_event_overlap"
+          },
+          "scope": [
+            "BLE_CONNECT",
+            "BLE_GATT_OP",
+            "BLE_OP"
+          ]
+        }
+      ],
+      "source_commit": null,
+      "source_type": "profile_builder_rule",
+      "status": "SOFT",
+      "title": "BLE overlap control",
+      "validation_summary": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": null,
+        "last_updated_at": null,
+        "n_applied": 0,
+        "n_counterexamples": 0,
+        "n_matched": 0,
+        "n_success": 0,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": null,
+        "stats_state": "MISSING",
+        "trace_preserved_rate": null
+      }
+    },
+    {
+      "category": "protocol",
+      "confidence": 0.93,
+      "effect": {
+        "kind": "ordering_or_constraint",
+        "scope": "protocol_ble"
+      },
+      "evidence_ids": [
+        "CODE_0b1626dcf4",
+        "CODE_0ce4fb7724",
+        "CODE_20c5afd0b1",
+        "CODE_321f89e8e1",
+        "CODE_76df369368",
+        "CODE_8f86ffa5eb",
+        "CODE_b547e01a85",
+        "CODE_eaede40a1d"
+      ],
+      "extractor_version": "profile_builder_norm/v2",
+      "fallback": "disable_ble_reuse_and_insert_gap",
+      "guard": "ble_conn_success_rate_ok",
+      "hard_edge_templates": [],
+      "hardening_reason": "cold_start_no_validation_stats",
+      "hardening_state": "SOFT",
+      "marker_hints": [
+        "BLE_GATT_OP",
+        "BLE_DISCONNECT",
+        "BLE_CONNECT",
+        "BLE_OP"
+      ],
+      "match_pattern": {
+        "dominant_pattern": "BLE_CONNECT",
+        "topic": "protocol_ble"
+      },
+      "normalization_flags": [
+        "canonicalized_rule_v1",
+        "protocol_rule_v1"
+      ],
+      "provenance": {
+        "bucket_key": [
+          "protocol",
+          "protocol_ble",
+          "BLE_CONNECT",
+          [
+            "MIN_GAP",
+            "SAME_SESSION_GROUP"
+          ]
+        ],
+        "code_score": 30.0,
+        "doc_score": 21.2,
+        "merged_from_rule_ids": [
+          "rule_protocol_ble_reuse_gap"
+        ],
+        "merged_titles": [
+          "BLE session reuse cooldown"
+        ],
+        "source_rule_kind": "protocol_synthesis",
+        "test_score": 0.0,
+        "total_score": 51.2
+      },
+      "rule_id": "rule_protocol_ble_reuse_gap",
+      "semantic_tag": "protocol:protocol_ble:ble_connect",
+      "soft_constraint_templates": [
+        {
+          "kind": "SAME_SESSION_GROUP",
+          "params": {
+            "group_key": "device_id",
+            "reuse_window_ms": 3000
+          },
+          "scope": [
+            "BLE_GATT_OP",
+            "BLE_OP"
+          ]
+        },
+        {
+          "kind": "MIN_GAP",
+          "params": {
+            "gap_ms": 100,
+            "reason": "cooldown"
+          },
+          "scope": [
+            "BLE_DISCONNECT",
+            "BLE_CONNECT",
+            "BLE_OP"
+          ]
+        }
+      ],
+      "source_commit": null,
+      "source_type": "profile_builder_rule",
+      "status": "SOFT",
+      "title": "BLE session reuse cooldown",
+      "validation_summary": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": null,
+        "last_updated_at": null,
+        "n_applied": 0,
+        "n_counterexamples": 0,
+        "n_matched": 0,
+        "n_success": 0,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": null,
+        "stats_state": "MISSING",
+        "trace_preserved_rate": null
+      }
+    },
+    {
+      "category": "protocol",
+      "confidence": 0.93,
+      "effect": {
+        "kind": "ordering_or_constraint",
+        "scope": "protocol_local"
+      },
+      "evidence_ids": [
+        "CODE_06dbc84c73",
+        "CODE_25fd7d0af0",
+        "CODE_31e7a37fd5",
+        "CODE_578c107420",
+        "CODE_8709798131",
+        "CODE_9ed248a8df",
+        "CODE_d152df1395",
+        "CODE_e4c210591b"
+      ],
+      "extractor_version": "profile_builder_norm/v2",
+      "fallback": "serialize_local_api_reads",
+      "guard": "local_endpoint_reachable",
+      "hard_edge_templates": [],
+      "hardening_reason": "cold_start_no_validation_stats",
+      "hardening_state": "SOFT",
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "match_pattern": {
+        "dominant_pattern": "LOCAL_API_READ",
+        "topic": "protocol_local"
+      },
+      "normalization_flags": [
+        "canonicalized_rule_v1",
+        "protocol_rule_v1"
+      ],
+      "provenance": {
+        "bucket_key": [
+          "protocol",
+          "protocol_local",
+          "LOCAL_API_READ",
+          [
+            "BUDGET_K",
+            "SAME_SESSION_GROUP"
+          ]
+        ],
+        "code_score": 52.8,
+        "doc_score": 12.75,
+        "merged_from_rule_ids": [
+          "rule_protocol_local_api_budget"
+        ],
+        "merged_titles": [
+          "Local API read budget"
+        ],
+        "source_rule_kind": "protocol_synthesis",
+        "test_score": 0.0,
+        "total_score": 65.55
+      },
+      "rule_id": "rule_protocol_local_api_budget",
+      "semantic_tag": "protocol:protocol_local:local_api_read",
+      "soft_constraint_templates": [
+        {
+          "kind": "BUDGET_K",
+          "params": {
+            "limit": 4,
+            "resource": "LOCAL_PARALLEL"
+          },
+          "scope": [
+            "LOCAL_API_READ"
+          ]
+        },
+        {
+          "kind": "SAME_SESSION_GROUP",
+          "params": {
+            "group_key": "endpoint",
+            "reuse_window_ms": 5000
+          },
+          "scope": [
+            "LOCAL_API_READ"
+          ]
+        }
+      ],
+      "source_commit": null,
+      "source_type": "profile_builder_rule",
+      "status": "SOFT",
+      "title": "Local API read budget",
+      "validation_summary": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": null,
+        "last_updated_at": null,
+        "n_applied": 0,
+        "n_counterexamples": 0,
+        "n_matched": 0,
+        "n_success": 0,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": null,
+        "stats_state": "MISSING",
+        "trace_preserved_rate": null
+      }
+    },
+    {
+      "category": "protocol",
+      "confidence": 0.95,
+      "effect": {
+        "kind": "ordering_or_constraint",
+        "scope": "protocol_cloud"
+      },
+      "evidence_ids": [
+        "CODE_1ac90b67bb",
+        "CODE_371b453ad6",
+        "CODE_46d1320760",
+        "CODE_590cd77c5f",
+        "CODE_74db006567",
+        "CODE_a21d4f5cc0",
+        "CODE_afa03061bb",
+        "CODE_d7d618fac3"
+      ],
+      "extractor_version": "profile_builder_norm/v2",
+      "fallback": "reduce_qps_and_parallelism",
+      "guard": "recent_429_rate_high",
+      "hard_edge_templates": [],
+      "hardening_reason": "cold_start_no_validation_stats",
+      "hardening_state": "SOFT",
+      "marker_hints": [
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "match_pattern": {
+        "dominant_pattern": "CLOUD_HTTP_CALL",
+        "topic": "protocol_cloud"
+      },
+      "normalization_flags": [
+        "canonicalized_rule_v1",
+        "protocol_rule_v1"
+      ],
+      "provenance": {
+        "bucket_key": [
+          "protocol",
+          "protocol_cloud",
+          "CLOUD_HTTP_CALL",
+          [
+            "BUDGET_K",
+            "RATE_LIMIT"
+          ]
+        ],
+        "code_score": 254.8,
+        "doc_score": 14.55,
+        "merged_from_rule_ids": [
+          "rule_protocol_cloud_budget_rate"
+        ],
+        "merged_titles": [
+          "Cloud parallel budget and rate limit"
+        ],
+        "source_rule_kind": "protocol_synthesis",
+        "test_score": 20.4,
+        "total_score": 289.75
+      },
+      "rule_id": "rule_protocol_cloud_budget_rate",
+      "semantic_tag": "protocol:protocol_cloud:cloud_http_call",
+      "soft_constraint_templates": [
+        {
+          "kind": "BUDGET_K",
+          "params": {
+            "limit": 4,
+            "resource": "CLOUD_PARALLEL"
+          },
+          "scope": [
+            "CLOUD_HTTP_CALL",
+            "CLOUD_OP"
+          ]
+        },
+        {
+          "kind": "RATE_LIMIT",
+          "params": {
+            "burst": 8,
+            "max_qps": 5.0,
+            "window_ms": 1000
+          },
+          "scope": [
+            "CLOUD_HTTP_CALL",
+            "CLOUD_OP"
+          ]
+        }
+      ],
+      "source_commit": null,
+      "source_type": "profile_builder_rule",
+      "status": "SOFT",
+      "title": "Cloud parallel budget and rate limit",
+      "validation_summary": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": null,
+        "last_updated_at": null,
+        "n_applied": 0,
+        "n_counterexamples": 0,
+        "n_matched": 0,
+        "n_success": 0,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": null,
+        "stats_state": "MISSING",
+        "trace_preserved_rate": null
+      }
+    },
+    {
+      "category": "protocol",
+      "confidence": 0.93,
+      "effect": {
+        "kind": "ordering_or_constraint",
+        "scope": "protocol_cloud"
+      },
+      "evidence_ids": [
+        "CODE_1ac90b67bb",
+        "CODE_371b453ad6",
+        "CODE_46d1320760",
+        "CODE_590cd77c5f",
+        "CODE_74db006567",
+        "CODE_a21d4f5cc0",
+        "CODE_afa03061bb",
+        "CODE_d7d618fac3"
+      ],
+      "extractor_version": "profile_builder_norm/v2",
+      "fallback": "backoff_then_shrink_batch",
+      "guard": "recent_429_rate_high",
+      "hard_edge_templates": [],
+      "hardening_reason": "cold_start_no_validation_stats",
+      "hardening_state": "SOFT",
+      "marker_hints": [
+        "CLOUD_HTTP_CALL",
+        "CLOUD_429_CHECK",
+        "CLOUD_BACKOFF_SLEEP",
+        "CLOUD_OP"
+      ],
+      "match_pattern": {
+        "dominant_pattern": "CLOUD_429_CHECK",
+        "topic": "protocol_cloud"
+      },
+      "normalization_flags": [
+        "canonicalized_rule_v1",
+        "protocol_rule_v1"
+      ],
+      "provenance": {
+        "bucket_key": [
+          "protocol",
+          "protocol_cloud",
+          "CLOUD_429_CHECK",
+          [
+            "BACKOFF_WINDOW"
+          ]
+        ],
+        "code_score": 254.8,
+        "doc_score": 14.55,
+        "merged_from_rule_ids": [
+          "rule_protocol_cloud_backoff"
+        ],
+        "merged_titles": [
+          "Cloud 429 backoff window"
+        ],
+        "source_rule_kind": "protocol_synthesis",
+        "test_score": 20.4,
+        "total_score": 289.75
+      },
+      "rule_id": "rule_protocol_cloud_backoff",
+      "semantic_tag": "protocol:protocol_cloud:cloud_429_check",
+      "soft_constraint_templates": [
+        {
+          "kind": "BACKOFF_WINDOW",
+          "params": {
+            "base_ms": 200,
+            "factor": 2.0,
+            "max_ms": 2000
+          },
+          "scope": [
+            "CLOUD_HTTP_CALL",
+            "CLOUD_OP"
+          ]
+        }
+      ],
+      "source_commit": null,
+      "source_type": "profile_builder_rule",
+      "status": "SOFT",
+      "title": "Cloud 429 backoff window",
+      "validation_summary": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": null,
+        "last_updated_at": null,
+        "n_applied": 0,
+        "n_counterexamples": 0,
+        "n_matched": 0,
+        "n_success": 0,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": null,
+        "stats_state": "MISSING",
+        "trace_preserved_rate": null
+      }
+    },
+    {
+      "category": "protocol",
+      "confidence": 0.91,
+      "effect": {
+        "kind": "ordering_or_constraint",
+        "scope": "protocol_cloud"
+      },
+      "evidence_ids": [
+        "CODE_1ac90b67bb",
+        "CODE_371b453ad6",
+        "CODE_46d1320760",
+        "CODE_590cd77c5f",
+        "CODE_74db006567",
+        "CODE_a21d4f5cc0",
+        "CODE_afa03061bb",
+        "CODE_d7d618fac3"
+      ],
+      "extractor_version": "profile_builder_norm/v2",
+      "fallback": "disable_batching_use_singleton_calls",
+      "guard": "latency_budget_allows_batching AND 429_rate_low",
+      "hard_edge_templates": [],
+      "hardening_reason": "cold_start_no_validation_stats",
+      "hardening_state": "SOFT",
+      "marker_hints": [
+        "CLOUD_HTTP_CALL",
+        "CLOUD_BATCH_CALL",
+        "CLOUD_SESSION_REUSE",
+        "CLOUD_OP"
+      ],
+      "match_pattern": {
+        "dominant_pattern": "CLOUD_BATCH_CALL",
+        "topic": "protocol_cloud"
+      },
+      "normalization_flags": [
+        "canonicalized_rule_v1",
+        "protocol_rule_v1"
+      ],
+      "provenance": {
+        "bucket_key": [
+          "protocol",
+          "protocol_cloud",
+          "CLOUD_BATCH_CALL",
+          [
+            "BATCH_GROUP",
+            "SAME_SESSION_GROUP"
+          ]
+        ],
+        "code_score": 254.8,
+        "doc_score": 14.55,
+        "merged_from_rule_ids": [
+          "rule_protocol_cloud_batch_reuse"
+        ],
+        "merged_titles": [
+          "Cloud batching and session reuse"
+        ],
+        "source_rule_kind": "protocol_synthesis",
+        "test_score": 20.4,
+        "total_score": 289.75
+      },
+      "rule_id": "rule_protocol_cloud_batch_reuse",
+      "semantic_tag": "protocol:protocol_cloud:cloud_batch_call",
+      "soft_constraint_templates": [
+        {
+          "kind": "BATCH_GROUP",
+          "params": {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 20,
+            "max_wait_ms": 80
+          },
+          "scope": [
+            "CLOUD_HTTP_CALL",
+            "CLOUD_OP"
+          ]
+        },
+        {
+          "kind": "SAME_SESSION_GROUP",
+          "params": {
+            "group_key": "host",
+            "reuse_window_ms": 10000
+          },
+          "scope": [
+            "CLOUD_HTTP_CALL",
+            "CLOUD_OP"
+          ]
+        }
+      ],
+      "source_commit": null,
+      "source_type": "profile_builder_rule",
+      "status": "SOFT",
+      "title": "Cloud batching and session reuse",
+      "validation_summary": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": null,
+        "last_updated_at": null,
+        "n_applied": 0,
+        "n_counterexamples": 0,
+        "n_matched": 0,
+        "n_success": 0,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": null,
+        "stats_state": "MISSING",
+        "trace_preserved_rate": null
+      }
+    },
+    {
+      "category": "protocol",
+      "confidence": 0.95,
+      "effect": {
+        "kind": "ordering_or_constraint",
+        "scope": "protocol_cloud"
+      },
+      "evidence_ids": [
+        "CODE_1ac90b67bb",
+        "CODE_371b453ad6",
+        "CODE_46d1320760",
+        "CODE_590cd77c5f",
+        "CODE_74db006567",
+        "CODE_a21d4f5cc0",
+        "CODE_afa03061bb",
+        "CODE_d7d618fac3"
+      ],
+      "extractor_version": "profile_builder_norm/v2",
+      "fallback": "disable_optimization_for_scope",
+      "guard": "runtime_metrics_available",
+      "hard_edge_templates": [
+        {
+          "dst": "CLOUD_HTTP_CALL",
+          "kind": "HARD_LIFECYCLE",
+          "params": {
+            "pair_key": "host"
+          },
+          "src": "CLOUD_TOKEN_REFRESH"
+        }
+      ],
+      "hardening_reason": "cold_start_no_validation_stats",
+      "hardening_state": "SOFT",
+      "marker_hints": [
+        "CLOUD_TOKEN_REFRESH",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "match_pattern": {
+        "dominant_pattern": "CLOUD_TOKEN_REFRESH",
+        "topic": "protocol_cloud"
+      },
+      "normalization_flags": [
+        "canonicalized_rule_v1",
+        "protocol_rule_v1"
+      ],
+      "provenance": {
+        "bucket_key": [
+          "protocol",
+          "protocol_cloud",
+          "CLOUD_TOKEN_REFRESH",
+          []
+        ],
+        "code_score": 254.8,
+        "doc_score": 14.55,
+        "merged_from_rule_ids": [
+          "rule_protocol_cloud_refresh_before_call"
+        ],
+        "merged_titles": [
+          "Cloud token refresh precedence"
+        ],
+        "source_rule_kind": "protocol_synthesis",
+        "test_score": 20.4,
+        "total_score": 289.75
+      },
+      "rule_id": "rule_protocol_cloud_refresh_before_call",
+      "semantic_tag": "protocol:protocol_cloud:cloud_token_refresh",
+      "soft_constraint_templates": [],
+      "source_commit": null,
+      "source_type": "profile_builder_rule",
+      "status": "SOFT",
+      "title": "Cloud token refresh precedence",
+      "validation_summary": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": null,
+        "last_updated_at": null,
+        "n_applied": 0,
+        "n_counterexamples": 0,
+        "n_matched": 0,
+        "n_success": 0,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": null,
+        "stats_state": "MISSING",
+        "trace_preserved_rate": null
+      }
+    },
+    {
+      "category": "protocol",
+      "confidence": 0.95,
+      "effect": {
+        "kind": "ordering_or_constraint",
+        "scope": "protocol_ble"
+      },
+      "evidence_ids": [
+        "CODE_0b1626dcf4",
+        "CODE_20c5afd0b1",
+        "CODE_3a2e19f06d",
+        "CODE_43b22656b1",
+        "CODE_5b8bec898c",
+        "CODE_76df369368",
+        "CODE_8f86ffa5eb",
+        "CODE_b547e01a85"
+      ],
+      "extractor_version": "profile_builder_norm/v2",
+      "fallback": "disable_optimization_for_scope",
+      "guard": "runtime_metrics_available",
+      "hard_edge_templates": [
+        {
+          "dst": "BLE_GATT_OP",
+          "kind": "HARD_LIFECYCLE",
+          "params": {
+            "pair_key": "device_id"
+          },
+          "src": "BLE_CONNECT"
+        },
+        {
+          "dst": "BLE_DISCONNECT",
+          "kind": "HARD_LIFECYCLE",
+          "params": {
+            "pair_key": "device_id"
+          },
+          "src": "BLE_GATT_OP"
+        }
+      ],
+      "hardening_reason": "cold_start_no_validation_stats",
+      "hardening_state": "SOFT",
+      "marker_hints": [
+        "BLE_CONNECT",
+        "BLE_GATT_OP",
+        "BLE_DISCONNECT",
+        "BLE_OP"
+      ],
+      "match_pattern": {
+        "dominant_pattern": "BLE_GATT_OP",
+        "topic": "protocol_ble"
+      },
+      "normalization_flags": [
+        "canonicalized_rule_v1",
+        "protocol_rule_v1"
+      ],
+      "provenance": {
+        "bucket_key": [
+          "protocol",
+          "protocol_ble",
+          "BLE_GATT_OP",
+          []
+        ],
+        "code_score": 30.0,
+        "doc_score": 21.2,
+        "merged_from_rule_ids": [
+          "rule_protocol_ble_connect_op_disconnect"
+        ],
+        "merged_titles": [
+          "BLE connect/op/disconnect sequence"
+        ],
+        "source_rule_kind": "protocol_synthesis",
+        "test_score": 0.0,
+        "total_score": 51.2
+      },
+      "rule_id": "rule_protocol_ble_connect_op_disconnect",
+      "semantic_tag": "protocol:protocol_ble:ble_gatt_op",
+      "soft_constraint_templates": [],
+      "source_commit": null,
+      "source_type": "profile_builder_rule",
+      "status": "SOFT",
+      "title": "BLE connect precedes GATT operations",
+      "validation_summary": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": null,
+        "last_updated_at": null,
+        "n_applied": 0,
+        "n_counterexamples": 0,
+        "n_matched": 0,
+        "n_success": 0,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": null,
+        "stats_state": "MISSING",
+        "trace_preserved_rate": null
+      }
+    }
+  ],
+  "schema_version": "ha_profile/v1"
+}

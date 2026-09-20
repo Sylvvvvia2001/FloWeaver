@@ -1,0 +1,47 @@
+{
+  "accepted_corridors": [
+    {
+      "action_ids": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "batch_ids": [
+        "batch_000",
+        "batch_001",
+        "batch_002"
+      ],
+      "corridor_id": "corridor_00",
+      "latency_saved_ms": 192,
+      "source": "BLE",
+      "validation_passed": true
+    }
+  ],
+  "api_added_savings_ms": 0,
+  "ble_added_savings_ms": 192,
+  "case_name": "Elderly Care Daily Check",
+  "combined_added_savings_ms": 192,
+  "combined_added_savings_ratio": 0.054084507042253524,
+  "combined_refined_estimated_latency_ms": 3358,
+  "conflict_count": 0,
+  "group": "Family Care and Room-Level Snapshot Routines",
+  "original_estimated_latency_ms": 3550,
+  "rejected_corridors": [],
+  "target_path": "data/targets/vdev_benchmarks/vdev_elderly_care_daily_check_01.json",
+  "validation": {
+    "api_constraints_ok": true,
+    "batch_order_preserved": true,
+    "ble_constraints_ok": true,
+    "component_validations_ok": true,
+    "conflict_free": true,
+    "contiguous_coverage_ok": true,
+    "event_loop_constraints_ok": true,
+    "passed": true,
+    "projection_ok": true,
+    "reasons": [],
+    "savings_consistency_ok": true,
+    "simulated_event_count": 18,
+    "simulated_total_ms": 3358
+  },
+  "vdev_id": "vdev_elderly_care_daily_check_01"
+}

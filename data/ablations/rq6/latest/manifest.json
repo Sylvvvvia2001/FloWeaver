@@ -1,0 +1,62 @@
+{
+  "input_xlsx": "data/external/ifttt_samples_vibeaura_simulated_estimates.xlsx",
+  "naive_topo_csv": "data/baselines/naive_topo_parallel/realistic_simulation/naive_topo_realistic_rows.csv",
+  "variants": [
+    "full_floweaver",
+    "without_rollback",
+    "without_micro",
+    "action_only"
+  ],
+  "datasets": {
+    "smart-home": {
+      "sheet": "Simulated Estimates",
+      "bins": [
+        [
+          "Group1",
+          0.0,
+          3.0
+        ],
+        [
+          "Group2",
+          3.0,
+          6.0
+        ],
+        [
+          "Group3",
+          6.0,
+          9.0
+        ],
+        [
+          "Group4",
+          9.0,
+          null
+        ]
+      ]
+    },
+    "long-chain": {
+      "sheet": "LongChain System Estimates",
+      "bins": [
+        [
+          "Group1",
+          0.0,
+          9.0
+        ],
+        [
+          "Group2",
+          9.0,
+          18.0
+        ],
+        [
+          "Group3",
+          18.0,
+          27.0
+        ],
+        [
+          "Group4",
+          27.0,
+          null
+        ]
+      ]
+    }
+  }
+}

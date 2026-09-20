@@ -1,0 +1,301 @@
+{
+  "integration": "mqtt",
+  "runtime_families": [
+    {
+      "action_kind": "read_last_message",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "mqtt:power_meter_kitchen",
+          "power_meter_kitchen"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "subscribe",
+          "read",
+          "read_last_message"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "collections",
+          "config",
+          "const",
+          "datetime",
+          "entity"
+        ],
+        "boost_if_names": [
+          "read_last_message",
+          "_state_message_received",
+          "_update_state",
+          "_subscribe_topics"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "MQTT_SUBSCRIBE",
+      "file_globs": [
+        "mqtt/sensor.py"
+      ],
+      "forbidden_context": [
+        "setup_function",
+        "dunder_init"
+      ],
+      "forbidden_path_signals": [
+        "setup_function:async_setup_entry",
+        "property_function:available",
+        "control_function:async_turn_on",
+        "control_function:async_turn_off",
+        "control_function:async_open_cover",
+        "control_function:async_close_cover",
+        "control_function:async_set_cover_position",
+        "control_function:set_state"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "_state_message_received",
+        "_update_state",
+        "_subscribe_topics"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A12"
+      ],
+      "integration": "mqtt",
+      "negative_call_patterns": [
+        "async_setup_entity_entry_helper",
+        "async_write_ha_state",
+        "self.async_write_ha_state",
+        "fget",
+        "mqttavailabilitymixin.available.fget",
+        "_async_send_commands"
+      ],
+      "negative_evidence": [
+        "negative_function:async_setup_entry",
+        "negative_function:_value_is_expired",
+        "negative_function:available",
+        "negative_function:config_schema",
+        "negative_call:async_setup_entity_entry_helper",
+        "negative_call:async_write_ha_state",
+        "negative_call:self.async_write_ha_state",
+        "negative_call:fget",
+        "negative_call:mqttavailabilitymixin.available.fget",
+        "negative_path_signal:setup_function:async_setup_entry"
+      ],
+      "negative_function_patterns": [
+        "async_setup_entry",
+        "_value_is_expired",
+        "available",
+        "config_schema",
+        "async_turn_on",
+        "async_turn_off"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [
+            "async_setup_entity_entry_helper"
+          ],
+          "call_patterns": [
+            "async_setup_entity_entry_helper"
+          ],
+          "file_path": "data/repo_snapshot/mqtt/sensor.py",
+          "function_name": "async_setup_entry",
+          "path_kind": "setup_path",
+          "path_signals": [
+            "setup_function:async_setup_entry"
+          ],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -10,
+          "snippet": "169: \n170: async def async_setup_entry(\n171:     hass: HomeAssistant,\n172:     config_entry: ConfigEntry,\n173:     async_add_entities: AddConfigEntryEntitiesCallback,\n174: ) -> None:\n175:     \"\"\"Set up MQTT sensor through YAML and through MQTT discovery.\"\"\"\n176:     async_setup_entity_entry_helper(\n177:         hass,\n178:         config_entry,\n179:         MqttSensor,\n180:         sensor.DOMAIN,\n181:         async_add_entities,\n182:         DISCOVERY_SCHEMA,"
+        },
+        {
+          "call_chains": [
+            "self.async_write_ha_state"
+          ],
+          "call_patterns": [
+            "async_write_ha_state"
+          ],
+          "file_path": "data/repo_snapshot/mqtt/sensor.py",
+          "function_name": "_value_is_expired",
+          "path_kind": "control_path",
+          "path_signals": [
+            "state_write_function:_value_is_expired",
+            "state_write_call:self.async_write_ha_state"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -1,
+          "snippet": "387:     @callback\n388:     def _value_is_expired(self, *_: datetime) -> None:\n389:         \"\"\"Triggered when value is expired.\"\"\"\n390:         self._expiration_trigger = None\n391:         self._expired = True\n392:         self.async_write_ha_state()\n393: \n394:     @property"
+        },
+        {
+          "call_chains": [
+            "mqttavailabilitymixin.available.fget"
+          ],
+          "call_patterns": [
+            "fget"
+          ],
+          "file_path": "data/repo_snapshot/mqtt/sensor.py",
+          "function_name": "available",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:available"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "394:     @property\n395:     def available(self) -> bool:\n396:         \"\"\"Return true if the device is available and value has not expired.\"\"\"\n397:         # mypy doesn't know about fget: https://github.com/python/mypy/issues/6185\n398:         return MqttAvailabilityMixin.available.fget(self) and (  # type: ignore[attr-defined]\n399:             self._expire_after is None or not self._expired\n400:         )"
+        },
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/mqtt/sensor.py",
+          "function_name": "config_schema",
+          "path_kind": "helper_path",
+          "path_signals": [],
+          "prototype_kind": "negative_helper",
+          "role_hint": "helper",
+          "score": -4,
+          "snippet": "250:     @staticmethod\n251:     def config_schema() -> VolSchemaType:\n252:         \"\"\"Return the config schema.\"\"\"\n253:         return DISCOVERY_SCHEMA\n254: \n255:     def _setup_from_config(self, config: ConfigType) -> None:"
+        }
+      ],
+      "origin_action_id": "A12",
+      "origin_cluster_id": "mqtt__sensor__mqtt_subscribe__read_last_message__local",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/mqtt/sensor.py",
+          "function_name": "_state_message_received",
+          "path_kind": "subscription_path",
+          "path_signals": [
+            "subscription_function:_state_message_received",
+            "read_function:_state_message_received",
+            "read_call:self._update_state"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_subscribe",
+          "score": 9,
+          "snippet": "367:     @callback\n368:     def _state_message_received(self, msg: ReceiveMessage) -> None:\n369:         \"\"\"Handle new MQTT state messages.\"\"\"\n370:         self._update_state(msg)\n371:         if CONF_LAST_RESET_VALUE_TEMPLATE in self._config:\n372:             self._update_last_reset(msg)\n373: \n374:     @callback"
+        },
+        {
+          "call_chains": [
+            "async_call_later",
+            "template",
+            "isinstance",
+            "_logger.warning",
+            "payload_datetime.date",
+            "self._expiration_trigger",
+            "_logger.debug",
+            "join"
+          ],
+          "call_patterns": [
+            "async_call_later",
+            "template",
+            "isinstance",
+            "warning",
+            "date",
+            "_expiration_trigger",
+            "debug",
+            "join"
+          ],
+          "file_path": "data/repo_snapshot/mqtt/sensor.py",
+          "function_name": "_update_state",
+          "path_kind": "read_path",
+          "path_signals": [
+            "read_function:_update_state"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 8,
+          "snippet": "281:     @callback\n282:     def _update_state(self, msg: ReceiveMessage) -> None:\n283:         # auto-expire enabled?\n284:         if self._expire_after is not None and self._expire_after > 0:\n285:             # When self._expire_after is set, and we receive a message, assume\n286:             # device is not expired since it has to be to receive the message\n287:             self._expired = False\n288: \n289:             # Reset old trigger\n290:             if self._expiration_trigger:\n291:                 self._expiration_trigger()\n292: \n293:             # Set new trigger\n294:             self._expiration_trigger = async_call_later("
+        },
+        {
+          "call_chains": [
+            "subscription.async_subscribe_topics_internal"
+          ],
+          "call_patterns": [
+            "async_subscribe_topics_internal"
+          ],
+          "file_path": "data/repo_snapshot/mqtt/sensor.py",
+          "function_name": "_subscribe_topics",
+          "path_kind": "subscription_path",
+          "path_signals": [
+            "subscription_function:_subscribe_topics",
+            "subscription_call:subscription.async_subscribe_topics_internal"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_subscribe",
+          "score": 7,
+          "snippet": "382: \n383:     async def _subscribe_topics(self) -> None:\n384:         \"\"\"(Re)Subscribe to topics.\"\"\"\n385:         subscription.async_subscribe_topics_internal(self.hass, self._sub_state)\n386: \n387:     @callback"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read",
+        "runtime_subscribe"
+      ],
+      "required_context": [
+        "runtime_path",
+        "subscription_path"
+      ],
+      "required_path_signals": [
+        "subscription_function:_state_message_received",
+        "read_function:_state_message_received",
+        "read_call:self._update_state",
+        "read_function:_update_state",
+        "subscription_function:_subscribe_topics",
+        "subscription_call:subscription.async_subscribe_topics_internal"
+      ],
+      "required_runtime_roles": [
+        "runtime_read",
+        "runtime_subscribe"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "mqtt:sensor_runtime_subscribe",
+      "runtime_archetypes": [
+        "mqtt_message_read",
+        "subscription_listener"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:_state_message_received",
+        "runtime_function:_update_state",
+        "runtime_function:_subscribe_topics",
+        "runtime_call:async_call_later",
+        "runtime_call:template",
+        "runtime_call:isinstance",
+        "runtime_call:warning",
+        "runtime_call:date",
+        "runtime_call:_expiration_trigger",
+        "runtime_call:debug"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/mqtt/sensor.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A12"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+      "why_not_setup": [
+        "exclude_role:setup:async_setup_entry",
+        "exclude_role:runtime_write:_value_is_expired",
+        "exclude_role:property_getter:available",
+        "exclude_role:helper:config_schema",
+        "exclude_path_signal:setup_function:async_setup_entry",
+        "exclude_path_signal:property_function:available",
+        "exclude_control_path_for_read_like_action"
+      ]
+    }
+  ],
+  "schema_version": "m1_grounding_profile/v3",
+  "version": "draft_llm_v3"
+}

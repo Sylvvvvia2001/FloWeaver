@@ -1,0 +1,3 @@
+dataset,RR1_pct,RR2_pct,RR3_pct,mean_diagnostic_rollback_depth,actual_rollback_invoked
+smart-home,88.0,62.0,38.0,1.88,N/A/check-only baseline
+long-chain,100.0,88.46,61.54,2.5,N/A/check-only baseline

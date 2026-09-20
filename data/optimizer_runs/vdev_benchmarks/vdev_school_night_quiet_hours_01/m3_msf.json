@@ -1,0 +1,1387 @@
+{
+  "dependency_candidates": [
+    [
+      "msf06_000_state_write",
+      "msf06_005_local_api_read",
+      "CONTROL_DEP"
+    ]
+  ],
+  "msfs": [
+    {
+      "action_refs": [
+        "A15"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "is_aggregate_sink": true,
+      "is_shared_infra": false,
+      "lane_tag": "WRITEBACK_OVERALL",
+      "msf_id": "msf00_000_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "9da22f42:_handle_device_update:3:186"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A15",
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "resource_instance_tag": "sensor.vdev_school_night_quiet_hours_overall",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "ESPHomeDashboardUpdateEntity",
+        "async_add_entities",
+        "callback",
+        "dashboard",
+        "device_name",
+        "entry_data",
+        "unsubs"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf00_001_entry_setup",
+      "msf_type": "INIT",
+      "node_ids": [
+        "9da22f42:async_setup_entry:7:71"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "entry_setup",
+        "external_call_cloud",
+        "unsubscribe"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "unsubs"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf00_002_unsubscribe",
+      "msf_type": "CLEANUP",
+      "node_ids": [
+        "9da22f42:_async_setup_update_entity:4:82"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "unsubscribe"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "ESPHomeDashboardUpdateEntity",
+        "async_add_entities",
+        "callback",
+        "dashboard",
+        "device_name",
+        "entry_data",
+        "unsubs"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf00_003_unsubscribe",
+      "msf_type": "CLEANUP",
+      "node_ids": [
+        "9da22f42:async_setup_entry:7:71"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "external_call_cloud",
+        "unsubscribe"
+      ]
+    },
+    {
+      "action_refs": [
+        "A10",
+        "A9"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf01_000_local_api_read",
+      "msf_type": "ACT",
+      "node_ids": [
+        "0960d80b:on_update:0:122"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A10",
+      "required_guards": [],
+      "resource_instance_tag": "hue:bridge_1:hallway_school_night_right",
+      "secondary_action_refs": [
+        "A9"
+      ],
+      "side_effect_sig": [
+        "local_api_read"
+      ]
+    },
+    {
+      "action_refs": [
+        "A10",
+        "A9"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "EventType",
+        "er",
+        "event_type",
+        "resource",
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf01_001_local_api_read",
+      "msf_type": "ACT",
+      "node_ids": [
+        "0960d80b:_handle_event:0:127",
+        "0960d80b:_handle_event:1.0.0:131",
+        "0960d80b:_handle_event:1.0.1:132",
+        "0960d80b:_handle_event:1.0:130",
+        "0960d80b:_handle_event:1.1:133",
+        "0960d80b:_handle_event:1:128",
+        "0960d80b:_handle_event:2:135",
+        "0960d80b:_handle_event:3:136",
+        "0960d80b:_handle_event:4:137",
+        "0960d80b:_handle_event:5:138"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A10",
+      "required_guards": [],
+      "resource_instance_tag": "hue:bridge_1:hallway_school_night_right",
+      "secondary_action_refs": [
+        "A9"
+      ],
+      "side_effect_sig": [
+        "local_api_read",
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [
+        "A10",
+        "A9"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf02_000_local_api_read",
+      "msf_type": "ACT",
+      "node_ids": [
+        "51425972:_update_values:7:240"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A10",
+      "required_guards": [],
+      "resource_instance_tag": "hue:bridge_1:hallway_school_night_right",
+      "secondary_action_refs": [
+        "A9"
+      ],
+      "side_effect_sig": [
+        "local_api_read"
+      ]
+    },
+    {
+      "action_refs": [
+        "A10",
+        "A9"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf03_000_local_api_read",
+      "msf_type": "ACT",
+      "node_ids": [
+        "a30bdb9a:is_on:0:137",
+        "a30bdb9a:is_on:1:138"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A10",
+      "required_guards": [],
+      "resource_instance_tag": "hue:bridge_1:hallway_school_night_right",
+      "secondary_action_refs": [
+        "A9"
+      ],
+      "side_effect_sig": [
+        "local_api_read"
+      ]
+    },
+    {
+      "action_refs": [
+        "A1"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "bool",
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "BLE_LOCAL",
+      "msf_id": "msf04_000_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "0e4b12a7:async_stop_cover:2:118",
+        "0e4b12a7:async_stop_cover:2:287",
+        "0e4b12a7:async_stop_cover_tilt:2:203"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A1",
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": "ble:switchbot:curtain_school_night_left",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "ble_op"
+      ]
+    },
+    {
+      "action_refs": [
+        "A1",
+        "A2"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": "BLE_LOCAL",
+      "msf_id": "msf04_003_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "0e4b12a7:_handle_coordinator_update:0:136",
+        "0e4b12a7:_handle_coordinator_update:1:137",
+        "0e4b12a7:_handle_coordinator_update:2:138",
+        "0e4b12a7:_handle_coordinator_update:3:139",
+        "0e4b12a7:_handle_coordinator_update:4:140",
+        "0e4b12a7:_handle_coordinator_update:5:142"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A1",
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": "ble:switchbot:curtain_school_night_left",
+      "secondary_action_refs": [
+        "A2"
+      ],
+      "side_effect_sig": [
+        "ble_op",
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [
+        "A1",
+        "A2"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": "BLE_LOCAL",
+      "msf_id": "msf04_004_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "0e4b12a7:_handle_coordinator_update:0:217",
+        "0e4b12a7:_handle_coordinator_update:1:218",
+        "0e4b12a7:_handle_coordinator_update:2:219",
+        "0e4b12a7:_handle_coordinator_update:3:220",
+        "0e4b12a7:_handle_coordinator_update:4:223",
+        "0e4b12a7:_handle_coordinator_update:5:224",
+        "0e4b12a7:_handle_coordinator_update:6:225"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A1",
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": "ble:switchbot:curtain_school_night_left",
+      "secondary_action_refs": [
+        "A2"
+      ],
+      "side_effect_sig": [
+        "ble_op",
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [
+        "A1",
+        "A2"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": "BLE_LOCAL",
+      "msf_id": "msf04_005_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "0e4b12a7:_handle_coordinator_update:0:305",
+        "0e4b12a7:_handle_coordinator_update:1:306",
+        "0e4b12a7:_handle_coordinator_update:2:307",
+        "0e4b12a7:_handle_coordinator_update:3:308",
+        "0e4b12a7:_handle_coordinator_update:4:309",
+        "0e4b12a7:_handle_coordinator_update:5:311"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A1",
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": "ble:switchbot:curtain_school_night_left",
+      "secondary_action_refs": [
+        "A2"
+      ],
+      "side_effect_sig": [
+        "ble_op",
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [
+        "A12"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "WRITEBACK_BLE",
+      "msf_id": "msf05_000_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "9425188b:async_oscillate:3:101",
+        "9425188b:async_set_percentage:3:92",
+        "9425188b:async_set_preset_mode:3:161",
+        "9425188b:async_set_preset_mode:3:83",
+        "9425188b:async_turn_off:3:125",
+        "9425188b:async_turn_off:3:187",
+        "9425188b:async_turn_on:3:118",
+        "9425188b:async_turn_on:3:179"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A12",
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "resource_instance_tag": "sensor.vdev_school_night_quiet_hours_ble_lane",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [
+        "A14"
+      ],
+      "critical": true,
+      "exceptions": [
+        "Exception"
+      ],
+      "inputs": [
+        "Exception",
+        "_LOGGER",
+        "ex",
+        "self",
+        "super"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "WRITEBACK",
+      "msf_id": "msf06_000_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "789a6e2e:_async_call_update_attrs:1.0:272",
+        "789a6e2e:_async_call_update_attrs:1.1:281",
+        "789a6e2e:_async_call_update_attrs:1:271",
+        "789a6e2e:_handle_coordinator_update:1:288",
+        "789a6e2e:_handle_coordinator_update:2:289",
+        "789a6e2e:async_added_to_hass:2:257"
+      ],
+      "outputs": [
+        "available"
+      ],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A14",
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "resource_instance_tag": "sensor.vdev_school_night_quiet_hours_local_lane",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [
+        "A11"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self",
+        "super"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": null,
+      "msf_id": "msf06_005_local_api_read",
+      "msf_type": "ACT",
+      "node_ids": [
+        "789a6e2e:_handle_coordinator_update:0:287",
+        "789a6e2e:_handle_coordinator_update:1:288",
+        "789a6e2e:_handle_coordinator_update:2:289"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A11",
+      "required_guards": [],
+      "resource_instance_tag": "tplink:plug.heater_school_night",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "local_api_read"
+      ]
+    },
+    {
+      "action_refs": [
+        "A6"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "ClimateEntityFeature",
+        "HVACMode",
+        "TuyaClimateHVACMode",
+        "TuyaClimateSwingMode",
+        "_HA_TO_TUYA_HVACMODE_MAPPINGS",
+        "_HA_TO_TUYA_SWING_MAPPINGS",
+        "_TUYA_TO_HA_HVACMODE_MAPPINGS",
+        "_TUYA_TO_HA_SWING_MAPPINGS",
+        "cast",
+        "description",
+        "hvac_mode",
+        "hvac_mode_wrapper",
+        "list",
+        "self",
+        "swing_mode",
+        "swing_wrapper",
+        "switch_wrapper"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf07_000_cloud_http_call",
+      "msf_type": "ACT",
+      "node_ids": [
+        "8e4c1745:__init__:16.1.0:308",
+        "8e4c1745:__init__:16.1:307",
+        "8e4c1745:__init__:16:305",
+        "8e4c1745:__init__:20.1:340",
+        "8e4c1745:__init__:20:338",
+        "8e4c1745:async_set_hvac_mode:1:355",
+        "8e4c1745:async_set_hvac_mode:3:362",
+        "8e4c1745:async_set_swing_mode:1:386",
+        "8e4c1745:hvac_mode:4:430",
+        "8e4c1745:hvac_mode:5:431",
+        "8e4c1745:swing_mode:1:446",
+        "8e4c1745:swing_mode:2:447"
+      ],
+      "outputs": [
+        "ha_mode"
+      ],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A6",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:climate.school_night.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_http_call",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "HVACMode",
+        "TuyaClimateHVACMode",
+        "_TUYA_TO_HA_HVACMODE_MAPPINGS",
+        "cast",
+        "hvac_mode_wrapper",
+        "list",
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf07_006_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "8e4c1745:__init__:16.1.0:308",
+        "8e4c1745:__init__:16.1:307"
+      ],
+      "outputs": [
+        "ha_mode"
+      ],
+      "phase": "RUNTIME",
+      "primary_action_ref": null,
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "TuyaClimateSwingMode",
+        "_TUYA_TO_HA_SWING_MAPPINGS",
+        "cast",
+        "list",
+        "self",
+        "swing_wrapper"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf07_007_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "8e4c1745:__init__:20.1:340"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": null,
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "_HA_TO_TUYA_HVACMODE_MAPPINGS",
+        "commands",
+        "hvac_mode",
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf07_008_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "8e4c1745:async_set_hvac_mode:3:362"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": null,
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "_HA_TO_TUYA_HVACMODE_MAPPINGS",
+        "commands",
+        "hvac_mode",
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf07_009_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "8e4c1745:async_set_hvac_mode:3:362"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": null,
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "_HA_TO_TUYA_SWING_MAPPINGS",
+        "self",
+        "swing_mode"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf07_010_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "8e4c1745:async_set_swing_mode:1:386"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": null,
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "_TUYA_TO_HA_HVACMODE_MAPPINGS",
+        "tuya_mode"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf07_011_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "8e4c1745:hvac_mode:5:431"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": null,
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "_TUYA_TO_HA_SWING_MAPPINGS",
+        "tuya_value"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf07_012_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "8e4c1745:swing_mode:2:447"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": null,
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A13"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "dp_timestamps",
+        "self",
+        "updated_status_properties"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "WRITEBACK_CLOUD",
+      "msf_id": "msf08_000_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "a073d609:_handle_state_update:1.0:76",
+        "a073d609:_handle_state_update:1:63"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A13",
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "resource_instance_tag": "sensor.vdev_school_night_quiet_hours_cloud_lane",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [
+        "A8"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "ATTR_BRIGHTNESS",
+        "ATTR_HS_COLOR",
+        "ColorTempWrapper",
+        "DPCodeBooleanWrapper",
+        "DPCodeEnumWrapper",
+        "LIGHTS",
+        "TuyaLightEntity",
+        "_get_brightness_wrapper",
+        "_get_color_data_wrapper",
+        "async_add_entities",
+        "callback",
+        "device_ids",
+        "entry",
+        "kwargs",
+        "list",
+        "manager",
+        "self",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf09_000_cloud_http_call",
+      "msf_type": "ACT",
+      "node_ids": [
+        "67d079e8:async_discover_device:1:467",
+        "67d079e8:async_discover_device:2.0:469",
+        "67d079e8:async_discover_device:2.1:470",
+        "67d079e8:async_discover_device:2:468",
+        "67d079e8:async_setup_entry:1:462",
+        "67d079e8:async_setup_entry:2:465",
+        "67d079e8:async_turn_on:4.1:608",
+        "67d079e8:async_turn_on:4.2:611"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A8",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:light.school_night_room.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_http_call",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "ColorTempWrapper",
+        "DPCodeBooleanWrapper",
+        "DPCodeEnumWrapper",
+        "LIGHTS",
+        "TuyaLightEntity",
+        "_get_brightness_wrapper",
+        "_get_color_data_wrapper",
+        "async_add_entities",
+        "callback",
+        "device_ids",
+        "entry",
+        "list",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf09_004_entry_setup",
+      "msf_type": "INIT",
+      "node_ids": [
+        "67d079e8:async_setup_entry:1:462",
+        "67d079e8:async_setup_entry:2:465"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "entry_setup",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "ColorTempWrapper",
+        "DPCodeBooleanWrapper",
+        "DPCodeEnumWrapper",
+        "LIGHTS",
+        "TuyaLightEntity",
+        "_get_brightness_wrapper",
+        "_get_color_data_wrapper",
+        "device",
+        "entities",
+        "manager"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf09_005_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "67d079e8:async_discover_device:2.1:470"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "ColorTempWrapper",
+        "DPCodeBooleanWrapper",
+        "DPCodeEnumWrapper",
+        "LIGHTS",
+        "TuyaLightEntity",
+        "_get_brightness_wrapper",
+        "_get_color_data_wrapper",
+        "async_add_entities",
+        "callback",
+        "device_ids",
+        "list",
+        "manager",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf09_006_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "67d079e8:async_setup_entry:2:465"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "ATTR_BRIGHTNESS",
+        "kwargs",
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf09_007_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "67d079e8:async_turn_on:4.1:608"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": null,
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "ATTR_HS_COLOR",
+        "kwargs",
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf09_008_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "67d079e8:async_turn_on:4.2:611"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": null,
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A7"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "DPCodeBooleanWrapper",
+        "SWITCHES",
+        "TuyaSwitchEntity",
+        "async_add_entities",
+        "callback",
+        "device_ids",
+        "entry",
+        "list",
+        "manager",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf10_000_cloud_http_call",
+      "msf_type": "ACT",
+      "node_ids": [
+        "9cfce7a4:async_discover_device:1:919",
+        "9cfce7a4:async_discover_device:2.0:921",
+        "9cfce7a4:async_discover_device:2.1:922",
+        "9cfce7a4:async_discover_device:2:920",
+        "9cfce7a4:async_setup_entry:1:914",
+        "9cfce7a4:async_setup_entry:2:917"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": "A7",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:switch.school_night_heater.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_http_call",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "DPCodeBooleanWrapper",
+        "SWITCHES",
+        "TuyaSwitchEntity",
+        "async_add_entities",
+        "callback",
+        "device_ids",
+        "entry",
+        "list",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf10_002_entry_setup",
+      "msf_type": "INIT",
+      "node_ids": [
+        "9cfce7a4:async_setup_entry:1:914",
+        "9cfce7a4:async_setup_entry:2:917"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "entry_setup",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "DPCodeBooleanWrapper",
+        "SWITCHES",
+        "TuyaSwitchEntity",
+        "device",
+        "entities",
+        "manager"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf10_003_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "9cfce7a4:async_discover_device:2.1:922"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "DPCodeBooleanWrapper",
+        "SWITCHES",
+        "TuyaSwitchEntity",
+        "async_add_entities",
+        "callback",
+        "device_ids",
+        "list",
+        "manager",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf10_004_cloud_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "9cfce7a4:async_setup_entry:2:917"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf11_000_entry_unload",
+      "msf_type": "CLEANUP",
+      "node_ids": [
+        "f8314a32:async_unload_entry:0:191"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "entry_unload"
+      ]
+    },
+    {
+      "action_refs": [
+        "A3"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "BINARY_SENSOR_DESCRIPTIONS",
+        "PassiveBluetoothDataUpdate",
+        "device_key_to_bluetooth_entity_key",
+        "sensor_device_info_to_hass_device_info",
+        "sensor_update"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "BLE_LOCAL",
+      "msf_id": "msf12_000_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "d9c4917e:sensor_update_to_bluetooth_data_update:0:111",
+        "d9c4917e:sensor_update_to_bluetooth_data_update:1:112"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A3",
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": "ble:xiaomi_ble:bedside_lamp_school_night_left",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "ble_op"
+      ]
+    },
+    {
+      "action_refs": [
+        "A4"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "BluetoothServiceInfo",
+        "bool",
+        "device",
+        "service_info"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "BLE_LOCAL",
+      "msf_id": "msf13_000_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "818854af:_async_wait_for_full_advertisement:2:73",
+        "818854af:_process_more_advertisements:0:76"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A4",
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": "ble:xiaomi_ble:bedside_lamp_school_night_right",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "ble_op"
+      ]
+    },
+    {
+      "action_refs": [
+        "A5"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "EVENT_PROPERTIES",
+        "EVENT_TYPE",
+        "event",
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "BLE_LOCAL",
+      "msf_id": "msf15_000_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "ab8f4bde:_async_handle_event:0:179",
+        "ab8f4bde:_async_handle_event:1:180"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A5",
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": "ble:xiaomi_ble:window_sensor_school_night",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "ble_op",
+        "state_write"
+      ]
+    }
+  ],
+  "summary": {
+    "build_status": "OK",
+    "critical_action_ids": [
+      "A1",
+      "A10",
+      "A11",
+      "A12",
+      "A13",
+      "A14",
+      "A15",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9"
+    ],
+    "missing_critical_action_ids": [],
+    "multi_bound_nonshared_msf_ids": [],
+    "resolved_action_refs": [
+      "A1",
+      "A10",
+      "A11",
+      "A12",
+      "A13",
+      "A14",
+      "A15",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9"
+    ],
+    "resolved_runtime_action_count": 14,
+    "resolved_runtime_action_refs": [
+      "A1",
+      "A10",
+      "A11",
+      "A12",
+      "A13",
+      "A14",
+      "A15",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A8",
+      "A9"
+    ]
+  }
+}

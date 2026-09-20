@@ -1,0 +1,45 @@
+{
+  "accepted_corridors": [
+    {
+      "action_ids": [
+        "A1",
+        "A2"
+      ],
+      "batch_ids": [
+        "batch_000",
+        "batch_001"
+      ],
+      "corridor_id": "corridor_00",
+      "latency_saved_ms": 90,
+      "source": "BLE",
+      "validation_passed": true
+    }
+  ],
+  "api_added_savings_ms": 0,
+  "ble_added_savings_ms": 90,
+  "case_name": "Laundry and Utility Room Sweep",
+  "combined_added_savings_ms": 90,
+  "combined_added_savings_ratio": 0.04,
+  "combined_refined_estimated_latency_ms": 2160,
+  "conflict_count": 0,
+  "group": "Family Care and Room-Level Snapshot Routines",
+  "original_estimated_latency_ms": 2250,
+  "rejected_corridors": [],
+  "target_path": "data/targets/vdev_benchmarks/vdev_laundry_utility_room_sweep_01.json",
+  "validation": {
+    "api_constraints_ok": true,
+    "batch_order_preserved": true,
+    "ble_constraints_ok": true,
+    "component_validations_ok": true,
+    "conflict_free": true,
+    "contiguous_coverage_ok": true,
+    "event_loop_constraints_ok": true,
+    "passed": true,
+    "projection_ok": true,
+    "reasons": [],
+    "savings_consistency_ok": true,
+    "simulated_event_count": 13,
+    "simulated_total_ms": 2160
+  },
+  "vdev_id": "vdev_laundry_utility_room_sweep_01"
+}

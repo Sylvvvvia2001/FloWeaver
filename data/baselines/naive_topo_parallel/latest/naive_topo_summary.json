@@ -1,0 +1,16 @@
+{
+  "avg_latency_gain_pct": 33.29,
+  "avg_latency_gain_s": 4.8252,
+  "avg_naive_topo_latency_s": 10.6804,
+  "avg_native_latency_s": 15.5055,
+  "avg_runtime_s": 0.0309,
+  "baseline": "naive_topo_parallel",
+  "case_count": 56,
+  "failure_types": {
+    "PASS": 47,
+    "order_violation": 9
+  },
+  "mode": "action_level_topological_batching_check_only_validation",
+  "validation_pass_count": 47,
+  "validation_pass_rate_pct": 83.93
+}

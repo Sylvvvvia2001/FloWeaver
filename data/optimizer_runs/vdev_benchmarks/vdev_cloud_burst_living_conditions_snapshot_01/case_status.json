@@ -1,0 +1,106 @@
+{
+  "vdev_id": "vdev_cloud_burst_living_conditions_snapshot_01",
+  "name": "Cloud Burst Living-Conditions Snapshot",
+  "group": "Whole-Home Survey and Audit Routines",
+  "target_path": "data/targets/vdev_benchmarks/vdev_cloud_burst_living_conditions_snapshot_01.json",
+  "run_dir": "data/optimizer_runs/vdev_benchmarks/vdev_cloud_burst_living_conditions_snapshot_01",
+  "strict_pass": 6,
+  "tolerant_pass": 6,
+  "counterexample_count": 0,
+  "batch_count": 11,
+  "parallel_groups": {
+    "batch_000": [
+      [
+        "A1",
+        "A5"
+      ],
+      [
+        "A2"
+      ],
+      [
+        "A3"
+      ]
+    ],
+    "batch_001": [
+      [
+        "A4"
+      ]
+    ],
+    "batch_002": [
+      [
+        "A6"
+      ]
+    ],
+    "batch_003": [
+      [
+        "A7"
+      ]
+    ],
+    "batch_004": [
+      [
+        "A8"
+      ]
+    ],
+    "batch_005": [
+      [
+        "A9"
+      ]
+    ],
+    "batch_006": [
+      [
+        "A10"
+      ]
+    ],
+    "batch_007": [
+      [
+        "A11"
+      ]
+    ],
+    "batch_008": [
+      [
+        "A12"
+      ]
+    ],
+    "batch_009": [
+      [
+        "A13"
+      ]
+    ],
+    "batch_010": [
+      [
+        "A14"
+      ]
+    ]
+  },
+  "batching_buckets": {
+    "batch_000": [
+      {
+        "bucket": "tuya",
+        "chunks": 1,
+        "group_key": "host",
+        "max_batch_size": 3,
+        "max_wait_ms": 40,
+        "members": [
+          "A1",
+          "A5"
+        ],
+        "rule_kind": "SAME_SESSION_GROUP",
+        "size": 2
+      }
+    ],
+    "batch_001": [],
+    "batch_002": [],
+    "batch_003": [],
+    "batch_004": [],
+    "batch_005": [],
+    "batch_006": [],
+    "batch_007": [],
+    "batch_008": [],
+    "batch_009": [],
+    "batch_010": []
+  },
+  "triggered_fallbacks": [],
+  "unknown_protocol_actions": [],
+  "status": "ok",
+  "run_id": "28a76fe6a26b4035bb294da0c1c85f93"
+}

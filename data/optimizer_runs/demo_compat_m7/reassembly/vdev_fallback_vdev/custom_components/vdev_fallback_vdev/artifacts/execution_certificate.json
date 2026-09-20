@@ -1,0 +1,412 @@
+{
+  "canonicalization_version": "v1",
+  "certificate_id": "cert_8d73d970365c",
+  "counterexamples": [
+    {
+      "counterexample_id": "cex_9f3ffe28d5",
+      "culprit_ids": [
+        "RUNTIME:HA:CLOUD_OP:_async_update_data:30",
+        "SETUP:HA:SUBSCRIBE:async_setup_entry:9"
+      ],
+      "diff_summary": {
+        "hunks": [
+          {
+            "anchor": "RUNTIME:HA:CLOUD_OP:_async_update_data:30",
+            "baseline_ops": [
+              "RUNTIME:HA:CLOUD_OP:_async_update_data:30",
+              "RUNTIME:HA:BLE_OP:_async_update_data:32",
+              "RUNTIME:HA:BLE_OP:_async_update_data:33",
+              "RUNTIME:HA:BLE_OP:_async_update_data:34",
+              "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27",
+              "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+              "SETUP:HA:COORD_REFRESH:async_setup_entry:6"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          },
+          {
+            "anchor": "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+            "baseline_ops": [
+              "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+              "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:15",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:16",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          }
+        ]
+      },
+      "scenario_id": "lifecycle_nominal",
+      "violated_assertion": "observable_semantic_equivalence"
+    },
+    {
+      "counterexample_id": "cex_b8a59c15c5",
+      "culprit_ids": [
+        "RUNTIME:HA:CLOUD_OP:_async_update_data:30",
+        "SETUP:HA:SUBSCRIBE:async_setup_entry:9"
+      ],
+      "diff_summary": {
+        "hunks": [
+          {
+            "anchor": "RUNTIME:HA:CLOUD_OP:_async_update_data:30",
+            "baseline_ops": [
+              "RUNTIME:HA:CLOUD_OP:_async_update_data:30",
+              "RUNTIME:HA:BLE_OP:_async_update_data:32",
+              "RUNTIME:HA:BLE_OP:_async_update_data:33",
+              "RUNTIME:HA:BLE_OP:_async_update_data:34",
+              "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27",
+              "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+              "SETUP:HA:COORD_REFRESH:async_setup_entry:6"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          },
+          {
+            "anchor": "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+            "baseline_ops": [
+              "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+              "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:15",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:16",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          }
+        ]
+      },
+      "scenario_id": "push_nominal",
+      "violated_assertion": "observable_semantic_equivalence"
+    },
+    {
+      "counterexample_id": "cex_984648cf16",
+      "culprit_ids": [
+        "RUNTIME:HA:CLOUD_OP:_async_update_data:30",
+        "SETUP:HA:SUBSCRIBE:async_setup_entry:9"
+      ],
+      "diff_summary": {
+        "hunks": [
+          {
+            "anchor": "RUNTIME:HA:CLOUD_OP:_async_update_data:30",
+            "baseline_ops": [
+              "RUNTIME:HA:CLOUD_OP:_async_update_data:30",
+              "RUNTIME:HA:BLE_OP:_async_update_data:32",
+              "RUNTIME:HA:BLE_OP:_async_update_data:33",
+              "RUNTIME:HA:BLE_OP:_async_update_data:34",
+              "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27",
+              "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+              "SETUP:HA:COORD_REFRESH:async_setup_entry:6"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          },
+          {
+            "anchor": "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+            "baseline_ops": [
+              "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+              "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:15",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:16",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          }
+        ]
+      },
+      "scenario_id": "ble_disconnect",
+      "violated_assertion": "observable_semantic_equivalence"
+    },
+    {
+      "counterexample_id": "cex_c372c5cfd6",
+      "culprit_ids": [
+        "RUNTIME:HA:CLOUD_OP:_async_update_data:30",
+        "SETUP:HA:SUBSCRIBE:async_setup_entry:9"
+      ],
+      "diff_summary": {
+        "hunks": [
+          {
+            "anchor": "RUNTIME:HA:CLOUD_OP:_async_update_data:30",
+            "baseline_ops": [
+              "RUNTIME:HA:CLOUD_OP:_async_update_data:30",
+              "RUNTIME:HA:BLE_OP:_async_update_data:32",
+              "RUNTIME:HA:BLE_OP:_async_update_data:33",
+              "RUNTIME:HA:BLE_OP:_async_update_data:34",
+              "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27",
+              "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+              "SETUP:HA:COORD_REFRESH:async_setup_entry:6"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          },
+          {
+            "anchor": "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+            "baseline_ops": [
+              "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+              "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:15",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:16",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          }
+        ]
+      },
+      "scenario_id": "cloud_429",
+      "violated_assertion": "observable_semantic_equivalence"
+    },
+    {
+      "counterexample_id": "cex_3c43ae7915",
+      "culprit_ids": [
+        "RUNTIME:HA:CLOUD_OP:_async_update_data:30",
+        "SETUP:HA:SUBSCRIBE:async_setup_entry:9"
+      ],
+      "diff_summary": {
+        "hunks": [
+          {
+            "anchor": "RUNTIME:HA:CLOUD_OP:_async_update_data:30",
+            "baseline_ops": [
+              "RUNTIME:HA:CLOUD_OP:_async_update_data:30",
+              "RUNTIME:HA:BLE_OP:_async_update_data:32",
+              "RUNTIME:HA:BLE_OP:_async_update_data:33",
+              "RUNTIME:HA:BLE_OP:_async_update_data:34",
+              "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27",
+              "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+              "SETUP:HA:COORD_REFRESH:async_setup_entry:6"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          },
+          {
+            "anchor": "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+            "baseline_ops": [
+              "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+              "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:15",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:16",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          }
+        ]
+      },
+      "scenario_id": "token_expired",
+      "violated_assertion": "observable_semantic_equivalence"
+    },
+    {
+      "counterexample_id": "cex_0f6179a765",
+      "culprit_ids": [
+        "RUNTIME:HA:CLOUD_OP:_async_update_data:30",
+        "SETUP:HA:SUBSCRIBE:async_setup_entry:9"
+      ],
+      "diff_summary": {
+        "hunks": [
+          {
+            "anchor": "RUNTIME:HA:CLOUD_OP:_async_update_data:30",
+            "baseline_ops": [
+              "RUNTIME:HA:CLOUD_OP:_async_update_data:30",
+              "RUNTIME:HA:BLE_OP:_async_update_data:32",
+              "RUNTIME:HA:BLE_OP:_async_update_data:33",
+              "RUNTIME:HA:BLE_OP:_async_update_data:34",
+              "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27",
+              "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+              "SETUP:HA:COORD_REFRESH:async_setup_entry:6"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          },
+          {
+            "anchor": "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+            "baseline_ops": [
+              "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+              "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:15",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:16",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          }
+        ]
+      },
+      "scenario_id": "random_jitter_0",
+      "violated_assertion": "observable_semantic_equivalence"
+    },
+    {
+      "counterexample_id": "cex_5676d71d17",
+      "culprit_ids": [
+        "RUNTIME:HA:CLOUD_OP:_async_update_data:30",
+        "SETUP:HA:SUBSCRIBE:async_setup_entry:9"
+      ],
+      "diff_summary": {
+        "hunks": [
+          {
+            "anchor": "RUNTIME:HA:CLOUD_OP:_async_update_data:30",
+            "baseline_ops": [
+              "RUNTIME:HA:CLOUD_OP:_async_update_data:30",
+              "RUNTIME:HA:BLE_OP:_async_update_data:32",
+              "RUNTIME:HA:BLE_OP:_async_update_data:33",
+              "RUNTIME:HA:BLE_OP:_async_update_data:34",
+              "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27",
+              "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+              "SETUP:HA:COORD_REFRESH:async_setup_entry:6"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          },
+          {
+            "anchor": "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+            "baseline_ops": [
+              "SETUP:HA:SUBSCRIBE:async_setup_entry:9",
+              "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:15",
+              "TEARDOWN:HA:CLOUD_OP:async_unload_entry:16",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          }
+        ]
+      },
+      "scenario_id": "random_jitter_1",
+      "violated_assertion": "observable_semantic_equivalence"
+    }
+  ],
+  "differential_summary": {
+    "counterexample_count": 7,
+    "focus_terms": [
+      "sensor.vdev_fallback",
+      "STATE_WRITE",
+      "COORD_REFRESH"
+    ],
+    "rule_stats": {
+      "rule_coord_refresh_9c4aca1990": {
+        "coverage": 1.0,
+        "has_must_evidence": 0.0,
+        "pass_rate": 0.0
+      },
+      "rule_entry_setup_91e19cefcb": {
+        "coverage": 1.0,
+        "has_must_evidence": 0.0,
+        "pass_rate": 0.0
+      },
+      "rule_entry_unload_da7471ab82": {
+        "coverage": 1.0,
+        "has_must_evidence": 0.0,
+        "pass_rate": 0.0
+      },
+      "rule_general_fa9e50150b": {
+        "coverage": 1.0,
+        "has_must_evidence": 1.0,
+        "pass_rate": 0.0
+      },
+      "rule_lifecycle_79ea0726ef": {
+        "coverage": 1.0,
+        "has_must_evidence": 1.0,
+        "pass_rate": 0.0
+      },
+      "rule_state_write_b839bfafd0": {
+        "coverage": 0.0,
+        "has_must_evidence": 0.0,
+        "pass_rate": 0.0
+      },
+      "rule_subscribe_a84e504152": {
+        "coverage": 1.0,
+        "has_must_evidence": 0.0,
+        "pass_rate": 0.0
+      },
+      "rule_unsubscribe_2897b3e3e9": {
+        "coverage": 0.0,
+        "has_must_evidence": 0.0,
+        "pass_rate": 0.0
+      }
+    },
+    "scenario_total": 7,
+    "strict_pass": 0,
+    "tolerant_pass": 0
+  },
+  "generated_at": "2026-03-06T07:06:05.176746+00:00",
+  "hard_edge_proof": {
+    "acyclic": true,
+    "edge_count": 0,
+    "edges": []
+  },
+  "integration": "demo",
+  "msf_signatures": [
+    {
+      "msf_id": "msf00_000_coord_refresh",
+      "phase": "RUNTIME",
+      "side_effect_sig": [
+        "coord_refresh"
+      ],
+      "type": "SYNC"
+    },
+    {
+      "msf_id": "msf00_001_entry_setup",
+      "phase": "SETUP",
+      "side_effect_sig": [
+        "entry_setup",
+        "state_write"
+      ],
+      "type": "INIT"
+    },
+    {
+      "msf_id": "msf00_002_coord_refresh",
+      "phase": "SETUP",
+      "side_effect_sig": [
+        "coord_refresh",
+        "state_write"
+      ],
+      "type": "SYNC"
+    },
+    {
+      "msf_id": "msf00_003_state_write",
+      "phase": "SETUP",
+      "side_effect_sig": [
+        "state_write"
+      ],
+      "type": "UPDATE"
+    }
+  ],
+  "profile_version": "ha_profile_default",
+  "schema_version": "execution_certificate/v1",
+  "soft_constraints": [
+    {
+      "fallback": "disable_optimization_for_scope",
+      "guard": "runtime_metrics_available",
+      "kind": "COALESCE_STATE_WRITE",
+      "params": {
+        "window_ms": 120
+      },
+      "scope": [
+        "msf00_001_entry_setup",
+        "msf00_002_coord_refresh",
+        "msf00_003_state_write"
+      ]
+    },
+    {
+      "fallback": "disable_optimization_for_scope",
+      "guard": "runtime_metrics_available",
+      "kind": "COALESCE_STATE_WRITE",
+      "params": {
+        "window_ms": 120
+      },
+      "scope": [
+        "msf00_001_entry_setup",
+        "msf00_002_coord_refresh",
+        "msf00_003_state_write"
+      ]
+    }
+  ]
+}

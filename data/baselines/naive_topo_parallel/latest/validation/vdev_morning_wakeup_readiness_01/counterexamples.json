@@ -1,0 +1,243 @@
+[
+  {
+    "alignment_status": "PARTIAL",
+    "counterexample_id": "cex_bbe4a6e45c",
+    "culprit_ids": [
+      "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:esphome:relay_node_bedroom"
+    ],
+    "diff_summary": {
+      "baseline_state_at_divergence": {
+        "exception_category": null,
+        "resource_keys": [
+          "connection:ble:esphome:air_node_bedroom"
+        ],
+        "state_writes": {}
+      },
+      "baseline_trace_prefix": [
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A1"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:curtain_bedroom_left",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A2"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:curtain_bedroom_right",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A3"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:xiaomi_ble:bedside_lamp_left",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A4"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:xiaomi_ble:bedside_lamp_right",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A5"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:xiaomi_ble:temp_humidity_sensor_bedroom",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_CONNECT",
+          "params_abst": {
+            "action_id": "A6"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:esphome:air_node_bedroom",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_NOTIFY_SUBSCRIBE",
+          "params_abst": {
+            "action_id": "A7"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:esphome:relay_node_bedroom",
+          "ts": 0.0
+        }
+      ],
+      "counterexample_verdict": "DIFF_FOUND",
+      "divergence_point": {
+        "details": {
+          "compare_meta": {
+            "canonicalization_version": "v1",
+            "commutable_ops": [
+              "COORD_REFRESH",
+              "STATE_WRITE"
+            ],
+            "config_hash": "9285a670239fb92a",
+            "equivalence_rules": [],
+            "parallel_action_scopes": []
+          },
+          "diff_hunks": [
+            {
+              "anchor": "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:esphome:relay_node_bedroom",
+              "baseline_ops": [
+                "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:esphome:relay_node_bedroom"
+              ],
+              "optimized_ops": [],
+              "severity": "MEDIUM"
+            }
+          ]
+        },
+        "kind": "SPLIT",
+        "reason": "trace_prefix_mismatch",
+        "step": 2,
+        "useg_node_id": "useg_0001"
+      },
+      "environment_assumptions": {
+        "path_assumptions": [
+          "scenario:vdev_morning_wakeup_readiness_01"
+        ],
+        "resource_assumptions": [
+          "connection:ble:esphome:air_node_bedroom"
+        ],
+        "suspicious_region_id": "sr_001"
+      },
+      "hunks": [
+        {
+          "anchor": "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:esphome:relay_node_bedroom",
+          "baseline_ops": [
+            "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:esphome:relay_node_bedroom"
+          ],
+          "optimized_ops": [],
+          "severity": "MEDIUM"
+        },
+        {
+          "anchor": "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:esphome:relay_node_bedroom",
+          "baseline_ops": [],
+          "optimized_ops": [
+            "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:esphome:relay_node_bedroom"
+          ],
+          "severity": "MEDIUM"
+        }
+      ],
+      "inferred_by": "check_observation_schema_or_alignment_rule",
+      "input_assumptions": {},
+      "kind": "order_violation",
+      "minimal_conditions": [
+        "scenario:vdev_morning_wakeup_readiness_01",
+        "resource:connection:ble:esphome:air_node_bedroom"
+      ],
+      "optimized_state_at_divergence": {
+        "exception_category": null,
+        "resource_keys": [
+          "connection:ble:esphome:air_node_bedroom"
+        ],
+        "state_writes": {}
+      },
+      "optimized_trace_prefix": [
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A1"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:curtain_bedroom_left",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A2"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:curtain_bedroom_right",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A3"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:xiaomi_ble:bedside_lamp_left",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A4"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:xiaomi_ble:bedside_lamp_right",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A5"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:xiaomi_ble:temp_humidity_sensor_bedroom",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_CONNECT",
+          "params_abst": {
+            "action_id": "A6"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:esphome:air_node_bedroom",
+          "ts": 0.0
+        }
+      ],
+      "refinement_hint": "check_observation_schema_or_alignment_rule",
+      "suspicious_region_id": "sr_001",
+      "violated_property": "TRACE_MISMATCH"
+    },
+    "execution_plan_hash": "ad6f9d6c0f20",
+    "scenario_id": "vdev_morning_wakeup_readiness_01",
+    "suspicious_region_count": 3,
+    "trust_plan_hash": "ad6f9d6c0f20",
+    "violated_assertion": "observable_semantic_equivalence"
+  }
+]

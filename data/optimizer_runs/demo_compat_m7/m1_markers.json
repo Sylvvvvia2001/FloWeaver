@@ -1,0 +1,187 @@
+[
+  {
+    "evidence": [
+      "call:cloud"
+    ],
+    "file_path": "data/repo_snapshot/demo_integration.py",
+    "function_name": "_async_update_data",
+    "line_end": 30,
+    "line_start": 30,
+    "marker_id": "marker_fc085a3aa9",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "strength": "STRONG"
+  },
+  {
+    "evidence": [
+      "call:ble"
+    ],
+    "file_path": "data/repo_snapshot/demo_integration.py",
+    "function_name": "_async_update_data",
+    "line_end": 32,
+    "line_start": 32,
+    "marker_id": "marker_5ccea175cd",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "strength": "STRONG"
+  },
+  {
+    "evidence": [
+      "call:ble"
+    ],
+    "file_path": "data/repo_snapshot/demo_integration.py",
+    "function_name": "_async_update_data",
+    "line_end": 33,
+    "line_start": 33,
+    "marker_id": "marker_fdaa35596a",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "strength": "STRONG"
+  },
+  {
+    "evidence": [
+      "call:ble"
+    ],
+    "file_path": "data/repo_snapshot/demo_integration.py",
+    "function_name": "_async_update_data",
+    "line_end": 34,
+    "line_start": 34,
+    "marker_id": "marker_5aeace2cd4",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "strength": "STRONG"
+  },
+  {
+    "evidence": [
+      "call:coordinator_refresh",
+      "target_anchor_seed"
+    ],
+    "file_path": "data/repo_snapshot/demo_integration.py",
+    "function_name": "async_config_entry_first_refresh",
+    "line_end": 27,
+    "line_start": 27,
+    "marker_id": "marker_54d60b6d20",
+    "marker_type": "COORD_REFRESH",
+    "phase": "RUNTIME",
+    "strength": "STRONG"
+  },
+  {
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/demo_integration.py",
+    "function_name": "async_setup_entry",
+    "line_end": 11,
+    "line_start": 4,
+    "marker_id": "marker_57651508dc",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "strength": "STRONG"
+  },
+  {
+    "evidence": [
+      "call:coordinator_refresh",
+      "target_anchor_seed"
+    ],
+    "file_path": "data/repo_snapshot/demo_integration.py",
+    "function_name": "async_setup_entry",
+    "line_end": 6,
+    "line_start": 6,
+    "marker_id": "marker_5304861a13",
+    "marker_type": "COORD_REFRESH",
+    "phase": "SETUP",
+    "strength": "STRONG"
+  },
+  {
+    "evidence": [
+      "call:state_write",
+      "target_anchor_seed"
+    ],
+    "file_path": "data/repo_snapshot/demo_integration.py",
+    "function_name": "async_setup_entry",
+    "line_end": 8,
+    "line_start": 8,
+    "marker_id": "marker_e093aebcd4",
+    "marker_type": "STATE_WRITE",
+    "phase": "SETUP",
+    "strength": "STRONG"
+  },
+  {
+    "evidence": [
+      "call:subscribe"
+    ],
+    "file_path": "data/repo_snapshot/demo_integration.py",
+    "function_name": "async_setup_entry",
+    "line_end": 9,
+    "line_start": 9,
+    "marker_id": "marker_7322b287eb",
+    "marker_type": "SUBSCRIBE",
+    "phase": "SETUP",
+    "strength": "MEDIUM"
+  },
+  {
+    "evidence": [
+      "func:async_unload_entry"
+    ],
+    "file_path": "data/repo_snapshot/demo_integration.py",
+    "function_name": "async_unload_entry",
+    "line_end": 19,
+    "line_start": 14,
+    "marker_id": "marker_9dc1abe70d",
+    "marker_type": "ENTRY_UNLOAD",
+    "phase": "TEARDOWN",
+    "strength": "STRONG"
+  },
+  {
+    "evidence": [
+      "call:cloud"
+    ],
+    "file_path": "data/repo_snapshot/demo_integration.py",
+    "function_name": "async_unload_entry",
+    "line_end": 15,
+    "line_start": 15,
+    "marker_id": "marker_ac4f4dfe6c",
+    "marker_type": "CLOUD_OP",
+    "phase": "TEARDOWN",
+    "strength": "STRONG"
+  },
+  {
+    "evidence": [
+      "call:cloud"
+    ],
+    "file_path": "data/repo_snapshot/demo_integration.py",
+    "function_name": "async_unload_entry",
+    "line_end": 16,
+    "line_start": 16,
+    "marker_id": "marker_da5dfbb04d",
+    "marker_type": "CLOUD_OP",
+    "phase": "TEARDOWN",
+    "strength": "STRONG"
+  },
+  {
+    "evidence": [
+      "call:unsubscribe"
+    ],
+    "file_path": "data/repo_snapshot/demo_integration.py",
+    "function_name": "async_unload_entry",
+    "line_end": 18,
+    "line_start": 18,
+    "marker_id": "marker_3d382b53be",
+    "marker_type": "UNSUBSCRIBE",
+    "phase": "TEARDOWN",
+    "strength": "MEDIUM"
+  },
+  {
+    "evidence": [
+      "pattern:unsubscribe_callback"
+    ],
+    "file_path": "data/repo_snapshot/demo_integration.py",
+    "function_name": "async_unload_entry",
+    "line_end": 18,
+    "line_start": 18,
+    "marker_id": "marker_3d382b53be",
+    "marker_type": "UNSUBSCRIBE",
+    "phase": "TEARDOWN",
+    "strength": "STRONG"
+  }
+]

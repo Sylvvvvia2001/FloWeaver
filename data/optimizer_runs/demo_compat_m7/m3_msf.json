@@ -1,0 +1,102 @@
+{
+  "dependency_candidates": [],
+  "msfs": [
+    {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "msf_id": "msf00_000_coord_refresh",
+      "msf_type": "SYNC",
+      "node_ids": [
+        "3bfe9039:async_config_entry_first_refresh:0:27"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "required_guards": [],
+      "side_effect_sig": [
+        "coord_refresh"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "DemoCoordinator",
+        "DemoEntity",
+        "hass"
+      ],
+      "msf_id": "msf00_001_entry_setup",
+      "msf_type": "INIT",
+      "node_ids": [
+        "3bfe9039:async_setup_entry:0:5",
+        "3bfe9039:async_setup_entry:1:6",
+        "3bfe9039:async_setup_entry:2:7",
+        "3bfe9039:async_setup_entry:3:8"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "required_guards": [],
+      "side_effect_sig": [
+        "entry_setup",
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "DemoCoordinator",
+        "DemoEntity",
+        "hass"
+      ],
+      "msf_id": "msf00_002_coord_refresh",
+      "msf_type": "SYNC",
+      "node_ids": [
+        "3bfe9039:async_setup_entry:0:5",
+        "3bfe9039:async_setup_entry:1:6",
+        "3bfe9039:async_setup_entry:2:7",
+        "3bfe9039:async_setup_entry:3:8"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "required_guards": [],
+      "side_effect_sig": [
+        "coord_refresh",
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [
+        "A0"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "DemoCoordinator",
+        "DemoEntity",
+        "hass"
+      ],
+      "msf_id": "msf00_003_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "3bfe9039:async_setup_entry:0:5",
+        "3bfe9039:async_setup_entry:1:6",
+        "3bfe9039:async_setup_entry:2:7",
+        "3bfe9039:async_setup_entry:3:8"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "side_effect_sig": [
+        "state_write"
+      ]
+    }
+  ]
+}

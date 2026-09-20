@@ -1,0 +1,20 @@
+{
+  "validation": {
+    "differential_tests": {
+      "enabled": true,
+      "scenarios": ["baseline_happy_path", "fault_cloud_429", "fault_ble_disconnect"],
+      "runs_per_scenario": 2
+    }
+  },
+  "observation": {
+    "canonicalization_version": "v1",
+    "semantic_ops": ["ENTRY_SETUP", "COORD_REFRESH", "STATE_WRITE", "SUBSCRIBE", "UNSUBSCRIBE"],
+    "equivalence_whitelist": ["COALESCE_STATE_WRITE"]
+  },
+  "fault_model": {
+    "cloud_429": true,
+    "ble_disconnect": true,
+    "network_jitter": true
+  },
+  "profile_version": "ha_profile_default"
+}

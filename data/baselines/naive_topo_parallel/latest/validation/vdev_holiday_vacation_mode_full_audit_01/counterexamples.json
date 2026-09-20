@@ -1,0 +1,397 @@
+[
+  {
+    "alignment_status": "PARTIAL",
+    "counterexample_id": "cex_87913bc220",
+    "culprit_ids": [
+      "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:switchbot:holiday_esphome_subscribe"
+    ],
+    "diff_summary": {
+      "baseline_state_at_divergence": {
+        "exception_category": null,
+        "resource_keys": [
+          "connection:ble:switchbot:holiday_esphome_connect"
+        ],
+        "state_writes": {}
+      },
+      "baseline_trace_prefix": [
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A1"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:holiday_curtain_1",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A2"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:holiday_curtain_2",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A3"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:holiday_curtain_3",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A4"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:holiday_curtain_4",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A5"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:holiday_door_window_1",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A6"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:holiday_door_window_2",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A7"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:holiday_door_window_3",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A8"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:holiday_door_window_4",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A9"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:holiday_door_window_5",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A10"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:qingping:holiday_temp_1",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A11"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:sensorpush:holiday_temp_2",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A12"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:sensorpush:holiday_temp_3",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_CONNECT",
+          "params_abst": {
+            "action_id": "A13"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:holiday_esphome_connect",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_NOTIFY_SUBSCRIBE",
+          "params_abst": {
+            "action_id": "A14"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:holiday_esphome_subscribe",
+          "ts": 0.0
+        }
+      ],
+      "counterexample_verdict": "DIFF_FOUND",
+      "divergence_point": {
+        "details": {
+          "compare_meta": {
+            "canonicalization_version": "v1",
+            "commutable_ops": [
+              "COORD_REFRESH",
+              "STATE_WRITE"
+            ],
+            "config_hash": "9285a670239fb92a",
+            "equivalence_rules": [],
+            "parallel_action_scopes": []
+          },
+          "diff_hunks": [
+            {
+              "anchor": "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:switchbot:holiday_esphome_subscribe",
+              "baseline_ops": [
+                "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:switchbot:holiday_esphome_subscribe"
+              ],
+              "optimized_ops": [],
+              "severity": "MEDIUM"
+            }
+          ]
+        },
+        "kind": "SPLIT",
+        "reason": "trace_prefix_mismatch",
+        "step": 14,
+        "useg_node_id": "useg_0013"
+      },
+      "environment_assumptions": {
+        "path_assumptions": [
+          "scenario:vdev_holiday_vacation_mode_full_audit_01"
+        ],
+        "resource_assumptions": [
+          "connection:ble:switchbot:holiday_esphome_connect"
+        ],
+        "suspicious_region_id": "sr_001"
+      },
+      "hunks": [
+        {
+          "anchor": "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:switchbot:holiday_esphome_subscribe",
+          "baseline_ops": [
+            "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:switchbot:holiday_esphome_subscribe"
+          ],
+          "optimized_ops": [],
+          "severity": "MEDIUM"
+        },
+        {
+          "anchor": "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:switchbot:holiday_esphome_subscribe",
+          "baseline_ops": [],
+          "optimized_ops": [
+            "RUNTIME:BLE:BLE_NOTIFY_SUBSCRIBE:ble:switchbot:holiday_esphome_subscribe"
+          ],
+          "severity": "MEDIUM"
+        }
+      ],
+      "inferred_by": "check_observation_schema_or_alignment_rule",
+      "input_assumptions": {},
+      "kind": "order_violation",
+      "minimal_conditions": [
+        "scenario:vdev_holiday_vacation_mode_full_audit_01",
+        "resource:connection:ble:switchbot:holiday_esphome_connect"
+      ],
+      "optimized_state_at_divergence": {
+        "exception_category": null,
+        "resource_keys": [
+          "connection:ble:switchbot:holiday_esphome_connect"
+        ],
+        "state_writes": {}
+      },
+      "optimized_trace_prefix": [
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A1"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:holiday_curtain_1",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A2"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:holiday_curtain_2",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A3"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:holiday_curtain_3",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A4"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:holiday_curtain_4",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A5"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:holiday_door_window_1",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A6"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:holiday_door_window_2",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A7"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:holiday_door_window_3",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A8"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:holiday_door_window_4",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A9"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:holiday_door_window_5",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A10"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:qingping:holiday_temp_1",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A11"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:sensorpush:holiday_temp_2",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_GATT_OP",
+          "params_abst": {
+            "action_id": "A12"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:sensorpush:holiday_temp_3",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "BLE_CONNECT",
+          "params_abst": {
+            "action_id": "A13"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "ble:switchbot:holiday_esphome_connect",
+          "ts": 0.0
+        }
+      ],
+      "refinement_hint": "check_observation_schema_or_alignment_rule",
+      "suspicious_region_id": "sr_001",
+      "violated_property": "TRACE_MISMATCH"
+    },
+    "execution_plan_hash": "0aadb02b450a",
+    "scenario_id": "vdev_holiday_vacation_mode_full_audit_01",
+    "suspicious_region_count": 3,
+    "trust_plan_hash": "0aadb02b450a",
+    "violated_assertion": "observable_semantic_equivalence"
+  }
+]

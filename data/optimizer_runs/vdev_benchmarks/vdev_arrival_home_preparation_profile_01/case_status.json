@@ -1,0 +1,295 @@
+{
+  "vdev_id": "vdev_arrival_home_preparation_profile_01",
+  "name": "Arrival Home Preparation Profile Coverage",
+  "group": "Profile Coverage - Arrival and Departure Routines",
+  "target_path": "data/targets/vdev_benchmarks/vdev_arrival_home_preparation_profile_01.json",
+  "run_dir": "data/optimizer_runs/vdev_benchmarks/vdev_arrival_home_preparation_profile_01",
+  "strict_pass": 6,
+  "tolerant_pass": 6,
+  "counterexample_count": 0,
+  "batch_count": 9,
+  "parallel_groups": {
+    "batch_000": [
+      [
+        "A1"
+      ]
+    ],
+    "batch_001": [
+      [
+        "A2"
+      ]
+    ],
+    "batch_002": [
+      [
+        "A3"
+      ]
+    ],
+    "batch_003": [
+      [
+        "A4"
+      ]
+    ],
+    "batch_004": [
+      [
+        "A5"
+      ]
+    ],
+    "batch_005": [
+      [
+        "A6",
+        "A8"
+      ],
+      [
+        "A7"
+      ],
+      [
+        "A9"
+      ],
+      [
+        "A10"
+      ]
+    ],
+    "batch_006": [
+      [
+        "A11"
+      ]
+    ],
+    "batch_007": [
+      [
+        "A12"
+      ],
+      [
+        "A13"
+      ],
+      [
+        "A14"
+      ]
+    ],
+    "batch_008": [
+      [
+        "A15"
+      ]
+    ]
+  },
+  "batching_buckets": {
+    "batch_000": [],
+    "batch_001": [],
+    "batch_002": [],
+    "batch_003": [],
+    "batch_004": [],
+    "batch_005": [
+      {
+        "bucket": "tuya",
+        "chunks": 1,
+        "group_key": "host",
+        "max_batch_size": 3,
+        "max_wait_ms": 40,
+        "members": [
+          "A6",
+          "A8"
+        ],
+        "rule_kind": "SAME_SESSION_GROUP",
+        "size": 2
+      }
+    ],
+    "batch_006": [],
+    "batch_007": [],
+    "batch_008": []
+  },
+  "triggered_fallbacks": [
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A2"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A2",
+        "A3"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A4"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A2",
+        "A3"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A2",
+        "A4"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A2",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A2",
+        "A3",
+        "A5"
+      ]
+    },
+    {
+      "fallback": "serialize_local_api_reads",
+      "kind": "SAME_SESSION_GROUP",
+      "params": {
+        "group_key": "endpoint",
+        "reuse_window_ms": 5000,
+        "rule_id": "rule_protocol_local_api_budget",
+        "template_kind": "SAME_SESSION_GROUP"
+      },
+      "scope": [
+        "A10",
+        "A11"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "template:rule_protocol_ble_connect_op_disconnect:1:missing_scope_tokens"
+      },
+      "scope": [
+        "A5"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:DATA_DEP"
+      },
+      "scope": [
+        "A5"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:CONTROL_DEP"
+      },
+      "scope": [
+        "A5"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "template:rule_protocol_ble_connect_op_disconnect:0:cross_action_scope_filtered"
+      },
+      "scope": [
+        "A2",
+        "A4"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "template:rule_protocol_ble_connect_op_disconnect:1:cross_action_scope_filtered"
+      },
+      "scope": [
+        "A2",
+        "A5"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "template:rule_protocol_ble_connect_op_disconnect:1:cross_action_scope_filtered"
+      },
+      "scope": [
+        "A2",
+        "A3",
+        "A5"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "template:rule_protocol_ble_connect_op_disconnect:1:cross_action_scope_filtered"
+      },
+      "scope": [
+        "A1",
+        "A5"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A3"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A3",
+        "A4"
+      ]
+    }
+  ],
+  "unknown_protocol_actions": [],
+  "status": "ok",
+  "run_id": "28a76fe6a26b4035bb294da0c1c85f93"
+}

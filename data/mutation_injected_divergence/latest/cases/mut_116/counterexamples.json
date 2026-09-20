@@ -1,0 +1,50 @@
+[
+  {
+    "alignment_status": "PROVED",
+    "counterexample_id": "cex_3089020d6f",
+    "culprit_ids": [
+      "RUNTIME:CLOUD:DEVICE_COMMAND:smart-home:228:m7:same_device:level"
+    ],
+    "diff_summary": {
+      "baseline_state_at_divergence": {},
+      "baseline_trace_prefix": [],
+      "counterexample_verdict": "TRACE_ONLY",
+      "divergence_point": {
+        "scenario_id": "mut_116"
+      },
+      "environment_assumptions": {},
+      "hunks": [
+        {
+          "anchor": "RUNTIME:CLOUD:DEVICE_COMMAND:smart-home:228:m7:same_device:level",
+          "baseline_ops": [
+            "RUNTIME:CLOUD:DEVICE_COMMAND:smart-home:228:m7:same_device:level"
+          ],
+          "optimized_ops": [],
+          "severity": "MEDIUM"
+        },
+        {
+          "anchor": "RUNTIME:CLOUD:DEVICE_COMMAND:smart-home:228:m7:same_device:level",
+          "baseline_ops": [],
+          "optimized_ops": [
+            "RUNTIME:CLOUD:DEVICE_COMMAND:smart-home:228:m7:same_device:level"
+          ],
+          "severity": "MEDIUM"
+        }
+      ],
+      "inferred_by": "multiset_equal_but_order_diff",
+      "input_assumptions": {},
+      "kind": "order_violation",
+      "minimal_conditions": [],
+      "optimized_state_at_divergence": {},
+      "optimized_trace_prefix": [],
+      "refinement_hint": "trace_compare_only",
+      "suspicious_region_id": null,
+      "violated_property": "TRACE_MISMATCH"
+    },
+    "execution_plan_hash": null,
+    "scenario_id": "mut_116",
+    "suspicious_region_count": 0,
+    "trust_plan_hash": null,
+    "violated_assertion": "observable_semantic_equivalence"
+  }
+]

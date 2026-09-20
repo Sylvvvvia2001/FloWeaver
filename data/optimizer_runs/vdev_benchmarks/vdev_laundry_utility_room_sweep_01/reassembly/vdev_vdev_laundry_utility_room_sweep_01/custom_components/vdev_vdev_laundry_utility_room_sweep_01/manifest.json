@@ -1,0 +1,9 @@
+{
+  "codeowners": [],
+  "dependencies": [],
+  "documentation": "https://example.invalid/vibeaura/vdev",
+  "domain": "vdev_vdev_laundry_utility_room_sweep_01",
+  "name": "Laundry and Utility Room Sweep",
+  "requirements": [],
+  "version": "0.1.0"
+}

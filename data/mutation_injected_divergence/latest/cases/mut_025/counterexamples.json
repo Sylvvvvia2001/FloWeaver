@@ -1,0 +1,119 @@
+[
+  {
+    "alignment_status": "PARTIAL",
+    "counterexample_id": "cex_3d24b9f0a2",
+    "culprit_ids": [
+      "RUNTIME:HA:STATE_WRITE:smart-home:211:m2:entity"
+    ],
+    "diff_summary": {
+      "baseline_state_at_divergence": {
+        "exception_category": null,
+        "resource_keys": [],
+        "state_writes": {}
+      },
+      "baseline_trace_prefix": [],
+      "counterexample_verdict": "DIFF_FOUND",
+      "divergence_point": {
+        "details": {
+          "compare_meta": {
+            "canonicalization_version": "v1",
+            "commutable_ops": [
+              "COORD_REFRESH",
+              "STATE_WRITE"
+            ],
+            "config_hash": "9285a670239fb92a",
+            "equivalence_rules": [],
+            "parallel_action_scopes": []
+          },
+          "diff_hunks": [
+            {
+              "anchor": "RUNTIME:HA:STATE_WRITE:smart-home:211:m2:entity",
+              "baseline_ops": [],
+              "optimized_ops": [
+                "RUNTIME:HA:STATE_WRITE:smart-home:211:m2:entity"
+              ],
+              "severity": "HIGH"
+            }
+          ]
+        },
+        "kind": "SPLIT",
+        "reason": "trace_prefix_mismatch",
+        "step": 1,
+        "useg_node_id": "useg_0000"
+      },
+      "environment_assumptions": {
+        "framework_events": [
+          "runtime"
+        ],
+        "path_assumptions": [
+          "scenario:mut_025"
+        ],
+        "suspicious_region_id": "sr_004",
+        "toggle_assumptions": {
+          "mutation_type": "M2_premature_state_writeback"
+        }
+      },
+      "hunks": [
+        {
+          "anchor": "RUNTIME:HA:STATE_WRITE:smart-home:211:m2:entity",
+          "baseline_ops": [
+            "RUNTIME:HA:STATE_WRITE:smart-home:211:m2:entity"
+          ],
+          "optimized_ops": [],
+          "severity": "HIGH"
+        },
+        {
+          "anchor": "RUNTIME:HA:STATE_WRITE:smart-home:211:m2:entity",
+          "baseline_ops": [],
+          "optimized_ops": [
+            "RUNTIME:HA:STATE_WRITE:smart-home:211:m2:entity"
+          ],
+          "severity": "HIGH"
+        }
+      ],
+      "inferred_by": "check_observation_schema_or_alignment_rule",
+      "input_assumptions": {
+        "symbolic_inputs": {
+          "scenario_id": "mut_025"
+        }
+      },
+      "kind": "order_violation",
+      "minimal_conditions": [
+        "scenario:mut_025",
+        "symbolic_inputs.scenario_id=mut_025",
+        "toggle_assumptions.mutation_type=M2_premature_state_writeback",
+        "framework_event:runtime"
+      ],
+      "optimized_state_at_divergence": {
+        "exception_category": null,
+        "resource_keys": [],
+        "state_writes": {
+          "smart-home:211:m2:entity": {
+            "action_id": "A_write"
+          }
+        }
+      },
+      "optimized_trace_prefix": [
+        {
+          "corr_id": null,
+          "op": "STATE_WRITE",
+          "params_abst": {
+            "action_id": "A_write"
+          },
+          "phase": "RUNTIME",
+          "provider": "HA",
+          "target": "smart-home:211:m2:entity",
+          "ts": 0.0
+        }
+      ],
+      "refinement_hint": "check_observation_schema_or_alignment_rule",
+      "suspicious_region_id": "sr_004",
+      "violated_property": "TRACE_MISMATCH"
+    },
+    "execution_plan_hash": null,
+    "scenario_id": "mut_025",
+    "suspicious_region_count": 5,
+    "trust_plan_hash": null,
+    "violated_assertion": "observable_semantic_equivalence"
+  }
+]

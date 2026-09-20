@@ -1,0 +1,190 @@
+{
+  "counterexample_summary": {
+    "count": 0
+  },
+  "created_at": "2026-04-01T06:56:52.199214+00:00",
+  "integration": "vdev_cloud_burst_stress_01",
+  "plan_summary": {
+    "action_count": 10,
+    "batch_count": 4,
+    "batches": [
+      {
+        "batch_id": "batch_000",
+        "constraint_kinds": [
+          "HARD_CONTROL"
+        ],
+        "fallback_count": 2,
+        "group_count": 2,
+        "group_sizes": [
+          2,
+          2
+        ],
+        "guard_count": 3,
+        "max_group_size": 2,
+        "rate_policy": {
+          "adaptive_control_count": 5,
+          "batch_rule_count": 1,
+          "burst": 8,
+          "max_qps": 5.0,
+          "window_ms": 1000
+        },
+        "session_policy": {
+          "max_age_s": 20,
+          "reuse": true,
+          "session_groups": [
+            {
+              "group_key": "host",
+              "scope": [
+                "A1",
+                "A2",
+                "A3",
+                "A4",
+                "A5",
+                "A6",
+                "A7",
+                "A8"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "batch_id": "batch_001",
+        "constraint_kinds": [
+          "HARD_CONTROL"
+        ],
+        "fallback_count": 1,
+        "group_count": 2,
+        "group_sizes": [
+          2,
+          2
+        ],
+        "guard_count": 3,
+        "max_group_size": 2,
+        "rate_policy": {
+          "adaptive_control_count": 3,
+          "batch_rule_count": 1,
+          "burst": 8,
+          "max_qps": 5.0,
+          "window_ms": 1000
+        },
+        "session_policy": {
+          "max_age_s": 20,
+          "reuse": true,
+          "session_groups": [
+            {
+              "group_key": "host",
+              "scope": [
+                "A1",
+                "A2",
+                "A3",
+                "A4",
+                "A5",
+                "A6",
+                "A7",
+                "A8"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "batch_id": "batch_002",
+        "constraint_kinds": [
+          "HARD_CONTROL"
+        ],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 1,
+          "burst": 8,
+          "max_qps": 5.0,
+          "window_ms": 1000
+        },
+        "session_policy": {
+          "max_age_s": 20,
+          "reuse": true,
+          "session_groups": [
+            {
+              "group_key": "host",
+              "scope": [
+                "A1",
+                "A2",
+                "A3",
+                "A4",
+                "A5",
+                "A6",
+                "A7",
+                "A8"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "batch_id": "batch_003",
+        "constraint_kinds": [
+          "HARD_CONTROL"
+        ],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 1,
+          "burst": 8,
+          "max_qps": 5.0,
+          "window_ms": 1000
+        },
+        "session_policy": {
+          "max_age_s": 20,
+          "reuse": true,
+          "session_groups": [
+            {
+              "group_key": "host",
+              "scope": [
+                "A1",
+                "A2",
+                "A3",
+                "A4",
+                "A5",
+                "A6",
+                "A7",
+                "A8"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "forced_pick_batch_count": 0,
+    "group_count": 6,
+    "max_group_size": 2,
+    "policy": {
+      "ble_parallel": 1,
+      "cloud_parallel": 4,
+      "default_qps": 5.0,
+      "max_parallel": 8
+    },
+    "policy_snapshot": {}
+  },
+  "replay_summary": {
+    "phase": "finalize",
+    "strict_pass": 6,
+    "tolerant_pass": 6,
+    "total": 6
+  },
+  "rollback_iterations": 0,
+  "schema_version": "execution_certificate/v1",
+  "status": "COMPLETED"
+}

@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_good_morning_whole_floor_readiness_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Good-Morning Whole-Floor Readiness"
+}

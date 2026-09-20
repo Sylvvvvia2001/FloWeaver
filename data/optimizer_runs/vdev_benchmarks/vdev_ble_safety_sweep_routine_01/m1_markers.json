@@ -1,0 +1,1623 @@
+[
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "binding_hint_action_kind",
+      "binding_hint_target_token",
+      "binding_hint_action_id"
+    ],
+    "binding_score": 1.24,
+    "evidence": [
+      "grounding_profile:airthings_ble:BLE_OP",
+      "grounding_profile:boost_imports",
+      "grounding_profile:boost_names",
+      "grounding_profile_rule:airthings_ble:coordinator_runtime_read_sensor_control",
+      "grounding_profile:match=function",
+      "grounding_profile:score:0.95",
+      "grounding_profile:runtime_path:runtime_function:_async_update_data",
+      "grounding_profile:runtime_path:runtime_call:update_device",
+      "grounding_profile:runtime_path:runtime_call:updatefailed",
+      "grounding_profile:runtime_path:runtime_call:self.airthings.update_device",
+      "grounding_profile:negative:negative_function:_async_setup",
+      "grounding_profile:negative:negative_call:async_ble_device_from_address",
+      "grounding_profile:negative:negative_call:close_stale_connections_by_address",
+      "grounding_profile:negative:negative_call:configentrynotready",
+      "grounding_profile:why_not_setup:exclude_role:setup:_async_setup",
+      "grounding_profile:why_not_setup:exclude_path_signal:setup_function:_async_setup",
+      "grounding_profile:why_not_setup:exclude_path_signal:control_function:_async_setup",
+      "grounding_profile:why_not_setup:exclude_path_signal:control_call:close_stale_connections_by_address",
+      "grounding_profile:reviewer_status:draft",
+      "related_actions:A12",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:binding_hint_action_kind",
+      "action_match:binding_hint_target_token",
+      "action_match:binding_hint_action_id"
+    ],
+    "file_path": "data/repo_snapshot/airthings_ble/coordinator.py",
+    "function_name": "_async_update_data",
+    "line_end": 97,
+    "line_start": 91,
+    "marker_id": "marker_529aef1f97",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A12",
+    "related_action_ids": [
+      "A12"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/airthings_ble/sensor.py",
+    "function_name": "async_setup_entry",
+    "line_end": 223,
+    "line_start": 186,
+    "marker_id": "marker_9c18c552df",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:protocol:ble_connect",
+      "target_anchor_seed",
+      "context_missing:module_hints",
+      "related_actions:A14",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match",
+      "phase_mismatch:teardown_connect"
+    ],
+    "file_path": "data/repo_snapshot/esphome/__init__.py",
+    "function_name": "_async_clear_dynamic_encryption_key",
+    "line_end": 136,
+    "line_start": 136,
+    "marker_id": "marker_c5787dee94",
+    "marker_type": "BLE_CONNECT",
+    "phase": "TEARDOWN",
+    "primary_action_id": "A14",
+    "related_action_ids": [
+      "A14"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:ble",
+      "related_actions:A14",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/esphome/__init__.py",
+    "function_name": "_async_clear_dynamic_encryption_key",
+    "line_end": 136,
+    "line_start": 136,
+    "marker_id": "marker_4b6afcdb38",
+    "marker_type": "BLE_OP",
+    "phase": "TEARDOWN",
+    "primary_action_id": "A14",
+    "related_action_ids": [
+      "A14"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "call:protocol:ble_disconnect",
+      "context_missing:module_hints"
+    ],
+    "file_path": "data/repo_snapshot/esphome/__init__.py",
+    "function_name": "_async_clear_dynamic_encryption_key",
+    "line_end": 152,
+    "line_start": 152,
+    "marker_id": "marker_b4b98f46fc",
+    "marker_type": "BLE_DISCONNECT",
+    "phase": "TEARDOWN",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "WEAK"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "call:ble",
+      "related_actions:A14",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/esphome/__init__.py",
+    "function_name": "_async_clear_dynamic_encryption_key",
+    "line_end": 152,
+    "line_start": 152,
+    "marker_id": "marker_48dcd06472",
+    "marker_type": "BLE_OP",
+    "phase": "TEARDOWN",
+    "primary_action_id": "A14",
+    "related_action_ids": [
+      "A14"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_unload_entry"
+    ],
+    "file_path": "data/repo_snapshot/esphome/__init__.py",
+    "function_name": "async_remove_entry",
+    "line_end": 102,
+    "line_start": 93,
+    "marker_id": "marker_5024625522",
+    "marker_type": "ENTRY_UNLOAD",
+    "phase": "TEARDOWN",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/esphome/__init__.py",
+    "function_name": "async_setup_entry",
+    "line_end": 80,
+    "line_start": 46,
+    "marker_id": "marker_328bc8ec57",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_unload_entry"
+    ],
+    "file_path": "data/repo_snapshot/esphome/__init__.py",
+    "function_name": "async_unload_entry",
+    "line_end": 90,
+    "line_start": 83,
+    "marker_id": "marker_0fccec14d3",
+    "marker_type": "ENTRY_UNLOAD",
+    "phase": "TEARDOWN",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "call:protocol:ble_disconnect",
+      "context_missing:module_hints"
+    ],
+    "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+    "function_name": "_stop_udp_server",
+    "line_end": 749,
+    "line_start": 749,
+    "marker_id": "marker_f89520721b",
+    "marker_type": "BLE_DISCONNECT",
+    "phase": "RUNTIME",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "WEAK"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "call:protocol:ble_retry_or_timeout",
+      "context_missing:module_hints"
+    ],
+    "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+    "function_name": "_stream_tts_audio",
+    "line_end": 691,
+    "line_start": 691,
+    "marker_id": "marker_d99071265d",
+    "marker_type": "BLE_RETRY_OR_TIMEOUT",
+    "phase": "RUNTIME",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "WEAK"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+    "function_name": "async_setup_entry",
+    "line_end": 120,
+    "line_start": 109,
+    "marker_id": "marker_f65e2231cd",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "call:protocol:ble_disconnect",
+      "context_missing:module_hints"
+    ],
+    "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+    "function_name": "close",
+    "line_end": 793,
+    "line_start": 793,
+    "marker_id": "marker_00cd779ed1",
+    "marker_type": "BLE_DISCONNECT",
+    "phase": "RUNTIME",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "WEAK"
+  },
+  {
+    "binding_reason": [
+      "hint_ble_generic",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 0.95,
+    "evidence": [
+      "call:protocol:ble_disconnect",
+      "related_actions:A15",
+      "action_match:hint_ble_generic",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/esphome/manager.py",
+    "function_name": "_on_connect",
+    "line_end": 617,
+    "line_start": 617,
+    "marker_id": "marker_a166557dd8",
+    "marker_type": "BLE_DISCONNECT",
+    "phase": "RUNTIME",
+    "primary_action_id": "A15",
+    "related_action_ids": [
+      "A15"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:ble",
+      "related_actions:A15",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/esphome/manager.py",
+    "function_name": "_on_connect",
+    "line_end": 617,
+    "line_start": 617,
+    "marker_id": "marker_a50e901cdd",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A15",
+    "related_action_ids": [
+      "A15"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_ble_generic",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 0.95,
+    "evidence": [
+      "call:protocol:ble_disconnect",
+      "related_actions:A15",
+      "action_match:hint_ble_generic",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/esphome/manager.py",
+    "function_name": "_start_reauth_and_disconnect",
+    "line_end": 806,
+    "line_start": 806,
+    "marker_id": "marker_de29b958c9",
+    "marker_type": "BLE_DISCONNECT",
+    "phase": "RUNTIME",
+    "primary_action_id": "A15",
+    "related_action_ids": [
+      "A15"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:ble",
+      "related_actions:A15",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/esphome/manager.py",
+    "function_name": "_start_reauth_and_disconnect",
+    "line_end": 806,
+    "line_start": 806,
+    "marker_id": "marker_e0abc6464f",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A15",
+    "related_action_ids": [
+      "A15"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:subscribe",
+      "target_anchor_seed",
+      "related_actions:A15",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/esphome/manager.py",
+    "function_name": "async_on_state_subscription",
+    "line_end": 485,
+    "line_start": 481,
+    "marker_id": "marker_7b58432c38",
+    "marker_type": "SUBSCRIBE",
+    "phase": "RUNTIME",
+    "primary_action_id": "A15",
+    "related_action_ids": [
+      "A15"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_ble_generic",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 0.95,
+    "evidence": [
+      "call:protocol:ble_disconnect",
+      "related_actions:A15",
+      "action_match:hint_ble_generic",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/esphome/manager.py",
+    "function_name": "cleanup_instance",
+    "line_end": 1374,
+    "line_start": 1374,
+    "marker_id": "marker_9920dcafb0",
+    "marker_type": "BLE_DISCONNECT",
+    "phase": "RUNTIME",
+    "primary_action_id": "A15",
+    "related_action_ids": [
+      "A15"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:ble",
+      "related_actions:A15",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/esphome/manager.py",
+    "function_name": "cleanup_instance",
+    "line_end": 1374,
+    "line_start": 1374,
+    "marker_id": "marker_c3292e5c34",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A15",
+    "related_action_ids": [
+      "A15"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_ble_generic",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 0.95,
+    "evidence": [
+      "call:protocol:ble_disconnect",
+      "related_actions:A15",
+      "action_match:hint_ble_generic",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/esphome/manager.py",
+    "function_name": "on_connect",
+    "line_end": 513,
+    "line_start": 513,
+    "marker_id": "marker_770bd101b5",
+    "marker_type": "BLE_DISCONNECT",
+    "phase": "RUNTIME",
+    "primary_action_id": "A15",
+    "related_action_ids": [
+      "A15"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:ble",
+      "related_actions:A15",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/esphome/manager.py",
+    "function_name": "on_connect",
+    "line_end": 513,
+    "line_start": 513,
+    "marker_id": "marker_010219f373",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A15",
+    "related_action_ids": [
+      "A15"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "call:unsubscribe"
+    ],
+    "file_path": "data/repo_snapshot/esphome/update.py",
+    "function_name": "_async_setup_update_entity",
+    "line_end": 83,
+    "line_start": 83,
+    "marker_id": "marker_0057872025",
+    "marker_type": "UNSUBSCRIBE",
+    "phase": "TEARDOWN",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_seed",
+      "related_actions:A17",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/esphome/update.py",
+    "function_name": "_handle_device_update",
+    "line_end": 186,
+    "line_start": 186,
+    "marker_id": "marker_767e7c72f5",
+    "marker_type": "STATE_WRITE",
+    "phase": "RUNTIME",
+    "primary_action_id": "A17",
+    "related_action_ids": [
+      "A17"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/esphome/update.py",
+    "function_name": "async_setup_entry",
+    "line_end": 102,
+    "line_start": 48,
+    "marker_id": "marker_ce22d7b81f",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "call:unsubscribe"
+    ],
+    "file_path": "data/repo_snapshot/esphome/update.py",
+    "function_name": "async_setup_entry",
+    "line_end": 83,
+    "line_start": 83,
+    "marker_id": "marker_8364d61ffe",
+    "marker_type": "UNSUBSCRIBE",
+    "phase": "TEARDOWN",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+    "function_name": "async_setup_entry",
+    "line_end": 210,
+    "line_start": 195,
+    "marker_id": "marker_2865522b16",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match",
+      "binding_hint_action_kind",
+      "binding_hint_target_token",
+      "binding_hint_action_id"
+    ],
+    "binding_score": 1.49,
+    "evidence": [
+      "grounding_profile:ruuvitag_ble:BLE_OP",
+      "grounding_profile:boost_imports",
+      "grounding_profile:boost_names",
+      "grounding_profile_rule:ruuvitag_ble:sensor_runtime_read_sensor_control",
+      "grounding_profile:match=function",
+      "grounding_profile:score:0.95",
+      "grounding_profile:runtime_path:runtime_function:sensor_update_to_bluetooth_data_update",
+      "grounding_profile:runtime_path:runtime_call:items",
+      "grounding_profile:runtime_path:runtime_call:passivebluetoothdataupdate",
+      "grounding_profile:runtime_path:runtime_call:_device_key_to_bluetooth_entity_key",
+      "grounding_profile:negative:negative_function:async_setup_entry",
+      "grounding_profile:negative:negative_function:native_value",
+      "grounding_profile:negative:negative_function:_device_key_to_bluetooth_entity_key",
+      "grounding_profile:negative:negative_call:passivebluetoothdataprocessor",
+      "grounding_profile:why_not_setup:exclude_role:setup:async_setup_entry",
+      "grounding_profile:why_not_setup:exclude_role:property_getter:native_value",
+      "grounding_profile:why_not_setup:exclude_role:helper:_device_key_to_bluetooth_entity_key",
+      "grounding_profile:why_not_setup:exclude_path_signal:setup_function:async_setup_entry",
+      "grounding_profile:reviewer_status:draft",
+      "related_actions:A13",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match",
+      "action_match:binding_hint_action_kind",
+      "action_match:binding_hint_target_token",
+      "action_match:binding_hint_action_id"
+    ],
+    "file_path": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+    "function_name": "sensor_update_to_bluetooth_data_update",
+    "line_end": 192,
+    "line_start": 170,
+    "marker_id": "marker_0d80eea84b",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A13",
+    "related_action_ids": [
+      "A13"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match",
+      "binding_hint_action_kind",
+      "binding_hint_target_token",
+      "binding_hint_action_id",
+      "generalized_profile_secondary_binding"
+    ],
+    "binding_score": 1.49,
+    "evidence": [
+      "grounding_profile:switchbot:BLE_OP",
+      "grounding_profile:boost_imports",
+      "grounding_profile:boost_names",
+      "grounding_profile_rule:switchbot:cover_runtime_refresh_cover_control",
+      "grounding_profile:match=function",
+      "grounding_profile:score:0.95",
+      "grounding_profile:runtime_path:runtime_function:_handle_coordinator_update",
+      "grounding_profile:runtime_path:runtime_call:is_closing",
+      "grounding_profile:runtime_path:runtime_call:is_opening",
+      "grounding_profile:runtime_path:runtime_call:async_write_ha_state",
+      "grounding_profile:negative:negative_function:async_setup_entry",
+      "grounding_profile:negative:negative_function:async_set_cover_position",
+      "grounding_profile:negative:negative_function:async_set_cover_tilt_position",
+      "grounding_profile:negative:negative_function:is_closed",
+      "grounding_profile:why_not_setup:exclude_role:setup:async_setup_entry",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:async_set_cover_position",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:async_set_cover_tilt_position",
+      "grounding_profile:why_not_setup:exclude_role:property_getter:is_closed",
+      "grounding_profile:reviewer_status:draft",
+      "related_actions:A1,A2,A3",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match",
+      "action_match:binding_hint_action_kind",
+      "action_match:binding_hint_target_token",
+      "action_match:binding_hint_action_id",
+      "action_match:generalized_profile_secondary_binding"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/cover.py",
+    "function_name": "_handle_coordinator_update",
+    "line_end": 142,
+    "line_start": 135,
+    "marker_id": "marker_c98ac57c4c",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "secondary_action_ids": [
+      "A2",
+      "A3"
+    ],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match",
+      "binding_hint_action_kind",
+      "binding_hint_target_token",
+      "binding_hint_action_id",
+      "generalized_profile_secondary_binding"
+    ],
+    "binding_score": 1.49,
+    "evidence": [
+      "grounding_profile:switchbot:BLE_OP",
+      "grounding_profile:boost_imports",
+      "grounding_profile:boost_names",
+      "grounding_profile_rule:switchbot:cover_runtime_refresh_cover_control",
+      "grounding_profile:match=function",
+      "grounding_profile:score:0.95",
+      "grounding_profile:runtime_path:runtime_function:_handle_coordinator_update",
+      "grounding_profile:runtime_path:runtime_call:is_closing",
+      "grounding_profile:runtime_path:runtime_call:is_opening",
+      "grounding_profile:runtime_path:runtime_call:async_write_ha_state",
+      "grounding_profile:negative:negative_function:async_setup_entry",
+      "grounding_profile:negative:negative_function:async_set_cover_position",
+      "grounding_profile:negative:negative_function:async_set_cover_tilt_position",
+      "grounding_profile:negative:negative_function:is_closed",
+      "grounding_profile:why_not_setup:exclude_role:setup:async_setup_entry",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:async_set_cover_position",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:async_set_cover_tilt_position",
+      "grounding_profile:why_not_setup:exclude_role:property_getter:is_closed",
+      "grounding_profile:reviewer_status:draft",
+      "related_actions:A1,A2,A3",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match",
+      "action_match:binding_hint_action_kind",
+      "action_match:binding_hint_target_token",
+      "action_match:binding_hint_action_id",
+      "action_match:generalized_profile_secondary_binding"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/cover.py",
+    "function_name": "_handle_coordinator_update",
+    "line_end": 225,
+    "line_start": 216,
+    "marker_id": "marker_3c44b8ccd8",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "secondary_action_ids": [
+      "A2",
+      "A3"
+    ],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match",
+      "binding_hint_action_kind",
+      "binding_hint_target_token",
+      "binding_hint_action_id",
+      "generalized_profile_secondary_binding"
+    ],
+    "binding_score": 1.49,
+    "evidence": [
+      "grounding_profile:switchbot:BLE_OP",
+      "grounding_profile:boost_imports",
+      "grounding_profile:boost_names",
+      "grounding_profile_rule:switchbot:cover_runtime_refresh_cover_control",
+      "grounding_profile:match=function",
+      "grounding_profile:score:0.95",
+      "grounding_profile:runtime_path:runtime_function:_handle_coordinator_update",
+      "grounding_profile:runtime_path:runtime_call:is_closing",
+      "grounding_profile:runtime_path:runtime_call:is_opening",
+      "grounding_profile:runtime_path:runtime_call:async_write_ha_state",
+      "grounding_profile:negative:negative_function:async_setup_entry",
+      "grounding_profile:negative:negative_function:async_set_cover_position",
+      "grounding_profile:negative:negative_function:async_set_cover_tilt_position",
+      "grounding_profile:negative:negative_function:is_closed",
+      "grounding_profile:why_not_setup:exclude_role:setup:async_setup_entry",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:async_set_cover_position",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:async_set_cover_tilt_position",
+      "grounding_profile:why_not_setup:exclude_role:property_getter:is_closed",
+      "grounding_profile:reviewer_status:draft",
+      "related_actions:A1,A2,A3",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match",
+      "action_match:binding_hint_action_kind",
+      "action_match:binding_hint_target_token",
+      "action_match:binding_hint_action_id",
+      "action_match:generalized_profile_secondary_binding"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/cover.py",
+    "function_name": "_handle_coordinator_update",
+    "line_end": 311,
+    "line_start": 304,
+    "marker_id": "marker_643e95f17b",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "secondary_action_ids": [
+      "A2",
+      "A3"
+    ],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/cover.py",
+    "function_name": "async_setup_entry",
+    "line_end": 46,
+    "line_start": 32,
+    "marker_id": "marker_8e8dae5ed9",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "heuristic:ble_device_runtime_call",
+      "related_actions:A1",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/cover.py",
+    "function_name": "async_stop_cover",
+    "line_end": 118,
+    "line_start": 118,
+    "marker_id": "marker_1a328b14d6",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "heuristic:ble_device_runtime_call",
+      "related_actions:A1",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/cover.py",
+    "function_name": "async_stop_cover",
+    "line_end": 287,
+    "line_start": 287,
+    "marker_id": "marker_1f2c3503f3",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "heuristic:ble_device_runtime_call",
+      "related_actions:A1",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/cover.py",
+    "function_name": "async_stop_cover_tilt",
+    "line_end": 203,
+    "line_start": 203,
+    "marker_id": "marker_c586b78c6d",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_seed",
+      "related_actions:A16",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/fan.py",
+    "function_name": "async_oscillate",
+    "line_end": 101,
+    "line_start": 101,
+    "marker_id": "marker_c1599f0892",
+    "marker_type": "STATE_WRITE",
+    "phase": "RUNTIME",
+    "primary_action_id": "A16",
+    "related_action_ids": [
+      "A16"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_seed",
+      "related_actions:A16",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/fan.py",
+    "function_name": "async_set_percentage",
+    "line_end": 92,
+    "line_start": 92,
+    "marker_id": "marker_b9989a7050",
+    "marker_type": "STATE_WRITE",
+    "phase": "RUNTIME",
+    "primary_action_id": "A16",
+    "related_action_ids": [
+      "A16"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_seed",
+      "related_actions:A16",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/fan.py",
+    "function_name": "async_set_preset_mode",
+    "line_end": 83,
+    "line_start": 83,
+    "marker_id": "marker_e34316b43e",
+    "marker_type": "STATE_WRITE",
+    "phase": "RUNTIME",
+    "primary_action_id": "A16",
+    "related_action_ids": [
+      "A16"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_seed",
+      "related_actions:A16",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/fan.py",
+    "function_name": "async_set_preset_mode",
+    "line_end": 161,
+    "line_start": 161,
+    "marker_id": "marker_7529ee2411",
+    "marker_type": "STATE_WRITE",
+    "phase": "RUNTIME",
+    "primary_action_id": "A16",
+    "related_action_ids": [
+      "A16"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/fan.py",
+    "function_name": "async_setup_entry",
+    "line_end": 33,
+    "line_start": 23,
+    "marker_id": "marker_19cb718405",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_seed",
+      "related_actions:A16",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/fan.py",
+    "function_name": "async_turn_off",
+    "line_end": 125,
+    "line_start": 125,
+    "marker_id": "marker_8ff06e2c99",
+    "marker_type": "STATE_WRITE",
+    "phase": "RUNTIME",
+    "primary_action_id": "A16",
+    "related_action_ids": [
+      "A16"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_seed",
+      "related_actions:A16",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/fan.py",
+    "function_name": "async_turn_off",
+    "line_end": 187,
+    "line_start": 187,
+    "marker_id": "marker_a75f778a26",
+    "marker_type": "STATE_WRITE",
+    "phase": "RUNTIME",
+    "primary_action_id": "A16",
+    "related_action_ids": [
+      "A16"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_seed",
+      "related_actions:A16",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/fan.py",
+    "function_name": "async_turn_on",
+    "line_end": 118,
+    "line_start": 118,
+    "marker_id": "marker_771a133e32",
+    "marker_type": "STATE_WRITE",
+    "phase": "RUNTIME",
+    "primary_action_id": "A16",
+    "related_action_ids": [
+      "A16"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_seed",
+      "related_actions:A16",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/fan.py",
+    "function_name": "async_turn_on",
+    "line_end": 179,
+    "line_start": 179,
+    "marker_id": "marker_4664192a7e",
+    "marker_type": "STATE_WRITE",
+    "phase": "RUNTIME",
+    "primary_action_id": "A16",
+    "related_action_ids": [
+      "A16"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "binding_hint_action_kind",
+      "binding_hint_target_token",
+      "binding_hint_action_id",
+      "generalized_profile_secondary_binding"
+    ],
+    "binding_score": 1.24,
+    "evidence": [
+      "grounding_profile:xiaomi_ble:BLE_OP",
+      "grounding_profile:boost_imports",
+      "grounding_profile:boost_names",
+      "grounding_profile_rule:xiaomi_ble:__init___runtime_read_sensor_control",
+      "grounding_profile:match=call",
+      "grounding_profile:score:0.95",
+      "grounding_profile:runtime_path:runtime_function:_needs_poll",
+      "grounding_profile:runtime_path:runtime_function:process_service_info",
+      "grounding_profile:runtime_path:runtime_call:poll_needed",
+      "grounding_profile:runtime_path:runtime_call:bool",
+      "grounding_profile:negative:negative_function:async_setup_entry",
+      "grounding_profile:negative:negative_function:format_event_dispatcher_name",
+      "grounding_profile:negative:negative_call:xiaomibluetoothdevicedata",
+      "grounding_profile:negative:negative_call:async_get",
+      "grounding_profile:why_not_setup:exclude_role:setup:async_setup_entry",
+      "grounding_profile:why_not_setup:exclude_role:helper:format_event_dispatcher_name",
+      "grounding_profile:why_not_setup:exclude_path_signal:setup_function:async_setup_entry",
+      "grounding_profile:why_not_setup:exclude_control_path_for_read_like_action",
+      "grounding_profile:reviewer_status:draft",
+      "related_actions:A4,A5,A6,A7,A8,A9",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:binding_hint_action_kind",
+      "action_match:binding_hint_target_token",
+      "action_match:binding_hint_action_id",
+      "action_match:generalized_profile_secondary_binding",
+      "grounding_profile_rule:xiaomi_ble:__init___runtime_read_status_control",
+      "related_actions:A10,A11"
+    ],
+    "file_path": "data/repo_snapshot/xiaomi_ble/__init__.py",
+    "function_name": "_needs_poll",
+    "line_end": 139,
+    "line_start": 139,
+    "marker_id": "marker_8b05854925",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A4",
+    "related_action_ids": [
+      "A10",
+      "A11",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9"
+    ],
+    "secondary_action_ids": [
+      "A10",
+      "A11",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9"
+    ],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/xiaomi_ble/__init__.py",
+    "function_name": "async_setup_entry",
+    "line_end": 187,
+    "line_start": 122,
+    "marker_id": "marker_af050aeecb",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_unload_entry"
+    ],
+    "file_path": "data/repo_snapshot/xiaomi_ble/__init__.py",
+    "function_name": "async_unload_entry",
+    "line_end": 192,
+    "line_start": 190,
+    "marker_id": "marker_abcd008d4f",
+    "marker_type": "ENTRY_UNLOAD",
+    "phase": "TEARDOWN",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+    "function_name": "async_setup_entry",
+    "line_end": 152,
+    "line_start": 135,
+    "marker_id": "marker_7bd5c0fc4d",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match",
+      "binding_hint_action_kind",
+      "binding_hint_target_token",
+      "binding_hint_action_id",
+      "generalized_profile_secondary_binding"
+    ],
+    "binding_score": 1.49,
+    "evidence": [
+      "grounding_profile:xiaomi_ble:BLE_OP",
+      "grounding_profile:boost_imports",
+      "grounding_profile:boost_names",
+      "grounding_profile_rule:xiaomi_ble:binary_sensor_runtime_read_sensor_control",
+      "grounding_profile:match=function",
+      "grounding_profile:score:0.95",
+      "grounding_profile:runtime_path:runtime_function:sensor_update_to_bluetooth_data_update",
+      "grounding_profile:runtime_path:runtime_call:passivebluetoothdataupdate",
+      "grounding_profile:runtime_path:runtime_call:sensor_device_info_to_hass_device_info",
+      "grounding_profile:runtime_path:runtime_call:device_key_to_bluetooth_entity_key",
+      "grounding_profile:negative:negative_function:async_setup_entry",
+      "grounding_profile:negative:negative_function:is_on",
+      "grounding_profile:negative:negative_function:available",
+      "grounding_profile:negative:negative_call:xiaomipassivebluetoothdataprocessor",
+      "grounding_profile:why_not_setup:exclude_role:setup:async_setup_entry",
+      "grounding_profile:why_not_setup:exclude_role:property_getter:is_on",
+      "grounding_profile:why_not_setup:exclude_role:property_getter:available",
+      "grounding_profile:why_not_setup:exclude_path_signal:setup_function:async_setup_entry",
+      "grounding_profile:reviewer_status:draft",
+      "related_actions:A4,A5,A6,A7,A8,A9",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match",
+      "action_match:binding_hint_action_kind",
+      "action_match:binding_hint_target_token",
+      "action_match:binding_hint_action_id",
+      "action_match:generalized_profile_secondary_binding"
+    ],
+    "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+    "function_name": "sensor_update_to_bluetooth_data_update",
+    "line_end": 132,
+    "line_start": 108,
+    "marker_id": "marker_0e91c5f067",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A4",
+    "related_action_ids": [
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9"
+    ],
+    "secondary_action_ids": [
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9"
+    ],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "binding_hint_action_kind",
+      "binding_hint_target_token",
+      "binding_hint_action_id",
+      "generalized_profile_secondary_binding"
+    ],
+    "binding_score": 1.24,
+    "evidence": [
+      "grounding_profile:xiaomi_ble:BLE_OP",
+      "grounding_profile:boost_imports",
+      "grounding_profile:boost_names",
+      "grounding_profile_rule:xiaomi_ble:event_runtime_read_sensor_control",
+      "grounding_profile:match=function",
+      "grounding_profile:score:0.95",
+      "grounding_profile:runtime_path:runtime_function:_async_handle_event",
+      "grounding_profile:runtime_path:runtime_call:_trigger_event",
+      "grounding_profile:runtime_path:runtime_call:async_write_ha_state",
+      "grounding_profile:runtime_path:runtime_call:self._trigger_event",
+      "grounding_profile:negative:negative_function:async_setup_entry",
+      "grounding_profile:negative:negative_function:_async_discovered_event_class",
+      "grounding_profile:negative:negative_function:async_added_to_hass",
+      "grounding_profile:negative:negative_call:async_get",
+      "grounding_profile:why_not_setup:exclude_role:setup:async_setup_entry",
+      "grounding_profile:why_not_setup:exclude_role:helper:_async_discovered_event_class",
+      "grounding_profile:why_not_setup:exclude_path_signal:setup_function:async_setup_entry",
+      "grounding_profile:why_not_setup:exclude_path_signal:setup_call:async_add_entities",
+      "grounding_profile:reviewer_status:draft",
+      "related_actions:A4,A5,A6,A7,A8,A9",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:binding_hint_action_kind",
+      "action_match:binding_hint_target_token",
+      "action_match:binding_hint_action_id",
+      "action_match:generalized_profile_secondary_binding",
+      "grounding_profile_rule:xiaomi_ble:event_runtime_read_status_control",
+      "related_actions:A10,A11"
+    ],
+    "file_path": "data/repo_snapshot/xiaomi_ble/event.py",
+    "function_name": "_async_handle_event",
+    "line_end": 180,
+    "line_start": 178,
+    "marker_id": "marker_6f52f6ca11",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A4",
+    "related_action_ids": [
+      "A10",
+      "A11",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9"
+    ],
+    "secondary_action_ids": [
+      "A10",
+      "A11",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9"
+    ],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/xiaomi_ble/event.py",
+    "function_name": "async_setup_entry",
+    "line_end": 211,
+    "line_start": 183,
+    "marker_id": "marker_459bf096ba",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  }
+]

@@ -1,0 +1,4356 @@
+{
+  "builder_version": "m1_detector_builder/v3",
+  "cluster_count": 15,
+  "cluster_decisions": [
+    {
+      "attempts": 0,
+      "cluster_id": "airthings_ble__config_flow__ble_op__read_sensor__ble",
+      "decision": "heuristic_accept",
+      "final_rule_id": "airthings_ble:config_flow_runtime_read_sensor_control",
+      "heuristic_rule_id": "airthings_ble:config_flow_runtime_read_sensor_control",
+      "llm_error": null,
+      "promotability_score": 11
+    },
+    {
+      "attempts": 0,
+      "cluster_id": "airthings_ble__coordinator__ble_op__read_sensor__ble",
+      "decision": "heuristic_accept",
+      "final_rule_id": "airthings_ble:coordinator_runtime_read_sensor_control",
+      "heuristic_rule_id": "airthings_ble:coordinator_runtime_read_sensor_control",
+      "llm_error": null,
+      "promotability_score": 6
+    },
+    {
+      "cluster_id": "airthings_ble__sensor__ble_op__read_sensor__ble",
+      "decision": "report_only",
+      "reason": "no_heuristic_rule"
+    },
+    {
+      "attempts": 0,
+      "cluster_id": "ecobee__climate__cloud_status_call__read_runtime__cloud",
+      "decision": "heuristic_accept",
+      "final_rule_id": "ecobee:climate_runtime_status_read",
+      "heuristic_rule_id": "ecobee:climate_runtime_status_read",
+      "llm_error": null,
+      "promotability_score": 12
+    },
+    {
+      "attempts": 0,
+      "cluster_id": "hue__binary_sensor__local_api_read__get_state__local",
+      "decision": "heuristic_accept",
+      "final_rule_id": "hue:binary_sensor_local_api_read",
+      "heuristic_rule_id": "hue:binary_sensor_local_api_read",
+      "llm_error": null,
+      "promotability_score": 10
+    },
+    {
+      "attempts": 0,
+      "cluster_id": "hue__entity__local_api_read__get_state__local",
+      "decision": "heuristic_accept",
+      "final_rule_id": "hue:entity_local_api_read",
+      "heuristic_rule_id": "hue:entity_local_api_read",
+      "llm_error": null,
+      "promotability_score": 13
+    },
+    {
+      "attempts": 0,
+      "cluster_id": "hue__group__local_api_read__get_state__local",
+      "decision": "heuristic_accept",
+      "final_rule_id": "hue:group_local_api_read",
+      "heuristic_rule_id": "hue:group_local_api_read",
+      "llm_error": null,
+      "promotability_score": 15
+    },
+    {
+      "attempts": 0,
+      "cluster_id": "netatmo__sensor__cloud_status_call__read_runtime__cloud",
+      "decision": "heuristic_accept",
+      "final_rule_id": "netatmo:sensor_runtime_status_read",
+      "heuristic_rule_id": "netatmo:sensor_runtime_status_read",
+      "llm_error": null,
+      "promotability_score": 10
+    },
+    {
+      "cluster_id": "ruuvitag_ble__config_flow__ble_op__read_sensor__ble",
+      "decision": "report_only",
+      "reason": "no_heuristic_rule"
+    },
+    {
+      "attempts": 0,
+      "cluster_id": "ruuvitag_ble__sensor__ble_op__read_sensor__ble",
+      "decision": "heuristic_accept",
+      "final_rule_id": "ruuvitag_ble:sensor_runtime_read_sensor_control",
+      "heuristic_rule_id": "ruuvitag_ble:sensor_runtime_read_sensor_control",
+      "llm_error": null,
+      "promotability_score": 8
+    },
+    {
+      "attempts": 0,
+      "cluster_id": "tplink__entity__state_write__write__ha",
+      "decision": "heuristic_accept",
+      "final_rule_id": "tplink:entity_runtime_writeback",
+      "heuristic_rule_id": "tplink:entity_runtime_writeback",
+      "llm_error": null,
+      "promotability_score": 16
+    },
+    {
+      "attempts": 0,
+      "cluster_id": "tuya____init____cloud_status_call__status__cloud",
+      "decision": "heuristic_accept",
+      "final_rule_id": "tuya:__init___runtime_status_read",
+      "heuristic_rule_id": "tuya:__init___runtime_status_read",
+      "llm_error": null,
+      "promotability_score": 10
+    },
+    {
+      "attempts": 0,
+      "cluster_id": "tuya__entity__cloud_status_call__status__cloud",
+      "decision": "heuristic_accept",
+      "final_rule_id": "tuya:entity_runtime_status_read",
+      "heuristic_rule_id": "tuya:entity_runtime_status_read",
+      "llm_error": null,
+      "promotability_score": 15
+    },
+    {
+      "attempts": 0,
+      "cluster_id": "tuya__switch__cloud_status_call__status__cloud",
+      "decision": "heuristic_accept",
+      "final_rule_id": "tuya:switch_runtime_status_read",
+      "heuristic_rule_id": "tuya:switch_runtime_status_read",
+      "llm_error": null,
+      "promotability_score": 12
+    },
+    {
+      "attempts": 0,
+      "cluster_id": "xiaomi_ble____init____ble_op__read_sensor__ble",
+      "decision": "heuristic_accept",
+      "final_rule_id": "xiaomi_ble:__init___runtime_read_sensor_control",
+      "heuristic_rule_id": "xiaomi_ble:__init___runtime_read_sensor_control",
+      "llm_error": null,
+      "promotability_score": 12
+    },
+    {
+      "attempts": 0,
+      "cluster_id": "xiaomi_ble__binary_sensor__ble_op__read_sensor__ble",
+      "decision": "heuristic_accept",
+      "final_rule_id": "xiaomi_ble:binary_sensor_runtime_read_sensor_control",
+      "heuristic_rule_id": "xiaomi_ble:binary_sensor_runtime_read_sensor_control",
+      "llm_error": null,
+      "promotability_score": 8
+    },
+    {
+      "attempts": 0,
+      "cluster_id": "xiaomi_ble__event__ble_op__read_sensor__ble",
+      "decision": "heuristic_accept",
+      "final_rule_id": "xiaomi_ble:event_runtime_read_sensor_control",
+      "heuristic_rule_id": "xiaomi_ble:event_runtime_read_sensor_control",
+      "llm_error": null,
+      "promotability_score": 10
+    }
+  ],
+  "detector_profile_drafts": [
+    {
+      "integration": "airthings_ble",
+      "runtime_families": [
+        {
+          "action_kind": "read_sensor",
+          "allow_accessor_fallback": false,
+          "binding_hints": {
+            "boost_target_tokens": [
+              "ble:airthings_ble:overnight_air_bedroom",
+              "overnight_air_bedroom"
+            ],
+            "phase": "RUNTIME",
+            "preferred_action_kinds": [
+              "control",
+              "read_sensor"
+            ],
+            "required_service_tokens": []
+          },
+          "call_patterns": [],
+          "confidence": {
+            "base": 0.7,
+            "boost_if_imports": [
+              "__future__",
+              "airthings_ble",
+              "bleak",
+              "const",
+              "dataclasses",
+              "habluetooth"
+            ],
+            "boost_if_names": [
+              "read_sensor",
+              "_get_device"
+            ],
+            "emit_threshold": 0.7
+          },
+          "family": "BLE_OP",
+          "file_globs": [
+            "airthings_ble/config_flow.py"
+          ],
+          "forbidden_context": [
+            "dunder_init"
+          ],
+          "forbidden_path_signals": [
+            "control_function:async_step_user",
+            "control_call:self.async_set_unique_id",
+            "awaited_control_call:self.async_set_unique_id",
+            "control_function:async_step_bluetooth",
+            "control_function:async_turn_on",
+            "control_function:async_turn_off",
+            "control_function:async_open_cover",
+            "control_function:async_close_cover"
+          ],
+          "forbidden_runtime_roles": [
+            "runtime_write",
+            "setup",
+            "property_getter",
+            "helper"
+          ],
+          "function_name_patterns": [
+            "_get_device"
+          ],
+          "generalization_scope": "file_specific",
+          "generalizes_actions": [
+            "A1"
+          ],
+          "integration": "airthings_ble",
+          "negative_call_patterns": [
+            "_async_current_ids",
+            "async_discovered_service_info",
+            "async_show_form",
+            "_abort_if_unique_id_configured",
+            "async_create_entry",
+            "airthingsbluetoothdevicedata"
+          ],
+          "negative_evidence": [
+            "negative_function:__init__",
+            "negative_function:async_step_user",
+            "negative_function:async_step_bluetooth",
+            "negative_function:get_name",
+            "negative_call:_async_current_ids",
+            "negative_call:async_discovered_service_info",
+            "negative_call:async_show_form",
+            "negative_call:_abort_if_unique_id_configured",
+            "negative_call:async_create_entry",
+            "negative_call:append"
+          ],
+          "negative_function_patterns": [
+            "__init__",
+            "async_step_user",
+            "async_step_bluetooth",
+            "get_name",
+            "async_turn_on",
+            "async_turn_off"
+          ],
+          "negative_prototypes": [
+            {
+              "call_chains": [],
+              "call_patterns": [],
+              "file_path": "data/repo_snapshot/airthings_ble/config_flow.py",
+              "function_name": "__init__",
+              "path_kind": "setup_path",
+              "path_signals": [],
+              "prototype_kind": "negative_setup",
+              "role_hint": "setup",
+              "score": -6,
+              "snippet": "66: \n67:     def __init__(self) -> None:\n68:         \"\"\"Initialize the config flow.\"\"\"\n69:         self._discovered_device: Discovery | None = None\n70:         self._discovered_devices: dict[str, Discovery] = {}\n71: \n72:     async def _get_device("
+            },
+            {
+              "call_chains": [
+                "self._async_current_ids",
+                "async_discovered_service_info",
+                "self.async_show_form",
+                "self._abort_if_unique_id_configured",
+                "self.async_create_entry",
+                "devices.append",
+                "airthingsbluetoothdevicedata",
+                "get_name"
+              ],
+              "call_patterns": [
+                "_async_current_ids",
+                "async_discovered_service_info",
+                "async_show_form",
+                "_abort_if_unique_id_configured",
+                "async_create_entry",
+                "append",
+                "airthingsbluetoothdevicedata",
+                "get_name"
+              ],
+              "file_path": "data/repo_snapshot/airthings_ble/config_flow.py",
+              "function_name": "async_step_user",
+              "path_kind": "control_path",
+              "path_signals": [
+                "control_function:async_step_user",
+                "read_function:async_step_user",
+                "read_call:get_name",
+                "control_call:self.async_set_unique_id",
+                "awaited_control_call:self.async_set_unique_id"
+              ],
+              "prototype_kind": "negative_control",
+              "role_hint": "runtime_write",
+              "score": -10,
+              "snippet": "147: \n148:     async def async_step_user(\n149:         self, user_input: dict[str, Any] | None = None\n150:     ) -> ConfigFlowResult:\n151:         \"\"\"Handle the user step to pick discovered device.\"\"\"\n152:         if user_input is not None:\n153:             address = user_input[CONF_ADDRESS]\n154:             await self.async_set_unique_id(address, raise_on_progress=False)\n155:             self._abort_if_unique_id_configured()\n156:             discovery = self._discovered_devices[address]\n157: \n158:             if discovery.device.firmware.need_firmware_upgrade:\n159:                 return self.async_abort(reason=\"firmware_upgrade_required\")\n160:"
+            },
+            {
+              "call_chains": [
+                "_logger.debug",
+                "self._abort_if_unique_id_configured",
+                "airthingsbluetoothdevicedata",
+                "get_name",
+                "discovery",
+                "self.async_set_unique_id",
+                "self.async_step_bluetooth_confirm",
+                "self._get_device"
+              ],
+              "call_patterns": [
+                "debug",
+                "_abort_if_unique_id_configured",
+                "airthingsbluetoothdevicedata",
+                "get_name",
+                "discovery",
+                "async_set_unique_id",
+                "async_step_bluetooth_confirm",
+                "_get_device"
+              ],
+              "file_path": "data/repo_snapshot/airthings_ble/config_flow.py",
+              "function_name": "async_step_bluetooth",
+              "path_kind": "control_path",
+              "path_signals": [
+                "control_function:async_step_bluetooth",
+                "read_function:async_step_bluetooth",
+                "read_call:get_name",
+                "control_call:self.async_set_unique_id",
+                "awaited_control_call:self.async_set_unique_id"
+              ],
+              "prototype_kind": "negative_control",
+              "role_hint": "runtime_write",
+              "score": -10,
+              "snippet": "100: \n101:     async def async_step_bluetooth(\n102:         self, discovery_info: BluetoothServiceInfo\n103:     ) -> ConfigFlowResult:\n104:         \"\"\"Handle the bluetooth discovery step.\"\"\"\n105:         _LOGGER.debug(\"Discovered BT device: %s\", discovery_info)\n106:         await self.async_set_unique_id(discovery_info.address)\n107:         self._abort_if_unique_id_configured()\n108: \n109:         data = AirthingsBluetoothDeviceData(logger=_LOGGER)\n110: \n111:         try:\n112:             device = await self._get_device(data=data, discovery_info=discovery_info)\n113:         except AirthingsDeviceUpdateError:"
+            },
+            {
+              "call_chains": [
+                "device.friendly_name"
+              ],
+              "call_patterns": [
+                "friendly_name"
+              ],
+              "file_path": "data/repo_snapshot/airthings_ble/config_flow.py",
+              "function_name": "get_name",
+              "path_kind": "helper_path",
+              "path_signals": [
+                "read_function:get_name"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "helper",
+              "score": -2,
+              "snippet": "48: \n49: def get_name(device: AirthingsDevice) -> str:\n50:     \"\"\"Generate name with model and identifier for device.\"\"\"\n51: \n52:     name = device.friendly_name()\n53:     if identifier := device.identifier:\n54:         name += f\" ({device.model.value}{identifier})\"\n55:     return name\n56: \n57:"
+            }
+          ],
+          "origin_action_id": "A1",
+          "origin_cluster_id": "airthings_ble__config_flow__ble_op__read_sensor__ble",
+          "phase": "RUNTIME",
+          "positive_prototypes": [
+            {
+              "call_chains": [
+                "bluetooth.async_ble_device_from_address",
+                "_logger.debug",
+                "airthingsdeviceupdateerror",
+                "data.update_device",
+                "_logger.error"
+              ],
+              "call_patterns": [
+                "async_ble_device_from_address",
+                "debug",
+                "airthingsdeviceupdateerror",
+                "update_device",
+                "error"
+              ],
+              "file_path": "data/repo_snapshot/airthings_ble/config_flow.py",
+              "function_name": "_get_device",
+              "path_kind": "read_path",
+              "path_signals": [
+                "refresh_call:data.update_device",
+                "awaited_refresh_call:data.update_device"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 10,
+              "snippet": "71: \n72:     async def _get_device(\n73:         self, data: AirthingsBluetoothDeviceData, discovery_info: BluetoothServiceInfo\n74:     ) -> AirthingsDevice:\n75:         ble_device = bluetooth.async_ble_device_from_address(\n76:             self.hass, discovery_info.address\n77:         )\n78:         if ble_device is None:\n79:             _LOGGER.debug(\"no ble_device in _get_device_data\")\n80:             raise AirthingsDeviceUpdateError(\"No ble_device\")\n81: \n82:         try:\n83:             device = await data.update_device(ble_device)\n84:         except BleakError as err:"
+            }
+          ],
+          "preferred_runtime_roles": [
+            "runtime_read"
+          ],
+          "required_context": [
+            "runtime_path"
+          ],
+          "required_path_signals": [
+            "refresh_call:data.update_device",
+            "awaited_refresh_call:data.update_device"
+          ],
+          "required_runtime_roles": [
+            "runtime_read"
+          ],
+          "reviewer_status": "draft",
+          "rule_id": "airthings_ble:config_flow_runtime_read_sensor_control",
+          "runtime_archetypes": [
+            "ble_runtime_read"
+          ],
+          "runtime_path_evidence": [
+            "runtime_function:_get_device",
+            "runtime_call:async_ble_device_from_address",
+            "runtime_call:debug",
+            "runtime_call:airthingsdeviceupdateerror",
+            "runtime_call:update_device",
+            "runtime_call:error",
+            "runtime_call:bluetooth.async_ble_device_from_address",
+            "runtime_call:_logger.debug",
+            "runtime_call:data.update_device",
+            "runtime_call:_logger.error"
+          ],
+          "source_file_paths": [
+            "data/repo_snapshot/airthings_ble/config_flow.py"
+          ],
+          "source_unresolved_action_ids": [
+            "A1"
+          ],
+          "strength": "MEDIUM",
+          "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+          "why_not_setup": [
+            "exclude_role:setup:__init__",
+            "exclude_role:runtime_write:async_step_user",
+            "exclude_role:runtime_write:async_step_bluetooth",
+            "exclude_role:helper:get_name",
+            "exclude_path_signal:control_function:async_step_user",
+            "exclude_path_signal:control_call:self.async_set_unique_id",
+            "exclude_path_signal:awaited_control_call:self.async_set_unique_id",
+            "exclude_path_signal:control_function:async_step_bluetooth"
+          ]
+        },
+        {
+          "action_kind": "read_sensor",
+          "allow_accessor_fallback": false,
+          "binding_hints": {
+            "boost_target_tokens": [
+              "ble:airthings_ble:overnight_air_bedroom",
+              "overnight_air_bedroom"
+            ],
+            "phase": "RUNTIME",
+            "preferred_action_kinds": [
+              "control",
+              "read_sensor"
+            ],
+            "required_service_tokens": []
+          },
+          "call_patterns": [],
+          "confidence": {
+            "base": 0.7,
+            "boost_if_imports": [
+              "__future__",
+              "airthings_ble",
+              "bleak",
+              "bleak_retry_connector",
+              "const",
+              "datetime"
+            ],
+            "boost_if_names": [
+              "read_sensor",
+              "_async_update_data"
+            ],
+            "emit_threshold": 0.7
+          },
+          "family": "BLE_OP",
+          "file_globs": [
+            "airthings_ble/coordinator.py"
+          ],
+          "forbidden_context": [
+            "dunder_init"
+          ],
+          "forbidden_path_signals": [
+            "setup_function:_async_setup",
+            "control_function:_async_setup",
+            "control_call:close_stale_connections_by_address",
+            "awaited_control_call:close_stale_connections_by_address",
+            "control_function:async_turn_on",
+            "control_function:async_turn_off",
+            "control_function:async_open_cover",
+            "control_function:async_close_cover"
+          ],
+          "forbidden_runtime_roles": [
+            "runtime_write",
+            "setup",
+            "property_getter"
+          ],
+          "function_name_patterns": [
+            "_async_update_data"
+          ],
+          "generalization_scope": "file_specific",
+          "generalizes_actions": [
+            "A1"
+          ],
+          "integration": "airthings_ble",
+          "negative_call_patterns": [
+            "async_ble_device_from_address",
+            "close_stale_connections_by_address",
+            "configentrynotready",
+            "async_update_entry",
+            "timedelta",
+            "update_device"
+          ],
+          "negative_evidence": [
+            "negative_function:_async_setup",
+            "negative_call:async_ble_device_from_address",
+            "negative_call:close_stale_connections_by_address",
+            "negative_call:configentrynotready",
+            "negative_call:debug",
+            "negative_call:async_update_entry",
+            "negative_call:timedelta",
+            "negative_call:update_device",
+            "negative_call:updatefailed",
+            "negative_call:bluetooth.async_ble_device_from_address"
+          ],
+          "negative_function_patterns": [
+            "_async_setup",
+            "async_turn_on",
+            "async_turn_off",
+            "async_set_*",
+            "async_open_*",
+            "async_close_*"
+          ],
+          "negative_prototypes": [
+            {
+              "call_chains": [
+                "bluetooth.async_ble_device_from_address",
+                "close_stale_connections_by_address",
+                "configentrynotready",
+                "_logger.debug",
+                "self.hass.config_entries.async_update_entry",
+                "timedelta",
+                "self.airthings.update_device",
+                "updatefailed"
+              ],
+              "call_patterns": [
+                "async_ble_device_from_address",
+                "close_stale_connections_by_address",
+                "configentrynotready",
+                "debug",
+                "async_update_entry",
+                "timedelta",
+                "update_device",
+                "updatefailed"
+              ],
+              "file_path": "data/repo_snapshot/airthings_ble/coordinator.py",
+              "function_name": "_async_setup",
+              "path_kind": "setup_path",
+              "path_signals": [
+                "setup_function:_async_setup",
+                "control_function:_async_setup",
+                "control_call:close_stale_connections_by_address",
+                "connect_call:close_stale_connections_by_address",
+                "awaited_control_call:close_stale_connections_by_address"
+              ],
+              "prototype_kind": "negative_setup",
+              "role_hint": "setup",
+              "score": -15,
+              "snippet": "55: \n56:     async def _async_setup(self) -> None:\n57:         \"\"\"Set up the coordinator.\"\"\"\n58:         address = self.config_entry.unique_id\n59: \n60:         assert address is not None\n61: \n62:         await close_stale_connections_by_address(address)\n63: \n64:         ble_device = bluetooth.async_ble_device_from_address(self.hass, address)\n65: \n66:         if not ble_device:\n67:             raise ConfigEntryNotReady(\n68:                 f\"Could not find Airthings device with address {address}\""
+            }
+          ],
+          "origin_action_id": "A1",
+          "origin_cluster_id": "airthings_ble__coordinator__ble_op__read_sensor__ble",
+          "phase": "RUNTIME",
+          "positive_prototypes": [
+            {
+              "call_chains": [
+                "self.airthings.update_device",
+                "updatefailed"
+              ],
+              "call_patterns": [
+                "update_device",
+                "updatefailed"
+              ],
+              "file_path": "data/repo_snapshot/airthings_ble/coordinator.py",
+              "function_name": "_async_update_data",
+              "path_kind": "read_path",
+              "path_signals": [],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 6,
+              "snippet": "90: \n91:     async def _async_update_data(self) -> AirthingsDevice:\n92:         \"\"\"Get data from Airthings BLE.\"\"\"\n93:         try:\n94:             data = await self.airthings.update_device(self.ble_device)\n95:         except Exception as err:\n96:             raise UpdateFailed(f\"Unable to fetch data: {err}\") from err\n97:         return data"
+            }
+          ],
+          "preferred_runtime_roles": [
+            "runtime_read"
+          ],
+          "required_context": [
+            "runtime_path"
+          ],
+          "required_path_signals": [],
+          "required_runtime_roles": [
+            "runtime_read"
+          ],
+          "reviewer_status": "draft",
+          "rule_id": "airthings_ble:coordinator_runtime_read_sensor_control",
+          "runtime_archetypes": [
+            "ble_runtime_read"
+          ],
+          "runtime_path_evidence": [
+            "runtime_function:_async_update_data",
+            "runtime_call:update_device",
+            "runtime_call:updatefailed",
+            "runtime_call:self.airthings.update_device",
+            "path_signal:refresh_call:data.update_device",
+            "path_signal:awaited_refresh_call:data.update_device"
+          ],
+          "source_file_paths": [
+            "data/repo_snapshot/airthings_ble/coordinator.py"
+          ],
+          "source_unresolved_action_ids": [
+            "A1"
+          ],
+          "strength": "MEDIUM",
+          "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+          "why_not_setup": [
+            "exclude_role:setup:_async_setup",
+            "exclude_path_signal:setup_function:_async_setup",
+            "exclude_path_signal:control_function:_async_setup",
+            "exclude_path_signal:control_call:close_stale_connections_by_address",
+            "exclude_path_signal:awaited_control_call:close_stale_connections_by_address",
+            "exclude_control_path_for_read_like_action"
+          ]
+        }
+      ],
+      "schema_version": "m1_grounding_profile/v3",
+      "version": "draft_llm_v3"
+    },
+    {
+      "integration": "ecobee",
+      "runtime_families": [
+        {
+          "action_kind": "read_runtime",
+          "allow_accessor_fallback": false,
+          "binding_hints": {
+            "boost_target_tokens": [
+              "ecobee:thermostat.overnight_1",
+              "overnight_1",
+              "thermostat",
+              "ecobee:thermostat.overnight_2",
+              "overnight_2"
+            ],
+            "phase": "RUNTIME",
+            "preferred_action_kinds": [
+              "status",
+              "poll_update"
+            ],
+            "required_service_tokens": []
+          },
+          "call_patterns": [
+            "get_thermostat",
+            "self.data.ecobee.get_thermostat"
+          ],
+          "confidence": {
+            "base": 0.7,
+            "boost_if_imports": [
+              "__future__",
+              "collections",
+              "const",
+              "homeassistant",
+              "typing",
+              "util"
+            ],
+            "boost_if_names": [
+              "read_runtime",
+              "async_update",
+              "get_thermostat",
+              "self.data.ecobee.get_thermostat"
+            ],
+            "emit_threshold": 0.7
+          },
+          "family": "CLOUD_STATUS_CALL",
+          "file_globs": [
+            "ecobee/climate.py"
+          ],
+          "forbidden_context": [
+            "setup_function",
+            "dunder_init",
+            "entity_property_getter"
+          ],
+          "forbidden_path_signals": [
+            "setup_function:async_setup_entry",
+            "control_function:async_setup_entry",
+            "setup_call:async_add_entities",
+            "control_call:thermostat.set_fan_min_on_time",
+            "control_call:thermostat.schedule_update_ha_state",
+            "control_function:set_preset_mode",
+            "control_call:self.data.ecobee.delete_vacation",
+            "control_call:self.data.ecobee.set_climate_hold"
+          ],
+          "forbidden_runtime_roles": [
+            "runtime_write",
+            "setup",
+            "property_getter",
+            "helper"
+          ],
+          "function_name_patterns": [
+            "async_update"
+          ],
+          "generalization_scope": "file_specific",
+          "generalizes_actions": [
+            "A6",
+            "A7"
+          ],
+          "integration": "ecobee",
+          "negative_call_patterns": [
+            "async_add_entities",
+            "async_get_current_platform",
+            "async_register",
+            "async_register_entity_service",
+            "entity_platform.async_get_current_platform",
+            "hass.services.async_register"
+          ],
+          "negative_evidence": [
+            "negative_function:async_setup_entry",
+            "negative_function:set_preset_mode",
+            "negative_function:set_temperature",
+            "negative_function:fan",
+            "negative_function:settings",
+            "negative_call:range",
+            "negative_call:async_add_entities",
+            "negative_call:async_get_current_platform",
+            "negative_call:async_register",
+            "negative_call:async_register_entity_service"
+          ],
+          "negative_function_patterns": [
+            "async_setup_entry",
+            "set_preset_mode",
+            "set_temperature",
+            "fan",
+            "settings",
+            "async_turn_on"
+          ],
+          "negative_prototypes": [
+            {
+              "call_chains": [
+                "range",
+                "async_add_entities",
+                "entity_platform.async_get_current_platform",
+                "hass.services.async_register",
+                "platform.async_register_entity_service",
+                "len",
+                "data.ecobee.get_thermostat",
+                "entities.append"
+              ],
+              "call_patterns": [
+                "range",
+                "async_add_entities",
+                "async_get_current_platform",
+                "async_register",
+                "async_register_entity_service",
+                "len",
+                "get_thermostat",
+                "append"
+              ],
+              "file_path": "data/repo_snapshot/ecobee/climate.py",
+              "function_name": "async_setup_entry",
+              "path_kind": "setup_path",
+              "path_signals": [
+                "setup_function:async_setup_entry",
+                "state_write_function:async_setup_entry",
+                "control_function:async_setup_entry",
+                "read_function:async_setup_entry",
+                "setup_call:async_add_entities",
+                "service_registration_call:hass.services.async_register",
+                "service_registration_call:platform.async_register_entity_service",
+                "read_call:data.ecobee.get_thermostat",
+                "control_call:thermostat.set_fan_min_on_time",
+                "control_call:thermostat.schedule_update_ha_state"
+              ],
+              "prototype_kind": "negative_setup",
+              "role_hint": "setup",
+              "score": -11,
+              "snippet": "203: \n204: async def async_setup_entry(\n205:     hass: HomeAssistant,\n206:     config_entry: EcobeeConfigEntry,\n207:     async_add_entities: AddConfigEntryEntitiesCallback,\n208: ) -> None:\n209:     \"\"\"Set up the ecobee thermostat.\"\"\"\n210: \n211:     data = config_entry.runtime_data\n212:     entities = []\n213: \n214:     for index in range(len(data.ecobee.thermostats)):\n215:         thermostat = data.ecobee.get_thermostat(index)\n216:         if thermostat[\"modelNumber\"] not in ECOBEE_MODEL_TO_NAME:"
+            },
+            {
+              "call_chains": [
+                "hass_to_ecobee_preset.get",
+                "self.data.ecobee.delete_vacation",
+                "self.data.ecobee.set_climate_hold",
+                "self.hold_hours",
+                "self.set_temp_hold",
+                "self.hold_preference",
+                "self.data.ecobee.resume_program",
+                "self.comfort_settings.items"
+              ],
+              "call_patterns": [
+                "get",
+                "delete_vacation",
+                "set_climate_hold",
+                "hold_hours",
+                "set_temp_hold",
+                "hold_preference",
+                "resume_program",
+                "items"
+              ],
+              "file_path": "data/repo_snapshot/ecobee/climate.py",
+              "function_name": "set_preset_mode",
+              "path_kind": "control_path",
+              "path_signals": [
+                "control_function:set_preset_mode",
+                "control_call:self.data.ecobee.delete_vacation",
+                "control_call:self.data.ecobee.set_climate_hold",
+                "control_call:self.set_temp_hold",
+                "control_call:self.data.ecobee.resume_program"
+              ],
+              "prototype_kind": "negative_control",
+              "role_hint": "runtime_write",
+              "score": -12,
+              "snippet": "646: \n647:     def set_preset_mode(self, preset_mode: str) -> None:\n648:         \"\"\"Activate a preset.\"\"\"\n649:         preset_mode = HASS_TO_ECOBEE_PRESET.get(preset_mode, preset_mode)\n650: \n651:         if preset_mode == self.preset_mode:\n652:             return\n653: \n654:         self.update_without_throttle = True\n655: \n656:         # If we are currently in vacation mode, cancel it.\n657:         if self.preset_mode == PRESET_VACATION:\n658:             self.data.ecobee.delete_vacation(self.thermostat_index, self.vacation)\n659:"
+            },
+            {
+              "call_chains": [
+                "kwargs.get",
+                "self.set_auto_temp_hold",
+                "self.set_temp_hold",
+                "_logger.error"
+              ],
+              "call_patterns": [
+                "get",
+                "set_auto_temp_hold",
+                "set_temp_hold",
+                "error"
+              ],
+              "file_path": "data/repo_snapshot/ecobee/climate.py",
+              "function_name": "set_temperature",
+              "path_kind": "control_path",
+              "path_signals": [
+                "control_function:set_temperature",
+                "control_call:self.set_auto_temp_hold",
+                "control_call:self.set_temp_hold"
+              ],
+              "prototype_kind": "negative_control",
+              "role_hint": "runtime_write",
+              "score": -12,
+              "snippet": "776: \n777:     def set_temperature(self, **kwargs: Any) -> None:\n778:         \"\"\"Set new target temperature.\"\"\"\n779:         low_temp = kwargs.get(ATTR_TARGET_TEMP_LOW)\n780:         high_temp = kwargs.get(ATTR_TARGET_TEMP_HIGH)\n781:         temp = kwargs.get(ATTR_TEMPERATURE)\n782: \n783:         if self.hvac_mode == HVACMode.HEAT_COOL and (\n784:             low_temp is not None or high_temp is not None\n785:         ):\n786:             self.set_auto_temp_hold(low_temp, high_temp)\n787:         elif temp is not None:\n788:             self.set_temp_hold(temp)\n789:         else:"
+            },
+            {
+              "call_chains": [],
+              "call_patterns": [],
+              "file_path": "data/repo_snapshot/ecobee/climate.py",
+              "function_name": "fan",
+              "path_kind": "property_path",
+              "path_signals": [
+                "property_function:fan"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "property_getter",
+              "score": -10,
+              "snippet": "492:     @property\n493:     def fan(self) -> str:\n494:         \"\"\"Return the current fan status.\"\"\"\n495:         if \"fan\" in self.thermostat[\"equipmentStatus\"]:\n496:             return STATE_ON\n497:         return STATE_OFF\n498: \n499:     @property"
+            },
+            {
+              "call_chains": [],
+              "call_patterns": [],
+              "file_path": "data/repo_snapshot/ecobee/climate.py",
+              "function_name": "settings",
+              "path_kind": "property_path",
+              "path_signals": [
+                "property_function:settings"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "property_getter",
+              "score": -10,
+              "snippet": "461:     @property\n462:     def settings(self) -> dict[str, Any]:\n463:         \"\"\"Return the settings of the thermostat.\"\"\"\n464:         return self.thermostat[\"settings\"]\n465: \n466:     @property"
+            }
+          ],
+          "origin_action_id": null,
+          "origin_cluster_id": "ecobee__climate__cloud_status_call__read_runtime__cloud",
+          "phase": "RUNTIME",
+          "positive_prototypes": [
+            {
+              "call_chains": [
+                "self.data.ecobee.get_thermostat",
+                "self.data.update"
+              ],
+              "call_patterns": [
+                "get_thermostat",
+                "update"
+              ],
+              "file_path": "data/repo_snapshot/ecobee/climate.py",
+              "function_name": "async_update",
+              "path_kind": "read_path",
+              "path_signals": [
+                "read_function:async_update",
+                "read_call:self.data.ecobee.get_thermostat",
+                "refresh_call:self.data.update",
+                "awaited_refresh_call:self.data.update"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 12,
+              "snippet": "391: \n392:     async def async_update(self) -> None:\n393:         \"\"\"Get the latest state from the thermostat.\"\"\"\n394:         if self.update_without_throttle:\n395:             await self.data.update(no_throttle=True)\n396:             self.update_without_throttle = False\n397:         else:\n398:             await self.data.update()\n399:         self.thermostat = self.data.ecobee.get_thermostat(self.thermostat_index)\n400:         if self.hvac_mode != HVACMode.OFF:\n401:             self._last_active_hvac_mode = self.hvac_mode\n402: \n403:     @property"
+            }
+          ],
+          "preferred_runtime_roles": [
+            "runtime_read"
+          ],
+          "required_context": [
+            "runtime_update_path"
+          ],
+          "required_path_signals": [
+            "read_function:async_update",
+            "read_call:self.data.ecobee.get_thermostat",
+            "refresh_call:self.data.update",
+            "awaited_refresh_call:self.data.update"
+          ],
+          "required_runtime_roles": [
+            "runtime_read"
+          ],
+          "reviewer_status": "draft",
+          "rule_id": "ecobee:climate_runtime_status_read",
+          "runtime_archetypes": [
+            "cloud_runtime_read",
+            "entity_wrapper_read",
+            "coordinator_update_path"
+          ],
+          "runtime_path_evidence": [
+            "runtime_function:async_update",
+            "runtime_call:get_thermostat",
+            "runtime_call:update",
+            "runtime_call:self.data.ecobee.get_thermostat",
+            "runtime_call:self.data.update",
+            "path_signal:read_function:async_update",
+            "path_signal:read_call:self.data.ecobee.get_thermostat",
+            "path_signal:refresh_call:self.data.update",
+            "path_signal:awaited_refresh_call:self.data.update"
+          ],
+          "source_file_paths": [
+            "data/repo_snapshot/ecobee/climate.py"
+          ],
+          "source_unresolved_action_ids": [
+            "A6",
+            "A7"
+          ],
+          "strength": "MEDIUM",
+          "why_not_more_general": "same runtime idiom appears in one file across multiple unresolved actions",
+          "why_not_setup": [
+            "exclude_role:setup:async_setup_entry",
+            "exclude_role:runtime_write:set_preset_mode",
+            "exclude_role:runtime_write:set_temperature",
+            "exclude_role:property_getter:fan",
+            "exclude_role:property_getter:settings",
+            "exclude_path_signal:setup_function:async_setup_entry",
+            "exclude_path_signal:control_function:async_setup_entry",
+            "exclude_path_signal:setup_call:async_add_entities"
+          ]
+        }
+      ],
+      "schema_version": "m1_grounding_profile/v3",
+      "version": "draft_llm_v3"
+    },
+    {
+      "integration": "hue",
+      "runtime_families": [
+        {
+          "action_kind": "get_state",
+          "allow_accessor_fallback": true,
+          "binding_hints": {
+            "boost_target_tokens": [
+              "bridge_1",
+              "hue:bridge_1:overnight_bedroom_group",
+              "hue_local",
+              "overnight_bedroom_group",
+              "hue:bridge_1:overnight_hallway_group",
+              "overnight_hallway_group"
+            ],
+            "phase": "RUNTIME",
+            "preferred_action_kinds": [
+              "read",
+              "local_api_read"
+            ],
+            "required_service_tokens": []
+          },
+          "call_patterns": [],
+          "confidence": {
+            "base": 0.7,
+            "boost_if_imports": [
+              "__future__",
+              "aiohue",
+              "bridge",
+              "const",
+              "entity",
+              "functools"
+            ],
+            "boost_if_names": [
+              "get_state",
+              "name"
+            ],
+            "emit_threshold": 0.7
+          },
+          "family": "LOCAL_API_READ",
+          "file_globs": [
+            "v2/binary_sensor.py"
+          ],
+          "forbidden_context": [
+            "dunder_init"
+          ],
+          "forbidden_path_signals": [
+            "setup_function:async_setup_entry",
+            "setup_call:async_add_entities",
+            "property_function:name",
+            "control_function:async_turn_on",
+            "control_function:async_turn_off",
+            "control_function:async_open_cover",
+            "control_function:async_close_cover",
+            "control_function:async_set_cover_position"
+          ],
+          "forbidden_runtime_roles": [
+            "runtime_write",
+            "setup",
+            "property_getter",
+            "helper"
+          ],
+          "function_name_patterns": [
+            "name"
+          ],
+          "generalization_scope": "file_specific",
+          "generalizes_actions": [
+            "A11",
+            "A12"
+          ],
+          "integration": "hue",
+          "negative_call_patterns": [
+            "register_items",
+            "partial",
+            "async_add_entities",
+            "async_on_unload",
+            "subscribe",
+            "_resource_valid"
+          ],
+          "negative_evidence": [
+            "negative_function:async_setup_entry",
+            "negative_function:name",
+            "negative_function:_resource_valid",
+            "negative_call:register_items",
+            "negative_call:partial",
+            "negative_call:async_add_entities",
+            "negative_call:async_on_unload",
+            "negative_call:subscribe",
+            "negative_call:_resource_valid",
+            "negative_call:make_binary_sensor_entity"
+          ],
+          "negative_function_patterns": [
+            "async_setup_entry",
+            "_resource_valid",
+            "async_turn_on",
+            "async_turn_off",
+            "async_set_*",
+            "async_open_*"
+          ],
+          "negative_prototypes": [
+            {
+              "call_chains": [
+                "register_items",
+                "partial",
+                "async_add_entities",
+                "config_entry.async_on_unload",
+                "controller.subscribe",
+                "_resource_valid",
+                "make_binary_sensor_entity"
+              ],
+              "call_patterns": [
+                "register_items",
+                "partial",
+                "async_add_entities",
+                "async_on_unload",
+                "subscribe",
+                "_resource_valid",
+                "make_binary_sensor_entity"
+              ],
+              "file_path": "data/repo_snapshot/hue/v2/binary_sensor.py",
+              "function_name": "async_setup_entry",
+              "path_kind": "setup_path",
+              "path_signals": [
+                "setup_function:async_setup_entry",
+                "service_registration_call:register_items",
+                "setup_call:async_add_entities",
+                "subscription_call:controller.subscribe"
+              ],
+              "prototype_kind": "negative_setup",
+              "role_hint": "setup",
+              "score": -8,
+              "snippet": "84: \n85: async def async_setup_entry(\n86:     hass: HomeAssistant,\n87:     config_entry: HueConfigEntry,\n88:     async_add_entities: AddConfigEntryEntitiesCallback,\n89: ) -> None:\n90:     \"\"\"Set up Hue Sensors from Config Entry.\"\"\"\n91:     bridge = config_entry.runtime_data\n92:     api: HueBridgeV2 = bridge.api\n93: \n94:     @callback\n95:     def register_items(controller: ControllerType, sensor_class: SensorType):\n96:         make_binary_sensor_entity = partial(sensor_class, bridge, controller)\n97:"
+            },
+            {
+              "call_chains": [
+                "self.controller.get_motion_area_configuration"
+              ],
+              "call_patterns": [
+                "get_motion_area_configuration"
+              ],
+              "file_path": "data/repo_snapshot/hue/v2/binary_sensor.py",
+              "function_name": "name",
+              "path_kind": "property_path",
+              "path_signals": [
+                "property_function:name",
+                "read_function:name",
+                "read_call:self.controller.get_motion_area_configuration"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "property_getter",
+              "score": -8,
+              "snippet": "198:     @property\n199:     def name(self) -> str:\n200:         \"\"\"Return sensor name.\"\"\"\n201:         return self.controller.get_motion_area_configuration(self.resource.id).name\n202: \n203:     def __init__("
+            },
+            {
+              "call_chains": [
+                "isinstance",
+                "len",
+                "controller.get_parent"
+              ],
+              "call_patterns": [
+                "isinstance",
+                "len",
+                "get_parent"
+              ],
+              "file_path": "data/repo_snapshot/hue/v2/binary_sensor.py",
+              "function_name": "_resource_valid",
+              "path_kind": "helper_path",
+              "path_signals": [
+                "read_function:_resource_valid",
+                "read_call:controller.get_parent"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "helper",
+              "score": -2,
+              "snippet": "63: \n64: def _resource_valid(resource: SensorType, controller: ControllerType) -> bool:\n65:     \"\"\"Return True if the resource is valid.\"\"\"\n66:     if isinstance(resource, GroupedMotion):\n67:         # filter out GroupedMotion sensors that are not linked to a valid group/parent\n68:         if resource.owner.rtype not in (\n69:             ResourceTypes.ROOM,\n70:             ResourceTypes.ZONE,\n71:             ResourceTypes.SERVICE_GROUP,\n72:         ):\n73:             return False\n74:         # guard against GroupedMotion without parent (should not happen, but just in case)\n75:         if not (parent := controller.get_parent(resource.id)):\n76:             return False"
+            }
+          ],
+          "origin_action_id": null,
+          "origin_cluster_id": "hue__binary_sensor__local_api_read__get_state__local",
+          "phase": "RUNTIME",
+          "positive_prototypes": [
+            {
+              "call_chains": [],
+              "call_patterns": [],
+              "file_path": "data/repo_snapshot/hue/v2/binary_sensor.py",
+              "function_name": "name",
+              "path_kind": "read_path",
+              "path_signals": [
+                "property_function:name",
+                "read_function:name",
+                "read_call:self.controller.get_motion_area_configuration"
+              ],
+              "prototype_kind": "synthetic_accessor_positive",
+              "role_hint": "runtime_read_snapshot",
+              "score": 3,
+              "snippet": "198:     @property\n199:     def name(self) -> str:\n200:         \"\"\"Return sensor name.\"\"\"\n201:         return self.controller.get_motion_area_configuration(self.resource.id).name\n202: \n203:     def __init__("
+            }
+          ],
+          "preferred_runtime_roles": [
+            "runtime_read"
+          ],
+          "required_context": [
+            "runtime_path"
+          ],
+          "required_path_signals": [
+            "property_function:name",
+            "read_function:name",
+            "read_call:self.controller.get_motion_area_configuration"
+          ],
+          "required_runtime_roles": [
+            "runtime_read"
+          ],
+          "reviewer_status": "draft",
+          "rule_id": "hue:binary_sensor_local_api_read",
+          "runtime_archetypes": [
+            "local_bridge_getter",
+            "runtime_read"
+          ],
+          "runtime_path_evidence": [
+            "runtime_function:name",
+            "path_signal:property_function:name",
+            "path_signal:read_function:name",
+            "path_signal:read_call:self.controller.get_motion_area_configuration",
+            "path_signal:update_callback_function:on_update",
+            "path_signal:read_function:_update_values",
+            "path_signal:read_call:self.controller.get_lights"
+          ],
+          "source_file_paths": [
+            "data/repo_snapshot/hue/v2/binary_sensor.py"
+          ],
+          "source_unresolved_action_ids": [
+            "A11",
+            "A12"
+          ],
+          "strength": "MEDIUM",
+          "why_not_more_general": "same runtime idiom appears in one file across multiple unresolved actions",
+          "why_not_setup": [
+            "exclude_role:setup:async_setup_entry",
+            "exclude_role:property_getter:name",
+            "exclude_role:helper:_resource_valid",
+            "exclude_path_signal:setup_function:async_setup_entry",
+            "exclude_path_signal:setup_call:async_add_entities",
+            "exclude_path_signal:property_function:name",
+            "exclude_control_path_for_read_like_action"
+          ]
+        },
+        {
+          "action_kind": "get_state",
+          "allow_accessor_fallback": false,
+          "binding_hints": {
+            "boost_target_tokens": [
+              "bridge_1",
+              "hue:bridge_1:overnight_bedroom_group",
+              "hue_local",
+              "overnight_bedroom_group",
+              "hue:bridge_1:overnight_hallway_group",
+              "overnight_hallway_group"
+            ],
+            "phase": "RUNTIME",
+            "preferred_action_kinds": [
+              "read",
+              "local_api_read"
+            ],
+            "required_service_tokens": []
+          },
+          "call_patterns": [],
+          "confidence": {
+            "base": 0.7,
+            "boost_if_imports": [
+              "__future__",
+              "aiohue",
+              "bridge",
+              "const",
+              "homeassistant",
+              "typing"
+            ],
+            "boost_if_names": [
+              "get_state",
+              "on_update",
+              "_handle_event"
+            ],
+            "emit_threshold": 0.7
+          },
+          "family": "LOCAL_API_READ",
+          "file_globs": [
+            "v2/entity.py"
+          ],
+          "forbidden_context": [
+            "dunder_init"
+          ],
+          "forbidden_path_signals": [
+            "property_function:available",
+            "control_function:async_turn_on",
+            "control_function:async_turn_off",
+            "control_function:async_open_cover",
+            "control_function:async_close_cover",
+            "control_function:async_set_cover_position",
+            "control_function:set_state",
+            "setup_function:async_setup_entry"
+          ],
+          "forbidden_runtime_roles": [
+            "runtime_write",
+            "setup",
+            "property_getter",
+            "helper"
+          ],
+          "function_name_patterns": [
+            "on_update",
+            "_handle_event"
+          ],
+          "generalization_scope": "file_specific",
+          "generalizes_actions": [
+            "A11",
+            "A12"
+          ],
+          "integration": "hue",
+          "negative_call_patterns": [
+            "get_device",
+            "getchild",
+            "deviceinfo",
+            "controller.get_device",
+            "bridge.logger.getchild",
+            "get_zigbee_connectivity"
+          ],
+          "negative_evidence": [
+            "negative_function:__init__",
+            "negative_function:available",
+            "negative_function:async_added_to_hass",
+            "negative_call:get_device",
+            "negative_call:getchild",
+            "negative_call:deviceinfo",
+            "negative_call:controller.get_device",
+            "negative_call:bridge.logger.getchild",
+            "negative_call:get_zigbee_connectivity",
+            "negative_call:self.bridge.api.devices.get_zigbee_connectivity"
+          ],
+          "negative_function_patterns": [
+            "__init__",
+            "available",
+            "async_added_to_hass",
+            "async_turn_on",
+            "async_turn_off",
+            "async_set_*"
+          ],
+          "negative_prototypes": [
+            {
+              "call_chains": [
+                "controller.get_device",
+                "bridge.logger.getchild",
+                "deviceinfo"
+              ],
+              "call_patterns": [
+                "get_device",
+                "getchild",
+                "deviceinfo"
+              ],
+              "file_path": "data/repo_snapshot/hue/v2/entity.py",
+              "function_name": "__init__",
+              "path_kind": "setup_path",
+              "path_signals": [
+                "read_function:__init__",
+                "read_call:controller.get_device"
+              ],
+              "prototype_kind": "negative_setup",
+              "role_hint": "setup",
+              "score": -4,
+              "snippet": "41: \n42:     def __init__(\n43:         self,\n44:         bridge: HueBridge,\n45:         controller: BaseResourcesController,\n46:         resource: HueResource,\n47:     ) -> None:\n48:         \"\"\"Initialize a generic Hue resource entity.\"\"\"\n49:         self.bridge = bridge\n50:         self.controller = controller\n51:         self.resource = resource\n52:         self.device = controller.get_device(resource.id)\n53:         self.logger = bridge.logger.getChild(resource.type.value)\n54:"
+            },
+            {
+              "call_chains": [
+                "self.bridge.api.devices.get_zigbee_connectivity"
+              ],
+              "call_patterns": [
+                "get_zigbee_connectivity"
+              ],
+              "file_path": "data/repo_snapshot/hue/v2/entity.py",
+              "function_name": "available",
+              "path_kind": "property_path",
+              "path_signals": [
+                "property_function:available",
+                "read_function:available",
+                "read_call:self.bridge.api.devices.get_zigbee_connectivity",
+                "connect_call:self.bridge.api.devices.get_zigbee_connectivity"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "property_getter",
+              "score": -6,
+              "snippet": "104:     @property\n105:     def available(self) -> bool:\n106:         \"\"\"Return entity availability.\"\"\"\n107:         # entities without a device attached should be always available\n108:         if self.device is None:\n109:             return True\n110:         # the zigbee connectivity sensor itself should be always available\n111:         if self.resource.type == ResourceTypes.ZIGBEE_CONNECTIVITY:\n112:             return True\n113:         if self._ignore_availability:\n114:             return True\n115:         # all device-attached entities get availability from the zigbee connectivity\n116:         if zigbee := self.bridge.api.devices.get_zigbee_connectivity(self.device.id):\n117:             return zigbee.status == ConnectivityServiceStatus.CONNECTED"
+            },
+            {
+              "call_chains": [
+                "self._check_availability",
+                "self.async_on_remove",
+                "self.controller.subscribe",
+                "self.bridge.api.devices.subscribe",
+                "self.bridge.api.devices.get_zigbee_connectivity",
+                "self.bridge.api.sensors.zigbee_connectivity.subscribe"
+              ],
+              "call_patterns": [
+                "_check_availability",
+                "async_on_remove",
+                "subscribe",
+                "get_zigbee_connectivity"
+              ],
+              "file_path": "data/repo_snapshot/hue/v2/entity.py",
+              "function_name": "async_added_to_hass",
+              "path_kind": "connect_path",
+              "path_signals": [
+                "read_function:async_added_to_hass",
+                "subscription_call:self.controller.subscribe",
+                "subscription_call:self.bridge.api.devices.subscribe",
+                "read_call:self.bridge.api.devices.get_zigbee_connectivity",
+                "connect_call:self.bridge.api.devices.get_zigbee_connectivity",
+                "connect_call:self.bridge.api.sensors.zigbee_connectivity.subscribe",
+                "subscription_call:self.bridge.api.sensors.zigbee_connectivity.subscribe"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "runtime_connect",
+              "score": 9,
+              "snippet": "72: \n73:     async def async_added_to_hass(self) -> None:\n74:         \"\"\"Call when entity is added.\"\"\"\n75:         self._check_availability()\n76:         # Add value_changed callbacks.\n77:         self.async_on_remove(\n78:             self.controller.subscribe(\n79:                 self._handle_event,\n80:                 self.resource.id,\n81:                 (EventType.RESOURCE_UPDATED, EventType.RESOURCE_DELETED),\n82:             )\n83:         )\n84:         # also subscribe to device update event to catch device changes (e.g. name)\n85:         if self.device is None:"
+            }
+          ],
+          "origin_action_id": null,
+          "origin_cluster_id": "hue__entity__local_api_read__get_state__local",
+          "phase": "RUNTIME",
+          "positive_prototypes": [
+            {
+              "call_chains": [],
+              "call_patterns": [],
+              "file_path": "data/repo_snapshot/hue/v2/entity.py",
+              "function_name": "on_update",
+              "path_kind": "read_path",
+              "path_signals": [
+                "update_callback_function:on_update"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 8,
+              "snippet": "120:     @callback\n121:     def on_update(self) -> None:\n122:         \"\"\"Call on update event.\"\"\"\n123:         # used in subclasses\n124:"
+            },
+            {
+              "call_chains": [
+                "self.logger.debug",
+                "self._check_availability",
+                "self.on_update",
+                "self.async_write_ha_state",
+                "er.async_get",
+                "ent_reg.async_remove"
+              ],
+              "call_patterns": [
+                "debug",
+                "_check_availability",
+                "on_update",
+                "async_write_ha_state",
+                "async_get",
+                "async_remove"
+              ],
+              "file_path": "data/repo_snapshot/hue/v2/entity.py",
+              "function_name": "_handle_event",
+              "path_kind": "control_path",
+              "path_signals": [
+                "update_callback_function:_handle_event",
+                "state_write_function:_handle_event",
+                "read_function:_handle_event",
+                "state_write_call:self.async_write_ha_state"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_write",
+              "score": 6,
+              "snippet": "125:     @callback\n126:     def _handle_event(self, event_type: EventType, resource: HueResource) -> None:\n127:         \"\"\"Handle status event for this resource (or it's parent).\"\"\"\n128:         if event_type == EventType.RESOURCE_DELETED:\n129:             # cleanup entities that are not strictly device-bound and have the bridge as parent\n130:             if self.device is None and resource.id == self.resource.id:\n131:                 ent_reg = er.async_get(self.hass)\n132:                 ent_reg.async_remove(self.entity_id)\n133:             return\n134: \n135:         self.logger.debug(\"Received status update for %s\", self.entity_id)\n136:         self._check_availability()\n137:         self.on_update()\n138:         self.async_write_ha_state()"
+            }
+          ],
+          "preferred_runtime_roles": [
+            "runtime_read"
+          ],
+          "required_context": [
+            "runtime_path"
+          ],
+          "required_path_signals": [
+            "update_callback_function:on_update",
+            "update_callback_function:_handle_event",
+            "state_write_function:_handle_event",
+            "read_function:_handle_event",
+            "state_write_call:self.async_write_ha_state"
+          ],
+          "required_runtime_roles": [
+            "runtime_read"
+          ],
+          "reviewer_status": "draft",
+          "rule_id": "hue:entity_local_api_read",
+          "runtime_archetypes": [
+            "local_bridge_getter",
+            "runtime_read"
+          ],
+          "runtime_path_evidence": [
+            "runtime_function:on_update",
+            "runtime_function:_handle_event",
+            "runtime_call:debug",
+            "runtime_call:_check_availability",
+            "runtime_call:on_update",
+            "runtime_call:async_write_ha_state",
+            "runtime_call:async_get",
+            "runtime_call:async_remove",
+            "runtime_call:self.logger.debug",
+            "runtime_call:self._check_availability"
+          ],
+          "source_file_paths": [
+            "data/repo_snapshot/hue/v2/entity.py"
+          ],
+          "source_unresolved_action_ids": [
+            "A11",
+            "A12"
+          ],
+          "strength": "MEDIUM",
+          "why_not_more_general": "same runtime idiom appears in one file across multiple unresolved actions",
+          "why_not_setup": [
+            "exclude_role:setup:__init__",
+            "exclude_role:property_getter:available",
+            "exclude_path_signal:property_function:available",
+            "exclude_control_path_for_read_like_action"
+          ]
+        },
+        {
+          "action_kind": "get_state",
+          "allow_accessor_fallback": false,
+          "binding_hints": {
+            "boost_target_tokens": [
+              "bridge_1",
+              "hue:bridge_1:overnight_bedroom_group",
+              "hue_local",
+              "overnight_bedroom_group",
+              "hue:bridge_1:overnight_hallway_group",
+              "overnight_hallway_group"
+            ],
+            "phase": "RUNTIME",
+            "preferred_action_kinds": [
+              "read",
+              "local_api_read"
+            ],
+            "required_service_tokens": []
+          },
+          "call_patterns": [
+            "get_lights",
+            "self.controller.get_lights"
+          ],
+          "confidence": {
+            "base": 0.7,
+            "boost_if_imports": [
+              "__future__",
+              "aiohue",
+              "asyncio",
+              "bridge",
+              "const",
+              "entity"
+            ],
+            "boost_if_names": [
+              "get_state",
+              "_update_values",
+              "on_update",
+              "get_lights",
+              "self.controller.get_lights"
+            ],
+            "emit_threshold": 0.7
+          },
+          "family": "LOCAL_API_READ",
+          "file_globs": [
+            "v2/group.py"
+          ],
+          "forbidden_context": [
+            "dunder_init"
+          ],
+          "forbidden_path_signals": [
+            "setup_function:async_setup_entry",
+            "setup_call:async_add_entities",
+            "control_function:async_turn_on",
+            "control_call:self.async_set_flash",
+            "awaited_control_call:self.async_set_flash",
+            "control_function:async_turn_off",
+            "property_function:is_on",
+            "property_function:extra_state_attributes"
+          ],
+          "forbidden_runtime_roles": [
+            "runtime_write",
+            "setup",
+            "property_getter",
+            "helper"
+          ],
+          "function_name_patterns": [
+            "_update_values",
+            "on_update"
+          ],
+          "generalization_scope": "file_specific",
+          "generalizes_actions": [
+            "A11",
+            "A12"
+          ],
+          "integration": "hue",
+          "negative_call_patterns": [
+            "async_on_unload",
+            "groupedhuelight",
+            "async_add_entities",
+            "subscribe",
+            "sleep",
+            "async_add_light"
+          ],
+          "negative_evidence": [
+            "negative_function:async_setup_entry",
+            "negative_function:async_turn_on",
+            "negative_function:async_turn_off",
+            "negative_function:is_on",
+            "negative_function:extra_state_attributes",
+            "negative_call:async_on_unload",
+            "negative_call:groupedhuelight",
+            "negative_call:async_add_entities",
+            "negative_call:subscribe",
+            "negative_call:sleep"
+          ],
+          "negative_function_patterns": [
+            "async_setup_entry",
+            "async_turn_on",
+            "async_turn_off",
+            "is_on",
+            "extra_state_attributes",
+            "async_set_*"
+          ],
+          "negative_prototypes": [
+            {
+              "call_chains": [
+                "config_entry.async_on_unload",
+                "groupedhuelight",
+                "async_add_entities",
+                "api.groups.grouped_light.subscribe",
+                "asyncio.sleep",
+                "async_add_light",
+                "api.groups.grouped_light.get_zone"
+              ],
+              "call_patterns": [
+                "async_on_unload",
+                "groupedhuelight",
+                "async_add_entities",
+                "subscribe",
+                "sleep",
+                "async_add_light",
+                "get_zone"
+              ],
+              "file_path": "data/repo_snapshot/hue/v2/group.py",
+              "function_name": "async_setup_entry",
+              "path_kind": "setup_path",
+              "path_signals": [
+                "setup_function:async_setup_entry",
+                "read_function:async_setup_entry",
+                "setup_call:async_add_entities",
+                "subscription_call:api.groups.grouped_light.subscribe",
+                "read_call:api.groups.grouped_light.get_zone"
+              ],
+              "prototype_kind": "negative_setup",
+              "role_hint": "setup",
+              "score": -6,
+              "snippet": "41: \n42: async def async_setup_entry(\n43:     hass: HomeAssistant,\n44:     config_entry: HueConfigEntry,\n45:     async_add_entities: AddConfigEntryEntitiesCallback,\n46: ) -> None:\n47:     \"\"\"Set up Hue groups on light platform.\"\"\"\n48:     bridge = config_entry.runtime_data\n49:     api: HueBridgeV2 = bridge.api\n50: \n51:     async def async_add_light(event_type: EventType, resource: GroupedLight) -> None:\n52:         \"\"\"Add Grouped Light for Hue Room/Zone.\"\"\"\n53:         # delay group creation a bit due to a race condition where the\n54:         # grouped_light resource is created before the zone/room"
+            },
+            {
+              "call_chains": [
+                "normalize_hue_transition",
+                "kwargs.get",
+                "normalize_hue_colortemp",
+                "normalize_hue_brightness",
+                "color_util.color_temperature_kelvin_to_mired",
+                "self.bridge.async_request_call",
+                "self.async_set_flash"
+              ],
+              "call_patterns": [
+                "normalize_hue_transition",
+                "get",
+                "normalize_hue_colortemp",
+                "normalize_hue_brightness",
+                "color_temperature_kelvin_to_mired",
+                "async_request_call",
+                "async_set_flash"
+              ],
+              "file_path": "data/repo_snapshot/hue/v2/group.py",
+              "function_name": "async_turn_on",
+              "path_kind": "control_path",
+              "path_signals": [
+                "control_function:async_turn_on",
+                "control_call:self.async_set_flash",
+                "awaited_control_call:self.async_set_flash"
+              ],
+              "prototype_kind": "negative_control",
+              "role_hint": "runtime_write",
+              "score": -12,
+              "snippet": "160: \n161:     async def async_turn_on(self, **kwargs: Any) -> None:\n162:         \"\"\"Turn the grouped_light on.\"\"\"\n163:         transition = normalize_hue_transition(kwargs.get(ATTR_TRANSITION))\n164:         xy_color = kwargs.get(ATTR_XY_COLOR)\n165:         color_temp = normalize_hue_colortemp(\n166:             kwargs.get(ATTR_COLOR_TEMP_KELVIN),\n167:             color_util.color_temperature_kelvin_to_mired(self.max_color_temp_kelvin),\n168:             color_util.color_temperature_kelvin_to_mired(self.min_color_temp_kelvin),\n169:         )\n170:         brightness = normalize_hue_brightness(kwargs.get(ATTR_BRIGHTNESS))\n171:         flash = kwargs.get(ATTR_FLASH)\n172: \n173:         if self._restore_brightness and brightness is None:"
+            },
+            {
+              "call_chains": [
+                "normalize_hue_transition",
+                "kwargs.get",
+                "self.bridge.async_request_call",
+                "self.async_set_flash"
+              ],
+              "call_patterns": [
+                "normalize_hue_transition",
+                "get",
+                "async_request_call",
+                "async_set_flash"
+              ],
+              "file_path": "data/repo_snapshot/hue/v2/group.py",
+              "function_name": "async_turn_off",
+              "path_kind": "control_path",
+              "path_signals": [
+                "control_function:async_turn_off",
+                "control_call:self.async_set_flash",
+                "awaited_control_call:self.async_set_flash"
+              ],
+              "prototype_kind": "negative_control",
+              "role_hint": "runtime_write",
+              "score": -12,
+              "snippet": "198: \n199:     async def async_turn_off(self, **kwargs: Any) -> None:\n200:         \"\"\"Turn the light off.\"\"\"\n201:         transition = normalize_hue_transition(kwargs.get(ATTR_TRANSITION))\n202:         if transition is not None:\n203:             self._restore_brightness = self._brightness_pct\n204:         flash = kwargs.get(ATTR_FLASH)\n205: \n206:         if flash is not None:\n207:             await self.async_set_flash(flash)\n208:             # flash cannot be sent with other commands at the same time\n209:             return\n210: \n211:         await self.bridge.async_request_call("
+            },
+            {
+              "call_chains": [],
+              "call_patterns": [],
+              "file_path": "data/repo_snapshot/hue/v2/group.py",
+              "function_name": "is_on",
+              "path_kind": "property_path",
+              "path_signals": [
+                "property_function:is_on"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "property_getter",
+              "score": -10,
+              "snippet": "135:     @property\n136:     def is_on(self) -> bool:\n137:         \"\"\"Return true if light is on.\"\"\"\n138:         return self.resource.on.on\n139: \n140:     @property"
+            },
+            {
+              "call_chains": [
+                "tuple",
+                "self._get_names_and_entity_ids_for_resource_ids",
+                "self.controller.get_lights"
+              ],
+              "call_patterns": [
+                "tuple",
+                "_get_names_and_entity_ids_for_resource_ids",
+                "get_lights"
+              ],
+              "file_path": "data/repo_snapshot/hue/v2/group.py",
+              "function_name": "extra_state_attributes",
+              "path_kind": "property_path",
+              "path_signals": [
+                "property_function:extra_state_attributes",
+                "read_function:extra_state_attributes",
+                "read_call:self.controller.get_lights"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "property_getter",
+              "score": -8,
+              "snippet": "140:     @property\n141:     def extra_state_attributes(self) -> dict[str, Any] | None:\n142:         \"\"\"Return the optional state attributes.\"\"\"\n143:         scenes = {\n144:             x.metadata.name for x in self.api.scenes if x.group.rid == self.hue_group.id\n145:         }\n146:         light_resource_ids = tuple(\n147:             x.id for x in self.controller.get_lights(self.resource.id)\n148:         )\n149:         light_names, light_entities = self._get_names_and_entity_ids_for_resource_ids(\n150:             light_resource_ids\n151:         )\n152:         return {\n153:             \"is_hue_group\": True,"
+            }
+          ],
+          "origin_action_id": null,
+          "origin_cluster_id": "hue__group__local_api_read__get_state__local",
+          "phase": "RUNTIME",
+          "positive_prototypes": [
+            {
+              "call_chains": [
+                "set",
+                "self.controller.get_lights",
+                "supported_color_modes.add",
+                "round",
+                "color_util.color_temperature_mired_to_kelvin",
+                "len"
+              ],
+              "call_patterns": [
+                "set",
+                "get_lights",
+                "add",
+                "round",
+                "color_temperature_mired_to_kelvin",
+                "len"
+              ],
+              "file_path": "data/repo_snapshot/hue/v2/group.py",
+              "function_name": "_update_values",
+              "path_kind": "read_path",
+              "path_signals": [
+                "read_function:_update_values",
+                "read_call:self.controller.get_lights"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 8,
+              "snippet": "231:     @callback\n232:     def _update_values(self) -> None:\n233:         \"\"\"Set base values from underlying lights of a group.\"\"\"\n234:         supported_color_modes: set[ColorMode] = set()\n235:         lights_with_color_support = 0\n236:         lights_with_color_temp_support = 0\n237:         lights_with_dimming_support = 0\n238:         lights_on_with_dimming_support = 0\n239:         total_brightness = 0\n240:         all_lights = self.controller.get_lights(self.resource.id)\n241:         lights_in_colortemp_mode = 0\n242:         lights_in_xy_mode = 0\n243:         lights_in_dynamic_mode = 0\n244:         # accumulate color values"
+            },
+            {
+              "call_chains": [
+                "self._update_values"
+              ],
+              "call_patterns": [
+                "_update_values"
+              ],
+              "file_path": "data/repo_snapshot/hue/v2/group.py",
+              "function_name": "on_update",
+              "path_kind": "read_path",
+              "path_signals": [
+                "update_callback_function:on_update"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 8,
+              "snippet": "226:     @callback\n227:     def on_update(self) -> None:\n228:         \"\"\"Call on update event.\"\"\"\n229:         self._update_values()\n230: \n231:     @callback"
+            }
+          ],
+          "preferred_runtime_roles": [
+            "runtime_read"
+          ],
+          "required_context": [
+            "runtime_path"
+          ],
+          "required_path_signals": [
+            "read_function:_update_values",
+            "read_call:self.controller.get_lights",
+            "update_callback_function:on_update"
+          ],
+          "required_runtime_roles": [
+            "runtime_read"
+          ],
+          "reviewer_status": "draft",
+          "rule_id": "hue:group_local_api_read",
+          "runtime_archetypes": [
+            "local_bridge_getter",
+            "runtime_read"
+          ],
+          "runtime_path_evidence": [
+            "runtime_function:_update_values",
+            "runtime_function:on_update",
+            "runtime_call:set",
+            "runtime_call:get_lights",
+            "runtime_call:add",
+            "runtime_call:round",
+            "runtime_call:color_temperature_mired_to_kelvin",
+            "runtime_call:len",
+            "runtime_call:self.controller.get_lights",
+            "runtime_call:supported_color_modes.add"
+          ],
+          "source_file_paths": [
+            "data/repo_snapshot/hue/v2/group.py"
+          ],
+          "source_unresolved_action_ids": [
+            "A11",
+            "A12"
+          ],
+          "strength": "MEDIUM",
+          "why_not_more_general": "same runtime idiom appears in one file across multiple unresolved actions",
+          "why_not_setup": [
+            "exclude_role:setup:async_setup_entry",
+            "exclude_role:runtime_write:async_turn_on",
+            "exclude_role:runtime_write:async_turn_off",
+            "exclude_role:property_getter:is_on",
+            "exclude_role:property_getter:extra_state_attributes",
+            "exclude_path_signal:setup_function:async_setup_entry",
+            "exclude_path_signal:setup_call:async_add_entities",
+            "exclude_path_signal:control_function:async_turn_on"
+          ]
+        }
+      ],
+      "schema_version": "m1_grounding_profile/v3",
+      "version": "draft_llm_v3"
+    },
+    {
+      "integration": "netatmo",
+      "runtime_families": [
+        {
+          "action_kind": "read_runtime",
+          "allow_accessor_fallback": false,
+          "binding_hints": {
+            "boost_target_tokens": [
+              "netatmo:station.overnight_environment",
+              "overnight_environment",
+              "station"
+            ],
+            "phase": "RUNTIME",
+            "preferred_action_kinds": [
+              "status",
+              "poll_update"
+            ],
+            "required_service_tokens": []
+          },
+          "call_patterns": [],
+          "confidence": {
+            "base": 0.7,
+            "boost_if_imports": [
+              "__future__",
+              "collections",
+              "const",
+              "data_handler",
+              "dataclasses",
+              "entity"
+            ],
+            "boost_if_names": [
+              "read_runtime",
+              "async_update_callback"
+            ],
+            "emit_threshold": 0.7
+          },
+          "family": "CLOUD_STATUS_CALL",
+          "file_globs": [
+            "netatmo/sensor.py"
+          ],
+          "forbidden_context": [
+            "setup_function",
+            "dunder_init",
+            "entity_property_getter"
+          ],
+          "forbidden_path_signals": [
+            "setup_function:async_setup_entry",
+            "setup_call:async_dispatcher_connect",
+            "setup_call:async_add_entities",
+            "property_function:available",
+            "control_function:async_turn_on",
+            "control_function:async_turn_off",
+            "control_function:async_open_cover",
+            "control_function:async_close_cover"
+          ],
+          "forbidden_runtime_roles": [
+            "runtime_write",
+            "setup",
+            "property_getter",
+            "helper"
+          ],
+          "function_name_patterns": [
+            "async_update_callback"
+          ],
+          "generalization_scope": "file_specific",
+          "generalizes_actions": [
+            "A10"
+          ],
+          "integration": "netatmo",
+          "negative_call_patterns": [
+            "async_on_unload",
+            "async_get",
+            "async_dispatcher_connect",
+            "netatmoclimatebatterysensor",
+            "async_add_entities",
+            "add_public_entities"
+          ],
+          "negative_evidence": [
+            "negative_function:async_setup_entry",
+            "negative_function:available",
+            "negative_function:_create_sensor_entity",
+            "negative_call:async_on_unload",
+            "negative_call:async_get",
+            "negative_call:async_dispatcher_connect",
+            "negative_call:netatmoclimatebatterysensor",
+            "negative_call:async_add_entities",
+            "negative_call:debug",
+            "negative_call:values"
+          ],
+          "negative_function_patterns": [
+            "async_setup_entry",
+            "available",
+            "_create_sensor_entity",
+            "async_turn_on",
+            "async_turn_off",
+            "async_set_*"
+          ],
+          "negative_prototypes": [
+            {
+              "call_chains": [
+                "entry.async_on_unload",
+                "dr.async_get",
+                "async_dispatcher_connect",
+                "netatmoclimatebatterysensor",
+                "async_add_entities",
+                "_logger.debug",
+                "entities.values",
+                "add_public_entities"
+              ],
+              "call_patterns": [
+                "async_on_unload",
+                "async_get",
+                "async_dispatcher_connect",
+                "netatmoclimatebatterysensor",
+                "async_add_entities",
+                "debug",
+                "values",
+                "add_public_entities"
+              ],
+              "file_path": "data/repo_snapshot/netatmo/sensor.py",
+              "function_name": "async_setup_entry",
+              "path_kind": "setup_path",
+              "path_signals": [
+                "setup_function:async_setup_entry",
+                "setup_call:async_dispatcher_connect",
+                "connect_call:async_dispatcher_connect",
+                "setup_call:async_add_entities",
+                "subscription_call:data_handler.subscribe"
+              ],
+              "prototype_kind": "negative_setup",
+              "role_hint": "setup",
+              "score": -16,
+              "snippet": "395: \n396: async def async_setup_entry(\n397:     hass: HomeAssistant,\n398:     entry: NetatmoConfigEntry,\n399:     async_add_entities: AddConfigEntryEntitiesCallback,\n400: ) -> None:\n401:     \"\"\"Set up the Netatmo sensor platform.\"\"\"\n402: \n403:     @callback\n404:     def _create_battery_entity(netatmo_device: NetatmoDevice) -> None:\n405:         if not hasattr(netatmo_device.device, \"battery\"):\n406:             return\n407:         entity = NetatmoClimateBatterySensor(netatmo_device)\n408:         async_add_entities([entity])"
+            },
+            {
+              "call_chains": [
+                "getattr"
+              ],
+              "call_patterns": [
+                "getattr"
+              ],
+              "file_path": "data/repo_snapshot/netatmo/sensor.py",
+              "function_name": "available",
+              "path_kind": "property_path",
+              "path_signals": [
+                "property_function:available"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "property_getter",
+              "score": -10,
+              "snippet": "537:     @property\n538:     def available(self) -> bool:\n539:         \"\"\"Return True if entity is available.\"\"\"\n540:         return (\n541:             self.device.reachable\n542:             or getattr(self.device, self.entity_description.netatmo_name) is not None\n543:         )\n544: \n545:     @callback"
+            },
+            {
+              "call_chains": [
+                "_logger.debug",
+                "async_add_entities",
+                "netatmosensor"
+              ],
+              "call_patterns": [
+                "debug",
+                "async_add_entities",
+                "netatmosensor"
+              ],
+              "file_path": "data/repo_snapshot/netatmo/sensor.py",
+              "function_name": "_create_sensor_entity",
+              "path_kind": "helper_path",
+              "path_signals": [
+                "setup_call:async_add_entities"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "helper",
+              "score": -4,
+              "snippet": "428:     @callback\n429:     def _create_sensor_entity(netatmo_device: NetatmoDevice) -> None:\n430:         _LOGGER.debug(\n431:             \"Adding %s sensor %s\",\n432:             netatmo_device.device.device_category,\n433:             netatmo_device.device.name,\n434:         )\n435:         async_add_entities(\n436:             NetatmoSensor(netatmo_device, description)\n437:             for description in SENSOR_TYPES\n438:             if description.key in netatmo_device.device.features\n439:         )\n440: \n441:     entry.async_on_unload("
+            }
+          ],
+          "origin_action_id": "A10",
+          "origin_cluster_id": "netatmo__sensor__cloud_status_call__read_runtime__cloud",
+          "phase": "RUNTIME",
+          "positive_prototypes": [
+            {
+              "call_chains": [],
+              "call_patterns": [],
+              "file_path": "data/repo_snapshot/netatmo/sensor.py",
+              "function_name": "async_update_callback",
+              "path_kind": "read_path",
+              "path_signals": [
+                "update_callback_function:async_update_callback"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 8,
+              "snippet": "588:     @callback\n589:     def async_update_callback(self) -> None:\n590:         \"\"\"Update the entity's state.\"\"\"\n591:         if not self.device.reachable:\n592:             if self.available:\n593:                 self._attr_available = False\n594:             return\n595: \n596:         self._attr_available = True\n597:         self._attr_native_value = self.device.battery\n598: \n599:"
+            }
+          ],
+          "preferred_runtime_roles": [
+            "runtime_read"
+          ],
+          "required_context": [
+            "runtime_update_path"
+          ],
+          "required_path_signals": [
+            "update_callback_function:async_update_callback"
+          ],
+          "required_runtime_roles": [
+            "runtime_read"
+          ],
+          "reviewer_status": "draft",
+          "rule_id": "netatmo:sensor_runtime_status_read",
+          "runtime_archetypes": [
+            "cloud_runtime_read",
+            "entity_wrapper_read",
+            "coordinator_update_path"
+          ],
+          "runtime_path_evidence": [
+            "runtime_function:async_update_callback",
+            "path_signal:update_callback_function:async_update_callback"
+          ],
+          "source_file_paths": [
+            "data/repo_snapshot/netatmo/sensor.py"
+          ],
+          "source_unresolved_action_ids": [
+            "A10"
+          ],
+          "strength": "MEDIUM",
+          "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+          "why_not_setup": [
+            "exclude_role:setup:async_setup_entry",
+            "exclude_role:property_getter:available",
+            "exclude_role:helper:_create_sensor_entity",
+            "exclude_path_signal:setup_function:async_setup_entry",
+            "exclude_path_signal:setup_call:async_dispatcher_connect",
+            "exclude_path_signal:setup_call:async_add_entities",
+            "exclude_path_signal:property_function:available",
+            "exclude_control_path_for_read_like_action"
+          ]
+        }
+      ],
+      "schema_version": "m1_grounding_profile/v3",
+      "version": "draft_llm_v3"
+    },
+    {
+      "integration": "ruuvitag_ble",
+      "runtime_families": [
+        {
+          "action_kind": "read_sensor",
+          "allow_accessor_fallback": false,
+          "binding_hints": {
+            "boost_target_tokens": [
+              "ble:ruuvitag_ble:overnight_environment_bedroom",
+              "overnight_environment_bedroom",
+              "ble:ruuvitag_ble:overnight_environment_kids_room",
+              "overnight_environment_kids_room"
+            ],
+            "phase": "RUNTIME",
+            "preferred_action_kinds": [
+              "control",
+              "read_sensor"
+            ],
+            "required_service_tokens": []
+          },
+          "call_patterns": [],
+          "confidence": {
+            "base": 0.7,
+            "boost_if_imports": [
+              "__future__",
+              "const",
+              "homeassistant",
+              "sensor_state_data"
+            ],
+            "boost_if_names": [
+              "read_sensor",
+              "sensor_update_to_bluetooth_data_update"
+            ],
+            "emit_threshold": 0.7
+          },
+          "family": "BLE_OP",
+          "file_globs": [
+            "ruuvitag_ble/sensor.py"
+          ],
+          "forbidden_context": [
+            "dunder_init"
+          ],
+          "forbidden_path_signals": [
+            "setup_function:async_setup_entry",
+            "property_function:native_value",
+            "control_function:async_turn_on",
+            "control_function:async_turn_off",
+            "control_function:async_open_cover",
+            "control_function:async_close_cover",
+            "control_function:async_set_cover_position",
+            "control_function:set_state"
+          ],
+          "forbidden_runtime_roles": [
+            "runtime_write",
+            "setup",
+            "property_getter",
+            "helper"
+          ],
+          "function_name_patterns": [
+            "sensor_update_to_bluetooth_data_update"
+          ],
+          "generalization_scope": "file_specific",
+          "generalizes_actions": [
+            "A2",
+            "A3"
+          ],
+          "integration": "ruuvitag_ble",
+          "negative_call_patterns": [
+            "passivebluetoothdataprocessor",
+            "async_on_unload",
+            "async_add_entities_listener",
+            "async_register_processor",
+            "entry.async_on_unload",
+            "processor.async_add_entities_listener"
+          ],
+          "negative_evidence": [
+            "negative_function:async_setup_entry",
+            "negative_function:native_value",
+            "negative_function:_device_key_to_bluetooth_entity_key",
+            "negative_call:passivebluetoothdataprocessor",
+            "negative_call:async_on_unload",
+            "negative_call:async_add_entities_listener",
+            "negative_call:async_register_processor",
+            "negative_call:entry.async_on_unload",
+            "negative_call:processor.async_add_entities_listener",
+            "negative_call:coordinator.async_register_processor"
+          ],
+          "negative_function_patterns": [
+            "async_setup_entry",
+            "native_value",
+            "_device_key_to_bluetooth_entity_key",
+            "async_turn_on",
+            "async_turn_off",
+            "async_set_*"
+          ],
+          "negative_prototypes": [
+            {
+              "call_chains": [
+                "passivebluetoothdataprocessor",
+                "entry.async_on_unload",
+                "processor.async_add_entities_listener",
+                "coordinator.async_register_processor"
+              ],
+              "call_patterns": [
+                "passivebluetoothdataprocessor",
+                "async_on_unload",
+                "async_add_entities_listener",
+                "async_register_processor"
+              ],
+              "file_path": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+              "function_name": "async_setup_entry",
+              "path_kind": "setup_path",
+              "path_signals": [
+                "setup_function:async_setup_entry",
+                "subscription_call:processor.async_add_entities_listener",
+                "service_registration_call:coordinator.async_register_processor"
+              ],
+              "prototype_kind": "negative_setup",
+              "role_hint": "setup",
+              "score": -8,
+              "snippet": "194: \n195: async def async_setup_entry(\n196:     hass: HomeAssistant,\n197:     entry: config_entries.ConfigEntry,\n198:     async_add_entities: AddConfigEntryEntitiesCallback,\n199: ) -> None:\n200:     \"\"\"Set up the Ruuvi BLE sensors.\"\"\"\n201:     coordinator: PassiveBluetoothProcessorCoordinator = hass.data[DOMAIN][\n202:         entry.entry_id\n203:     ]\n204:     processor = PassiveBluetoothDataProcessor(sensor_update_to_bluetooth_data_update)\n205:     entry.async_on_unload(\n206:         processor.async_add_entities_listener(\n207:             RuuvitagBluetoothSensorEntity, async_add_entities"
+            },
+            {
+              "call_chains": [
+                "self.processor.entity_data.get"
+              ],
+              "call_patterns": [
+                "get"
+              ],
+              "file_path": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+              "function_name": "native_value",
+              "path_kind": "property_path",
+              "path_signals": [
+                "property_function:native_value"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "property_getter",
+              "score": -10,
+              "snippet": "221:     @property\n222:     def native_value(self) -> int | float | None:\n223:         \"\"\"Return the native value.\"\"\"\n224:         return self.processor.entity_data.get(self.entity_key)"
+            },
+            {
+              "call_chains": [
+                "passivebluetoothentitykey"
+              ],
+              "call_patterns": [
+                "passivebluetoothentitykey"
+              ],
+              "file_path": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+              "function_name": "_device_key_to_bluetooth_entity_key",
+              "path_kind": "helper_path",
+              "path_signals": [],
+              "prototype_kind": "negative_helper",
+              "role_hint": "helper",
+              "score": -4,
+              "snippet": "162: \n163: def _device_key_to_bluetooth_entity_key(\n164:     device_key: DeviceKey,\n165: ) -> PassiveBluetoothEntityKey:\n166:     \"\"\"Convert a device key to an entity key.\"\"\"\n167:     return PassiveBluetoothEntityKey(device_key.key, device_key.device_id)\n168: \n169:"
+            }
+          ],
+          "origin_action_id": null,
+          "origin_cluster_id": "ruuvitag_ble__sensor__ble_op__read_sensor__ble",
+          "phase": "RUNTIME",
+          "positive_prototypes": [
+            {
+              "call_chains": [
+                "sensor_update.entity_values.items",
+                "passivebluetoothdataupdate",
+                "_device_key_to_bluetooth_entity_key",
+                "sensor_descriptions.get",
+                "sensor_device_info_to_hass_device_info",
+                "sensor_update.devices.items"
+              ],
+              "call_patterns": [
+                "items",
+                "passivebluetoothdataupdate",
+                "_device_key_to_bluetooth_entity_key",
+                "get",
+                "sensor_device_info_to_hass_device_info"
+              ],
+              "file_path": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+              "function_name": "sensor_update_to_bluetooth_data_update",
+              "path_kind": "read_path",
+              "path_signals": [],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 6,
+              "snippet": "169: \n170: def sensor_update_to_bluetooth_data_update(\n171:     sensor_update: SensorUpdate,\n172: ) -> PassiveBluetoothDataUpdate:\n173:     \"\"\"Convert a sensor update to a bluetooth data update.\"\"\"\n174:     entity_descriptions: dict[PassiveBluetoothEntityKey, EntityDescription] = {}\n175:     entity_data = {}\n176:     for device_key, sensor_values in sensor_update.entity_values.items():\n177:         bek = _device_key_to_bluetooth_entity_key(device_key)\n178:         entity_data[bek] = sensor_values.native_value\n179:     for device_key in sensor_update.entity_descriptions:\n180:         bek = _device_key_to_bluetooth_entity_key(device_key)\n181:         if sk_description := SENSOR_DESCRIPTIONS.get(device_key.key):\n182:             entity_descriptions[bek] = sk_description"
+            }
+          ],
+          "preferred_runtime_roles": [
+            "runtime_read"
+          ],
+          "required_context": [
+            "runtime_path"
+          ],
+          "required_path_signals": [],
+          "required_runtime_roles": [
+            "runtime_read"
+          ],
+          "reviewer_status": "draft",
+          "rule_id": "ruuvitag_ble:sensor_runtime_read_sensor_control",
+          "runtime_archetypes": [
+            "ble_runtime_read"
+          ],
+          "runtime_path_evidence": [
+            "runtime_function:sensor_update_to_bluetooth_data_update",
+            "runtime_call:items",
+            "runtime_call:passivebluetoothdataupdate",
+            "runtime_call:_device_key_to_bluetooth_entity_key",
+            "runtime_call:get",
+            "runtime_call:sensor_device_info_to_hass_device_info",
+            "runtime_call:sensor_update.entity_values.items",
+            "runtime_call:sensor_descriptions.get",
+            "runtime_call:sensor_update.devices.items"
+          ],
+          "source_file_paths": [
+            "data/repo_snapshot/ruuvitag_ble/sensor.py"
+          ],
+          "source_unresolved_action_ids": [
+            "A2",
+            "A3"
+          ],
+          "strength": "MEDIUM",
+          "why_not_more_general": "same runtime idiom appears in one file across multiple unresolved actions",
+          "why_not_setup": [
+            "exclude_role:setup:async_setup_entry",
+            "exclude_role:property_getter:native_value",
+            "exclude_role:helper:_device_key_to_bluetooth_entity_key",
+            "exclude_path_signal:setup_function:async_setup_entry",
+            "exclude_path_signal:property_function:native_value",
+            "exclude_control_path_for_read_like_action"
+          ]
+        }
+      ],
+      "schema_version": "m1_grounding_profile/v3",
+      "version": "draft_llm_v3"
+    },
+    {
+      "integration": "tplink",
+      "runtime_families": [
+        {
+          "action_kind": "write",
+          "allow_accessor_fallback": false,
+          "binding_hints": {
+            "boost_target_tokens": [
+              "sensor.vdev_overnight_quiet_hours_snapshot_01_local_lane",
+              "vdev_overnight_quiet_hours_snapshot_01_local_lane"
+            ],
+            "phase": "RUNTIME",
+            "preferred_action_kinds": [
+              "publish",
+              "write"
+            ],
+            "required_service_tokens": []
+          },
+          "call_patterns": [
+            "_async_call_update_attrs",
+            "_handle_coordinator_update",
+            "super",
+            "self._async_call_update_attrs",
+            "async_added_to_hass",
+            "_async_update_attrs"
+          ],
+          "confidence": {
+            "base": 0.7,
+            "boost_if_imports": [
+              "__future__",
+              "abc",
+              "collections",
+              "const",
+              "coordinator",
+              "dataclasses"
+            ],
+            "boost_if_names": [
+              "write",
+              "_handle_coordinator_update",
+              "async_added_to_hass",
+              "_async_call_update_attrs",
+              "super",
+              "self._async_call_update_attrs"
+            ],
+            "emit_threshold": 0.7
+          },
+          "family": "STATE_WRITE",
+          "file_globs": [
+            "tplink/entity.py"
+          ],
+          "forbidden_context": [
+            "dunder_init"
+          ],
+          "forbidden_path_signals": [
+            "property_function:available"
+          ],
+          "forbidden_runtime_roles": [
+            "setup",
+            "property_getter"
+          ],
+          "function_name_patterns": [
+            "_handle_coordinator_update",
+            "async_added_to_hass",
+            "_async_call_update_attrs"
+          ],
+          "generalization_scope": "file_specific",
+          "generalizes_actions": [
+            "A15"
+          ],
+          "integration": "tplink",
+          "negative_call_patterns": [
+            "__init__",
+            "get_device_name",
+            "deviceinfo",
+            "_get_unique_id",
+            "self._get_unique_id",
+            "replace"
+          ],
+          "negative_evidence": [
+            "negative_function:__init__",
+            "negative_function:available",
+            "negative_function:_description_for_feature",
+            "negative_call:__init__",
+            "negative_call:get_device_name",
+            "negative_call:deviceinfo",
+            "negative_call:_get_unique_id",
+            "negative_call:super",
+            "negative_call:str",
+            "negative_call:self._get_unique_id"
+          ],
+          "negative_function_patterns": [
+            "__init__",
+            "available",
+            "_description_for_feature"
+          ],
+          "negative_prototypes": [
+            {
+              "call_chains": [
+                "__init__",
+                "get_device_name",
+                "deviceinfo",
+                "self._get_unique_id",
+                "super",
+                "str"
+              ],
+              "call_patterns": [
+                "__init__",
+                "get_device_name",
+                "deviceinfo",
+                "_get_unique_id",
+                "super",
+                "str"
+              ],
+              "file_path": "data/repo_snapshot/tplink/entity.py",
+              "function_name": "__init__",
+              "path_kind": "setup_path",
+              "path_signals": [
+                "read_function:__init__",
+                "read_call:get_device_name"
+              ],
+              "prototype_kind": "negative_setup",
+              "role_hint": "setup",
+              "score": -4,
+              "snippet": "166: \n167:     def __init__(\n168:         self,\n169:         device: Device,\n170:         coordinator: TPLinkDataUpdateCoordinator,\n171:         description: TPLinkEntityDescription,\n172:         *,\n173:         feature: Feature | None = None,\n174:         parent: Device | None = None,\n175:     ) -> None:\n176:         \"\"\"Initialize the entity.\"\"\"\n177:         super().__init__(coordinator)\n178:         self.entity_description = description\n179:         self._device: Device = device"
+            },
+            {
+              "call_chains": [],
+              "call_patterns": [],
+              "file_path": "data/repo_snapshot/tplink/entity.py",
+              "function_name": "available",
+              "path_kind": "property_path",
+              "path_signals": [
+                "property_function:available"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "property_getter",
+              "score": -10,
+              "snippet": "291:     @property\n292:     def available(self) -> bool:\n293:         \"\"\"Return if entity is available.\"\"\"\n294:         return self.coordinator.last_update_success and self._attr_available\n295: \n296:"
+            },
+            {
+              "call_chains": [
+                "_logger.debug",
+                "replace",
+                "descriptions.get",
+                "get_device_name",
+                "cls._category_for_feature"
+              ],
+              "call_patterns": [
+                "debug",
+                "replace",
+                "get",
+                "get_device_name",
+                "_category_for_feature"
+              ],
+              "file_path": "data/repo_snapshot/tplink/entity.py",
+              "function_name": "_description_for_feature",
+              "path_kind": "helper_path",
+              "path_signals": [
+                "read_function:_description_for_feature",
+                "read_call:get_device_name"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "helper",
+              "score": 0,
+              "snippet": "360:     @classmethod\n361:     def _description_for_feature[_D: EntityDescription](\n362:         cls,\n363:         feature: Feature,\n364:         descriptions: Mapping[str, _D],\n365:         *,\n366:         device: Device,\n367:         parent: Device | None = None,\n368:     ) -> _D | None:\n369:         \"\"\"Return description object for the given feature.\n370: \n371:         This is responsible for setting the common parameters & deciding\n372:         based on feature id which additional parameters are passed.\n373:         \"\"\""
+            }
+          ],
+          "origin_action_id": "A15",
+          "origin_cluster_id": "tplink__entity__state_write__write__ha",
+          "phase": "RUNTIME",
+          "positive_prototypes": [
+            {
+              "call_chains": [
+                "self._async_call_update_attrs",
+                "_handle_coordinator_update",
+                "super"
+              ],
+              "call_patterns": [
+                "_async_call_update_attrs",
+                "_handle_coordinator_update",
+                "super"
+              ],
+              "file_path": "data/repo_snapshot/tplink/entity.py",
+              "function_name": "_handle_coordinator_update",
+              "path_kind": "control_path",
+              "path_signals": [
+                "update_callback_function:_handle_coordinator_update",
+                "state_write_function:_handle_coordinator_update",
+                "state_write_call:self._async_call_update_attrs",
+                "state_write_call:_handle_coordinator_update"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_write",
+              "score": 9,
+              "snippet": "285:     @callback\n286:     def _handle_coordinator_update(self) -> None:\n287:         \"\"\"Handle updated data from the coordinator.\"\"\"\n288:         self._async_call_update_attrs()\n289:         super()._handle_coordinator_update()\n290: \n291:     @property"
+            },
+            {
+              "call_chains": [
+                "self._async_call_update_attrs",
+                "async_added_to_hass",
+                "super"
+              ],
+              "call_patterns": [
+                "_async_call_update_attrs",
+                "async_added_to_hass",
+                "super"
+              ],
+              "file_path": "data/repo_snapshot/tplink/entity.py",
+              "function_name": "async_added_to_hass",
+              "path_kind": "control_path",
+              "path_signals": [
+                "state_write_function:async_added_to_hass",
+                "state_write_call:self._async_call_update_attrs"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_write",
+              "score": 7,
+              "snippet": "252: \n253:     async def async_added_to_hass(self) -> None:\n254:         \"\"\"Call update attributes after the device is added to the platform.\"\"\"\n255:         await super().async_added_to_hass()\n256: \n257:         self._async_call_update_attrs()\n258: \n259:     @abstractmethod"
+            },
+            {
+              "call_chains": [
+                "self._async_update_attrs",
+                "_logger.warning"
+              ],
+              "call_patterns": [
+                "_async_update_attrs",
+                "warning"
+              ],
+              "file_path": "data/repo_snapshot/tplink/entity.py",
+              "function_name": "_async_call_update_attrs",
+              "path_kind": "control_path",
+              "path_signals": [
+                "state_write_function:_async_call_update_attrs",
+                "state_write_call:self._async_update_attrs"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_write",
+              "score": 7,
+              "snippet": "268:     @callback\n269:     def _async_call_update_attrs(self) -> None:\n270:         \"\"\"Call update_attrs and make entity unavailable on errors.\"\"\"\n271:         try:\n272:             available = self._async_update_attrs()\n273:         except Exception as ex:  # noqa: BLE001\n274:             if self._attr_available:\n275:                 _LOGGER.warning(\n276:                     \"Unable to read data for %s %s: %s\",\n277:                     self._device,\n278:                     self.entity_id,\n279:                     ex,\n280:                 )\n281:             self._attr_available = False"
+            }
+          ],
+          "preferred_runtime_roles": [
+            "runtime_write"
+          ],
+          "required_context": [
+            "runtime_path"
+          ],
+          "required_path_signals": [
+            "update_callback_function:_handle_coordinator_update",
+            "state_write_function:_handle_coordinator_update",
+            "state_write_call:self._async_call_update_attrs",
+            "state_write_call:_handle_coordinator_update",
+            "state_write_function:async_added_to_hass",
+            "state_write_function:_async_call_update_attrs",
+            "state_write_call:self._async_update_attrs"
+          ],
+          "required_runtime_roles": [
+            "runtime_write"
+          ],
+          "reviewer_status": "draft",
+          "rule_id": "tplink:entity_runtime_writeback",
+          "runtime_archetypes": [
+            "state_writeback"
+          ],
+          "runtime_path_evidence": [
+            "runtime_function:_handle_coordinator_update",
+            "runtime_function:async_added_to_hass",
+            "runtime_function:_async_call_update_attrs",
+            "runtime_call:_async_call_update_attrs",
+            "runtime_call:_handle_coordinator_update",
+            "runtime_call:super",
+            "runtime_call:self._async_call_update_attrs",
+            "runtime_call:async_added_to_hass",
+            "runtime_call:_async_update_attrs",
+            "runtime_call:warning"
+          ],
+          "source_file_paths": [
+            "data/repo_snapshot/tplink/entity.py"
+          ],
+          "source_unresolved_action_ids": [
+            "A15"
+          ],
+          "strength": "MEDIUM",
+          "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+          "why_not_setup": [
+            "exclude_role:setup:__init__",
+            "exclude_role:property_getter:available",
+            "exclude_path_signal:property_function:available"
+          ]
+        }
+      ],
+      "schema_version": "m1_grounding_profile/v3",
+      "version": "draft_llm_v3"
+    },
+    {
+      "integration": "tuya",
+      "runtime_families": [
+        {
+          "action_kind": "status",
+          "allow_accessor_fallback": false,
+          "binding_hints": {
+            "boost_target_tokens": [
+              "overnight_strip_1",
+              "tuya:switch.overnight_strip_1.status",
+              "overnight_strip_2",
+              "tuya:switch.overnight_strip_2.status"
+            ],
+            "phase": "RUNTIME",
+            "preferred_action_kinds": [
+              "status",
+              "poll_update"
+            ],
+            "required_service_tokens": []
+          },
+          "call_patterns": [],
+          "confidence": {
+            "base": 0.7,
+            "boost_if_imports": [
+              "__future__",
+              "const",
+              "homeassistant",
+              "logging",
+              "tuya_sharing",
+              "typing"
+            ],
+            "boost_if_names": [
+              "status",
+              "update_device",
+              "update_token"
+            ],
+            "emit_threshold": 0.7
+          },
+          "family": "CLOUD_STATUS_CALL",
+          "file_globs": [
+            "tuya/__init__.py"
+          ],
+          "forbidden_context": [
+            "setup_function",
+            "dunder_init",
+            "entity_property_getter"
+          ],
+          "forbidden_path_signals": [
+            "setup_function:async_setup_entry",
+            "control_function:async_turn_on",
+            "control_function:async_turn_off",
+            "control_function:async_open_cover",
+            "control_function:async_close_cover",
+            "control_function:async_set_cover_position",
+            "control_function:set_state",
+            "state_accessor_property:state"
+          ],
+          "forbidden_runtime_roles": [
+            "runtime_write",
+            "setup",
+            "property_getter",
+            "helper"
+          ],
+          "function_name_patterns": [
+            "update_device",
+            "update_token"
+          ],
+          "generalization_scope": "file_specific",
+          "generalizes_actions": [
+            "A8",
+            "A9"
+          ],
+          "integration": "tuya",
+          "negative_call_patterns": [
+            "tokenlistener",
+            "devicelistener",
+            "add_device_listener",
+            "homeassistanttuyadata",
+            "async_get",
+            "async_add_executor_job"
+          ],
+          "negative_evidence": [
+            "negative_function:async_setup_entry",
+            "negative_function:add_device",
+            "negative_call:tokenlistener",
+            "negative_call:devicelistener",
+            "negative_call:add_device_listener",
+            "negative_call:homeassistanttuyadata",
+            "negative_call:async_get",
+            "negative_call:values",
+            "negative_call:async_add_executor_job",
+            "negative_call:cleanup_device_registry"
+          ],
+          "negative_function_patterns": [
+            "async_setup_entry",
+            "add_device",
+            "async_turn_on",
+            "async_turn_off",
+            "async_set_*",
+            "async_open_*"
+          ],
+          "negative_prototypes": [
+            {
+              "call_chains": [
+                "tokenlistener",
+                "devicelistener",
+                "manager.add_device_listener",
+                "homeassistanttuyadata",
+                "dr.async_get",
+                "manager.device_map.values",
+                "hass.async_add_executor_job",
+                "cleanup_device_registry"
+              ],
+              "call_patterns": [
+                "tokenlistener",
+                "devicelistener",
+                "add_device_listener",
+                "homeassistanttuyadata",
+                "async_get",
+                "values",
+                "async_add_executor_job",
+                "cleanup_device_registry"
+              ],
+              "file_path": "data/repo_snapshot/tuya/__init__.py",
+              "function_name": "async_setup_entry",
+              "path_kind": "setup_path",
+              "path_signals": [
+                "setup_function:async_setup_entry",
+                "subscription_call:tokenlistener",
+                "subscription_call:devicelistener",
+                "subscription_call:manager.add_device_listener"
+              ],
+              "prototype_kind": "negative_setup",
+              "role_hint": "setup",
+              "score": -18,
+              "snippet": "58: \n59: async def async_setup_entry(hass: HomeAssistant, entry: TuyaConfigEntry) -> bool:\n60:     \"\"\"Async setup hass config entry.\"\"\"\n61:     token_listener = TokenListener(hass, entry)\n62: \n63:     # Move to executor as it makes blocking call to import_module\n64:     # with args ('.system', 'urllib3.contrib.resolver')\n65:     manager = await hass.async_add_executor_job(_create_manager, entry, token_listener)\n66: \n67:     listener = DeviceListener(hass, manager)\n68:     manager.add_device_listener(listener)\n69: \n70:     # Get all devices from Tuya\n71:     try:"
+            },
+            {
+              "call_chains": [
+                "self.hass.add_job",
+                "logger.debug",
+                "dispatcher_send"
+              ],
+              "call_patterns": [
+                "add_job",
+                "debug",
+                "dispatcher_send"
+              ],
+              "file_path": "data/repo_snapshot/tuya/__init__.py",
+              "function_name": "add_device",
+              "path_kind": "helper_path",
+              "path_signals": [],
+              "prototype_kind": "negative_helper",
+              "role_hint": "helper",
+              "score": -4,
+              "snippet": "192: \n193:     def add_device(self, device: CustomerDevice) -> None:\n194:         \"\"\"Add device added listener.\"\"\"\n195:         # Ensure the device isn't present stale\n196:         self.hass.add_job(self.async_remove_device, device.id)\n197: \n198:         LOGGER.debug(\n199:             \"Add device %s (online: %s): %s (function: %s, status range: %s)\",\n200:             device.id,\n201:             device.online,\n202:             device.status,\n203:             device.function,\n204:             device.status_range,\n205:         )"
+            }
+          ],
+          "origin_action_id": "A9",
+          "origin_cluster_id": "tuya____init____cloud_status_call__status__cloud",
+          "phase": "RUNTIME",
+          "positive_prototypes": [
+            {
+              "call_chains": [
+                "logger.debug",
+                "dispatcher_send"
+              ],
+              "call_patterns": [
+                "debug",
+                "dispatcher_send"
+              ],
+              "file_path": "data/repo_snapshot/tuya/__init__.py",
+              "function_name": "update_device",
+              "path_kind": "read_path",
+              "path_signals": [],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 6,
+              "snippet": "169: \n170:     def update_device(\n171:         self,\n172:         device: CustomerDevice,\n173:         updated_status_properties: list[str] | None = None,\n174:         dp_timestamps: dict[str, int] | None = None,\n175:     ) -> None:\n176:         \"\"\"Update device status with optional DP timestamps.\"\"\"\n177:         LOGGER.debug(\n178:             \"Received update for device %s (online: %s): %s\"\n179:             \" (updated properties: %s, dp_timestamps: %s)\",\n180:             device.id,\n181:             device.online,\n182:             device.status,"
+            },
+            {
+              "call_chains": [
+                "self.hass.add_job",
+                "self.hass.config_entries.async_update_entry"
+              ],
+              "call_patterns": [
+                "add_job",
+                "async_update_entry"
+              ],
+              "file_path": "data/repo_snapshot/tuya/__init__.py",
+              "function_name": "update_token",
+              "path_kind": "read_path",
+              "path_signals": [],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 6,
+              "snippet": "236: \n237:     def update_token(self, token_info: dict[str, Any]) -> None:\n238:         \"\"\"Update token info in config entry.\"\"\"\n239:         data = {\n240:             **self.entry.data,\n241:             CONF_TOKEN_INFO: {\n242:                 \"t\": token_info[\"t\"],\n243:                 \"uid\": token_info[\"uid\"],\n244:                 \"expire_time\": token_info[\"expire_time\"],\n245:                 \"access_token\": token_info[\"access_token\"],\n246:                 \"refresh_token\": token_info[\"refresh_token\"],\n247:             },\n248:         }\n249:"
+            }
+          ],
+          "preferred_runtime_roles": [
+            "runtime_read"
+          ],
+          "required_context": [
+            "runtime_update_path"
+          ],
+          "required_path_signals": [],
+          "required_runtime_roles": [
+            "runtime_read"
+          ],
+          "reviewer_status": "draft",
+          "rule_id": "tuya:__init___runtime_status_read",
+          "runtime_archetypes": [
+            "cloud_runtime_read",
+            "entity_wrapper_read",
+            "coordinator_update_path"
+          ],
+          "runtime_path_evidence": [
+            "runtime_function:update_device",
+            "runtime_function:update_token",
+            "runtime_call:debug",
+            "runtime_call:dispatcher_send",
+            "runtime_call:logger.debug",
+            "runtime_call:add_job",
+            "runtime_call:async_update_entry",
+            "runtime_call:self.hass.add_job",
+            "runtime_call:self.hass.config_entries.async_update_entry",
+            "path_signal:update_callback_function:_process_device_update"
+          ],
+          "source_file_paths": [
+            "data/repo_snapshot/tuya/__init__.py"
+          ],
+          "source_unresolved_action_ids": [
+            "A9"
+          ],
+          "strength": "MEDIUM",
+          "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+          "why_not_setup": [
+            "exclude_role:setup:async_setup_entry",
+            "exclude_role:helper:add_device",
+            "exclude_path_signal:setup_function:async_setup_entry",
+            "exclude_control_path_for_read_like_action"
+          ]
+        },
+        {
+          "action_kind": "status",
+          "allow_accessor_fallback": false,
+          "binding_hints": {
+            "boost_target_tokens": [
+              "overnight_strip_1",
+              "tuya:switch.overnight_strip_1.status",
+              "overnight_strip_2",
+              "tuya:switch.overnight_strip_2.status"
+            ],
+            "phase": "RUNTIME",
+            "preferred_action_kinds": [
+              "status",
+              "poll_update"
+            ],
+            "required_service_tokens": []
+          },
+          "call_patterns": [
+            "read_device_status"
+          ],
+          "confidence": {
+            "base": 0.7,
+            "boost_if_imports": [
+              "__future__",
+              "const",
+              "homeassistant",
+              "tuya_device_handlers",
+              "tuya_sharing",
+              "typing"
+            ],
+            "boost_if_names": [
+              "status",
+              "_process_device_update",
+              "read_device_status"
+            ],
+            "emit_threshold": 0.7
+          },
+          "family": "CLOUD_STATUS_CALL",
+          "file_globs": [
+            "tuya/entity.py"
+          ],
+          "forbidden_context": [
+            "setup_function",
+            "dunder_init",
+            "entity_property_getter"
+          ],
+          "forbidden_path_signals": [
+            "control_function:_async_send_wrapper_updates",
+            "control_call:self._async_send_commands",
+            "awaited_control_call:self._async_send_commands",
+            "control_function:_async_send_commands",
+            "property_function:available",
+            "property_function:device_info",
+            "control_function:async_turn_on",
+            "control_function:async_turn_off"
+          ],
+          "forbidden_runtime_roles": [
+            "runtime_write",
+            "setup",
+            "property_getter",
+            "helper"
+          ],
+          "function_name_patterns": [
+            "_process_device_update"
+          ],
+          "generalization_scope": "file_specific",
+          "generalizes_actions": [
+            "A8",
+            "A9"
+          ],
+          "integration": "tuya",
+          "negative_call_patterns": [
+            "_async_send_commands",
+            "get_update_commands",
+            "self._async_send_commands",
+            "wrapper.get_update_commands",
+            "async_add_executor_job",
+            "logger.debug"
+          ],
+          "negative_evidence": [
+            "negative_function:__init__",
+            "negative_function:_async_send_wrapper_updates",
+            "negative_function:_async_send_commands",
+            "negative_function:available",
+            "negative_function:device_info",
+            "negative_call:_async_send_commands",
+            "negative_call:get_update_commands",
+            "negative_call:self._async_send_commands",
+            "negative_call:wrapper.get_update_commands",
+            "negative_call:debug"
+          ],
+          "negative_function_patterns": [
+            "__init__",
+            "_async_send_wrapper_updates",
+            "_async_send_commands",
+            "available",
+            "device_info",
+            "_read_wrapper"
+          ],
+          "negative_prototypes": [
+            {
+              "call_chains": [],
+              "call_patterns": [],
+              "file_path": "data/repo_snapshot/tuya/entity.py",
+              "function_name": "__init__",
+              "path_kind": "setup_path",
+              "path_signals": [],
+              "prototype_kind": "negative_setup",
+              "role_hint": "setup",
+              "score": -6,
+              "snippet": "22: \n23:     def __init__(self, device: CustomerDevice, device_manager: Manager) -> None:\n24:         \"\"\"Init TuyaHaEntity.\"\"\"\n25:         self._attr_unique_id = f\"tuya.{device.id}\"\n26:         # TuyaEntity initialize mq can subscribe\n27:         device.set_up = True\n28:         self.device = device\n29:         self.device_manager = device_manager\n30: \n31:     @property"
+            },
+            {
+              "call_chains": [
+                "self._async_send_commands",
+                "wrapper.get_update_commands"
+              ],
+              "call_patterns": [
+                "_async_send_commands",
+                "get_update_commands"
+              ],
+              "file_path": "data/repo_snapshot/tuya/entity.py",
+              "function_name": "_async_send_wrapper_updates",
+              "path_kind": "control_path",
+              "path_signals": [
+                "control_function:_async_send_wrapper_updates",
+                "read_function:_async_send_wrapper_updates",
+                "control_call:self._async_send_commands",
+                "read_call:wrapper.get_update_commands",
+                "awaited_control_call:self._async_send_commands"
+              ],
+              "prototype_kind": "negative_control",
+              "role_hint": "runtime_write",
+              "score": -10,
+              "snippet": "104: \n105:     async def _async_send_wrapper_updates[T](\n106:         self, wrapper: DeviceWrapper[T] | None, value: T\n107:     ) -> None:\n108:         \"\"\"Send command to the device.\"\"\"\n109:         if wrapper is None:\n110:             return\n111:         await self._async_send_commands(\n112:             wrapper.get_update_commands(self.device, value),\n113:         )"
+            },
+            {
+              "call_chains": [
+                "logger.debug",
+                "self.hass.async_add_executor_job"
+              ],
+              "call_patterns": [
+                "debug",
+                "async_add_executor_job"
+              ],
+              "file_path": "data/repo_snapshot/tuya/entity.py",
+              "function_name": "_async_send_commands",
+              "path_kind": "control_path",
+              "path_signals": [
+                "control_function:_async_send_commands"
+              ],
+              "prototype_kind": "negative_control",
+              "role_hint": "runtime_write",
+              "score": -8,
+              "snippet": "89: \n90:     async def _async_send_commands(self, commands: list[dict[str, Any]]) -> None:\n91:         \"\"\"Send a list of commands to the device.\"\"\"\n92:         LOGGER.debug(\"Sending commands for device %s: %s\", self.device.id, commands)\n93:         if not commands:\n94:             return\n95:         await self.hass.async_add_executor_job(\n96:             self.device_manager.send_commands, self.device.id, commands\n97:         )\n98: \n99:     def _read_wrapper[T](self, wrapper: DeviceWrapper[T] | None) -> T | None:"
+            },
+            {
+              "call_chains": [],
+              "call_patterns": [],
+              "file_path": "data/repo_snapshot/tuya/entity.py",
+              "function_name": "available",
+              "path_kind": "property_path",
+              "path_signals": [
+                "property_function:available"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "property_getter",
+              "score": -10,
+              "snippet": "42:     @property\n43:     def available(self) -> bool:\n44:         \"\"\"Return if the device is available.\"\"\"\n45:         return self.device.online\n46: \n47:     async def async_added_to_hass(self) -> None:"
+            },
+            {
+              "call_chains": [],
+              "call_patterns": [],
+              "file_path": "data/repo_snapshot/tuya/entity.py",
+              "function_name": "device_info",
+              "path_kind": "property_path",
+              "path_signals": [
+                "property_function:device_info"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "property_getter",
+              "score": -10,
+              "snippet": "31:     @property\n32:     def device_info(self) -> DeviceInfo:\n33:         \"\"\"Return a device description for device registry.\"\"\"\n34:         return DeviceInfo(\n35:             identifiers={(DOMAIN, self.device.id)},\n36:             manufacturer=\"Tuya\",\n37:             name=self.device.name,\n38:             model=self.device.product_name,\n39:             model_id=self.device.product_id,\n40:         )\n41: \n42:     @property"
+            }
+          ],
+          "origin_action_id": "A9",
+          "origin_cluster_id": "tuya__entity__cloud_status_call__status__cloud",
+          "phase": "RUNTIME",
+          "positive_prototypes": [
+            {
+              "call_chains": [
+                "wrapper.read_device_status"
+              ],
+              "call_patterns": [
+                "read_device_status"
+              ],
+              "file_path": "data/repo_snapshot/tuya/entity.py",
+              "function_name": "_read_wrapper",
+              "path_kind": "read_path",
+              "path_signals": [
+                "read_function:_read_wrapper",
+                "read_call:wrapper.read_device_status",
+                "state_accessor_call:wrapper.read_device_status"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 8,
+              "snippet": "98: \n99:     def _read_wrapper[T](self, wrapper: DeviceWrapper[T] | None) -> T | None:\n100:         \"\"\"Read the wrapper device status.\"\"\"\n101:         if wrapper is None:\n102:             return None\n103:         return wrapper.read_device_status(self.device)\n104: \n105:     async def _async_send_wrapper_updates[T]("
+            },
+            {
+              "call_chains": [],
+              "call_patterns": [],
+              "file_path": "data/repo_snapshot/tuya/entity.py",
+              "function_name": "_process_device_update",
+              "path_kind": "read_path",
+              "path_signals": [
+                "update_callback_function:_process_device_update"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 8,
+              "snippet": "77: \n78:     async def _process_device_update(\n79:         self,\n80:         updated_status_properties: list[str],\n81:         dp_timestamps: dict[str, int] | None,\n82:     ) -> bool:\n83:         \"\"\"Called when Tuya device sends an update with updated properties.\n84: \n85:         Returns True if the Home Assistant state should be written,\n86:         or False if the state write should be skipped.\n87:         \"\"\"\n88:         return True\n89: \n90:     async def _async_send_commands(self, commands: list[dict[str, Any]]) -> None:"
+            }
+          ],
+          "preferred_runtime_roles": [
+            "runtime_read"
+          ],
+          "required_context": [
+            "runtime_update_path"
+          ],
+          "required_path_signals": [
+            "read_function:_read_wrapper",
+            "read_call:wrapper.read_device_status",
+            "state_accessor_call:wrapper.read_device_status",
+            "update_callback_function:_process_device_update"
+          ],
+          "required_runtime_roles": [
+            "runtime_read"
+          ],
+          "reviewer_status": "draft",
+          "rule_id": "tuya:entity_runtime_status_read",
+          "runtime_archetypes": [
+            "cloud_runtime_read",
+            "entity_wrapper_read",
+            "coordinator_update_path"
+          ],
+          "runtime_path_evidence": [
+            "runtime_function:_read_wrapper",
+            "runtime_function:_process_device_update",
+            "runtime_call:read_device_status",
+            "runtime_call:wrapper.read_device_status",
+            "path_signal:read_function:_read_wrapper",
+            "path_signal:read_call:wrapper.read_device_status",
+            "path_signal:state_accessor_call:wrapper.read_device_status",
+            "path_signal:update_callback_function:_process_device_update"
+          ],
+          "source_file_paths": [
+            "data/repo_snapshot/tuya/entity.py"
+          ],
+          "source_unresolved_action_ids": [
+            "A9"
+          ],
+          "strength": "MEDIUM",
+          "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+          "why_not_setup": [
+            "exclude_role:setup:__init__",
+            "exclude_role:runtime_write:_async_send_wrapper_updates",
+            "exclude_role:runtime_write:_async_send_commands",
+            "exclude_role:property_getter:available",
+            "exclude_role:property_getter:device_info",
+            "exclude_path_signal:control_function:_async_send_wrapper_updates",
+            "exclude_path_signal:control_call:self._async_send_commands",
+            "exclude_path_signal:awaited_control_call:self._async_send_commands"
+          ]
+        },
+        {
+          "action_kind": "status",
+          "allow_accessor_fallback": false,
+          "binding_hints": {
+            "boost_target_tokens": [
+              "overnight_strip_1",
+              "tuya:switch.overnight_strip_1.status",
+              "overnight_strip_2",
+              "tuya:switch.overnight_strip_2.status"
+            ],
+            "phase": "RUNTIME",
+            "preferred_action_kinds": [
+              "status",
+              "poll_update"
+            ],
+            "required_service_tokens": []
+          },
+          "call_patterns": [],
+          "confidence": {
+            "base": 0.7,
+            "boost_if_imports": [
+              "__future__",
+              "const",
+              "entity",
+              "homeassistant",
+              "tuya_device_handlers",
+              "tuya_sharing"
+            ],
+            "boost_if_names": [
+              "status",
+              "_process_device_update"
+            ],
+            "emit_threshold": 0.7
+          },
+          "family": "CLOUD_STATUS_CALL",
+          "file_globs": [
+            "tuya/switch.py"
+          ],
+          "forbidden_context": [
+            "setup_function",
+            "dunder_init",
+            "entity_property_getter"
+          ],
+          "forbidden_path_signals": [
+            "setup_function:async_setup_entry",
+            "setup_call:async_add_entities",
+            "setup_call:async_dispatcher_connect",
+            "control_function:async_turn_on",
+            "control_call:self._async_send_wrapper_updates",
+            "awaited_control_call:self._async_send_wrapper_updates",
+            "control_function:async_turn_off",
+            "property_function:is_on"
+          ],
+          "forbidden_runtime_roles": [
+            "runtime_write",
+            "setup",
+            "property_getter",
+            "helper"
+          ],
+          "function_name_patterns": [
+            "_process_device_update"
+          ],
+          "generalization_scope": "file_specific",
+          "generalizes_actions": [
+            "A8",
+            "A9"
+          ],
+          "integration": "tuya",
+          "negative_call_patterns": [
+            "async_discover_device",
+            "async_on_unload",
+            "async_add_entities",
+            "async_dispatcher_connect",
+            "extend",
+            "tuyaswitchentity"
+          ],
+          "negative_evidence": [
+            "negative_function:async_setup_entry",
+            "negative_function:async_turn_on",
+            "negative_function:async_turn_off",
+            "negative_function:is_on",
+            "negative_function:async_discover_device",
+            "negative_call:async_discover_device",
+            "negative_call:async_on_unload",
+            "negative_call:async_add_entities",
+            "negative_call:async_dispatcher_connect",
+            "negative_call:get"
+          ],
+          "negative_function_patterns": [
+            "async_setup_entry",
+            "async_turn_on",
+            "async_turn_off",
+            "is_on",
+            "async_discover_device",
+            "async_set_*"
+          ],
+          "negative_prototypes": [
+            {
+              "call_chains": [
+                "async_discover_device",
+                "entry.async_on_unload",
+                "async_add_entities",
+                "async_dispatcher_connect",
+                "switches.get",
+                "entities.extend",
+                "tuyaswitchentity",
+                "dpcodebooleanwrapper.find_dpcode"
+              ],
+              "call_patterns": [
+                "async_discover_device",
+                "async_on_unload",
+                "async_add_entities",
+                "async_dispatcher_connect",
+                "get",
+                "extend",
+                "tuyaswitchentity",
+                "find_dpcode"
+              ],
+              "file_path": "data/repo_snapshot/tuya/switch.py",
+              "function_name": "async_setup_entry",
+              "path_kind": "setup_path",
+              "path_signals": [
+                "setup_function:async_setup_entry",
+                "setup_call:async_add_entities",
+                "setup_call:async_dispatcher_connect",
+                "connect_call:async_dispatcher_connect"
+              ],
+              "prototype_kind": "negative_setup",
+              "role_hint": "setup",
+              "score": -8,
+              "snippet": "907: \n908: async def async_setup_entry(\n909:     hass: HomeAssistant,\n910:     entry: TuyaConfigEntry,\n911:     async_add_entities: AddConfigEntryEntitiesCallback,\n912: ) -> None:\n913:     \"\"\"Set up tuya sensors dynamically through tuya discovery.\"\"\"\n914:     manager = entry.runtime_data.manager\n915: \n916:     @callback\n917:     def async_discover_device(device_ids: list[str]) -> None:\n918:         \"\"\"Discover and add a discovered tuya sensor.\"\"\"\n919:         entities: list[TuyaSwitchEntity] = []\n920:         for device_id in device_ids:"
+            },
+            {
+              "call_chains": [
+                "self._async_send_wrapper_updates"
+              ],
+              "call_patterns": [
+                "_async_send_wrapper_updates"
+              ],
+              "file_path": "data/repo_snapshot/tuya/switch.py",
+              "function_name": "async_turn_on",
+              "path_kind": "control_path",
+              "path_signals": [
+                "control_function:async_turn_on",
+                "control_call:self._async_send_wrapper_updates",
+                "awaited_control_call:self._async_send_wrapper_updates"
+              ],
+              "prototype_kind": "negative_control",
+              "role_hint": "runtime_write",
+              "score": -12,
+              "snippet": "976: \n977:     async def async_turn_on(self, **kwargs: Any) -> None:\n978:         \"\"\"Turn the switch on.\"\"\"\n979:         await self._async_send_wrapper_updates(self._dpcode_wrapper, True)\n980: \n981:     async def async_turn_off(self, **kwargs: Any) -> None:"
+            },
+            {
+              "call_chains": [
+                "self._async_send_wrapper_updates"
+              ],
+              "call_patterns": [
+                "_async_send_wrapper_updates"
+              ],
+              "file_path": "data/repo_snapshot/tuya/switch.py",
+              "function_name": "async_turn_off",
+              "path_kind": "control_path",
+              "path_signals": [
+                "control_function:async_turn_off",
+                "control_call:self._async_send_wrapper_updates",
+                "awaited_control_call:self._async_send_wrapper_updates"
+              ],
+              "prototype_kind": "negative_control",
+              "role_hint": "runtime_write",
+              "score": -12,
+              "snippet": "980: \n981:     async def async_turn_off(self, **kwargs: Any) -> None:\n982:         \"\"\"Turn the switch off.\"\"\"\n983:         await self._async_send_wrapper_updates(self._dpcode_wrapper, False)"
+            },
+            {
+              "call_chains": [
+                "self._read_wrapper"
+              ],
+              "call_patterns": [
+                "_read_wrapper"
+              ],
+              "file_path": "data/repo_snapshot/tuya/switch.py",
+              "function_name": "is_on",
+              "path_kind": "property_path",
+              "path_signals": [
+                "property_function:is_on",
+                "state_accessor_property:is_on",
+                "state_accessor_call:self._read_wrapper"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "property_getter",
+              "score": -10,
+              "snippet": "958:     @property\n959:     def is_on(self) -> bool | None:\n960:         \"\"\"Return true if switch is on.\"\"\"\n961:         return self._read_wrapper(self._dpcode_wrapper)\n962: \n963:     async def _process_device_update("
+            },
+            {
+              "call_chains": [
+                "async_add_entities",
+                "switches.get",
+                "entities.extend",
+                "tuyaswitchentity",
+                "dpcodebooleanwrapper.find_dpcode"
+              ],
+              "call_patterns": [
+                "async_add_entities",
+                "get",
+                "extend",
+                "tuyaswitchentity",
+                "find_dpcode"
+              ],
+              "file_path": "data/repo_snapshot/tuya/switch.py",
+              "function_name": "async_discover_device",
+              "path_kind": "helper_path",
+              "path_signals": [
+                "setup_call:async_add_entities"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "helper",
+              "score": -4,
+              "snippet": "916:     @callback\n917:     def async_discover_device(device_ids: list[str]) -> None:\n918:         \"\"\"Discover and add a discovered tuya sensor.\"\"\"\n919:         entities: list[TuyaSwitchEntity] = []\n920:         for device_id in device_ids:\n921:             device = manager.device_map[device_id]\n922:             if descriptions := SWITCHES.get(device.category):\n923:                 entities.extend(\n924:                     TuyaSwitchEntity(device, manager, description, dpcode_wrapper)\n925:                     for description in descriptions\n926:                     if (\n927:                         dpcode_wrapper := DPCodeBooleanWrapper.find_dpcode(\n928:                             device, description.key, prefer_function=True\n929:                         )"
+            }
+          ],
+          "origin_action_id": "A9",
+          "origin_cluster_id": "tuya__switch__cloud_status_call__status__cloud",
+          "phase": "RUNTIME",
+          "positive_prototypes": [
+            {
+              "call_chains": [
+                "self._dpcode_wrapper.skip_update"
+              ],
+              "call_patterns": [
+                "skip_update"
+              ],
+              "file_path": "data/repo_snapshot/tuya/switch.py",
+              "function_name": "_process_device_update",
+              "path_kind": "read_path",
+              "path_signals": [
+                "update_callback_function:_process_device_update"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 8,
+              "snippet": "962: \n963:     async def _process_device_update(\n964:         self,\n965:         updated_status_properties: list[str],\n966:         dp_timestamps: dict[str, int] | None,\n967:     ) -> bool:\n968:         \"\"\"Called when Tuya device sends an update with updated properties.\n969: \n970:         Returns True if the Home Assistant state should be written,\n971:         or False if the state write should be skipped.\n972:         \"\"\"\n973:         return not self._dpcode_wrapper.skip_update(\n974:             self.device, updated_status_properties, dp_timestamps\n975:         )"
+            }
+          ],
+          "preferred_runtime_roles": [
+            "runtime_read"
+          ],
+          "required_context": [
+            "runtime_update_path"
+          ],
+          "required_path_signals": [
+            "update_callback_function:_process_device_update"
+          ],
+          "required_runtime_roles": [
+            "runtime_read"
+          ],
+          "reviewer_status": "draft",
+          "rule_id": "tuya:switch_runtime_status_read",
+          "runtime_archetypes": [
+            "cloud_runtime_read",
+            "entity_wrapper_read",
+            "coordinator_update_path"
+          ],
+          "runtime_path_evidence": [
+            "runtime_function:_process_device_update",
+            "runtime_call:skip_update",
+            "runtime_call:self._dpcode_wrapper.skip_update",
+            "path_signal:update_callback_function:_process_device_update",
+            "path_signal:read_function:_read_wrapper",
+            "path_signal:read_call:wrapper.read_device_status",
+            "path_signal:state_accessor_call:wrapper.read_device_status"
+          ],
+          "source_file_paths": [
+            "data/repo_snapshot/tuya/switch.py"
+          ],
+          "source_unresolved_action_ids": [
+            "A9"
+          ],
+          "strength": "MEDIUM",
+          "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+          "why_not_setup": [
+            "exclude_role:setup:async_setup_entry",
+            "exclude_role:runtime_write:async_turn_on",
+            "exclude_role:runtime_write:async_turn_off",
+            "exclude_role:property_getter:is_on",
+            "exclude_role:helper:async_discover_device",
+            "exclude_path_signal:setup_function:async_setup_entry",
+            "exclude_path_signal:setup_call:async_add_entities",
+            "exclude_path_signal:setup_call:async_dispatcher_connect"
+          ]
+        }
+      ],
+      "schema_version": "m1_grounding_profile/v3",
+      "version": "draft_llm_v3"
+    },
+    {
+      "integration": "xiaomi_ble",
+      "runtime_families": [
+        {
+          "action_kind": "read_sensor",
+          "allow_accessor_fallback": false,
+          "binding_hints": {
+            "boost_target_tokens": [
+              "ble:switchbot:overnight_front_door",
+              "overnight_front_door",
+              "switchbot",
+              "ble:switchbot:overnight_bedroom_window",
+              "overnight_bedroom_window"
+            ],
+            "phase": "RUNTIME",
+            "preferred_action_kinds": [
+              "control",
+              "read_sensor"
+            ],
+            "required_service_tokens": []
+          },
+          "call_patterns": [
+            "poll_needed",
+            "data.poll_needed"
+          ],
+          "confidence": {
+            "base": 0.7,
+            "boost_if_imports": [
+              "__future__",
+              "const",
+              "coordinator",
+              "functools",
+              "homeassistant",
+              "logging"
+            ],
+            "boost_if_names": [
+              "read_sensor",
+              "_needs_poll",
+              "process_service_info",
+              "poll_needed",
+              "data.poll_needed"
+            ],
+            "emit_threshold": 0.7
+          },
+          "family": "BLE_OP",
+          "file_globs": [
+            "xiaomi_ble/__init__.py"
+          ],
+          "forbidden_context": [
+            "dunder_init"
+          ],
+          "forbidden_path_signals": [
+            "setup_function:async_setup_entry",
+            "control_function:async_turn_on",
+            "control_function:async_turn_off",
+            "control_function:async_open_cover",
+            "control_function:async_close_cover",
+            "control_function:async_set_cover_position",
+            "control_function:set_state",
+            "state_accessor_property:state"
+          ],
+          "forbidden_runtime_roles": [
+            "runtime_write",
+            "setup",
+            "property_getter",
+            "helper"
+          ],
+          "function_name_patterns": [
+            "_needs_poll",
+            "process_service_info"
+          ],
+          "generalization_scope": "file_specific",
+          "generalizes_actions": [
+            "A4",
+            "A5"
+          ],
+          "integration": "xiaomi_ble",
+          "negative_call_patterns": [
+            "xiaomibluetoothdevicedata",
+            "async_get",
+            "xiaomiactivebluetoothprocessorcoordinator",
+            "async_on_unload",
+            "fromhex",
+            "async_forward_entry_setups"
+          ],
+          "negative_evidence": [
+            "negative_function:async_setup_entry",
+            "negative_function:format_event_dispatcher_name",
+            "negative_call:xiaomibluetoothdevicedata",
+            "negative_call:async_get",
+            "negative_call:xiaomiactivebluetoothprocessorcoordinator",
+            "negative_call:async_on_unload",
+            "negative_call:get",
+            "negative_call:fromhex",
+            "negative_call:async_forward_entry_setups",
+            "negative_call:async_start"
+          ],
+          "negative_function_patterns": [
+            "async_setup_entry",
+            "format_event_dispatcher_name",
+            "async_turn_on",
+            "async_turn_off",
+            "async_set_*",
+            "async_open_*"
+          ],
+          "negative_prototypes": [
+            {
+              "call_chains": [
+                "xiaomibluetoothdevicedata",
+                "dr.async_get",
+                "xiaomiactivebluetoothprocessorcoordinator",
+                "entry.async_on_unload",
+                "entry.data.get",
+                "bytes.fromhex",
+                "hass.config_entries.async_forward_entry_setups",
+                "coordinator.async_start"
+              ],
+              "call_patterns": [
+                "xiaomibluetoothdevicedata",
+                "async_get",
+                "xiaomiactivebluetoothprocessorcoordinator",
+                "async_on_unload",
+                "get",
+                "fromhex",
+                "async_forward_entry_setups",
+                "async_start"
+              ],
+              "file_path": "data/repo_snapshot/xiaomi_ble/__init__.py",
+              "function_name": "async_setup_entry",
+              "path_kind": "setup_path",
+              "path_signals": [
+                "setup_function:async_setup_entry",
+                "read_function:async_setup_entry",
+                "read_call:data.poll_needed"
+              ],
+              "prototype_kind": "negative_setup",
+              "role_hint": "setup",
+              "score": -18,
+              "snippet": "121: \n122: async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:\n123:     \"\"\"Set up Xiaomi BLE device from a config entry.\"\"\"\n124:     address = entry.unique_id\n125:     assert address is not None\n126: \n127:     kwargs = {}\n128:     if bindkey := entry.data.get(\"bindkey\"):\n129:         kwargs[\"bindkey\"] = bytes.fromhex(bindkey)\n130:     data = XiaomiBluetoothDeviceData(**kwargs)\n131: \n132:     def _needs_poll(\n133:         service_info: BluetoothServiceInfoBleak, last_poll: float | None\n134:     ) -> bool:"
+            },
+            {
+              "call_chains": [],
+              "call_patterns": [],
+              "file_path": "data/repo_snapshot/xiaomi_ble/__init__.py",
+              "function_name": "format_event_dispatcher_name",
+              "path_kind": "helper_path",
+              "path_signals": [],
+              "prototype_kind": "negative_helper",
+              "role_hint": "helper",
+              "score": -4,
+              "snippet": "111: \n112: def format_event_dispatcher_name(address: str, event_class: str) -> str:\n113:     \"\"\"Format an event dispatcher name.\"\"\"\n114:     return f\"{DOMAIN}_event_{address}_{event_class}\"\n115: \n116:"
+            }
+          ],
+          "origin_action_id": null,
+          "origin_cluster_id": "xiaomi_ble____init____ble_op__read_sensor__ble",
+          "phase": "RUNTIME",
+          "positive_prototypes": [
+            {
+              "call_chains": [
+                "data.poll_needed",
+                "bool",
+                "async_ble_device_from_address"
+              ],
+              "call_patterns": [
+                "poll_needed",
+                "bool",
+                "async_ble_device_from_address"
+              ],
+              "file_path": "data/repo_snapshot/xiaomi_ble/__init__.py",
+              "function_name": "_needs_poll",
+              "path_kind": "read_path",
+              "path_signals": [
+                "read_function:_needs_poll",
+                "read_call:data.poll_needed"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 8,
+              "snippet": "131: \n132:     def _needs_poll(\n133:         service_info: BluetoothServiceInfoBleak, last_poll: float | None\n134:     ) -> bool:\n135:         # Only poll if hass is running, we need to poll,\n136:         # and we actually have a way to connect to the device\n137:         return (\n138:             hass.state is CoreState.running\n139:             and data.poll_needed(service_info, last_poll)\n140:             and bool(\n141:                 async_ble_device_from_address(\n142:                     hass, service_info.device.address, connectable=True\n143:                 )\n144:             )"
+            },
+            {
+              "call_chains": [
+                "data.update",
+                "entry.data.get",
+                "hass.config_entries.async_update_entry",
+                "update.events.items",
+                "entry.async_start_reauth",
+                "device_registry.async_get_or_create",
+                "xiaomibleevent",
+                "hass.bus.async_fire"
+              ],
+              "call_patterns": [
+                "update",
+                "get",
+                "async_update_entry",
+                "items",
+                "async_start_reauth",
+                "async_get_or_create",
+                "xiaomibleevent",
+                "async_fire"
+              ],
+              "file_path": "data/repo_snapshot/xiaomi_ble/__init__.py",
+              "function_name": "process_service_info",
+              "path_kind": "read_path",
+              "path_signals": [
+                "refresh_call:data.update"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 8,
+              "snippet": "38: \n39: def process_service_info(\n40:     hass: HomeAssistant,\n41:     entry: XiaomiBLEConfigEntry,\n42:     device_registry: DeviceRegistry,\n43:     service_info: BluetoothServiceInfoBleak,\n44: ) -> SensorUpdate:\n45:     \"\"\"Process a BluetoothServiceInfoBleak, running side effects and returning sensor data.\"\"\"\n46:     coordinator = entry.runtime_data\n47:     data = coordinator.device_data\n48:     update = data.update(service_info)\n49:     discovered_event_classes = coordinator.discovered_event_classes\n50:     if entry.data.get(CONF_SLEEPY_DEVICE, False) != data.sleepy_device:\n51:         hass.config_entries.async_update_entry("
+            }
+          ],
+          "preferred_runtime_roles": [
+            "runtime_read"
+          ],
+          "required_context": [
+            "runtime_path"
+          ],
+          "required_path_signals": [
+            "read_function:_needs_poll",
+            "read_call:data.poll_needed",
+            "refresh_call:data.update"
+          ],
+          "required_runtime_roles": [
+            "runtime_read"
+          ],
+          "reviewer_status": "draft",
+          "rule_id": "xiaomi_ble:__init___runtime_read_sensor_control",
+          "runtime_archetypes": [
+            "ble_runtime_read"
+          ],
+          "runtime_path_evidence": [
+            "runtime_function:_needs_poll",
+            "runtime_function:process_service_info",
+            "runtime_call:poll_needed",
+            "runtime_call:bool",
+            "runtime_call:async_ble_device_from_address",
+            "runtime_call:data.poll_needed",
+            "runtime_call:update",
+            "runtime_call:get",
+            "runtime_call:async_update_entry",
+            "runtime_call:items"
+          ],
+          "source_file_paths": [
+            "data/repo_snapshot/xiaomi_ble/__init__.py"
+          ],
+          "source_unresolved_action_ids": [
+            "A4",
+            "A5"
+          ],
+          "strength": "MEDIUM",
+          "why_not_more_general": "same runtime idiom appears in one file across multiple unresolved actions",
+          "why_not_setup": [
+            "exclude_role:setup:async_setup_entry",
+            "exclude_role:helper:format_event_dispatcher_name",
+            "exclude_path_signal:setup_function:async_setup_entry",
+            "exclude_control_path_for_read_like_action"
+          ]
+        },
+        {
+          "action_kind": "read_sensor",
+          "allow_accessor_fallback": false,
+          "binding_hints": {
+            "boost_target_tokens": [
+              "ble:switchbot:overnight_front_door",
+              "overnight_front_door",
+              "switchbot",
+              "ble:switchbot:overnight_bedroom_window",
+              "overnight_bedroom_window"
+            ],
+            "phase": "RUNTIME",
+            "preferred_action_kinds": [
+              "control",
+              "read_sensor"
+            ],
+            "required_service_tokens": []
+          },
+          "call_patterns": [],
+          "confidence": {
+            "base": 0.7,
+            "boost_if_imports": [
+              "__future__",
+              "coordinator",
+              "device",
+              "homeassistant",
+              "types",
+              "xiaomi_ble"
+            ],
+            "boost_if_names": [
+              "read_sensor",
+              "sensor_update_to_bluetooth_data_update"
+            ],
+            "emit_threshold": 0.7
+          },
+          "family": "BLE_OP",
+          "file_globs": [
+            "xiaomi_ble/binary_sensor.py"
+          ],
+          "forbidden_context": [
+            "dunder_init"
+          ],
+          "forbidden_path_signals": [
+            "setup_function:async_setup_entry",
+            "property_function:is_on",
+            "property_function:available",
+            "control_function:async_turn_on",
+            "control_function:async_turn_off",
+            "control_function:async_open_cover",
+            "control_function:async_close_cover",
+            "control_function:async_set_cover_position"
+          ],
+          "forbidden_runtime_roles": [
+            "runtime_write",
+            "setup",
+            "property_getter",
+            "helper"
+          ],
+          "function_name_patterns": [
+            "sensor_update_to_bluetooth_data_update"
+          ],
+          "generalization_scope": "file_specific",
+          "generalizes_actions": [
+            "A4",
+            "A5"
+          ],
+          "integration": "xiaomi_ble",
+          "negative_call_patterns": [
+            "xiaomipassivebluetoothdataprocessor",
+            "async_on_unload",
+            "async_add_entities_listener",
+            "async_register_processor",
+            "entry.async_on_unload",
+            "processor.async_add_entities_listener"
+          ],
+          "negative_evidence": [
+            "negative_function:async_setup_entry",
+            "negative_function:is_on",
+            "negative_function:available",
+            "negative_call:xiaomipassivebluetoothdataprocessor",
+            "negative_call:async_on_unload",
+            "negative_call:async_add_entities_listener",
+            "negative_call:async_register_processor",
+            "negative_call:entry.async_on_unload",
+            "negative_call:processor.async_add_entities_listener",
+            "negative_call:coordinator.async_register_processor"
+          ],
+          "negative_function_patterns": [
+            "async_setup_entry",
+            "is_on",
+            "available",
+            "async_turn_on",
+            "async_turn_off",
+            "async_set_*"
+          ],
+          "negative_prototypes": [
+            {
+              "call_chains": [
+                "xiaomipassivebluetoothdataprocessor",
+                "entry.async_on_unload",
+                "processor.async_add_entities_listener",
+                "coordinator.async_register_processor"
+              ],
+              "call_patterns": [
+                "xiaomipassivebluetoothdataprocessor",
+                "async_on_unload",
+                "async_add_entities_listener",
+                "async_register_processor"
+              ],
+              "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+              "function_name": "async_setup_entry",
+              "path_kind": "setup_path",
+              "path_signals": [
+                "setup_function:async_setup_entry",
+                "subscription_call:processor.async_add_entities_listener",
+                "service_registration_call:coordinator.async_register_processor"
+              ],
+              "prototype_kind": "negative_setup",
+              "role_hint": "setup",
+              "score": -8,
+              "snippet": "134: \n135: async def async_setup_entry(\n136:     hass: HomeAssistant,\n137:     entry: XiaomiBLEConfigEntry,\n138:     async_add_entities: AddConfigEntryEntitiesCallback,\n139: ) -> None:\n140:     \"\"\"Set up the Xiaomi BLE sensors.\"\"\"\n141:     coordinator = entry.runtime_data\n142:     processor = XiaomiPassiveBluetoothDataProcessor(\n143:         sensor_update_to_bluetooth_data_update\n144:     )\n145:     entry.async_on_unload(\n146:         processor.async_add_entities_listener(\n147:             XiaomiBluetoothSensorEntity, async_add_entities"
+            },
+            {
+              "call_chains": [
+                "self.processor.entity_data.get"
+              ],
+              "call_patterns": [
+                "get"
+              ],
+              "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+              "function_name": "is_on",
+              "path_kind": "property_path",
+              "path_signals": [
+                "property_function:is_on"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "property_getter",
+              "score": -10,
+              "snippet": "161:     @property\n162:     def is_on(self) -> bool | None:\n163:         \"\"\"Return the native value.\"\"\"\n164:         return self.processor.entity_data.get(self.entity_key)\n165: \n166:     @property"
+            },
+            {
+              "call_chains": [],
+              "call_patterns": [],
+              "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+              "function_name": "available",
+              "path_kind": "property_path",
+              "path_signals": [
+                "property_function:available"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "property_getter",
+              "score": -10,
+              "snippet": "166:     @property\n167:     def available(self) -> bool:\n168:         \"\"\"Return True if entity is available.\"\"\"\n169:         return self.processor.coordinator.sleepy_device or super().available"
+            }
+          ],
+          "origin_action_id": null,
+          "origin_cluster_id": "xiaomi_ble__binary_sensor__ble_op__read_sensor__ble",
+          "phase": "RUNTIME",
+          "positive_prototypes": [
+            {
+              "call_chains": [
+                "passivebluetoothdataupdate",
+                "sensor_device_info_to_hass_device_info",
+                "device_key_to_bluetooth_entity_key",
+                "sensor_update.devices.items",
+                "sensor_update.binary_entity_descriptions.items",
+                "sensor_update.binary_entity_values.items"
+              ],
+              "call_patterns": [
+                "passivebluetoothdataupdate",
+                "sensor_device_info_to_hass_device_info",
+                "device_key_to_bluetooth_entity_key",
+                "items"
+              ],
+              "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+              "function_name": "sensor_update_to_bluetooth_data_update",
+              "path_kind": "read_path",
+              "path_signals": [],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_read",
+              "score": 6,
+              "snippet": "107: \n108: def sensor_update_to_bluetooth_data_update(\n109:     sensor_update: SensorUpdate,\n110: ) -> PassiveBluetoothDataUpdate[bool | None]:\n111:     \"\"\"Convert a sensor update to a bluetooth data update.\"\"\"\n112:     return PassiveBluetoothDataUpdate(\n113:         devices={\n114:             device_id: sensor_device_info_to_hass_device_info(device_info)\n115:             for device_id, device_info in sensor_update.devices.items()\n116:         },\n117:         entity_descriptions={\n118:             device_key_to_bluetooth_entity_key(device_key): BINARY_SENSOR_DESCRIPTIONS[\n119:                 description.device_class\n120:             ]"
+            }
+          ],
+          "preferred_runtime_roles": [
+            "runtime_read"
+          ],
+          "required_context": [
+            "runtime_path"
+          ],
+          "required_path_signals": [],
+          "required_runtime_roles": [
+            "runtime_read"
+          ],
+          "reviewer_status": "draft",
+          "rule_id": "xiaomi_ble:binary_sensor_runtime_read_sensor_control",
+          "runtime_archetypes": [
+            "ble_runtime_read"
+          ],
+          "runtime_path_evidence": [
+            "runtime_function:sensor_update_to_bluetooth_data_update",
+            "runtime_call:passivebluetoothdataupdate",
+            "runtime_call:sensor_device_info_to_hass_device_info",
+            "runtime_call:device_key_to_bluetooth_entity_key",
+            "runtime_call:items",
+            "runtime_call:sensor_update.devices.items",
+            "runtime_call:sensor_update.binary_entity_descriptions.items",
+            "runtime_call:sensor_update.binary_entity_values.items",
+            "path_signal:refresh_call:data.update",
+            "path_signal:read_function:_needs_poll"
+          ],
+          "source_file_paths": [
+            "data/repo_snapshot/xiaomi_ble/binary_sensor.py"
+          ],
+          "source_unresolved_action_ids": [
+            "A4",
+            "A5"
+          ],
+          "strength": "MEDIUM",
+          "why_not_more_general": "same runtime idiom appears in one file across multiple unresolved actions",
+          "why_not_setup": [
+            "exclude_role:setup:async_setup_entry",
+            "exclude_role:property_getter:is_on",
+            "exclude_role:property_getter:available",
+            "exclude_path_signal:setup_function:async_setup_entry",
+            "exclude_path_signal:property_function:is_on",
+            "exclude_path_signal:property_function:available",
+            "exclude_control_path_for_read_like_action"
+          ]
+        },
+        {
+          "action_kind": "read_sensor",
+          "allow_accessor_fallback": false,
+          "binding_hints": {
+            "boost_target_tokens": [
+              "ble:switchbot:overnight_front_door",
+              "overnight_front_door",
+              "switchbot",
+              "ble:switchbot:overnight_bedroom_window",
+              "overnight_bedroom_window"
+            ],
+            "phase": "RUNTIME",
+            "preferred_action_kinds": [
+              "control",
+              "read_sensor"
+            ],
+            "required_service_tokens": []
+          },
+          "call_patterns": [],
+          "confidence": {
+            "base": 0.7,
+            "boost_if_imports": [
+              "__future__",
+              "const",
+              "dataclasses",
+              "homeassistant",
+              "types"
+            ],
+            "boost_if_names": [
+              "read_sensor",
+              "_async_handle_event"
+            ],
+            "emit_threshold": 0.7
+          },
+          "family": "BLE_OP",
+          "file_globs": [
+            "xiaomi_ble/event.py"
+          ],
+          "forbidden_context": [
+            "dunder_init"
+          ],
+          "forbidden_path_signals": [
+            "setup_function:async_setup_entry",
+            "setup_call:async_add_entities",
+            "setup_call:async_dispatcher_connect",
+            "control_function:async_turn_on",
+            "control_function:async_turn_off",
+            "control_function:async_open_cover",
+            "control_function:async_close_cover",
+            "control_function:async_set_cover_position"
+          ],
+          "forbidden_runtime_roles": [
+            "runtime_write",
+            "setup",
+            "property_getter",
+            "helper"
+          ],
+          "function_name_patterns": [
+            "_async_handle_event"
+          ],
+          "generalization_scope": "file_specific",
+          "generalizes_actions": [
+            "A4",
+            "A5"
+          ],
+          "integration": "xiaomi_ble",
+          "negative_call_patterns": [
+            "async_get",
+            "async_add_entities",
+            "async_on_unload",
+            "async_dispatcher_connect",
+            "xiaomievententity",
+            "format_discovered_event_class"
+          ],
+          "negative_evidence": [
+            "negative_function:async_setup_entry",
+            "negative_function:_async_discovered_event_class",
+            "negative_function:async_added_to_hass",
+            "negative_call:async_get",
+            "negative_call:async_add_entities",
+            "negative_call:async_on_unload",
+            "negative_call:async_dispatcher_connect",
+            "negative_call:xiaomievententity",
+            "negative_call:format_discovered_event_class",
+            "negative_call:async_entries_for_config_entry"
+          ],
+          "negative_function_patterns": [
+            "async_setup_entry",
+            "_async_discovered_event_class",
+            "async_added_to_hass",
+            "async_turn_on",
+            "async_turn_off",
+            "async_set_*"
+          ],
+          "negative_prototypes": [
+            {
+              "call_chains": [
+                "er.async_get",
+                "async_add_entities",
+                "entry.async_on_unload",
+                "async_dispatcher_connect",
+                "xiaomievententity",
+                "format_discovered_event_class",
+                "er.async_entries_for_config_entry",
+                "ent_reg_entry.unique_id.partition"
+              ],
+              "call_patterns": [
+                "async_get",
+                "async_add_entities",
+                "async_on_unload",
+                "async_dispatcher_connect",
+                "xiaomievententity",
+                "format_discovered_event_class",
+                "async_entries_for_config_entry",
+                "partition"
+              ],
+              "file_path": "data/repo_snapshot/xiaomi_ble/event.py",
+              "function_name": "async_setup_entry",
+              "path_kind": "setup_path",
+              "path_signals": [
+                "setup_function:async_setup_entry",
+                "setup_call:async_add_entities",
+                "setup_call:async_dispatcher_connect",
+                "connect_call:async_dispatcher_connect"
+              ],
+              "prototype_kind": "negative_setup",
+              "role_hint": "setup",
+              "score": -18,
+              "snippet": "182: \n183: async def async_setup_entry(\n184:     hass: HomeAssistant,\n185:     entry: XiaomiBLEConfigEntry,\n186:     async_add_entities: AddConfigEntryEntitiesCallback,\n187: ) -> None:\n188:     \"\"\"Set up Xiaomi event.\"\"\"\n189:     coordinator = entry.runtime_data\n190:     address = coordinator.address\n191:     ent_reg = er.async_get(hass)\n192:     async_add_entities(\n193:         # Matches logic in PassiveBluetoothProcessorEntity\n194:         XiaomiEventEntity(address_event_class[0], address_event_class[2], None)\n195:         for ent_reg_entry in er.async_entries_for_config_entry(ent_reg, entry.entry_id)"
+            },
+            {
+              "call_chains": [
+                "async_add_entities",
+                "xiaomievententity"
+              ],
+              "call_patterns": [
+                "async_add_entities",
+                "xiaomievententity"
+              ],
+              "file_path": "data/repo_snapshot/xiaomi_ble/event.py",
+              "function_name": "_async_discovered_event_class",
+              "path_kind": "helper_path",
+              "path_signals": [
+                "setup_call:async_add_entities"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "helper",
+              "score": -4,
+              "snippet": "200:     @callback\n201:     def _async_discovered_event_class(event_class: str, event: XiaomiBleEvent) -> None:\n202:         \"\"\"Handle a newly discovered event class with or without a postfix.\"\"\"\n203:         async_add_entities([XiaomiEventEntity(address, event_class, event)])\n204: \n205:     entry.async_on_unload("
+            },
+            {
+              "call_chains": [
+                "self.async_on_remove",
+                "async_added_to_hass",
+                "async_dispatcher_connect",
+                "super"
+              ],
+              "call_patterns": [
+                "async_on_remove",
+                "async_added_to_hass",
+                "async_dispatcher_connect",
+                "super"
+              ],
+              "file_path": "data/repo_snapshot/xiaomi_ble/event.py",
+              "function_name": "async_added_to_hass",
+              "path_kind": "connect_path",
+              "path_signals": [
+                "setup_call:async_dispatcher_connect",
+                "connect_call:async_dispatcher_connect"
+              ],
+              "prototype_kind": "negative_helper",
+              "role_hint": "runtime_connect",
+              "score": 5,
+              "snippet": "165: \n166:     async def async_added_to_hass(self) -> None:\n167:         \"\"\"Entity added to hass.\"\"\"\n168:         await super().async_added_to_hass()\n169:         self.async_on_remove(\n170:             async_dispatcher_connect(\n171:                 self.hass,\n172:                 self._update_signal,\n173:                 self._async_handle_event,\n174:             )\n175:         )\n176: \n177:     @callback"
+            }
+          ],
+          "origin_action_id": null,
+          "origin_cluster_id": "xiaomi_ble__event__ble_op__read_sensor__ble",
+          "phase": "RUNTIME",
+          "positive_prototypes": [
+            {
+              "call_chains": [
+                "self._trigger_event",
+                "self.async_write_ha_state"
+              ],
+              "call_patterns": [
+                "_trigger_event",
+                "async_write_ha_state"
+              ],
+              "file_path": "data/repo_snapshot/xiaomi_ble/event.py",
+              "function_name": "_async_handle_event",
+              "path_kind": "control_path",
+              "path_signals": [
+                "update_callback_function:_async_handle_event",
+                "state_write_function:_async_handle_event",
+                "read_function:_async_handle_event",
+                "state_write_call:self.async_write_ha_state"
+              ],
+              "prototype_kind": "positive",
+              "role_hint": "runtime_write",
+              "score": 16,
+              "snippet": "177:     @callback\n178:     def _async_handle_event(self, event: XiaomiBleEvent) -> None:\n179:         self._trigger_event(event[EVENT_TYPE], event[EVENT_PROPERTIES])\n180:         self.async_write_ha_state()\n181: \n182:"
+            }
+          ],
+          "preferred_runtime_roles": [
+            "runtime_read"
+          ],
+          "required_context": [
+            "runtime_path"
+          ],
+          "required_path_signals": [
+            "update_callback_function:_async_handle_event",
+            "state_write_function:_async_handle_event",
+            "read_function:_async_handle_event",
+            "state_write_call:self.async_write_ha_state"
+          ],
+          "required_runtime_roles": [
+            "runtime_read"
+          ],
+          "reviewer_status": "draft",
+          "rule_id": "xiaomi_ble:event_runtime_read_sensor_control",
+          "runtime_archetypes": [
+            "ble_runtime_read"
+          ],
+          "runtime_path_evidence": [
+            "runtime_function:_async_handle_event",
+            "runtime_call:_trigger_event",
+            "runtime_call:async_write_ha_state",
+            "runtime_call:self._trigger_event",
+            "runtime_call:self.async_write_ha_state",
+            "path_signal:update_callback_function:_async_handle_event",
+            "path_signal:state_write_function:_async_handle_event",
+            "path_signal:read_function:_async_handle_event",
+            "path_signal:state_write_call:self.async_write_ha_state",
+            "path_signal:refresh_call:data.update"
+          ],
+          "source_file_paths": [
+            "data/repo_snapshot/xiaomi_ble/event.py"
+          ],
+          "source_unresolved_action_ids": [
+            "A4",
+            "A5"
+          ],
+          "strength": "MEDIUM",
+          "why_not_more_general": "same runtime idiom appears in one file across multiple unresolved actions",
+          "why_not_setup": [
+            "exclude_role:setup:async_setup_entry",
+            "exclude_role:helper:_async_discovered_event_class",
+            "exclude_path_signal:setup_function:async_setup_entry",
+            "exclude_path_signal:setup_call:async_add_entities",
+            "exclude_path_signal:setup_call:async_dispatcher_connect",
+            "exclude_control_path_for_read_like_action"
+          ]
+        }
+      ],
+      "schema_version": "m1_grounding_profile/v3",
+      "version": "draft_llm_v3"
+    }
+  ],
+  "generated_at": "2026-04-12T13:50:36.640846+00:00",
+  "heuristic_baseline_proposal_count": 15,
+  "llm_request": {
+    "base_url": "http://127.0.0.1:9",
+    "max_attempts": 0,
+    "mode": "per_cluster_refine",
+    "model": "gpt-5",
+    "retry_backoff_s": 0.5,
+    "timeout_s": 45
+  },
+  "prompt_version": "m1_detector_builder_prompt/v3",
+  "proposal_count": 15,
+  "proposal_items": [
+    {
+      "family": "BLE_OP",
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A1"
+      ],
+      "integration": "airthings_ble",
+      "llm_decision": "heuristic_accept",
+      "origin_action_id": "A1",
+      "origin_cluster_id": "airthings_ble__config_flow__ble_op__read_sensor__ble",
+      "proposal_rule_id": "airthings_ble:config_flow_runtime_read_sensor_control"
+    },
+    {
+      "family": "BLE_OP",
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A1"
+      ],
+      "integration": "airthings_ble",
+      "llm_decision": "heuristic_accept",
+      "origin_action_id": "A1",
+      "origin_cluster_id": "airthings_ble__coordinator__ble_op__read_sensor__ble",
+      "proposal_rule_id": "airthings_ble:coordinator_runtime_read_sensor_control"
+    },
+    {
+      "family": "CLOUD_STATUS_CALL",
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A6",
+        "A7"
+      ],
+      "integration": "ecobee",
+      "llm_decision": "heuristic_accept",
+      "origin_action_id": null,
+      "origin_cluster_id": "ecobee__climate__cloud_status_call__read_runtime__cloud",
+      "proposal_rule_id": "ecobee:climate_runtime_status_read"
+    },
+    {
+      "family": "LOCAL_API_READ",
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A11",
+        "A12"
+      ],
+      "integration": "hue",
+      "llm_decision": "heuristic_accept",
+      "origin_action_id": null,
+      "origin_cluster_id": "hue__binary_sensor__local_api_read__get_state__local",
+      "proposal_rule_id": "hue:binary_sensor_local_api_read"
+    },
+    {
+      "family": "LOCAL_API_READ",
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A11",
+        "A12"
+      ],
+      "integration": "hue",
+      "llm_decision": "heuristic_accept",
+      "origin_action_id": null,
+      "origin_cluster_id": "hue__entity__local_api_read__get_state__local",
+      "proposal_rule_id": "hue:entity_local_api_read"
+    },
+    {
+      "family": "LOCAL_API_READ",
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A11",
+        "A12"
+      ],
+      "integration": "hue",
+      "llm_decision": "heuristic_accept",
+      "origin_action_id": null,
+      "origin_cluster_id": "hue__group__local_api_read__get_state__local",
+      "proposal_rule_id": "hue:group_local_api_read"
+    },
+    {
+      "family": "CLOUD_STATUS_CALL",
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A10"
+      ],
+      "integration": "netatmo",
+      "llm_decision": "heuristic_accept",
+      "origin_action_id": "A10",
+      "origin_cluster_id": "netatmo__sensor__cloud_status_call__read_runtime__cloud",
+      "proposal_rule_id": "netatmo:sensor_runtime_status_read"
+    },
+    {
+      "family": "BLE_OP",
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A2",
+        "A3"
+      ],
+      "integration": "ruuvitag_ble",
+      "llm_decision": "heuristic_accept",
+      "origin_action_id": null,
+      "origin_cluster_id": "ruuvitag_ble__sensor__ble_op__read_sensor__ble",
+      "proposal_rule_id": "ruuvitag_ble:sensor_runtime_read_sensor_control"
+    },
+    {
+      "family": "STATE_WRITE",
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A15"
+      ],
+      "integration": "tplink",
+      "llm_decision": "heuristic_accept",
+      "origin_action_id": "A15",
+      "origin_cluster_id": "tplink__entity__state_write__write__ha",
+      "proposal_rule_id": "tplink:entity_runtime_writeback"
+    },
+    {
+      "family": "CLOUD_STATUS_CALL",
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A8",
+        "A9"
+      ],
+      "integration": "tuya",
+      "llm_decision": "heuristic_accept",
+      "origin_action_id": "A9",
+      "origin_cluster_id": "tuya____init____cloud_status_call__status__cloud",
+      "proposal_rule_id": "tuya:__init___runtime_status_read"
+    },
+    {
+      "family": "CLOUD_STATUS_CALL",
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A8",
+        "A9"
+      ],
+      "integration": "tuya",
+      "llm_decision": "heuristic_accept",
+      "origin_action_id": "A9",
+      "origin_cluster_id": "tuya__entity__cloud_status_call__status__cloud",
+      "proposal_rule_id": "tuya:entity_runtime_status_read"
+    },
+    {
+      "family": "CLOUD_STATUS_CALL",
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A8",
+        "A9"
+      ],
+      "integration": "tuya",
+      "llm_decision": "heuristic_accept",
+      "origin_action_id": "A9",
+      "origin_cluster_id": "tuya__switch__cloud_status_call__status__cloud",
+      "proposal_rule_id": "tuya:switch_runtime_status_read"
+    },
+    {
+      "family": "BLE_OP",
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A4",
+        "A5"
+      ],
+      "integration": "xiaomi_ble",
+      "llm_decision": "heuristic_accept",
+      "origin_action_id": null,
+      "origin_cluster_id": "xiaomi_ble____init____ble_op__read_sensor__ble",
+      "proposal_rule_id": "xiaomi_ble:__init___runtime_read_sensor_control"
+    },
+    {
+      "family": "BLE_OP",
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A4",
+        "A5"
+      ],
+      "integration": "xiaomi_ble",
+      "llm_decision": "heuristic_accept",
+      "origin_action_id": null,
+      "origin_cluster_id": "xiaomi_ble__binary_sensor__ble_op__read_sensor__ble",
+      "proposal_rule_id": "xiaomi_ble:binary_sensor_runtime_read_sensor_control"
+    },
+    {
+      "family": "BLE_OP",
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A4",
+        "A5"
+      ],
+      "integration": "xiaomi_ble",
+      "llm_decision": "heuristic_accept",
+      "origin_action_id": null,
+      "origin_cluster_id": "xiaomi_ble__event__ble_op__read_sensor__ble",
+      "proposal_rule_id": "xiaomi_ble:event_runtime_read_sensor_control"
+    }
+  ],
+  "request_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "schema_version": "m1_detector_draft/v3",
+  "source_report_sha256": "ed8e0a661e924ad739613f447f059d55c0541123677659c42a322ce05191b39d",
+  "source_report_version": "m1_unresolved_grounding_report/v3",
+  "workflow": {
+    "mode": "offline_llm_assisted_then_deterministic_execute",
+    "next_step": "Review detector_profile_drafts, then pass resulting JSON via validation.grounding_profile_paths."
+  }
+}

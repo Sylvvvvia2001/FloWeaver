@@ -1,0 +1,9 @@
+{
+  "codeowners": [],
+  "dependencies": [],
+  "documentation": "https://example.invalid/vibeaura/vdev",
+  "domain": "vdev_vdev_leave_home_safety_sweep_profile_01",
+  "name": "Leave-Home Safety Sweep Profile Coverage",
+  "requirements": [],
+  "version": "0.1.0"
+}

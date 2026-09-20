@@ -1,0 +1,9 @@
+{
+  "codeowners": [],
+  "dependencies": [],
+  "documentation": "https://example.invalid/vibeaura/vdev",
+  "domain": "vdev_vdev_arrive_home_lighting_climate_prep_01",
+  "name": "Arrive-Home Lighting and Climate Prep",
+  "requirements": [],
+  "version": "0.1.0"
+}

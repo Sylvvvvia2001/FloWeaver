@@ -1,0 +1,27 @@
+{
+  "auto_hardening": {
+    "naive_topo_check_only": {
+      "hardening_reason": "insufficient_coverage",
+      "hardening_state": "SOFT"
+    }
+  },
+  "rollback": {
+    "final_counterexample_count": 0,
+    "iterations": 0,
+    "log": [],
+    "max_steps": 6,
+    "priority_chain": [
+      "reduce_parallelism",
+      "disable_session_reuse",
+      "disable_batching",
+      "enforce_min_gap_no_overlap",
+      "rule_patch",
+      "constraint_patch"
+    ]
+  },
+  "thresholds": {
+    "hardening_min_coverage": 0.85,
+    "hardening_min_pass_rate": 0.98
+  },
+  "validation_stats_path": "data/baselines/naive_topo_parallel/dataset_groups_latest/smart-home/validation/naive_smart-home_214/validation_stats.json"
+}

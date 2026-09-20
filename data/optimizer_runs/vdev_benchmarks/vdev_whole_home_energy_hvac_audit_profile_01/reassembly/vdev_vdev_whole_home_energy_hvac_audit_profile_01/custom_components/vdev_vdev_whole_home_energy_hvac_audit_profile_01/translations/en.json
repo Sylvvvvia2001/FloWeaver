@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_whole_home_energy_hvac_audit_profile_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Whole-Home Energy and HVAC Audit Profile Coverage"
+}

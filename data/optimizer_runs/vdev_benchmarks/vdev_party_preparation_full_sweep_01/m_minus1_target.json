@@ -1,0 +1,1508 @@
+{
+  "constraints": {
+    "optimization_knobs": {
+      "allow_concurrency": true,
+      "max_concurrency": {
+        "ble": 1,
+        "cloud": 4,
+        "local": 6,
+        "total": 10
+      }
+    },
+    "source_protocols": [
+      "BLE",
+      "CLOUD",
+      "HA",
+      "LOCAL"
+    ]
+  },
+  "critical_action_ids": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "A8",
+    "A9",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15",
+    "A16",
+    "A17",
+    "A18",
+    "A19",
+    "A20",
+    "A21",
+    "A22"
+  ],
+  "entrypoint": {
+    "kind": "ha_service",
+    "service": {
+      "domain": "vibeaura",
+      "name": "run_party_preparation_full_sweep_01"
+    }
+  },
+  "hard_dependencies": [
+    {
+      "after": "A19",
+      "before": "A1",
+      "reason": "ble_write_depends_on_a1"
+    },
+    {
+      "after": "A19",
+      "before": "A2",
+      "reason": "ble_write_depends_on_a2"
+    },
+    {
+      "after": "A19",
+      "before": "A3",
+      "reason": "ble_write_depends_on_a3"
+    },
+    {
+      "after": "A19",
+      "before": "A4",
+      "reason": "ble_write_depends_on_a4"
+    },
+    {
+      "after": "A20",
+      "before": "A5",
+      "reason": "cloud_write_depends_on_a5"
+    },
+    {
+      "after": "A20",
+      "before": "A6",
+      "reason": "cloud_write_depends_on_a6"
+    },
+    {
+      "after": "A20",
+      "before": "A7",
+      "reason": "cloud_write_depends_on_a7"
+    },
+    {
+      "after": "A20",
+      "before": "A8",
+      "reason": "cloud_write_depends_on_a8"
+    },
+    {
+      "after": "A20",
+      "before": "A9",
+      "reason": "cloud_write_depends_on_a9"
+    },
+    {
+      "after": "A20",
+      "before": "A10",
+      "reason": "cloud_write_depends_on_a10"
+    },
+    {
+      "after": "A21",
+      "before": "A11",
+      "reason": "local_write_depends_on_a11"
+    },
+    {
+      "after": "A21",
+      "before": "A12",
+      "reason": "local_write_depends_on_a12"
+    },
+    {
+      "after": "A21",
+      "before": "A13",
+      "reason": "local_write_depends_on_a13"
+    },
+    {
+      "after": "A21",
+      "before": "A14",
+      "reason": "local_write_depends_on_a14"
+    },
+    {
+      "after": "A21",
+      "before": "A15",
+      "reason": "local_write_depends_on_a15"
+    },
+    {
+      "after": "A21",
+      "before": "A16",
+      "reason": "local_write_depends_on_a16"
+    },
+    {
+      "after": "A21",
+      "before": "A17",
+      "reason": "local_write_depends_on_a17"
+    },
+    {
+      "after": "A21",
+      "before": "A18",
+      "reason": "local_write_depends_on_a18"
+    },
+    {
+      "after": "A22",
+      "before": "A19",
+      "reason": "overall_write_depends_on_ble_lane"
+    },
+    {
+      "after": "A22",
+      "before": "A20",
+      "reason": "overall_write_depends_on_cloud_lane"
+    },
+    {
+      "after": "A22",
+      "before": "A21",
+      "reason": "overall_write_depends_on_local_lane"
+    }
+  ],
+  "meta": {
+    "benchmark": {
+      "focus_areas": [
+        "Local API frontier packing",
+        "Cloud light/switch/climate grouping",
+        "BLE curtain and air-quality reads",
+        "Party-readiness writeback"
+      ],
+      "group": "Profile Coverage - Realistic Stress Routines",
+      "story": "Before a party, the routine checks living-room and dining-room lighting, curtains, climate, entertainment devices, and air quality.",
+      "strengths": [
+        "Large but realistic party preparation benchmark.",
+        "Local lane includes Hue, Nanoleaf, Denon AVR, Roku, and webOS TV.",
+        "Cloud and BLE lanes remain significant enough for mixed optimization."
+      ]
+    },
+    "name": "Party Preparation Full Sweep",
+    "spec_version": "0.1",
+    "vdev_id": "vdev_party_preparation_full_sweep_01"
+  },
+  "objectives": {
+    "metrics": {
+      "e2e_latency_ms": {
+        "p95": 3900
+      }
+    },
+    "primary": "minimize_tail_latency_for_profile_coverage_routine"
+  },
+  "soft_dependencies": [
+    {
+      "after": "A2",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A3",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A4",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A3",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A4",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A4",
+      "before": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    }
+  ],
+  "source_scope": {
+    "commit": "HEAD",
+    "domains": [
+      "airthings_ble",
+      "denonavr",
+      "esphome",
+      "hue",
+      "nanoleaf",
+      "roku",
+      "switchbot",
+      "tplink",
+      "tuya",
+      "webostv",
+      "xiaomi_ble"
+    ],
+    "entrypoints": [
+      {
+        "kind": "ha_service",
+        "service": {
+          "domain": "vibeaura",
+          "name": "run_party_preparation_full_sweep_01"
+        }
+      }
+    ],
+    "file_bindings": [
+      {
+        "device_id": "ble:switchbot:party_full_curtain_living",
+        "file_path": "data/repo_snapshot/switchbot/cover.py",
+        "integration": "switchbot",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:party_full_curtain_dining",
+        "file_path": "data/repo_snapshot/switchbot/cover.py",
+        "integration": "switchbot",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:party_full_motion",
+        "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:airthings_ble:party_full_air_quality",
+        "file_path": "data/repo_snapshot/airthings_ble/sensor.py",
+        "integration": "airthings_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.party_full_light_1.status",
+        "file_path": "data/repo_snapshot/tuya/light.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.party_full_light_2.status",
+        "file_path": "data/repo_snapshot/tuya/light.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.party_full_light_3.status",
+        "file_path": "data/repo_snapshot/tuya/light.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.party_full_strip_1.status",
+        "file_path": "data/repo_snapshot/tuya/switch.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.party_full_strip_2.status",
+        "file_path": "data/repo_snapshot/tuya/switch.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:climate.party_full_ac.status",
+        "file_path": "data/repo_snapshot/tuya/climate.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:party_light_1",
+        "file_path": "data/repo_snapshot/hue/v2/light.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:party_light_2",
+        "file_path": "data/repo_snapshot/hue/v2/light.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:party_light_3",
+        "file_path": "data/repo_snapshot/hue/v2/light.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:party_light_4",
+        "file_path": "data/repo_snapshot/hue/v2/light.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "nanoleaf:panel.party_full",
+        "file_path": "data/repo_snapshot/nanoleaf/light.py",
+        "integration": "nanoleaf",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "denonavr:media_player.party_avr",
+        "file_path": "data/repo_snapshot/denonavr/media_player.py",
+        "integration": "denonavr",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "roku:media_player.party_roku",
+        "file_path": "data/repo_snapshot/roku/media_player.py",
+        "integration": "roku",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "webostv:media_player.party_tv",
+        "file_path": "data/repo_snapshot/webostv/media_player.py",
+        "integration": "webostv",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_party_preparation_full_sweep_01_ble_lane",
+        "file_path": "data/repo_snapshot/switchbot/fan.py",
+        "integration": "switchbot",
+        "protocols": [
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_party_preparation_full_sweep_01_cloud_lane",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_party_preparation_full_sweep_01_local_lane",
+        "file_path": "data/repo_snapshot/tplink/entity.py",
+        "integration": "tplink",
+        "protocols": [
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_party_preparation_full_sweep_01_overall",
+        "file_path": "data/repo_snapshot/esphome/update.py",
+        "integration": "esphome",
+        "protocols": [
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:party_full_motion",
+        "file_path": "data/repo_snapshot/xiaomi_ble/event.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:party_full_motion",
+        "file_path": "data/repo_snapshot/xiaomi_ble/__init__.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:airthings_ble:party_full_air_quality",
+        "file_path": "data/repo_snapshot/airthings_ble/coordinator.py",
+        "integration": "airthings_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:airthings_ble:party_full_air_quality",
+        "file_path": "data/repo_snapshot/airthings_ble/config_flow.py",
+        "integration": "airthings_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.party_full_light_1.status",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.party_full_light_1.status",
+        "file_path": "data/repo_snapshot/tuya/__init__.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.party_full_light_2.status",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.party_full_light_2.status",
+        "file_path": "data/repo_snapshot/tuya/__init__.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.party_full_light_3.status",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.party_full_light_3.status",
+        "file_path": "data/repo_snapshot/tuya/__init__.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.party_full_strip_1.status",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.party_full_strip_1.status",
+        "file_path": "data/repo_snapshot/tuya/__init__.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.party_full_strip_2.status",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.party_full_strip_2.status",
+        "file_path": "data/repo_snapshot/tuya/__init__.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:climate.party_full_ac.status",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:climate.party_full_ac.status",
+        "file_path": "data/repo_snapshot/tuya/__init__.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:party_light_1",
+        "file_path": "data/repo_snapshot/hue/v2/entity.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:party_light_1",
+        "file_path": "data/repo_snapshot/hue/v2/group.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:party_light_2",
+        "file_path": "data/repo_snapshot/hue/v2/entity.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:party_light_2",
+        "file_path": "data/repo_snapshot/hue/v2/group.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:party_light_3",
+        "file_path": "data/repo_snapshot/hue/v2/entity.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:party_light_3",
+        "file_path": "data/repo_snapshot/hue/v2/group.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:party_light_4",
+        "file_path": "data/repo_snapshot/hue/v2/entity.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:party_light_4",
+        "file_path": "data/repo_snapshot/hue/v2/group.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "nanoleaf:panel.party_full",
+        "file_path": "data/repo_snapshot/nanoleaf/coordinator.py",
+        "integration": "nanoleaf",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "nanoleaf:panel.party_full",
+        "file_path": "data/repo_snapshot/nanoleaf/event.py",
+        "integration": "nanoleaf",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "roku:media_player.party_roku",
+        "file_path": "data/repo_snapshot/roku/coordinator.py",
+        "integration": "roku",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "roku:media_player.party_roku",
+        "file_path": "data/repo_snapshot/roku/browse_media.py",
+        "integration": "roku",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      }
+    ],
+    "files": [
+      "data/repo_snapshot/airthings_ble/config_flow.py",
+      "data/repo_snapshot/airthings_ble/coordinator.py",
+      "data/repo_snapshot/airthings_ble/sensor.py",
+      "data/repo_snapshot/denonavr/media_player.py",
+      "data/repo_snapshot/esphome/update.py",
+      "data/repo_snapshot/hue/v2/entity.py",
+      "data/repo_snapshot/hue/v2/group.py",
+      "data/repo_snapshot/hue/v2/light.py",
+      "data/repo_snapshot/nanoleaf/coordinator.py",
+      "data/repo_snapshot/nanoleaf/event.py",
+      "data/repo_snapshot/nanoleaf/light.py",
+      "data/repo_snapshot/roku/browse_media.py",
+      "data/repo_snapshot/roku/coordinator.py",
+      "data/repo_snapshot/roku/media_player.py",
+      "data/repo_snapshot/switchbot/cover.py",
+      "data/repo_snapshot/switchbot/fan.py",
+      "data/repo_snapshot/tplink/entity.py",
+      "data/repo_snapshot/tuya/__init__.py",
+      "data/repo_snapshot/tuya/climate.py",
+      "data/repo_snapshot/tuya/entity.py",
+      "data/repo_snapshot/tuya/light.py",
+      "data/repo_snapshot/tuya/switch.py",
+      "data/repo_snapshot/webostv/media_player.py",
+      "data/repo_snapshot/xiaomi_ble/__init__.py",
+      "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+      "data/repo_snapshot/xiaomi_ble/event.py"
+    ],
+    "platforms": [
+      "binary_sensor",
+      "climate",
+      "cover",
+      "light",
+      "media_player",
+      "sensor",
+      "switch"
+    ],
+    "protocols": [
+      "BLE",
+      "CLOUD",
+      "HA",
+      "LOCAL"
+    ],
+    "repo_path": "data/repo_snapshot"
+  },
+  "target_anchors": {
+    "anchor_ops": [
+      "BLE_GATT_OP",
+      "BLE_OP",
+      "CLOUD_HTTP_CALL",
+      "CLOUD_OP",
+      "CLOUD_STATUS_CALL",
+      "LOCAL_API_READ",
+      "STATE_WRITE"
+    ],
+    "characteristics": [],
+    "device_ids": [
+      "ble:switchbot:party_full_curtain_living",
+      "ble:switchbot:party_full_curtain_dining",
+      "ble:switchbot:party_full_motion",
+      "ble:airthings_ble:party_full_air_quality"
+    ],
+    "endpoints": [
+      "tuya:light.party_full_light_1.status",
+      "tuya:light.party_full_light_2.status",
+      "tuya:light.party_full_light_3.status",
+      "tuya:switch.party_full_strip_1.status",
+      "tuya:switch.party_full_strip_2.status",
+      "tuya:climate.party_full_ac.status"
+    ],
+    "entities": [
+      "sensor.vdev_party_preparation_full_sweep_01_ble_lane",
+      "sensor.vdev_party_preparation_full_sweep_01_cloud_lane",
+      "sensor.vdev_party_preparation_full_sweep_01_local_lane",
+      "sensor.vdev_party_preparation_full_sweep_01_overall"
+    ],
+    "required_state_writes": [
+      "sensor.vdev_party_preparation_full_sweep_01_ble_lane",
+      "sensor.vdev_party_preparation_full_sweep_01_cloud_lane",
+      "sensor.vdev_party_preparation_full_sweep_01_local_lane",
+      "sensor.vdev_party_preparation_full_sweep_01_overall"
+    ],
+    "service_entrypoints": [
+      "vibeaura.run_party_preparation_full_sweep_01"
+    ]
+  },
+  "validation": {
+    "differential_tests": {
+      "enabled": true,
+      "runs_per_scenario": 2,
+      "scenarios": [
+        "baseline_happy_path",
+        "fault_cloud_429",
+        "fault_ble_disconnect"
+      ]
+    },
+    "fault_model": {
+      "ble_disconnect": true,
+      "cloud_429": true,
+      "network_jitter": true
+    },
+    "llm_detector": {
+      "enabled": true,
+      "max_attempts": 0,
+      "retry_backoff_s": 0.5,
+      "timeout_s": 45
+    },
+    "observation": {
+      "canonicalization_version": "v1",
+      "equivalence_whitelist": [
+        "COALESCE_STATE_WRITE"
+      ],
+      "semantic_ops": [
+        "ENTRY_SETUP",
+        "COORD_REFRESH",
+        "STATE_WRITE",
+        "SUBSCRIBE",
+        "UNSUBSCRIBE",
+        "MQTT_SUBSCRIBE",
+        "BLE_CONNECT",
+        "BLE_DISCONNECT",
+        "BLE_NOTIFY_SUBSCRIBE",
+        "BLE_OP",
+        "BLE_GATT_OP",
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_429_CHECK",
+        "CLOUD_BACKOFF_SLEEP",
+        "CLOUD_BATCH_CALL",
+        "CLOUD_SESSION_REUSE",
+        "LOCAL_API_READ",
+        "POLL_UPDATE"
+      ]
+    },
+    "profile_version": "ha_profile_default",
+    "sampling": {},
+    "source_protocols": [
+      "BLE",
+      "CLOUD",
+      "HA",
+      "LOCAL"
+    ]
+  },
+  "vdev_actions": [
+    {
+      "action_id": "A1",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:switchbot:party_full_curtain_living"
+        },
+        "domain": "cover",
+        "kind": "ha_service_call",
+        "service": "refresh_cover"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:switchbot:party_full_curtain_living",
+        "id": "ble:switchbot:party_full_curtain_living",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "refresh_cover"
+    },
+    {
+      "action_id": "A2",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:switchbot:party_full_curtain_dining"
+        },
+        "domain": "cover",
+        "kind": "ha_service_call",
+        "service": "refresh_cover"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:switchbot:party_full_curtain_dining",
+        "id": "ble:switchbot:party_full_curtain_dining",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "refresh_cover"
+    },
+    {
+      "action_id": "A3",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:switchbot:party_full_motion"
+        },
+        "domain": "binary_sensor",
+        "kind": "ha_service_call",
+        "service": "read_sensor"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:switchbot:party_full_motion",
+        "id": "ble:switchbot:party_full_motion",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "read_sensor"
+    },
+    {
+      "action_id": "A4",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:airthings_ble:party_full_air_quality"
+        },
+        "domain": "sensor",
+        "kind": "ha_service_call",
+        "service": "read_sensor"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:airthings_ble:party_full_air_quality",
+        "id": "ble:airthings_ble:party_full_air_quality",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "read_sensor"
+    },
+    {
+      "action_id": "A5",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:light.party_full_light_1.status",
+          "endpoint_group_key": "party_preparation_full_sweep_01_tuya_light",
+          "host_group_key": "tuya"
+        },
+        "domain": "light",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:light.party_full_light_1.status",
+        "id": "tuya:light.party_full_light_1.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A6",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:light.party_full_light_2.status",
+          "endpoint_group_key": "party_preparation_full_sweep_01_tuya_light",
+          "host_group_key": "tuya"
+        },
+        "domain": "light",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:light.party_full_light_2.status",
+        "id": "tuya:light.party_full_light_2.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A7",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:light.party_full_light_3.status",
+          "endpoint_group_key": "party_preparation_full_sweep_01_tuya_light",
+          "host_group_key": "tuya"
+        },
+        "domain": "light",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:light.party_full_light_3.status",
+        "id": "tuya:light.party_full_light_3.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A8",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:switch.party_full_strip_1.status",
+          "endpoint_group_key": "party_preparation_full_sweep_01_tuya_switch",
+          "host_group_key": "tuya"
+        },
+        "domain": "switch",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:switch.party_full_strip_1.status",
+        "id": "tuya:switch.party_full_strip_1.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A9",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:switch.party_full_strip_2.status",
+          "endpoint_group_key": "party_preparation_full_sweep_01_tuya_switch",
+          "host_group_key": "tuya"
+        },
+        "domain": "switch",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:switch.party_full_strip_2.status",
+        "id": "tuya:switch.party_full_strip_2.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A10",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:climate.party_full_ac.status",
+          "endpoint_group_key": "party_preparation_full_sweep_01_tuya_climate",
+          "host_group_key": "tuya"
+        },
+        "domain": "climate",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:climate.party_full_ac.status",
+        "id": "tuya:climate.party_full_ac.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A11",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "hue:bridge_1:party_light_1",
+          "endpoint_group_key": "bridge_1",
+          "host_group_key": "hue_bridge_1"
+        },
+        "domain": "light",
+        "kind": "ha_service_call",
+        "provider": "hue_local",
+        "service": "get_state"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "protocol": "LOCAL",
+      "provider": "hue_local",
+      "side_effects": [],
+      "target": {
+        "endpoint": "hue:bridge_1:party_light_1",
+        "id": "hue:bridge_1:party_light_1",
+        "kind": "local_endpoint",
+        "provider": "hue_local"
+      },
+      "target_kind": "local_endpoint",
+      "type": "get_state"
+    },
+    {
+      "action_id": "A12",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "hue:bridge_1:party_light_2",
+          "endpoint_group_key": "bridge_1",
+          "host_group_key": "hue_bridge_1"
+        },
+        "domain": "light",
+        "kind": "ha_service_call",
+        "provider": "hue_local",
+        "service": "get_state"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "protocol": "LOCAL",
+      "provider": "hue_local",
+      "side_effects": [],
+      "target": {
+        "endpoint": "hue:bridge_1:party_light_2",
+        "id": "hue:bridge_1:party_light_2",
+        "kind": "local_endpoint",
+        "provider": "hue_local"
+      },
+      "target_kind": "local_endpoint",
+      "type": "get_state"
+    },
+    {
+      "action_id": "A13",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "hue:bridge_1:party_light_3",
+          "endpoint_group_key": "bridge_1",
+          "host_group_key": "hue_bridge_1"
+        },
+        "domain": "light",
+        "kind": "ha_service_call",
+        "provider": "hue_local",
+        "service": "get_state"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "protocol": "LOCAL",
+      "provider": "hue_local",
+      "side_effects": [],
+      "target": {
+        "endpoint": "hue:bridge_1:party_light_3",
+        "id": "hue:bridge_1:party_light_3",
+        "kind": "local_endpoint",
+        "provider": "hue_local"
+      },
+      "target_kind": "local_endpoint",
+      "type": "get_state"
+    },
+    {
+      "action_id": "A14",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "hue:bridge_1:party_light_4",
+          "endpoint_group_key": "bridge_1",
+          "host_group_key": "hue_bridge_1"
+        },
+        "domain": "light",
+        "kind": "ha_service_call",
+        "provider": "hue_local",
+        "service": "get_state"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "protocol": "LOCAL",
+      "provider": "hue_local",
+      "side_effects": [],
+      "target": {
+        "endpoint": "hue:bridge_1:party_light_4",
+        "id": "hue:bridge_1:party_light_4",
+        "kind": "local_endpoint",
+        "provider": "hue_local"
+      },
+      "target_kind": "local_endpoint",
+      "type": "get_state"
+    },
+    {
+      "action_id": "A15",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "nanoleaf:panel.party_full",
+          "endpoint_group_key": "party_preparation_full_sweep_01_nanoleaf",
+          "host_group_key": "nanoleaf_local"
+        },
+        "domain": "light",
+        "kind": "ha_service_call",
+        "provider": "nanoleaf_local",
+        "service": "get_state"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "protocol": "LOCAL",
+      "provider": "nanoleaf_local",
+      "side_effects": [],
+      "target": {
+        "endpoint": "nanoleaf:panel.party_full",
+        "id": "nanoleaf:panel.party_full",
+        "kind": "local_endpoint",
+        "provider": "nanoleaf_local"
+      },
+      "target_kind": "local_endpoint",
+      "type": "get_state"
+    },
+    {
+      "action_id": "A16",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "denonavr:media_player.party_avr",
+          "endpoint_group_key": "party_preparation_full_sweep_01_denonavr",
+          "host_group_key": "denonavr_local"
+        },
+        "domain": "media_player",
+        "kind": "ha_service_call",
+        "provider": "denonavr_local",
+        "service": "get_state"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "protocol": "LOCAL",
+      "provider": "denonavr_local",
+      "side_effects": [],
+      "target": {
+        "endpoint": "denonavr:media_player.party_avr",
+        "id": "denonavr:media_player.party_avr",
+        "kind": "local_endpoint",
+        "provider": "denonavr_local"
+      },
+      "target_kind": "local_endpoint",
+      "type": "get_state"
+    },
+    {
+      "action_id": "A17",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "roku:media_player.party_roku",
+          "endpoint_group_key": "party_preparation_full_sweep_01_roku",
+          "host_group_key": "roku_local"
+        },
+        "domain": "media_player",
+        "kind": "ha_service_call",
+        "provider": "roku_local",
+        "service": "get_state"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "protocol": "LOCAL",
+      "provider": "roku_local",
+      "side_effects": [],
+      "target": {
+        "endpoint": "roku:media_player.party_roku",
+        "id": "roku:media_player.party_roku",
+        "kind": "local_endpoint",
+        "provider": "roku_local"
+      },
+      "target_kind": "local_endpoint",
+      "type": "get_state"
+    },
+    {
+      "action_id": "A18",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "webostv:media_player.party_tv",
+          "endpoint_group_key": "party_preparation_full_sweep_01_webostv",
+          "host_group_key": "webostv_local"
+        },
+        "domain": "media_player",
+        "kind": "ha_service_call",
+        "provider": "webostv_local",
+        "service": "get_state"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "protocol": "LOCAL",
+      "provider": "webostv_local",
+      "side_effects": [],
+      "target": {
+        "endpoint": "webostv:media_player.party_tv",
+        "id": "webostv:media_player.party_tv",
+        "kind": "local_endpoint",
+        "provider": "webostv_local"
+      },
+      "target_kind": "local_endpoint",
+      "type": "get_state"
+    },
+    {
+      "action_id": "A19",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "entity_id": "sensor.vdev_party_preparation_full_sweep_01_ble_lane"
+        },
+        "domain": "sensor",
+        "kind": "ha_service_call",
+        "service": "publish"
+      },
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "protocol": "HA",
+      "side_effects": [
+        "state_write"
+      ],
+      "target": {
+        "entity_id": "sensor.vdev_party_preparation_full_sweep_01_ble_lane",
+        "id": "sensor.vdev_party_preparation_full_sweep_01_ble_lane",
+        "kind": "ha_entity"
+      },
+      "target_kind": "ha_entity",
+      "type": "write"
+    },
+    {
+      "action_id": "A20",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "entity_id": "sensor.vdev_party_preparation_full_sweep_01_cloud_lane"
+        },
+        "domain": "sensor",
+        "kind": "ha_service_call",
+        "service": "publish"
+      },
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "protocol": "HA",
+      "side_effects": [
+        "state_write"
+      ],
+      "target": {
+        "entity_id": "sensor.vdev_party_preparation_full_sweep_01_cloud_lane",
+        "id": "sensor.vdev_party_preparation_full_sweep_01_cloud_lane",
+        "kind": "ha_entity"
+      },
+      "target_kind": "ha_entity",
+      "type": "write"
+    },
+    {
+      "action_id": "A21",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "entity_id": "sensor.vdev_party_preparation_full_sweep_01_local_lane"
+        },
+        "domain": "sensor",
+        "kind": "ha_service_call",
+        "service": "publish"
+      },
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "protocol": "HA",
+      "side_effects": [
+        "state_write"
+      ],
+      "target": {
+        "entity_id": "sensor.vdev_party_preparation_full_sweep_01_local_lane",
+        "id": "sensor.vdev_party_preparation_full_sweep_01_local_lane",
+        "kind": "ha_entity"
+      },
+      "target_kind": "ha_entity",
+      "type": "write"
+    },
+    {
+      "action_id": "A22",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "entity_id": "sensor.vdev_party_preparation_full_sweep_01_overall"
+        },
+        "domain": "sensor",
+        "kind": "ha_service_call",
+        "service": "publish"
+      },
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "protocol": "HA",
+      "side_effects": [
+        "state_write"
+      ],
+      "target": {
+        "entity_id": "sensor.vdev_party_preparation_full_sweep_01_overall",
+        "id": "sensor.vdev_party_preparation_full_sweep_01_overall",
+        "kind": "ha_entity"
+      },
+      "target_kind": "ha_entity",
+      "type": "write"
+    }
+  ]
+}

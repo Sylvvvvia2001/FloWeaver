@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_holiday_vacation_mode_full_audit_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Holiday Vacation Mode Full Audit"
+}

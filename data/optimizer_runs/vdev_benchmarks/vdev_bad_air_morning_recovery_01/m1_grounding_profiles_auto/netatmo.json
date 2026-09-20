@@ -1,0 +1,240 @@
+{
+  "integration": "netatmo",
+  "runtime_families": [
+    {
+      "action_kind": "read_runtime",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "bad_air_runtime",
+          "netatmo:station.bad_air_runtime",
+          "station"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "status",
+          "poll_update"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "collections",
+          "const",
+          "data_handler",
+          "dataclasses",
+          "entity"
+        ],
+        "boost_if_names": [
+          "read_runtime",
+          "async_update_callback"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "CLOUD_STATUS_CALL",
+      "file_globs": [
+        "netatmo/sensor.py"
+      ],
+      "forbidden_context": [
+        "setup_function",
+        "dunder_init",
+        "entity_property_getter"
+      ],
+      "forbidden_path_signals": [
+        "setup_function:async_setup_entry",
+        "setup_call:async_dispatcher_connect",
+        "setup_call:async_add_entities",
+        "property_function:available",
+        "control_function:async_turn_on",
+        "control_function:async_turn_off",
+        "control_function:async_open_cover",
+        "control_function:async_close_cover"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "async_update_callback"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A7"
+      ],
+      "integration": "netatmo",
+      "negative_call_patterns": [
+        "async_on_unload",
+        "async_get",
+        "async_dispatcher_connect",
+        "netatmoclimatebatterysensor",
+        "async_add_entities",
+        "add_public_entities"
+      ],
+      "negative_evidence": [
+        "negative_function:async_setup_entry",
+        "negative_function:available",
+        "negative_function:_create_sensor_entity",
+        "negative_call:async_on_unload",
+        "negative_call:async_get",
+        "negative_call:async_dispatcher_connect",
+        "negative_call:netatmoclimatebatterysensor",
+        "negative_call:async_add_entities",
+        "negative_call:debug",
+        "negative_call:values"
+      ],
+      "negative_function_patterns": [
+        "async_setup_entry",
+        "available",
+        "_create_sensor_entity",
+        "async_turn_on",
+        "async_turn_off",
+        "async_set_*"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [
+            "entry.async_on_unload",
+            "dr.async_get",
+            "async_dispatcher_connect",
+            "netatmoclimatebatterysensor",
+            "async_add_entities",
+            "_logger.debug",
+            "entities.values",
+            "add_public_entities"
+          ],
+          "call_patterns": [
+            "async_on_unload",
+            "async_get",
+            "async_dispatcher_connect",
+            "netatmoclimatebatterysensor",
+            "async_add_entities",
+            "debug",
+            "values",
+            "add_public_entities"
+          ],
+          "file_path": "data/repo_snapshot/netatmo/sensor.py",
+          "function_name": "async_setup_entry",
+          "path_kind": "setup_path",
+          "path_signals": [
+            "setup_function:async_setup_entry",
+            "setup_call:async_dispatcher_connect",
+            "connect_call:async_dispatcher_connect",
+            "setup_call:async_add_entities",
+            "subscription_call:data_handler.subscribe"
+          ],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -16,
+          "snippet": "395: \n396: async def async_setup_entry(\n397:     hass: HomeAssistant,\n398:     entry: NetatmoConfigEntry,\n399:     async_add_entities: AddConfigEntryEntitiesCallback,\n400: ) -> None:\n401:     \"\"\"Set up the Netatmo sensor platform.\"\"\"\n402: \n403:     @callback\n404:     def _create_battery_entity(netatmo_device: NetatmoDevice) -> None:\n405:         if not hasattr(netatmo_device.device, \"battery\"):\n406:             return\n407:         entity = NetatmoClimateBatterySensor(netatmo_device)\n408:         async_add_entities([entity])"
+        },
+        {
+          "call_chains": [
+            "getattr"
+          ],
+          "call_patterns": [
+            "getattr"
+          ],
+          "file_path": "data/repo_snapshot/netatmo/sensor.py",
+          "function_name": "available",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:available"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "537:     @property\n538:     def available(self) -> bool:\n539:         \"\"\"Return True if entity is available.\"\"\"\n540:         return (\n541:             self.device.reachable\n542:             or getattr(self.device, self.entity_description.netatmo_name) is not None\n543:         )\n544: \n545:     @callback"
+        },
+        {
+          "call_chains": [
+            "_logger.debug",
+            "async_add_entities",
+            "netatmosensor"
+          ],
+          "call_patterns": [
+            "debug",
+            "async_add_entities",
+            "netatmosensor"
+          ],
+          "file_path": "data/repo_snapshot/netatmo/sensor.py",
+          "function_name": "_create_sensor_entity",
+          "path_kind": "helper_path",
+          "path_signals": [
+            "setup_call:async_add_entities"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "helper",
+          "score": -4,
+          "snippet": "428:     @callback\n429:     def _create_sensor_entity(netatmo_device: NetatmoDevice) -> None:\n430:         _LOGGER.debug(\n431:             \"Adding %s sensor %s\",\n432:             netatmo_device.device.device_category,\n433:             netatmo_device.device.name,\n434:         )\n435:         async_add_entities(\n436:             NetatmoSensor(netatmo_device, description)\n437:             for description in SENSOR_TYPES\n438:             if description.key in netatmo_device.device.features\n439:         )\n440: \n441:     entry.async_on_unload("
+        }
+      ],
+      "origin_action_id": "A7",
+      "origin_cluster_id": "netatmo__sensor__cloud_status_call__read_runtime__cloud",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/netatmo/sensor.py",
+          "function_name": "async_update_callback",
+          "path_kind": "read_path",
+          "path_signals": [
+            "update_callback_function:async_update_callback"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 8,
+          "snippet": "588:     @callback\n589:     def async_update_callback(self) -> None:\n590:         \"\"\"Update the entity's state.\"\"\"\n591:         if not self.device.reachable:\n592:             if self.available:\n593:                 self._attr_available = False\n594:             return\n595: \n596:         self._attr_available = True\n597:         self._attr_native_value = self.device.battery\n598: \n599:"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read"
+      ],
+      "required_context": [
+        "runtime_update_path"
+      ],
+      "required_path_signals": [
+        "update_callback_function:async_update_callback"
+      ],
+      "required_runtime_roles": [
+        "runtime_read"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "netatmo:sensor_runtime_status_read",
+      "runtime_archetypes": [
+        "cloud_runtime_read",
+        "entity_wrapper_read",
+        "coordinator_update_path"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:async_update_callback",
+        "path_signal:update_callback_function:async_update_callback"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/netatmo/sensor.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A7"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+      "why_not_setup": [
+        "exclude_role:setup:async_setup_entry",
+        "exclude_role:property_getter:available",
+        "exclude_role:helper:_create_sensor_entity",
+        "exclude_path_signal:setup_function:async_setup_entry",
+        "exclude_path_signal:setup_call:async_dispatcher_connect",
+        "exclude_path_signal:setup_call:async_add_entities",
+        "exclude_path_signal:property_function:available",
+        "exclude_control_path_for_read_like_action"
+      ]
+    }
+  ],
+  "schema_version": "m1_grounding_profile/v3",
+  "version": "draft_llm_v3"
+}

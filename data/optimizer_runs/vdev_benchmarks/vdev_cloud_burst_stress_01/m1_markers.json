@@ -1,0 +1,1670 @@
+[
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "call:unsubscribe"
+    ],
+    "file_path": "data/repo_snapshot/esphome/update.py",
+    "function_name": "_async_setup_update_entity",
+    "line_end": 83,
+    "line_start": 83,
+    "marker_id": "marker_0057872025",
+    "marker_type": "UNSUBSCRIBE",
+    "phase": "TEARDOWN",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_seed",
+      "related_actions:A10",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/esphome/update.py",
+    "function_name": "_handle_device_update",
+    "line_end": 186,
+    "line_start": 186,
+    "marker_id": "marker_767e7c72f5",
+    "marker_type": "STATE_WRITE",
+    "phase": "RUNTIME",
+    "primary_action_id": "A10",
+    "related_action_ids": [
+      "A10"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/esphome/update.py",
+    "function_name": "async_setup_entry",
+    "line_end": 102,
+    "line_start": 48,
+    "marker_id": "marker_ce22d7b81f",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "call:unsubscribe"
+    ],
+    "file_path": "data/repo_snapshot/esphome/update.py",
+    "function_name": "async_setup_entry",
+    "line_end": 83,
+    "line_start": 83,
+    "marker_id": "marker_8364d61ffe",
+    "marker_type": "UNSUBSCRIBE",
+    "phase": "TEARDOWN",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:cloud",
+      "related_actions:A7",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/binary_sensor.py",
+    "function_name": "async_discover_device",
+    "line_end": 423,
+    "line_start": 423,
+    "marker_id": "marker_f2891e6adf",
+    "marker_type": "CLOUD_OP",
+    "phase": "SETUP",
+    "primary_action_id": "A7",
+    "related_action_ids": [
+      "A7"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/tuya/binary_sensor.py",
+    "function_name": "async_setup_entry",
+    "line_end": 436,
+    "line_start": 409,
+    "marker_id": "marker_23be7359ff",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:cloud",
+      "related_actions:A7",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/binary_sensor.py",
+    "function_name": "async_setup_entry",
+    "line_end": 423,
+    "line_start": 423,
+    "marker_id": "marker_c91e51fa32",
+    "marker_type": "CLOUD_OP",
+    "phase": "SETUP",
+    "primary_action_id": "A7",
+    "related_action_ids": [
+      "A7"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:cloud",
+      "related_actions:A3",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "__init__",
+    "line_end": 309,
+    "line_start": 309,
+    "marker_id": "marker_6ecab44062",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A3",
+    "related_action_ids": [
+      "A3"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:cloud",
+      "related_actions:A3",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "__init__",
+    "line_end": 345,
+    "line_start": 345,
+    "marker_id": "marker_4f5add5c94",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A3",
+    "related_action_ids": [
+      "A3"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "heuristic:cloud_runtime_call",
+      "related_actions:A3",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "_get_temperature_wrappers",
+    "line_end": 152,
+    "line_start": 150,
+    "marker_id": "marker_a9d59478a4",
+    "marker_type": "CLOUD_OP",
+    "phase": "SETUP",
+    "primary_action_id": "A3",
+    "related_action_ids": [
+      "A3"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "heuristic:cloud_runtime_call",
+      "related_actions:A3",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "async_set_hvac_mode",
+    "line_end": 360,
+    "line_start": 358,
+    "marker_id": "marker_42c8149358",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A3",
+    "related_action_ids": [
+      "A3"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:cloud",
+      "related_actions:A3",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "async_set_hvac_mode",
+    "line_end": 364,
+    "line_start": 364,
+    "marker_id": "marker_3ae997c228",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A3",
+    "related_action_ids": [
+      "A3"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "heuristic:cloud_runtime_call",
+      "related_actions:A3",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "async_set_hvac_mode",
+    "line_end": 368,
+    "line_start": 368,
+    "marker_id": "marker_ff3b4fcc64",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A3",
+    "related_action_ids": [
+      "A3"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "heuristic:cloud_runtime_call",
+      "related_actions:A3",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "async_set_hvac_mode",
+    "line_end": 370,
+    "line_start": 370,
+    "marker_id": "marker_8b66d9b4a1",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A3",
+    "related_action_ids": [
+      "A3"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:cloud",
+      "related_actions:A3",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "async_set_swing_mode",
+    "line_end": 386,
+    "line_start": 386,
+    "marker_id": "marker_c9941cd101",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A3",
+    "related_action_ids": [
+      "A3"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "async_setup_entry",
+    "line_end": 253,
+    "line_start": 198,
+    "marker_id": "marker_40c3f5103e",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:cloud",
+      "related_actions:A3",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "hvac_mode",
+    "line_end": 431,
+    "line_start": 431,
+    "marker_id": "marker_10199b611b",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A3",
+    "related_action_ids": [
+      "A3"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:cloud",
+      "related_actions:A3",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "swing_mode",
+    "line_end": 447,
+    "line_start": 447,
+    "marker_id": "marker_9c3071ff0d",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A3",
+    "related_action_ids": [
+      "A3"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "heuristic:cloud_runtime_call",
+      "related_actions:A5",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/cover.py",
+    "function_name": "async_close_cover",
+    "line_end": 310,
+    "line_start": 308,
+    "marker_id": "marker_3ea288dff9",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A5",
+    "related_action_ids": [
+      "A5"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "heuristic:cloud_runtime_call",
+      "related_actions:A5",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/cover.py",
+    "function_name": "async_close_cover",
+    "line_end": 309,
+    "line_start": 309,
+    "marker_id": "marker_16db401d63",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A5",
+    "related_action_ids": [
+      "A5"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:cloud",
+      "related_actions:A5",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/cover.py",
+    "function_name": "async_discover_device",
+    "line_end": 185,
+    "line_start": 185,
+    "marker_id": "marker_139686e0a3",
+    "marker_type": "CLOUD_OP",
+    "phase": "SETUP",
+    "primary_action_id": "A5",
+    "related_action_ids": [
+      "A5"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "heuristic:cloud_runtime_call",
+      "related_actions:A5",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/cover.py",
+    "function_name": "async_open_cover",
+    "line_end": 294,
+    "line_start": 292,
+    "marker_id": "marker_1b8c76dd85",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A5",
+    "related_action_ids": [
+      "A5"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "heuristic:cloud_runtime_call",
+      "related_actions:A5",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/cover.py",
+    "function_name": "async_open_cover",
+    "line_end": 293,
+    "line_start": 293,
+    "marker_id": "marker_ecb042c309",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A5",
+    "related_action_ids": [
+      "A5"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/tuya/cover.py",
+    "function_name": "async_setup_entry",
+    "line_end": 222,
+    "line_start": 171,
+    "marker_id": "marker_04c760b96a",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:cloud",
+      "related_actions:A5",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/cover.py",
+    "function_name": "async_setup_entry",
+    "line_end": 185,
+    "line_start": 185,
+    "marker_id": "marker_4d5415d4b6",
+    "marker_type": "CLOUD_OP",
+    "phase": "SETUP",
+    "primary_action_id": "A5",
+    "related_action_ids": [
+      "A5"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_seed",
+      "related_actions:A9",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/entity.py",
+    "function_name": "_handle_state_update",
+    "line_end": 76,
+    "line_start": 76,
+    "marker_id": "marker_5718cbb36c",
+    "marker_type": "STATE_WRITE",
+    "phase": "RUNTIME",
+    "primary_action_id": "A9",
+    "related_action_ids": [
+      "A9"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "heuristic:cloud_runtime_call",
+      "related_actions:A8",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/event.py",
+    "function_name": "_process_device_update",
+    "line_end": 182,
+    "line_start": 182,
+    "marker_id": "marker_5466be4d0c",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A8",
+    "related_action_ids": [
+      "A8"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:cloud",
+      "related_actions:A8",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/event.py",
+    "function_name": "async_discover_device",
+    "line_end": 129,
+    "line_start": 129,
+    "marker_id": "marker_21e2321342",
+    "marker_type": "CLOUD_OP",
+    "phase": "SETUP",
+    "primary_action_id": "A8",
+    "related_action_ids": [
+      "A8"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/tuya/event.py",
+    "function_name": "async_setup_entry",
+    "line_end": 148,
+    "line_start": 115,
+    "marker_id": "marker_c9f60b679f",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:cloud",
+      "related_actions:A8",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/event.py",
+    "function_name": "async_setup_entry",
+    "line_end": 129,
+    "line_start": 129,
+    "marker_id": "marker_0ea6bb7e4c",
+    "marker_type": "CLOUD_OP",
+    "phase": "SETUP",
+    "primary_action_id": "A8",
+    "related_action_ids": [
+      "A8"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:cloud",
+      "related_actions:A6",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/fan.py",
+    "function_name": "async_set_direction",
+    "line_end": 182,
+    "line_start": 182,
+    "marker_id": "marker_c267cdad72",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A6",
+    "related_action_ids": [
+      "A6"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/tuya/fan.py",
+    "function_name": "async_setup_entry",
+    "line_end": 128,
+    "line_start": 88,
+    "marker_id": "marker_2ce80bcf02",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "heuristic:cloud_runtime_call",
+      "related_actions:A6",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/fan.py",
+    "function_name": "async_turn_on",
+    "line_end": 203,
+    "line_start": 203,
+    "marker_id": "marker_9f73a93651",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A6",
+    "related_action_ids": [
+      "A6"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "heuristic:cloud_runtime_call",
+      "related_actions:A6",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/fan.py",
+    "function_name": "async_turn_on",
+    "line_end": 207,
+    "line_start": 207,
+    "marker_id": "marker_ee09176380",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A6",
+    "related_action_ids": [
+      "A6"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "heuristic:cloud_runtime_call",
+      "related_actions:A6",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/fan.py",
+    "function_name": "async_turn_on",
+    "line_end": 212,
+    "line_start": 212,
+    "marker_id": "marker_713506990e",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A6",
+    "related_action_ids": [
+      "A6"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "heuristic:cloud_runtime_call",
+      "related_actions:A6",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/fan.py",
+    "function_name": "async_turn_on",
+    "line_end": 214,
+    "line_start": 214,
+    "marker_id": "marker_f260fc275d",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A6",
+    "related_action_ids": [
+      "A6"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:cloud",
+      "related_actions:A6",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/fan.py",
+    "function_name": "current_direction",
+    "line_end": 229,
+    "line_start": 229,
+    "marker_id": "marker_74a71d9ca9",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A6",
+    "related_action_ids": [
+      "A6"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:cloud",
+      "related_actions:A1",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/light.py",
+    "function_name": "async_discover_device",
+    "line_end": 470,
+    "line_start": 470,
+    "marker_id": "marker_ecddbca34e",
+    "marker_type": "CLOUD_OP",
+    "phase": "SETUP",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/tuya/light.py",
+    "function_name": "async_setup_entry",
+    "line_end": 506,
+    "line_start": 456,
+    "marker_id": "marker_b3fb0fdc6c",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:cloud",
+      "related_actions:A1",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/light.py",
+    "function_name": "async_setup_entry",
+    "line_end": 470,
+    "line_start": 470,
+    "marker_id": "marker_c199fc04cb",
+    "marker_type": "CLOUD_OP",
+    "phase": "SETUP",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "heuristic:cloud_runtime_call",
+      "related_actions:A1",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/light.py",
+    "function_name": "async_turn_on",
+    "line_end": 574,
+    "line_start": 574,
+    "marker_id": "marker_6f012a324b",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "heuristic:cloud_runtime_call",
+      "related_actions:A1",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/light.py",
+    "function_name": "async_turn_on",
+    "line_end": 582,
+    "line_start": 580,
+    "marker_id": "marker_a32e4d4ff7",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "heuristic:cloud_runtime_call",
+      "related_actions:A1",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/light.py",
+    "function_name": "async_turn_on",
+    "line_end": 589,
+    "line_start": 587,
+    "marker_id": "marker_58f86ad284",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "heuristic:cloud_runtime_call",
+      "related_actions:A1",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/light.py",
+    "function_name": "async_turn_on",
+    "line_end": 605,
+    "line_start": 603,
+    "marker_id": "marker_95c9ae14ca",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:cloud",
+      "related_actions:A1",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/light.py",
+    "function_name": "async_turn_on",
+    "line_end": 608,
+    "line_start": 608,
+    "marker_id": "marker_b659d41a9a",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:cloud",
+      "related_actions:A1",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/light.py",
+    "function_name": "async_turn_on",
+    "line_end": 611,
+    "line_start": 611,
+    "marker_id": "marker_529bc06448",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "heuristic:cloud_runtime_call",
+      "related_actions:A1",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/light.py",
+    "function_name": "async_turn_on",
+    "line_end": 617,
+    "line_start": 615,
+    "marker_id": "marker_60cc029118",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "heuristic:cloud_runtime_call",
+      "related_actions:A1",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/light.py",
+    "function_name": "async_turn_on",
+    "line_end": 629,
+    "line_start": 629,
+    "marker_id": "marker_7d5e150be7",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "heuristic:cloud_runtime_call",
+      "related_actions:A1",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/light.py",
+    "function_name": "async_turn_on",
+    "line_end": 632,
+    "line_start": 632,
+    "marker_id": "marker_c36b907e75",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:cloud",
+      "related_actions:A4",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/sensor.py",
+    "function_name": "_validate_device_class_unit",
+    "line_end": 1736,
+    "line_start": 1736,
+    "marker_id": "marker_c019b33b97",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A4",
+    "related_action_ids": [
+      "A4"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:cloud",
+      "related_actions:A4",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/sensor.py",
+    "function_name": "_validate_device_class_unit",
+    "line_end": 1738,
+    "line_start": 1736,
+    "marker_id": "marker_3996f9cdbe",
+    "marker_type": "CLOUD_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A4",
+    "related_action_ids": [
+      "A4"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:cloud",
+      "related_actions:A4",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/sensor.py",
+    "function_name": "async_discover_device",
+    "line_end": 1658,
+    "line_start": 1658,
+    "marker_id": "marker_9fbba56a83",
+    "marker_type": "CLOUD_OP",
+    "phase": "SETUP",
+    "primary_action_id": "A4",
+    "related_action_ids": [
+      "A4"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/tuya/sensor.py",
+    "function_name": "async_setup_entry",
+    "line_end": 1671,
+    "line_start": 1644,
+    "marker_id": "marker_494e1a2729",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:cloud",
+      "related_actions:A4",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/sensor.py",
+    "function_name": "async_setup_entry",
+    "line_end": 1658,
+    "line_start": 1658,
+    "marker_id": "marker_7e2b68e1ac",
+    "marker_type": "CLOUD_OP",
+    "phase": "SETUP",
+    "primary_action_id": "A4",
+    "related_action_ids": [
+      "A4"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:cloud",
+      "related_actions:A2",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/switch.py",
+    "function_name": "async_discover_device",
+    "line_end": 922,
+    "line_start": 922,
+    "marker_id": "marker_47f9feae06",
+    "marker_type": "CLOUD_OP",
+    "phase": "SETUP",
+    "primary_action_id": "A2",
+    "related_action_ids": [
+      "A2"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/tuya/switch.py",
+    "function_name": "async_setup_entry",
+    "line_end": 939,
+    "line_start": 908,
+    "marker_id": "marker_63cc69fb3d",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:cloud",
+      "related_actions:A2",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/switch.py",
+    "function_name": "async_setup_entry",
+    "line_end": 922,
+    "line_start": 922,
+    "marker_id": "marker_3a2ff87a59",
+    "marker_type": "CLOUD_OP",
+    "phase": "SETUP",
+    "primary_action_id": "A2",
+    "related_action_ids": [
+      "A2"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_whole_home_ble_safety_sweep_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Whole-Home BLE Safety Sweep"
+}

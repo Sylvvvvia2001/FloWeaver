@@ -1,0 +1,9 @@
+dataset,group,case_count,pass_count,pass_rate_pct,avg_ground_truth_latency_s,accepted_avg_naive_topo_latency_s,accepted_avg_latency_gain_s,accepted_avg_latency_gain_pct,all_generated_avg_naive_topo_latency_s
+smart-home,Group1,21,18,85.71,1.8752,1.3401,0.3805,22.3767,1.3168
+smart-home,Group2,12,9,75.0,4.5167,2.6499,1.4423,35.39,2.5953
+smart-home,Group3,8,5,62.5,7.855,4.75,2.61,35.604,4.3359
+smart-home,Group4,9,5,55.56,11.0433,5.85,3.67,38.488,5.6668
+long-chain,Group1,6,5,83.33,7.195,5.2502,1.6558,24.688,4.98
+long-chain,Group2,8,6,75.0,12.8475,9.6998,2.0102,17.39,8.9821
+long-chain,Group3,4,2,50.0,24.42,14.3,8.44,37.475,12.631
+long-chain,Group4,8,3,37.5,32.7638,18.9,8.85,31.93,16.4778

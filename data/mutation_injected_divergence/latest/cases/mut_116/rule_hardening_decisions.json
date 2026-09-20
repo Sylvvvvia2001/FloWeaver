@@ -1,0 +1,27 @@
+{
+  "auto_hardening": {
+    "rule_M7_same_device_ordering_violation": {
+      "hardening_reason": "insufficient_coverage",
+      "hardening_state": "SOFT"
+    }
+  },
+  "rollback": {
+    "final_counterexample_count": 1,
+    "iterations": 0,
+    "log": [],
+    "max_steps": 1,
+    "priority_chain": [
+      "reduce_parallelism",
+      "disable_session_reuse",
+      "disable_batching",
+      "enforce_min_gap_no_overlap",
+      "rule_patch",
+      "constraint_patch"
+    ]
+  },
+  "thresholds": {
+    "hardening_min_coverage": 0.85,
+    "hardening_min_pass_rate": 0.98
+  },
+  "validation_stats_path": "data/mutation_injected_divergence/latest/cases/mut_116/validation_stats.json"
+}

@@ -1,0 +1,60 @@
+{
+  "repo_path": "data/repo_snapshot",
+  "commit": "HEAD",
+  "integrations": [
+    {
+      "device_id": "ble:switchbot:curtain_lr",
+      "integration": "switchbot",
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "protocols": ["BLE", "HA"]
+    },
+    {
+      "device_id": "ble:esphome:air_node",
+      "integration": "esphome",
+      "file_path": "data/repo_snapshot/esphome/__init__.py",
+      "protocols": ["BLE", "HA"]
+    },
+    {
+      "device_id": "ble:esphome:relay_node",
+      "integration": "esphome",
+      "file_path": "data/repo_snapshot/esphome/manager.py",
+      "protocols": ["BLE", "HA"]
+    },
+    {
+      "device_id": "tuya:light.living_room.status",
+      "integration": "tuya",
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "protocols": ["CLOUD", "HA"]
+    },
+    {
+      "device_id": "tuya:climate.bedroom.status",
+      "integration": "tuya",
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "protocols": ["CLOUD", "HA"]
+    },
+    {
+      "device_id": "tuya:switch.energy_strip.status",
+      "integration": "tuya",
+      "file_path": "data/repo_snapshot/tuya/switch.py",
+      "protocols": ["CLOUD", "HA"]
+    },
+    {
+      "device_id": "sensor.vdev_hybrid_transport_ble_lane",
+      "integration": "switchbot",
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "protocols": ["HA"]
+    },
+    {
+      "device_id": "sensor.vdev_hybrid_transport_cloud_lane",
+      "integration": "tuya",
+      "file_path": "data/repo_snapshot/tuya/entity.py",
+      "protocols": ["HA"]
+    },
+    {
+      "device_id": "sensor.vdev_hybrid_transport_overall",
+      "integration": "esphome",
+      "file_path": "data/repo_snapshot/esphome/update.py",
+      "protocols": ["HA"]
+    }
+  ]
+}

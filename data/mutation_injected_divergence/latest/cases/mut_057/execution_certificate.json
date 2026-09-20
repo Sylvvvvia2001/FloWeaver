@@ -1,0 +1,211 @@
+{
+  "canonicalization_version": "v1",
+  "certificate_id": "cert_e33bc6b08257",
+  "counterexamples": [
+    {
+      "alignment_status": "PARTIAL",
+      "counterexample_id": "cex_addd8a5d33",
+      "culprit_ids": [
+        "RUNTIME:LOCAL:REFRESH_STATUS:long-chain:210:m3:device"
+      ],
+      "diff_summary": {
+        "baseline_state_at_divergence": {
+          "exception_category": null,
+          "resource_keys": [],
+          "state_writes": {}
+        },
+        "baseline_trace_prefix": [
+          {
+            "corr_id": null,
+            "op": "REFRESH_STATUS",
+            "params_abst": {
+              "action_id": "A_refresh"
+            },
+            "phase": "RUNTIME",
+            "provider": "LOCAL",
+            "target": "long-chain:210:m3:device",
+            "ts": 0.0
+          }
+        ],
+        "counterexample_verdict": "DIFF_FOUND",
+        "divergence_point": {
+          "details": {
+            "compare_meta": {
+              "canonicalization_version": "v1",
+              "commutable_ops": [
+                "COORD_REFRESH",
+                "STATE_WRITE"
+              ],
+              "config_hash": "9285a670239fb92a",
+              "equivalence_rules": [],
+              "parallel_action_scopes": []
+            },
+            "diff_hunks": [
+              {
+                "anchor": "RUNTIME:LOCAL:REFRESH_STATUS:long-chain:210:m3:device",
+                "baseline_ops": [
+                  "RUNTIME:LOCAL:REFRESH_STATUS:long-chain:210:m3:device"
+                ],
+                "optimized_ops": [],
+                "severity": "MEDIUM"
+              }
+            ]
+          },
+          "kind": "SPLIT",
+          "reason": "trace_prefix_mismatch",
+          "step": 1,
+          "useg_node_id": "useg_0000"
+        },
+        "environment_assumptions": {
+          "framework_events": [
+            "runtime"
+          ],
+          "path_assumptions": [
+            "scenario:mut_057"
+          ],
+          "suspicious_region_id": "sr_001",
+          "toggle_assumptions": {
+            "mutation_type": "M3_missing_refresh_status_query"
+          }
+        },
+        "hunks": [
+          {
+            "anchor": "RUNTIME:LOCAL:REFRESH_STATUS:long-chain:210:m3:device",
+            "baseline_ops": [
+              "RUNTIME:LOCAL:REFRESH_STATUS:long-chain:210:m3:device"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          }
+        ],
+        "inferred_by": "check_observation_schema_or_alignment_rule",
+        "input_assumptions": {
+          "symbolic_inputs": {
+            "scenario_id": "mut_057"
+          }
+        },
+        "kind": "missing_prerequisite",
+        "minimal_conditions": [
+          "scenario:mut_057",
+          "symbolic_inputs.scenario_id=mut_057",
+          "toggle_assumptions.mutation_type=M3_missing_refresh_status_query",
+          "framework_event:runtime"
+        ],
+        "optimized_state_at_divergence": {
+          "exception_category": null,
+          "resource_keys": [],
+          "state_writes": {}
+        },
+        "optimized_trace_prefix": [],
+        "refinement_hint": "check_observation_schema_or_alignment_rule",
+        "suspicious_region_id": "sr_001",
+        "violated_property": "TRACE_MISMATCH"
+      },
+      "execution_plan_hash": null,
+      "scenario_id": "mut_057",
+      "suspicious_region_count": 2,
+      "trust_plan_hash": null,
+      "violated_assertion": "observable_semantic_equivalence"
+    }
+  ],
+  "differential_summary": {
+    "compare_meta": {
+      "canonicalization_version": "v1",
+      "commutable_ops": [
+        "COORD_REFRESH",
+        "STATE_WRITE"
+      ],
+      "config_hash": "9285a670239fb92a",
+      "equivalence_rules": [],
+      "parallel_action_scopes": []
+    },
+    "counterexample_count": 1,
+    "earliest_violation_summary": {
+      "dominant_target": "long:chain:210:m3:device",
+      "top_anchors": [
+        [
+          "RUNTIME:LOCAL:REFRESH_STATUS:long-chain:210:m3:device",
+          1
+        ]
+      ],
+      "top_targets": [
+        [
+          "long:chain:210:m3:device",
+          1
+        ]
+      ]
+    },
+    "focus_terms": [
+      "long-chain:210:m3:device",
+      "long-chain:210:m3:entity",
+      "REFRESH_STATUS",
+      "STATE_WRITE"
+    ],
+    "hardening_threshold": {
+      "min_coverage": 0.85,
+      "min_pass_rate": 0.98
+    },
+    "rollback_applied_kinds": [],
+    "rollback_iterations": 0,
+    "rollback_max_steps": 1,
+    "rule_stats": {
+      "rule_M3_missing_refresh_status_query": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": 0.0,
+        "last_updated_at": "2026-07-06T09:51:07.959440+00:00",
+        "m6_alignment": {
+          "alignment_status_counts": {
+            "PARTIAL": 1
+          },
+          "final_counterexample_scenarios": [
+            "mut_057"
+          ],
+          "matched_scenarios": [
+            "mut_057"
+          ],
+          "resource_preserved_scenarios": [],
+          "rollback_touched": false,
+          "strict_pass_scenarios": [],
+          "tolerant_pass_scenarios": []
+        },
+        "n_applied": 1,
+        "n_counterexamples": 1,
+        "n_matched": 1,
+        "n_success": 0,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": 0.0,
+        "rule_id": "rule_M3_missing_refresh_status_query",
+        "trace_preserved_rate": 0.0
+      }
+    },
+    "runtime_policy_summary": [],
+    "scenario_total": 1,
+    "strict_pass": 0,
+    "tolerant_pass": 0
+  },
+  "generated_at": "2026-07-06T09:51:07.959440+00:00",
+  "hard_edge_proof": {
+    "acyclic": true,
+    "edge_count": 0,
+    "edges": []
+  },
+  "integration": "mut_057",
+  "mssu_signatures": [
+    {
+      "mssu_id": "m01",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m02",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    }
+  ],
+  "plan_summary": {},
+  "profile_version": "mutation_suite/v1",
+  "schema_version": "execution_certificate/v1",
+  "soft_constraints": []
+}

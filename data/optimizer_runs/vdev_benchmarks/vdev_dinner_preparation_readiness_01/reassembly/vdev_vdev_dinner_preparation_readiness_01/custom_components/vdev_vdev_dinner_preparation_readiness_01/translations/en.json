@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_dinner_preparation_readiness_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Dinner Preparation Readiness"
+}

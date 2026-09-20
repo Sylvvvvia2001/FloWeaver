@@ -1,0 +1,75 @@
+{
+  "auto_hardening": {
+    "rule_coord_refresh_0d5b7bb134": {
+      "hardening_reason": "promoted_by_validation",
+      "hardening_state": "HARD"
+    },
+    "rule_entry_unload_9d31450f19": {
+      "hardening_reason": "insufficient_coverage",
+      "hardening_state": "SOFT"
+    },
+    "rule_general_209df39611": {
+      "hardening_reason": "insufficient_coverage",
+      "hardening_state": "SOFT"
+    },
+    "rule_protocol_ble_budget_overlap": {
+      "hardening_reason": "promoted_by_validation",
+      "hardening_state": "HARD"
+    },
+    "rule_protocol_ble_connect_op_disconnect": {
+      "hardening_reason": "promoted_by_validation",
+      "hardening_state": "HARD"
+    },
+    "rule_protocol_ble_reuse_gap": {
+      "hardening_reason": "promoted_by_validation",
+      "hardening_state": "HARD"
+    },
+    "rule_protocol_cloud_backoff": {
+      "hardening_reason": "insufficient_coverage",
+      "hardening_state": "SOFT"
+    },
+    "rule_protocol_cloud_batch_reuse": {
+      "hardening_reason": "insufficient_coverage",
+      "hardening_state": "SOFT"
+    },
+    "rule_protocol_cloud_budget_rate": {
+      "hardening_reason": "insufficient_coverage",
+      "hardening_state": "SOFT"
+    },
+    "rule_protocol_cloud_refresh_before_call": {
+      "hardening_reason": "insufficient_coverage",
+      "hardening_state": "SOFT"
+    },
+    "rule_protocol_local_api_budget": {
+      "hardening_reason": "insufficient_coverage",
+      "hardening_state": "SOFT"
+    },
+    "rule_state_write_3038cae0b8": {
+      "hardening_reason": "promoted_by_validation",
+      "hardening_state": "HARD"
+    },
+    "rule_subscribe_ab1fa62e3a": {
+      "hardening_reason": "promoted_by_validation",
+      "hardening_state": "HARD"
+    }
+  },
+  "rollback": {
+    "final_counterexample_count": 0,
+    "iterations": 0,
+    "log": [],
+    "max_steps": 6,
+    "priority_chain": [
+      "reduce_parallelism",
+      "disable_session_reuse",
+      "disable_batching",
+      "enforce_min_gap_no_overlap",
+      "rule_patch",
+      "constraint_patch"
+    ]
+  },
+  "thresholds": {
+    "hardening_min_coverage": 0.85,
+    "hardening_min_pass_rate": 0.98
+  },
+  "validation_stats_path": "data/optimizer_runs/vdev_benchmarks/vdev_ble_safety_sweep_routine_01/validation_stats.json"
+}

@@ -1,0 +1,679 @@
+{
+  "meta": {
+    "action_lanes": {
+      "A1": "BLE_LOCAL",
+      "A10": "CLOUD",
+      "A11": "LOCAL",
+      "A12": "LOCAL",
+      "A13": "WRITEBACK_BLE",
+      "A14": "WRITEBACK_CLOUD",
+      "A15": "WRITEBACK_LOCAL",
+      "A16": "WRITEBACK_OVERALL",
+      "A2": "BLE_LOCAL",
+      "A3": "BLE_LOCAL",
+      "A4": "BLE_LOCAL",
+      "A5": "CLOUD",
+      "A6": "CLOUD",
+      "A7": "CLOUD",
+      "A8": "CLOUD",
+      "A9": "CLOUD"
+    },
+    "canonicalization_version": null,
+    "node_kind": "action_id",
+    "objectives": {
+      "metrics": {
+        "e2e_latency_ms": {
+          "p95": 2100
+        },
+        "lane_completion_ms": {
+          "ble_lane_p95": 700,
+          "cloud_lane_p95": 1200,
+          "local_lane_p95": 450
+        }
+      },
+      "primary": "minimize_overnight_monitoring_tail_latency"
+    },
+    "policy": {
+      "ble_parallel": 1,
+      "cloud_parallel": 3,
+      "default_qps": 5.0,
+      "local_parallel": 6,
+      "max_parallel": 9
+    },
+    "profile_version": null,
+    "trust_compression": {
+      "action_to_msf_count": {
+        "A1": 1,
+        "A10": 1,
+        "A11": 2,
+        "A12": 1,
+        "A13": 2,
+        "A14": 1,
+        "A15": 1,
+        "A16": 1,
+        "A2": 1,
+        "A3": 1,
+        "A4": 1,
+        "A5": 2,
+        "A6": 1,
+        "A7": 2,
+        "A8": 1,
+        "A9": 1
+      },
+      "merged_constraints": [
+        {
+          "batch_id": "batch_000",
+          "compressed_constraint_count": 5,
+          "original_constraint_count": 9
+        },
+        {
+          "batch_id": "batch_001",
+          "compressed_constraint_count": 5,
+          "original_constraint_count": 9
+        },
+        {
+          "batch_id": "batch_002",
+          "compressed_constraint_count": 5,
+          "original_constraint_count": 8
+        },
+        {
+          "batch_id": "batch_003",
+          "compressed_constraint_count": 5,
+          "original_constraint_count": 8
+        }
+      ],
+      "policy_blocks": [
+        {
+          "fallback_actions": [
+            "preserve_action_order"
+          ],
+          "guard_kinds": [
+            "MIN_GAP",
+            "SAME_SESSION_GROUP"
+          ],
+          "policy_block": "ble_local_policy",
+          "scope": [
+            "A1",
+            "A2",
+            "A3",
+            "A4"
+          ]
+        },
+        {
+          "fallback_actions": [
+            "preserve_action_order"
+          ],
+          "guard_kinds": [
+            "MIN_GAP",
+            "SAME_SESSION_GROUP"
+          ],
+          "policy_block": "ble_local_policy",
+          "scope": [
+            "A1",
+            "A2",
+            "A3",
+            "A4"
+          ]
+        },
+        {
+          "fallback_actions": [
+            "preserve_action_order"
+          ],
+          "guard_kinds": [
+            "MIN_GAP",
+            "SAME_SESSION_GROUP"
+          ],
+          "policy_block": "ble_local_policy",
+          "scope": [
+            "A1",
+            "A2",
+            "A3",
+            "A4"
+          ]
+        },
+        {
+          "fallback_actions": [
+            "preserve_action_order"
+          ],
+          "guard_kinds": [
+            "MIN_GAP",
+            "SAME_SESSION_GROUP"
+          ],
+          "policy_block": "ble_local_policy",
+          "scope": [
+            "A1",
+            "A2",
+            "A3",
+            "A4"
+          ]
+        },
+        {
+          "fallback_actions": [],
+          "guard_kinds": [
+            "BATCH_GROUP",
+            "SAME_SESSION_GROUP"
+          ],
+          "policy_block": "cloud_policy",
+          "scope": [
+            "A5",
+            "A7"
+          ]
+        }
+      ]
+    }
+  },
+  "ordered_batches": [
+    {
+      "batch_id": "batch_000",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A1"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_001",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A2"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_002",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A3"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_003",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A4"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_004",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A5"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_005",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A6"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_006",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A7"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_007",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A8"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_008",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A9"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_009",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A10"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_010",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A11"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_011",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A12"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_012",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A13"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_013",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A14"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_014",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A15"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_015",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A16"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    }
+  ]
+}

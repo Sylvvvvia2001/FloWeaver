@@ -1,0 +1,28 @@
+run_security_presence_fabric_snapshot_01:
+  name: Run VDev
+  description: Execute the generated VDev execution plan.
+  fields:
+    payload:
+      name: Payload
+      description: Optional runtime parameters consumed by action templates.
+      required: false
+      selector:
+        object:
+    runtime_metrics:
+      name: Runtime metrics
+      description: Optional runtime metrics/guard flags injected into guard evaluation.
+      required: false
+      selector:
+        object:
+    export_trace:
+      name: Export trace
+      description: Export the run trace to .storage or a custom path after execution.
+      required: false
+      selector:
+        boolean:
+    trace_path:
+      name: Trace path
+      description: Optional explicit path for trace export.
+      required: false
+      selector:
+        text:

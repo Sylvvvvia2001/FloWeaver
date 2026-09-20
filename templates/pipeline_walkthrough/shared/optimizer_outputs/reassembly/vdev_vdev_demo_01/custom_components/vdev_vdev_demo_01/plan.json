@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "action_to_mssus": {
+      "A1": [
+        "mssu00_001_ble_op",
+        "mssu00_002_ble_op",
+        "mssu00_003_ble_op"
+      ],
+      "A2": [
+        "mssu00_000_cloud_op",
+        "mssu00_008_cloud_op",
+        "mssu00_009_cloud_op",
+        "mssu01_001_cloud_op",
+        "mssu01_004_cloud_op",
+        "mssu01_005_cloud_op"
+      ],
+      "A3": [
+        "mssu00_006_state_write",
+        "mssu01_002_state_write"
+      ]
+    },
+    "critical_boost": {
+      "A1": 1,
+      "A2": 1,
+      "A3": 1
+    },
+    "critical_score": {
+      "A1": 2.0,
+      "A2": 2.0,
+      "A3": 1.0
+    },
+    "node_kind": "action_id",
+    "objectives": {
+      "metrics": {
+        "e2e_latency_ms": {
+          "p95": 1500
+        }
+      },
+      "primary": "minimize_tail_latency"
+    },
+    "policy": {
+      "ble_parallel": 1,
+      "cloud_parallel": 4,
+      "default_qps": 5.0,
+      "max_parallel": 6
+    },
+    "soft_summary": {
+      "BACKOFF_WINDOW": {
+        "base_ms": 200,
+        "factor": 2.0
+      },
+      "BUDGET_K": {
+        "limit": 6,
+        "resource": "TOTAL"
+      },
+      "MIN_GAP": {
+        "reason": "ble_and_cloud_overlap_risk"
+      },
+      "NO_OVERLAP": {
+        "max_parallel": 1,
+        "resource": "BLE"
+      }
+    }
+  },
+  "ordered_batches": [
+    {
+      "batch_id": "batch_000",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": {
+        "BACKOFF_WINDOW": "reduce_qps_and_batch_size",
+        "BUDGET_K": "reduce_parallelism",
+        "COALESCE_STATE_WRITE": "disable_optimization_for_scope",
+        "MIN_GAP": "preserve_action_order",
+        "NO_OVERLAP": "set_ble_parallelism_to_1"
+      },
+      "guards": [
+        "true",
+        "runtime_metrics_available",
+        "runtime_metrics_available",
+        "resource_constrained",
+        "resource_constrained",
+        "resource_constrained",
+        "ble_timeout_rate_high",
+        "recent_429_rate_high",
+        "true"
+      ],
+      "parallel_groups": [
+        [
+          "A1",
+          "A2"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 2,
+        "max_qps": 5.0
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true
+      }
+    },
+    {
+      "batch_id": "batch_001",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": {
+        "BUDGET_K": "reduce_parallelism",
+        "COALESCE_STATE_WRITE": "disable_optimization_for_scope"
+      },
+      "guards": [
+        "runtime_metrics_available",
+        "runtime_metrics_available",
+        "resource_constrained",
+        "resource_constrained",
+        "resource_constrained"
+      ],
+      "parallel_groups": [
+        [
+          "A3"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 5.0
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true
+      }
+    }
+  ]
+}

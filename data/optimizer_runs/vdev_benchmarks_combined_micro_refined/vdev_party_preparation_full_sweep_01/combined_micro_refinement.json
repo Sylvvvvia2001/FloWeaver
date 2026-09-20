@@ -1,0 +1,94 @@
+{
+  "accepted_corridors": [
+    {
+      "action_ids": [
+        "A5",
+        "A8",
+        "A6",
+        "A7",
+        "A9",
+        "A10"
+      ],
+      "batch_ids": [
+        "batch_004",
+        "batch_005",
+        "batch_006"
+      ],
+      "corridor_id": "corridor_00",
+      "latency_saved_ms": 166,
+      "source": "API",
+      "validation_passed": true
+    },
+    {
+      "action_ids": [
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A17",
+        "A18"
+      ],
+      "batch_ids": [
+        "batch_007",
+        "batch_008",
+        "batch_009",
+        "batch_010",
+        "batch_011",
+        "batch_012",
+        "batch_013",
+        "batch_014"
+      ],
+      "corridor_id": "corridor_01",
+      "latency_saved_ms": 175,
+      "source": "API",
+      "validation_passed": true
+    },
+    {
+      "action_ids": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "batch_ids": [
+        "batch_000",
+        "batch_001",
+        "batch_002",
+        "batch_003"
+      ],
+      "corridor_id": "corridor_00",
+      "latency_saved_ms": 282,
+      "source": "BLE",
+      "validation_passed": true
+    }
+  ],
+  "api_added_savings_ms": 341,
+  "ble_added_savings_ms": 282,
+  "case_name": "Party Preparation Full Sweep",
+  "combined_added_savings_ms": 623,
+  "combined_added_savings_ratio": 0.11821631878557874,
+  "combined_refined_estimated_latency_ms": 4647,
+  "conflict_count": 0,
+  "group": "Profile Coverage - Realistic Stress Routines",
+  "original_estimated_latency_ms": 5270,
+  "rejected_corridors": [],
+  "target_path": "data/targets/vdev_benchmarks/vdev_party_preparation_full_sweep_01.json",
+  "validation": {
+    "api_constraints_ok": true,
+    "batch_order_preserved": true,
+    "ble_constraints_ok": true,
+    "component_validations_ok": true,
+    "conflict_free": true,
+    "contiguous_coverage_ok": true,
+    "event_loop_constraints_ok": true,
+    "passed": true,
+    "projection_ok": true,
+    "reasons": [],
+    "savings_consistency_ok": true,
+    "simulated_event_count": 107,
+    "simulated_total_ms": 4647
+  },
+  "vdev_id": "vdev_party_preparation_full_sweep_01"
+}

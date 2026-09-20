@@ -1,0 +1,1446 @@
+{
+  "meta": {
+    "spec_version": "0.1",
+    "vdev_id": "vdev_weekend_whole_home_snapshot_extended_01",
+    "name": "Weekend Whole-Home Snapshot Extended",
+    "benchmark": {
+      "group": "Whole-Home Survey and Audit Routines",
+      "story": "On a weekend morning, the routine produces a larger whole-home snapshot of curtains, temperatures, air quality, lights, plugs, and climate to give the household a quick status overview.",
+      "strengths": [
+        "Larger mixed baseline than the original weekend snapshot.",
+        "Contains BLE connect plus subscribe in addition to many read actions.",
+        "Includes local plugs, MQTT power, and multiple cloud buckets in one survey."
+      ],
+      "focus_areas": [
+        "Large mixed-lane batching and overlap",
+        "BLE transport setup inside a long read-heavy corridor",
+        "Local lane should stay cheap despite more devices",
+        "Whole-home summary should remain lane-first then overall"
+      ]
+    }
+  },
+  "source_scope": {
+    "repo_path": "data/repo_snapshot",
+    "commit": "HEAD",
+    "domains": [
+      "esphome",
+      "hue",
+      "mqtt",
+      "switchbot",
+      "tplink",
+      "tuya",
+      "xiaomi_ble"
+    ],
+    "platforms": [
+      "climate",
+      "cover",
+      "esphome",
+      "light",
+      "manager",
+      "mqtt",
+      "sensor",
+      "switch"
+    ],
+    "protocols": [
+      "BLE",
+      "CLOUD",
+      "HA",
+      "LOCAL"
+    ],
+    "files": [
+      "data/repo_snapshot/esphome/__init__.py",
+      "data/repo_snapshot/esphome/manager.py",
+      "data/repo_snapshot/esphome/update.py",
+      "data/repo_snapshot/hue/v2/group.py",
+      "data/repo_snapshot/mqtt/subscription.py",
+      "data/repo_snapshot/switchbot/cover.py",
+      "data/repo_snapshot/switchbot/fan.py",
+      "data/repo_snapshot/tplink/entity.py",
+      "data/repo_snapshot/tuya/climate.py",
+      "data/repo_snapshot/tuya/entity.py",
+      "data/repo_snapshot/tuya/light.py",
+      "data/repo_snapshot/tuya/switch.py",
+      "data/repo_snapshot/xiaomi_ble/sensor.py"
+    ],
+    "file_bindings": [
+      {
+        "device_id": "ble:switchbot:curtain_living_weekend_ext",
+        "file_path": "data/repo_snapshot/switchbot/cover.py",
+        "integration": "switchbot",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:curtain_master_weekend_ext",
+        "file_path": "data/repo_snapshot/switchbot/cover.py",
+        "integration": "switchbot",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:curtain_study_weekend_ext",
+        "file_path": "data/repo_snapshot/switchbot/cover.py",
+        "integration": "switchbot",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:xiaomi_ble:temp_sensor_living_weekend_ext",
+        "file_path": "data/repo_snapshot/xiaomi_ble/sensor.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:xiaomi_ble:temp_sensor_bedroom_weekend_ext",
+        "file_path": "data/repo_snapshot/xiaomi_ble/sensor.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:xiaomi_ble:temp_sensor_study_weekend_ext",
+        "file_path": "data/repo_snapshot/xiaomi_ble/sensor.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:esphome:air_node_weekend_ext",
+        "file_path": "data/repo_snapshot/esphome/__init__.py",
+        "integration": "esphome",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:esphome:relay_node_weekend_ext",
+        "file_path": "data/repo_snapshot/esphome/manager.py",
+        "integration": "esphome",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.living_weekend_ext.status",
+        "file_path": "data/repo_snapshot/tuya/light.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.hallway_weekend_ext.status",
+        "file_path": "data/repo_snapshot/tuya/light.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.study_weekend_ext.status",
+        "file_path": "data/repo_snapshot/tuya/light.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:climate.master_weekend_ext.status",
+        "file_path": "data/repo_snapshot/tuya/climate.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:climate.guest_weekend_ext.status",
+        "file_path": "data/repo_snapshot/tuya/climate.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.energy_strip_weekend_ext_1.status",
+        "file_path": "data/repo_snapshot/tuya/switch.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.energy_strip_weekend_ext_2.status",
+        "file_path": "data/repo_snapshot/tuya/switch.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:living_group_weekend_ext",
+        "file_path": "data/repo_snapshot/hue/v2/group.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:bedroom_group_weekend_ext",
+        "file_path": "data/repo_snapshot/hue/v2/group.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tplink:plug.server_corner_weekend_ext",
+        "file_path": "data/repo_snapshot/tplink/entity.py",
+        "integration": "tplink",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tplink:plug.media_corner_weekend_ext",
+        "file_path": "data/repo_snapshot/tplink/entity.py",
+        "integration": "tplink",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "mqtt:power_meter_whole_home_weekend_ext",
+        "file_path": "data/repo_snapshot/mqtt/subscription.py",
+        "integration": "mqtt",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_weekend_whole_home_snapshot_extended_ble_lane",
+        "file_path": "data/repo_snapshot/switchbot/fan.py",
+        "integration": "switchbot",
+        "protocols": [
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_weekend_whole_home_snapshot_extended_cloud_lane",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_weekend_whole_home_snapshot_extended_local_lane",
+        "file_path": "data/repo_snapshot/tplink/entity.py",
+        "integration": "tplink",
+        "protocols": [
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_weekend_whole_home_snapshot_extended_overall",
+        "file_path": "data/repo_snapshot/esphome/update.py",
+        "integration": "esphome",
+        "protocols": [
+          "HA"
+        ]
+      }
+    ],
+    "entrypoints": [
+      {
+        "kind": "ha_service",
+        "service": {
+          "domain": "floweaver",
+          "name": "run_weekend_whole_home_snapshot_extended_01"
+        }
+      }
+    ]
+  },
+  "vdev_actions": [
+    {
+      "action_id": "A1",
+      "type": "refresh_cover",
+      "protocol": "BLE",
+      "critical": true,
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "ble_device",
+      "target": {
+        "id": "ble:switchbot:curtain_living_weekend_ext",
+        "kind": "ble_device",
+        "device_id": "ble:switchbot:curtain_living_weekend_ext"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "cover",
+        "service": "refresh_cover",
+        "data_template": {
+          "device_id": "ble:switchbot:curtain_living_weekend_ext"
+        }
+      }
+    },
+    {
+      "action_id": "A2",
+      "type": "refresh_cover",
+      "protocol": "BLE",
+      "critical": true,
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "ble_device",
+      "target": {
+        "id": "ble:switchbot:curtain_master_weekend_ext",
+        "kind": "ble_device",
+        "device_id": "ble:switchbot:curtain_master_weekend_ext"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "cover",
+        "service": "refresh_cover",
+        "data_template": {
+          "device_id": "ble:switchbot:curtain_master_weekend_ext"
+        }
+      }
+    },
+    {
+      "action_id": "A3",
+      "type": "refresh_cover",
+      "protocol": "BLE",
+      "critical": true,
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "ble_device",
+      "target": {
+        "id": "ble:switchbot:curtain_study_weekend_ext",
+        "kind": "ble_device",
+        "device_id": "ble:switchbot:curtain_study_weekend_ext"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "cover",
+        "service": "refresh_cover",
+        "data_template": {
+          "device_id": "ble:switchbot:curtain_study_weekend_ext"
+        }
+      }
+    },
+    {
+      "action_id": "A4",
+      "type": "read_sensor",
+      "protocol": "BLE",
+      "critical": true,
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "ble_device",
+      "target": {
+        "id": "ble:xiaomi_ble:temp_sensor_living_weekend_ext",
+        "kind": "ble_device",
+        "device_id": "ble:xiaomi_ble:temp_sensor_living_weekend_ext"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "read_sensor",
+        "data_template": {
+          "device_id": "ble:xiaomi_ble:temp_sensor_living_weekend_ext"
+        }
+      }
+    },
+    {
+      "action_id": "A5",
+      "type": "read_sensor",
+      "protocol": "BLE",
+      "critical": true,
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "ble_device",
+      "target": {
+        "id": "ble:xiaomi_ble:temp_sensor_bedroom_weekend_ext",
+        "kind": "ble_device",
+        "device_id": "ble:xiaomi_ble:temp_sensor_bedroom_weekend_ext"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "read_sensor",
+        "data_template": {
+          "device_id": "ble:xiaomi_ble:temp_sensor_bedroom_weekend_ext"
+        }
+      }
+    },
+    {
+      "action_id": "A6",
+      "type": "read_sensor",
+      "protocol": "BLE",
+      "critical": true,
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "ble_device",
+      "target": {
+        "id": "ble:xiaomi_ble:temp_sensor_study_weekend_ext",
+        "kind": "ble_device",
+        "device_id": "ble:xiaomi_ble:temp_sensor_study_weekend_ext"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "read_sensor",
+        "data_template": {
+          "device_id": "ble:xiaomi_ble:temp_sensor_study_weekend_ext"
+        }
+      }
+    },
+    {
+      "action_id": "A7",
+      "type": "connect",
+      "protocol": "BLE",
+      "critical": true,
+      "marker_hints": [
+        "BLE_CONNECT",
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "ble_device",
+      "target": {
+        "id": "ble:esphome:air_node_weekend_ext",
+        "kind": "ble_device",
+        "device_id": "ble:esphome:air_node_weekend_ext"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "esphome",
+        "service": "connect",
+        "data_template": {
+          "device_id": "ble:esphome:air_node_weekend_ext"
+        }
+      }
+    },
+    {
+      "action_id": "A8",
+      "type": "subscribe",
+      "protocol": "BLE",
+      "critical": true,
+      "marker_hints": [
+        "BLE_NOTIFY_SUBSCRIBE",
+        "SUBSCRIBE",
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "ble_device",
+      "target": {
+        "id": "ble:esphome:relay_node_weekend_ext",
+        "kind": "ble_device",
+        "device_id": "ble:esphome:relay_node_weekend_ext"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "manager",
+        "service": "subscribe",
+        "data_template": {
+          "device_id": "ble:esphome:relay_node_weekend_ext"
+        }
+      }
+    },
+    {
+      "action_id": "A9",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:light.living_weekend_ext.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:light.living_weekend_ext.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "light",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:light.living_weekend_ext.status",
+          "endpoint_group_key": "weekend_ext_lights",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A10",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:light.hallway_weekend_ext.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:light.hallway_weekend_ext.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "light",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:light.hallway_weekend_ext.status",
+          "endpoint_group_key": "weekend_ext_lights",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A11",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:light.study_weekend_ext.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:light.study_weekend_ext.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "light",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:light.study_weekend_ext.status",
+          "endpoint_group_key": "weekend_ext_lights",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A12",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:climate.master_weekend_ext.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:climate.master_weekend_ext.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "climate",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:climate.master_weekend_ext.status",
+          "endpoint_group_key": "weekend_ext_hvac",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A13",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:climate.guest_weekend_ext.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:climate.guest_weekend_ext.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "climate",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:climate.guest_weekend_ext.status",
+          "endpoint_group_key": "weekend_ext_hvac",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A14",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:switch.energy_strip_weekend_ext_1.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:switch.energy_strip_weekend_ext_1.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "switch",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:switch.energy_strip_weekend_ext_1.status",
+          "endpoint_group_key": "weekend_ext_energy",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A15",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:switch.energy_strip_weekend_ext_2.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:switch.energy_strip_weekend_ext_2.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "switch",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:switch.energy_strip_weekend_ext_2.status",
+          "endpoint_group_key": "weekend_ext_energy",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A16",
+      "type": "get_state",
+      "protocol": "LOCAL",
+      "critical": true,
+      "idempotent": true,
+      "provider": "hue_local",
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "local_endpoint",
+      "target": {
+        "id": "hue:bridge_1:living_group_weekend_ext",
+        "kind": "local_endpoint",
+        "endpoint": "hue:bridge_1:living_group_weekend_ext",
+        "provider": "hue_local"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "light",
+        "service": "get_state",
+        "provider": "hue_local",
+        "data_template": {
+          "endpoint": "hue:bridge_1:living_group_weekend_ext",
+          "endpoint_group_key": "bridge_1",
+          "host_group_key": "hue_bridge_1"
+        }
+      }
+    },
+    {
+      "action_id": "A17",
+      "type": "get_state",
+      "protocol": "LOCAL",
+      "critical": true,
+      "idempotent": true,
+      "provider": "hue_local",
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "local_endpoint",
+      "target": {
+        "id": "hue:bridge_1:bedroom_group_weekend_ext",
+        "kind": "local_endpoint",
+        "endpoint": "hue:bridge_1:bedroom_group_weekend_ext",
+        "provider": "hue_local"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "light",
+        "service": "get_state",
+        "provider": "hue_local",
+        "data_template": {
+          "endpoint": "hue:bridge_1:bedroom_group_weekend_ext",
+          "endpoint_group_key": "bridge_1",
+          "host_group_key": "hue_bridge_1"
+        }
+      }
+    },
+    {
+      "action_id": "A18",
+      "type": "get_state",
+      "protocol": "LOCAL",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tplink_local",
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "local_endpoint",
+      "target": {
+        "id": "tplink:plug.server_corner_weekend_ext",
+        "kind": "local_endpoint",
+        "endpoint": "tplink:plug.server_corner_weekend_ext",
+        "provider": "tplink_local"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "switch",
+        "service": "get_state",
+        "provider": "tplink_local",
+        "data_template": {
+          "endpoint": "tplink:plug.server_corner_weekend_ext",
+          "endpoint_group_key": "weekend_ext_tplink",
+          "host_group_key": "tplink_local"
+        }
+      }
+    },
+    {
+      "action_id": "A19",
+      "type": "get_state",
+      "protocol": "LOCAL",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tplink_local",
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "local_endpoint",
+      "target": {
+        "id": "tplink:plug.media_corner_weekend_ext",
+        "kind": "local_endpoint",
+        "endpoint": "tplink:plug.media_corner_weekend_ext",
+        "provider": "tplink_local"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "switch",
+        "service": "get_state",
+        "provider": "tplink_local",
+        "data_template": {
+          "endpoint": "tplink:plug.media_corner_weekend_ext",
+          "endpoint_group_key": "weekend_ext_tplink",
+          "host_group_key": "tplink_local"
+        }
+      }
+    },
+    {
+      "action_id": "A20",
+      "type": "read_last_message",
+      "protocol": "LOCAL",
+      "critical": true,
+      "idempotent": true,
+      "provider": "mqtt",
+      "marker_hints": [
+        "MQTT_SUBSCRIBE",
+        "SUBSCRIBE"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "mqtt_topic",
+      "target": {
+        "id": "mqtt:power_meter_whole_home_weekend_ext",
+        "kind": "mqtt_topic",
+        "endpoint": "mqtt:power_meter_whole_home_weekend_ext",
+        "provider": "mqtt"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "mqtt",
+        "service": "read_last_message",
+        "provider": "mqtt",
+        "data_template": {
+          "endpoint": "mqtt:power_meter_whole_home_weekend_ext"
+        }
+      }
+    },
+    {
+      "action_id": "A21",
+      "type": "write",
+      "protocol": "HA",
+      "critical": true,
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "side_effects": [
+        "state_write"
+      ],
+      "target_kind": "ha_entity",
+      "target": {
+        "entity_id": "sensor.vdev_weekend_whole_home_snapshot_extended_ble_lane",
+        "id": "sensor.vdev_weekend_whole_home_snapshot_extended_ble_lane",
+        "kind": "ha_entity"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "publish",
+        "data_template": {
+          "entity_id": "sensor.vdev_weekend_whole_home_snapshot_extended_ble_lane"
+        }
+      }
+    },
+    {
+      "action_id": "A22",
+      "type": "write",
+      "protocol": "HA",
+      "critical": true,
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "side_effects": [
+        "state_write"
+      ],
+      "target_kind": "ha_entity",
+      "target": {
+        "entity_id": "sensor.vdev_weekend_whole_home_snapshot_extended_cloud_lane",
+        "id": "sensor.vdev_weekend_whole_home_snapshot_extended_cloud_lane",
+        "kind": "ha_entity"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "publish",
+        "data_template": {
+          "entity_id": "sensor.vdev_weekend_whole_home_snapshot_extended_cloud_lane"
+        }
+      }
+    },
+    {
+      "action_id": "A23",
+      "type": "write",
+      "protocol": "HA",
+      "critical": true,
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "side_effects": [
+        "state_write"
+      ],
+      "target_kind": "ha_entity",
+      "target": {
+        "entity_id": "sensor.vdev_weekend_whole_home_snapshot_extended_local_lane",
+        "id": "sensor.vdev_weekend_whole_home_snapshot_extended_local_lane",
+        "kind": "ha_entity"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "publish",
+        "data_template": {
+          "entity_id": "sensor.vdev_weekend_whole_home_snapshot_extended_local_lane"
+        }
+      }
+    },
+    {
+      "action_id": "A24",
+      "type": "write",
+      "protocol": "HA",
+      "critical": true,
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "side_effects": [
+        "state_write"
+      ],
+      "target_kind": "ha_entity",
+      "target": {
+        "entity_id": "sensor.vdev_weekend_whole_home_snapshot_extended_overall",
+        "id": "sensor.vdev_weekend_whole_home_snapshot_extended_overall",
+        "kind": "ha_entity"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "publish",
+        "data_template": {
+          "entity_id": "sensor.vdev_weekend_whole_home_snapshot_extended_overall"
+        }
+      }
+    }
+  ],
+  "target_anchors": {
+    "device_ids": [
+      "ble:switchbot:curtain_living_weekend_ext",
+      "ble:switchbot:curtain_master_weekend_ext",
+      "ble:switchbot:curtain_study_weekend_ext",
+      "ble:xiaomi_ble:temp_sensor_living_weekend_ext",
+      "ble:xiaomi_ble:temp_sensor_bedroom_weekend_ext",
+      "ble:xiaomi_ble:temp_sensor_study_weekend_ext",
+      "ble:esphome:air_node_weekend_ext",
+      "ble:esphome:relay_node_weekend_ext"
+    ],
+    "endpoints": [
+      "tuya:light.living_weekend_ext.status",
+      "tuya:light.hallway_weekend_ext.status",
+      "tuya:light.study_weekend_ext.status",
+      "tuya:climate.master_weekend_ext.status",
+      "tuya:climate.guest_weekend_ext.status",
+      "tuya:switch.energy_strip_weekend_ext_1.status",
+      "tuya:switch.energy_strip_weekend_ext_2.status"
+    ],
+    "entities": [
+      "sensor.vdev_weekend_whole_home_snapshot_extended_ble_lane",
+      "sensor.vdev_weekend_whole_home_snapshot_extended_cloud_lane",
+      "sensor.vdev_weekend_whole_home_snapshot_extended_local_lane",
+      "sensor.vdev_weekend_whole_home_snapshot_extended_overall"
+    ],
+    "characteristics": [],
+    "required_state_writes": [
+      "sensor.vdev_weekend_whole_home_snapshot_extended_ble_lane",
+      "sensor.vdev_weekend_whole_home_snapshot_extended_cloud_lane",
+      "sensor.vdev_weekend_whole_home_snapshot_extended_local_lane",
+      "sensor.vdev_weekend_whole_home_snapshot_extended_overall"
+    ],
+    "service_entrypoints": [
+      "floweaver.run_weekend_whole_home_snapshot_extended_01"
+    ],
+    "anchor_ops": [
+      "BLE_CONNECT",
+      "BLE_GATT_OP",
+      "BLE_NOTIFY_SUBSCRIBE",
+      "BLE_OP",
+      "CLOUD_HTTP_CALL",
+      "CLOUD_OP",
+      "CLOUD_STATUS_CALL",
+      "LOCAL_API_READ",
+      "MQTT_SUBSCRIBE",
+      "STATE_WRITE",
+      "SUBSCRIBE"
+    ]
+  },
+  "entrypoint": {
+    "kind": "ha_service",
+    "service": {
+      "domain": "floweaver",
+      "name": "run_weekend_whole_home_snapshot_extended_01"
+    }
+  },
+  "objectives": {
+    "primary": "minimize_tail_latency_under_mixed_transport",
+    "metrics": {
+      "e2e_latency_ms": {
+        "p95": 2200
+      },
+      "lane_completion_ms": {
+        "ble_lane_p95": 900,
+        "cloud_lane_p95": 1400,
+        "local_lane_p95": 600
+      }
+    }
+  },
+  "constraints": {
+    "source_protocols": [
+      "BLE",
+      "CLOUD",
+      "HA",
+      "LOCAL"
+    ],
+    "optimization_knobs": {
+      "allow_concurrency": true,
+      "max_concurrency": {
+        "ble": 1,
+        "cloud": 4,
+        "local": 6,
+        "total": 10
+      }
+    }
+  },
+  "validation": {
+    "differential_tests": {
+      "enabled": true,
+      "runs_per_scenario": 2,
+      "scenarios": [
+        "baseline_happy_path",
+        "fault_cloud_429",
+        "fault_ble_disconnect"
+      ]
+    },
+    "fault_model": {
+      "ble_disconnect": true,
+      "cloud_429": true,
+      "network_jitter": true
+    },
+    "observation": {
+      "canonicalization_version": "v1",
+      "equivalence_whitelist": [
+        "COALESCE_STATE_WRITE"
+      ],
+      "semantic_ops": [
+        "ENTRY_SETUP",
+        "COORD_REFRESH",
+        "STATE_WRITE",
+        "SUBSCRIBE",
+        "UNSUBSCRIBE",
+        "MQTT_SUBSCRIBE",
+        "BLE_CONNECT",
+        "BLE_DISCONNECT",
+        "BLE_NOTIFY_SUBSCRIBE",
+        "BLE_OP",
+        "BLE_GATT_OP",
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_429_CHECK",
+        "CLOUD_BACKOFF_SLEEP",
+        "CLOUD_BATCH_CALL",
+        "CLOUD_SESSION_REUSE",
+        "LOCAL_API_READ",
+        "POLL_UPDATE"
+      ]
+    },
+    "llm_detector": {
+      "enabled": true,
+      "timeout_s": 45,
+      "max_attempts": 0,
+      "retry_backoff_s": 0.5
+    },
+    "profile_version": "ha_profile_default",
+    "sampling": {},
+    "source_protocols": [
+      "BLE",
+      "CLOUD",
+      "HA",
+      "LOCAL"
+    ]
+  },
+  "hard_dependencies": [
+    {
+      "before": "A7",
+      "after": "A8",
+      "reason": "transport_connect_before_subscription"
+    },
+    {
+      "before": "A1",
+      "after": "A21",
+      "reason": "ble_write_depends_on_a1"
+    },
+    {
+      "before": "A2",
+      "after": "A21",
+      "reason": "ble_write_depends_on_a2"
+    },
+    {
+      "before": "A3",
+      "after": "A21",
+      "reason": "ble_write_depends_on_a3"
+    },
+    {
+      "before": "A4",
+      "after": "A21",
+      "reason": "ble_write_depends_on_a4"
+    },
+    {
+      "before": "A5",
+      "after": "A21",
+      "reason": "ble_write_depends_on_a5"
+    },
+    {
+      "before": "A6",
+      "after": "A21",
+      "reason": "ble_write_depends_on_a6"
+    },
+    {
+      "before": "A7",
+      "after": "A21",
+      "reason": "ble_write_depends_on_a7"
+    },
+    {
+      "before": "A8",
+      "after": "A21",
+      "reason": "ble_write_depends_on_a8"
+    },
+    {
+      "before": "A9",
+      "after": "A22",
+      "reason": "cloud_write_depends_on_a9"
+    },
+    {
+      "before": "A10",
+      "after": "A22",
+      "reason": "cloud_write_depends_on_a10"
+    },
+    {
+      "before": "A11",
+      "after": "A22",
+      "reason": "cloud_write_depends_on_a11"
+    },
+    {
+      "before": "A12",
+      "after": "A22",
+      "reason": "cloud_write_depends_on_a12"
+    },
+    {
+      "before": "A13",
+      "after": "A22",
+      "reason": "cloud_write_depends_on_a13"
+    },
+    {
+      "before": "A14",
+      "after": "A22",
+      "reason": "cloud_write_depends_on_a14"
+    },
+    {
+      "before": "A15",
+      "after": "A22",
+      "reason": "cloud_write_depends_on_a15"
+    },
+    {
+      "before": "A16",
+      "after": "A23",
+      "reason": "local_write_depends_on_a16"
+    },
+    {
+      "before": "A17",
+      "after": "A23",
+      "reason": "local_write_depends_on_a17"
+    },
+    {
+      "before": "A18",
+      "after": "A23",
+      "reason": "local_write_depends_on_a18"
+    },
+    {
+      "before": "A19",
+      "after": "A23",
+      "reason": "local_write_depends_on_a19"
+    },
+    {
+      "before": "A20",
+      "after": "A23",
+      "reason": "local_write_depends_on_a20"
+    },
+    {
+      "before": "A21",
+      "after": "A24",
+      "reason": "overall_write_depends_on_ble_lane"
+    },
+    {
+      "before": "A22",
+      "after": "A24",
+      "reason": "overall_write_depends_on_cloud_lane"
+    },
+    {
+      "before": "A23",
+      "after": "A24",
+      "reason": "overall_write_depends_on_local_lane"
+    }
+  ],
+  "soft_dependencies": [
+    {
+      "before": "A1",
+      "after": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A1",
+      "after": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A1",
+      "after": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A1",
+      "after": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A1",
+      "after": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A1",
+      "after": "A7",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A1",
+      "after": "A8",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A2",
+      "after": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A2",
+      "after": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A2",
+      "after": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A2",
+      "after": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A2",
+      "after": "A7",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A2",
+      "after": "A8",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A3",
+      "after": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A3",
+      "after": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A3",
+      "after": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A3",
+      "after": "A7",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A3",
+      "after": "A8",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A4",
+      "after": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A4",
+      "after": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A4",
+      "after": "A7",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A4",
+      "after": "A8",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A5",
+      "after": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A5",
+      "after": "A7",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A5",
+      "after": "A8",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A6",
+      "after": "A7",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A6",
+      "after": "A8",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A7",
+      "after": "A8",
+      "reason": "shared_radio_or_transport_budget"
+    }
+  ],
+  "critical_action_ids": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "A8",
+    "A9",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15",
+    "A16",
+    "A17",
+    "A18",
+    "A19",
+    "A20",
+    "A21",
+    "A22",
+    "A23",
+    "A24"
+  ]
+}

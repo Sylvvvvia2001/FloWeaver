@@ -1,0 +1,49 @@
+{
+  "accepted_corridors": [
+    {
+      "action_ids": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "batch_ids": [
+        "batch_000",
+        "batch_001",
+        "batch_002",
+        "batch_003"
+      ],
+      "corridor_id": "corridor_00",
+      "latency_saved_ms": 282,
+      "source": "BLE",
+      "validation_passed": true
+    }
+  ],
+  "api_added_savings_ms": 0,
+  "ble_added_savings_ms": 282,
+  "case_name": "Dinner Time Home Mode Routine",
+  "combined_added_savings_ms": 282,
+  "combined_added_savings_ratio": 0.06558139534883721,
+  "combined_refined_estimated_latency_ms": 4018,
+  "conflict_count": 0,
+  "group": "Coming Home and Evening Comfort Routines",
+  "original_estimated_latency_ms": 4300,
+  "rejected_corridors": [],
+  "target_path": "data/targets/vdev_benchmarks/vdev_dinner_home_mode_01.json",
+  "validation": {
+    "api_constraints_ok": true,
+    "batch_order_preserved": true,
+    "ble_constraints_ok": true,
+    "component_validations_ok": true,
+    "conflict_free": true,
+    "contiguous_coverage_ok": true,
+    "event_loop_constraints_ok": true,
+    "passed": true,
+    "projection_ok": true,
+    "reasons": [],
+    "savings_consistency_ok": true,
+    "simulated_event_count": 22,
+    "simulated_total_ms": 4018
+  },
+  "vdev_id": "vdev_dinner_home_mode_01"
+}

@@ -1,0 +1,45 @@
+{
+  "created_at": "2026-07-06T08:14:02.413290+00:00",
+  "input_xlsx": "data/external/ifttt_samples_vibeaura_simulated_estimates.xlsx",
+  "long_chain_ids": [
+    "189",
+    "86",
+    "122",
+    "154",
+    "210",
+    "234",
+    "205",
+    "215",
+    "203",
+    "213"
+  ],
+  "long_chain_sheet": "LongChain System Estimates",
+  "oracle_mode": "simulated",
+  "reset_policy": "reset, verify initial state, run baseline/optimized pair, compare independent observables",
+  "runs_per_routine": 5,
+  "smart_ifttt_ids": [
+    "16",
+    "86",
+    "58",
+    "122",
+    "143",
+    "116",
+    "211",
+    "228",
+    "284",
+    "232",
+    "72",
+    "210",
+    "212",
+    "248",
+    "202",
+    "205",
+    "240"
+  ],
+  "smart_sheet": "Simulated Estimates",
+  "smart_vdev_ids": [
+    "vdev_morning_wakeup_readiness_01",
+    "vdev_weekend_whole_home_snapshot_01",
+    "vdev_vacation_departure_final_audit_01"
+  ]
+}

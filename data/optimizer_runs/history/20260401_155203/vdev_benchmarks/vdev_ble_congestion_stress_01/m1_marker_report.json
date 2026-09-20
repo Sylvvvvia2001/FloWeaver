@@ -1,0 +1,51 @@
+{
+  "alias_precision_estimate": 1.0,
+  "critical_action_ids": [
+    "A1",
+    "A10",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "A8",
+    "A9"
+  ],
+  "marker_coverage_ok": false,
+  "match_counts": {
+    "alias": 0,
+    "direct": 34,
+    "total": 34
+  },
+  "missing_critical_action_ids": [
+    "A2",
+    "A4",
+    "A5",
+    "A6"
+  ],
+  "resolved_action_ids": [
+    "A1",
+    "A10",
+    "A3",
+    "A7",
+    "A8",
+    "A9"
+  ],
+  "resolved_runtime_action_count": 5,
+  "resolved_runtime_action_count_raw": 5,
+  "resolved_runtime_action_ids": [
+    "A1",
+    "A10",
+    "A3",
+    "A8",
+    "A9"
+  ],
+  "resolved_runtime_action_ids_raw": [
+    "A1",
+    "A10",
+    "A3",
+    "A8",
+    "A9"
+  ]
+}

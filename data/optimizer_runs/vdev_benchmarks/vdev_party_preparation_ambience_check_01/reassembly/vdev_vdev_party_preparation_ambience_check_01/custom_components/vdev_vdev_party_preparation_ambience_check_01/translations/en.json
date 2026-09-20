@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_party_preparation_ambience_check_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Party Preparation and Ambience Check"
+}

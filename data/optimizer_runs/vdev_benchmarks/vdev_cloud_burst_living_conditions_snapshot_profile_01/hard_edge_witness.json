@@ -1,0 +1,1042 @@
+{
+  "edge_count": 12,
+  "edges": [
+    {
+      "dst_locations": [
+        "data/repo_snapshot/netatmo/sensor.py:554",
+        "data/repo_snapshot/netatmo/sensor.py:643",
+        "data/repo_snapshot/netatmo/sensor.py:682",
+        "data/repo_snapshot/netatmo/sensor.py:794"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:675",
+          "marker_id": "marker_19802bdb56",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:554",
+          "marker_id": "marker_786c616364",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:770",
+          "marker_id": "marker_8da0d70bb7",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:794",
+          "marker_id": "marker_9ade212300",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:630",
+          "marker_id": "marker_a5b7c9ab70",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:546",
+          "marker_id": "marker_b6b4ed7668",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:643",
+          "marker_id": "marker_c8beb3f022",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:682",
+          "marker_id": "marker_ed380759b9",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf02_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf07_000_cloud_http_call"
+      },
+      "origin": {
+        "dependency": "A1->A20",
+        "details": [
+          "vdev_dep:A1->A20",
+          "cloud_write_depends_on_a1"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tuya/light.py:462",
+        "data/repo_snapshot/tuya/light.py:465",
+        "data/repo_snapshot/tuya/light.py:467",
+        "data/repo_snapshot/tuya/light.py:468",
+        "data/repo_snapshot/tuya/light.py:469",
+        "data/repo_snapshot/tuya/light.py:470",
+        "data/repo_snapshot/tuya/light.py:608",
+        "data/repo_snapshot/tuya/light.py:611"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/light.py:470",
+          "marker_id": "marker_1b751f584b",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/light.py:470",
+          "marker_id": "marker_6ceebf98ce",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/light.py:608",
+          "marker_id": "marker_9477e26632",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/light.py:611",
+          "marker_id": "marker_ab26f3c7a9",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/light.py:456",
+          "marker_id": "marker_b3fb0fdc6c",
+          "marker_type": "ENTRY_SETUP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/netatmo/sensor.py:554",
+        "data/repo_snapshot/netatmo/sensor.py:643",
+        "data/repo_snapshot/netatmo/sensor.py:682",
+        "data/repo_snapshot/netatmo/sensor.py:794"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:675",
+          "marker_id": "marker_19802bdb56",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:554",
+          "marker_id": "marker_786c616364",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:770",
+          "marker_id": "marker_8da0d70bb7",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:794",
+          "marker_id": "marker_9ade212300",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:630",
+          "marker_id": "marker_a5b7c9ab70",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:546",
+          "marker_id": "marker_b6b4ed7668",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:643",
+          "marker_id": "marker_c8beb3f022",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:682",
+          "marker_id": "marker_ed380759b9",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf02_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf07_005_cloud_status_call"
+      },
+      "origin": {
+        "dependency": "A5->A20",
+        "details": [
+          "vdev_dep:A5->A20",
+          "cloud_write_depends_on_a5"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tuya/light.py:569",
+        "data/repo_snapshot/tuya/light.py:570"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/light.py:568",
+          "marker_id": "marker_38491c12cd",
+          "marker_type": "CLOUD_STATUS_CALL"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/netatmo/sensor.py:554",
+        "data/repo_snapshot/netatmo/sensor.py:643",
+        "data/repo_snapshot/netatmo/sensor.py:682",
+        "data/repo_snapshot/netatmo/sensor.py:794"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:675",
+          "marker_id": "marker_19802bdb56",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:554",
+          "marker_id": "marker_786c616364",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:770",
+          "marker_id": "marker_8da0d70bb7",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:794",
+          "marker_id": "marker_9ade212300",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:630",
+          "marker_id": "marker_a5b7c9ab70",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:546",
+          "marker_id": "marker_b6b4ed7668",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:643",
+          "marker_id": "marker_c8beb3f022",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:682",
+          "marker_id": "marker_ed380759b9",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf02_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf08_003_cloud_status_call"
+      },
+      "origin": {
+        "dependency": "A9->A20",
+        "details": [
+          "vdev_dep:A9->A20",
+          "cloud_write_depends_on_a9"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tuya/switch.py:968",
+        "data/repo_snapshot/tuya/switch.py:973"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/switch.py:963",
+          "marker_id": "marker_6601025770",
+          "marker_type": "CLOUD_STATUS_CALL"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/netatmo/sensor.py:554",
+        "data/repo_snapshot/netatmo/sensor.py:643",
+        "data/repo_snapshot/netatmo/sensor.py:682",
+        "data/repo_snapshot/netatmo/sensor.py:794"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:675",
+          "marker_id": "marker_19802bdb56",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:554",
+          "marker_id": "marker_786c616364",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:770",
+          "marker_id": "marker_8da0d70bb7",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:794",
+          "marker_id": "marker_9ade212300",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:630",
+          "marker_id": "marker_a5b7c9ab70",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:546",
+          "marker_id": "marker_b6b4ed7668",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:643",
+          "marker_id": "marker_c8beb3f022",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:682",
+          "marker_id": "marker_ed380759b9",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf02_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf08_000_cloud_http_call"
+      },
+      "origin": {
+        "dependency": "A10->A20",
+        "details": [
+          "vdev_dep:A10->A20",
+          "cloud_write_depends_on_a10"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tuya/switch.py:914",
+        "data/repo_snapshot/tuya/switch.py:917",
+        "data/repo_snapshot/tuya/switch.py:919",
+        "data/repo_snapshot/tuya/switch.py:920",
+        "data/repo_snapshot/tuya/switch.py:921",
+        "data/repo_snapshot/tuya/switch.py:922"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/switch.py:908",
+          "marker_id": "marker_63cc69fb3d",
+          "marker_type": "ENTRY_SETUP"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/switch.py:922",
+          "marker_id": "marker_77fdf39f18",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/switch.py:922",
+          "marker_id": "marker_daaee061ab",
+          "marker_type": "CLOUD_HTTP_CALL"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/netatmo/sensor.py:554",
+        "data/repo_snapshot/netatmo/sensor.py:643",
+        "data/repo_snapshot/netatmo/sensor.py:682",
+        "data/repo_snapshot/netatmo/sensor.py:794"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:675",
+          "marker_id": "marker_19802bdb56",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:554",
+          "marker_id": "marker_786c616364",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:770",
+          "marker_id": "marker_8da0d70bb7",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:794",
+          "marker_id": "marker_9ade212300",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:630",
+          "marker_id": "marker_a5b7c9ab70",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:546",
+          "marker_id": "marker_b6b4ed7668",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:643",
+          "marker_id": "marker_c8beb3f022",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:682",
+          "marker_id": "marker_ed380759b9",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf02_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf05_000_cloud_http_call"
+      },
+      "origin": {
+        "dependency": "A11->A20",
+        "details": [
+          "vdev_dep:A11->A20",
+          "cloud_write_depends_on_a11"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tuya/climate.py:305",
+        "data/repo_snapshot/tuya/climate.py:307",
+        "data/repo_snapshot/tuya/climate.py:308",
+        "data/repo_snapshot/tuya/climate.py:338",
+        "data/repo_snapshot/tuya/climate.py:340",
+        "data/repo_snapshot/tuya/climate.py:355",
+        "data/repo_snapshot/tuya/climate.py:362",
+        "data/repo_snapshot/tuya/climate.py:386",
+        "data/repo_snapshot/tuya/climate.py:430",
+        "data/repo_snapshot/tuya/climate.py:431",
+        "data/repo_snapshot/tuya/climate.py:446",
+        "data/repo_snapshot/tuya/climate.py:447"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:309",
+          "marker_id": "marker_1de9a6c786",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:431",
+          "marker_id": "marker_60a9b40dcb",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:386",
+          "marker_id": "marker_6bd50376d1",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:345",
+          "marker_id": "marker_8ffa4b296f",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:364",
+          "marker_id": "marker_e5303f6c04",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:447",
+          "marker_id": "marker_f9a02ab387",
+          "marker_type": "CLOUD_HTTP_CALL"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/netatmo/sensor.py:554",
+        "data/repo_snapshot/netatmo/sensor.py:643",
+        "data/repo_snapshot/netatmo/sensor.py:682",
+        "data/repo_snapshot/netatmo/sensor.py:794"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:675",
+          "marker_id": "marker_19802bdb56",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:554",
+          "marker_id": "marker_786c616364",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:770",
+          "marker_id": "marker_8da0d70bb7",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:794",
+          "marker_id": "marker_9ade212300",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:630",
+          "marker_id": "marker_a5b7c9ab70",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:546",
+          "marker_id": "marker_b6b4ed7668",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:643",
+          "marker_id": "marker_c8beb3f022",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:682",
+          "marker_id": "marker_ed380759b9",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf02_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf05_006_cloud_status_call"
+      },
+      "origin": {
+        "dependency": "A13->A20",
+        "details": [
+          "vdev_dep:A13->A20",
+          "cloud_write_depends_on_a13"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tuya/climate.py:129",
+        "data/repo_snapshot/tuya/climate.py:132",
+        "data/repo_snapshot/tuya/climate.py:135",
+        "data/repo_snapshot/tuya/climate.py:138",
+        "data/repo_snapshot/tuya/climate.py:143",
+        "data/repo_snapshot/tuya/climate.py:148",
+        "data/repo_snapshot/tuya/climate.py:149",
+        "data/repo_snapshot/tuya/climate.py:150"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:150",
+          "marker_id": "marker_36002290a2",
+          "marker_type": "CLOUD_STATUS_CALL"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/netatmo/sensor.py:554",
+        "data/repo_snapshot/netatmo/sensor.py:643",
+        "data/repo_snapshot/netatmo/sensor.py:682",
+        "data/repo_snapshot/netatmo/sensor.py:794"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:675",
+          "marker_id": "marker_19802bdb56",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:554",
+          "marker_id": "marker_786c616364",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:770",
+          "marker_id": "marker_8da0d70bb7",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:794",
+          "marker_id": "marker_9ade212300",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:630",
+          "marker_id": "marker_a5b7c9ab70",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:546",
+          "marker_id": "marker_b6b4ed7668",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:643",
+          "marker_id": "marker_c8beb3f022",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:682",
+          "marker_id": "marker_ed380759b9",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf02_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf00_005_cloud_status_call"
+      },
+      "origin": {
+        "dependency": "A15->A20",
+        "details": [
+          "vdev_dep:A15->A20",
+          "cloud_write_depends_on_a15"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/ecobee/climate.py:399"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/ecobee/climate.py:399",
+          "marker_id": "marker_acc1836129",
+          "marker_type": "CLOUD_STATUS_CALL"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/netatmo/sensor.py:554",
+        "data/repo_snapshot/netatmo/sensor.py:643",
+        "data/repo_snapshot/netatmo/sensor.py:682",
+        "data/repo_snapshot/netatmo/sensor.py:794"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:675",
+          "marker_id": "marker_19802bdb56",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:554",
+          "marker_id": "marker_786c616364",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:770",
+          "marker_id": "marker_8da0d70bb7",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:794",
+          "marker_id": "marker_9ade212300",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:630",
+          "marker_id": "marker_a5b7c9ab70",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:546",
+          "marker_id": "marker_b6b4ed7668",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:643",
+          "marker_id": "marker_c8beb3f022",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:682",
+          "marker_id": "marker_ed380759b9",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf02_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf02_004_cloud_status_call"
+      },
+      "origin": {
+        "dependency": "A16->A20",
+        "details": [
+          "vdev_dep:A16->A20",
+          "cloud_write_depends_on_a16"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/netatmo/sensor.py:547",
+        "data/repo_snapshot/netatmo/sensor.py:548",
+        "data/repo_snapshot/netatmo/sensor.py:551",
+        "data/repo_snapshot/netatmo/sensor.py:552",
+        "data/repo_snapshot/netatmo/sensor.py:553",
+        "data/repo_snapshot/netatmo/sensor.py:554",
+        "data/repo_snapshot/netatmo/sensor.py:631",
+        "data/repo_snapshot/netatmo/sensor.py:632",
+        "data/repo_snapshot/netatmo/sensor.py:633",
+        "data/repo_snapshot/netatmo/sensor.py:634",
+        "data/repo_snapshot/netatmo/sensor.py:635",
+        "data/repo_snapshot/netatmo/sensor.py:637",
+        "data/repo_snapshot/netatmo/sensor.py:638",
+        "data/repo_snapshot/netatmo/sensor.py:640",
+        "data/repo_snapshot/netatmo/sensor.py:641",
+        "data/repo_snapshot/netatmo/sensor.py:643",
+        "data/repo_snapshot/netatmo/sensor.py:676",
+        "data/repo_snapshot/netatmo/sensor.py:677",
+        "data/repo_snapshot/netatmo/sensor.py:678",
+        "data/repo_snapshot/netatmo/sensor.py:680",
+        "data/repo_snapshot/netatmo/sensor.py:682",
+        "data/repo_snapshot/netatmo/sensor.py:771",
+        "data/repo_snapshot/netatmo/sensor.py:772",
+        "data/repo_snapshot/netatmo/sensor.py:774",
+        "data/repo_snapshot/netatmo/sensor.py:775",
+        "data/repo_snapshot/netatmo/sensor.py:776",
+        "data/repo_snapshot/netatmo/sensor.py:782",
+        "data/repo_snapshot/netatmo/sensor.py:783",
+        "data/repo_snapshot/netatmo/sensor.py:785",
+        "data/repo_snapshot/netatmo/sensor.py:786",
+        "data/repo_snapshot/netatmo/sensor.py:787",
+        "data/repo_snapshot/netatmo/sensor.py:788",
+        "data/repo_snapshot/netatmo/sensor.py:789",
+        "data/repo_snapshot/netatmo/sensor.py:790",
+        "data/repo_snapshot/netatmo/sensor.py:791",
+        "data/repo_snapshot/netatmo/sensor.py:793",
+        "data/repo_snapshot/netatmo/sensor.py:794"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:675",
+          "marker_id": "marker_19802bdb56",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:554",
+          "marker_id": "marker_786c616364",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:770",
+          "marker_id": "marker_8da0d70bb7",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:794",
+          "marker_id": "marker_9ade212300",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:630",
+          "marker_id": "marker_a5b7c9ab70",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:546",
+          "marker_id": "marker_b6b4ed7668",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:643",
+          "marker_id": "marker_c8beb3f022",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:682",
+          "marker_id": "marker_ed380759b9",
+          "marker_type": "STATE_WRITE"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/netatmo/sensor.py:554",
+        "data/repo_snapshot/netatmo/sensor.py:643",
+        "data/repo_snapshot/netatmo/sensor.py:682",
+        "data/repo_snapshot/netatmo/sensor.py:794"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:675",
+          "marker_id": "marker_19802bdb56",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:554",
+          "marker_id": "marker_786c616364",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:770",
+          "marker_id": "marker_8da0d70bb7",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:794",
+          "marker_id": "marker_9ade212300",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:630",
+          "marker_id": "marker_a5b7c9ab70",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:546",
+          "marker_id": "marker_b6b4ed7668",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:643",
+          "marker_id": "marker_c8beb3f022",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:682",
+          "marker_id": "marker_ed380759b9",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf02_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf03_000_cloud_status_call"
+      },
+      "origin": {
+        "dependency": "A17->A20",
+        "details": [
+          "vdev_dep:A17->A20",
+          "cloud_write_depends_on_a17"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/smartthings/entity.py:95",
+        "data/repo_snapshot/smartthings/entity.py:96",
+        "data/repo_snapshot/smartthings/entity.py:97"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/smartthings/entity.py:94",
+          "marker_id": "marker_5431d86bf7",
+          "marker_type": "CLOUD_STATUS_CALL"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/tplink/entity.py:257",
+        "data/repo_snapshot/tplink/entity.py:271",
+        "data/repo_snapshot/tplink/entity.py:272",
+        "data/repo_snapshot/tplink/entity.py:281",
+        "data/repo_snapshot/tplink/entity.py:288",
+        "data/repo_snapshot/tplink/entity.py:289"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tplink/entity.py:289",
+          "marker_id": "marker_256ce13a2c",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/tplink/entity.py:286",
+          "marker_id": "marker_72c8030d25",
+          "marker_type": "LOCAL_API_READ"
+        },
+        {
+          "location": "data/repo_snapshot/tplink/entity.py:257",
+          "marker_id": "marker_a7252fbd5f",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/tplink/entity.py:289",
+          "marker_id": "marker_ada6039538",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/tplink/entity.py:272",
+          "marker_id": "marker_b458225c16",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/tplink/entity.py:288",
+          "marker_id": "marker_c2552af8eb",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf04_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf04_005_local_api_read"
+      },
+      "origin": {
+        "dependency": "A19->A21",
+        "details": [
+          "vdev_dep:A19->A21",
+          "local_write_depends_on_a19"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tplink/entity.py:287",
+        "data/repo_snapshot/tplink/entity.py:288",
+        "data/repo_snapshot/tplink/entity.py:289"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tplink/entity.py:289",
+          "marker_id": "marker_256ce13a2c",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/tplink/entity.py:286",
+          "marker_id": "marker_72c8030d25",
+          "marker_type": "LOCAL_API_READ"
+        },
+        {
+          "location": "data/repo_snapshot/tplink/entity.py:289",
+          "marker_id": "marker_ada6039538",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/tplink/entity.py:288",
+          "marker_id": "marker_c2552af8eb",
+          "marker_type": "STATE_WRITE"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/esphome/update.py:186"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/esphome/update.py:186",
+          "marker_id": "marker_767e7c72f5",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf01_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf02_000_state_write"
+      },
+      "origin": {
+        "dependency": "A20->A22",
+        "details": [
+          "vdev_dep:A20->A22",
+          "overall_write_depends_on_cloud_lane"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/netatmo/sensor.py:554",
+        "data/repo_snapshot/netatmo/sensor.py:643",
+        "data/repo_snapshot/netatmo/sensor.py:682",
+        "data/repo_snapshot/netatmo/sensor.py:794"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:675",
+          "marker_id": "marker_19802bdb56",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:554",
+          "marker_id": "marker_786c616364",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:770",
+          "marker_id": "marker_8da0d70bb7",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:794",
+          "marker_id": "marker_9ade212300",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:630",
+          "marker_id": "marker_a5b7c9ab70",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:546",
+          "marker_id": "marker_b6b4ed7668",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:643",
+          "marker_id": "marker_c8beb3f022",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/netatmo/sensor.py:682",
+          "marker_id": "marker_ed380759b9",
+          "marker_type": "STATE_WRITE"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/esphome/update.py:186"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/esphome/update.py:186",
+          "marker_id": "marker_767e7c72f5",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf01_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf04_000_state_write"
+      },
+      "origin": {
+        "dependency": "A21->A22",
+        "details": [
+          "vdev_dep:A21->A22",
+          "overall_write_depends_on_local_lane"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tplink/entity.py:257",
+        "data/repo_snapshot/tplink/entity.py:271",
+        "data/repo_snapshot/tplink/entity.py:272",
+        "data/repo_snapshot/tplink/entity.py:281",
+        "data/repo_snapshot/tplink/entity.py:288",
+        "data/repo_snapshot/tplink/entity.py:289"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tplink/entity.py:289",
+          "marker_id": "marker_256ce13a2c",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/tplink/entity.py:286",
+          "marker_id": "marker_72c8030d25",
+          "marker_type": "LOCAL_API_READ"
+        },
+        {
+          "location": "data/repo_snapshot/tplink/entity.py:257",
+          "marker_id": "marker_a7252fbd5f",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/tplink/entity.py:289",
+          "marker_id": "marker_ada6039538",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/tplink/entity.py:272",
+          "marker_id": "marker_b458225c16",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/tplink/entity.py:288",
+          "marker_id": "marker_c2552af8eb",
+          "marker_type": "STATE_WRITE"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,699 @@
+{
+  "generated_at": "2026-04-12T08:54:34.940260+00:00",
+  "producer": "optimizer.m6_trust",
+  "rules": [
+    {
+      "avg_latency_delta_ms": null,
+      "final_state_preserved_rate": null,
+      "last_updated_at": "2026-04-12T08:54:34.940260+00:00",
+      "m6_alignment": {
+        "alignment_status_counts": {},
+        "final_counterexample_scenarios": [],
+        "matched_scenarios": [],
+        "resource_preserved_scenarios": [],
+        "rollback_touched": false,
+        "strict_pass_scenarios": [],
+        "tolerant_pass_scenarios": []
+      },
+      "n_applied": 0,
+      "n_counterexamples": 0,
+      "n_matched": 0,
+      "n_success": 0,
+      "p95_latency_delta_ms": null,
+      "resource_protocol_preserved_rate": null,
+      "rule_id": "rule_general_209df39611",
+      "trace_preserved_rate": null
+    },
+    {
+      "avg_latency_delta_ms": null,
+      "final_state_preserved_rate": null,
+      "last_updated_at": "2026-04-12T08:54:34.940260+00:00",
+      "m6_alignment": {
+        "alignment_status_counts": {},
+        "final_counterexample_scenarios": [],
+        "matched_scenarios": [],
+        "resource_preserved_scenarios": [],
+        "rollback_touched": false,
+        "strict_pass_scenarios": [],
+        "tolerant_pass_scenarios": []
+      },
+      "n_applied": 0,
+      "n_counterexamples": 0,
+      "n_matched": 0,
+      "n_success": 0,
+      "p95_latency_delta_ms": null,
+      "resource_protocol_preserved_rate": null,
+      "rule_id": "rule_entry_unload_9d31450f19",
+      "trace_preserved_rate": null
+    },
+    {
+      "avg_latency_delta_ms": null,
+      "final_state_preserved_rate": 1.0,
+      "last_updated_at": "2026-04-12T08:54:34.940260+00:00",
+      "m6_alignment": {
+        "alignment_status_counts": {
+          "PROVED": 6
+        },
+        "final_counterexample_scenarios": [],
+        "matched_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "resource_preserved_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "rollback_touched": false,
+        "strict_pass_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "tolerant_pass_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ]
+      },
+      "n_applied": 6,
+      "n_counterexamples": 0,
+      "n_matched": 6,
+      "n_success": 6,
+      "p95_latency_delta_ms": null,
+      "resource_protocol_preserved_rate": 1.0,
+      "rule_id": "rule_state_write_3038cae0b8",
+      "trace_preserved_rate": 1.0
+    },
+    {
+      "avg_latency_delta_ms": null,
+      "final_state_preserved_rate": 1.0,
+      "last_updated_at": "2026-04-12T08:54:34.940260+00:00",
+      "m6_alignment": {
+        "alignment_status_counts": {
+          "PROVED": 6
+        },
+        "final_counterexample_scenarios": [],
+        "matched_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "resource_preserved_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "rollback_touched": false,
+        "strict_pass_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "tolerant_pass_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ]
+      },
+      "n_applied": 6,
+      "n_counterexamples": 0,
+      "n_matched": 6,
+      "n_success": 6,
+      "p95_latency_delta_ms": null,
+      "resource_protocol_preserved_rate": 1.0,
+      "rule_id": "rule_coord_refresh_0d5b7bb134",
+      "trace_preserved_rate": 1.0
+    },
+    {
+      "avg_latency_delta_ms": null,
+      "final_state_preserved_rate": 1.0,
+      "last_updated_at": "2026-04-12T08:54:34.940260+00:00",
+      "m6_alignment": {
+        "alignment_status_counts": {
+          "PROVED": 6
+        },
+        "final_counterexample_scenarios": [],
+        "matched_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "resource_preserved_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "rollback_touched": false,
+        "strict_pass_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "tolerant_pass_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ]
+      },
+      "n_applied": 6,
+      "n_counterexamples": 0,
+      "n_matched": 6,
+      "n_success": 6,
+      "p95_latency_delta_ms": null,
+      "resource_protocol_preserved_rate": 1.0,
+      "rule_id": "rule_subscribe_ab1fa62e3a",
+      "trace_preserved_rate": 1.0
+    },
+    {
+      "avg_latency_delta_ms": null,
+      "final_state_preserved_rate": 1.0,
+      "last_updated_at": "2026-04-12T08:54:34.940260+00:00",
+      "m6_alignment": {
+        "alignment_status_counts": {
+          "PROVED": 6
+        },
+        "final_counterexample_scenarios": [],
+        "matched_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "resource_preserved_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "rollback_touched": false,
+        "strict_pass_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "tolerant_pass_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ]
+      },
+      "n_applied": 6,
+      "n_counterexamples": 0,
+      "n_matched": 6,
+      "n_success": 6,
+      "p95_latency_delta_ms": null,
+      "resource_protocol_preserved_rate": 1.0,
+      "rule_id": "rule_protocol_ble_budget_overlap",
+      "trace_preserved_rate": 1.0
+    },
+    {
+      "avg_latency_delta_ms": null,
+      "final_state_preserved_rate": 1.0,
+      "last_updated_at": "2026-04-12T08:54:34.940260+00:00",
+      "m6_alignment": {
+        "alignment_status_counts": {
+          "PROVED": 6
+        },
+        "final_counterexample_scenarios": [],
+        "matched_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "resource_preserved_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "rollback_touched": false,
+        "strict_pass_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "tolerant_pass_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ]
+      },
+      "n_applied": 6,
+      "n_counterexamples": 0,
+      "n_matched": 6,
+      "n_success": 6,
+      "p95_latency_delta_ms": null,
+      "resource_protocol_preserved_rate": 1.0,
+      "rule_id": "rule_protocol_ble_reuse_gap",
+      "trace_preserved_rate": 1.0
+    },
+    {
+      "avg_latency_delta_ms": null,
+      "final_state_preserved_rate": 1.0,
+      "last_updated_at": "2026-04-12T08:54:34.940260+00:00",
+      "m6_alignment": {
+        "alignment_status_counts": {
+          "PROVED": 6
+        },
+        "final_counterexample_scenarios": [],
+        "matched_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "resource_preserved_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "rollback_touched": false,
+        "strict_pass_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "tolerant_pass_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ]
+      },
+      "n_applied": 6,
+      "n_counterexamples": 0,
+      "n_matched": 6,
+      "n_success": 6,
+      "p95_latency_delta_ms": null,
+      "resource_protocol_preserved_rate": 1.0,
+      "rule_id": "rule_protocol_local_api_budget",
+      "trace_preserved_rate": 1.0
+    },
+    {
+      "avg_latency_delta_ms": null,
+      "final_state_preserved_rate": 1.0,
+      "last_updated_at": "2026-04-12T08:54:34.940260+00:00",
+      "m6_alignment": {
+        "alignment_status_counts": {
+          "PROVED": 6
+        },
+        "final_counterexample_scenarios": [],
+        "matched_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "resource_preserved_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "rollback_touched": false,
+        "strict_pass_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "tolerant_pass_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ]
+      },
+      "n_applied": 6,
+      "n_counterexamples": 0,
+      "n_matched": 6,
+      "n_success": 6,
+      "p95_latency_delta_ms": null,
+      "resource_protocol_preserved_rate": 1.0,
+      "rule_id": "rule_protocol_cloud_budget_rate",
+      "trace_preserved_rate": 1.0
+    },
+    {
+      "avg_latency_delta_ms": null,
+      "final_state_preserved_rate": 1.0,
+      "last_updated_at": "2026-04-12T08:54:34.940260+00:00",
+      "m6_alignment": {
+        "alignment_status_counts": {
+          "PROVED": 6
+        },
+        "final_counterexample_scenarios": [],
+        "matched_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "resource_preserved_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "rollback_touched": false,
+        "strict_pass_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "tolerant_pass_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ]
+      },
+      "n_applied": 6,
+      "n_counterexamples": 0,
+      "n_matched": 6,
+      "n_success": 6,
+      "p95_latency_delta_ms": null,
+      "resource_protocol_preserved_rate": 1.0,
+      "rule_id": "rule_protocol_cloud_backoff",
+      "trace_preserved_rate": 1.0
+    },
+    {
+      "avg_latency_delta_ms": null,
+      "final_state_preserved_rate": 1.0,
+      "last_updated_at": "2026-04-12T08:54:34.940260+00:00",
+      "m6_alignment": {
+        "alignment_status_counts": {
+          "PROVED": 6
+        },
+        "final_counterexample_scenarios": [],
+        "matched_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "resource_preserved_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "rollback_touched": false,
+        "strict_pass_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "tolerant_pass_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ]
+      },
+      "n_applied": 6,
+      "n_counterexamples": 0,
+      "n_matched": 6,
+      "n_success": 6,
+      "p95_latency_delta_ms": null,
+      "resource_protocol_preserved_rate": 1.0,
+      "rule_id": "rule_protocol_cloud_batch_reuse",
+      "trace_preserved_rate": 1.0
+    },
+    {
+      "avg_latency_delta_ms": null,
+      "final_state_preserved_rate": 1.0,
+      "last_updated_at": "2026-04-12T08:54:34.940260+00:00",
+      "m6_alignment": {
+        "alignment_status_counts": {
+          "PROVED": 6
+        },
+        "final_counterexample_scenarios": [],
+        "matched_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "resource_preserved_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "rollback_touched": false,
+        "strict_pass_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "tolerant_pass_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ]
+      },
+      "n_applied": 6,
+      "n_counterexamples": 0,
+      "n_matched": 6,
+      "n_success": 6,
+      "p95_latency_delta_ms": null,
+      "resource_protocol_preserved_rate": 1.0,
+      "rule_id": "rule_protocol_cloud_refresh_before_call",
+      "trace_preserved_rate": 1.0
+    },
+    {
+      "avg_latency_delta_ms": null,
+      "final_state_preserved_rate": 1.0,
+      "last_updated_at": "2026-04-12T08:54:34.940260+00:00",
+      "m6_alignment": {
+        "alignment_status_counts": {
+          "PROVED": 6
+        },
+        "final_counterexample_scenarios": [],
+        "matched_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "resource_preserved_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "rollback_touched": false,
+        "strict_pass_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ],
+        "tolerant_pass_scenarios": [
+          "baseline_happy_path__run0",
+          "baseline_happy_path__run1",
+          "fault_cloud_429__run0",
+          "fault_cloud_429__run1",
+          "fault_ble_disconnect__run0",
+          "fault_ble_disconnect__run1"
+        ]
+      },
+      "n_applied": 6,
+      "n_counterexamples": 0,
+      "n_matched": 6,
+      "n_success": 6,
+      "p95_latency_delta_ms": null,
+      "resource_protocol_preserved_rate": 1.0,
+      "rule_id": "rule_protocol_ble_connect_op_disconnect",
+      "trace_preserved_rate": 1.0
+    }
+  ],
+  "schema_version": "validation_stats/v1",
+  "source_contract": {
+    "field_alignment": {
+      "avg_latency_delta_ms": {
+        "derivation": "Optional per-rule latency delta; null when replay does not emit stable latency signals.",
+        "m6_source": [
+          "execution_certificate.json:differential_summary.runtime_policy_summary"
+        ]
+      },
+      "final_state_preserved_rate": {
+        "derivation": "Fraction of matched scenarios with tolerant semantic equivalence.",
+        "m6_source": [
+          "m6_trace_compare.jsonl:tolerant_equal"
+        ]
+      },
+      "last_updated_at": {
+        "derivation": "Timestamp of the trust aggregation pass.",
+        "m6_source": [
+          "execution_certificate.json:generated_at"
+        ]
+      },
+      "n_applied": {
+        "derivation": "Count of matched scenarios evaluated under trust for this rule.",
+        "m6_source": [
+          "m6_trace_compare.jsonl:scenario_id",
+          "m6_trace_compare.jsonl:iteration"
+        ]
+      },
+      "n_counterexamples": {
+        "derivation": "Count of final or rollback-attributed counterexamples mapped to the rule.",
+        "m6_source": [
+          "counterexamples.json[*].scenario_id",
+          "rollback_log.json"
+        ]
+      },
+      "n_matched": {
+        "derivation": "Count of scenarios whose trace or diff signature intersects the rule marker hints.",
+        "m6_source": [
+          "m6_trace_compare.jsonl:scenario_id",
+          "m6_trace_compare.jsonl:diff_signature"
+        ]
+      },
+      "n_success": {
+        "derivation": "Count of matched scenarios that preserve final observable behavior.",
+        "m6_source": [
+          "m6_trace_compare.jsonl:tolerant_equal"
+        ]
+      },
+      "p95_latency_delta_ms": {
+        "derivation": "Optional per-rule p95 latency delta; null when replay does not emit stable latency signals.",
+        "m6_source": [
+          "execution_certificate.json:differential_summary.runtime_policy_summary"
+        ]
+      },
+      "resource_protocol_preserved_rate": {
+        "derivation": "Fraction of matched scenarios whose alignment verdict is PROVED with no suspicious regions.",
+        "m6_source": [
+          "m6_trace_compare.jsonl:alignment_status",
+          "m6_trace_compare.jsonl:suspicious_region_count"
+        ]
+      },
+      "trace_preserved_rate": {
+        "derivation": "Fraction of matched scenarios with strict trace preservation.",
+        "m6_source": [
+          "m6_trace_compare.jsonl:strict_equal"
+        ]
+      }
+    },
+    "intended_upstream": "M6 trust aggregation",
+    "m6_output_files": [
+      "m6_trace_compare.jsonl",
+      "execution_certificate.json",
+      "counterexamples.json",
+      "rollback_log.json",
+      "rule_hardening_decisions.json"
+    ]
+  }
+}

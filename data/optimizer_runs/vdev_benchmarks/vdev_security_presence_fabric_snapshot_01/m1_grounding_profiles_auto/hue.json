@@ -1,0 +1,342 @@
+{
+  "integration": "hue",
+  "runtime_families": [
+    {
+      "action_kind": "get_state",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "bridge_1",
+          "hue:bridge_1:security_entry_group",
+          "hue_local",
+          "security_entry_group"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "read",
+          "local_api_read"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [
+        "get_lights",
+        "self.controller.get_lights"
+      ],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "aiohue",
+          "asyncio",
+          "bridge",
+          "const",
+          "entity"
+        ],
+        "boost_if_names": [
+          "get_state",
+          "_update_values",
+          "on_update",
+          "get_lights",
+          "self.controller.get_lights"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "LOCAL_API_READ",
+      "file_globs": [
+        "v2/group.py"
+      ],
+      "forbidden_context": [
+        "dunder_init"
+      ],
+      "forbidden_path_signals": [
+        "setup_function:async_setup_entry",
+        "setup_call:async_add_entities",
+        "control_function:async_turn_on",
+        "control_call:self.async_set_flash",
+        "awaited_control_call:self.async_set_flash",
+        "control_function:async_turn_off",
+        "property_function:is_on",
+        "property_function:extra_state_attributes"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "_update_values",
+        "on_update"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A13"
+      ],
+      "integration": "hue",
+      "negative_call_patterns": [
+        "async_on_unload",
+        "groupedhuelight",
+        "async_add_entities",
+        "subscribe",
+        "sleep",
+        "async_add_light"
+      ],
+      "negative_evidence": [
+        "negative_function:async_setup_entry",
+        "negative_function:async_turn_on",
+        "negative_function:async_turn_off",
+        "negative_function:is_on",
+        "negative_function:extra_state_attributes",
+        "negative_call:async_on_unload",
+        "negative_call:groupedhuelight",
+        "negative_call:async_add_entities",
+        "negative_call:subscribe",
+        "negative_call:sleep"
+      ],
+      "negative_function_patterns": [
+        "async_setup_entry",
+        "async_turn_on",
+        "async_turn_off",
+        "is_on",
+        "extra_state_attributes",
+        "async_set_*"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [
+            "config_entry.async_on_unload",
+            "groupedhuelight",
+            "async_add_entities",
+            "api.groups.grouped_light.subscribe",
+            "asyncio.sleep",
+            "async_add_light",
+            "api.groups.grouped_light.get_zone"
+          ],
+          "call_patterns": [
+            "async_on_unload",
+            "groupedhuelight",
+            "async_add_entities",
+            "subscribe",
+            "sleep",
+            "async_add_light",
+            "get_zone"
+          ],
+          "file_path": "data/repo_snapshot/hue/v2/group.py",
+          "function_name": "async_setup_entry",
+          "path_kind": "setup_path",
+          "path_signals": [
+            "setup_function:async_setup_entry",
+            "read_function:async_setup_entry",
+            "setup_call:async_add_entities",
+            "subscription_call:api.groups.grouped_light.subscribe",
+            "read_call:api.groups.grouped_light.get_zone"
+          ],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -6,
+          "snippet": "41: \n42: async def async_setup_entry(\n43:     hass: HomeAssistant,\n44:     config_entry: HueConfigEntry,\n45:     async_add_entities: AddConfigEntryEntitiesCallback,\n46: ) -> None:\n47:     \"\"\"Set up Hue groups on light platform.\"\"\"\n48:     bridge = config_entry.runtime_data\n49:     api: HueBridgeV2 = bridge.api\n50: \n51:     async def async_add_light(event_type: EventType, resource: GroupedLight) -> None:\n52:         \"\"\"Add Grouped Light for Hue Room/Zone.\"\"\"\n53:         # delay group creation a bit due to a race condition where the\n54:         # grouped_light resource is created before the zone/room"
+        },
+        {
+          "call_chains": [
+            "normalize_hue_transition",
+            "kwargs.get",
+            "normalize_hue_colortemp",
+            "normalize_hue_brightness",
+            "color_util.color_temperature_kelvin_to_mired",
+            "self.bridge.async_request_call",
+            "self.async_set_flash"
+          ],
+          "call_patterns": [
+            "normalize_hue_transition",
+            "get",
+            "normalize_hue_colortemp",
+            "normalize_hue_brightness",
+            "color_temperature_kelvin_to_mired",
+            "async_request_call",
+            "async_set_flash"
+          ],
+          "file_path": "data/repo_snapshot/hue/v2/group.py",
+          "function_name": "async_turn_on",
+          "path_kind": "control_path",
+          "path_signals": [
+            "control_function:async_turn_on",
+            "control_call:self.async_set_flash",
+            "awaited_control_call:self.async_set_flash"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -12,
+          "snippet": "160: \n161:     async def async_turn_on(self, **kwargs: Any) -> None:\n162:         \"\"\"Turn the grouped_light on.\"\"\"\n163:         transition = normalize_hue_transition(kwargs.get(ATTR_TRANSITION))\n164:         xy_color = kwargs.get(ATTR_XY_COLOR)\n165:         color_temp = normalize_hue_colortemp(\n166:             kwargs.get(ATTR_COLOR_TEMP_KELVIN),\n167:             color_util.color_temperature_kelvin_to_mired(self.max_color_temp_kelvin),\n168:             color_util.color_temperature_kelvin_to_mired(self.min_color_temp_kelvin),\n169:         )\n170:         brightness = normalize_hue_brightness(kwargs.get(ATTR_BRIGHTNESS))\n171:         flash = kwargs.get(ATTR_FLASH)\n172: \n173:         if self._restore_brightness and brightness is None:"
+        },
+        {
+          "call_chains": [
+            "normalize_hue_transition",
+            "kwargs.get",
+            "self.bridge.async_request_call",
+            "self.async_set_flash"
+          ],
+          "call_patterns": [
+            "normalize_hue_transition",
+            "get",
+            "async_request_call",
+            "async_set_flash"
+          ],
+          "file_path": "data/repo_snapshot/hue/v2/group.py",
+          "function_name": "async_turn_off",
+          "path_kind": "control_path",
+          "path_signals": [
+            "control_function:async_turn_off",
+            "control_call:self.async_set_flash",
+            "awaited_control_call:self.async_set_flash"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -12,
+          "snippet": "198: \n199:     async def async_turn_off(self, **kwargs: Any) -> None:\n200:         \"\"\"Turn the light off.\"\"\"\n201:         transition = normalize_hue_transition(kwargs.get(ATTR_TRANSITION))\n202:         if transition is not None:\n203:             self._restore_brightness = self._brightness_pct\n204:         flash = kwargs.get(ATTR_FLASH)\n205: \n206:         if flash is not None:\n207:             await self.async_set_flash(flash)\n208:             # flash cannot be sent with other commands at the same time\n209:             return\n210: \n211:         await self.bridge.async_request_call("
+        },
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/hue/v2/group.py",
+          "function_name": "is_on",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:is_on"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "135:     @property\n136:     def is_on(self) -> bool:\n137:         \"\"\"Return true if light is on.\"\"\"\n138:         return self.resource.on.on\n139: \n140:     @property"
+        },
+        {
+          "call_chains": [
+            "tuple",
+            "self._get_names_and_entity_ids_for_resource_ids",
+            "self.controller.get_lights"
+          ],
+          "call_patterns": [
+            "tuple",
+            "_get_names_and_entity_ids_for_resource_ids",
+            "get_lights"
+          ],
+          "file_path": "data/repo_snapshot/hue/v2/group.py",
+          "function_name": "extra_state_attributes",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:extra_state_attributes",
+            "read_function:extra_state_attributes",
+            "read_call:self.controller.get_lights"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -8,
+          "snippet": "140:     @property\n141:     def extra_state_attributes(self) -> dict[str, Any] | None:\n142:         \"\"\"Return the optional state attributes.\"\"\"\n143:         scenes = {\n144:             x.metadata.name for x in self.api.scenes if x.group.rid == self.hue_group.id\n145:         }\n146:         light_resource_ids = tuple(\n147:             x.id for x in self.controller.get_lights(self.resource.id)\n148:         )\n149:         light_names, light_entities = self._get_names_and_entity_ids_for_resource_ids(\n150:             light_resource_ids\n151:         )\n152:         return {\n153:             \"is_hue_group\": True,"
+        }
+      ],
+      "origin_action_id": "A13",
+      "origin_cluster_id": "hue__group__local_api_read__get_state__local",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [
+            "set",
+            "self.controller.get_lights",
+            "supported_color_modes.add",
+            "round",
+            "color_util.color_temperature_mired_to_kelvin",
+            "len"
+          ],
+          "call_patterns": [
+            "set",
+            "get_lights",
+            "add",
+            "round",
+            "color_temperature_mired_to_kelvin",
+            "len"
+          ],
+          "file_path": "data/repo_snapshot/hue/v2/group.py",
+          "function_name": "_update_values",
+          "path_kind": "read_path",
+          "path_signals": [
+            "read_function:_update_values",
+            "read_call:self.controller.get_lights"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 8,
+          "snippet": "231:     @callback\n232:     def _update_values(self) -> None:\n233:         \"\"\"Set base values from underlying lights of a group.\"\"\"\n234:         supported_color_modes: set[ColorMode] = set()\n235:         lights_with_color_support = 0\n236:         lights_with_color_temp_support = 0\n237:         lights_with_dimming_support = 0\n238:         lights_on_with_dimming_support = 0\n239:         total_brightness = 0\n240:         all_lights = self.controller.get_lights(self.resource.id)\n241:         lights_in_colortemp_mode = 0\n242:         lights_in_xy_mode = 0\n243:         lights_in_dynamic_mode = 0\n244:         # accumulate color values"
+        },
+        {
+          "call_chains": [
+            "self._update_values"
+          ],
+          "call_patterns": [
+            "_update_values"
+          ],
+          "file_path": "data/repo_snapshot/hue/v2/group.py",
+          "function_name": "on_update",
+          "path_kind": "read_path",
+          "path_signals": [
+            "update_callback_function:on_update"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 8,
+          "snippet": "226:     @callback\n227:     def on_update(self) -> None:\n228:         \"\"\"Call on update event.\"\"\"\n229:         self._update_values()\n230: \n231:     @callback"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read"
+      ],
+      "required_context": [
+        "runtime_path"
+      ],
+      "required_path_signals": [
+        "read_function:_update_values",
+        "read_call:self.controller.get_lights",
+        "update_callback_function:on_update"
+      ],
+      "required_runtime_roles": [
+        "runtime_read"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "hue:group_local_api_read",
+      "runtime_archetypes": [
+        "local_bridge_getter",
+        "runtime_read"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:_update_values",
+        "runtime_function:on_update",
+        "runtime_call:set",
+        "runtime_call:get_lights",
+        "runtime_call:add",
+        "runtime_call:round",
+        "runtime_call:color_temperature_mired_to_kelvin",
+        "runtime_call:len",
+        "runtime_call:self.controller.get_lights",
+        "runtime_call:supported_color_modes.add"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/hue/v2/group.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A13"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+      "why_not_setup": [
+        "exclude_role:setup:async_setup_entry",
+        "exclude_role:runtime_write:async_turn_on",
+        "exclude_role:runtime_write:async_turn_off",
+        "exclude_role:property_getter:is_on",
+        "exclude_role:property_getter:extra_state_attributes",
+        "exclude_path_signal:setup_function:async_setup_entry",
+        "exclude_path_signal:setup_call:async_add_entities",
+        "exclude_path_signal:control_function:async_turn_on"
+      ]
+    }
+  ],
+  "schema_version": "m1_grounding_profile/v3",
+  "version": "draft_llm_v3"
+}

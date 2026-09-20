@@ -1,0 +1,269 @@
+{
+  "case_count": 16,
+  "cases": [
+    {
+      "added_savings_ms": 384,
+      "added_savings_ratio": 0.06326194398682043,
+      "corridor_count": 2,
+      "group": "Morning and Leaving Home Routines",
+      "name": "Morning Wake-Up Readiness Routine",
+      "original_estimated_latency_ms": 6070,
+      "refined_estimated_latency_ms": 5686,
+      "validated_corridor_count": 2,
+      "vdev_id": "vdev_morning_wakeup_readiness_01"
+    },
+    {
+      "added_savings_ms": 360,
+      "added_savings_ratio": 0.07547169811320754,
+      "corridor_count": 1,
+      "group": "Morning and Leaving Home Routines",
+      "name": "Leaving Home Safety Check Routine",
+      "original_estimated_latency_ms": 4770,
+      "refined_estimated_latency_ms": 4410,
+      "validated_corridor_count": 1,
+      "vdev_id": "vdev_leaving_home_safety_check_01"
+    },
+    {
+      "added_savings_ms": 330,
+      "added_savings_ratio": 0.05365853658536585,
+      "corridor_count": 2,
+      "group": "Coming Home and Evening Comfort Routines",
+      "name": "Coming Home Comfort Preparation Routine",
+      "original_estimated_latency_ms": 6150,
+      "refined_estimated_latency_ms": 5820,
+      "validated_corridor_count": 2,
+      "vdev_id": "vdev_arrival_comfort_preparation_01"
+    },
+    {
+      "added_savings_ms": 282,
+      "added_savings_ratio": 0.06266666666666666,
+      "corridor_count": 1,
+      "group": "Coming Home and Evening Comfort Routines",
+      "name": "Dinner Time Home Mode Routine",
+      "original_estimated_latency_ms": 4500,
+      "refined_estimated_latency_ms": 4218,
+      "validated_corridor_count": 1,
+      "vdev_id": "vdev_dinner_home_mode_01"
+    },
+    {
+      "added_savings_ms": 438,
+      "added_savings_ratio": 0.07657342657342657,
+      "corridor_count": 1,
+      "group": "Night and Energy Monitoring Routines",
+      "name": "Night Shutdown Routine",
+      "original_estimated_latency_ms": 5720,
+      "refined_estimated_latency_ms": 5282,
+      "validated_corridor_count": 1,
+      "vdev_id": "vdev_night_shutdown_01"
+    },
+    {
+      "added_savings_ms": 270,
+      "added_savings_ratio": 0.06136363636363636,
+      "corridor_count": 1,
+      "group": "Night and Energy Monitoring Routines",
+      "name": "Overnight Health & Safety Monitoring Routine",
+      "original_estimated_latency_ms": 4400,
+      "refined_estimated_latency_ms": 4130,
+      "validated_corridor_count": 1,
+      "vdev_id": "vdev_overnight_health_safety_monitoring_01"
+    },
+    {
+      "added_savings_ms": 510,
+      "added_savings_ratio": 0.06719367588932806,
+      "corridor_count": 2,
+      "group": "Night and Energy Monitoring Routines",
+      "name": "Weekend Whole-Home Snapshot Routine",
+      "original_estimated_latency_ms": 7590,
+      "refined_estimated_latency_ms": 7080,
+      "validated_corridor_count": 2,
+      "vdev_id": "vdev_weekend_whole_home_snapshot_01"
+    },
+    {
+      "added_savings_ms": 282,
+      "added_savings_ratio": 0.06497695852534562,
+      "corridor_count": 1,
+      "group": "Coming Home and Evening Comfort Routines",
+      "name": "Party Preparation Routine",
+      "original_estimated_latency_ms": 4340,
+      "refined_estimated_latency_ms": 4058,
+      "validated_corridor_count": 1,
+      "vdev_id": "vdev_party_preparation_01"
+    },
+    {
+      "added_savings_ms": 432,
+      "added_savings_ratio": 0.056842105263157895,
+      "corridor_count": 2,
+      "group": "Scene Activation and Comfort Control Routines",
+      "name": "Party Scene Activation Routine",
+      "original_estimated_latency_ms": 7600,
+      "refined_estimated_latency_ms": 7168,
+      "validated_corridor_count": 2,
+      "vdev_id": "vdev_party_scene_activation_01"
+    },
+    {
+      "added_savings_ms": 432,
+      "added_savings_ratio": 0.056842105263157895,
+      "corridor_count": 2,
+      "group": "Scene Activation and Comfort Control Routines",
+      "name": "Movie Night Blackout Routine",
+      "original_estimated_latency_ms": 7600,
+      "refined_estimated_latency_ms": 7168,
+      "validated_corridor_count": 2,
+      "vdev_id": "vdev_movie_night_blackout_01"
+    },
+    {
+      "added_savings_ms": 432,
+      "added_savings_ratio": 0.056842105263157895,
+      "corridor_count": 2,
+      "group": "Scene Activation and Comfort Control Routines",
+      "name": "Morning Wake-Up Ramp Routine",
+      "original_estimated_latency_ms": 7600,
+      "refined_estimated_latency_ms": 7168,
+      "validated_corridor_count": 2,
+      "vdev_id": "vdev_morning_wakeup_ramp_01"
+    },
+    {
+      "added_savings_ms": 522,
+      "added_savings_ratio": 0.06076833527357392,
+      "corridor_count": 2,
+      "group": "Scene Activation and Comfort Control Routines",
+      "name": "Workday Focus Mode Routine",
+      "original_estimated_latency_ms": 8590,
+      "refined_estimated_latency_ms": 8068,
+      "validated_corridor_count": 2,
+      "vdev_id": "vdev_workday_focus_mode_01"
+    },
+    {
+      "added_savings_ms": 522,
+      "added_savings_ratio": 0.0588500563697858,
+      "corridor_count": 2,
+      "group": "Scene Activation and Comfort Control Routines",
+      "name": "Guest Suite Welcome Routine",
+      "original_estimated_latency_ms": 8870,
+      "refined_estimated_latency_ms": 8348,
+      "validated_corridor_count": 2,
+      "vdev_id": "vdev_guest_suite_welcome_01"
+    },
+    {
+      "added_savings_ms": 414,
+      "added_savings_ratio": 0.05194479297365119,
+      "corridor_count": 2,
+      "group": "Scene Activation and Comfort Control Routines",
+      "name": "Storm Lockdown Safety Routine",
+      "original_estimated_latency_ms": 7970,
+      "refined_estimated_latency_ms": 7556,
+      "validated_corridor_count": 2,
+      "vdev_id": "vdev_storm_lockdown_safety_01"
+    },
+    {
+      "added_savings_ms": 600,
+      "added_savings_ratio": 0.0821917808219178,
+      "corridor_count": 2,
+      "group": "Household Stress and Abnormality Routines",
+      "name": "BLE Congestion Routine Stress",
+      "original_estimated_latency_ms": 7300,
+      "refined_estimated_latency_ms": 6700,
+      "validated_corridor_count": 2,
+      "vdev_id": "vdev_ble_safety_sweep_stress_01"
+    },
+    {
+      "added_savings_ms": 0,
+      "added_savings_ratio": 0.0,
+      "corridor_count": 0,
+      "group": "Household Stress and Abnormality Routines",
+      "name": "Cloud Burst Energy & HVAC Audit Routine",
+      "original_estimated_latency_ms": 1610,
+      "refined_estimated_latency_ms": 1610,
+      "validated_corridor_count": 0,
+      "vdev_id": "vdev_energy_hvac_audit_01"
+    }
+  ],
+  "policy": {
+    "allow_adv_prepare_during_connect_capabilities": [
+      "adv_anchor_safe"
+    ],
+    "allow_adv_prepare_during_connect_for_sources": [
+      "switchbot",
+      "xiaomi_ble"
+    ],
+    "allow_adv_prepare_overlap": true,
+    "allow_connect_prepare_overlap": false,
+    "allow_same_device_adv_overlap": false,
+    "allow_same_session_adv_overlap": false,
+    "allow_subscribe_like_adv_overlap": false,
+    "allow_subscribe_like_adv_overlap_capabilities": [
+      "subscribe_adv_overlap_safe"
+    ],
+    "allow_subscribe_like_adv_overlap_sources": [
+      "esphome"
+    ],
+    "allow_unknown_source_adv_overlap": false,
+    "assume_connectable_controller_available": true,
+    "assume_shared_scanner_available": true,
+    "connectable_slot_limit": 1,
+    "control_like_min_corridor_latency_ms": 1800,
+    "control_like_min_corridor_length": 3,
+    "current_xfer_slot_cost": 1,
+    "enforce_connection_slot_guard": true,
+    "generic_min_corridor_latency_ms": 1800,
+    "generic_min_corridor_length": 3,
+    "kind_capability_overrides": {
+      "connect": [
+        "session_chain_ble_op"
+      ],
+      "read_sensor": [
+        "read_like_ble_op"
+      ],
+      "read_status": [
+        "read_like_ble_op"
+      ],
+      "refresh_cover": [
+        "read_like_ble_op"
+      ],
+      "set_cover_position": [
+        "control_like_ble_op"
+      ],
+      "set_percentage": [
+        "control_like_ble_op"
+      ],
+      "subscribe": [
+        "session_chain_ble_op"
+      ],
+      "turn_off": [
+        "control_like_ble_op"
+      ],
+      "turn_on": [
+        "control_like_ble_op"
+      ]
+    },
+    "max_lookahead_actions": 1,
+    "min_corridor_latency_ms": 1800,
+    "min_corridor_length": 3,
+    "next_connect_prepare_slot_cost": 1,
+    "prepare_adv_timeout_ms": 120,
+    "prepare_connect_timeout_ms": 180,
+    "prepare_must_be_side_effect_free": true,
+    "read_like_min_corridor_latency_ms": 1200,
+    "read_like_min_corridor_length": 2,
+    "require_connectable_controller_for_connect_prep": true,
+    "require_shared_scanner": true,
+    "require_source_resolution_for_adv_overlap": true,
+    "session_chain_min_corridor_latency_ms": 1400,
+    "session_chain_min_corridor_length": 2,
+    "source_capability_overrides": {
+      "esphome": [
+        "subscribe_adv_overlap_safe"
+      ],
+      "switchbot": [
+        "adv_anchor_safe"
+      ],
+      "xiaomi_ble": [
+        "adv_anchor_safe"
+      ]
+    }
+  },
+  "total_added_savings_ms": 6210,
+  "total_added_savings_ratio": 0.06168057210965435,
+  "total_original_estimated_latency_ms": 100680,
+  "total_refined_estimated_latency_ms": 94470
+}

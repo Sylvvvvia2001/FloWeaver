@@ -1,0 +1,474 @@
+{
+  "integration": "airthings_ble",
+  "runtime_families": [
+    {
+      "action_kind": "read_sensor",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "ble:airthings_ble:living_room_air_quality",
+          "living_room_air_quality"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "control",
+          "read_sensor"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "airthings_ble",
+          "bleak",
+          "const",
+          "dataclasses",
+          "habluetooth"
+        ],
+        "boost_if_names": [
+          "read_sensor",
+          "_get_device"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "BLE_OP",
+      "file_globs": [
+        "airthings_ble/config_flow.py"
+      ],
+      "forbidden_context": [
+        "dunder_init"
+      ],
+      "forbidden_path_signals": [
+        "control_function:async_step_user",
+        "control_call:self.async_set_unique_id",
+        "awaited_control_call:self.async_set_unique_id",
+        "control_function:async_step_bluetooth",
+        "control_function:async_turn_on",
+        "control_function:async_turn_off",
+        "control_function:async_open_cover",
+        "control_function:async_close_cover"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "_get_device"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A1"
+      ],
+      "integration": "airthings_ble",
+      "negative_call_patterns": [
+        "_async_current_ids",
+        "async_discovered_service_info",
+        "async_show_form",
+        "_abort_if_unique_id_configured",
+        "async_create_entry",
+        "airthingsbluetoothdevicedata"
+      ],
+      "negative_evidence": [
+        "negative_function:__init__",
+        "negative_function:async_step_user",
+        "negative_function:async_step_bluetooth",
+        "negative_function:get_name",
+        "negative_call:_async_current_ids",
+        "negative_call:async_discovered_service_info",
+        "negative_call:async_show_form",
+        "negative_call:_abort_if_unique_id_configured",
+        "negative_call:async_create_entry",
+        "negative_call:append"
+      ],
+      "negative_function_patterns": [
+        "__init__",
+        "async_step_user",
+        "async_step_bluetooth",
+        "get_name",
+        "async_turn_on",
+        "async_turn_off"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/airthings_ble/config_flow.py",
+          "function_name": "__init__",
+          "path_kind": "setup_path",
+          "path_signals": [],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -6,
+          "snippet": "66: \n67:     def __init__(self) -> None:\n68:         \"\"\"Initialize the config flow.\"\"\"\n69:         self._discovered_device: Discovery | None = None\n70:         self._discovered_devices: dict[str, Discovery] = {}\n71: \n72:     async def _get_device("
+        },
+        {
+          "call_chains": [
+            "self._async_current_ids",
+            "async_discovered_service_info",
+            "self.async_show_form",
+            "self._abort_if_unique_id_configured",
+            "self.async_create_entry",
+            "devices.append",
+            "airthingsbluetoothdevicedata",
+            "get_name"
+          ],
+          "call_patterns": [
+            "_async_current_ids",
+            "async_discovered_service_info",
+            "async_show_form",
+            "_abort_if_unique_id_configured",
+            "async_create_entry",
+            "append",
+            "airthingsbluetoothdevicedata",
+            "get_name"
+          ],
+          "file_path": "data/repo_snapshot/airthings_ble/config_flow.py",
+          "function_name": "async_step_user",
+          "path_kind": "control_path",
+          "path_signals": [
+            "control_function:async_step_user",
+            "read_function:async_step_user",
+            "read_call:get_name",
+            "control_call:self.async_set_unique_id",
+            "awaited_control_call:self.async_set_unique_id"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -10,
+          "snippet": "147: \n148:     async def async_step_user(\n149:         self, user_input: dict[str, Any] | None = None\n150:     ) -> ConfigFlowResult:\n151:         \"\"\"Handle the user step to pick discovered device.\"\"\"\n152:         if user_input is not None:\n153:             address = user_input[CONF_ADDRESS]\n154:             await self.async_set_unique_id(address, raise_on_progress=False)\n155:             self._abort_if_unique_id_configured()\n156:             discovery = self._discovered_devices[address]\n157: \n158:             if discovery.device.firmware.need_firmware_upgrade:\n159:                 return self.async_abort(reason=\"firmware_upgrade_required\")\n160:"
+        },
+        {
+          "call_chains": [
+            "_logger.debug",
+            "self._abort_if_unique_id_configured",
+            "airthingsbluetoothdevicedata",
+            "get_name",
+            "discovery",
+            "self.async_set_unique_id",
+            "self.async_step_bluetooth_confirm",
+            "self._get_device"
+          ],
+          "call_patterns": [
+            "debug",
+            "_abort_if_unique_id_configured",
+            "airthingsbluetoothdevicedata",
+            "get_name",
+            "discovery",
+            "async_set_unique_id",
+            "async_step_bluetooth_confirm",
+            "_get_device"
+          ],
+          "file_path": "data/repo_snapshot/airthings_ble/config_flow.py",
+          "function_name": "async_step_bluetooth",
+          "path_kind": "control_path",
+          "path_signals": [
+            "control_function:async_step_bluetooth",
+            "read_function:async_step_bluetooth",
+            "read_call:get_name",
+            "control_call:self.async_set_unique_id",
+            "awaited_control_call:self.async_set_unique_id"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -10,
+          "snippet": "100: \n101:     async def async_step_bluetooth(\n102:         self, discovery_info: BluetoothServiceInfo\n103:     ) -> ConfigFlowResult:\n104:         \"\"\"Handle the bluetooth discovery step.\"\"\"\n105:         _LOGGER.debug(\"Discovered BT device: %s\", discovery_info)\n106:         await self.async_set_unique_id(discovery_info.address)\n107:         self._abort_if_unique_id_configured()\n108: \n109:         data = AirthingsBluetoothDeviceData(logger=_LOGGER)\n110: \n111:         try:\n112:             device = await self._get_device(data=data, discovery_info=discovery_info)\n113:         except AirthingsDeviceUpdateError:"
+        },
+        {
+          "call_chains": [
+            "device.friendly_name"
+          ],
+          "call_patterns": [
+            "friendly_name"
+          ],
+          "file_path": "data/repo_snapshot/airthings_ble/config_flow.py",
+          "function_name": "get_name",
+          "path_kind": "helper_path",
+          "path_signals": [
+            "read_function:get_name"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "helper",
+          "score": -2,
+          "snippet": "48: \n49: def get_name(device: AirthingsDevice) -> str:\n50:     \"\"\"Generate name with model and identifier for device.\"\"\"\n51: \n52:     name = device.friendly_name()\n53:     if identifier := device.identifier:\n54:         name += f\" ({device.model.value}{identifier})\"\n55:     return name\n56: \n57:"
+        }
+      ],
+      "origin_action_id": "A1",
+      "origin_cluster_id": "airthings_ble__config_flow__ble_op__read_sensor__ble",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [
+            "bluetooth.async_ble_device_from_address",
+            "_logger.debug",
+            "airthingsdeviceupdateerror",
+            "data.update_device",
+            "_logger.error"
+          ],
+          "call_patterns": [
+            "async_ble_device_from_address",
+            "debug",
+            "airthingsdeviceupdateerror",
+            "update_device",
+            "error"
+          ],
+          "file_path": "data/repo_snapshot/airthings_ble/config_flow.py",
+          "function_name": "_get_device",
+          "path_kind": "read_path",
+          "path_signals": [
+            "refresh_call:data.update_device",
+            "awaited_refresh_call:data.update_device"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 10,
+          "snippet": "71: \n72:     async def _get_device(\n73:         self, data: AirthingsBluetoothDeviceData, discovery_info: BluetoothServiceInfo\n74:     ) -> AirthingsDevice:\n75:         ble_device = bluetooth.async_ble_device_from_address(\n76:             self.hass, discovery_info.address\n77:         )\n78:         if ble_device is None:\n79:             _LOGGER.debug(\"no ble_device in _get_device_data\")\n80:             raise AirthingsDeviceUpdateError(\"No ble_device\")\n81: \n82:         try:\n83:             device = await data.update_device(ble_device)\n84:         except BleakError as err:"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read"
+      ],
+      "required_context": [
+        "runtime_path"
+      ],
+      "required_path_signals": [
+        "refresh_call:data.update_device",
+        "awaited_refresh_call:data.update_device"
+      ],
+      "required_runtime_roles": [
+        "runtime_read"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "airthings_ble:config_flow_runtime_read_sensor_control",
+      "runtime_archetypes": [
+        "ble_runtime_read"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:_get_device",
+        "runtime_call:async_ble_device_from_address",
+        "runtime_call:debug",
+        "runtime_call:airthingsdeviceupdateerror",
+        "runtime_call:update_device",
+        "runtime_call:error",
+        "runtime_call:bluetooth.async_ble_device_from_address",
+        "runtime_call:_logger.debug",
+        "runtime_call:data.update_device",
+        "runtime_call:_logger.error"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/airthings_ble/config_flow.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A1"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+      "why_not_setup": [
+        "exclude_role:setup:__init__",
+        "exclude_role:runtime_write:async_step_user",
+        "exclude_role:runtime_write:async_step_bluetooth",
+        "exclude_role:helper:get_name",
+        "exclude_path_signal:control_function:async_step_user",
+        "exclude_path_signal:control_call:self.async_set_unique_id",
+        "exclude_path_signal:awaited_control_call:self.async_set_unique_id",
+        "exclude_path_signal:control_function:async_step_bluetooth"
+      ]
+    },
+    {
+      "action_kind": "read_sensor",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "ble:airthings_ble:living_room_air_quality",
+          "living_room_air_quality"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "control",
+          "read_sensor"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "airthings_ble",
+          "bleak",
+          "bleak_retry_connector",
+          "const",
+          "datetime"
+        ],
+        "boost_if_names": [
+          "read_sensor",
+          "_async_update_data"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "BLE_OP",
+      "file_globs": [
+        "airthings_ble/coordinator.py"
+      ],
+      "forbidden_context": [
+        "dunder_init"
+      ],
+      "forbidden_path_signals": [
+        "setup_function:_async_setup",
+        "control_function:_async_setup",
+        "control_call:close_stale_connections_by_address",
+        "awaited_control_call:close_stale_connections_by_address",
+        "control_function:async_turn_on",
+        "control_function:async_turn_off",
+        "control_function:async_open_cover",
+        "control_function:async_close_cover"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter"
+      ],
+      "function_name_patterns": [
+        "_async_update_data"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A1"
+      ],
+      "integration": "airthings_ble",
+      "negative_call_patterns": [
+        "async_ble_device_from_address",
+        "close_stale_connections_by_address",
+        "configentrynotready",
+        "async_update_entry",
+        "timedelta",
+        "update_device"
+      ],
+      "negative_evidence": [
+        "negative_function:_async_setup",
+        "negative_call:async_ble_device_from_address",
+        "negative_call:close_stale_connections_by_address",
+        "negative_call:configentrynotready",
+        "negative_call:debug",
+        "negative_call:async_update_entry",
+        "negative_call:timedelta",
+        "negative_call:update_device",
+        "negative_call:updatefailed",
+        "negative_call:bluetooth.async_ble_device_from_address"
+      ],
+      "negative_function_patterns": [
+        "_async_setup",
+        "async_turn_on",
+        "async_turn_off",
+        "async_set_*",
+        "async_open_*",
+        "async_close_*"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [
+            "bluetooth.async_ble_device_from_address",
+            "close_stale_connections_by_address",
+            "configentrynotready",
+            "_logger.debug",
+            "self.hass.config_entries.async_update_entry",
+            "timedelta",
+            "self.airthings.update_device",
+            "updatefailed"
+          ],
+          "call_patterns": [
+            "async_ble_device_from_address",
+            "close_stale_connections_by_address",
+            "configentrynotready",
+            "debug",
+            "async_update_entry",
+            "timedelta",
+            "update_device",
+            "updatefailed"
+          ],
+          "file_path": "data/repo_snapshot/airthings_ble/coordinator.py",
+          "function_name": "_async_setup",
+          "path_kind": "setup_path",
+          "path_signals": [
+            "setup_function:_async_setup",
+            "control_function:_async_setup",
+            "control_call:close_stale_connections_by_address",
+            "connect_call:close_stale_connections_by_address",
+            "awaited_control_call:close_stale_connections_by_address"
+          ],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -15,
+          "snippet": "55: \n56:     async def _async_setup(self) -> None:\n57:         \"\"\"Set up the coordinator.\"\"\"\n58:         address = self.config_entry.unique_id\n59: \n60:         assert address is not None\n61: \n62:         await close_stale_connections_by_address(address)\n63: \n64:         ble_device = bluetooth.async_ble_device_from_address(self.hass, address)\n65: \n66:         if not ble_device:\n67:             raise ConfigEntryNotReady(\n68:                 f\"Could not find Airthings device with address {address}\""
+        }
+      ],
+      "origin_action_id": "A1",
+      "origin_cluster_id": "airthings_ble__coordinator__ble_op__read_sensor__ble",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [
+            "self.airthings.update_device",
+            "updatefailed"
+          ],
+          "call_patterns": [
+            "update_device",
+            "updatefailed"
+          ],
+          "file_path": "data/repo_snapshot/airthings_ble/coordinator.py",
+          "function_name": "_async_update_data",
+          "path_kind": "read_path",
+          "path_signals": [],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 6,
+          "snippet": "90: \n91:     async def _async_update_data(self) -> AirthingsDevice:\n92:         \"\"\"Get data from Airthings BLE.\"\"\"\n93:         try:\n94:             data = await self.airthings.update_device(self.ble_device)\n95:         except Exception as err:\n96:             raise UpdateFailed(f\"Unable to fetch data: {err}\") from err\n97:         return data"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read"
+      ],
+      "required_context": [
+        "runtime_path"
+      ],
+      "required_path_signals": [],
+      "required_runtime_roles": [
+        "runtime_read"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "airthings_ble:coordinator_runtime_read_sensor_control",
+      "runtime_archetypes": [
+        "ble_runtime_read"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:_async_update_data",
+        "runtime_call:update_device",
+        "runtime_call:updatefailed",
+        "runtime_call:self.airthings.update_device",
+        "path_signal:refresh_call:data.update_device",
+        "path_signal:awaited_refresh_call:data.update_device"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/airthings_ble/coordinator.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A1"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+      "why_not_setup": [
+        "exclude_role:setup:_async_setup",
+        "exclude_path_signal:setup_function:_async_setup",
+        "exclude_path_signal:control_function:_async_setup",
+        "exclude_path_signal:control_call:close_stale_connections_by_address",
+        "exclude_path_signal:awaited_control_call:close_stale_connections_by_address",
+        "exclude_control_path_for_read_like_action"
+      ]
+    }
+  ],
+  "schema_version": "m1_grounding_profile/v3",
+  "version": "draft_llm_v3"
+}

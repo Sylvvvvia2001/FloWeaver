@@ -1,0 +1,228 @@
+{
+  "integration": "sensorpush",
+  "runtime_families": [
+    {
+      "action_kind": "read_sensor",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "bedroom_temp_humidity_right",
+          "ble:sensorpush:bedroom_temp_humidity_right"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "control",
+          "read_sensor"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "homeassistant",
+          "sensorpush_ble"
+        ],
+        "boost_if_names": [
+          "read_sensor",
+          "sensor_update_to_bluetooth_data_update"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "BLE_OP",
+      "file_globs": [
+        "sensorpush/sensor.py"
+      ],
+      "forbidden_context": [
+        "dunder_init"
+      ],
+      "forbidden_path_signals": [
+        "setup_function:async_setup_entry",
+        "property_function:native_value",
+        "control_function:async_turn_on",
+        "control_function:async_turn_off",
+        "control_function:async_open_cover",
+        "control_function:async_close_cover",
+        "control_function:async_set_cover_position",
+        "control_function:set_state"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "sensor_update_to_bluetooth_data_update"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A6"
+      ],
+      "integration": "sensorpush",
+      "negative_call_patterns": [
+        "passivebluetoothdataprocessor",
+        "async_on_unload",
+        "async_add_entities_listener",
+        "async_register_processor",
+        "entry.async_on_unload",
+        "processor.async_add_entities_listener"
+      ],
+      "negative_evidence": [
+        "negative_function:async_setup_entry",
+        "negative_function:native_value",
+        "negative_function:_device_key_to_bluetooth_entity_key",
+        "negative_call:passivebluetoothdataprocessor",
+        "negative_call:async_on_unload",
+        "negative_call:async_add_entities_listener",
+        "negative_call:async_register_processor",
+        "negative_call:entry.async_on_unload",
+        "negative_call:processor.async_add_entities_listener",
+        "negative_call:coordinator.async_register_processor"
+      ],
+      "negative_function_patterns": [
+        "async_setup_entry",
+        "native_value",
+        "_device_key_to_bluetooth_entity_key",
+        "async_turn_on",
+        "async_turn_off",
+        "async_set_*"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [
+            "passivebluetoothdataprocessor",
+            "entry.async_on_unload",
+            "processor.async_add_entities_listener",
+            "coordinator.async_register_processor"
+          ],
+          "call_patterns": [
+            "passivebluetoothdataprocessor",
+            "async_on_unload",
+            "async_add_entities_listener",
+            "async_register_processor"
+          ],
+          "file_path": "data/repo_snapshot/sensorpush/sensor.py",
+          "function_name": "async_setup_entry",
+          "path_kind": "setup_path",
+          "path_signals": [
+            "setup_function:async_setup_entry",
+            "subscription_call:processor.async_add_entities_listener",
+            "service_registration_call:coordinator.async_register_processor"
+          ],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -8,
+          "snippet": "96: \n97: async def async_setup_entry(\n98:     hass: HomeAssistant,\n99:     entry: SensorPushConfigEntry,\n100:     async_add_entities: AddConfigEntryEntitiesCallback,\n101: ) -> None:\n102:     \"\"\"Set up the SensorPush BLE sensors.\"\"\"\n103:     coordinator = entry.runtime_data\n104:     processor = PassiveBluetoothDataProcessor(sensor_update_to_bluetooth_data_update)\n105:     entry.async_on_unload(\n106:         processor.async_add_entities_listener(\n107:             SensorPushBluetoothSensorEntity, async_add_entities\n108:         )\n109:     )"
+        },
+        {
+          "call_chains": [
+            "self.processor.entity_data.get"
+          ],
+          "call_patterns": [
+            "get"
+          ],
+          "file_path": "data/repo_snapshot/sensorpush/sensor.py",
+          "function_name": "native_value",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:native_value"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "123:     @property\n124:     def native_value(self) -> int | float | None:\n125:         \"\"\"Return the native value.\"\"\"\n126:         return self.processor.entity_data.get(self.entity_key)"
+        },
+        {
+          "call_chains": [
+            "passivebluetoothentitykey"
+          ],
+          "call_patterns": [
+            "passivebluetoothentitykey"
+          ],
+          "file_path": "data/repo_snapshot/sensorpush/sensor.py",
+          "function_name": "_device_key_to_bluetooth_entity_key",
+          "path_kind": "helper_path",
+          "path_signals": [],
+          "prototype_kind": "negative_helper",
+          "role_hint": "helper",
+          "score": -4,
+          "snippet": "62: \n63: def _device_key_to_bluetooth_entity_key(\n64:     device_key: DeviceKey,\n65: ) -> PassiveBluetoothEntityKey:\n66:     \"\"\"Convert a device key to an entity key.\"\"\"\n67:     return PassiveBluetoothEntityKey(device_key.key, device_key.device_id)\n68: \n69:"
+        }
+      ],
+      "origin_action_id": "A6",
+      "origin_cluster_id": "sensorpush__sensor__ble_op__read_sensor__ble",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [
+            "passivebluetoothdataupdate",
+            "sensor_device_info_to_hass_device_info",
+            "_device_key_to_bluetooth_entity_key",
+            "sensor_update.devices.items",
+            "sensor_update.entity_descriptions.items",
+            "sensor_update.entity_values.items"
+          ],
+          "call_patterns": [
+            "passivebluetoothdataupdate",
+            "sensor_device_info_to_hass_device_info",
+            "_device_key_to_bluetooth_entity_key",
+            "items"
+          ],
+          "file_path": "data/repo_snapshot/sensorpush/sensor.py",
+          "function_name": "sensor_update_to_bluetooth_data_update",
+          "path_kind": "read_path",
+          "path_signals": [],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 6,
+          "snippet": "69: \n70: def sensor_update_to_bluetooth_data_update(\n71:     sensor_update: SensorUpdate,\n72: ) -> PassiveBluetoothDataUpdate:\n73:     \"\"\"Convert a sensor update to a bluetooth data update.\"\"\"\n74:     return PassiveBluetoothDataUpdate(\n75:         devices={\n76:             device_id: sensor_device_info_to_hass_device_info(device_info)\n77:             for device_id, device_info in sensor_update.devices.items()\n78:         },\n79:         entity_descriptions={\n80:             _device_key_to_bluetooth_entity_key(device_key): SENSOR_DESCRIPTIONS[\n81:                 (description.device_class, description.native_unit_of_measurement)\n82:             ]"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read"
+      ],
+      "required_context": [
+        "runtime_path"
+      ],
+      "required_path_signals": [],
+      "required_runtime_roles": [
+        "runtime_read"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "sensorpush:sensor_runtime_read_sensor_control",
+      "runtime_archetypes": [
+        "ble_runtime_read"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:sensor_update_to_bluetooth_data_update",
+        "runtime_call:passivebluetoothdataupdate",
+        "runtime_call:sensor_device_info_to_hass_device_info",
+        "runtime_call:_device_key_to_bluetooth_entity_key",
+        "runtime_call:items",
+        "runtime_call:sensor_update.devices.items",
+        "runtime_call:sensor_update.entity_descriptions.items",
+        "runtime_call:sensor_update.entity_values.items"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/sensorpush/sensor.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A6"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+      "why_not_setup": [
+        "exclude_role:setup:async_setup_entry",
+        "exclude_role:property_getter:native_value",
+        "exclude_role:helper:_device_key_to_bluetooth_entity_key",
+        "exclude_path_signal:setup_function:async_setup_entry",
+        "exclude_path_signal:property_function:native_value",
+        "exclude_control_path_for_read_like_action"
+      ]
+    }
+  ],
+  "schema_version": "m1_grounding_profile/v3",
+  "version": "draft_llm_v3"
+}

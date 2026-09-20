@@ -1,0 +1,1647 @@
+{
+  "constraints": {
+    "optimization_knobs": {
+      "allow_concurrency": true,
+      "max_concurrency": {
+        "ble": 1,
+        "cloud": 4,
+        "local": 6,
+        "total": 10
+      }
+    },
+    "source_protocols": [
+      "BLE",
+      "CLOUD",
+      "HA",
+      "LOCAL"
+    ]
+  },
+  "critical_action_ids": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "A8",
+    "A9",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15",
+    "A16",
+    "A17",
+    "A18",
+    "A19",
+    "A20",
+    "A21",
+    "A22",
+    "A23",
+    "A24",
+    "A25",
+    "A26"
+  ],
+  "entrypoint": {
+    "kind": "ha_service",
+    "service": {
+      "domain": "vibeaura",
+      "name": "run_storm_lockdown_safety_01"
+    }
+  },
+  "hard_dependencies": [
+    {
+      "after": "A23",
+      "before": "A1",
+      "reason": "ble_write_depends_on_a1"
+    },
+    {
+      "after": "A23",
+      "before": "A2",
+      "reason": "ble_write_depends_on_a2"
+    },
+    {
+      "after": "A23",
+      "before": "A3",
+      "reason": "ble_write_depends_on_a3"
+    },
+    {
+      "after": "A23",
+      "before": "A4",
+      "reason": "ble_write_depends_on_a4"
+    },
+    {
+      "after": "A23",
+      "before": "A5",
+      "reason": "ble_write_depends_on_a5"
+    },
+    {
+      "after": "A23",
+      "before": "A6",
+      "reason": "ble_write_depends_on_a6"
+    },
+    {
+      "after": "A24",
+      "before": "A7",
+      "reason": "cloud_write_depends_on_a7"
+    },
+    {
+      "after": "A24",
+      "before": "A8",
+      "reason": "cloud_write_depends_on_a8"
+    },
+    {
+      "after": "A24",
+      "before": "A9",
+      "reason": "cloud_write_depends_on_a9"
+    },
+    {
+      "after": "A24",
+      "before": "A10",
+      "reason": "cloud_write_depends_on_a10"
+    },
+    {
+      "after": "A24",
+      "before": "A11",
+      "reason": "cloud_write_depends_on_a11"
+    },
+    {
+      "after": "A24",
+      "before": "A12",
+      "reason": "cloud_write_depends_on_a12"
+    },
+    {
+      "after": "A24",
+      "before": "A13",
+      "reason": "cloud_write_depends_on_a13"
+    },
+    {
+      "after": "A24",
+      "before": "A14",
+      "reason": "cloud_write_depends_on_a14"
+    },
+    {
+      "after": "A24",
+      "before": "A15",
+      "reason": "cloud_write_depends_on_a15"
+    },
+    {
+      "after": "A24",
+      "before": "A16",
+      "reason": "cloud_write_depends_on_a16"
+    },
+    {
+      "after": "A24",
+      "before": "A17",
+      "reason": "cloud_write_depends_on_a17"
+    },
+    {
+      "after": "A24",
+      "before": "A18",
+      "reason": "cloud_write_depends_on_a18"
+    },
+    {
+      "after": "A24",
+      "before": "A19",
+      "reason": "cloud_write_depends_on_a19"
+    },
+    {
+      "after": "A25",
+      "before": "A20",
+      "reason": "local_write_depends_on_a20"
+    },
+    {
+      "after": "A25",
+      "before": "A21",
+      "reason": "local_write_depends_on_a21"
+    },
+    {
+      "after": "A25",
+      "before": "A22",
+      "reason": "local_write_depends_on_a22"
+    },
+    {
+      "after": "A26",
+      "before": "A23",
+      "reason": "overall_write_depends_on_ble_lane"
+    },
+    {
+      "after": "A26",
+      "before": "A24",
+      "reason": "overall_write_depends_on_cloud_lane"
+    },
+    {
+      "after": "A26",
+      "before": "A25",
+      "reason": "overall_write_depends_on_local_lane"
+    },
+    {
+      "after": "A15",
+      "before": "A7",
+      "reason": "verify_entry_light_after_lockdown_control"
+    },
+    {
+      "after": "A16",
+      "before": "A8",
+      "reason": "verify_porch_light_after_lockdown_control"
+    },
+    {
+      "after": "A17",
+      "before": "A9",
+      "reason": "verify_patio_heater_after_lockdown_control"
+    },
+    {
+      "after": "A18",
+      "before": "A10",
+      "reason": "verify_fountain_pump_after_lockdown_control"
+    },
+    {
+      "after": "A19",
+      "before": "A12",
+      "reason": "verify_storm_runtime_after_hvac_mode"
+    },
+    {
+      "after": "A19",
+      "before": "A13",
+      "reason": "verify_storm_runtime_after_fan_mode"
+    },
+    {
+      "after": "A19",
+      "before": "A14",
+      "reason": "verify_storm_runtime_after_temperature"
+    }
+  ],
+  "meta": {
+    "benchmark": {
+      "focus_areas": [
+        "BLE cover-control ordering under a larger safety routine",
+        "Cloud control grouping across lights, switches, and HVAC settings",
+        "Verification phase should stay separate from control and preserve readback ordering",
+        "Local verification should remain grouped but should not overtake cloud verification",
+        "Writeback tail should remain compact and predictable under a larger control case"
+      ],
+      "group": "Scene Activation and Comfort Control Routines",
+      "story": "Before a storm front arrives, the routine closes exposed shades, powers down selected outdoor loads, enables safety lighting and HVAC lockdown settings, then verifies representative state before publishing a whole-home storm-lockdown summary.",
+      "strengths": [
+        "Control-heavy safety routine with a different device mix from party or wake-up scenes.",
+        "Exercises light, switch, siren-adjacent, and climate control in one flow while still requiring a verification phase.",
+        "Good generalization test because it is safety-oriented rather than ambience-oriented."
+      ]
+    },
+    "name": "Storm Lockdown Safety Routine",
+    "spec_version": "0.1",
+    "vdev_id": "vdev_storm_lockdown_safety_01"
+  },
+  "objectives": {
+    "metrics": {
+      "e2e_latency_ms": {
+        "p95": 5400
+      },
+      "lane_completion_ms": {
+        "ble_lane_p95": 1900,
+        "cloud_lane_p95": 3400,
+        "local_lane_p95": 700
+      }
+    },
+    "primary": "minimize_storm_lockdown_activation_latency_while_preserving_control_then_verify"
+  },
+  "soft_dependencies": [
+    {
+      "after": "A2",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A3",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A4",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A5",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A6",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A3",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A4",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A5",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A6",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A4",
+      "before": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A5",
+      "before": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A6",
+      "before": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A5",
+      "before": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A6",
+      "before": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A6",
+      "before": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    }
+  ],
+  "source_scope": {
+    "commit": "HEAD",
+    "domains": [
+      "ecobee",
+      "esphome",
+      "hue",
+      "mqtt",
+      "switchbot",
+      "tplink",
+      "tuya",
+      "xiaomi_ble"
+    ],
+    "entrypoints": [
+      {
+        "kind": "ha_service",
+        "service": {
+          "domain": "vibeaura",
+          "name": "run_storm_lockdown_safety_01"
+        }
+      }
+    ],
+    "file_bindings": [
+      {
+        "device_id": "ble:switchbot:roller_shade_entry",
+        "file_path": "data/repo_snapshot/switchbot/cover.py",
+        "integration": "switchbot",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:roller_shade_living_room",
+        "file_path": "data/repo_snapshot/switchbot/cover.py",
+        "integration": "switchbot",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:roller_shade_study",
+        "file_path": "data/repo_snapshot/switchbot/cover.py",
+        "integration": "switchbot",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:patio_fan",
+        "file_path": "data/repo_snapshot/switchbot/fan.py",
+        "integration": "switchbot",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:xiaomi_ble:window_sensor_study",
+        "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:xiaomi_ble:door_sensor_back_patio",
+        "file_path": "data/repo_snapshot/xiaomi_ble/event.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.entry.turn_on",
+        "file_path": "data/repo_snapshot/tuya/light.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.porch.turn_on",
+        "file_path": "data/repo_snapshot/tuya/light.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.patio_heater.turn_off",
+        "file_path": "data/repo_snapshot/tuya/switch.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.fountain_pump.turn_off",
+        "file_path": "data/repo_snapshot/tuya/switch.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:siren.entry.turn_on",
+        "file_path": "data/repo_snapshot/tuya/siren.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ecobee:thermostat.home_1.set_hvac_mode",
+        "file_path": "data/repo_snapshot/ecobee/climate.py",
+        "integration": "ecobee",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ecobee:thermostat.home_1.set_fan_mode",
+        "file_path": "data/repo_snapshot/ecobee/climate.py",
+        "integration": "ecobee",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ecobee:thermostat.home_1.set_temperature",
+        "file_path": "data/repo_snapshot/ecobee/climate.py",
+        "integration": "ecobee",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.entry.status",
+        "file_path": "data/repo_snapshot/tuya/light.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.porch.status",
+        "file_path": "data/repo_snapshot/tuya/light.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.patio_heater.status",
+        "file_path": "data/repo_snapshot/tuya/switch.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.fountain_pump.status",
+        "file_path": "data/repo_snapshot/tuya/switch.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ecobee:thermostat.home_1",
+        "file_path": "data/repo_snapshot/ecobee/climate.py",
+        "integration": "ecobee",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:entry_group",
+        "file_path": "data/repo_snapshot/hue/v2/group.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tplink:plug.emergency_backup",
+        "file_path": "data/repo_snapshot/tplink/entity.py",
+        "integration": "tplink",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "mqtt:weather_station_home",
+        "file_path": "data/repo_snapshot/mqtt/subscription.py",
+        "integration": "mqtt",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_storm_lockdown_ble_lane",
+        "file_path": "data/repo_snapshot/switchbot/fan.py",
+        "integration": "switchbot",
+        "protocols": [
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_storm_lockdown_cloud_lane",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_storm_lockdown_local_lane",
+        "file_path": "data/repo_snapshot/hue/v2/group.py",
+        "integration": "hue",
+        "protocols": [
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_storm_lockdown_overall",
+        "file_path": "data/repo_snapshot/esphome/update.py",
+        "integration": "esphome",
+        "protocols": [
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:xiaomi_ble:window_sensor_study",
+        "file_path": "data/repo_snapshot/xiaomi_ble/event.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:xiaomi_ble:window_sensor_study",
+        "file_path": "data/repo_snapshot/xiaomi_ble/__init__.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.entry.status",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.entry.status",
+        "file_path": "data/repo_snapshot/tuya/__init__.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.porch.status",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.porch.status",
+        "file_path": "data/repo_snapshot/tuya/__init__.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.patio_heater.status",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.patio_heater.status",
+        "file_path": "data/repo_snapshot/tuya/__init__.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.fountain_pump.status",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.fountain_pump.status",
+        "file_path": "data/repo_snapshot/tuya/__init__.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:entry_group",
+        "file_path": "data/repo_snapshot/hue/v2/entity.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:entry_group",
+        "file_path": "data/repo_snapshot/hue/v2/binary_sensor.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_storm_lockdown_local_lane",
+        "file_path": "data/repo_snapshot/hue/v2/entity.py",
+        "integration": "hue",
+        "protocols": [
+          "HA"
+        ]
+      }
+    ],
+    "files": [
+      "data/repo_snapshot/ecobee/climate.py",
+      "data/repo_snapshot/esphome/update.py",
+      "data/repo_snapshot/hue/v2/binary_sensor.py",
+      "data/repo_snapshot/hue/v2/entity.py",
+      "data/repo_snapshot/hue/v2/group.py",
+      "data/repo_snapshot/mqtt/subscription.py",
+      "data/repo_snapshot/switchbot/cover.py",
+      "data/repo_snapshot/switchbot/fan.py",
+      "data/repo_snapshot/tplink/entity.py",
+      "data/repo_snapshot/tuya/__init__.py",
+      "data/repo_snapshot/tuya/entity.py",
+      "data/repo_snapshot/tuya/light.py",
+      "data/repo_snapshot/tuya/siren.py",
+      "data/repo_snapshot/tuya/switch.py",
+      "data/repo_snapshot/xiaomi_ble/__init__.py",
+      "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+      "data/repo_snapshot/xiaomi_ble/event.py"
+    ],
+    "platforms": [
+      "binary_sensor",
+      "climate",
+      "cover",
+      "event",
+      "fan",
+      "light",
+      "mqtt",
+      "sensor",
+      "siren",
+      "switch"
+    ],
+    "protocols": [
+      "BLE",
+      "CLOUD",
+      "HA",
+      "LOCAL"
+    ],
+    "repo_path": "data/repo_snapshot"
+  },
+  "target_anchors": {
+    "anchor_ops": [
+      "BLE_GATT_OP",
+      "BLE_OP",
+      "CLOUD_HTTP_CALL",
+      "CLOUD_OP",
+      "CLOUD_STATUS_CALL",
+      "LOCAL_API_READ",
+      "MQTT_SUBSCRIBE",
+      "POLL_UPDATE",
+      "STATE_WRITE",
+      "SUBSCRIBE"
+    ],
+    "characteristics": [],
+    "device_ids": [
+      "ble:switchbot:roller_shade_entry",
+      "ble:switchbot:roller_shade_living_room",
+      "ble:switchbot:roller_shade_study",
+      "ble:switchbot:patio_fan",
+      "ble:xiaomi_ble:window_sensor_study",
+      "ble:xiaomi_ble:door_sensor_back_patio"
+    ],
+    "endpoints": [
+      "tuya:light.entry.turn_on",
+      "tuya:light.porch.turn_on",
+      "tuya:switch.patio_heater.turn_off",
+      "tuya:switch.fountain_pump.turn_off",
+      "tuya:siren.entry.turn_on",
+      "ecobee:thermostat.home_1.set_hvac_mode",
+      "ecobee:thermostat.home_1.set_fan_mode",
+      "ecobee:thermostat.home_1.set_temperature",
+      "tuya:light.entry.status",
+      "tuya:light.porch.status",
+      "tuya:switch.patio_heater.status",
+      "tuya:switch.fountain_pump.status",
+      "ecobee:thermostat.home_1"
+    ],
+    "entities": [
+      "sensor.vdev_storm_lockdown_ble_lane",
+      "sensor.vdev_storm_lockdown_cloud_lane",
+      "sensor.vdev_storm_lockdown_local_lane",
+      "sensor.vdev_storm_lockdown_overall"
+    ],
+    "required_state_writes": [
+      "sensor.vdev_storm_lockdown_ble_lane",
+      "sensor.vdev_storm_lockdown_cloud_lane",
+      "sensor.vdev_storm_lockdown_local_lane",
+      "sensor.vdev_storm_lockdown_overall"
+    ],
+    "service_entrypoints": [
+      "vibeaura.run_storm_lockdown_safety_01"
+    ]
+  },
+  "validation": {
+    "differential_tests": {
+      "enabled": true,
+      "runs_per_scenario": 2,
+      "scenarios": [
+        "baseline_happy_path",
+        "fault_cloud_429",
+        "fault_ble_disconnect"
+      ]
+    },
+    "fault_model": {
+      "ble_disconnect": true,
+      "cloud_429": true,
+      "network_jitter": true
+    },
+    "llm_detector": {
+      "enabled": true,
+      "max_attempts": 0,
+      "retry_backoff_s": 0.5,
+      "timeout_s": 45
+    },
+    "observation": {
+      "canonicalization_version": "v1",
+      "equivalence_whitelist": [
+        "COALESCE_STATE_WRITE"
+      ],
+      "semantic_ops": [
+        "ENTRY_SETUP",
+        "COORD_REFRESH",
+        "STATE_WRITE",
+        "SUBSCRIBE",
+        "UNSUBSCRIBE",
+        "MQTT_SUBSCRIBE",
+        "BLE_CONNECT",
+        "BLE_DISCONNECT",
+        "BLE_NOTIFY_SUBSCRIBE",
+        "BLE_OP",
+        "BLE_GATT_OP",
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_429_CHECK",
+        "CLOUD_BACKOFF_SLEEP",
+        "CLOUD_BATCH_CALL",
+        "CLOUD_SESSION_REUSE",
+        "LOCAL_API_READ",
+        "POLL_UPDATE"
+      ]
+    },
+    "profile_version": "ha_profile_default",
+    "sampling": {},
+    "source_protocols": [
+      "BLE",
+      "CLOUD",
+      "HA",
+      "LOCAL"
+    ]
+  },
+  "vdev_actions": [
+    {
+      "action_id": "A1",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:switchbot:roller_shade_entry",
+          "position": 0
+        },
+        "domain": "cover",
+        "kind": "ha_service_call",
+        "service": "set_cover_position"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:switchbot:roller_shade_entry",
+        "id": "ble:switchbot:roller_shade_entry",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "set_cover_position"
+    },
+    {
+      "action_id": "A2",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:switchbot:roller_shade_living_room",
+          "position": 0
+        },
+        "domain": "cover",
+        "kind": "ha_service_call",
+        "service": "set_cover_position"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:switchbot:roller_shade_living_room",
+        "id": "ble:switchbot:roller_shade_living_room",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "set_cover_position"
+    },
+    {
+      "action_id": "A3",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:switchbot:roller_shade_study",
+          "position": 0
+        },
+        "domain": "cover",
+        "kind": "ha_service_call",
+        "service": "set_cover_position"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:switchbot:roller_shade_study",
+        "id": "ble:switchbot:roller_shade_study",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "set_cover_position"
+    },
+    {
+      "action_id": "A4",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:switchbot:patio_fan"
+        },
+        "domain": "fan",
+        "kind": "ha_service_call",
+        "service": "turn_off"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:switchbot:patio_fan",
+        "id": "ble:switchbot:patio_fan",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "turn_off"
+    },
+    {
+      "action_id": "A5",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:xiaomi_ble:window_sensor_study"
+        },
+        "domain": "binary_sensor",
+        "kind": "ha_service_call",
+        "service": "read_sensor"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:xiaomi_ble:window_sensor_study",
+        "id": "ble:xiaomi_ble:window_sensor_study",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "read_sensor"
+    },
+    {
+      "action_id": "A6",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:xiaomi_ble:door_sensor_back_patio"
+        },
+        "domain": "event",
+        "kind": "ha_service_call",
+        "service": "read_sensor"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:xiaomi_ble:door_sensor_back_patio",
+        "id": "ble:xiaomi_ble:door_sensor_back_patio",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "read_sensor"
+    },
+    {
+      "action_id": "A7",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "brightness": 160,
+          "color_temp_kelvin": 3600,
+          "endpoint": "tuya:light.entry.turn_on",
+          "endpoint_group_key": "storm_light_controls",
+          "host_group_key": "tuya"
+        },
+        "domain": "light",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "turn_on"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_OP",
+        "CLOUD_HTTP_CALL"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:light.entry.turn_on",
+        "id": "tuya:light.entry.turn_on",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "turn_on"
+    },
+    {
+      "action_id": "A8",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "brightness": 180,
+          "color_temp_kelvin": 3500,
+          "endpoint": "tuya:light.porch.turn_on",
+          "endpoint_group_key": "storm_light_controls",
+          "host_group_key": "tuya"
+        },
+        "domain": "light",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "turn_on"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_OP",
+        "CLOUD_HTTP_CALL"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:light.porch.turn_on",
+        "id": "tuya:light.porch.turn_on",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "turn_on"
+    },
+    {
+      "action_id": "A9",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:switch.patio_heater.turn_off",
+          "endpoint_group_key": "storm_switch_controls",
+          "host_group_key": "tuya"
+        },
+        "domain": "switch",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "turn_off"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_OP",
+        "CLOUD_HTTP_CALL"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:switch.patio_heater.turn_off",
+        "id": "tuya:switch.patio_heater.turn_off",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "turn_off"
+    },
+    {
+      "action_id": "A10",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:switch.fountain_pump.turn_off",
+          "endpoint_group_key": "storm_switch_controls",
+          "host_group_key": "tuya"
+        },
+        "domain": "switch",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "turn_off"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_OP",
+        "CLOUD_HTTP_CALL"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:switch.fountain_pump.turn_off",
+        "id": "tuya:switch.fountain_pump.turn_off",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "turn_off"
+    },
+    {
+      "action_id": "A11",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:siren.entry.turn_on",
+          "endpoint_group_key": "storm_alert_controls",
+          "host_group_key": "tuya"
+        },
+        "domain": "siren",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "turn_on"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_OP",
+        "CLOUD_HTTP_CALL"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:siren.entry.turn_on",
+        "id": "tuya:siren.entry.turn_on",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "turn_on"
+    },
+    {
+      "action_id": "A12",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "ecobee:thermostat.home_1.set_hvac_mode",
+          "endpoint_group_key": "storm_hvac_controls",
+          "host_group_key": "ecobee",
+          "hvac_mode": "heat"
+        },
+        "domain": "climate",
+        "kind": "ha_service_call",
+        "provider": "ecobee",
+        "service": "set_hvac_mode"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_OP",
+        "CLOUD_HTTP_CALL"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "ecobee",
+      "side_effects": [],
+      "target": {
+        "endpoint": "ecobee:thermostat.home_1.set_hvac_mode",
+        "id": "ecobee:thermostat.home_1.set_hvac_mode",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "set_hvac_mode"
+    },
+    {
+      "action_id": "A13",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "ecobee:thermostat.home_1.set_fan_mode",
+          "endpoint_group_key": "storm_hvac_controls",
+          "fan_mode": "auto",
+          "host_group_key": "ecobee"
+        },
+        "domain": "climate",
+        "kind": "ha_service_call",
+        "provider": "ecobee",
+        "service": "set_fan_mode"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_OP",
+        "CLOUD_HTTP_CALL"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "ecobee",
+      "side_effects": [],
+      "target": {
+        "endpoint": "ecobee:thermostat.home_1.set_fan_mode",
+        "id": "ecobee:thermostat.home_1.set_fan_mode",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "set_fan_mode"
+    },
+    {
+      "action_id": "A14",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "ecobee:thermostat.home_1.set_temperature",
+          "endpoint_group_key": "storm_hvac_controls",
+          "host_group_key": "ecobee",
+          "temperature": 21
+        },
+        "domain": "climate",
+        "kind": "ha_service_call",
+        "provider": "ecobee",
+        "service": "set_temperature"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_OP",
+        "CLOUD_HTTP_CALL"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "ecobee",
+      "side_effects": [],
+      "target": {
+        "endpoint": "ecobee:thermostat.home_1.set_temperature",
+        "id": "ecobee:thermostat.home_1.set_temperature",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "set_temperature"
+    },
+    {
+      "action_id": "A15",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:light.entry.status",
+          "endpoint_group_key": "storm_light_verify",
+          "host_group_key": "tuya"
+        },
+        "domain": "light",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:light.entry.status",
+        "id": "tuya:light.entry.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A16",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:light.porch.status",
+          "endpoint_group_key": "storm_light_verify",
+          "host_group_key": "tuya"
+        },
+        "domain": "light",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:light.porch.status",
+        "id": "tuya:light.porch.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A17",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:switch.patio_heater.status",
+          "endpoint_group_key": "storm_switch_verify",
+          "host_group_key": "tuya"
+        },
+        "domain": "switch",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:switch.patio_heater.status",
+        "id": "tuya:switch.patio_heater.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A18",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:switch.fountain_pump.status",
+          "endpoint_group_key": "storm_switch_verify",
+          "host_group_key": "tuya"
+        },
+        "domain": "switch",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:switch.fountain_pump.status",
+        "id": "tuya:switch.fountain_pump.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A19",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "ecobee:thermostat.home_1",
+          "endpoint_group_key": "storm_runtime_verify",
+          "host_group_key": "ecobee"
+        },
+        "domain": "climate",
+        "kind": "ha_service_call",
+        "provider": "ecobee",
+        "service": "read_runtime"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "POLL_UPDATE",
+        "CLOUD_HTTP_CALL"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "ecobee",
+      "side_effects": [],
+      "target": {
+        "endpoint": "ecobee:thermostat.home_1",
+        "id": "ecobee:thermostat.home_1",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "read_runtime"
+    },
+    {
+      "action_id": "A20",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "hue:bridge_1:entry_group",
+          "endpoint_group_key": "bridge_1_entry",
+          "host_group_key": "hue_bridge_1"
+        },
+        "domain": "light",
+        "kind": "ha_service_call",
+        "provider": "hue_local",
+        "service": "get_state"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "protocol": "LOCAL",
+      "provider": "hue_local",
+      "side_effects": [],
+      "target": {
+        "endpoint": "hue:bridge_1:entry_group",
+        "id": "hue:bridge_1:entry_group",
+        "kind": "local_endpoint",
+        "provider": "hue_local"
+      },
+      "target_kind": "local_endpoint",
+      "type": "get_state"
+    },
+    {
+      "action_id": "A21",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tplink:plug.emergency_backup",
+          "endpoint_group_key": "storm_tplink",
+          "host_group_key": "tplink_local"
+        },
+        "domain": "switch",
+        "kind": "ha_service_call",
+        "provider": "tplink_local",
+        "service": "get_state"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "protocol": "LOCAL",
+      "provider": "tplink_local",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tplink:plug.emergency_backup",
+        "id": "tplink:plug.emergency_backup",
+        "kind": "local_endpoint",
+        "provider": "tplink_local"
+      },
+      "target_kind": "local_endpoint",
+      "type": "get_state"
+    },
+    {
+      "action_id": "A22",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "mqtt:weather_station_home"
+        },
+        "domain": "mqtt",
+        "kind": "ha_service_call",
+        "provider": "mqtt",
+        "service": "read_last_message"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "MQTT_SUBSCRIBE",
+        "SUBSCRIBE"
+      ],
+      "must_happen_before": [],
+      "protocol": "LOCAL",
+      "provider": "mqtt",
+      "side_effects": [],
+      "target": {
+        "endpoint": "mqtt:weather_station_home",
+        "id": "mqtt:weather_station_home",
+        "kind": "mqtt_topic",
+        "provider": "mqtt"
+      },
+      "target_kind": "mqtt_topic",
+      "type": "read_last_message"
+    },
+    {
+      "action_id": "A23",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "entity_id": "sensor.vdev_storm_lockdown_ble_lane"
+        },
+        "domain": "sensor",
+        "kind": "ha_service_call",
+        "service": "publish"
+      },
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "protocol": "HA",
+      "side_effects": [
+        "state_write"
+      ],
+      "target": {
+        "entity_id": "sensor.vdev_storm_lockdown_ble_lane",
+        "id": "sensor.vdev_storm_lockdown_ble_lane",
+        "kind": "ha_entity"
+      },
+      "target_kind": "ha_entity",
+      "type": "write"
+    },
+    {
+      "action_id": "A24",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "entity_id": "sensor.vdev_storm_lockdown_cloud_lane"
+        },
+        "domain": "sensor",
+        "kind": "ha_service_call",
+        "service": "publish"
+      },
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "protocol": "HA",
+      "side_effects": [
+        "state_write"
+      ],
+      "target": {
+        "entity_id": "sensor.vdev_storm_lockdown_cloud_lane",
+        "id": "sensor.vdev_storm_lockdown_cloud_lane",
+        "kind": "ha_entity"
+      },
+      "target_kind": "ha_entity",
+      "type": "write"
+    },
+    {
+      "action_id": "A25",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "entity_id": "sensor.vdev_storm_lockdown_local_lane"
+        },
+        "domain": "sensor",
+        "kind": "ha_service_call",
+        "service": "publish"
+      },
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "protocol": "HA",
+      "side_effects": [
+        "state_write"
+      ],
+      "target": {
+        "entity_id": "sensor.vdev_storm_lockdown_local_lane",
+        "id": "sensor.vdev_storm_lockdown_local_lane",
+        "kind": "ha_entity"
+      },
+      "target_kind": "ha_entity",
+      "type": "write"
+    },
+    {
+      "action_id": "A26",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "entity_id": "sensor.vdev_storm_lockdown_overall"
+        },
+        "domain": "sensor",
+        "kind": "ha_service_call",
+        "service": "publish"
+      },
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "protocol": "HA",
+      "side_effects": [
+        "state_write"
+      ],
+      "target": {
+        "entity_id": "sensor.vdev_storm_lockdown_overall",
+        "id": "sensor.vdev_storm_lockdown_overall",
+        "kind": "ha_entity"
+      },
+      "target_kind": "ha_entity",
+      "type": "write"
+    }
+  ]
+}

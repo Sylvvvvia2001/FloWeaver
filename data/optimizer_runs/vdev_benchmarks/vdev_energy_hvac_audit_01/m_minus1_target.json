@@ -1,0 +1,750 @@
+{
+  "constraints": {
+    "optimization_knobs": {
+      "allow_concurrency": true,
+      "max_concurrency": {
+        "ble": 1,
+        "cloud": 4,
+        "local": 6,
+        "total": 10
+      }
+    },
+    "source_protocols": [
+      "CLOUD",
+      "HA"
+    ]
+  },
+  "critical_action_ids": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "A8",
+    "A9",
+    "A10",
+    "A11",
+    "A12"
+  ],
+  "entrypoint": {
+    "kind": "ha_service",
+    "service": {
+      "domain": "vibeaura",
+      "name": "run_energy_hvac_audit_01"
+    }
+  },
+  "hard_dependencies": [
+    {
+      "after": "A11",
+      "before": "A1",
+      "reason": "cloud_write_depends_on_a1"
+    },
+    {
+      "after": "A11",
+      "before": "A2",
+      "reason": "cloud_write_depends_on_a2"
+    },
+    {
+      "after": "A11",
+      "before": "A3",
+      "reason": "cloud_write_depends_on_a3"
+    },
+    {
+      "after": "A11",
+      "before": "A4",
+      "reason": "cloud_write_depends_on_a4"
+    },
+    {
+      "after": "A11",
+      "before": "A5",
+      "reason": "cloud_write_depends_on_a5"
+    },
+    {
+      "after": "A11",
+      "before": "A6",
+      "reason": "cloud_write_depends_on_a6"
+    },
+    {
+      "after": "A11",
+      "before": "A7",
+      "reason": "cloud_write_depends_on_a7"
+    },
+    {
+      "after": "A11",
+      "before": "A8",
+      "reason": "cloud_write_depends_on_a8"
+    },
+    {
+      "after": "A11",
+      "before": "A9",
+      "reason": "cloud_write_depends_on_a9"
+    },
+    {
+      "after": "A11",
+      "before": "A10",
+      "reason": "cloud_write_depends_on_a10"
+    },
+    {
+      "after": "A12",
+      "before": "A11",
+      "reason": "overall_write_depends_on_cloud_lane"
+    }
+  ],
+  "meta": {
+    "benchmark": {
+      "focus_areas": [
+        "Tuya batching buckets",
+        "Cross-provider parallelism",
+        "Session reuse and host grouping",
+        "Backoff and shrink-before-disable behavior",
+        "Short overall writeback chain after a large cloud burst"
+      ],
+      "group": "Household Stress and Abnormality Routines",
+      "story": "At a fixed audit time, the routine gathers multiple Tuya lights, energy strips, climate states, and two Ecobee runtime reads to generate one energy and HVAC audit summary.",
+      "strengths": [
+        "Realistic cloud burst instead of a bare synthetic provider stress case.",
+        "Combines same-provider Tuya batching with cross-provider Ecobee reads.",
+        "Good benchmark for cloud session reuse, batching, and backoff policy."
+      ]
+    },
+    "name": "Cloud Burst Energy & HVAC Audit Routine",
+    "spec_version": "0.1",
+    "vdev_id": "vdev_energy_hvac_audit_01"
+  },
+  "objectives": {
+    "metrics": {
+      "e2e_latency_ms": {
+        "p95": 2100
+      },
+      "lane_completion_ms": {
+        "cloud_lane_p95": 1250
+      }
+    },
+    "primary": "stress_cloud_burst_audit_with_mixed_providers"
+  },
+  "soft_dependencies": [],
+  "source_scope": {
+    "commit": "HEAD",
+    "domains": [
+      "ecobee",
+      "esphome",
+      "tuya"
+    ],
+    "entrypoints": [
+      {
+        "kind": "ha_service",
+        "service": {
+          "domain": "vibeaura",
+          "name": "run_energy_hvac_audit_01"
+        }
+      }
+    ],
+    "file_bindings": [
+      {
+        "device_id": "tuya:light.living_room_1.status",
+        "file_path": "data/repo_snapshot/tuya/light.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.living_room_2.status",
+        "file_path": "data/repo_snapshot/tuya/light.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.bedroom_1.status",
+        "file_path": "data/repo_snapshot/tuya/light.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.energy_strip_1.status",
+        "file_path": "data/repo_snapshot/tuya/switch.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.energy_strip_2.status",
+        "file_path": "data/repo_snapshot/tuya/switch.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.energy_strip_3.status",
+        "file_path": "data/repo_snapshot/tuya/switch.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:climate.master_bedroom.status",
+        "file_path": "data/repo_snapshot/tuya/climate.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:climate.guest_room.status",
+        "file_path": "data/repo_snapshot/tuya/climate.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ecobee:thermostat.home_1",
+        "file_path": "data/repo_snapshot/ecobee/climate.py",
+        "integration": "ecobee",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ecobee:thermostat.home_2",
+        "file_path": "data/repo_snapshot/ecobee/sensor.py",
+        "integration": "ecobee",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_energy_hvac_cloud_lane",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_energy_hvac_overall",
+        "file_path": "data/repo_snapshot/esphome/update.py",
+        "integration": "esphome",
+        "protocols": [
+          "HA"
+        ]
+      }
+    ],
+    "files": [
+      "data/repo_snapshot/ecobee/climate.py",
+      "data/repo_snapshot/ecobee/sensor.py",
+      "data/repo_snapshot/esphome/update.py",
+      "data/repo_snapshot/tuya/climate.py",
+      "data/repo_snapshot/tuya/entity.py",
+      "data/repo_snapshot/tuya/light.py",
+      "data/repo_snapshot/tuya/switch.py"
+    ],
+    "platforms": [
+      "climate",
+      "light",
+      "sensor",
+      "switch"
+    ],
+    "protocols": [
+      "CLOUD",
+      "HA"
+    ],
+    "repo_path": "data/repo_snapshot"
+  },
+  "target_anchors": {
+    "anchor_ops": [
+      "CLOUD_HTTP_CALL",
+      "CLOUD_OP",
+      "CLOUD_STATUS_CALL",
+      "POLL_UPDATE",
+      "STATE_WRITE"
+    ],
+    "characteristics": [],
+    "device_ids": [],
+    "endpoints": [
+      "tuya:light.living_room_1.status",
+      "tuya:light.living_room_2.status",
+      "tuya:light.bedroom_1.status",
+      "tuya:switch.energy_strip_1.status",
+      "tuya:switch.energy_strip_2.status",
+      "tuya:switch.energy_strip_3.status",
+      "tuya:climate.master_bedroom.status",
+      "tuya:climate.guest_room.status",
+      "ecobee:thermostat.home_1",
+      "ecobee:thermostat.home_2"
+    ],
+    "entities": [
+      "sensor.vdev_energy_hvac_cloud_lane",
+      "sensor.vdev_energy_hvac_overall"
+    ],
+    "required_state_writes": [
+      "sensor.vdev_energy_hvac_cloud_lane",
+      "sensor.vdev_energy_hvac_overall"
+    ],
+    "service_entrypoints": [
+      "vibeaura.run_energy_hvac_audit_01"
+    ]
+  },
+  "validation": {
+    "differential_tests": {
+      "enabled": true,
+      "runs_per_scenario": 2,
+      "scenarios": [
+        "baseline_happy_path",
+        "fault_cloud_429",
+        "fault_ble_disconnect"
+      ]
+    },
+    "fault_model": {
+      "ble_disconnect": true,
+      "cloud_429": true,
+      "network_jitter": true
+    },
+    "llm_detector": {
+      "enabled": true,
+      "max_attempts": 0,
+      "retry_backoff_s": 0.5,
+      "timeout_s": 45
+    },
+    "observation": {
+      "canonicalization_version": "v1",
+      "equivalence_whitelist": [
+        "COALESCE_STATE_WRITE"
+      ],
+      "semantic_ops": [
+        "ENTRY_SETUP",
+        "COORD_REFRESH",
+        "STATE_WRITE",
+        "SUBSCRIBE",
+        "UNSUBSCRIBE",
+        "MQTT_SUBSCRIBE",
+        "BLE_CONNECT",
+        "BLE_DISCONNECT",
+        "BLE_NOTIFY_SUBSCRIBE",
+        "BLE_OP",
+        "BLE_GATT_OP",
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_429_CHECK",
+        "CLOUD_BACKOFF_SLEEP",
+        "CLOUD_BATCH_CALL",
+        "CLOUD_SESSION_REUSE",
+        "LOCAL_API_READ",
+        "POLL_UPDATE"
+      ]
+    },
+    "profile_version": "ha_profile_default",
+    "sampling": {},
+    "source_protocols": [
+      "CLOUD",
+      "HA"
+    ]
+  },
+  "vdev_actions": [
+    {
+      "action_id": "A1",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:light.living_room_1.status",
+          "endpoint_group_key": "energy_hvac_lights",
+          "host_group_key": "tuya"
+        },
+        "domain": "light",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:light.living_room_1.status",
+        "id": "tuya:light.living_room_1.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A2",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:light.living_room_2.status",
+          "endpoint_group_key": "energy_hvac_lights",
+          "host_group_key": "tuya"
+        },
+        "domain": "light",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:light.living_room_2.status",
+        "id": "tuya:light.living_room_2.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A3",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:light.bedroom_1.status",
+          "endpoint_group_key": "energy_hvac_lights",
+          "host_group_key": "tuya"
+        },
+        "domain": "light",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:light.bedroom_1.status",
+        "id": "tuya:light.bedroom_1.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A4",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:switch.energy_strip_1.status",
+          "endpoint_group_key": "energy_hvac_energy",
+          "host_group_key": "tuya"
+        },
+        "domain": "switch",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:switch.energy_strip_1.status",
+        "id": "tuya:switch.energy_strip_1.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A5",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:switch.energy_strip_2.status",
+          "endpoint_group_key": "energy_hvac_energy",
+          "host_group_key": "tuya"
+        },
+        "domain": "switch",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:switch.energy_strip_2.status",
+        "id": "tuya:switch.energy_strip_2.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A6",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:switch.energy_strip_3.status",
+          "endpoint_group_key": "energy_hvac_energy",
+          "host_group_key": "tuya"
+        },
+        "domain": "switch",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:switch.energy_strip_3.status",
+        "id": "tuya:switch.energy_strip_3.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A7",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:climate.master_bedroom.status",
+          "endpoint_group_key": "energy_hvac_climate",
+          "host_group_key": "tuya"
+        },
+        "domain": "climate",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:climate.master_bedroom.status",
+        "id": "tuya:climate.master_bedroom.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A8",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "tuya:climate.guest_room.status",
+          "endpoint_group_key": "energy_hvac_climate",
+          "host_group_key": "tuya"
+        },
+        "domain": "climate",
+        "kind": "ha_service_call",
+        "provider": "tuya",
+        "service": "status"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "tuya",
+      "side_effects": [],
+      "target": {
+        "endpoint": "tuya:climate.guest_room.status",
+        "id": "tuya:climate.guest_room.status",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "status"
+    },
+    {
+      "action_id": "A9",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "ecobee:thermostat.home_1",
+          "endpoint_group_key": "energy_hvac_ecobee",
+          "host_group_key": "ecobee"
+        },
+        "domain": "climate",
+        "kind": "ha_service_call",
+        "provider": "ecobee",
+        "service": "read_runtime"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "POLL_UPDATE",
+        "CLOUD_HTTP_CALL"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "ecobee",
+      "side_effects": [],
+      "target": {
+        "endpoint": "ecobee:thermostat.home_1",
+        "id": "ecobee:thermostat.home_1",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "read_runtime"
+    },
+    {
+      "action_id": "A10",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "endpoint": "ecobee:thermostat.home_2",
+          "endpoint_group_key": "energy_hvac_ecobee",
+          "host_group_key": "ecobee"
+        },
+        "domain": "sensor",
+        "kind": "ha_service_call",
+        "provider": "ecobee",
+        "service": "read_runtime"
+      },
+      "idempotent": true,
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "POLL_UPDATE",
+        "CLOUD_HTTP_CALL"
+      ],
+      "must_happen_before": [],
+      "protocol": "CLOUD",
+      "provider": "ecobee",
+      "side_effects": [],
+      "target": {
+        "endpoint": "ecobee:thermostat.home_2",
+        "id": "ecobee:thermostat.home_2",
+        "kind": "cloud_endpoint"
+      },
+      "target_kind": "cloud_endpoint",
+      "type": "read_runtime"
+    },
+    {
+      "action_id": "A11",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "entity_id": "sensor.vdev_energy_hvac_cloud_lane"
+        },
+        "domain": "sensor",
+        "kind": "ha_service_call",
+        "service": "publish"
+      },
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "protocol": "HA",
+      "side_effects": [
+        "state_write"
+      ],
+      "target": {
+        "entity_id": "sensor.vdev_energy_hvac_cloud_lane",
+        "id": "sensor.vdev_energy_hvac_cloud_lane",
+        "kind": "ha_entity"
+      },
+      "target_kind": "ha_entity",
+      "type": "write"
+    },
+    {
+      "action_id": "A12",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "entity_id": "sensor.vdev_energy_hvac_overall"
+        },
+        "domain": "sensor",
+        "kind": "ha_service_call",
+        "service": "publish"
+      },
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "protocol": "HA",
+      "side_effects": [
+        "state_write"
+      ],
+      "target": {
+        "entity_id": "sensor.vdev_energy_hvac_overall",
+        "id": "sensor.vdev_energy_hvac_overall",
+        "kind": "ha_entity"
+      },
+      "target_kind": "ha_entity",
+      "type": "write"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+dataset,sample_id,routine_name,group,ble_count,local_count,cloud_count,total_device_count,ground_truth_latency_s,complexity_score,validation_pass,naive_topo_latency_s,naive_topo_latency_gain_s,naive_topo_latency_gain_pct,diagnostic_rollback_depth,actual_rollback_invoked
+smart-home,2,Arm Blink cameras when Abode is set to Home mode,Group1,0,0,1,1,1.2,1.4,1,0.868,0.332,27.67,1,0
+smart-home,13,Turn on Home Connect Hood ambient light daily,Group1,0,0,1,1,1.25,1.45,1,1.026,0.224,17.92,1,0
+smart-home,14,Automatically turn your Hue lights blue whenever it starts to rain,Group1,0,1,0,1,0.47,0.59,1,0.35,0.12,25.53,1,0
+smart-home,16,Turn on Home Connect Hood light on a special day,Group1,0,0,2,2,2.39,2.79,1,1.729,0.661,27.66,2,0
+smart-home,17,Turn on Home Connect Hood ambient light daily,Group1,0,0,2,2,2.04,2.44,1,1.476,0.564,27.65,2,0
+smart-home,45,Get an Email from Home Connect Hood When Carbon Filter Is Nearly Full,Group1,0,0,2,2,1.9,2.3,1,1.457,0.443,23.32,2,0
+smart-home,48,Set Philips Hue lights to blue when it starts raining,Group1,0,1,0,1,0.45,0.57,1,0.35,0.1,22.22,1,0
+smart-home,53,Turn off Home Connect Oven with a Button press,Group1,0,0,2,2,1.96,2.36,1,1.545,0.415,21.17,2,0
+smart-home,58,Blink Philips Hue lights and notify if fridge door left open,Group1,0,4,1,5,2.17,2.85,1,1.593,0.577,26.59,2,0
+smart-home,72,Arm Blink system and run SwitchBot scene when you leave home,Group3,3,0,1,4,6.43,7.53,1,3.865,2.565,39.89,3,0
+smart-home,86,Turn on Philips Hue lights when you arrive home,Group1,0,9,0,9,2.88,3.96,0,1.21,1.67,57.99,0,0
+smart-home,103,Turn on Hue lights when it starts raining,Group2,0,3,3,6,3.75,4.71,1,2.266,1.484,39.57,3,0
+smart-home,113,Turn off SmartThings lights with Button widget,Group1,0,0,2,2,2.39,2.79,1,1.884,0.506,21.17,2,0
+smart-home,114,Enable Home Connect Super Cooling before grocery trip,Group1,0,0,2,2,1.99,2.39,1,1.59,0.4,20.1,2,0
+smart-home,116,Turn on Hue lights when Netatmo temperature rises above threshold,Group2,0,4,4,8,5.69,6.97,0,2.39,3.3,58.0,0,0
+smart-home,121,Notify when ecobee outdoor temperature exceeds threshold,Group1,0,0,2,2,1.85,2.25,1,1.558,0.292,15.78,2,0
+smart-home,122,Turn on Hue and Kasa lights when you arrive home,Group1,0,6,0,6,2.1,2.82,1,1.701,0.399,19.0,2,0
+smart-home,128,Arm Blink with a Flic button press,Group1,0,0,1,1,1.33,1.53,1,0.991,0.339,25.49,1,0
+smart-home,143,Disarm Blink when the first person arrives home,Group1,0,0,2,2,2.34,2.74,1,1.945,0.395,16.88,2,0
+smart-home,153,Notify when Netatmo temperature rises above threshold,Group1,0,0,1,1,1.26,1.46,1,0.952,0.308,24.44,1,0
+smart-home,154,Turn off Hue and Kasa lights when you leave home,Group1,0,6,0,6,2.07,2.79,1,1.699,0.371,17.92,2,0
+smart-home,189,Turn on Hue and Nanoleaf lights at sunset,Group1,0,6,0,6,1.81,2.53,1,1.407,0.403,22.27,2,0
+smart-home,201,Turn off SmartThings lights and Kasa outlets at bedtime,Group4,0,9,7,16,9.1,11.58,1,6.126,2.974,32.68,3,0
+smart-home,202,Color-loop Hue lights when Netatmo CO2 gets high,Group4,0,7,8,15,12.05,14.49,0,5.061,6.989,58.0,1,0
+smart-home,203,Turn on SmartThings scene and Hue lights when arriving home,Group4,0,9,6,15,9.4,11.68,1,5.564,3.836,40.81,3,0
+smart-home,204,Color-loop Hue lights when Netatmo CO2 gets high,Group3,0,7,8,15,8.79,11.23,0,3.692,5.098,58.0,1,0
+smart-home,205,Send Roborock home and disarm Blink when a Webhook event fires,Group4,0,0,14,14,15.61,18.41,0,6.556,9.054,58.0,1,0
+smart-home,206,Change Philips Hue light color when Netatmo detects rain,Group4,0,8,6,14,9.25,11.41,1,5.582,3.668,39.65,3,0
+smart-home,207,Turn off SmartThings lights and Kasa outlets at bedtime,Group4,0,6,7,13,9.98,12.1,1,5.907,4.073,40.81,3,0
+smart-home,208,Color-loop Hue lights when Netatmo noise gets loud,Group4,0,6,7,13,9.87,11.99,1,6.071,3.799,38.49,3,0
+smart-home,209,Turn off SmartThings lights and Kasa outlets at bedtime,Group3,0,7,6,13,8.61,10.65,0,3.616,4.994,58.0,1,0
+smart-home,210,Turn off Hue and Nanoleaf lights at bedtime,Group3,0,13,0,13,6.52,8.08,1,4.318,2.202,33.77,3,0
+smart-home,211,Turn on Hue and Nanoleaf lights at sunset,Group2,0,13,0,13,4.97,6.53,1,3.23,1.74,35.01,3,0
+smart-home,212,Blink Philips Hue lights and notify if fridge door left open,Group3,0,7,5,12,8.64,10.48,0,3.629,5.011,58.0,1,0
+smart-home,213,Turn off SmartThings scene and Hue lights when leaving home,Group2,0,8,4,12,5.87,7.63,0,2.465,3.405,58.01,0,0
+smart-home,214,Turn on Hue and Nanoleaf lights at sunset,Group2,0,12,0,12,3.13,4.57,1,2.141,0.989,31.6,3,0
+smart-home,215,Arm Blink and start Roborock when a Webhook event arrives,Group4,0,0,11,11,12.11,14.31,0,5.086,7.024,58.0,1,0
+smart-home,218,Turn off lights and Kasa plugs with one tap,Group2,0,11,0,11,3.64,4.96,1,2.366,1.274,35.0,3,0
+smart-home,228,Activate Home Connect fridge sabbath mode every Friday,Group3,0,0,8,8,7.77,9.37,1,5.146,2.624,33.77,3,0
+smart-home,232,Turn off my TP-Link Kasa plug when there's an electricity price spike,Group2,0,8,0,8,5.15,6.11,1,3.288,1.862,36.16,3,0
+smart-home,233,Automatically turn your lights on at sunset,Group2,0,8,0,8,4.62,5.58,1,3.319,1.301,28.16,3,0
+smart-home,234,Toggle Kasa lights with Button widget,Group2,0,8,0,8,3.8,4.76,1,2.383,1.417,37.29,3,0
+smart-home,235,Turn off TP-Link Kasa light at sunrise,Group1,0,8,0,8,2.86,3.82,0,1.201,1.659,58.01,0,0
+smart-home,236,Toggle Kasa lights with Button widget,Group1,0,8,0,8,2.67,3.63,0,1.121,1.549,58.01,0,0
+smart-home,240,Open SwitchBot curtains when your Smart Bed alarm rings,Group4,7,0,0,7,12.02,14.12,0,5.048,6.972,58.0,1,0
+smart-home,242,Turn on Home Connect Hood light on a special day,Group3,0,0,7,7,8.59,9.99,1,5.689,2.901,33.77,3,0
+smart-home,248,Switch your ecobee to your chosen comfort profile as you arrive home,Group3,0,0,7,7,7.49,8.89,1,4.732,2.758,36.82,3,0
+smart-home,255,Turn on Kasa plug on at sunset,Group2,0,7,0,7,3.08,3.92,1,1.861,1.219,39.58,3,0
+smart-home,284,Get IFTTT notification when freezer temperature is high,Group2,0,0,5,5,5.81,6.81,0,2.44,3.37,58.0,0,0
+smart-home,295,Press Button widget to activate Home Connect Super Cooling,Group2,0,0,5,5,4.69,5.69,1,2.995,1.695,36.14,3,0
+long-chain,210,Turn off Hue and Nanoleaf lights at bedtime [3x long-chain],Group3,0,39,0,39,19.56,24.24,1,11.724,7.836,40.06,3,0
+long-chain,211,Turn on Hue and Nanoleaf lights at sunset [3x long-chain],Group2,0,39,0,39,14.91,19.59,0,6.262,8.648,58.0,1,0
+long-chain,214,Turn on Hue and Nanoleaf lights at sunset [3x long-chain],Group2,0,36,0,36,9.39,13.71,1,7.16,2.23,23.75,3,0
+long-chain,218,Turn off lights and Kasa plugs with one tap [3x long-chain],Group2,0,33,0,33,10.92,14.88,1,9.484,1.436,13.15,3,0
+long-chain,201,Turn off SmartThings lights and Kasa outlets at bedtime [3x long-chain],Group4,0,27,21,48,27.3,34.74,1,17.226,10.074,36.9,3,0
+long-chain,203,Turn on SmartThings scene and Hue lights when arriving home [3x long-chain],Group4,0,27,18,45,28.2,35.04,1,19.735,8.465,30.02,3,0
+long-chain,202,Color-loop Hue lights when Netatmo CO2 gets high [3x long-chain],Group4,0,21,24,45,36.15,43.47,0,15.183,20.967,58.0,2,0
+long-chain,204,Color-loop Hue lights when Netatmo CO2 gets high [3x long-chain],Group3,0,21,24,45,26.37,33.69,0,11.075,15.295,58.0,2,0
+long-chain,232,Turn off my TP-Link Kasa plug when there's an electricity price spike [3x long-chain],Group2,0,24,0,24,15.45,18.33,1,13.254,2.196,14.21,3,0
+long-chain,233,Automatically turn your lights on at sunset [3x long-chain],Group2,0,24,0,24,13.86,16.74,1,11.009,2.851,20.57,3,0
+long-chain,234,Toggle Kasa lights with Button widget [3x long-chain],Group2,0,24,0,24,11.4,14.28,1,9.659,1.741,15.27,3,0
+long-chain,86,Turn on Philips Hue lights when you arrive home [3x long-chain],Group1,0,27,0,27,8.64,11.88,0,3.629,5.011,58.0,1,0
+long-chain,235,Turn off TP-Link Kasa light at sunrise [3x long-chain],Group1,0,24,0,24,8.58,11.46,1,6.764,1.816,21.17,3,0
+long-chain,236,Toggle Kasa lights with Button widget [3x long-chain],Group1,0,24,0,24,8.01,10.89,1,6.564,1.446,18.05,3,0
+long-chain,205,Send Roborock home and disarm Blink when a Webhook event fires [3x long-chain],Group4,0,0,42,42,46.83,55.23,0,19.669,27.161,58.0,2,0
+long-chain,215,Arm Blink and start Roborock when a Webhook event arrives [3x long-chain],Group4,0,0,33,33,36.33,42.93,0,15.259,21.071,58.0,2,0
+long-chain,206,Change Philips Hue light color when Netatmo detects rain [3x long-chain],Group4,0,24,18,42,27.75,34.23,1,19.739,8.011,28.87,3,0
+long-chain,122,Turn on Hue and Kasa lights when you arrive home [3x long-chain],Group1,0,18,0,18,6.3,8.46,1,4.575,1.725,27.38,3,0
+long-chain,154,Turn off Hue and Kasa lights when you leave home [3x long-chain],Group1,0,18,0,18,6.21,8.37,1,4.574,1.636,26.34,3,0
+long-chain,189,Turn on Hue and Nanoleaf lights at sunset [3x long-chain],Group1,0,18,0,18,5.43,7.59,1,3.774,1.656,30.5,3,0
+long-chain,209,Turn off SmartThings lights and Kasa outlets at bedtime [3x long-chain],Group3,0,21,18,39,25.83,31.95,0,10.849,14.981,58.0,2,0
+long-chain,207,Turn off SmartThings lights and Kasa outlets at bedtime [3x long-chain],Group4,0,18,21,39,29.94,36.3,0,12.575,17.365,58.0,2,0
+long-chain,208,Color-loop Hue lights when Netatmo noise gets loud [3x long-chain],Group4,0,18,21,39,29.61,35.97,0,12.436,17.174,58.0,2,0
+long-chain,212,Blink Philips Hue lights and notify if fridge door left open [3x long-chain],Group3,0,21,15,36,25.92,31.44,1,16.876,9.044,34.89,3,0
+long-chain,213,Turn off SmartThings scene and Hue lights when leaving home [3x long-chain],Group2,0,24,12,36,17.61,22.89,0,7.396,10.214,58.0,1,0
+long-chain,255,Turn on Kasa plug on at sunset [3x long-chain],Group2,0,21,0,21,9.24,11.76,1,7.633,1.607,17.39,3,0

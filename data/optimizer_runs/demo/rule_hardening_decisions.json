@@ -1,0 +1,10 @@
+{
+  "rule_coord_refresh_9c4aca1990": "disabled_due_to_failures",
+  "rule_entry_setup_91e19cefcb": "disabled_due_to_failures",
+  "rule_entry_unload_da7471ab82": "disabled_due_to_failures",
+  "rule_general_fa9e50150b": "disabled_due_to_failures",
+  "rule_lifecycle_79ea0726ef": "disabled_due_to_failures",
+  "rule_state_write_b839bfafd0": "disabled_due_to_failures",
+  "rule_subscribe_a84e504152": "disabled_due_to_failures",
+  "rule_unsubscribe_2897b3e3e9": "disabled_due_to_failures"
+}

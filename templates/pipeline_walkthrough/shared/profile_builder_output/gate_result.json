@@ -1,0 +1,273 @@
+{
+  "disabled": [],
+  "enabled": [
+    {
+      "category": "lifecycle",
+      "effect": {
+        "kind": "ordering_or_constraint",
+        "scope": "lifecycle"
+      },
+      "evidence_ids": [
+        "DOC_68178e6053",
+        "DOC_e94ba945cc",
+        "DOC_600f42b51d"
+      ],
+      "fallback": "disable_optimization_for_scope",
+      "guard": "runtime_metrics_available",
+      "hard_edge_templates": [
+        {
+          "dst": "COORD_REFRESH",
+          "kind": "HARD_LIFECYCLE",
+          "src": "ENTRY_SETUP"
+        }
+      ],
+      "marker_hints": [
+        "ENTRY_SETUP",
+        "COORD_REFRESH"
+      ],
+      "match_pattern": {
+        "dominant_pattern": "ENTRY_SETUP",
+        "topic": "lifecycle"
+      },
+      "rule_id": "rule_lifecycle_79ea0726ef",
+      "soft_constraint_templates": [],
+      "status": "SOFT",
+      "title": "Config entry setup lifecycle"
+    },
+    {
+      "category": "lifecycle",
+      "effect": {
+        "kind": "ordering_or_constraint",
+        "scope": "general"
+      },
+      "evidence_ids": [
+        "DOC_0fd540d423",
+        "DOC_6a90874d6f"
+      ],
+      "fallback": "disable_optimization_for_scope",
+      "guard": "runtime_metrics_available",
+      "hard_edge_templates": [
+        {
+          "dst": "COORD_REFRESH",
+          "kind": "HARD_LIFECYCLE",
+          "src": "ENTRY_SETUP"
+        }
+      ],
+      "marker_hints": [
+        "ENTRY_SETUP",
+        "COORD_REFRESH"
+      ],
+      "match_pattern": {
+        "dominant_pattern": "ENTRY_SETUP",
+        "topic": "general"
+      },
+      "rule_id": "rule_general_fa9e50150b",
+      "soft_constraint_templates": [],
+      "status": "SOFT",
+      "title": "Config entry setup lifecycle"
+    },
+    {
+      "category": "lifecycle",
+      "effect": {
+        "kind": "ordering_or_constraint",
+        "scope": "entry_setup"
+      },
+      "evidence_ids": [
+        "CODE_7899491254",
+        "CODE_e22a149725"
+      ],
+      "fallback": "disable_optimization_for_scope",
+      "guard": "runtime_metrics_available",
+      "hard_edge_templates": [
+        {
+          "dst": "COORD_REFRESH",
+          "kind": "HARD_LIFECYCLE",
+          "src": "ENTRY_SETUP"
+        }
+      ],
+      "marker_hints": [
+        "ENTRY_SETUP",
+        "COORD_REFRESH"
+      ],
+      "match_pattern": {
+        "dominant_pattern": "ENTRY_SETUP",
+        "topic": "entry_setup"
+      },
+      "rule_id": "rule_entry_setup_91e19cefcb",
+      "soft_constraint_templates": [],
+      "status": "SOFT",
+      "title": "Config entry setup lifecycle"
+    },
+    {
+      "category": "lifecycle",
+      "effect": {
+        "kind": "ordering_or_constraint",
+        "scope": "entry_unload"
+      },
+      "evidence_ids": [
+        "CODE_a9d1872300",
+        "CODE_8ea52b18bc"
+      ],
+      "fallback": "disable_optimization_for_scope",
+      "guard": "runtime_metrics_available",
+      "hard_edge_templates": [
+        {
+          "dst": "ENTRY_UNLOAD",
+          "kind": "HARD_LIFECYCLE",
+          "src": "UNSUBSCRIBE"
+        }
+      ],
+      "marker_hints": [
+        "ENTRY_UNLOAD",
+        "UNSUBSCRIBE"
+      ],
+      "match_pattern": {
+        "dominant_pattern": "ENTRY_UNLOAD",
+        "topic": "entry_unload"
+      },
+      "rule_id": "rule_entry_unload_da7471ab82",
+      "soft_constraint_templates": [],
+      "status": "SOFT",
+      "title": "Config entry teardown lifecycle"
+    },
+    {
+      "category": "observable",
+      "effect": {
+        "kind": "ordering_or_constraint",
+        "scope": "state_write"
+      },
+      "evidence_ids": [
+        "CODE_ed8745f98b",
+        "CODE_ad7d5a8f8c",
+        "CODE_803d33b93a",
+        "CODE_61eddc9da0"
+      ],
+      "fallback": "disable_optimization_for_scope",
+      "guard": "runtime_metrics_available",
+      "hard_edge_templates": [],
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "match_pattern": {
+        "dominant_pattern": "STATE_WRITE",
+        "topic": "state_write"
+      },
+      "rule_id": "rule_state_write_b839bfafd0",
+      "soft_constraint_templates": [
+        {
+          "kind": "COALESCE_STATE_WRITE",
+          "params": {
+            "window_ms": 120
+          },
+          "scope": [
+            "STATE_WRITE"
+          ]
+        }
+      ],
+      "status": "SOFT",
+      "title": "State write ordering"
+    },
+    {
+      "category": "observable",
+      "effect": {
+        "kind": "ordering_or_constraint",
+        "scope": "unsubscribe"
+      },
+      "evidence_ids": [
+        "CODE_087f438b92",
+        "CODE_25727f507f"
+      ],
+      "fallback": "disable_optimization_for_scope",
+      "guard": "runtime_metrics_available",
+      "hard_edge_templates": [],
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "match_pattern": {
+        "dominant_pattern": "UNSUBSCRIBE",
+        "topic": "unsubscribe"
+      },
+      "rule_id": "rule_unsubscribe_2897b3e3e9",
+      "soft_constraint_templates": [
+        {
+          "kind": "COALESCE_STATE_WRITE",
+          "params": {
+            "window_ms": 120
+          },
+          "scope": [
+            "STATE_WRITE"
+          ]
+        }
+      ],
+      "status": "SOFT",
+      "title": "State write ordering"
+    },
+    {
+      "category": "lifecycle",
+      "effect": {
+        "kind": "ordering_or_constraint",
+        "scope": "coord_refresh"
+      },
+      "evidence_ids": [
+        "CODE_0d47655fa1",
+        "CODE_5139e016cb",
+        "CODE_05dedfffe6",
+        "CODE_a01589b9ec"
+      ],
+      "fallback": "disable_optimization_for_scope",
+      "guard": "runtime_metrics_available",
+      "hard_edge_templates": [
+        {
+          "dst": "STATE_WRITE",
+          "kind": "HARD_LIFECYCLE",
+          "src": "COORD_REFRESH"
+        }
+      ],
+      "marker_hints": [
+        "COORD_REFRESH",
+        "STATE_WRITE"
+      ],
+      "match_pattern": {
+        "dominant_pattern": "COORD_REFRESH",
+        "topic": "coord_refresh"
+      },
+      "rule_id": "rule_coord_refresh_9c4aca1990",
+      "soft_constraint_templates": [],
+      "status": "SOFT",
+      "title": "Coordinator refresh precedes updates"
+    },
+    {
+      "category": "cleanup",
+      "effect": {
+        "kind": "ordering_or_constraint",
+        "scope": "subscribe"
+      },
+      "evidence_ids": [
+        "CODE_2fe0d2a533",
+        "CODE_c3fcc558a4"
+      ],
+      "fallback": "disable_optimization_for_scope",
+      "guard": "runtime_metrics_available",
+      "hard_edge_templates": [
+        {
+          "dst": "UNSUBSCRIBE",
+          "kind": "HARD_LIFECYCLE",
+          "src": "SUBSCRIBE"
+        }
+      ],
+      "marker_hints": [
+        "SUBSCRIBE",
+        "UNSUBSCRIBE"
+      ],
+      "match_pattern": {
+        "dominant_pattern": "SUBSCRIBE",
+        "topic": "subscribe"
+      },
+      "rule_id": "rule_subscribe_a84e504152",
+      "soft_constraint_templates": [],
+      "status": "SOFT",
+      "title": "Subscription cleanup pairing"
+    }
+  ],
+  "reasons": {}
+}

@@ -1,0 +1,305 @@
+{
+  "integration": "tuya",
+  "runtime_families": [
+    {
+      "action_kind": "status",
+      "allow_accessor_fallback": true,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "tuya:light.hallway.status",
+          "hallway",
+          "living_room",
+          "tuya:light.living_room.status"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "status",
+          "poll_update"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "const",
+          "dataclasses",
+          "entity",
+          "enum",
+          "homeassistant"
+        ],
+        "boost_if_names": [
+          "status",
+          "is_on"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "CLOUD_STATUS_CALL",
+      "file_globs": [
+        "tuya/light.py"
+      ],
+      "forbidden_context": [
+        "setup_function",
+        "dunder_init"
+      ],
+      "forbidden_path_signals": [
+        "setup_function:async_setup_entry",
+        "setup_call:async_add_entities",
+        "setup_call:async_dispatcher_connect",
+        "control_function:async_turn_off",
+        "control_call:self._async_send_wrapper_updates",
+        "awaited_control_call:self._async_send_wrapper_updates",
+        "control_function:async_turn_on",
+        "control_call:self._async_send_commands"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "is_on"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A7",
+        "A8"
+      ],
+      "integration": "tuya",
+      "negative_call_patterns": [
+        "async_discover_device",
+        "async_on_unload",
+        "async_add_entities",
+        "async_dispatcher_connect",
+        "extend",
+        "tuyalightentity"
+      ],
+      "negative_evidence": [
+        "negative_function:async_setup_entry",
+        "negative_function:async_turn_off",
+        "negative_function:async_turn_on",
+        "negative_function:is_on",
+        "negative_function:hs_color",
+        "negative_call:async_discover_device",
+        "negative_call:async_on_unload",
+        "negative_call:async_add_entities",
+        "negative_call:async_dispatcher_connect",
+        "negative_call:get"
+      ],
+      "negative_function_patterns": [
+        "async_setup_entry",
+        "async_turn_off",
+        "async_turn_on",
+        "hs_color",
+        "async_set_*",
+        "async_open_*"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [
+            "async_discover_device",
+            "entry.async_on_unload",
+            "async_add_entities",
+            "async_dispatcher_connect",
+            "lights.get",
+            "entities.extend",
+            "tuyalightentity",
+            "_get_color_data_wrapper"
+          ],
+          "call_patterns": [
+            "async_discover_device",
+            "async_on_unload",
+            "async_add_entities",
+            "async_dispatcher_connect",
+            "get",
+            "extend",
+            "tuyalightentity",
+            "_get_color_data_wrapper"
+          ],
+          "file_path": "data/repo_snapshot/tuya/light.py",
+          "function_name": "async_setup_entry",
+          "path_kind": "setup_path",
+          "path_signals": [
+            "setup_function:async_setup_entry",
+            "setup_call:async_add_entities",
+            "setup_call:async_dispatcher_connect",
+            "connect_call:async_dispatcher_connect"
+          ],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -8,
+          "snippet": "455: \n456: async def async_setup_entry(\n457:     hass: HomeAssistant,\n458:     entry: TuyaConfigEntry,\n459:     async_add_entities: AddConfigEntryEntitiesCallback,\n460: ) -> None:\n461:     \"\"\"Set up tuya light dynamically through tuya discovery.\"\"\"\n462:     manager = entry.runtime_data.manager\n463: \n464:     @callback\n465:     def async_discover_device(device_ids: list[str]):\n466:         \"\"\"Discover and add a discovered tuya light.\"\"\"\n467:         entities: list[TuyaLightEntity] = []\n468:         for device_id in device_ids:"
+        },
+        {
+          "call_chains": [
+            "self._async_send_wrapper_updates"
+          ],
+          "call_patterns": [
+            "_async_send_wrapper_updates"
+          ],
+          "file_path": "data/repo_snapshot/tuya/light.py",
+          "function_name": "async_turn_off",
+          "path_kind": "control_path",
+          "path_signals": [
+            "control_function:async_turn_off",
+            "control_call:self._async_send_wrapper_updates",
+            "awaited_control_call:self._async_send_wrapper_updates"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -12,
+          "snippet": "633: \n634:     async def async_turn_off(self, **kwargs: Any) -> None:\n635:         \"\"\"Instruct the light to turn off.\"\"\"\n636:         await self._async_send_wrapper_updates(self._switch_wrapper, False)\n637: \n638:     @property"
+        },
+        {
+          "call_chains": [
+            "self._switch_wrapper.get_update_commands",
+            "commands.extend",
+            "self._async_send_commands",
+            "self._color_mode_wrapper.get_update_commands",
+            "self._color_temp_wrapper.get_update_commands",
+            "self._color_data_wrapper.get_update_commands",
+            "kwargs.get",
+            "self._brightness_wrapper.get_update_commands"
+          ],
+          "call_patterns": [
+            "get_update_commands",
+            "extend",
+            "_async_send_commands",
+            "get"
+          ],
+          "file_path": "data/repo_snapshot/tuya/light.py",
+          "function_name": "async_turn_on",
+          "path_kind": "control_path",
+          "path_signals": [
+            "control_function:async_turn_on",
+            "read_function:async_turn_on",
+            "read_call:self._switch_wrapper.get_update_commands",
+            "control_call:self._async_send_commands",
+            "read_call:self._color_mode_wrapper.get_update_commands",
+            "read_call:self._color_temp_wrapper.get_update_commands",
+            "read_call:self._color_data_wrapper.get_update_commands",
+            "read_call:self._brightness_wrapper.get_update_commands",
+            "awaited_control_call:self._async_send_commands"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -10,
+          "snippet": "571: \n572:     async def async_turn_on(self, **kwargs: Any) -> None:\n573:         \"\"\"Turn on or control the light.\"\"\"\n574:         commands = self._switch_wrapper.get_update_commands(self.device, True)\n575: \n576:         if self._color_mode_wrapper and (\n577:             ATTR_WHITE in kwargs or ATTR_COLOR_TEMP_KELVIN in kwargs\n578:         ):\n579:             commands.extend(\n580:                 self._color_mode_wrapper.get_update_commands(\n581:                     self.device, WorkMode.WHITE\n582:                 ),\n583:             )\n584:"
+        },
+        {
+          "call_chains": [
+            "self._read_wrapper"
+          ],
+          "call_patterns": [
+            "_read_wrapper"
+          ],
+          "file_path": "data/repo_snapshot/tuya/light.py",
+          "function_name": "is_on",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:is_on",
+            "state_accessor_property:is_on",
+            "state_accessor_call:self._read_wrapper"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "567:     @property\n568:     def is_on(self) -> bool | None:\n569:         \"\"\"Return true if light is on.\"\"\"\n570:         return self._read_wrapper(self._switch_wrapper)\n571: \n572:     async def async_turn_on(self, **kwargs: Any) -> None:"
+        },
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/tuya/light.py",
+          "function_name": "hs_color",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:hs_color",
+            "state_accessor_property:hs_color",
+            "state_accessor_call:self._read_wrapper"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "653:     @property\n654:     def hs_color(self) -> tuple[float, float] | None:\n655:         \"\"\"Return the hs_color of the light.\"\"\"\n656:         if self._color_data_wrapper is None:\n657:             return None\n658:         hsv_data = self._read_wrapper(self._color_data_wrapper)\n659:         return None if hsv_data is None else (hsv_data[0], hsv_data[1])\n660: \n661:     @property"
+        }
+      ],
+      "origin_action_id": "A8",
+      "origin_cluster_id": "tuya__light__cloud_status_call__status__cloud",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [
+            "self._read_wrapper"
+          ],
+          "call_patterns": [
+            "_read_wrapper"
+          ],
+          "file_path": "data/repo_snapshot/tuya/light.py",
+          "function_name": "is_on",
+          "path_kind": "read_path",
+          "path_signals": [
+            "property_function:is_on",
+            "state_accessor_property:is_on",
+            "state_accessor_call:self._read_wrapper",
+            "_read_wrapper"
+          ],
+          "prototype_kind": "synthetic_accessor_positive",
+          "role_hint": "runtime_read_snapshot",
+          "score": 3,
+          "snippet": "567:     @property\n568:     def is_on(self) -> bool | None:\n569:         \"\"\"Return true if light is on.\"\"\"\n570:         return self._read_wrapper(self._switch_wrapper)\n571: \n572:     async def async_turn_on(self, **kwargs: Any) -> None:"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read"
+      ],
+      "required_context": [
+        "runtime_update_path"
+      ],
+      "required_path_signals": [
+        "property_function:is_on",
+        "state_accessor_property:is_on",
+        "state_accessor_call:self._read_wrapper"
+      ],
+      "required_runtime_roles": [
+        "runtime_read"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "tuya:light_runtime_status_read",
+      "runtime_archetypes": [
+        "cloud_runtime_read",
+        "entity_wrapper_read",
+        "coordinator_update_path"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:is_on",
+        "runtime_call:_read_wrapper",
+        "runtime_call:self._read_wrapper",
+        "path_signal:property_function:is_on",
+        "path_signal:state_accessor_property:is_on",
+        "path_signal:state_accessor_call:self._read_wrapper"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/tuya/light.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A8"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+      "why_not_setup": [
+        "exclude_role:setup:async_setup_entry",
+        "exclude_role:runtime_write:async_turn_off",
+        "exclude_role:runtime_write:async_turn_on",
+        "exclude_role:property_getter:is_on",
+        "exclude_role:property_getter:hs_color",
+        "exclude_path_signal:setup_function:async_setup_entry",
+        "exclude_path_signal:setup_call:async_add_entities",
+        "exclude_path_signal:setup_call:async_dispatcher_connect"
+      ]
+    }
+  ],
+  "schema_version": "m1_grounding_profile/v3",
+  "version": "draft_llm_v3"
+}

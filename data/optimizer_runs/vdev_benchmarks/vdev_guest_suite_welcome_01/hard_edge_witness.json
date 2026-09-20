@@ -1,0 +1,1649 @@
+{
+  "edge_count": 26,
+  "edges": [
+    {
+      "dst_locations": [
+        "data/repo_snapshot/switchbot/fan.py:101",
+        "data/repo_snapshot/switchbot/fan.py:118",
+        "data/repo_snapshot/switchbot/fan.py:125",
+        "data/repo_snapshot/switchbot/fan.py:161",
+        "data/repo_snapshot/switchbot/fan.py:179",
+        "data/repo_snapshot/switchbot/fan.py:187",
+        "data/repo_snapshot/switchbot/fan.py:83",
+        "data/repo_snapshot/switchbot/fan.py:92"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:179",
+          "marker_id": "marker_4664192a7e",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:161",
+          "marker_id": "marker_7529ee2411",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:118",
+          "marker_id": "marker_771a133e32",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:125",
+          "marker_id": "marker_8ff06e2c99",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:187",
+          "marker_id": "marker_a75f778a26",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:92",
+          "marker_id": "marker_b9989a7050",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:101",
+          "marker_id": "marker_c1599f0892",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:83",
+          "marker_id": "marker_e34316b43e",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf07_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf06_000_ble_op"
+      },
+      "origin": {
+        "dependency": "A3->A23",
+        "details": [
+          "vdev_dep:A3->A23",
+          "ble_write_depends_on_a3"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/switchbot/cover.py:107",
+        "data/repo_snapshot/switchbot/cover.py:108",
+        "data/repo_snapshot/switchbot/cover.py:118",
+        "data/repo_snapshot/switchbot/cover.py:126",
+        "data/repo_snapshot/switchbot/cover.py:129",
+        "data/repo_snapshot/switchbot/cover.py:187",
+        "data/repo_snapshot/switchbot/cover.py:195",
+        "data/repo_snapshot/switchbot/cover.py:203",
+        "data/repo_snapshot/switchbot/cover.py:209",
+        "data/repo_snapshot/switchbot/cover.py:212",
+        "data/repo_snapshot/switchbot/cover.py:267",
+        "data/repo_snapshot/switchbot/cover.py:277",
+        "data/repo_snapshot/switchbot/cover.py:287",
+        "data/repo_snapshot/switchbot/cover.py:296",
+        "data/repo_snapshot/switchbot/cover.py:298",
+        "data/repo_snapshot/switchbot/cover.py:331",
+        "data/repo_snapshot/switchbot/cover.py:337",
+        "data/repo_snapshot/switchbot/cover.py:96",
+        "data/repo_snapshot/switchbot/cover.py:97"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/switchbot/cover.py:212",
+          "marker_id": "marker_0bfcb513d0",
+          "marker_type": "BLE_OP"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/cover.py:337",
+          "marker_id": "marker_0e7f479c6a",
+          "marker_type": "BLE_OP"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/cover.py:118",
+          "marker_id": "marker_1a328b14d6",
+          "marker_type": "BLE_OP"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/cover.py:287",
+          "marker_id": "marker_1f2c3503f3",
+          "marker_type": "BLE_OP"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/cover.py:298",
+          "marker_id": "marker_3346df467f",
+          "marker_type": "BLE_OP"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/cover.py:267",
+          "marker_id": "marker_4c6bde589f",
+          "marker_type": "BLE_OP"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/cover.py:331",
+          "marker_id": "marker_6404f0eeec",
+          "marker_type": "BLE_OP"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/cover.py:108",
+          "marker_id": "marker_7f20d3a821",
+          "marker_type": "BLE_OP"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/cover.py:187",
+          "marker_id": "marker_c0be888c1e",
+          "marker_type": "BLE_OP"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/cover.py:129",
+          "marker_id": "marker_c39880fc0d",
+          "marker_type": "BLE_OP"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/cover.py:203",
+          "marker_id": "marker_c586b78c6d",
+          "marker_type": "BLE_OP"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/cover.py:195",
+          "marker_id": "marker_c5c9ed6510",
+          "marker_type": "BLE_OP"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/cover.py:277",
+          "marker_id": "marker_d617933d28",
+          "marker_type": "BLE_OP"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/cover.py:97",
+          "marker_id": "marker_e0961e843d",
+          "marker_type": "BLE_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/switchbot/fan.py:101",
+        "data/repo_snapshot/switchbot/fan.py:118",
+        "data/repo_snapshot/switchbot/fan.py:125",
+        "data/repo_snapshot/switchbot/fan.py:161",
+        "data/repo_snapshot/switchbot/fan.py:179",
+        "data/repo_snapshot/switchbot/fan.py:187",
+        "data/repo_snapshot/switchbot/fan.py:83",
+        "data/repo_snapshot/switchbot/fan.py:92"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:179",
+          "marker_id": "marker_4664192a7e",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:161",
+          "marker_id": "marker_7529ee2411",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:118",
+          "marker_id": "marker_771a133e32",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:125",
+          "marker_id": "marker_8ff06e2c99",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:187",
+          "marker_id": "marker_a75f778a26",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:92",
+          "marker_id": "marker_b9989a7050",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:101",
+          "marker_id": "marker_c1599f0892",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:83",
+          "marker_id": "marker_e34316b43e",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf07_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf07_008_ble_op"
+      },
+      "origin": {
+        "dependency": "A4->A23",
+        "details": [
+          "vdev_dep:A4->A23",
+          "ble_write_depends_on_a4"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/switchbot/fan.py:117",
+        "data/repo_snapshot/switchbot/fan.py:124",
+        "data/repo_snapshot/switchbot/fan.py:178",
+        "data/repo_snapshot/switchbot/fan.py:186"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:124",
+          "marker_id": "marker_69b22c888c",
+          "marker_type": "BLE_OP"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:117",
+          "marker_id": "marker_97ba9d2651",
+          "marker_type": "BLE_OP"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:178",
+          "marker_id": "marker_98ecc472c7",
+          "marker_type": "BLE_OP"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:186",
+          "marker_id": "marker_cc155a37a9",
+          "marker_type": "BLE_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/switchbot/fan.py:101",
+        "data/repo_snapshot/switchbot/fan.py:118",
+        "data/repo_snapshot/switchbot/fan.py:125",
+        "data/repo_snapshot/switchbot/fan.py:161",
+        "data/repo_snapshot/switchbot/fan.py:179",
+        "data/repo_snapshot/switchbot/fan.py:187",
+        "data/repo_snapshot/switchbot/fan.py:83",
+        "data/repo_snapshot/switchbot/fan.py:92"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:179",
+          "marker_id": "marker_4664192a7e",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:161",
+          "marker_id": "marker_7529ee2411",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:118",
+          "marker_id": "marker_771a133e32",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:125",
+          "marker_id": "marker_8ff06e2c99",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:187",
+          "marker_id": "marker_a75f778a26",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:92",
+          "marker_id": "marker_b9989a7050",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:101",
+          "marker_id": "marker_c1599f0892",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:83",
+          "marker_id": "marker_e34316b43e",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf07_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf08_000_ble_op"
+      },
+      "origin": {
+        "dependency": "A5->A23",
+        "details": [
+          "vdev_dep:A5->A23",
+          "ble_write_depends_on_a5"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/switchbot/light.py:135",
+        "data/repo_snapshot/switchbot/light.py:141"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/switchbot/light.py:135",
+          "marker_id": "marker_b5bee8f892",
+          "marker_type": "BLE_OP"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/light.py:141",
+          "marker_id": "marker_f2de01945a",
+          "marker_type": "BLE_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/switchbot/fan.py:101",
+        "data/repo_snapshot/switchbot/fan.py:118",
+        "data/repo_snapshot/switchbot/fan.py:125",
+        "data/repo_snapshot/switchbot/fan.py:161",
+        "data/repo_snapshot/switchbot/fan.py:179",
+        "data/repo_snapshot/switchbot/fan.py:187",
+        "data/repo_snapshot/switchbot/fan.py:83",
+        "data/repo_snapshot/switchbot/fan.py:92"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:179",
+          "marker_id": "marker_4664192a7e",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:161",
+          "marker_id": "marker_7529ee2411",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:118",
+          "marker_id": "marker_771a133e32",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:125",
+          "marker_id": "marker_8ff06e2c99",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:187",
+          "marker_id": "marker_a75f778a26",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:92",
+          "marker_id": "marker_b9989a7050",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:101",
+          "marker_id": "marker_c1599f0892",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:83",
+          "marker_id": "marker_e34316b43e",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf07_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf14_001_ble_op"
+      },
+      "origin": {
+        "dependency": "A6->A23",
+        "details": [
+          "vdev_dep:A6->A23",
+          "ble_write_depends_on_a6"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/xiaomi_ble/__init__.py:137"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/xiaomi_ble/__init__.py:139",
+          "marker_id": "marker_8b05854925",
+          "marker_type": "BLE_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/switchbot/fan.py:101",
+        "data/repo_snapshot/switchbot/fan.py:118",
+        "data/repo_snapshot/switchbot/fan.py:125",
+        "data/repo_snapshot/switchbot/fan.py:161",
+        "data/repo_snapshot/switchbot/fan.py:179",
+        "data/repo_snapshot/switchbot/fan.py:187",
+        "data/repo_snapshot/switchbot/fan.py:83",
+        "data/repo_snapshot/switchbot/fan.py:92"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:179",
+          "marker_id": "marker_4664192a7e",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:161",
+          "marker_id": "marker_7529ee2411",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:118",
+          "marker_id": "marker_771a133e32",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:125",
+          "marker_id": "marker_8ff06e2c99",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:187",
+          "marker_id": "marker_a75f778a26",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:92",
+          "marker_id": "marker_b9989a7050",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:101",
+          "marker_id": "marker_c1599f0892",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:83",
+          "marker_id": "marker_e34316b43e",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf07_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf17_000_ble_op"
+      },
+      "origin": {
+        "dependency": "A7->A23",
+        "details": [
+          "vdev_dep:A7->A23",
+          "ble_write_depends_on_a7"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/xiaomi_ble/sensor.py:223",
+        "data/repo_snapshot/xiaomi_ble/sensor.py:224",
+        "data/repo_snapshot/xiaomi_ble/sensor.py:232"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/xiaomi_ble/sensor.py:220",
+          "marker_id": "marker_4869bf4a6f",
+          "marker_type": "BLE_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/tuya/entity.py:63",
+        "data/repo_snapshot/tuya/entity.py:76"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/entity.py:76",
+          "marker_id": "marker_5718cbb36c",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf12_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf13_006_cloud_op"
+      },
+      "origin": {
+        "dependency": "A9->A24",
+        "details": [
+          "vdev_dep:A9->A24",
+          "cloud_write_depends_on_a9"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tuya/light.py:574",
+        "data/repo_snapshot/tuya/light.py:576",
+        "data/repo_snapshot/tuya/light.py:579",
+        "data/repo_snapshot/tuya/light.py:585",
+        "data/repo_snapshot/tuya/light.py:586",
+        "data/repo_snapshot/tuya/light.py:609",
+        "data/repo_snapshot/tuya/light.py:612",
+        "data/repo_snapshot/tuya/light.py:614",
+        "data/repo_snapshot/tuya/light.py:626",
+        "data/repo_snapshot/tuya/light.py:628",
+        "data/repo_snapshot/tuya/light.py:632"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/light.py:587",
+          "marker_id": "marker_58f86ad284",
+          "marker_type": "CLOUD_OP"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/light.py:615",
+          "marker_id": "marker_60cc029118",
+          "marker_type": "CLOUD_OP"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/light.py:574",
+          "marker_id": "marker_6f012a324b",
+          "marker_type": "CLOUD_OP"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/light.py:629",
+          "marker_id": "marker_7d5e150be7",
+          "marker_type": "CLOUD_OP"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/light.py:580",
+          "marker_id": "marker_a32e4d4ff7",
+          "marker_type": "CLOUD_OP"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/light.py:632",
+          "marker_id": "marker_c36b907e75",
+          "marker_type": "CLOUD_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/tuya/entity.py:63",
+        "data/repo_snapshot/tuya/entity.py:76"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/entity.py:76",
+          "marker_id": "marker_5718cbb36c",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf12_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf13_000_cloud_http_call"
+      },
+      "origin": {
+        "dependency": "A10->A24",
+        "details": [
+          "vdev_dep:A10->A24",
+          "cloud_write_depends_on_a10"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tuya/light.py:462",
+        "data/repo_snapshot/tuya/light.py:465",
+        "data/repo_snapshot/tuya/light.py:467",
+        "data/repo_snapshot/tuya/light.py:468",
+        "data/repo_snapshot/tuya/light.py:469",
+        "data/repo_snapshot/tuya/light.py:470",
+        "data/repo_snapshot/tuya/light.py:608",
+        "data/repo_snapshot/tuya/light.py:611"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/light.py:470",
+          "marker_id": "marker_1b751f584b",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/light.py:470",
+          "marker_id": "marker_6ceebf98ce",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/light.py:608",
+          "marker_id": "marker_9477e26632",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/light.py:611",
+          "marker_id": "marker_ab26f3c7a9",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/light.py:456",
+          "marker_id": "marker_b3fb0fdc6c",
+          "marker_type": "ENTRY_SETUP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/tuya/entity.py:63",
+        "data/repo_snapshot/tuya/entity.py:76"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/entity.py:76",
+          "marker_id": "marker_5718cbb36c",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf12_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf11_000_cloud_http_call"
+      },
+      "origin": {
+        "dependency": "A11->A24",
+        "details": [
+          "vdev_dep:A11->A24",
+          "cloud_write_depends_on_a11"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tuya/climate.py:305",
+        "data/repo_snapshot/tuya/climate.py:307",
+        "data/repo_snapshot/tuya/climate.py:308",
+        "data/repo_snapshot/tuya/climate.py:338",
+        "data/repo_snapshot/tuya/climate.py:340",
+        "data/repo_snapshot/tuya/climate.py:355",
+        "data/repo_snapshot/tuya/climate.py:362",
+        "data/repo_snapshot/tuya/climate.py:386",
+        "data/repo_snapshot/tuya/climate.py:430",
+        "data/repo_snapshot/tuya/climate.py:431",
+        "data/repo_snapshot/tuya/climate.py:446",
+        "data/repo_snapshot/tuya/climate.py:447"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:309",
+          "marker_id": "marker_1de9a6c786",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:431",
+          "marker_id": "marker_60a9b40dcb",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:386",
+          "marker_id": "marker_6bd50376d1",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:345",
+          "marker_id": "marker_8ffa4b296f",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:364",
+          "marker_id": "marker_e5303f6c04",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:447",
+          "marker_id": "marker_f9a02ab387",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:368",
+          "marker_id": "marker_ff3b4fcc64",
+          "marker_type": "CLOUD_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/tuya/entity.py:63",
+        "data/repo_snapshot/tuya/entity.py:76"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/entity.py:76",
+          "marker_id": "marker_5718cbb36c",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf12_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf11_009_cloud_op"
+      },
+      "origin": {
+        "dependency": "A12->A24",
+        "details": [
+          "vdev_dep:A12->A24",
+          "cloud_write_depends_on_a12"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tuya/climate.py:391"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:391",
+          "marker_id": "marker_d4ba9bf1a5",
+          "marker_type": "CLOUD_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/tuya/entity.py:63",
+        "data/repo_snapshot/tuya/entity.py:76"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/entity.py:76",
+          "marker_id": "marker_5718cbb36c",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf12_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf00_012_cloud_op"
+      },
+      "origin": {
+        "dependency": "A13->A24",
+        "details": [
+          "vdev_dep:A13->A24",
+          "cloud_write_depends_on_a13"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/ecobee/climate.py:748"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/ecobee/climate.py:748",
+          "marker_id": "marker_abb64a9acf",
+          "marker_type": "CLOUD_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/tuya/entity.py:63",
+        "data/repo_snapshot/tuya/entity.py:76"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/entity.py:76",
+          "marker_id": "marker_5718cbb36c",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf12_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf00_006_cloud_op"
+      },
+      "origin": {
+        "dependency": "A14->A24",
+        "details": [
+          "vdev_dep:A14->A24",
+          "cloud_write_depends_on_a14"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/ecobee/climate.py:657",
+        "data/repo_snapshot/ecobee/climate.py:658",
+        "data/repo_snapshot/ecobee/climate.py:665",
+        "data/repo_snapshot/ecobee/climate.py:666",
+        "data/repo_snapshot/ecobee/climate.py:668",
+        "data/repo_snapshot/ecobee/climate.py:669",
+        "data/repo_snapshot/ecobee/climate.py:676",
+        "data/repo_snapshot/ecobee/climate.py:677",
+        "data/repo_snapshot/ecobee/climate.py:682",
+        "data/repo_snapshot/ecobee/climate.py:687"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/ecobee/climate.py:677",
+          "marker_id": "marker_0eb8bae472",
+          "marker_type": "CLOUD_OP"
+        },
+        {
+          "location": "data/repo_snapshot/ecobee/climate.py:687",
+          "marker_id": "marker_8c8300e976",
+          "marker_type": "CLOUD_OP"
+        },
+        {
+          "location": "data/repo_snapshot/ecobee/climate.py:669",
+          "marker_id": "marker_dbf11b8a47",
+          "marker_type": "CLOUD_OP"
+        },
+        {
+          "location": "data/repo_snapshot/ecobee/climate.py:666",
+          "marker_id": "marker_e63fa0b773",
+          "marker_type": "CLOUD_OP"
+        },
+        {
+          "location": "data/repo_snapshot/ecobee/climate.py:658",
+          "marker_id": "marker_ffd630e40e",
+          "marker_type": "CLOUD_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/tuya/entity.py:63",
+        "data/repo_snapshot/tuya/entity.py:76"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/entity.py:76",
+          "marker_id": "marker_5718cbb36c",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf12_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf10_002_cloud_status_call"
+      },
+      "origin": {
+        "dependency": "A17->A24",
+        "details": [
+          "vdev_dep:A17->A24",
+          "cloud_write_depends_on_a17"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tuya/__init__.py:176",
+        "data/repo_snapshot/tuya/__init__.py:177",
+        "data/repo_snapshot/tuya/__init__.py:186",
+        "data/repo_snapshot/tuya/__init__.py:238",
+        "data/repo_snapshot/tuya/__init__.py:239",
+        "data/repo_snapshot/tuya/__init__.py:251",
+        "data/repo_snapshot/tuya/__init__.py:255"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/__init__.py:170",
+          "marker_id": "marker_2c7df7ed8e",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/__init__.py:237",
+          "marker_id": "marker_af91cb5aab",
+          "marker_type": "CLOUD_STATUS_CALL"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/tuya/entity.py:63",
+        "data/repo_snapshot/tuya/entity.py:76"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/entity.py:76",
+          "marker_id": "marker_5718cbb36c",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf12_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf11_008_cloud_status_call"
+      },
+      "origin": {
+        "dependency": "A18->A24",
+        "details": [
+          "vdev_dep:A18->A24",
+          "cloud_write_depends_on_a18"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tuya/climate.py:143",
+        "data/repo_snapshot/tuya/climate.py:148",
+        "data/repo_snapshot/tuya/climate.py:149",
+        "data/repo_snapshot/tuya/climate.py:150"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:150",
+          "marker_id": "marker_36002290a2",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:150",
+          "marker_id": "marker_a9d59478a4",
+          "marker_type": "CLOUD_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/tuya/entity.py:63",
+        "data/repo_snapshot/tuya/entity.py:76"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/entity.py:76",
+          "marker_id": "marker_5718cbb36c",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf12_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf00_005_cloud_status_call"
+      },
+      "origin": {
+        "dependency": "A19->A24",
+        "details": [
+          "vdev_dep:A19->A24",
+          "cloud_write_depends_on_a19"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/ecobee/climate.py:399"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/ecobee/climate.py:399",
+          "marker_id": "marker_acc1836129",
+          "marker_type": "CLOUD_STATUS_CALL"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/hue/v2/entity.py:138"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/hue/v2/entity.py:126",
+          "marker_id": "marker_c3d782713c",
+          "marker_type": "LOCAL_API_READ"
+        },
+        {
+          "location": "data/repo_snapshot/hue/v2/entity.py:138",
+          "marker_id": "marker_ca66dce737",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf03_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf02_000_local_api_read"
+      },
+      "origin": {
+        "dependency": "A20->A25",
+        "details": [
+          "vdev_dep:A20->A25",
+          "local_write_depends_on_a20"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/hue/v2/binary_sensor.py:200",
+        "data/repo_snapshot/hue/v2/binary_sensor.py:201",
+        "data/repo_snapshot/hue/v2/binary_sensor.py:252",
+        "data/repo_snapshot/hue/v2/binary_sensor.py:253"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/hue/v2/binary_sensor.py:251",
+          "marker_id": "marker_2e9b880c79",
+          "marker_type": "LOCAL_API_READ"
+        },
+        {
+          "location": "data/repo_snapshot/hue/v2/binary_sensor.py:199",
+          "marker_id": "marker_d8e27c3731",
+          "marker_type": "LOCAL_API_READ"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/hue/v2/entity.py:138"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/hue/v2/entity.py:126",
+          "marker_id": "marker_c3d782713c",
+          "marker_type": "LOCAL_API_READ"
+        },
+        {
+          "location": "data/repo_snapshot/hue/v2/entity.py:138",
+          "marker_id": "marker_ca66dce737",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf03_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf09_000_local_api_read"
+      },
+      "origin": {
+        "dependency": "A21->A25",
+        "details": [
+          "vdev_dep:A21->A25",
+          "local_write_depends_on_a21"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tplink/entity.py:287",
+        "data/repo_snapshot/tplink/entity.py:288",
+        "data/repo_snapshot/tplink/entity.py:289"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tplink/entity.py:286",
+          "marker_id": "marker_72c8030d25",
+          "marker_type": "LOCAL_API_READ"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/hue/v2/entity.py:138"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/hue/v2/entity.py:126",
+          "marker_id": "marker_c3d782713c",
+          "marker_type": "LOCAL_API_READ"
+        },
+        {
+          "location": "data/repo_snapshot/hue/v2/entity.py:138",
+          "marker_id": "marker_ca66dce737",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf03_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf05_000_mqtt_subscribe"
+      },
+      "origin": {
+        "dependency": "A22->A25",
+        "details": [
+          "vdev_dep:A22->A25",
+          "local_write_depends_on_a22"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/mqtt/subscription.py:35",
+        "data/repo_snapshot/mqtt/subscription.py:36",
+        "data/repo_snapshot/mqtt/subscription.py:37",
+        "data/repo_snapshot/mqtt/subscription.py:38",
+        "data/repo_snapshot/mqtt/subscription.py:39",
+        "data/repo_snapshot/mqtt/subscription.py:40",
+        "data/repo_snapshot/mqtt/subscription.py:42",
+        "data/repo_snapshot/mqtt/subscription.py:43",
+        "data/repo_snapshot/mqtt/subscription.py:45",
+        "data/repo_snapshot/mqtt/subscription.py:47",
+        "data/repo_snapshot/mqtt/subscription.py:49",
+        "data/repo_snapshot/mqtt/subscription.py:52",
+        "data/repo_snapshot/mqtt/subscription.py:54"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/mqtt/subscription.py:32",
+          "marker_id": "marker_942ef5c1b8",
+          "marker_type": "MQTT_SUBSCRIBE"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/esphome/update.py:186"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/esphome/update.py:186",
+          "marker_id": "marker_767e7c72f5",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf01_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf07_000_state_write"
+      },
+      "origin": {
+        "dependency": "A23->A26",
+        "details": [
+          "vdev_dep:A23->A26",
+          "overall_write_depends_on_ble_lane"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/switchbot/fan.py:101",
+        "data/repo_snapshot/switchbot/fan.py:118",
+        "data/repo_snapshot/switchbot/fan.py:125",
+        "data/repo_snapshot/switchbot/fan.py:161",
+        "data/repo_snapshot/switchbot/fan.py:179",
+        "data/repo_snapshot/switchbot/fan.py:187",
+        "data/repo_snapshot/switchbot/fan.py:83",
+        "data/repo_snapshot/switchbot/fan.py:92"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:179",
+          "marker_id": "marker_4664192a7e",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:161",
+          "marker_id": "marker_7529ee2411",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:118",
+          "marker_id": "marker_771a133e32",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:125",
+          "marker_id": "marker_8ff06e2c99",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:187",
+          "marker_id": "marker_a75f778a26",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:92",
+          "marker_id": "marker_b9989a7050",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:101",
+          "marker_id": "marker_c1599f0892",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:83",
+          "marker_id": "marker_e34316b43e",
+          "marker_type": "STATE_WRITE"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/esphome/update.py:186"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/esphome/update.py:186",
+          "marker_id": "marker_767e7c72f5",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf01_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf12_000_state_write"
+      },
+      "origin": {
+        "dependency": "A24->A26",
+        "details": [
+          "vdev_dep:A24->A26",
+          "overall_write_depends_on_cloud_lane"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tuya/entity.py:63",
+        "data/repo_snapshot/tuya/entity.py:76"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/entity.py:76",
+          "marker_id": "marker_5718cbb36c",
+          "marker_type": "STATE_WRITE"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/esphome/update.py:186"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/esphome/update.py:186",
+          "marker_id": "marker_767e7c72f5",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf01_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf03_000_state_write"
+      },
+      "origin": {
+        "dependency": "A25->A26",
+        "details": [
+          "vdev_dep:A25->A26",
+          "overall_write_depends_on_local_lane"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/hue/v2/entity.py:138"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/hue/v2/entity.py:126",
+          "marker_id": "marker_c3d782713c",
+          "marker_type": "LOCAL_API_READ"
+        },
+        {
+          "location": "data/repo_snapshot/hue/v2/entity.py:138",
+          "marker_id": "marker_ca66dce737",
+          "marker_type": "STATE_WRITE"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/tuya/__init__.py:176",
+        "data/repo_snapshot/tuya/__init__.py:177",
+        "data/repo_snapshot/tuya/__init__.py:186",
+        "data/repo_snapshot/tuya/__init__.py:238",
+        "data/repo_snapshot/tuya/__init__.py:239",
+        "data/repo_snapshot/tuya/__init__.py:251",
+        "data/repo_snapshot/tuya/__init__.py:255"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/__init__.py:170",
+          "marker_id": "marker_2c7df7ed8e",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/__init__.py:237",
+          "marker_id": "marker_af91cb5aab",
+          "marker_type": "CLOUD_STATUS_CALL"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf10_002_cloud_status_call",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf13_006_cloud_op"
+      },
+      "origin": {
+        "dependency": "A9->A16",
+        "details": [
+          "vdev_dep:A9->A16",
+          "verify_guest_bedside_after_welcome_control"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tuya/light.py:574",
+        "data/repo_snapshot/tuya/light.py:576",
+        "data/repo_snapshot/tuya/light.py:579",
+        "data/repo_snapshot/tuya/light.py:585",
+        "data/repo_snapshot/tuya/light.py:586",
+        "data/repo_snapshot/tuya/light.py:609",
+        "data/repo_snapshot/tuya/light.py:612",
+        "data/repo_snapshot/tuya/light.py:614",
+        "data/repo_snapshot/tuya/light.py:626",
+        "data/repo_snapshot/tuya/light.py:628",
+        "data/repo_snapshot/tuya/light.py:632"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/light.py:587",
+          "marker_id": "marker_58f86ad284",
+          "marker_type": "CLOUD_OP"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/light.py:615",
+          "marker_id": "marker_60cc029118",
+          "marker_type": "CLOUD_OP"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/light.py:574",
+          "marker_id": "marker_6f012a324b",
+          "marker_type": "CLOUD_OP"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/light.py:629",
+          "marker_id": "marker_7d5e150be7",
+          "marker_type": "CLOUD_OP"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/light.py:580",
+          "marker_id": "marker_a32e4d4ff7",
+          "marker_type": "CLOUD_OP"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/light.py:632",
+          "marker_id": "marker_c36b907e75",
+          "marker_type": "CLOUD_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/tuya/__init__.py:176",
+        "data/repo_snapshot/tuya/__init__.py:177",
+        "data/repo_snapshot/tuya/__init__.py:186",
+        "data/repo_snapshot/tuya/__init__.py:238",
+        "data/repo_snapshot/tuya/__init__.py:239",
+        "data/repo_snapshot/tuya/__init__.py:251",
+        "data/repo_snapshot/tuya/__init__.py:255"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/__init__.py:170",
+          "marker_id": "marker_2c7df7ed8e",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/__init__.py:237",
+          "marker_id": "marker_af91cb5aab",
+          "marker_type": "CLOUD_STATUS_CALL"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf10_002_cloud_status_call",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf13_000_cloud_http_call"
+      },
+      "origin": {
+        "dependency": "A10->A17",
+        "details": [
+          "vdev_dep:A10->A17",
+          "verify_guest_entry_after_welcome_control"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tuya/light.py:462",
+        "data/repo_snapshot/tuya/light.py:465",
+        "data/repo_snapshot/tuya/light.py:467",
+        "data/repo_snapshot/tuya/light.py:468",
+        "data/repo_snapshot/tuya/light.py:469",
+        "data/repo_snapshot/tuya/light.py:470",
+        "data/repo_snapshot/tuya/light.py:608",
+        "data/repo_snapshot/tuya/light.py:611"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/light.py:470",
+          "marker_id": "marker_1b751f584b",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/light.py:470",
+          "marker_id": "marker_6ceebf98ce",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/light.py:608",
+          "marker_id": "marker_9477e26632",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/light.py:611",
+          "marker_id": "marker_ab26f3c7a9",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/light.py:456",
+          "marker_id": "marker_b3fb0fdc6c",
+          "marker_type": "ENTRY_SETUP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/tuya/climate.py:143",
+        "data/repo_snapshot/tuya/climate.py:148",
+        "data/repo_snapshot/tuya/climate.py:149",
+        "data/repo_snapshot/tuya/climate.py:150"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:150",
+          "marker_id": "marker_36002290a2",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:150",
+          "marker_id": "marker_a9d59478a4",
+          "marker_type": "CLOUD_OP"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf11_008_cloud_status_call",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf11_000_cloud_http_call"
+      },
+      "origin": {
+        "dependency": "A11->A18",
+        "details": [
+          "vdev_dep:A11->A18",
+          "verify_guest_hvac_after_mode_set"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tuya/climate.py:305",
+        "data/repo_snapshot/tuya/climate.py:307",
+        "data/repo_snapshot/tuya/climate.py:308",
+        "data/repo_snapshot/tuya/climate.py:338",
+        "data/repo_snapshot/tuya/climate.py:340",
+        "data/repo_snapshot/tuya/climate.py:355",
+        "data/repo_snapshot/tuya/climate.py:362",
+        "data/repo_snapshot/tuya/climate.py:386",
+        "data/repo_snapshot/tuya/climate.py:430",
+        "data/repo_snapshot/tuya/climate.py:431",
+        "data/repo_snapshot/tuya/climate.py:446",
+        "data/repo_snapshot/tuya/climate.py:447"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:309",
+          "marker_id": "marker_1de9a6c786",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:431",
+          "marker_id": "marker_60a9b40dcb",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:386",
+          "marker_id": "marker_6bd50376d1",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:345",
+          "marker_id": "marker_8ffa4b296f",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:364",
+          "marker_id": "marker_e5303f6c04",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:447",
+          "marker_id": "marker_f9a02ab387",
+          "marker_type": "CLOUD_HTTP_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:368",
+          "marker_id": "marker_ff3b4fcc64",
+          "marker_type": "CLOUD_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/tuya/climate.py:143",
+        "data/repo_snapshot/tuya/climate.py:148",
+        "data/repo_snapshot/tuya/climate.py:149",
+        "data/repo_snapshot/tuya/climate.py:150"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:150",
+          "marker_id": "marker_36002290a2",
+          "marker_type": "CLOUD_STATUS_CALL"
+        },
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:150",
+          "marker_id": "marker_a9d59478a4",
+          "marker_type": "CLOUD_OP"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf11_008_cloud_status_call",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf11_009_cloud_op"
+      },
+      "origin": {
+        "dependency": "A12->A18",
+        "details": [
+          "vdev_dep:A12->A18",
+          "verify_guest_hvac_after_temperature_set"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/tuya/climate.py:391"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/tuya/climate.py:391",
+          "marker_id": "marker_d4ba9bf1a5",
+          "marker_type": "CLOUD_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/ecobee/climate.py:399"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/ecobee/climate.py:399",
+          "marker_id": "marker_acc1836129",
+          "marker_type": "CLOUD_STATUS_CALL"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf00_005_cloud_status_call",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf00_012_cloud_op"
+      },
+      "origin": {
+        "dependency": "A13->A19",
+        "details": [
+          "vdev_dep:A13->A19",
+          "verify_guest_runtime_after_fan_mode"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/ecobee/climate.py:748"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/ecobee/climate.py:748",
+          "marker_id": "marker_abb64a9acf",
+          "marker_type": "CLOUD_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/ecobee/climate.py:399"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/ecobee/climate.py:399",
+          "marker_id": "marker_acc1836129",
+          "marker_type": "CLOUD_STATUS_CALL"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf00_005_cloud_status_call",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf00_006_cloud_op"
+      },
+      "origin": {
+        "dependency": "A14->A19",
+        "details": [
+          "vdev_dep:A14->A19",
+          "verify_guest_runtime_after_preset_mode"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/ecobee/climate.py:657",
+        "data/repo_snapshot/ecobee/climate.py:658",
+        "data/repo_snapshot/ecobee/climate.py:665",
+        "data/repo_snapshot/ecobee/climate.py:666",
+        "data/repo_snapshot/ecobee/climate.py:668",
+        "data/repo_snapshot/ecobee/climate.py:669",
+        "data/repo_snapshot/ecobee/climate.py:676",
+        "data/repo_snapshot/ecobee/climate.py:677",
+        "data/repo_snapshot/ecobee/climate.py:682",
+        "data/repo_snapshot/ecobee/climate.py:687"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/ecobee/climate.py:677",
+          "marker_id": "marker_0eb8bae472",
+          "marker_type": "CLOUD_OP"
+        },
+        {
+          "location": "data/repo_snapshot/ecobee/climate.py:687",
+          "marker_id": "marker_8c8300e976",
+          "marker_type": "CLOUD_OP"
+        },
+        {
+          "location": "data/repo_snapshot/ecobee/climate.py:669",
+          "marker_id": "marker_dbf11b8a47",
+          "marker_type": "CLOUD_OP"
+        },
+        {
+          "location": "data/repo_snapshot/ecobee/climate.py:666",
+          "marker_id": "marker_e63fa0b773",
+          "marker_type": "CLOUD_OP"
+        },
+        {
+          "location": "data/repo_snapshot/ecobee/climate.py:658",
+          "marker_id": "marker_ffd630e40e",
+          "marker_type": "CLOUD_OP"
+        }
+      ]
+    }
+  ]
+}

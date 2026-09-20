@@ -1,0 +1,17 @@
+dataset,variant,failure_type,count,pct_of_cases
+long-chain,action_only,action_lifecycle_or_resource_violation,5,19.23
+long-chain,action_only,action_level_grounding_gap,4,15.38
+long-chain,action_only,full_system_failed,1,3.85
+long-chain,full_floweaver,full_system_failed,1,3.85
+long-chain,without_micro,macro_only_validation_gap,4,15.38
+long-chain,without_micro,full_system_failed,1,3.85
+long-chain,without_rollback,rollback_required,23,88.46
+long-chain,without_rollback,unrecovered_counterexample,1,3.85
+smart-home,action_only,action_lifecycle_or_resource_violation,6,12.0
+smart-home,action_only,action_level_grounding_gap,3,6.0
+smart-home,action_only,full_system_failed,1,2.0
+smart-home,full_floweaver,full_system_failed,1,2.0
+smart-home,without_micro,macro_only_validation_gap,4,8.0
+smart-home,without_micro,full_system_failed,1,2.0
+smart-home,without_rollback,rollback_required,30,60.0
+smart-home,without_rollback,unrecovered_counterexample,1,2.0

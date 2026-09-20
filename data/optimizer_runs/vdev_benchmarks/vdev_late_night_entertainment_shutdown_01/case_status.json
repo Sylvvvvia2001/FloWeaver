@@ -1,0 +1,168 @@
+{
+  "vdev_id": "vdev_late_night_entertainment_shutdown_01",
+  "name": "Late-Night Entertainment Shutdown",
+  "group": "Profile Coverage - Evening and Overnight Routines",
+  "target_path": "data/targets/vdev_benchmarks/vdev_late_night_entertainment_shutdown_01.json",
+  "run_dir": "data/optimizer_runs/vdev_benchmarks/vdev_late_night_entertainment_shutdown_01",
+  "strict_pass": 6,
+  "tolerant_pass": 6,
+  "counterexample_count": 0,
+  "batch_count": 12,
+  "parallel_groups": {
+    "batch_000": [
+      [
+        "A1"
+      ]
+    ],
+    "batch_001": [
+      [
+        "A2"
+      ]
+    ],
+    "batch_002": [
+      [
+        "A3",
+        "A5"
+      ],
+      [
+        "A4"
+      ]
+    ],
+    "batch_003": [
+      [
+        "A6"
+      ]
+    ],
+    "batch_004": [
+      [
+        "A7"
+      ]
+    ],
+    "batch_005": [
+      [
+        "A8"
+      ]
+    ],
+    "batch_006": [
+      [
+        "A9"
+      ]
+    ],
+    "batch_007": [
+      [
+        "A10"
+      ]
+    ],
+    "batch_008": [
+      [
+        "A11"
+      ]
+    ],
+    "batch_009": [
+      [
+        "A12"
+      ]
+    ],
+    "batch_010": [
+      [
+        "A13"
+      ],
+      [
+        "A14"
+      ],
+      [
+        "A15"
+      ]
+    ],
+    "batch_011": [
+      [
+        "A16"
+      ]
+    ]
+  },
+  "batching_buckets": {
+    "batch_000": [],
+    "batch_001": [],
+    "batch_002": [
+      {
+        "bucket": "tuya",
+        "chunks": 1,
+        "group_key": "host",
+        "max_batch_size": 3,
+        "max_wait_ms": 40,
+        "members": [
+          "A3",
+          "A5"
+        ],
+        "rule_kind": "SAME_SESSION_GROUP",
+        "size": 2
+      }
+    ],
+    "batch_003": [],
+    "batch_004": [],
+    "batch_005": [],
+    "batch_006": [],
+    "batch_007": [],
+    "batch_008": [],
+    "batch_009": [],
+    "batch_010": [],
+    "batch_011": []
+  },
+  "triggered_fallbacks": [
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A2"
+      ]
+    },
+    {
+      "fallback": "serialize_local_api_reads",
+      "kind": "SAME_SESSION_GROUP",
+      "params": {
+        "group_key": "endpoint",
+        "reuse_window_ms": 5000,
+        "rule_id": "rule_protocol_local_api_budget",
+        "template_kind": "SAME_SESSION_GROUP"
+      },
+      "scope": [
+        "A10",
+        "A11",
+        "A12",
+        "A6",
+        "A7",
+        "A8",
+        "A9"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:CONTROL_DEP"
+      },
+      "scope": [
+        "A11",
+        "A15"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:CONTROL_DEP"
+      },
+      "scope": [
+        "A12",
+        "A15"
+      ]
+    }
+  ],
+  "unknown_protocol_actions": [],
+  "status": "ok",
+  "run_id": "1bbe659fb7a04e6d8598a95ca56e49c6"
+}

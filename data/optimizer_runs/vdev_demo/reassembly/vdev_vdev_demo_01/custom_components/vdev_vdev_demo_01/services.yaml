@@ -1,0 +1,10 @@
+run:
+  name: Run VDev
+  description: Execute the generated VDev execution plan.
+  fields:
+    payload:
+      name: Payload
+      description: Optional runtime parameters consumed by action templates.
+      required: false
+      selector:
+        object:

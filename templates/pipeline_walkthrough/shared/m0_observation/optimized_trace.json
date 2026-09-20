@@ -1,0 +1,41 @@
+{
+  "events": [
+    {
+      "ts": 0.01,
+      "provider": "HA",
+      "op": "ENTRY_SETUP",
+      "target": "floweaver.run",
+      "params_abst": {},
+      "phase": "SETUP"
+    },
+    {
+      "ts": 0.04,
+      "provider": "CLOUD",
+      "op": "CLOUD_HTTP_CALL",
+      "target": "tuya:device.control",
+      "params_abst": {"endpoint": "tuya:device.control"},
+      "phase": "RUNTIME"
+    },
+    {
+      "ts": 0.06,
+      "provider": "BLE",
+      "op": "BLE_CONNECT",
+      "target": "ble:aa:bb:cc",
+      "params_abst": {"device_id": "ble:aa:bb:cc"},
+      "phase": "RUNTIME"
+    },
+    {
+      "ts": 0.13,
+      "provider": "HA",
+      "op": "STATE_WRITE",
+      "target": "sensor.vdev_x",
+      "params_abst": {"entity_id": "sensor.vdev_x", "state": "ok"},
+      "phase": "RUNTIME"
+    }
+  ],
+  "meta": {
+    "integration": "vdev_demo",
+    "scenario_id": "baseline_happy_path",
+    "variant": "optimized"
+  }
+}

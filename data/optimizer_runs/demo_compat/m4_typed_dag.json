@@ -1,0 +1,145 @@
+{
+  "diagnostics": {
+    "removed_hard_edges": [],
+    "warnings": []
+  },
+  "hard_edges": [],
+  "nodes": {
+    "msf00_000_coord_refresh": {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "msf_id": "msf00_000_coord_refresh",
+      "msf_type": "SYNC",
+      "node_ids": [
+        "3bfe9039:async_config_entry_first_refresh:0:27"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "required_guards": [],
+      "side_effect_sig": [
+        "coord_refresh"
+      ]
+    },
+    "msf00_001_entry_setup": {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "DemoCoordinator",
+        "DemoEntity",
+        "hass"
+      ],
+      "msf_id": "msf00_001_entry_setup",
+      "msf_type": "INIT",
+      "node_ids": [
+        "3bfe9039:async_setup_entry:0:5",
+        "3bfe9039:async_setup_entry:1:6",
+        "3bfe9039:async_setup_entry:2:7",
+        "3bfe9039:async_setup_entry:3:8"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "required_guards": [],
+      "side_effect_sig": [
+        "entry_setup",
+        "state_write"
+      ]
+    },
+    "msf00_002_coord_refresh": {
+      "action_refs": [],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "DemoCoordinator",
+        "DemoEntity",
+        "hass"
+      ],
+      "msf_id": "msf00_002_coord_refresh",
+      "msf_type": "SYNC",
+      "node_ids": [
+        "3bfe9039:async_setup_entry:0:5",
+        "3bfe9039:async_setup_entry:1:6",
+        "3bfe9039:async_setup_entry:2:7",
+        "3bfe9039:async_setup_entry:3:8"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "required_guards": [],
+      "side_effect_sig": [
+        "coord_refresh",
+        "state_write"
+      ]
+    },
+    "msf00_003_state_write": {
+      "action_refs": [
+        "A0"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "DemoCoordinator",
+        "DemoEntity",
+        "hass"
+      ],
+      "msf_id": "msf00_003_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "3bfe9039:async_setup_entry:0:5",
+        "3bfe9039:async_setup_entry:1:6",
+        "3bfe9039:async_setup_entry:2:7",
+        "3bfe9039:async_setup_entry:3:8"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "side_effect_sig": [
+        "state_write"
+      ]
+    }
+  },
+  "resources": {
+    "BLE": {
+      "type": "slot_pool"
+    },
+    "CLOUD": {
+      "type": "rate_budget"
+    },
+    "HA": {
+      "type": "event_loop"
+    }
+  },
+  "soft_constraints": [
+    {
+      "fallback": "disable_optimization_for_scope",
+      "guard": "runtime_metrics_available",
+      "kind": "COALESCE_STATE_WRITE",
+      "params": {
+        "window_ms": 120
+      },
+      "scope": [
+        "msf00_001_entry_setup",
+        "msf00_002_coord_refresh",
+        "msf00_003_state_write"
+      ]
+    },
+    {
+      "fallback": "disable_optimization_for_scope",
+      "guard": "runtime_metrics_available",
+      "kind": "COALESCE_STATE_WRITE",
+      "params": {
+        "window_ms": 120
+      },
+      "scope": [
+        "msf00_001_entry_setup",
+        "msf00_002_coord_refresh",
+        "msf00_003_state_write"
+      ]
+    }
+  ]
+}

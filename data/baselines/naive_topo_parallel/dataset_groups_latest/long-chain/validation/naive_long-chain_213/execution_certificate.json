@@ -1,0 +1,599 @@
+{
+  "canonicalization_version": "v1",
+  "certificate_id": "cert_b1df13c8bec4",
+  "counterexamples": [],
+  "differential_summary": {
+    "compare_meta": {
+      "canonicalization_version": "v1",
+      "commutable_ops": [
+        "COORD_REFRESH",
+        "STATE_WRITE"
+      ],
+      "config_hash": "4579881c73f27774",
+      "equivalence_rules": [],
+      "parallel_action_scopes": [
+        [
+          "A_cloud_001",
+          "A_cloud_002",
+          "A_cloud_003",
+          "A_cloud_004"
+        ],
+        [
+          "A_cloud_005",
+          "A_cloud_006",
+          "A_cloud_007",
+          "A_cloud_008"
+        ],
+        [
+          "A_cloud_009",
+          "A_cloud_010",
+          "A_cloud_011",
+          "A_cloud_012"
+        ],
+        [
+          "A_ha_cloud",
+          "A_ha_local"
+        ],
+        [
+          "A_local_001",
+          "A_local_002",
+          "A_local_003",
+          "A_local_004"
+        ],
+        [
+          "A_local_005",
+          "A_local_006",
+          "A_local_007",
+          "A_local_008"
+        ],
+        [
+          "A_local_009",
+          "A_local_010",
+          "A_local_011",
+          "A_local_012"
+        ],
+        [
+          "A_local_013",
+          "A_local_014",
+          "A_local_015",
+          "A_local_016"
+        ],
+        [
+          "A_local_017",
+          "A_local_018",
+          "A_local_019",
+          "A_local_020"
+        ],
+        [
+          "A_local_021",
+          "A_local_022",
+          "A_local_023",
+          "A_local_024"
+        ]
+      ]
+    },
+    "counterexample_count": 0,
+    "earliest_violation_summary": {
+      "dominant_target": null,
+      "top_anchors": [],
+      "top_targets": []
+    },
+    "focus_terms": [],
+    "hardening_threshold": {
+      "min_coverage": 0.85,
+      "min_pass_rate": 0.98
+    },
+    "rollback_applied_kinds": [],
+    "rollback_iterations": 0,
+    "rollback_max_steps": 6,
+    "rule_stats": {
+      "naive_topo_check_only": {
+        "avg_latency_delta_ms": null,
+        "final_state_preserved_rate": 1.0,
+        "last_updated_at": "2026-07-06T12:49:14.415544+00:00",
+        "m6_alignment": {
+          "alignment_status_counts": {
+            "PROVED": 1
+          },
+          "final_counterexample_scenarios": [],
+          "matched_scenarios": [
+            "naive_long-chain_213"
+          ],
+          "resource_preserved_scenarios": [
+            "naive_long-chain_213"
+          ],
+          "rollback_touched": false,
+          "strict_pass_scenarios": [
+            "naive_long-chain_213"
+          ],
+          "tolerant_pass_scenarios": [
+            "naive_long-chain_213"
+          ]
+        },
+        "n_applied": 1,
+        "n_counterexamples": 0,
+        "n_matched": 1,
+        "n_success": 1,
+        "p95_latency_delta_ms": null,
+        "resource_protocol_preserved_rate": 1.0,
+        "rule_id": "naive_topo_check_only",
+        "trace_preserved_rate": 1.0
+      }
+    },
+    "runtime_policy_summary": [],
+    "scenario_total": 1,
+    "strict_pass": 1,
+    "tolerant_pass": 1
+  },
+  "generated_at": "2026-07-06T12:49:14.415544+00:00",
+  "hard_edge_proof": {
+    "acyclic": true,
+    "edge_count": 0,
+    "edges": []
+  },
+  "integration": "naive_long-chain_213",
+  "mssu_signatures": [
+    {
+      "mssu_id": "m001",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m002",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m003",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m004",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m005",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m006",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m007",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m008",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m009",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m010",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m011",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m012",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m013",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m014",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m015",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m016",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m017",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m018",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m019",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m020",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m021",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m022",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m023",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m024",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m025",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m026",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m027",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m028",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m029",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m030",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m031",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m032",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m033",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m034",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m035",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m036",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m037",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m038",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    },
+    {
+      "mssu_id": "m039",
+      "phase": "RUNTIME",
+      "side_effect_sig": [],
+      "type": "ACT"
+    }
+  ],
+  "plan_summary": {
+    "action_count": 39,
+    "batch_count": 11,
+    "batches": [
+      {
+        "batch_id": "naive_batch_000",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          4
+        ],
+        "guard_count": 0,
+        "max_group_size": 4,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_001",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          4
+        ],
+        "guard_count": 0,
+        "max_group_size": 4,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_002",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          4
+        ],
+        "guard_count": 0,
+        "max_group_size": 4,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_003",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          4
+        ],
+        "guard_count": 0,
+        "max_group_size": 4,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_004",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          4
+        ],
+        "guard_count": 0,
+        "max_group_size": 4,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_005",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          4
+        ],
+        "guard_count": 0,
+        "max_group_size": 4,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_006",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          4
+        ],
+        "guard_count": 0,
+        "max_group_size": 4,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_007",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          4
+        ],
+        "guard_count": 0,
+        "max_group_size": 4,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_008",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          4
+        ],
+        "guard_count": 0,
+        "max_group_size": 4,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_009",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          2
+        ],
+        "guard_count": 0,
+        "max_group_size": 2,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      },
+      {
+        "batch_id": "naive_batch_010",
+        "constraint_kinds": [],
+        "fallback_count": 0,
+        "group_count": 1,
+        "group_sizes": [
+          1
+        ],
+        "guard_count": 0,
+        "max_group_size": 1,
+        "rate_policy": {
+          "adaptive_control_count": 0,
+          "batch_rule_count": 0,
+          "burst": null,
+          "max_qps": null,
+          "window_ms": null
+        },
+        "session_policy": {}
+      }
+    ],
+    "forced_pick_batch_count": 0,
+    "group_count": 11,
+    "max_group_size": 4,
+    "policy": {
+      "ble_parallel": 1,
+      "cloud_parallel": 4,
+      "local_parallel": 4,
+      "max_parallel": 4
+    },
+    "policy_snapshot": {}
+  },
+  "profile_version": "naive_topo_parallel/dataset_groups",
+  "schema_version": "execution_certificate/v1",
+  "soft_constraints": []
+}

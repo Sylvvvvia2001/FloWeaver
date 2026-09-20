@@ -1,0 +1,319 @@
+{
+  "integration": "ecobee",
+  "runtime_families": [
+    {
+      "action_kind": "read_runtime",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "ecobee:thermostat.home_1",
+          "home_1",
+          "thermostat"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "status",
+          "poll_update"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [
+        "get_thermostat",
+        "self.data.ecobee.get_thermostat"
+      ],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "collections",
+          "const",
+          "homeassistant",
+          "typing",
+          "util"
+        ],
+        "boost_if_names": [
+          "read_runtime",
+          "async_update",
+          "get_thermostat",
+          "self.data.ecobee.get_thermostat"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "CLOUD_STATUS_CALL",
+      "file_globs": [
+        "ecobee/climate.py"
+      ],
+      "forbidden_context": [
+        "setup_function",
+        "dunder_init",
+        "entity_property_getter"
+      ],
+      "forbidden_path_signals": [
+        "setup_function:async_setup_entry",
+        "control_function:async_setup_entry",
+        "setup_call:async_add_entities",
+        "control_call:thermostat.set_fan_min_on_time",
+        "control_call:thermostat.schedule_update_ha_state",
+        "control_function:set_preset_mode",
+        "control_call:self.data.ecobee.delete_vacation",
+        "control_call:self.data.ecobee.set_climate_hold"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "async_update"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A19"
+      ],
+      "integration": "ecobee",
+      "negative_call_patterns": [
+        "async_add_entities",
+        "async_get_current_platform",
+        "async_register",
+        "async_register_entity_service",
+        "entity_platform.async_get_current_platform",
+        "hass.services.async_register"
+      ],
+      "negative_evidence": [
+        "negative_function:async_setup_entry",
+        "negative_function:set_preset_mode",
+        "negative_function:set_temperature",
+        "negative_function:fan",
+        "negative_function:settings",
+        "negative_call:range",
+        "negative_call:async_add_entities",
+        "negative_call:async_get_current_platform",
+        "negative_call:async_register",
+        "negative_call:async_register_entity_service"
+      ],
+      "negative_function_patterns": [
+        "async_setup_entry",
+        "set_preset_mode",
+        "set_temperature",
+        "fan",
+        "settings",
+        "async_turn_on"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [
+            "range",
+            "async_add_entities",
+            "entity_platform.async_get_current_platform",
+            "hass.services.async_register",
+            "platform.async_register_entity_service",
+            "len",
+            "data.ecobee.get_thermostat",
+            "entities.append"
+          ],
+          "call_patterns": [
+            "range",
+            "async_add_entities",
+            "async_get_current_platform",
+            "async_register",
+            "async_register_entity_service",
+            "len",
+            "get_thermostat",
+            "append"
+          ],
+          "file_path": "data/repo_snapshot/ecobee/climate.py",
+          "function_name": "async_setup_entry",
+          "path_kind": "setup_path",
+          "path_signals": [
+            "setup_function:async_setup_entry",
+            "state_write_function:async_setup_entry",
+            "control_function:async_setup_entry",
+            "read_function:async_setup_entry",
+            "setup_call:async_add_entities",
+            "service_registration_call:hass.services.async_register",
+            "service_registration_call:platform.async_register_entity_service",
+            "read_call:data.ecobee.get_thermostat",
+            "control_call:thermostat.set_fan_min_on_time",
+            "control_call:thermostat.schedule_update_ha_state"
+          ],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -11,
+          "snippet": "203: \n204: async def async_setup_entry(\n205:     hass: HomeAssistant,\n206:     config_entry: EcobeeConfigEntry,\n207:     async_add_entities: AddConfigEntryEntitiesCallback,\n208: ) -> None:\n209:     \"\"\"Set up the ecobee thermostat.\"\"\"\n210: \n211:     data = config_entry.runtime_data\n212:     entities = []\n213: \n214:     for index in range(len(data.ecobee.thermostats)):\n215:         thermostat = data.ecobee.get_thermostat(index)\n216:         if thermostat[\"modelNumber\"] not in ECOBEE_MODEL_TO_NAME:"
+        },
+        {
+          "call_chains": [
+            "hass_to_ecobee_preset.get",
+            "self.data.ecobee.delete_vacation",
+            "self.data.ecobee.set_climate_hold",
+            "self.hold_hours",
+            "self.set_temp_hold",
+            "self.hold_preference",
+            "self.data.ecobee.resume_program",
+            "self.comfort_settings.items"
+          ],
+          "call_patterns": [
+            "get",
+            "delete_vacation",
+            "set_climate_hold",
+            "hold_hours",
+            "set_temp_hold",
+            "hold_preference",
+            "resume_program",
+            "items"
+          ],
+          "file_path": "data/repo_snapshot/ecobee/climate.py",
+          "function_name": "set_preset_mode",
+          "path_kind": "control_path",
+          "path_signals": [
+            "control_function:set_preset_mode",
+            "control_call:self.data.ecobee.delete_vacation",
+            "control_call:self.data.ecobee.set_climate_hold",
+            "control_call:self.set_temp_hold",
+            "control_call:self.data.ecobee.resume_program"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -12,
+          "snippet": "646: \n647:     def set_preset_mode(self, preset_mode: str) -> None:\n648:         \"\"\"Activate a preset.\"\"\"\n649:         preset_mode = HASS_TO_ECOBEE_PRESET.get(preset_mode, preset_mode)\n650: \n651:         if preset_mode == self.preset_mode:\n652:             return\n653: \n654:         self.update_without_throttle = True\n655: \n656:         # If we are currently in vacation mode, cancel it.\n657:         if self.preset_mode == PRESET_VACATION:\n658:             self.data.ecobee.delete_vacation(self.thermostat_index, self.vacation)\n659:"
+        },
+        {
+          "call_chains": [
+            "kwargs.get",
+            "self.set_auto_temp_hold",
+            "self.set_temp_hold",
+            "_logger.error"
+          ],
+          "call_patterns": [
+            "get",
+            "set_auto_temp_hold",
+            "set_temp_hold",
+            "error"
+          ],
+          "file_path": "data/repo_snapshot/ecobee/climate.py",
+          "function_name": "set_temperature",
+          "path_kind": "control_path",
+          "path_signals": [
+            "control_function:set_temperature",
+            "control_call:self.set_auto_temp_hold",
+            "control_call:self.set_temp_hold"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -12,
+          "snippet": "776: \n777:     def set_temperature(self, **kwargs: Any) -> None:\n778:         \"\"\"Set new target temperature.\"\"\"\n779:         low_temp = kwargs.get(ATTR_TARGET_TEMP_LOW)\n780:         high_temp = kwargs.get(ATTR_TARGET_TEMP_HIGH)\n781:         temp = kwargs.get(ATTR_TEMPERATURE)\n782: \n783:         if self.hvac_mode == HVACMode.HEAT_COOL and (\n784:             low_temp is not None or high_temp is not None\n785:         ):\n786:             self.set_auto_temp_hold(low_temp, high_temp)\n787:         elif temp is not None:\n788:             self.set_temp_hold(temp)\n789:         else:"
+        },
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/ecobee/climate.py",
+          "function_name": "fan",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:fan"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "492:     @property\n493:     def fan(self) -> str:\n494:         \"\"\"Return the current fan status.\"\"\"\n495:         if \"fan\" in self.thermostat[\"equipmentStatus\"]:\n496:             return STATE_ON\n497:         return STATE_OFF\n498: \n499:     @property"
+        },
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/ecobee/climate.py",
+          "function_name": "settings",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:settings"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "461:     @property\n462:     def settings(self) -> dict[str, Any]:\n463:         \"\"\"Return the settings of the thermostat.\"\"\"\n464:         return self.thermostat[\"settings\"]\n465: \n466:     @property"
+        }
+      ],
+      "origin_action_id": "A19",
+      "origin_cluster_id": "ecobee__climate__cloud_status_call__read_runtime__cloud",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [
+            "self.data.ecobee.get_thermostat",
+            "self.data.update"
+          ],
+          "call_patterns": [
+            "get_thermostat",
+            "update"
+          ],
+          "file_path": "data/repo_snapshot/ecobee/climate.py",
+          "function_name": "async_update",
+          "path_kind": "read_path",
+          "path_signals": [
+            "read_function:async_update",
+            "read_call:self.data.ecobee.get_thermostat",
+            "refresh_call:self.data.update",
+            "awaited_refresh_call:self.data.update"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 12,
+          "snippet": "391: \n392:     async def async_update(self) -> None:\n393:         \"\"\"Get the latest state from the thermostat.\"\"\"\n394:         if self.update_without_throttle:\n395:             await self.data.update(no_throttle=True)\n396:             self.update_without_throttle = False\n397:         else:\n398:             await self.data.update()\n399:         self.thermostat = self.data.ecobee.get_thermostat(self.thermostat_index)\n400:         if self.hvac_mode != HVACMode.OFF:\n401:             self._last_active_hvac_mode = self.hvac_mode\n402: \n403:     @property"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read"
+      ],
+      "required_context": [
+        "runtime_update_path"
+      ],
+      "required_path_signals": [
+        "read_function:async_update",
+        "read_call:self.data.ecobee.get_thermostat",
+        "refresh_call:self.data.update",
+        "awaited_refresh_call:self.data.update"
+      ],
+      "required_runtime_roles": [
+        "runtime_read"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "ecobee:climate_runtime_status_read",
+      "runtime_archetypes": [
+        "cloud_runtime_read",
+        "entity_wrapper_read",
+        "coordinator_update_path"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:async_update",
+        "runtime_call:get_thermostat",
+        "runtime_call:update",
+        "runtime_call:self.data.ecobee.get_thermostat",
+        "runtime_call:self.data.update",
+        "path_signal:read_function:async_update",
+        "path_signal:read_call:self.data.ecobee.get_thermostat",
+        "path_signal:refresh_call:self.data.update",
+        "path_signal:awaited_refresh_call:self.data.update"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/ecobee/climate.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A19"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+      "why_not_setup": [
+        "exclude_role:setup:async_setup_entry",
+        "exclude_role:runtime_write:set_preset_mode",
+        "exclude_role:runtime_write:set_temperature",
+        "exclude_role:property_getter:fan",
+        "exclude_role:property_getter:settings",
+        "exclude_path_signal:setup_function:async_setup_entry",
+        "exclude_path_signal:control_function:async_setup_entry",
+        "exclude_path_signal:setup_call:async_add_entities"
+      ]
+    }
+  ],
+  "schema_version": "m1_grounding_profile/v3",
+  "version": "draft_llm_v3"
+}

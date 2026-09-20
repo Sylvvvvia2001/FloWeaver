@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_guest_suite_welcome_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Guest Suite Welcome Routine"
+}

@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_mixed_curtain_air_energy_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Curtain + Air + Energy Mixed Supervisor"
+}

@@ -1,0 +1,872 @@
+{
+  "canonicalization_version": "v1",
+  "certificate_id": "cert_c04b51f7eb2f",
+  "counterexamples": [
+    {
+      "counterexample_id": "cex_ec4b333c9b",
+      "culprit_ids": [
+        "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27",
+        "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+        "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:15"
+      ],
+      "diff_summary": {
+        "hunks": [
+          {
+            "anchor": "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27",
+            "baseline_ops": [
+              "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27"
+            ],
+            "optimized_ops": [
+              "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+              "SETUP:HA:COORD_REFRESH:async_setup_entry:6",
+              "SETUP:HA:STATE_WRITE:sensor.vdev_x",
+              "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+              "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+              "TEARDOWN:HA:CLOUD_OP:tuya:device.control"
+            ],
+            "severity": "HIGH"
+          },
+          {
+            "anchor": "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+            "baseline_ops": [
+              "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+              "SETUP:HA:COORD_REFRESH:async_setup_entry:6",
+              "SETUP:HA:STATE_WRITE:sensor.vdev_x",
+              "SETUP:HA:SUBSCRIBE:async_setup_entry:9"
+            ],
+            "optimized_ops": [],
+            "severity": "HIGH"
+          },
+          {
+            "anchor": "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:15",
+            "baseline_ops": [
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:15",
+              "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+              "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+              "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          }
+        ]
+      },
+      "scenario_id": "baseline_happy_path__run0",
+      "violated_assertion": "observable_semantic_equivalence"
+    },
+    {
+      "counterexample_id": "cex_d4507a444b",
+      "culprit_ids": [
+        "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27",
+        "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+        "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:15"
+      ],
+      "diff_summary": {
+        "hunks": [
+          {
+            "anchor": "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27",
+            "baseline_ops": [
+              "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27"
+            ],
+            "optimized_ops": [
+              "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+              "SETUP:HA:COORD_REFRESH:async_setup_entry:6",
+              "SETUP:HA:STATE_WRITE:sensor.vdev_x",
+              "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+              "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+              "TEARDOWN:HA:CLOUD_OP:tuya:device.control"
+            ],
+            "severity": "HIGH"
+          },
+          {
+            "anchor": "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+            "baseline_ops": [
+              "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+              "SETUP:HA:COORD_REFRESH:async_setup_entry:6",
+              "SETUP:HA:STATE_WRITE:sensor.vdev_x",
+              "SETUP:HA:SUBSCRIBE:async_setup_entry:9"
+            ],
+            "optimized_ops": [],
+            "severity": "HIGH"
+          },
+          {
+            "anchor": "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:15",
+            "baseline_ops": [
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:15",
+              "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+              "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+              "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          }
+        ]
+      },
+      "scenario_id": "baseline_happy_path__run1",
+      "violated_assertion": "observable_semantic_equivalence"
+    },
+    {
+      "counterexample_id": "cex_e6bc0169c7",
+      "culprit_ids": [
+        "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27",
+        "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+        "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:15"
+      ],
+      "diff_summary": {
+        "hunks": [
+          {
+            "anchor": "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27",
+            "baseline_ops": [
+              "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27"
+            ],
+            "optimized_ops": [
+              "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+              "SETUP:HA:COORD_REFRESH:async_setup_entry:6",
+              "SETUP:HA:STATE_WRITE:sensor.vdev_x",
+              "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+              "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+              "TEARDOWN:HA:CLOUD_OP:tuya:device.control"
+            ],
+            "severity": "HIGH"
+          },
+          {
+            "anchor": "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+            "baseline_ops": [
+              "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+              "SETUP:HA:COORD_REFRESH:async_setup_entry:6",
+              "SETUP:HA:STATE_WRITE:sensor.vdev_x",
+              "SETUP:HA:SUBSCRIBE:async_setup_entry:9"
+            ],
+            "optimized_ops": [],
+            "severity": "HIGH"
+          },
+          {
+            "anchor": "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:15",
+            "baseline_ops": [
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:15",
+              "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+              "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+              "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          }
+        ]
+      },
+      "scenario_id": "fault_cloud_429__run0",
+      "violated_assertion": "observable_semantic_equivalence"
+    },
+    {
+      "counterexample_id": "cex_c2093c0df2",
+      "culprit_ids": [
+        "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27",
+        "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+        "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:15"
+      ],
+      "diff_summary": {
+        "hunks": [
+          {
+            "anchor": "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27",
+            "baseline_ops": [
+              "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27"
+            ],
+            "optimized_ops": [
+              "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+              "SETUP:HA:COORD_REFRESH:async_setup_entry:6",
+              "SETUP:HA:STATE_WRITE:sensor.vdev_x",
+              "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+              "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+              "TEARDOWN:HA:CLOUD_OP:tuya:device.control"
+            ],
+            "severity": "HIGH"
+          },
+          {
+            "anchor": "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+            "baseline_ops": [
+              "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+              "SETUP:HA:COORD_REFRESH:async_setup_entry:6",
+              "SETUP:HA:STATE_WRITE:sensor.vdev_x",
+              "SETUP:HA:SUBSCRIBE:async_setup_entry:9"
+            ],
+            "optimized_ops": [],
+            "severity": "HIGH"
+          },
+          {
+            "anchor": "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:15",
+            "baseline_ops": [
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:15",
+              "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+              "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+              "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          }
+        ]
+      },
+      "scenario_id": "fault_cloud_429__run1",
+      "violated_assertion": "observable_semantic_equivalence"
+    },
+    {
+      "counterexample_id": "cex_1b2d9371f7",
+      "culprit_ids": [
+        "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27",
+        "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+        "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:15"
+      ],
+      "diff_summary": {
+        "hunks": [
+          {
+            "anchor": "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27",
+            "baseline_ops": [
+              "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27"
+            ],
+            "optimized_ops": [
+              "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+              "SETUP:HA:COORD_REFRESH:async_setup_entry:6",
+              "SETUP:HA:STATE_WRITE:sensor.vdev_x",
+              "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+              "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+              "TEARDOWN:HA:CLOUD_OP:tuya:device.control"
+            ],
+            "severity": "HIGH"
+          },
+          {
+            "anchor": "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+            "baseline_ops": [
+              "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+              "SETUP:HA:COORD_REFRESH:async_setup_entry:6",
+              "SETUP:HA:STATE_WRITE:sensor.vdev_x",
+              "SETUP:HA:SUBSCRIBE:async_setup_entry:9"
+            ],
+            "optimized_ops": [],
+            "severity": "HIGH"
+          },
+          {
+            "anchor": "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:15",
+            "baseline_ops": [
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:15",
+              "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+              "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+              "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          }
+        ]
+      },
+      "scenario_id": "fault_ble_disconnect__run0",
+      "violated_assertion": "observable_semantic_equivalence"
+    },
+    {
+      "counterexample_id": "cex_ac23d11637",
+      "culprit_ids": [
+        "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27",
+        "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+        "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:15"
+      ],
+      "diff_summary": {
+        "hunks": [
+          {
+            "anchor": "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27",
+            "baseline_ops": [
+              "RUNTIME:HA:COORD_REFRESH:async_config_entry_first_refresh:27"
+            ],
+            "optimized_ops": [
+              "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+              "SETUP:HA:COORD_REFRESH:async_setup_entry:6",
+              "SETUP:HA:STATE_WRITE:sensor.vdev_x",
+              "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+              "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+              "TEARDOWN:HA:CLOUD_OP:tuya:device.control"
+            ],
+            "severity": "HIGH"
+          },
+          {
+            "anchor": "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+            "baseline_ops": [
+              "SETUP:HA:ENTRY_SETUP:async_setup_entry:4",
+              "SETUP:HA:COORD_REFRESH:async_setup_entry:6",
+              "SETUP:HA:STATE_WRITE:sensor.vdev_x",
+              "SETUP:HA:SUBSCRIBE:async_setup_entry:9"
+            ],
+            "optimized_ops": [],
+            "severity": "HIGH"
+          },
+          {
+            "anchor": "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:15",
+            "baseline_ops": [
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:15",
+              "TEARDOWN:HA:ENTRY_UNLOAD:async_unload_entry:14",
+              "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+              "TEARDOWN:HA:CLOUD_OP:tuya:device.control",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18",
+              "TEARDOWN:HA:UNSUBSCRIBE:async_unload_entry:18"
+            ],
+            "optimized_ops": [],
+            "severity": "MEDIUM"
+          }
+        ]
+      },
+      "scenario_id": "fault_ble_disconnect__run1",
+      "violated_assertion": "observable_semantic_equivalence"
+    }
+  ],
+  "differential_summary": {
+    "counterexample_count": 6,
+    "focus_terms": [
+      "BLE_OP",
+      "CLOUD_OP",
+      "STATE_WRITE",
+      "vibeaura.run",
+      "sensor.vdev_x",
+      "ble:aa:bb:cc",
+      "tuya:device.control"
+    ],
+    "rule_stats": {
+      "rule_coord_refresh_9c4aca1990": {
+        "coverage": 1.0,
+        "has_must_evidence": 0.0,
+        "pass_rate": 0.0
+      },
+      "rule_entry_setup_91e19cefcb": {
+        "coverage": 1.0,
+        "has_must_evidence": 0.0,
+        "pass_rate": 0.0
+      },
+      "rule_entry_unload_da7471ab82": {
+        "coverage": 1.0,
+        "has_must_evidence": 0.0,
+        "pass_rate": 0.0
+      },
+      "rule_general_fa9e50150b": {
+        "coverage": 1.0,
+        "has_must_evidence": 1.0,
+        "pass_rate": 0.0
+      },
+      "rule_lifecycle_79ea0726ef": {
+        "coverage": 1.0,
+        "has_must_evidence": 1.0,
+        "pass_rate": 0.0
+      },
+      "rule_state_write_b839bfafd0": {
+        "coverage": 1.0,
+        "has_must_evidence": 0.0,
+        "pass_rate": 0.0
+      },
+      "rule_subscribe_a84e504152": {
+        "coverage": 1.0,
+        "has_must_evidence": 0.0,
+        "pass_rate": 0.0
+      },
+      "rule_unsubscribe_2897b3e3e9": {
+        "coverage": 1.0,
+        "has_must_evidence": 0.0,
+        "pass_rate": 0.0
+      }
+    },
+    "scenario_total": 6,
+    "strict_pass": 0,
+    "tolerant_pass": 0
+  },
+  "generated_at": "2026-03-06T06:06:06.881529+00:00",
+  "hard_edge_proof": {
+    "acyclic": true,
+    "edge_count": 18,
+    "edges": [
+      {
+        "dst_msf": "msf00_006_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A1->A3",
+          "write_depends_on_read"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf00_001_ble_op"
+      },
+      {
+        "dst_msf": "msf01_002_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A1->A3",
+          "write_depends_on_read"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf00_001_ble_op"
+      },
+      {
+        "dst_msf": "msf00_006_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A1->A3",
+          "write_depends_on_read"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf00_002_ble_op"
+      },
+      {
+        "dst_msf": "msf01_002_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A1->A3",
+          "write_depends_on_read"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf00_002_ble_op"
+      },
+      {
+        "dst_msf": "msf00_006_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A1->A3",
+          "write_depends_on_read"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf00_003_ble_op"
+      },
+      {
+        "dst_msf": "msf01_002_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A1->A3",
+          "write_depends_on_read"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf00_003_ble_op"
+      },
+      {
+        "dst_msf": "msf00_006_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A2->A3",
+          "write_depends_on_api"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf00_000_cloud_op"
+      },
+      {
+        "dst_msf": "msf01_002_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A2->A3",
+          "write_depends_on_api"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf00_000_cloud_op"
+      },
+      {
+        "dst_msf": "msf00_006_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A2->A3",
+          "write_depends_on_api"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf00_008_cloud_op"
+      },
+      {
+        "dst_msf": "msf01_002_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A2->A3",
+          "write_depends_on_api"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf00_008_cloud_op"
+      },
+      {
+        "dst_msf": "msf00_006_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A2->A3",
+          "write_depends_on_api"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf00_009_cloud_op"
+      },
+      {
+        "dst_msf": "msf01_002_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A2->A3",
+          "write_depends_on_api"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf00_009_cloud_op"
+      },
+      {
+        "dst_msf": "msf00_006_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A2->A3",
+          "write_depends_on_api"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf01_001_cloud_op"
+      },
+      {
+        "dst_msf": "msf01_002_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A2->A3",
+          "write_depends_on_api"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf01_001_cloud_op"
+      },
+      {
+        "dst_msf": "msf00_006_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A2->A3",
+          "write_depends_on_api"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf01_004_cloud_op"
+      },
+      {
+        "dst_msf": "msf01_002_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A2->A3",
+          "write_depends_on_api"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf01_004_cloud_op"
+      },
+      {
+        "dst_msf": "msf00_006_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A2->A3",
+          "write_depends_on_api"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf01_005_cloud_op"
+      },
+      {
+        "dst_msf": "msf01_002_state_write",
+        "guardable": false,
+        "justification": [
+          "vdev_dep:A2->A3",
+          "write_depends_on_api"
+        ],
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf01_005_cloud_op"
+      }
+    ]
+  },
+  "integration": "vdev_demo",
+  "msf_signatures": [
+    {
+      "msf_id": "msf00_000_cloud_op",
+      "phase": "RUNTIME",
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_ble",
+        "external_call_cloud"
+      ],
+      "type": "ACT"
+    },
+    {
+      "msf_id": "msf00_001_ble_op",
+      "phase": "RUNTIME",
+      "side_effect_sig": [
+        "ble_op",
+        "external_call_ble",
+        "external_call_cloud"
+      ],
+      "type": "ACT"
+    },
+    {
+      "msf_id": "msf00_002_ble_op",
+      "phase": "RUNTIME",
+      "side_effect_sig": [
+        "ble_op",
+        "external_call_ble",
+        "external_call_cloud"
+      ],
+      "type": "ACT"
+    },
+    {
+      "msf_id": "msf00_003_ble_op",
+      "phase": "RUNTIME",
+      "side_effect_sig": [
+        "ble_op",
+        "external_call_ble",
+        "external_call_cloud"
+      ],
+      "type": "ACT"
+    },
+    {
+      "msf_id": "msf00_004_entry_setup",
+      "phase": "SETUP",
+      "side_effect_sig": [
+        "entry_setup",
+        "state_write"
+      ],
+      "type": "INIT"
+    },
+    {
+      "msf_id": "msf00_005_coord_refresh",
+      "phase": "SETUP",
+      "side_effect_sig": [
+        "coord_refresh",
+        "state_write"
+      ],
+      "type": "SYNC"
+    },
+    {
+      "msf_id": "msf00_006_state_write",
+      "phase": "SETUP",
+      "side_effect_sig": [
+        "state_write"
+      ],
+      "type": "UPDATE"
+    },
+    {
+      "msf_id": "msf00_007_entry_unload",
+      "phase": "TEARDOWN",
+      "side_effect_sig": [
+        "entry_unload",
+        "external_call_cloud"
+      ],
+      "type": "CLEANUP"
+    },
+    {
+      "msf_id": "msf00_008_cloud_op",
+      "phase": "TEARDOWN",
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ],
+      "type": "ACT"
+    },
+    {
+      "msf_id": "msf00_009_cloud_op",
+      "phase": "TEARDOWN",
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ],
+      "type": "ACT"
+    },
+    {
+      "msf_id": "msf01_000_entry_setup",
+      "phase": "SETUP",
+      "side_effect_sig": [
+        "entry_setup",
+        "external_call_cloud",
+        "state_write"
+      ],
+      "type": "INIT"
+    },
+    {
+      "msf_id": "msf01_001_cloud_op",
+      "phase": "SETUP",
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud",
+        "state_write"
+      ],
+      "type": "ACT"
+    },
+    {
+      "msf_id": "msf01_002_state_write",
+      "phase": "SETUP",
+      "side_effect_sig": [
+        "external_call_cloud",
+        "state_write"
+      ],
+      "type": "UPDATE"
+    },
+    {
+      "msf_id": "msf01_003_entry_unload",
+      "phase": "TEARDOWN",
+      "side_effect_sig": [
+        "entry_unload",
+        "external_call_cloud"
+      ],
+      "type": "CLEANUP"
+    },
+    {
+      "msf_id": "msf01_004_cloud_op",
+      "phase": "TEARDOWN",
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ],
+      "type": "ACT"
+    },
+    {
+      "msf_id": "msf01_005_cloud_op",
+      "phase": "TEARDOWN",
+      "side_effect_sig": [
+        "cloud_op",
+        "external_call_cloud"
+      ],
+      "type": "ACT"
+    }
+  ],
+  "profile_version": "ha_profile_default",
+  "schema_version": "execution_certificate/v1",
+  "soft_constraints": [
+    {
+      "fallback": "preserve_action_order",
+      "guard": "true",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "ble_and_cloud_overlap_risk"
+      },
+      "scope": [
+        "msf00_000_cloud_op",
+        "msf00_003_ble_op",
+        "msf01_004_cloud_op",
+        "msf00_008_cloud_op",
+        "msf01_005_cloud_op",
+        "msf01_001_cloud_op",
+        "msf00_009_cloud_op",
+        "msf00_001_ble_op",
+        "msf00_002_ble_op"
+      ]
+    },
+    {
+      "fallback": "disable_optimization_for_scope",
+      "guard": "runtime_metrics_available",
+      "kind": "COALESCE_STATE_WRITE",
+      "params": {
+        "window_ms": 120
+      },
+      "scope": [
+        "msf00_004_entry_setup",
+        "msf00_005_coord_refresh",
+        "msf00_006_state_write",
+        "msf01_000_entry_setup",
+        "msf01_001_cloud_op",
+        "msf01_002_state_write"
+      ]
+    },
+    {
+      "fallback": "disable_optimization_for_scope",
+      "guard": "runtime_metrics_available",
+      "kind": "COALESCE_STATE_WRITE",
+      "params": {
+        "window_ms": 120
+      },
+      "scope": [
+        "msf00_004_entry_setup",
+        "msf00_005_coord_refresh",
+        "msf00_006_state_write",
+        "msf01_000_entry_setup",
+        "msf01_001_cloud_op",
+        "msf01_002_state_write"
+      ]
+    },
+    {
+      "fallback": "reduce_parallelism",
+      "guard": "resource_constrained",
+      "kind": "BUDGET_K",
+      "params": {
+        "limit": 1,
+        "resource": "BLE"
+      },
+      "scope": [
+        "msf00_000_cloud_op",
+        "msf00_001_ble_op",
+        "msf00_002_ble_op",
+        "msf00_003_ble_op",
+        "msf00_006_state_write",
+        "msf00_008_cloud_op",
+        "msf00_009_cloud_op",
+        "msf01_001_cloud_op",
+        "msf01_002_state_write",
+        "msf01_004_cloud_op",
+        "msf01_005_cloud_op"
+      ]
+    },
+    {
+      "fallback": "reduce_parallelism",
+      "guard": "resource_constrained",
+      "kind": "BUDGET_K",
+      "params": {
+        "limit": 4,
+        "resource": "CLOUD"
+      },
+      "scope": [
+        "msf00_000_cloud_op",
+        "msf00_001_ble_op",
+        "msf00_002_ble_op",
+        "msf00_003_ble_op",
+        "msf00_006_state_write",
+        "msf00_008_cloud_op",
+        "msf00_009_cloud_op",
+        "msf01_001_cloud_op",
+        "msf01_002_state_write",
+        "msf01_004_cloud_op",
+        "msf01_005_cloud_op"
+      ]
+    },
+    {
+      "fallback": "reduce_parallelism",
+      "guard": "resource_constrained",
+      "kind": "BUDGET_K",
+      "params": {
+        "limit": 6,
+        "resource": "TOTAL"
+      },
+      "scope": [
+        "msf00_000_cloud_op",
+        "msf00_001_ble_op",
+        "msf00_002_ble_op",
+        "msf00_003_ble_op",
+        "msf00_006_state_write",
+        "msf00_008_cloud_op",
+        "msf00_009_cloud_op",
+        "msf01_001_cloud_op",
+        "msf01_002_state_write",
+        "msf01_004_cloud_op",
+        "msf01_005_cloud_op"
+      ]
+    },
+    {
+      "fallback": "set_ble_parallelism_to_1",
+      "guard": "ble_timeout_rate_high",
+      "kind": "NO_OVERLAP",
+      "params": {
+        "max_parallel": 1,
+        "resource": "BLE"
+      },
+      "scope": [
+        "msf00_001_ble_op",
+        "msf00_002_ble_op",
+        "msf00_003_ble_op"
+      ]
+    },
+    {
+      "fallback": "reduce_qps_and_batch_size",
+      "guard": "recent_429_rate_high",
+      "kind": "BACKOFF_WINDOW",
+      "params": {
+        "base_ms": 200,
+        "factor": 2.0
+      },
+      "scope": [
+        "msf00_000_cloud_op",
+        "msf00_008_cloud_op",
+        "msf00_009_cloud_op",
+        "msf01_001_cloud_op",
+        "msf01_004_cloud_op",
+        "msf01_005_cloud_op"
+      ]
+    }
+  ]
+}

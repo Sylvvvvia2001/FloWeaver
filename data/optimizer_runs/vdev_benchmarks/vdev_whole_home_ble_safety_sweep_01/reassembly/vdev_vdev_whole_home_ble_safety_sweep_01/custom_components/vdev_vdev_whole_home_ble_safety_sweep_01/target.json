@@ -1,0 +1,1247 @@
+{
+  "constraints": {
+    "optimization_knobs": {
+      "allow_concurrency": true,
+      "max_concurrency": {
+        "ble": 1,
+        "cloud": 4,
+        "local": 6,
+        "total": 10
+      }
+    },
+    "source_protocols": [
+      "BLE",
+      "HA"
+    ]
+  },
+  "critical_action_ids": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "A8",
+    "A9",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15"
+  ],
+  "entrypoint": {
+    "kind": "ha_service",
+    "service": {
+      "domain": "vibeaura",
+      "name": "run_whole_home_ble_safety_sweep_01"
+    }
+  },
+  "hard_dependencies": [
+    {
+      "after": "A13",
+      "before": "A12",
+      "reason": "transport_connect_before_subscription"
+    },
+    {
+      "after": "A14",
+      "before": "A1",
+      "reason": "ble_write_depends_on_a1"
+    },
+    {
+      "after": "A14",
+      "before": "A2",
+      "reason": "ble_write_depends_on_a2"
+    },
+    {
+      "after": "A14",
+      "before": "A3",
+      "reason": "ble_write_depends_on_a3"
+    },
+    {
+      "after": "A14",
+      "before": "A4",
+      "reason": "ble_write_depends_on_a4"
+    },
+    {
+      "after": "A14",
+      "before": "A5",
+      "reason": "ble_write_depends_on_a5"
+    },
+    {
+      "after": "A14",
+      "before": "A6",
+      "reason": "ble_write_depends_on_a6"
+    },
+    {
+      "after": "A14",
+      "before": "A7",
+      "reason": "ble_write_depends_on_a7"
+    },
+    {
+      "after": "A14",
+      "before": "A8",
+      "reason": "ble_write_depends_on_a8"
+    },
+    {
+      "after": "A14",
+      "before": "A9",
+      "reason": "ble_write_depends_on_a9"
+    },
+    {
+      "after": "A14",
+      "before": "A10",
+      "reason": "ble_write_depends_on_a10"
+    },
+    {
+      "after": "A14",
+      "before": "A11",
+      "reason": "ble_write_depends_on_a11"
+    },
+    {
+      "after": "A14",
+      "before": "A12",
+      "reason": "ble_write_depends_on_a12"
+    },
+    {
+      "after": "A14",
+      "before": "A13",
+      "reason": "ble_write_depends_on_a13"
+    },
+    {
+      "after": "A15",
+      "before": "A14",
+      "reason": "overall_write_depends_on_ble_lane"
+    }
+  ],
+  "meta": {
+    "benchmark": {
+      "focus_areas": [
+        "BLE corridor length and min-gap behavior",
+        "Connect-before-subscribe under a larger BLE sweep",
+        "Avoiding hidden lane inflation from non-BLE work",
+        "Very short writeback tail after a long BLE lane"
+      ],
+      "group": "Household Stress and Abnormality Routines",
+      "story": "At a fixed time, the routine performs one realistic whole-home BLE sweep over curtains, door or window sensors, motion sensors, temperatures, and one ESPHome transport pair.",
+      "strengths": [
+        "BLE-heavy case is realistic rather than purely synthetic.",
+        "Includes both status-style reads and a connect plus subscribe pair.",
+        "Useful upper-bound case for BLE lane conservatism and future micro refinements."
+      ]
+    },
+    "name": "Whole-Home BLE Safety Sweep",
+    "spec_version": "0.1",
+    "vdev_id": "vdev_whole_home_ble_safety_sweep_01"
+  },
+  "objectives": {
+    "metrics": {
+      "e2e_latency_ms": {
+        "p95": 2200
+      },
+      "lane_completion_ms": {
+        "ble_lane_p95": 900,
+        "cloud_lane_p95": 1400,
+        "local_lane_p95": 600
+      }
+    },
+    "primary": "minimize_tail_latency_under_mixed_transport"
+  },
+  "soft_dependencies": [
+    {
+      "after": "A2",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A3",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A4",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A5",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A6",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A7",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A8",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A9",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A10",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A11",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A12",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A13",
+      "before": "A1",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A3",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A4",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A5",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A6",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A7",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A8",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A9",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A10",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A11",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A12",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A13",
+      "before": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A4",
+      "before": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A5",
+      "before": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A6",
+      "before": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A7",
+      "before": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A8",
+      "before": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A9",
+      "before": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A10",
+      "before": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A11",
+      "before": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A12",
+      "before": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A13",
+      "before": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A5",
+      "before": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A6",
+      "before": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A7",
+      "before": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A8",
+      "before": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A9",
+      "before": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A10",
+      "before": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A11",
+      "before": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A12",
+      "before": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A13",
+      "before": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A6",
+      "before": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A7",
+      "before": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A8",
+      "before": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A9",
+      "before": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A10",
+      "before": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A11",
+      "before": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A12",
+      "before": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A13",
+      "before": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A7",
+      "before": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A8",
+      "before": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A9",
+      "before": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A10",
+      "before": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A11",
+      "before": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A12",
+      "before": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A13",
+      "before": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A8",
+      "before": "A7",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A9",
+      "before": "A7",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A10",
+      "before": "A7",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A11",
+      "before": "A7",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A12",
+      "before": "A7",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A13",
+      "before": "A7",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A9",
+      "before": "A8",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A10",
+      "before": "A8",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A11",
+      "before": "A8",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A12",
+      "before": "A8",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A13",
+      "before": "A8",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A10",
+      "before": "A9",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A11",
+      "before": "A9",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A12",
+      "before": "A9",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A13",
+      "before": "A9",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A11",
+      "before": "A10",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A12",
+      "before": "A10",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A13",
+      "before": "A10",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A12",
+      "before": "A11",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A13",
+      "before": "A11",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "after": "A13",
+      "before": "A12",
+      "reason": "shared_radio_or_transport_budget"
+    }
+  ],
+  "source_scope": {
+    "commit": "HEAD",
+    "domains": [
+      "esphome",
+      "switchbot",
+      "xiaomi_ble"
+    ],
+    "entrypoints": [
+      {
+        "kind": "ha_service",
+        "service": {
+          "domain": "vibeaura",
+          "name": "run_whole_home_ble_safety_sweep_01"
+        }
+      }
+    ],
+    "file_bindings": [
+      {
+        "device_id": "ble:switchbot:curtain_ble_sweep_living",
+        "file_path": "data/repo_snapshot/switchbot/cover.py",
+        "integration": "switchbot",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:curtain_ble_sweep_master",
+        "file_path": "data/repo_snapshot/switchbot/cover.py",
+        "integration": "switchbot",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:curtain_ble_sweep_study",
+        "file_path": "data/repo_snapshot/switchbot/cover.py",
+        "integration": "switchbot",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:xiaomi_ble:door_sensor_ble_sweep_entry",
+        "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:xiaomi_ble:window_sensor_ble_sweep_kitchen",
+        "file_path": "data/repo_snapshot/xiaomi_ble/event.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:xiaomi_ble:window_sensor_ble_sweep_bedroom",
+        "file_path": "data/repo_snapshot/xiaomi_ble/event.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:xiaomi_ble:door_sensor_ble_sweep_balcony",
+        "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:xiaomi_ble:motion_sensor_ble_sweep_living",
+        "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:xiaomi_ble:motion_sensor_ble_sweep_hall",
+        "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:xiaomi_ble:temp_sensor_ble_sweep_1",
+        "file_path": "data/repo_snapshot/xiaomi_ble/sensor.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:xiaomi_ble:temp_sensor_ble_sweep_2",
+        "file_path": "data/repo_snapshot/xiaomi_ble/sensor.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:esphome:air_node_ble_sweep",
+        "file_path": "data/repo_snapshot/esphome/__init__.py",
+        "integration": "esphome",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:esphome:relay_node_ble_sweep",
+        "file_path": "data/repo_snapshot/esphome/manager.py",
+        "integration": "esphome",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_whole_home_ble_safety_sweep_ble_lane",
+        "file_path": "data/repo_snapshot/switchbot/fan.py",
+        "integration": "switchbot",
+        "protocols": [
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_whole_home_ble_safety_sweep_overall",
+        "file_path": "data/repo_snapshot/esphome/update.py",
+        "integration": "esphome",
+        "protocols": [
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:esphome:air_node_ble_sweep",
+        "file_path": "data/repo_snapshot/esphome/assist_satellite.py",
+        "integration": "esphome",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:esphome:air_node_ble_sweep",
+        "file_path": "data/repo_snapshot/esphome/climate.py",
+        "integration": "esphome",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      }
+    ],
+    "files": [
+      "data/repo_snapshot/esphome/__init__.py",
+      "data/repo_snapshot/esphome/assist_satellite.py",
+      "data/repo_snapshot/esphome/climate.py",
+      "data/repo_snapshot/esphome/manager.py",
+      "data/repo_snapshot/esphome/update.py",
+      "data/repo_snapshot/switchbot/cover.py",
+      "data/repo_snapshot/switchbot/fan.py",
+      "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+      "data/repo_snapshot/xiaomi_ble/event.py",
+      "data/repo_snapshot/xiaomi_ble/sensor.py"
+    ],
+    "platforms": [
+      "binary_sensor",
+      "cover",
+      "esphome",
+      "event",
+      "manager",
+      "sensor"
+    ],
+    "protocols": [
+      "BLE",
+      "HA"
+    ],
+    "repo_path": "data/repo_snapshot"
+  },
+  "target_anchors": {
+    "anchor_ops": [
+      "BLE_CONNECT",
+      "BLE_GATT_OP",
+      "BLE_NOTIFY_SUBSCRIBE",
+      "BLE_OP",
+      "STATE_WRITE",
+      "SUBSCRIBE"
+    ],
+    "characteristics": [],
+    "device_ids": [
+      "ble:switchbot:curtain_ble_sweep_living",
+      "ble:switchbot:curtain_ble_sweep_master",
+      "ble:switchbot:curtain_ble_sweep_study",
+      "ble:xiaomi_ble:door_sensor_ble_sweep_entry",
+      "ble:xiaomi_ble:window_sensor_ble_sweep_kitchen",
+      "ble:xiaomi_ble:window_sensor_ble_sweep_bedroom",
+      "ble:xiaomi_ble:door_sensor_ble_sweep_balcony",
+      "ble:xiaomi_ble:motion_sensor_ble_sweep_living",
+      "ble:xiaomi_ble:motion_sensor_ble_sweep_hall",
+      "ble:xiaomi_ble:temp_sensor_ble_sweep_1",
+      "ble:xiaomi_ble:temp_sensor_ble_sweep_2",
+      "ble:esphome:air_node_ble_sweep",
+      "ble:esphome:relay_node_ble_sweep"
+    ],
+    "endpoints": [],
+    "entities": [
+      "sensor.vdev_whole_home_ble_safety_sweep_ble_lane",
+      "sensor.vdev_whole_home_ble_safety_sweep_overall"
+    ],
+    "required_state_writes": [
+      "sensor.vdev_whole_home_ble_safety_sweep_ble_lane",
+      "sensor.vdev_whole_home_ble_safety_sweep_overall"
+    ],
+    "service_entrypoints": [
+      "vibeaura.run_whole_home_ble_safety_sweep_01"
+    ]
+  },
+  "validation": {
+    "differential_tests": {
+      "enabled": true,
+      "runs_per_scenario": 2,
+      "scenarios": [
+        "baseline_happy_path",
+        "fault_cloud_429",
+        "fault_ble_disconnect"
+      ]
+    },
+    "fault_model": {
+      "ble_disconnect": true,
+      "cloud_429": true,
+      "network_jitter": true
+    },
+    "grounding_profile_paths": [
+      "data/optimizer_runs/vdev_benchmarks/vdev_whole_home_ble_safety_sweep_01/m1_grounding_profiles_auto/switchbot.json",
+      "data/optimizer_runs/vdev_benchmarks/vdev_whole_home_ble_safety_sweep_01/m1_grounding_profiles_auto/xiaomi_ble.json"
+    ],
+    "llm_detector": {
+      "enabled": true,
+      "max_attempts": 0,
+      "retry_backoff_s": 0.5,
+      "timeout_s": 45
+    },
+    "observation": {
+      "canonicalization_version": "v1",
+      "equivalence_whitelist": [
+        "COALESCE_STATE_WRITE"
+      ],
+      "semantic_ops": [
+        "ENTRY_SETUP",
+        "COORD_REFRESH",
+        "STATE_WRITE",
+        "SUBSCRIBE",
+        "UNSUBSCRIBE",
+        "MQTT_SUBSCRIBE",
+        "BLE_CONNECT",
+        "BLE_DISCONNECT",
+        "BLE_NOTIFY_SUBSCRIBE",
+        "BLE_OP",
+        "BLE_GATT_OP",
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_429_CHECK",
+        "CLOUD_BACKOFF_SLEEP",
+        "CLOUD_BATCH_CALL",
+        "CLOUD_SESSION_REUSE",
+        "LOCAL_API_READ",
+        "POLL_UPDATE"
+      ]
+    },
+    "profile_version": "ha_profile_default",
+    "sampling": {},
+    "source_protocols": [
+      "BLE",
+      "HA"
+    ]
+  },
+  "vdev_actions": [
+    {
+      "action_id": "A1",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:switchbot:curtain_ble_sweep_living"
+        },
+        "domain": "cover",
+        "kind": "ha_service_call",
+        "service": "refresh_cover"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:switchbot:curtain_ble_sweep_living",
+        "id": "ble:switchbot:curtain_ble_sweep_living",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "refresh_cover"
+    },
+    {
+      "action_id": "A2",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:switchbot:curtain_ble_sweep_master"
+        },
+        "domain": "cover",
+        "kind": "ha_service_call",
+        "service": "refresh_cover"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:switchbot:curtain_ble_sweep_master",
+        "id": "ble:switchbot:curtain_ble_sweep_master",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "refresh_cover"
+    },
+    {
+      "action_id": "A3",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:switchbot:curtain_ble_sweep_study"
+        },
+        "domain": "cover",
+        "kind": "ha_service_call",
+        "service": "refresh_cover"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:switchbot:curtain_ble_sweep_study",
+        "id": "ble:switchbot:curtain_ble_sweep_study",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "refresh_cover"
+    },
+    {
+      "action_id": "A4",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:xiaomi_ble:door_sensor_ble_sweep_entry"
+        },
+        "domain": "binary_sensor",
+        "kind": "ha_service_call",
+        "service": "read_sensor"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:xiaomi_ble:door_sensor_ble_sweep_entry",
+        "id": "ble:xiaomi_ble:door_sensor_ble_sweep_entry",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "read_sensor"
+    },
+    {
+      "action_id": "A5",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:xiaomi_ble:window_sensor_ble_sweep_kitchen"
+        },
+        "domain": "event",
+        "kind": "ha_service_call",
+        "service": "read_sensor"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:xiaomi_ble:window_sensor_ble_sweep_kitchen",
+        "id": "ble:xiaomi_ble:window_sensor_ble_sweep_kitchen",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "read_sensor"
+    },
+    {
+      "action_id": "A6",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:xiaomi_ble:window_sensor_ble_sweep_bedroom"
+        },
+        "domain": "event",
+        "kind": "ha_service_call",
+        "service": "read_sensor"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:xiaomi_ble:window_sensor_ble_sweep_bedroom",
+        "id": "ble:xiaomi_ble:window_sensor_ble_sweep_bedroom",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "read_sensor"
+    },
+    {
+      "action_id": "A7",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:xiaomi_ble:door_sensor_ble_sweep_balcony"
+        },
+        "domain": "binary_sensor",
+        "kind": "ha_service_call",
+        "service": "read_sensor"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:xiaomi_ble:door_sensor_ble_sweep_balcony",
+        "id": "ble:xiaomi_ble:door_sensor_ble_sweep_balcony",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "read_sensor"
+    },
+    {
+      "action_id": "A8",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:xiaomi_ble:motion_sensor_ble_sweep_living"
+        },
+        "domain": "binary_sensor",
+        "kind": "ha_service_call",
+        "service": "read_sensor"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:xiaomi_ble:motion_sensor_ble_sweep_living",
+        "id": "ble:xiaomi_ble:motion_sensor_ble_sweep_living",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "read_sensor"
+    },
+    {
+      "action_id": "A9",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:xiaomi_ble:motion_sensor_ble_sweep_hall"
+        },
+        "domain": "binary_sensor",
+        "kind": "ha_service_call",
+        "service": "read_sensor"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:xiaomi_ble:motion_sensor_ble_sweep_hall",
+        "id": "ble:xiaomi_ble:motion_sensor_ble_sweep_hall",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "read_sensor"
+    },
+    {
+      "action_id": "A10",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:xiaomi_ble:temp_sensor_ble_sweep_1"
+        },
+        "domain": "sensor",
+        "kind": "ha_service_call",
+        "service": "read_sensor"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:xiaomi_ble:temp_sensor_ble_sweep_1",
+        "id": "ble:xiaomi_ble:temp_sensor_ble_sweep_1",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "read_sensor"
+    },
+    {
+      "action_id": "A11",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:xiaomi_ble:temp_sensor_ble_sweep_2"
+        },
+        "domain": "sensor",
+        "kind": "ha_service_call",
+        "service": "read_sensor"
+      },
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:xiaomi_ble:temp_sensor_ble_sweep_2",
+        "id": "ble:xiaomi_ble:temp_sensor_ble_sweep_2",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "read_sensor"
+    },
+    {
+      "action_id": "A12",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:esphome:air_node_ble_sweep"
+        },
+        "domain": "esphome",
+        "kind": "ha_service_call",
+        "service": "connect"
+      },
+      "marker_hints": [
+        "BLE_CONNECT",
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:esphome:air_node_ble_sweep",
+        "id": "ble:esphome:air_node_ble_sweep",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "connect"
+    },
+    {
+      "action_id": "A13",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "device_id": "ble:esphome:relay_node_ble_sweep"
+        },
+        "domain": "manager",
+        "kind": "ha_service_call",
+        "service": "subscribe"
+      },
+      "marker_hints": [
+        "BLE_NOTIFY_SUBSCRIBE",
+        "SUBSCRIBE",
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "protocol": "BLE",
+      "side_effects": [],
+      "target": {
+        "device_id": "ble:esphome:relay_node_ble_sweep",
+        "id": "ble:esphome:relay_node_ble_sweep",
+        "kind": "ble_device"
+      },
+      "target_kind": "ble_device",
+      "type": "subscribe"
+    },
+    {
+      "action_id": "A14",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "entity_id": "sensor.vdev_whole_home_ble_safety_sweep_ble_lane"
+        },
+        "domain": "sensor",
+        "kind": "ha_service_call",
+        "service": "publish"
+      },
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "protocol": "HA",
+      "side_effects": [
+        "state_write"
+      ],
+      "target": {
+        "entity_id": "sensor.vdev_whole_home_ble_safety_sweep_ble_lane",
+        "id": "sensor.vdev_whole_home_ble_safety_sweep_ble_lane",
+        "kind": "ha_entity"
+      },
+      "target_kind": "ha_entity",
+      "type": "write"
+    },
+    {
+      "action_id": "A15",
+      "critical": true,
+      "exec": {
+        "blocking": true,
+        "data_template": {
+          "entity_id": "sensor.vdev_whole_home_ble_safety_sweep_overall"
+        },
+        "domain": "sensor",
+        "kind": "ha_service_call",
+        "service": "publish"
+      },
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "protocol": "HA",
+      "side_effects": [
+        "state_write"
+      ],
+      "target": {
+        "entity_id": "sensor.vdev_whole_home_ble_safety_sweep_overall",
+        "id": "sensor.vdev_whole_home_ble_safety_sweep_overall",
+        "kind": "ha_entity"
+      },
+      "target_kind": "ha_entity",
+      "type": "write"
+    }
+  ]
+}

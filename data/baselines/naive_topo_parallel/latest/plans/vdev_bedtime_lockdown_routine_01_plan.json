@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "action_lanes": {
+      "A1": "BLE",
+      "A10": "CLOUD",
+      "A11": "CLOUD",
+      "A12": "CLOUD",
+      "A13": "LOCAL",
+      "A14": "LOCAL",
+      "A15": "LOCAL",
+      "A16": "HA",
+      "A17": "HA",
+      "A18": "HA",
+      "A19": "HA",
+      "A2": "BLE",
+      "A3": "BLE",
+      "A4": "BLE",
+      "A5": "BLE",
+      "A6": "BLE",
+      "A7": "CLOUD",
+      "A8": "CLOUD",
+      "A9": "CLOUD"
+    },
+    "baseline": "naive_topo_parallel",
+    "micro_applicable": false,
+    "node_kind": "action_id",
+    "policy": {
+      "ble_parallel": 1,
+      "cloud_parallel": 4,
+      "local_parallel": 4,
+      "max_parallel": 4
+    }
+  },
+  "ordered_batches": [
+    {
+      "batch_id": "naive_batch_000",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A1"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_001",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A2"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_002",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A3"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_003",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A4"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_004",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A5"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_005",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A6",
+          "A7",
+          "A8",
+          "A9"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_006",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A10",
+          "A11",
+          "A12",
+          "A13"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_007",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A14",
+          "A15"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_008",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A16",
+          "A17",
+          "A18"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_009",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A19"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    }
+  ]
+}

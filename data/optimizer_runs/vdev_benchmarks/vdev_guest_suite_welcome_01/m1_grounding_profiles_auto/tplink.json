@@ -1,0 +1,353 @@
+{
+  "integration": "tplink",
+  "runtime_families": [
+    {
+      "action_kind": "get_state",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "guest_suite_heater",
+          "tplink:plug.guest_suite_heater",
+          "tplink_local",
+          "plug"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "read",
+          "local_api_read"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "abc",
+          "collections",
+          "const",
+          "coordinator",
+          "dataclasses"
+        ],
+        "boost_if_names": [
+          "get_state",
+          "_handle_coordinator_update"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "LOCAL_API_READ",
+      "file_globs": [
+        "tplink/entity.py"
+      ],
+      "forbidden_context": [
+        "dunder_init"
+      ],
+      "forbidden_path_signals": [
+        "property_function:available",
+        "control_function:async_turn_on",
+        "control_function:async_turn_off",
+        "control_function:async_open_cover",
+        "control_function:async_close_cover",
+        "control_function:async_set_cover_position",
+        "control_function:set_state",
+        "setup_function:async_setup_entry"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "_handle_coordinator_update"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A21"
+      ],
+      "integration": "tplink",
+      "negative_call_patterns": [
+        "__init__",
+        "get_device_name",
+        "deviceinfo",
+        "_get_unique_id",
+        "super",
+        "self._get_unique_id"
+      ],
+      "negative_evidence": [
+        "negative_function:__init__",
+        "negative_function:_async_call_update_attrs",
+        "negative_function:async_added_to_hass",
+        "negative_function:available",
+        "negative_function:_description_for_feature",
+        "negative_call:__init__",
+        "negative_call:get_device_name",
+        "negative_call:deviceinfo",
+        "negative_call:_get_unique_id",
+        "negative_call:super"
+      ],
+      "negative_function_patterns": [
+        "__init__",
+        "_async_call_update_attrs",
+        "async_added_to_hass",
+        "available",
+        "_description_for_feature",
+        "async_refresh_after"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [
+            "__init__",
+            "get_device_name",
+            "deviceinfo",
+            "self._get_unique_id",
+            "super",
+            "str"
+          ],
+          "call_patterns": [
+            "__init__",
+            "get_device_name",
+            "deviceinfo",
+            "_get_unique_id",
+            "super",
+            "str"
+          ],
+          "file_path": "data/repo_snapshot/tplink/entity.py",
+          "function_name": "__init__",
+          "path_kind": "setup_path",
+          "path_signals": [
+            "read_function:__init__",
+            "read_call:get_device_name"
+          ],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -4,
+          "snippet": "166: \n167:     def __init__(\n168:         self,\n169:         device: Device,\n170:         coordinator: TPLinkDataUpdateCoordinator,\n171:         description: TPLinkEntityDescription,\n172:         *,\n173:         feature: Feature | None = None,\n174:         parent: Device | None = None,\n175:     ) -> None:\n176:         \"\"\"Initialize the entity.\"\"\"\n177:         super().__init__(coordinator)\n178:         self.entity_description = description\n179:         self._device: Device = device"
+        },
+        {
+          "call_chains": [
+            "self._async_update_attrs",
+            "_logger.warning"
+          ],
+          "call_patterns": [
+            "_async_update_attrs",
+            "warning"
+          ],
+          "file_path": "data/repo_snapshot/tplink/entity.py",
+          "function_name": "_async_call_update_attrs",
+          "path_kind": "control_path",
+          "path_signals": [
+            "state_write_function:_async_call_update_attrs",
+            "state_write_call:self._async_update_attrs"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -1,
+          "snippet": "268:     @callback\n269:     def _async_call_update_attrs(self) -> None:\n270:         \"\"\"Call update_attrs and make entity unavailable on errors.\"\"\"\n271:         try:\n272:             available = self._async_update_attrs()\n273:         except Exception as ex:  # noqa: BLE001\n274:             if self._attr_available:\n275:                 _LOGGER.warning(\n276:                     \"Unable to read data for %s %s: %s\",\n277:                     self._device,\n278:                     self.entity_id,\n279:                     ex,\n280:                 )\n281:             self._attr_available = False"
+        },
+        {
+          "call_chains": [
+            "self._async_call_update_attrs",
+            "async_added_to_hass",
+            "super"
+          ],
+          "call_patterns": [
+            "_async_call_update_attrs",
+            "async_added_to_hass",
+            "super"
+          ],
+          "file_path": "data/repo_snapshot/tplink/entity.py",
+          "function_name": "async_added_to_hass",
+          "path_kind": "control_path",
+          "path_signals": [
+            "state_write_function:async_added_to_hass",
+            "state_write_call:self._async_call_update_attrs"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -1,
+          "snippet": "252: \n253:     async def async_added_to_hass(self) -> None:\n254:         \"\"\"Call update attributes after the device is added to the platform.\"\"\"\n255:         await super().async_added_to_hass()\n256: \n257:         self._async_call_update_attrs()\n258: \n259:     @abstractmethod"
+        },
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/tplink/entity.py",
+          "function_name": "available",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:available"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "291:     @property\n292:     def available(self) -> bool:\n293:         \"\"\"Return if entity is available.\"\"\"\n294:         return self.coordinator.last_update_success and self._attr_available\n295: \n296:"
+        },
+        {
+          "call_chains": [
+            "_logger.debug",
+            "replace",
+            "descriptions.get",
+            "get_device_name",
+            "cls._category_for_feature"
+          ],
+          "call_patterns": [
+            "debug",
+            "replace",
+            "get",
+            "get_device_name",
+            "_category_for_feature"
+          ],
+          "file_path": "data/repo_snapshot/tplink/entity.py",
+          "function_name": "_description_for_feature",
+          "path_kind": "helper_path",
+          "path_signals": [
+            "read_function:_description_for_feature",
+            "read_call:get_device_name"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "helper",
+          "score": -2,
+          "snippet": "360:     @classmethod\n361:     def _description_for_feature[_D: EntityDescription](\n362:         cls,\n363:         feature: Feature,\n364:         descriptions: Mapping[str, _D],\n365:         *,\n366:         device: Device,\n367:         parent: Device | None = None,\n368:     ) -> _D | None:\n369:         \"\"\"Return description object for the given feature.\n370: \n371:         This is responsible for setting the common parameters & deciding\n372:         based on feature id which additional parameters are passed.\n373:         \"\"\""
+        }
+      ],
+      "origin_action_id": "A21",
+      "origin_cluster_id": "tplink__entity__local_api_read__get_state__local",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [
+            "self._async_call_update_attrs",
+            "_handle_coordinator_update",
+            "super"
+          ],
+          "call_patterns": [
+            "_async_call_update_attrs",
+            "_handle_coordinator_update",
+            "super"
+          ],
+          "file_path": "data/repo_snapshot/tplink/entity.py",
+          "function_name": "_handle_coordinator_update",
+          "path_kind": "control_path",
+          "path_signals": [
+            "update_callback_function:_handle_coordinator_update",
+            "state_write_function:_handle_coordinator_update",
+            "state_write_call:self._async_call_update_attrs",
+            "state_write_call:_handle_coordinator_update"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_write",
+          "score": 14,
+          "snippet": "285:     @callback\n286:     def _handle_coordinator_update(self) -> None:\n287:         \"\"\"Handle updated data from the coordinator.\"\"\"\n288:         self._async_call_update_attrs()\n289:         super()._handle_coordinator_update()\n290: \n291:     @property"
+        },
+        {
+          "call_chains": [
+            "self.coordinator.async_request_refresh",
+            "func",
+            "self.coordinator.config_entry.async_start_reauth",
+            "homeassistanterror",
+            "str"
+          ],
+          "call_patterns": [
+            "async_request_refresh",
+            "func",
+            "async_start_reauth",
+            "homeassistanterror",
+            "str"
+          ],
+          "file_path": "data/repo_snapshot/tplink/entity.py",
+          "function_name": "async_refresh_after",
+          "path_kind": "read_path",
+          "path_signals": [
+            "refresh_call:self.coordinator.async_request_refresh",
+            "awaited_refresh_call:self.coordinator.async_request_refresh"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 4,
+          "snippet": "117: \n118: def async_refresh_after[_T: CoordinatedTPLinkEntity, **_P](\n119:     func: Callable[Concatenate[_T, _P], Awaitable[None]],\n120: ) -> Callable[Concatenate[_T, _P], Coroutine[Any, Any, None]]:\n121:     \"\"\"Define a wrapper to raise HA errors and refresh after.\"\"\"\n122: \n123:     async def _async_wrap(self: _T, *args: _P.args, **kwargs: _P.kwargs) -> None:\n124:         try:\n125:             await func(self, *args, **kwargs)\n126:         except AuthenticationError as ex:\n127:             self.coordinator.config_entry.async_start_reauth(self.hass)\n128:             raise HomeAssistantError(\n129:                 translation_domain=DOMAIN,\n130:                 translation_key=\"device_authentication\","
+        },
+        {
+          "call_chains": [
+            "self.coordinator.async_request_refresh",
+            "func",
+            "self.coordinator.config_entry.async_start_reauth",
+            "homeassistanterror",
+            "str"
+          ],
+          "call_patterns": [
+            "async_request_refresh",
+            "func",
+            "async_start_reauth",
+            "homeassistanterror",
+            "str"
+          ],
+          "file_path": "data/repo_snapshot/tplink/entity.py",
+          "function_name": "_async_wrap",
+          "path_kind": "read_path",
+          "path_signals": [
+            "refresh_call:self.coordinator.async_request_refresh",
+            "awaited_refresh_call:self.coordinator.async_request_refresh"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 4,
+          "snippet": "122: \n123:     async def _async_wrap(self: _T, *args: _P.args, **kwargs: _P.kwargs) -> None:\n124:         try:\n125:             await func(self, *args, **kwargs)\n126:         except AuthenticationError as ex:\n127:             self.coordinator.config_entry.async_start_reauth(self.hass)\n128:             raise HomeAssistantError(\n129:                 translation_domain=DOMAIN,\n130:                 translation_key=\"device_authentication\",\n131:                 translation_placeholders={\n132:                     \"func\": func.__name__,\n133:                     \"exc\": str(ex),\n134:                 },\n135:             ) from ex"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read"
+      ],
+      "required_context": [
+        "runtime_path"
+      ],
+      "required_path_signals": [
+        "update_callback_function:_handle_coordinator_update",
+        "state_write_function:_handle_coordinator_update",
+        "state_write_call:self._async_call_update_attrs",
+        "state_write_call:_handle_coordinator_update",
+        "refresh_call:self.coordinator.async_request_refresh",
+        "awaited_refresh_call:self.coordinator.async_request_refresh"
+      ],
+      "required_runtime_roles": [
+        "runtime_read"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "tplink:entity_local_api_read",
+      "runtime_archetypes": [
+        "local_bridge_getter",
+        "runtime_read"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:_handle_coordinator_update",
+        "runtime_function:async_refresh_after",
+        "runtime_function:_async_wrap",
+        "runtime_call:_async_call_update_attrs",
+        "runtime_call:_handle_coordinator_update",
+        "runtime_call:super",
+        "runtime_call:self._async_call_update_attrs",
+        "runtime_call:async_request_refresh",
+        "runtime_call:func",
+        "runtime_call:async_start_reauth"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/tplink/entity.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A21"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+      "why_not_setup": [
+        "exclude_role:setup:__init__",
+        "exclude_role:runtime_write:_async_call_update_attrs",
+        "exclude_role:runtime_write:async_added_to_hass",
+        "exclude_role:property_getter:available",
+        "exclude_role:helper:_description_for_feature",
+        "exclude_path_signal:property_function:available",
+        "exclude_control_path_for_read_like_action"
+      ]
+    }
+  ],
+  "schema_version": "m1_grounding_profile/v3",
+  "version": "draft_llm_v3"
+}

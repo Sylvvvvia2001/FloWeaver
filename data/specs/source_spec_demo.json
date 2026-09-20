@@ -1,0 +1,18 @@
+{
+  "repo_path": "data/repo_snapshot",
+  "commit": "HEAD",
+  "integrations": [
+    {
+      "device_id": "ble:aa:bb:cc",
+      "integration": "demo_ble",
+      "file_path": "data/repo_snapshot/demo_integration.py",
+      "protocols": ["BLE", "HA"]
+    },
+    {
+      "device_id": "tuya:device.control",
+      "integration": "demo_cloud",
+      "file_path": "data/repo_snapshot/demo_cloud_integration.py",
+      "protocols": ["CLOUD", "HA"]
+    }
+  ]
+}

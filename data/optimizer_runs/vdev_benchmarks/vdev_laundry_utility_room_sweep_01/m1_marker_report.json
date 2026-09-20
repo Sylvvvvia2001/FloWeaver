@@ -1,0 +1,69 @@
+{
+  "alias_precision_estimate": 1.0,
+  "critical_action_ids": [
+    "A1",
+    "A10",
+    "A11",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "A8",
+    "A9"
+  ],
+  "grounding_profile_file_rule_count": 5,
+  "grounding_profile_loaded_paths": [
+    "data/optimizer_runs/vdev_benchmarks/vdev_laundry_utility_room_sweep_01/m1_grounding_profiles_auto/mqtt.json",
+    "data/optimizer_runs/vdev_benchmarks/vdev_laundry_utility_room_sweep_01/m1_grounding_profiles_auto/tplink.json",
+    "data/optimizer_runs/vdev_benchmarks/vdev_laundry_utility_room_sweep_01/m1_grounding_profiles_auto/xiaomi_ble.json"
+  ],
+  "grounding_profile_match_count": 10,
+  "grounding_profile_rule_count": 5,
+  "marker_coverage_ok": true,
+  "match_counts": {
+    "alias": 0,
+    "direct": 41,
+    "total": 41
+  },
+  "missing_critical_action_ids": [],
+  "resolved_action_ids": [
+    "A1",
+    "A10",
+    "A11",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "A8",
+    "A9"
+  ],
+  "resolved_runtime_action_count": 9,
+  "resolved_runtime_action_count_raw": 10,
+  "resolved_runtime_action_ids": [
+    "A1",
+    "A10",
+    "A11",
+    "A2",
+    "A4",
+    "A5",
+    "A7",
+    "A8",
+    "A9"
+  ],
+  "resolved_runtime_action_ids_raw": [
+    "A1",
+    "A10",
+    "A11",
+    "A2",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "A8",
+    "A9"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_cloud_burst_living_conditions_snapshot_profile_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Cloud Burst Living Conditions Snapshot Profile Coverage"
+}

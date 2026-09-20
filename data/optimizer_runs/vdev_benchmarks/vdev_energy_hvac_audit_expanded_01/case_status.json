@@ -1,0 +1,134 @@
+{
+  "vdev_id": "vdev_energy_hvac_audit_expanded_01",
+  "name": "Energy and HVAC Audit Expanded",
+  "group": "Whole-Home Survey and Audit Routines",
+  "target_path": "data/targets/vdev_benchmarks/vdev_energy_hvac_audit_expanded_01.json",
+  "run_dir": "data/optimizer_runs/vdev_benchmarks/vdev_energy_hvac_audit_expanded_01",
+  "strict_pass": 6,
+  "tolerant_pass": 6,
+  "counterexample_count": 0,
+  "batch_count": 7,
+  "parallel_groups": {
+    "batch_000": [
+      [
+        "A1",
+        "A4"
+      ],
+      [
+        "A2"
+      ],
+      [
+        "A3"
+      ]
+    ],
+    "batch_001": [
+      [
+        "A5"
+      ]
+    ],
+    "batch_002": [
+      [
+        "A6"
+      ]
+    ],
+    "batch_003": [
+      [
+        "A7"
+      ],
+      [
+        "A8"
+      ],
+      [
+        "A9"
+      ],
+      [
+        "A10"
+      ],
+      [
+        "A11"
+      ]
+    ],
+    "batch_004": [
+      [
+        "A12"
+      ]
+    ],
+    "batch_005": [
+      [
+        "A13"
+      ],
+      [
+        "A14"
+      ]
+    ],
+    "batch_006": [
+      [
+        "A15"
+      ]
+    ]
+  },
+  "batching_buckets": {
+    "batch_000": [
+      {
+        "bucket": "tuya",
+        "chunks": 1,
+        "group_key": "host",
+        "max_batch_size": 3,
+        "max_wait_ms": 40,
+        "members": [
+          "A1",
+          "A4"
+        ],
+        "rule_kind": "SAME_SESSION_GROUP",
+        "size": 2
+      }
+    ],
+    "batch_001": [],
+    "batch_002": [],
+    "batch_003": [],
+    "batch_004": [],
+    "batch_005": [],
+    "batch_006": []
+  },
+  "triggered_fallbacks": [
+    {
+      "fallback": "serialize_local_api_reads",
+      "kind": "SAME_SESSION_GROUP",
+      "params": {
+        "group_key": "endpoint",
+        "reuse_window_ms": 5000,
+        "rule_id": "rule_protocol_local_api_budget",
+        "template_kind": "SAME_SESSION_GROUP"
+      },
+      "scope": [
+        "A11",
+        "A12"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:CONTROL_DEP"
+      },
+      "scope": [
+        "A11",
+        "A14"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:CONTROL_DEP"
+      },
+      "scope": [
+        "A12",
+        "A14"
+      ]
+    }
+  ],
+  "unknown_protocol_actions": [],
+  "status": "ok",
+  "run_id": "28a76fe6a26b4035bb294da0c1c85f93"
+}

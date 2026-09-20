@@ -1,0 +1,9 @@
+dataset,group,latency_bin,case_count,pass_count,pass_rate_pct,avg_native_latency_s,avg_naive_topo_latency_s,avg_latency_gain_s,avg_latency_gain_pct,passed_avg_naive_topo_latency_s,passed_avg_latency_gain_pct,avg_runtime_s,failure_types
+smart-home,Group1,"(0,3]s",21,21,100.0,1.8752,1.0044,0.8709,38.539,1.0044,38.539,0.0915,"{""PASS"": 21}"
+smart-home,Group2,"(3,6]s",12,12,100.0,4.5167,1.5023,3.0144,66.4667,1.5023,66.4667,0.049,"{""PASS"": 12}"
+smart-home,Group3,"(6,9]s",8,8,100.0,7.855,3.068,4.787,59.9862,3.068,59.9862,0.0438,"{""PASS"": 8}"
+smart-home,Group4,"(9,inf)s",9,9,100.0,11.0433,4.5458,6.4975,59.2033,4.5458,59.2033,0.049,"{""PASS"": 9}"
+long-chain,Group1,"(0,9]s",6,6,100.0,7.195,1.9956,5.1994,72.0267,1.9956,72.0267,0.0611,"{""PASS"": 6}"
+long-chain,Group2,"(9,18]s",8,8,100.0,12.8475,3.4243,9.4232,73.16,3.4243,73.16,0.2618,"{""PASS"": 8}"
+long-chain,Group3,"(18,27]s",4,4,100.0,24.42,6.6964,17.7236,72.645,6.6964,72.645,0.1438,"{""PASS"": 4}"
+long-chain,Group4,"(27,inf)s",8,8,100.0,32.7638,9.2161,23.5477,71.7225,9.2161,71.7225,0.1145,"{""PASS"": 8}"

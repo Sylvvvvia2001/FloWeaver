@@ -1,0 +1,9 @@
+{
+  "codeowners": [],
+  "dependencies": [],
+  "documentation": "https://example.invalid/vibeaura/vdev",
+  "domain": "vdev_vdev_late_night_entertainment_shutdown_01",
+  "name": "Late-Night Entertainment Shutdown",
+  "requirements": [],
+  "version": "0.1.0"
+}

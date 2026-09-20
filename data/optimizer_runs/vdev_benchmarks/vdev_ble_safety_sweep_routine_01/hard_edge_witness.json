@@ -1,0 +1,723 @@
+{
+  "edge_count": 9,
+  "edges": [
+    {
+      "dst_locations": [
+        "data/repo_snapshot/esphome/update.py:82"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/esphome/update.py:83",
+          "marker_id": "marker_0057872025",
+          "marker_type": "UNSUBSCRIBE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf07_002_unsubscribe",
+        "kind": "HARD_LIFECYCLE",
+        "src_msf": "msf06_000_subscribe"
+      },
+      "origin": {
+        "details": [
+          "rule_template:rule_subscribe_ab1fa62e3a:0",
+          "src_hint:SUBSCRIBE",
+          "dst_hint:UNSUBSCRIBE",
+          "pairing_rank:exact_family_same_action_same_lane_phase_then_nearest"
+        ],
+        "kind": "rule_template",
+        "rule_id": "rule_subscribe_ab1fa62e3a",
+        "template_index": "0"
+      },
+      "src_locations": [
+        "data/repo_snapshot/esphome/manager.py:480"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/esphome/manager.py:481",
+          "marker_id": "marker_7b58432c38",
+          "marker_type": "SUBSCRIBE"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/esphome/manager.py:480"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/esphome/manager.py:481",
+          "marker_id": "marker_7b58432c38",
+          "marker_type": "SUBSCRIBE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf06_000_subscribe",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf03_000_ble_connect"
+      },
+      "origin": {
+        "dependency": "A14->A15",
+        "details": [
+          "vdev_dep:A14->A15",
+          "transport_connect_before_subscription"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/esphome/__init__.py:125",
+        "data/repo_snapshot/esphome/__init__.py:135",
+        "data/repo_snapshot/esphome/__init__.py:136",
+        "data/repo_snapshot/esphome/__init__.py:138",
+        "data/repo_snapshot/esphome/__init__.py:139",
+        "data/repo_snapshot/esphome/__init__.py:143",
+        "data/repo_snapshot/esphome/__init__.py:145",
+        "data/repo_snapshot/esphome/__init__.py:150",
+        "data/repo_snapshot/esphome/__init__.py:152"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/esphome/__init__.py:152",
+          "marker_id": "marker_48dcd06472",
+          "marker_type": "BLE_OP"
+        },
+        {
+          "location": "data/repo_snapshot/esphome/__init__.py:136",
+          "marker_id": "marker_4b6afcdb38",
+          "marker_type": "BLE_OP"
+        },
+        {
+          "location": "data/repo_snapshot/esphome/__init__.py:152",
+          "marker_id": "marker_b4b98f46fc",
+          "marker_type": "BLE_DISCONNECT"
+        },
+        {
+          "location": "data/repo_snapshot/esphome/__init__.py:136",
+          "marker_id": "marker_c5787dee94",
+          "marker_type": "BLE_CONNECT"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/switchbot/fan.py:101",
+        "data/repo_snapshot/switchbot/fan.py:118",
+        "data/repo_snapshot/switchbot/fan.py:125",
+        "data/repo_snapshot/switchbot/fan.py:161",
+        "data/repo_snapshot/switchbot/fan.py:179",
+        "data/repo_snapshot/switchbot/fan.py:187",
+        "data/repo_snapshot/switchbot/fan.py:83",
+        "data/repo_snapshot/switchbot/fan.py:92"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:179",
+          "marker_id": "marker_4664192a7e",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:161",
+          "marker_id": "marker_7529ee2411",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:118",
+          "marker_id": "marker_771a133e32",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:125",
+          "marker_id": "marker_8ff06e2c99",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:187",
+          "marker_id": "marker_a75f778a26",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:92",
+          "marker_id": "marker_b9989a7050",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:101",
+          "marker_id": "marker_c1599f0892",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:83",
+          "marker_id": "marker_e34316b43e",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf11_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf10_000_ble_op"
+      },
+      "origin": {
+        "dependency": "A3->A16",
+        "details": [
+          "vdev_dep:A3->A16",
+          "ble_write_depends_on_a3"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/switchbot/cover.py:118",
+        "data/repo_snapshot/switchbot/cover.py:136",
+        "data/repo_snapshot/switchbot/cover.py:137",
+        "data/repo_snapshot/switchbot/cover.py:138",
+        "data/repo_snapshot/switchbot/cover.py:139",
+        "data/repo_snapshot/switchbot/cover.py:140",
+        "data/repo_snapshot/switchbot/cover.py:142",
+        "data/repo_snapshot/switchbot/cover.py:203",
+        "data/repo_snapshot/switchbot/cover.py:217",
+        "data/repo_snapshot/switchbot/cover.py:218",
+        "data/repo_snapshot/switchbot/cover.py:219",
+        "data/repo_snapshot/switchbot/cover.py:220",
+        "data/repo_snapshot/switchbot/cover.py:223",
+        "data/repo_snapshot/switchbot/cover.py:224",
+        "data/repo_snapshot/switchbot/cover.py:225",
+        "data/repo_snapshot/switchbot/cover.py:287",
+        "data/repo_snapshot/switchbot/cover.py:305",
+        "data/repo_snapshot/switchbot/cover.py:306",
+        "data/repo_snapshot/switchbot/cover.py:307",
+        "data/repo_snapshot/switchbot/cover.py:308",
+        "data/repo_snapshot/switchbot/cover.py:309",
+        "data/repo_snapshot/switchbot/cover.py:311"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/switchbot/cover.py:118",
+          "marker_id": "marker_1a328b14d6",
+          "marker_type": "BLE_OP"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/cover.py:287",
+          "marker_id": "marker_1f2c3503f3",
+          "marker_type": "BLE_OP"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/cover.py:216",
+          "marker_id": "marker_3c44b8ccd8",
+          "marker_type": "BLE_OP"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/cover.py:304",
+          "marker_id": "marker_643e95f17b",
+          "marker_type": "BLE_OP"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/cover.py:203",
+          "marker_id": "marker_c586b78c6d",
+          "marker_type": "BLE_OP"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/cover.py:135",
+          "marker_id": "marker_c98ac57c4c",
+          "marker_type": "BLE_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/switchbot/fan.py:101",
+        "data/repo_snapshot/switchbot/fan.py:118",
+        "data/repo_snapshot/switchbot/fan.py:125",
+        "data/repo_snapshot/switchbot/fan.py:161",
+        "data/repo_snapshot/switchbot/fan.py:179",
+        "data/repo_snapshot/switchbot/fan.py:187",
+        "data/repo_snapshot/switchbot/fan.py:83",
+        "data/repo_snapshot/switchbot/fan.py:92"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:179",
+          "marker_id": "marker_4664192a7e",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:161",
+          "marker_id": "marker_7529ee2411",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:118",
+          "marker_id": "marker_771a133e32",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:125",
+          "marker_id": "marker_8ff06e2c99",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:187",
+          "marker_id": "marker_a75f778a26",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:92",
+          "marker_id": "marker_b9989a7050",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:101",
+          "marker_id": "marker_c1599f0892",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:83",
+          "marker_id": "marker_e34316b43e",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf11_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf12_001_ble_op"
+      },
+      "origin": {
+        "dependency": "A11->A16",
+        "details": [
+          "vdev_dep:A11->A16",
+          "ble_write_depends_on_a11"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/xiaomi_ble/__init__.py:137"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/xiaomi_ble/__init__.py:139",
+          "marker_id": "marker_8b05854925",
+          "marker_type": "BLE_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/switchbot/fan.py:101",
+        "data/repo_snapshot/switchbot/fan.py:118",
+        "data/repo_snapshot/switchbot/fan.py:125",
+        "data/repo_snapshot/switchbot/fan.py:161",
+        "data/repo_snapshot/switchbot/fan.py:179",
+        "data/repo_snapshot/switchbot/fan.py:187",
+        "data/repo_snapshot/switchbot/fan.py:83",
+        "data/repo_snapshot/switchbot/fan.py:92"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:179",
+          "marker_id": "marker_4664192a7e",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:161",
+          "marker_id": "marker_7529ee2411",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:118",
+          "marker_id": "marker_771a133e32",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:125",
+          "marker_id": "marker_8ff06e2c99",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:187",
+          "marker_id": "marker_a75f778a26",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:92",
+          "marker_id": "marker_b9989a7050",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:101",
+          "marker_id": "marker_c1599f0892",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:83",
+          "marker_id": "marker_e34316b43e",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf11_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf01_000_ble_op"
+      },
+      "origin": {
+        "dependency": "A12->A16",
+        "details": [
+          "vdev_dep:A12->A16",
+          "ble_write_depends_on_a12"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/airthings_ble/coordinator.py:92",
+        "data/repo_snapshot/airthings_ble/coordinator.py:93",
+        "data/repo_snapshot/airthings_ble/coordinator.py:94",
+        "data/repo_snapshot/airthings_ble/coordinator.py:96",
+        "data/repo_snapshot/airthings_ble/coordinator.py:97"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/airthings_ble/coordinator.py:91",
+          "marker_id": "marker_529aef1f97",
+          "marker_type": "BLE_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/switchbot/fan.py:101",
+        "data/repo_snapshot/switchbot/fan.py:118",
+        "data/repo_snapshot/switchbot/fan.py:125",
+        "data/repo_snapshot/switchbot/fan.py:161",
+        "data/repo_snapshot/switchbot/fan.py:179",
+        "data/repo_snapshot/switchbot/fan.py:187",
+        "data/repo_snapshot/switchbot/fan.py:83",
+        "data/repo_snapshot/switchbot/fan.py:92"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:179",
+          "marker_id": "marker_4664192a7e",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:161",
+          "marker_id": "marker_7529ee2411",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:118",
+          "marker_id": "marker_771a133e32",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:125",
+          "marker_id": "marker_8ff06e2c99",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:187",
+          "marker_id": "marker_a75f778a26",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:92",
+          "marker_id": "marker_b9989a7050",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:101",
+          "marker_id": "marker_c1599f0892",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:83",
+          "marker_id": "marker_e34316b43e",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf11_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf09_000_ble_op"
+      },
+      "origin": {
+        "dependency": "A13->A16",
+        "details": [
+          "vdev_dep:A13->A16",
+          "ble_write_depends_on_a13"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/ruuvitag_ble/sensor.py:173",
+        "data/repo_snapshot/ruuvitag_ble/sensor.py:174",
+        "data/repo_snapshot/ruuvitag_ble/sensor.py:175",
+        "data/repo_snapshot/ruuvitag_ble/sensor.py:176",
+        "data/repo_snapshot/ruuvitag_ble/sensor.py:177",
+        "data/repo_snapshot/ruuvitag_ble/sensor.py:178",
+        "data/repo_snapshot/ruuvitag_ble/sensor.py:179",
+        "data/repo_snapshot/ruuvitag_ble/sensor.py:180",
+        "data/repo_snapshot/ruuvitag_ble/sensor.py:181",
+        "data/repo_snapshot/ruuvitag_ble/sensor.py:182",
+        "data/repo_snapshot/ruuvitag_ble/sensor.py:184"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/ruuvitag_ble/sensor.py:170",
+          "marker_id": "marker_0d80eea84b",
+          "marker_type": "BLE_OP"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/switchbot/fan.py:101",
+        "data/repo_snapshot/switchbot/fan.py:118",
+        "data/repo_snapshot/switchbot/fan.py:125",
+        "data/repo_snapshot/switchbot/fan.py:161",
+        "data/repo_snapshot/switchbot/fan.py:179",
+        "data/repo_snapshot/switchbot/fan.py:187",
+        "data/repo_snapshot/switchbot/fan.py:83",
+        "data/repo_snapshot/switchbot/fan.py:92"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:179",
+          "marker_id": "marker_4664192a7e",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:161",
+          "marker_id": "marker_7529ee2411",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:118",
+          "marker_id": "marker_771a133e32",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:125",
+          "marker_id": "marker_8ff06e2c99",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:187",
+          "marker_id": "marker_a75f778a26",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:92",
+          "marker_id": "marker_b9989a7050",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:101",
+          "marker_id": "marker_c1599f0892",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:83",
+          "marker_id": "marker_e34316b43e",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf11_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf03_000_ble_connect"
+      },
+      "origin": {
+        "dependency": "A14->A16",
+        "details": [
+          "vdev_dep:A14->A16",
+          "ble_write_depends_on_a14"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/esphome/__init__.py:125",
+        "data/repo_snapshot/esphome/__init__.py:135",
+        "data/repo_snapshot/esphome/__init__.py:136",
+        "data/repo_snapshot/esphome/__init__.py:138",
+        "data/repo_snapshot/esphome/__init__.py:139",
+        "data/repo_snapshot/esphome/__init__.py:143",
+        "data/repo_snapshot/esphome/__init__.py:145",
+        "data/repo_snapshot/esphome/__init__.py:150",
+        "data/repo_snapshot/esphome/__init__.py:152"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/esphome/__init__.py:152",
+          "marker_id": "marker_48dcd06472",
+          "marker_type": "BLE_OP"
+        },
+        {
+          "location": "data/repo_snapshot/esphome/__init__.py:136",
+          "marker_id": "marker_4b6afcdb38",
+          "marker_type": "BLE_OP"
+        },
+        {
+          "location": "data/repo_snapshot/esphome/__init__.py:152",
+          "marker_id": "marker_b4b98f46fc",
+          "marker_type": "BLE_DISCONNECT"
+        },
+        {
+          "location": "data/repo_snapshot/esphome/__init__.py:136",
+          "marker_id": "marker_c5787dee94",
+          "marker_type": "BLE_CONNECT"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/switchbot/fan.py:101",
+        "data/repo_snapshot/switchbot/fan.py:118",
+        "data/repo_snapshot/switchbot/fan.py:125",
+        "data/repo_snapshot/switchbot/fan.py:161",
+        "data/repo_snapshot/switchbot/fan.py:179",
+        "data/repo_snapshot/switchbot/fan.py:187",
+        "data/repo_snapshot/switchbot/fan.py:83",
+        "data/repo_snapshot/switchbot/fan.py:92"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:179",
+          "marker_id": "marker_4664192a7e",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:161",
+          "marker_id": "marker_7529ee2411",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:118",
+          "marker_id": "marker_771a133e32",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:125",
+          "marker_id": "marker_8ff06e2c99",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:187",
+          "marker_id": "marker_a75f778a26",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:92",
+          "marker_id": "marker_b9989a7050",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:101",
+          "marker_id": "marker_c1599f0892",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:83",
+          "marker_id": "marker_e34316b43e",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf11_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf06_000_subscribe"
+      },
+      "origin": {
+        "dependency": "A15->A16",
+        "details": [
+          "vdev_dep:A15->A16",
+          "ble_write_depends_on_a15"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/esphome/manager.py:480"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/esphome/manager.py:481",
+          "marker_id": "marker_7b58432c38",
+          "marker_type": "SUBSCRIBE"
+        }
+      ]
+    },
+    {
+      "dst_locations": [
+        "data/repo_snapshot/esphome/update.py:186"
+      ],
+      "dst_marker_refs": [
+        {
+          "location": "data/repo_snapshot/esphome/update.py:186",
+          "marker_id": "marker_767e7c72f5",
+          "marker_type": "STATE_WRITE"
+        }
+      ],
+      "edge": {
+        "dst_msf": "msf07_000_state_write",
+        "kind": "HARD_CONTROL",
+        "src_msf": "msf11_000_state_write"
+      },
+      "origin": {
+        "dependency": "A16->A17",
+        "details": [
+          "vdev_dep:A16->A17",
+          "overall_write_depends_on_ble_lane"
+        ],
+        "kind": "vdev_dependency"
+      },
+      "src_locations": [
+        "data/repo_snapshot/switchbot/fan.py:101",
+        "data/repo_snapshot/switchbot/fan.py:118",
+        "data/repo_snapshot/switchbot/fan.py:125",
+        "data/repo_snapshot/switchbot/fan.py:161",
+        "data/repo_snapshot/switchbot/fan.py:179",
+        "data/repo_snapshot/switchbot/fan.py:187",
+        "data/repo_snapshot/switchbot/fan.py:83",
+        "data/repo_snapshot/switchbot/fan.py:92"
+      ],
+      "src_marker_refs": [
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:179",
+          "marker_id": "marker_4664192a7e",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:161",
+          "marker_id": "marker_7529ee2411",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:118",
+          "marker_id": "marker_771a133e32",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:125",
+          "marker_id": "marker_8ff06e2c99",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:187",
+          "marker_id": "marker_a75f778a26",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:92",
+          "marker_id": "marker_b9989a7050",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:101",
+          "marker_id": "marker_c1599f0892",
+          "marker_type": "STATE_WRITE"
+        },
+        {
+          "location": "data/repo_snapshot/switchbot/fan.py:83",
+          "marker_id": "marker_e34316b43e",
+          "marker_type": "STATE_WRITE"
+        }
+      ]
+    }
+  ]
+}

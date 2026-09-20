@@ -1,0 +1,24 @@
+{
+  "injection_points": {
+    "runtime": 29,
+    "setup": 4,
+    "teardown": 14
+  },
+  "msf_ids": [
+    "msf_000_cloud_op",
+    "msf_001_ble_op",
+    "msf_002_ble_op",
+    "msf_003_ble_op",
+    "msf_004_coord_refresh",
+    "msf_005_entry_setup",
+    "msf_006_coord_refresh",
+    "msf_007_state_write",
+    "msf_008_entry_unload",
+    "msf_009_cloud_op",
+    "msf_010_cloud_op",
+    "msf_011_unsubscribe"
+  ],
+  "note": "MVP emits sidecar wrapper and patch manifest; source file remains unchanged.",
+  "source_path": "data/repo_snapshot/demo_integration.py",
+  "wrapper_module": "data/optimizer_runs/demo/reassembly/demo_integration_vibeaura_wrapper.py"
+}

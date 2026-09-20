@@ -1,0 +1,153 @@
+{
+  "code": [
+    {
+      "evidence_id": "CODE_7899491254",
+      "frequency": 1,
+      "line_no": 4,
+      "pattern": "ENTRY_SETUP",
+      "source_path": "data/repo_snapshot/demo_cloud_integration.py"
+    },
+    {
+      "evidence_id": "CODE_a9d1872300",
+      "frequency": 1,
+      "line_no": 11,
+      "pattern": "ENTRY_UNLOAD",
+      "source_path": "data/repo_snapshot/demo_cloud_integration.py"
+    },
+    {
+      "evidence_id": "CODE_ed8745f98b",
+      "frequency": 1,
+      "line_no": 7,
+      "pattern": "STATE_WRITE",
+      "source_path": "data/repo_snapshot/demo_cloud_integration.py"
+    },
+    {
+      "evidence_id": "CODE_ad7d5a8f8c",
+      "frequency": 1,
+      "line_no": 20,
+      "pattern": "STATE_WRITE",
+      "source_path": "data/repo_snapshot/demo_cloud_integration.py"
+    },
+    {
+      "evidence_id": "CODE_087f438b92",
+      "frequency": 1,
+      "line_no": 15,
+      "pattern": "UNSUBSCRIBE",
+      "source_path": "data/repo_snapshot/demo_cloud_integration.py"
+    },
+    {
+      "evidence_id": "CODE_0d47655fa1",
+      "frequency": 1,
+      "line_no": 6,
+      "pattern": "COORD_REFRESH",
+      "source_path": "data/repo_snapshot/demo_integration.py"
+    },
+    {
+      "evidence_id": "CODE_5139e016cb",
+      "frequency": 1,
+      "line_no": 26,
+      "pattern": "COORD_REFRESH",
+      "source_path": "data/repo_snapshot/demo_integration.py"
+    },
+    {
+      "evidence_id": "CODE_05dedfffe6",
+      "frequency": 1,
+      "line_no": 27,
+      "pattern": "COORD_REFRESH",
+      "source_path": "data/repo_snapshot/demo_integration.py"
+    },
+    {
+      "evidence_id": "CODE_a01589b9ec",
+      "frequency": 1,
+      "line_no": 29,
+      "pattern": "COORD_REFRESH",
+      "source_path": "data/repo_snapshot/demo_integration.py"
+    },
+    {
+      "evidence_id": "CODE_e22a149725",
+      "frequency": 1,
+      "line_no": 4,
+      "pattern": "ENTRY_SETUP",
+      "source_path": "data/repo_snapshot/demo_integration.py"
+    },
+    {
+      "evidence_id": "CODE_8ea52b18bc",
+      "frequency": 1,
+      "line_no": 14,
+      "pattern": "ENTRY_UNLOAD",
+      "source_path": "data/repo_snapshot/demo_integration.py"
+    },
+    {
+      "evidence_id": "CODE_803d33b93a",
+      "frequency": 1,
+      "line_no": 8,
+      "pattern": "STATE_WRITE",
+      "source_path": "data/repo_snapshot/demo_integration.py"
+    },
+    {
+      "evidence_id": "CODE_61eddc9da0",
+      "frequency": 1,
+      "line_no": 41,
+      "pattern": "STATE_WRITE",
+      "source_path": "data/repo_snapshot/demo_integration.py"
+    },
+    {
+      "evidence_id": "CODE_2fe0d2a533",
+      "frequency": 1,
+      "line_no": 9,
+      "pattern": "SUBSCRIBE",
+      "source_path": "data/repo_snapshot/demo_integration.py"
+    },
+    {
+      "evidence_id": "CODE_c3fcc558a4",
+      "frequency": 1,
+      "line_no": 45,
+      "pattern": "SUBSCRIBE",
+      "source_path": "data/repo_snapshot/demo_integration.py"
+    },
+    {
+      "evidence_id": "CODE_25727f507f",
+      "frequency": 1,
+      "line_no": 18,
+      "pattern": "UNSUBSCRIBE",
+      "source_path": "data/repo_snapshot/demo_integration.py"
+    }
+  ],
+  "docs": [
+    {
+      "evidence_id": "DOC_68178e6053",
+      "line_no": 3,
+      "modality": "MUST",
+      "source_path": "data/docs_snapshot/ha_guideline.md",
+      "text": "The integration must implement `async_setup_entry` and return a boolean."
+    },
+    {
+      "evidence_id": "DOC_e94ba945cc",
+      "line_no": 4,
+      "modality": "SHOULD",
+      "source_path": "data/docs_snapshot/ha_guideline.md",
+      "text": "The coordinator should run first refresh before entity state writes."
+    },
+    {
+      "evidence_id": "DOC_600f42b51d",
+      "line_no": 5,
+      "modality": "SHOULD",
+      "source_path": "data/docs_snapshot/ha_guideline.md",
+      "text": "Subscriptions should be paired with unsubscribe during unload."
+    },
+    {
+      "evidence_id": "DOC_0fd540d423",
+      "line_no": 6,
+      "modality": "SHOULD",
+      "source_path": "data/docs_snapshot/ha_guideline.md",
+      "text": "BLE connect should avoid overlap when timeout rate increases."
+    },
+    {
+      "evidence_id": "DOC_6a90874d6f",
+      "line_no": 7,
+      "modality": "SHOULD",
+      "source_path": "data/docs_snapshot/ha_guideline.md",
+      "text": "Cloud requests should back off after HTTP 429 responses."
+    }
+  ]
+}

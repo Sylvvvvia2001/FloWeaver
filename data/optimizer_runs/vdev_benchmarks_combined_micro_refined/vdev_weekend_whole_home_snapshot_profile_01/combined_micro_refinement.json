@@ -1,0 +1,102 @@
+{
+  "accepted_corridors": [
+    {
+      "action_ids": [
+        "A9",
+        "A10",
+        "A13",
+        "A11",
+        "A12",
+        "A14",
+        "A15",
+        "A16",
+        "A17"
+      ],
+      "batch_ids": [
+        "batch_008",
+        "batch_009",
+        "batch_010",
+        "batch_011",
+        "batch_012",
+        "batch_013"
+      ],
+      "corridor_id": "corridor_00",
+      "latency_saved_ms": 462,
+      "source": "API",
+      "validation_passed": true
+    },
+    {
+      "action_ids": [
+        "A18",
+        "A19",
+        "A20",
+        "A21",
+        "A22",
+        "A23",
+        "A24"
+      ],
+      "batch_ids": [
+        "batch_014",
+        "batch_015",
+        "batch_016",
+        "batch_017",
+        "batch_018",
+        "batch_019",
+        "batch_020"
+      ],
+      "corridor_id": "corridor_01",
+      "latency_saved_ms": 150,
+      "source": "API",
+      "validation_passed": true
+    },
+    {
+      "action_ids": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "batch_ids": [
+        "batch_000",
+        "batch_001",
+        "batch_002",
+        "batch_003",
+        "batch_004",
+        "batch_005"
+      ],
+      "corridor_id": "corridor_00",
+      "latency_saved_ms": 474,
+      "source": "BLE",
+      "validation_passed": true
+    }
+  ],
+  "api_added_savings_ms": 612,
+  "ble_added_savings_ms": 474,
+  "case_name": "Weekend Whole-Home Snapshot Profile Coverage",
+  "combined_added_savings_ms": 1086,
+  "combined_added_savings_ratio": 0.11347962382445141,
+  "combined_refined_estimated_latency_ms": 8484,
+  "conflict_count": 0,
+  "group": "Profile Coverage - Monitoring and Audit Routines",
+  "original_estimated_latency_ms": 9570,
+  "rejected_corridors": [],
+  "target_path": "data/targets/vdev_benchmarks/vdev_weekend_whole_home_snapshot_profile_01.json",
+  "validation": {
+    "api_constraints_ok": true,
+    "batch_order_preserved": true,
+    "ble_constraints_ok": true,
+    "component_validations_ok": true,
+    "conflict_free": true,
+    "contiguous_coverage_ok": true,
+    "event_loop_constraints_ok": true,
+    "passed": true,
+    "projection_ok": true,
+    "reasons": [],
+    "savings_consistency_ok": true,
+    "simulated_event_count": 143,
+    "simulated_total_ms": 8484
+  },
+  "vdev_id": "vdev_weekend_whole_home_snapshot_profile_01"
+}

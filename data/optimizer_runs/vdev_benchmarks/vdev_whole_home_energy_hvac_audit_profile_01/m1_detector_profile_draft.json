@@ -1,0 +1,18 @@
+{
+  "builder_version": "m1_detector_builder/v3",
+  "cluster_count": 0,
+  "cluster_summaries": [],
+  "detector_profile_drafts": [],
+  "generated_at": "2026-04-12T08:55:52.097799+00:00",
+  "mode": "repair",
+  "prompt_version": "m1_detector_builder_prompt/v3",
+  "proposal_count": 0,
+  "proposal_items": [],
+  "schema_version": "m1_detector_draft/v3",
+  "source_report_sha256": "b9d28f0b570bdac5e3178215776ba0411bcf3e13136d85521df674f61fa450c0",
+  "source_report_version": "m1_unresolved_grounding_report/v3",
+  "workflow": {
+    "mode": "offline_llm_assisted_then_deterministic_execute",
+    "next_step": "Review detector_profile_drafts, refine with LLM offline, then pass resulting JSON via validation.grounding_profile_paths."
+  }
+}

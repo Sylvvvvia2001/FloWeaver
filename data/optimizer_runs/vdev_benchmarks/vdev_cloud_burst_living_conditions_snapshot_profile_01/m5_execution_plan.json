@@ -1,0 +1,2109 @@
+{
+  "meta": {
+    "action_lanes": {
+      "A1": "CLOUD",
+      "A10": "CLOUD",
+      "A11": "CLOUD",
+      "A12": "CLOUD",
+      "A13": "CLOUD",
+      "A14": "CLOUD",
+      "A15": "CLOUD",
+      "A16": "CLOUD",
+      "A17": "CLOUD",
+      "A18": "LOCAL",
+      "A19": "LOCAL",
+      "A2": "CLOUD",
+      "A20": "WRITEBACK_CLOUD",
+      "A21": "WRITEBACK_LOCAL",
+      "A22": "WRITEBACK_OVERALL",
+      "A3": "CLOUD",
+      "A4": "CLOUD",
+      "A5": "CLOUD",
+      "A6": "CLOUD",
+      "A7": "CLOUD",
+      "A8": "CLOUD",
+      "A9": "CLOUD"
+    },
+    "action_phase": {
+      "A1": "pre_control_acquisition",
+      "A10": "pre_control_acquisition",
+      "A11": "pre_control_acquisition",
+      "A12": "pre_control_acquisition",
+      "A13": "pre_control_acquisition",
+      "A14": "pre_control_acquisition",
+      "A15": "pre_control_acquisition",
+      "A16": "pre_control_acquisition",
+      "A17": "pre_control_acquisition",
+      "A18": "pre_control_acquisition",
+      "A19": "pre_control_acquisition",
+      "A2": "pre_control_acquisition",
+      "A20": "writeback",
+      "A21": "writeback",
+      "A22": "writeback",
+      "A3": "pre_control_acquisition",
+      "A4": "pre_control_acquisition",
+      "A5": "pre_control_acquisition",
+      "A6": "pre_control_acquisition",
+      "A7": "pre_control_acquisition",
+      "A8": "pre_control_acquisition",
+      "A9": "pre_control_acquisition"
+    },
+    "action_to_msfs": {
+      "A1": [
+        "msf07_000_cloud_http_call",
+        "msf07_005_cloud_status_call"
+      ],
+      "A10": [
+        "msf08_000_cloud_http_call",
+        "msf08_003_cloud_status_call"
+      ],
+      "A11": [
+        "msf05_000_cloud_http_call",
+        "msf05_006_cloud_status_call"
+      ],
+      "A12": [
+        "msf05_006_cloud_status_call"
+      ],
+      "A13": [
+        "msf05_006_cloud_status_call"
+      ],
+      "A14": [
+        "msf00_005_cloud_status_call"
+      ],
+      "A15": [
+        "msf00_005_cloud_status_call"
+      ],
+      "A16": [
+        "msf02_004_cloud_status_call",
+        "msf02_005_cloud_status_call"
+      ],
+      "A17": [
+        "msf03_000_cloud_status_call"
+      ],
+      "A18": [
+        "msf04_005_local_api_read"
+      ],
+      "A19": [
+        "msf04_005_local_api_read"
+      ],
+      "A2": [
+        "msf07_005_cloud_status_call"
+      ],
+      "A20": [
+        "msf02_000_state_write",
+        "msf06_000_state_write"
+      ],
+      "A21": [
+        "msf04_000_state_write"
+      ],
+      "A22": [
+        "msf01_000_state_write"
+      ],
+      "A3": [
+        "msf07_005_cloud_status_call"
+      ],
+      "A4": [
+        "msf07_005_cloud_status_call"
+      ],
+      "A5": [
+        "msf07_005_cloud_status_call"
+      ],
+      "A6": [
+        "msf08_003_cloud_status_call"
+      ],
+      "A7": [
+        "msf08_003_cloud_status_call"
+      ],
+      "A8": [
+        "msf08_003_cloud_status_call"
+      ],
+      "A9": [
+        "msf08_003_cloud_status_call"
+      ]
+    },
+    "critical_boost": {
+      "A1": 1,
+      "A10": 1,
+      "A11": 1,
+      "A12": 1,
+      "A13": 1,
+      "A14": 1,
+      "A15": 1,
+      "A16": 1,
+      "A17": 1,
+      "A18": 1,
+      "A19": 1,
+      "A2": 1,
+      "A20": 1,
+      "A21": 1,
+      "A22": 1,
+      "A3": 1,
+      "A4": 1,
+      "A5": 1,
+      "A6": 1,
+      "A7": 1,
+      "A8": 1,
+      "A9": 1
+    },
+    "critical_score": {
+      "A1": 3.0,
+      "A10": 3.0,
+      "A11": 3.0,
+      "A12": 3.0,
+      "A13": 3.0,
+      "A14": 3.0,
+      "A15": 3.0,
+      "A16": 3.0,
+      "A17": 3.0,
+      "A18": 3.0,
+      "A19": 3.0,
+      "A2": 3.0,
+      "A20": 2.0,
+      "A21": 2.0,
+      "A22": 1.0,
+      "A3": 3.0,
+      "A4": 3.0,
+      "A5": 3.0,
+      "A6": 3.0,
+      "A7": 3.0,
+      "A8": 3.0,
+      "A9": 3.0
+    },
+    "cycle_report": [],
+    "cycle_resolution": [],
+    "derived_policy": {
+      "ble_limit": 1,
+      "budget_rules": [],
+      "cloud_limit": 4,
+      "latency_budget_ms": 4300,
+      "local_limit": 1,
+      "max_qps": 5.0,
+      "rate_limit_burst": 10,
+      "rate_limit_window_ms": 1000,
+      "reuse_enabled": true,
+      "reuse_window_ms": 20000,
+      "total_limit": 10,
+      "triggered_fallbacks": [
+        {
+          "fallback": "serialize_local_api_reads",
+          "kind": "SAME_SESSION_GROUP",
+          "params": {
+            "group_key": "endpoint",
+            "reuse_window_ms": 5000,
+            "rule_id": "rule_protocol_local_api_budget",
+            "template_kind": "SAME_SESSION_GROUP"
+          },
+          "scope": [
+            "A18",
+            "A19"
+          ]
+        },
+        {
+          "fallback": "preserve_action_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:CONTROL_DEP"
+          },
+          "scope": [
+            "A16",
+            "A20"
+          ]
+        },
+        {
+          "fallback": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:DATA_DEP"
+          },
+          "scope": [
+            "A16"
+          ]
+        },
+        {
+          "fallback": "preserve_action_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:CONTROL_DEP"
+          },
+          "scope": [
+            "A18",
+            "A21"
+          ]
+        },
+        {
+          "fallback": "preserve_action_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:CONTROL_DEP"
+          },
+          "scope": [
+            "A19",
+            "A21"
+          ]
+        }
+      ],
+      "unknown_limit": 1
+    },
+    "fat_actions": [],
+    "node_kind": "action_id",
+    "objectives": {
+      "metrics": {
+        "e2e_latency_ms": {
+          "p95": 4300
+        }
+      },
+      "primary": "minimize_tail_latency_for_profile_coverage_routine"
+    },
+    "observable_anchor_priority": {
+      "A1": 0,
+      "A10": 9,
+      "A11": 10,
+      "A12": 11,
+      "A13": 12,
+      "A14": 13,
+      "A15": 14,
+      "A16": 15,
+      "A17": 16,
+      "A18": 17,
+      "A19": 18,
+      "A2": 1,
+      "A20": 19,
+      "A21": 20,
+      "A22": 21,
+      "A3": 2,
+      "A4": 3,
+      "A5": 4,
+      "A6": 5,
+      "A7": 6,
+      "A8": 7,
+      "A9": 8
+    },
+    "optimizer_decisions": [
+      {
+        "batch_index": 0,
+        "mode": "corridor",
+        "selected": [
+          "A1",
+          "A10",
+          "A2",
+          "A3"
+        ],
+        "window": [
+          "A1",
+          "A2",
+          "A3",
+          "A4",
+          "A5",
+          "A6",
+          "A7",
+          "A8",
+          "A9",
+          "A10",
+          "A11",
+          "A12",
+          "A13",
+          "A14",
+          "A15",
+          "A16",
+          "A17",
+          "A18",
+          "A19"
+        ]
+      },
+      {
+        "batch_index": 1,
+        "mode": "corridor",
+        "selected": [
+          "A4"
+        ],
+        "window": [
+          "A4",
+          "A5",
+          "A6",
+          "A7",
+          "A8",
+          "A9",
+          "A11",
+          "A12",
+          "A13",
+          "A14",
+          "A15",
+          "A16",
+          "A17",
+          "A18",
+          "A19"
+        ]
+      },
+      {
+        "batch_index": 2,
+        "mode": "corridor",
+        "selected": [
+          "A5"
+        ],
+        "window": [
+          "A5",
+          "A6",
+          "A7",
+          "A8",
+          "A9",
+          "A11",
+          "A12",
+          "A13",
+          "A14",
+          "A15",
+          "A16",
+          "A17",
+          "A18",
+          "A19"
+        ]
+      },
+      {
+        "batch_index": 3,
+        "mode": "corridor",
+        "selected": [
+          "A6"
+        ],
+        "window": [
+          "A6",
+          "A7",
+          "A8",
+          "A9",
+          "A11",
+          "A12",
+          "A13",
+          "A14",
+          "A15",
+          "A16",
+          "A17",
+          "A18",
+          "A19"
+        ]
+      },
+      {
+        "batch_index": 4,
+        "mode": "corridor",
+        "selected": [
+          "A7"
+        ],
+        "window": [
+          "A7",
+          "A8",
+          "A9",
+          "A11",
+          "A12",
+          "A13",
+          "A14",
+          "A15",
+          "A16",
+          "A17",
+          "A18",
+          "A19"
+        ]
+      },
+      {
+        "batch_index": 5,
+        "mode": "corridor",
+        "selected": [
+          "A8"
+        ],
+        "window": [
+          "A8",
+          "A9",
+          "A11",
+          "A12",
+          "A13",
+          "A14",
+          "A15",
+          "A16",
+          "A17",
+          "A18",
+          "A19"
+        ]
+      },
+      {
+        "batch_index": 6,
+        "mode": "corridor",
+        "selected": [
+          "A9"
+        ],
+        "window": [
+          "A9",
+          "A11",
+          "A12",
+          "A13",
+          "A14",
+          "A15",
+          "A16",
+          "A17",
+          "A18",
+          "A19"
+        ]
+      },
+      {
+        "batch_index": 7,
+        "mode": "corridor",
+        "selected": [
+          "A11"
+        ],
+        "window": [
+          "A11",
+          "A12",
+          "A13",
+          "A14",
+          "A15",
+          "A16",
+          "A17",
+          "A18",
+          "A19"
+        ]
+      },
+      {
+        "batch_index": 8,
+        "mode": "corridor",
+        "selected": [
+          "A12"
+        ],
+        "window": [
+          "A12",
+          "A13",
+          "A14",
+          "A15",
+          "A16",
+          "A17",
+          "A18",
+          "A19"
+        ]
+      },
+      {
+        "batch_index": 9,
+        "mode": "corridor",
+        "selected": [
+          "A13"
+        ],
+        "window": [
+          "A13",
+          "A14",
+          "A15",
+          "A16",
+          "A17",
+          "A18",
+          "A19"
+        ]
+      },
+      {
+        "batch_index": 10,
+        "mode": "corridor",
+        "selected": [
+          "A14",
+          "A18",
+          "A15",
+          "A16",
+          "A17"
+        ],
+        "window": [
+          "A14",
+          "A15",
+          "A16",
+          "A17",
+          "A18",
+          "A19"
+        ]
+      }
+    ],
+    "policy": {
+      "ble_parallel": 1,
+      "cloud_parallel": 4,
+      "default_qps": 5.0,
+      "local_parallel": 6,
+      "max_parallel": 10
+    },
+    "policy_snapshot": {
+      "adaptive_controls": {
+        "active_constraints": [
+          {
+            "enforced": false,
+            "fallback": "serialize_local_api_reads",
+            "guard": "local_endpoint_reachable",
+            "kind": "BUDGET_K",
+            "params": {
+              "limit": 4,
+              "resource": "LOCAL_PARALLEL",
+              "rule_id": "rule_protocol_local_api_budget",
+              "template_kind": "BUDGET_K"
+            },
+            "scope": [
+              "A18",
+              "A19"
+            ]
+          },
+          {
+            "enforced": false,
+            "fallback": "serialize_local_api_reads",
+            "guard": "local_endpoint_reachable",
+            "kind": "SAME_SESSION_GROUP",
+            "params": {
+              "group_key": "endpoint",
+              "reuse_window_ms": 5000,
+              "rule_id": "rule_protocol_local_api_budget",
+              "template_kind": "SAME_SESSION_GROUP"
+            },
+            "scope": [
+              "A18",
+              "A19"
+            ]
+          },
+          {
+            "enforced": false,
+            "fallback": "reduce_qps_and_parallelism",
+            "guard": "recent_429_rate_high",
+            "kind": "BUDGET_K",
+            "params": {
+              "limit": 4,
+              "resource": "CLOUD_PARALLEL",
+              "rule_id": "rule_protocol_cloud_budget_rate",
+              "template_kind": "BUDGET_K"
+            },
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          },
+          {
+            "enforced": false,
+            "fallback": "reduce_qps_and_parallelism",
+            "guard": "recent_429_rate_high",
+            "kind": "RATE_LIMIT",
+            "params": {
+              "burst": 8,
+              "max_qps": 5.0,
+              "rule_id": "rule_protocol_cloud_budget_rate",
+              "template_kind": "RATE_LIMIT",
+              "window_ms": 1000
+            },
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          },
+          {
+            "enforced": false,
+            "fallback": "backoff_then_shrink_batch",
+            "guard": "recent_429_rate_high",
+            "kind": "BACKOFF_WINDOW",
+            "params": {
+              "base_ms": 200,
+              "factor": 2.0,
+              "max_ms": 2000,
+              "rule_id": "rule_protocol_cloud_backoff",
+              "template_kind": "BACKOFF_WINDOW"
+            },
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "shrink_batch_not_disable",
+            "guard": "latency_budget_allows_batching AND 429_rate_low",
+            "kind": "BATCH_GROUP",
+            "params": {
+              "group_key": "endpoint",
+              "idempotent_only": true,
+              "max_batch_size": 3,
+              "max_wait_ms": 40,
+              "rule_id": "rule_protocol_cloud_batch_reuse",
+              "template_kind": "BATCH_GROUP"
+            },
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "shrink_batch_not_disable",
+            "guard": "latency_budget_allows_batching AND 429_rate_low",
+            "kind": "SAME_SESSION_GROUP",
+            "params": {
+              "group_key": "host",
+              "reuse_window_ms": 10000,
+              "rule_id": "rule_protocol_cloud_batch_reuse",
+              "template_kind": "SAME_SESSION_GROUP"
+            },
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          },
+          {
+            "enforced": false,
+            "fallback": "reduce_parallelism",
+            "guard": "resource_constrained",
+            "kind": "BUDGET_K",
+            "params": {
+              "limit": 1,
+              "resource": "BLE"
+            },
+            "scope": [
+              "A1",
+              "A10",
+              "A11",
+              "A12",
+              "A13",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A18",
+              "A19",
+              "A2",
+              "A20",
+              "A21",
+              "A22",
+              "A3",
+              "A4",
+              "A5",
+              "A6",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "enforced": false,
+            "fallback": "reduce_parallelism",
+            "guard": "resource_constrained",
+            "kind": "BUDGET_K",
+            "params": {
+              "limit": 4,
+              "resource": "CLOUD"
+            },
+            "scope": [
+              "A1",
+              "A10",
+              "A11",
+              "A12",
+              "A13",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A2",
+              "A3",
+              "A4",
+              "A5",
+              "A6",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "enforced": false,
+            "fallback": "reduce_parallelism",
+            "guard": "resource_constrained",
+            "kind": "BUDGET_K",
+            "params": {
+              "limit": 6,
+              "resource": "LOCAL"
+            },
+            "scope": [
+              "A1",
+              "A10",
+              "A11",
+              "A12",
+              "A13",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A18",
+              "A19",
+              "A2",
+              "A20",
+              "A21",
+              "A22",
+              "A3",
+              "A4",
+              "A5",
+              "A6",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "enforced": false,
+            "fallback": "reduce_parallelism",
+            "guard": "resource_constrained",
+            "kind": "BUDGET_K",
+            "params": {
+              "limit": 10,
+              "resource": "TOTAL"
+            },
+            "scope": [
+              "A1",
+              "A10",
+              "A11",
+              "A12",
+              "A13",
+              "A14",
+              "A15",
+              "A16",
+              "A17",
+              "A18",
+              "A19",
+              "A2",
+              "A20",
+              "A21",
+              "A22",
+              "A3",
+              "A4",
+              "A5",
+              "A6",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:CONTROL_DEP"
+            },
+            "scope": [
+              "A16",
+              "A20"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:DATA_DEP"
+            },
+            "scope": [
+              "A16"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:CONTROL_DEP"
+            },
+            "scope": [
+              "A18",
+              "A21"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:CONTROL_DEP"
+            },
+            "scope": [
+              "A19",
+              "A21"
+            ]
+          }
+        ],
+        "triggered_fallbacks": [
+          {
+            "fallback": "serialize_local_api_reads",
+            "kind": "SAME_SESSION_GROUP",
+            "params": {
+              "group_key": "endpoint",
+              "reuse_window_ms": 5000,
+              "rule_id": "rule_protocol_local_api_budget",
+              "template_kind": "SAME_SESSION_GROUP"
+            },
+            "scope": [
+              "A18",
+              "A19"
+            ]
+          },
+          {
+            "fallback": "preserve_action_order",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:CONTROL_DEP"
+            },
+            "scope": [
+              "A16",
+              "A20"
+            ]
+          },
+          {
+            "fallback": "force_topological_local_order",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:DATA_DEP"
+            },
+            "scope": [
+              "A16"
+            ]
+          },
+          {
+            "fallback": "preserve_action_order",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:CONTROL_DEP"
+            },
+            "scope": [
+              "A18",
+              "A21"
+            ]
+          },
+          {
+            "fallback": "preserve_action_order",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:CONTROL_DEP"
+            },
+            "scope": [
+              "A19",
+              "A21"
+            ]
+          }
+        ]
+      },
+      "batch_policy": {
+        "bucket_key_stats": [
+          {
+            "bucket_key_hit_rate": 1.0,
+            "bucket_key_hits": 3,
+            "cloud_actions": 3,
+            "group_key": "endpoint",
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope_size": 3
+          }
+        ],
+        "latency_budget_ms": 4300,
+        "rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ]
+      },
+      "budget_rules": [],
+      "budgets": {
+        "ble": 1,
+        "cloud": 4,
+        "local": 1,
+        "total": 10,
+        "unknown": 1
+      },
+      "rate_limit": {
+        "burst": 10,
+        "max_qps": 5.0,
+        "window_ms": 1000
+      },
+      "reuse_policy": {
+        "enabled": true,
+        "reuse_window_ms": 20000,
+        "session_rules": [
+          {
+            "group_key": "host",
+            "reuse_window_ms": 10000,
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ],
+            "scope_set": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ]
+      },
+      "schema_version": "m5_policy_snapshot/v1",
+      "versions": {
+        "canonicalization_version": "v1",
+        "profile_version": "ha_profile_default"
+      }
+    },
+    "soft_summary": {
+      "BACKOFF_WINDOW": [
+        {
+          "base_ms": 200,
+          "factor": 2.0,
+          "max_ms": 2000,
+          "rule_id": "rule_protocol_cloud_backoff",
+          "template_kind": "BACKOFF_WINDOW"
+        }
+      ],
+      "BATCH_GROUP": [
+        {
+          "group_key": "endpoint",
+          "idempotent_only": true,
+          "max_batch_size": 20,
+          "max_wait_ms": 80,
+          "rule_id": "rule_protocol_cloud_batch_reuse",
+          "template_kind": "BATCH_GROUP"
+        }
+      ],
+      "BUDGET_K": [
+        {
+          "limit": 4,
+          "resource": "LOCAL_PARALLEL",
+          "rule_id": "rule_protocol_local_api_budget",
+          "template_kind": "BUDGET_K"
+        },
+        {
+          "limit": 4,
+          "resource": "CLOUD_PARALLEL",
+          "rule_id": "rule_protocol_cloud_budget_rate",
+          "template_kind": "BUDGET_K"
+        },
+        {
+          "limit": 1,
+          "resource": "BLE"
+        },
+        {
+          "limit": 4,
+          "resource": "CLOUD"
+        },
+        {
+          "limit": 6,
+          "resource": "LOCAL"
+        },
+        {
+          "limit": 10,
+          "resource": "TOTAL"
+        }
+      ],
+      "RATE_LIMIT": [
+        {
+          "burst": 8,
+          "max_qps": 5.0,
+          "rule_id": "rule_protocol_cloud_budget_rate",
+          "template_kind": "RATE_LIMIT",
+          "window_ms": 1000
+        }
+      ],
+      "SAME_SESSION_GROUP": [
+        {
+          "group_key": "endpoint",
+          "reuse_window_ms": 5000,
+          "rule_id": "rule_protocol_local_api_budget",
+          "template_kind": "SAME_SESSION_GROUP"
+        },
+        {
+          "group_key": "host",
+          "reuse_window_ms": 10000,
+          "rule_id": "rule_protocol_cloud_batch_reuse",
+          "template_kind": "SAME_SESSION_GROUP"
+        }
+      ],
+      "SOFT_ORDER": [
+        {
+          "reason": "candidate:CONTROL_DEP"
+        },
+        {
+          "reason": "candidate:DATA_DEP"
+        },
+        {
+          "reason": "candidate:CONTROL_DEP"
+        },
+        {
+          "reason": "candidate:CONTROL_DEP"
+        }
+      ]
+    },
+    "transitive_reduction": [],
+    "unknown_protocol_actions": []
+  },
+  "ordered_batches": [
+    {
+      "batch_id": "batch_000",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [],
+      "guards": [
+        {
+          "enforced": true,
+          "expr": "latency_budget_allows_batching AND 429_rate_low",
+          "kind": "BATCH_GROUP",
+          "scope": [
+            "A1",
+            "A10",
+            "A11"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "latency_budget_allows_batching AND 429_rate_low",
+          "kind": "SAME_SESSION_GROUP",
+          "scope": [
+            "A1",
+            "A10",
+            "A11"
+          ]
+        }
+      ],
+      "parallel_groups": [
+        [
+          "A1",
+          "A10"
+        ],
+        [
+          "A2"
+        ],
+        [
+          "A3"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ],
+        "batch_size": 4,
+        "batching_buckets": [
+          {
+            "bucket": "tuya",
+            "chunks": 1,
+            "group_key": "host",
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "members": [
+              "A1",
+              "A10"
+            ],
+            "rule_kind": "SAME_SESSION_GROUP",
+            "size": 2
+          }
+        ],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "host",
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_001",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A4"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ],
+        "batch_size": 1,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "host",
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_002",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A5"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ],
+        "batch_size": 1,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "host",
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_003",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A6"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ],
+        "batch_size": 1,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "host",
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_004",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A7"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ],
+        "batch_size": 1,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "host",
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_005",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A8"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ],
+        "batch_size": 1,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "host",
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_006",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A9"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ],
+        "batch_size": 1,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "host",
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_007",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [],
+      "guards": [
+        {
+          "enforced": true,
+          "expr": "latency_budget_allows_batching AND 429_rate_low",
+          "kind": "BATCH_GROUP",
+          "scope": [
+            "A1",
+            "A10",
+            "A11"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "latency_budget_allows_batching AND 429_rate_low",
+          "kind": "SAME_SESSION_GROUP",
+          "scope": [
+            "A1",
+            "A10",
+            "A11"
+          ]
+        }
+      ],
+      "parallel_groups": [
+        [
+          "A11"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ],
+        "batch_size": 1,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "host",
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_008",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A12"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ],
+        "batch_size": 1,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "host",
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_009",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A13"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ],
+        "batch_size": 1,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "host",
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_010",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [
+        {
+          "action": "serialize_local_api_reads",
+          "kind": "SAME_SESSION_GROUP",
+          "params": {
+            "group_key": "endpoint",
+            "reuse_window_ms": 5000,
+            "rule_id": "rule_protocol_local_api_budget",
+            "template_kind": "SAME_SESSION_GROUP"
+          },
+          "scope": [
+            "A18"
+          ]
+        },
+        {
+          "action": "preserve_action_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:CONTROL_DEP"
+          },
+          "scope": [
+            "A18"
+          ]
+        },
+        {
+          "action": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:CONTROL_DEP"
+          },
+          "scope": [
+            "A16"
+          ]
+        },
+        {
+          "action": "force_topological_local_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:DATA_DEP"
+          },
+          "scope": [
+            "A16"
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "SOFT_ORDER",
+          "scope": [
+            "A18",
+            "A21"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "SOFT_ORDER",
+          "scope": [
+            "A16",
+            "A20"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "SOFT_ORDER",
+          "scope": [
+            "A16"
+          ]
+        }
+      ],
+      "parallel_groups": [
+        [
+          "A14"
+        ],
+        [
+          "A15"
+        ],
+        [
+          "A16"
+        ],
+        [
+          "A17"
+        ],
+        [
+          "A18"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [
+          {
+            "action": "serialize_local_api_reads",
+            "kind": "SAME_SESSION_GROUP",
+            "params": {
+              "group_key": "endpoint",
+              "reuse_window_ms": 5000,
+              "rule_id": "rule_protocol_local_api_budget",
+              "template_kind": "SAME_SESSION_GROUP"
+            },
+            "scope": [
+              "A18"
+            ]
+          },
+          {
+            "action": "preserve_action_order",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:CONTROL_DEP"
+            },
+            "scope": [
+              "A18"
+            ]
+          },
+          {
+            "action": "force_topological_local_order",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:CONTROL_DEP"
+            },
+            "scope": [
+              "A16"
+            ]
+          },
+          {
+            "action": "force_topological_local_order",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:DATA_DEP"
+            },
+            "scope": [
+              "A16"
+            ]
+          }
+        ],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ],
+        "batch_size": 5,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "host",
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_011",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [
+        {
+          "action": "serialize_local_api_reads",
+          "kind": "SAME_SESSION_GROUP",
+          "params": {
+            "group_key": "endpoint",
+            "reuse_window_ms": 5000,
+            "rule_id": "rule_protocol_local_api_budget",
+            "template_kind": "SAME_SESSION_GROUP"
+          },
+          "scope": [
+            "A19"
+          ]
+        },
+        {
+          "action": "preserve_action_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:CONTROL_DEP"
+          },
+          "scope": [
+            "A19"
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "SOFT_ORDER",
+          "scope": [
+            "A19",
+            "A21"
+          ]
+        }
+      ],
+      "parallel_groups": [
+        [
+          "A19"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [
+          {
+            "action": "serialize_local_api_reads",
+            "kind": "SAME_SESSION_GROUP",
+            "params": {
+              "group_key": "endpoint",
+              "reuse_window_ms": 5000,
+              "rule_id": "rule_protocol_local_api_budget",
+              "template_kind": "SAME_SESSION_GROUP"
+            },
+            "scope": [
+              "A19"
+            ]
+          },
+          {
+            "action": "preserve_action_order",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:CONTROL_DEP"
+            },
+            "scope": [
+              "A19"
+            ]
+          }
+        ],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ],
+        "batch_size": 1,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "host",
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_012",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:CONTROL_DEP"
+          },
+          "scope": [
+            "A20"
+          ]
+        },
+        {
+          "action": "preserve_action_order",
+          "kind": "SOFT_ORDER",
+          "params": {
+            "reason": "candidate:CONTROL_DEP"
+          },
+          "scope": [
+            "A21"
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "SOFT_ORDER",
+          "scope": [
+            "A16",
+            "A20"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "SOFT_ORDER",
+          "scope": [
+            "A18",
+            "A21"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "SOFT_ORDER",
+          "scope": [
+            "A19",
+            "A21"
+          ]
+        }
+      ],
+      "parallel_groups": [
+        [
+          "A20"
+        ],
+        [
+          "A21"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [
+          {
+            "action": "preserve_action_order",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:CONTROL_DEP"
+            },
+            "scope": [
+              "A20"
+            ]
+          },
+          {
+            "action": "preserve_action_order",
+            "kind": "SOFT_ORDER",
+            "params": {
+              "reason": "candidate:CONTROL_DEP"
+            },
+            "scope": [
+              "A21"
+            ]
+          }
+        ],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ],
+        "batch_size": 2,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "host",
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_013",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A22"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ],
+        "batch_size": 1,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "host",
+            "scope": [
+              "A1",
+              "A10",
+              "A11"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

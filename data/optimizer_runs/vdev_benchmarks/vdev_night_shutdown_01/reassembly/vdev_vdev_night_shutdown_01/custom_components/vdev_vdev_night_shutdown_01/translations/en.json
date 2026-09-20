@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_night_shutdown_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Night Shutdown Routine"
+}

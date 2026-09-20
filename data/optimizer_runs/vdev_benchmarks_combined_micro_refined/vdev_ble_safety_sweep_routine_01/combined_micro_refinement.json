@@ -1,0 +1,67 @@
+{
+  "accepted_corridors": [
+    {
+      "action_ids": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A11",
+        "A12",
+        "A13"
+      ],
+      "batch_ids": [
+        "batch_000",
+        "batch_001",
+        "batch_002",
+        "batch_003",
+        "batch_004",
+        "batch_005",
+        "batch_006",
+        "batch_007",
+        "batch_008",
+        "batch_009",
+        "batch_010",
+        "batch_011",
+        "batch_012"
+      ],
+      "corridor_id": "corridor_00",
+      "latency_saved_ms": 1080,
+      "source": "BLE",
+      "validation_passed": true
+    }
+  ],
+  "api_added_savings_ms": 0,
+  "ble_added_savings_ms": 1080,
+  "case_name": "BLE Safety Sweep Routine",
+  "combined_added_savings_ms": 1080,
+  "combined_added_savings_ratio": 0.09310344827586207,
+  "combined_refined_estimated_latency_ms": 10520,
+  "conflict_count": 0,
+  "group": "Profile Coverage - Realistic Stress Routines",
+  "original_estimated_latency_ms": 11600,
+  "rejected_corridors": [],
+  "target_path": "data/targets/vdev_benchmarks/vdev_ble_safety_sweep_routine_01.json",
+  "validation": {
+    "api_constraints_ok": true,
+    "batch_order_preserved": true,
+    "ble_constraints_ok": true,
+    "component_validations_ok": true,
+    "conflict_free": true,
+    "contiguous_coverage_ok": true,
+    "event_loop_constraints_ok": true,
+    "passed": true,
+    "projection_ok": true,
+    "reasons": [],
+    "savings_consistency_ok": true,
+    "simulated_event_count": 56,
+    "simulated_total_ms": 10520
+  },
+  "vdev_id": "vdev_ble_safety_sweep_routine_01"
+}

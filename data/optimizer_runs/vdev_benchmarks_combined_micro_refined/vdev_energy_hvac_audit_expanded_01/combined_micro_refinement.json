@@ -1,0 +1,50 @@
+{
+  "accepted_corridors": [
+    {
+      "action_ids": [
+        "A1",
+        "A4",
+        "A2",
+        "A3",
+        "A5",
+        "A6"
+      ],
+      "batch_ids": [
+        "batch_000",
+        "batch_001",
+        "batch_002"
+      ],
+      "corridor_id": "corridor_00",
+      "latency_saved_ms": 166,
+      "source": "API",
+      "validation_passed": true
+    }
+  ],
+  "api_added_savings_ms": 166,
+  "ble_added_savings_ms": 0,
+  "case_name": "Energy and HVAC Audit Expanded",
+  "combined_added_savings_ms": 166,
+  "combined_added_savings_ratio": 0.0912087912087912,
+  "combined_refined_estimated_latency_ms": 1654,
+  "conflict_count": 0,
+  "group": "Whole-Home Survey and Audit Routines",
+  "original_estimated_latency_ms": 1820,
+  "rejected_corridors": [],
+  "target_path": "data/targets/vdev_benchmarks/vdev_energy_hvac_audit_expanded_01.json",
+  "validation": {
+    "api_constraints_ok": true,
+    "batch_order_preserved": true,
+    "ble_constraints_ok": true,
+    "component_validations_ok": true,
+    "conflict_free": true,
+    "contiguous_coverage_ok": true,
+    "event_loop_constraints_ok": true,
+    "passed": true,
+    "projection_ok": true,
+    "reasons": [],
+    "savings_consistency_ok": true,
+    "simulated_event_count": 37,
+    "simulated_total_ms": 1654
+  },
+  "vdev_id": "vdev_energy_hvac_audit_expanded_01"
+}

@@ -1,0 +1,360 @@
+{
+  "added_savings_ms": 147,
+  "added_savings_ratio": 0.03740458015267176,
+  "case_name": "Workday Focus Mode Routine",
+  "group": "Scene Activation and Comfort Control Routines",
+  "original_estimated_latency_ms": 3930,
+  "policy": {
+    "aggregate_async_safe_max_ms": 180,
+    "allow_cloud_auth_budget_overlap": true,
+    "allow_cloud_prepare_overlap": true,
+    "allow_local_prepare_overlap": true,
+    "availability_must_precede_write": true,
+    "cloud_backoff_wait_ms": 220,
+    "cloud_bucket_concurrency_limit": 1,
+    "cloud_control_min_corridor_latency_ms": 760,
+    "cloud_control_min_corridor_length": 2,
+    "cloud_host_concurrency_limit": 1,
+    "cloud_read_min_corridor_latency_ms": 700,
+    "cloud_read_min_corridor_length": 2,
+    "disallow_backoff_bypass": true,
+    "disallow_entity_level_overlap": true,
+    "disallow_parse_aggregate_cross_action_overlap": true,
+    "keep_writeback_serialized": true,
+    "local_endpoint_concurrency_limit": 1,
+    "local_http_control_min_corridor_latency_ms": 220,
+    "local_http_control_min_corridor_length": 2,
+    "local_http_read_min_corridor_latency_ms": 180,
+    "local_http_read_min_corridor_length": 2,
+    "local_session_concurrency_limit": 1,
+    "max_lookahead_steps": 1,
+    "min_corridor_latency_ms": 700,
+    "min_corridor_length": 2,
+    "mqtt_read_min_corridor_latency_ms": 220,
+    "mqtt_read_min_corridor_length": 3,
+    "parse_async_safe_max_ms": 220,
+    "preserve_refresh_cadence": true,
+    "require_coordinator_style_fetch": true,
+    "require_known_bucket_key": false,
+    "require_known_endpoint_key": false,
+    "require_known_host_key": true,
+    "require_known_session_key": true,
+    "require_shared_web_session": true,
+    "treat_mqtt_as_non_overlap_lane": true
+  },
+  "refined_estimated_latency_ms": 3783,
+  "selected_corridors": [
+    {
+      "action_ids": [
+        "A8",
+        "A9",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14"
+      ],
+      "batch_ids": [
+        "batch_007",
+        "batch_008"
+      ],
+      "corridor_id": "corridor_00",
+      "latency_saved_ms": 147,
+      "original_latency_ms": 1400,
+      "overlap_candidate_pairs": 1,
+      "phase_kind": "CLOUD",
+      "protocol": "CLOUD",
+      "refined_events": [
+        {
+          "end_ms": 52,
+          "phase": "CLOUD_AUTH_CHECK",
+          "start_ms": 0,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 93,
+          "phase": "CLOUD_RATE_BUDGET_CHECK",
+          "start_ms": 52,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 174,
+          "phase": "API_PREPARE",
+          "start_ms": 93,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 215,
+          "phase": "API_SESSION_READY",
+          "start_ms": 174,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 389,
+          "phase": "CLOUD_REQUEST_SEND",
+          "start_ms": 215,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 546,
+          "phase": "API_RESPONSE_RECV",
+          "start_ms": 389,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 546,
+          "phase": "CLOUD_BACKOFF_WAIT",
+          "start_ms": 546,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 625,
+          "phase": "API_PARSE_NORMALIZE",
+          "start_ms": 546,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 685,
+          "phase": "API_AGGREGATE",
+          "start_ms": 625,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 726,
+          "phase": "CLOUD_BATCH_GROUP_COMMIT",
+          "start_ms": 685,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 760,
+          "phase": "HA_STATE_WRITE",
+          "start_ms": 726,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 443,
+          "phase": "CLOUD_AUTH_CHECK",
+          "start_ms": 399,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 478,
+          "phase": "CLOUD_RATE_BUDGET_CHECK",
+          "start_ms": 443,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 546,
+          "phase": "API_PREPARE",
+          "start_ms": 478,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 795,
+          "phase": "API_SESSION_READY",
+          "start_ms": 760,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 941,
+          "phase": "CLOUD_REQUEST_SEND",
+          "start_ms": 795,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 1073,
+          "phase": "API_RESPONSE_RECV",
+          "start_ms": 941,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 1073,
+          "phase": "CLOUD_BACKOFF_WAIT",
+          "start_ms": 1073,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 1139,
+          "phase": "API_PARSE_NORMALIZE",
+          "start_ms": 1073,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 1190,
+          "phase": "API_AGGREGATE",
+          "start_ms": 1139,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 1225,
+          "phase": "CLOUD_BATCH_GROUP_COMMIT",
+          "start_ms": 1190,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 1253,
+          "phase": "HA_STATE_WRITE",
+          "start_ms": 1225,
+          "step_id": "batch_008"
+        }
+      ],
+      "refined_latency_ms": 1253,
+      "serial_events": [
+        {
+          "end_ms": 52,
+          "phase": "CLOUD_AUTH_CHECK",
+          "start_ms": 0,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 93,
+          "phase": "CLOUD_RATE_BUDGET_CHECK",
+          "start_ms": 52,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 174,
+          "phase": "API_PREPARE",
+          "start_ms": 93,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 215,
+          "phase": "API_SESSION_READY",
+          "start_ms": 174,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 389,
+          "phase": "CLOUD_REQUEST_SEND",
+          "start_ms": 215,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 546,
+          "phase": "API_RESPONSE_RECV",
+          "start_ms": 389,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 546,
+          "phase": "CLOUD_BACKOFF_WAIT",
+          "start_ms": 546,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 625,
+          "phase": "API_PARSE_NORMALIZE",
+          "start_ms": 546,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 685,
+          "phase": "API_AGGREGATE",
+          "start_ms": 625,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 726,
+          "phase": "CLOUD_BATCH_GROUP_COMMIT",
+          "start_ms": 685,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 760,
+          "phase": "HA_STATE_WRITE",
+          "start_ms": 726,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 804,
+          "phase": "CLOUD_AUTH_CHECK",
+          "start_ms": 760,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 839,
+          "phase": "CLOUD_RATE_BUDGET_CHECK",
+          "start_ms": 804,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 907,
+          "phase": "API_PREPARE",
+          "start_ms": 839,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 942,
+          "phase": "API_SESSION_READY",
+          "start_ms": 907,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 1088,
+          "phase": "CLOUD_REQUEST_SEND",
+          "start_ms": 942,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 1220,
+          "phase": "API_RESPONSE_RECV",
+          "start_ms": 1088,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 1220,
+          "phase": "CLOUD_BACKOFF_WAIT",
+          "start_ms": 1220,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 1286,
+          "phase": "API_PARSE_NORMALIZE",
+          "start_ms": 1220,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 1337,
+          "phase": "API_AGGREGATE",
+          "start_ms": 1286,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 1372,
+          "phase": "CLOUD_BATCH_GROUP_COMMIT",
+          "start_ms": 1337,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 1400,
+          "phase": "HA_STATE_WRITE",
+          "start_ms": 1372,
+          "step_id": "batch_008"
+        }
+      ],
+      "step_ids": [
+        "batch_007",
+        "batch_008"
+      ],
+      "validation": {
+        "availability_constraints_ok": true,
+        "backoff_constraints_ok": true,
+        "cadence_constraints_ok": true,
+        "coarse_completion_order_preserved": true,
+        "coordinator_constraints_ok": true,
+        "event_loop_constraints_ok": true,
+        "lookahead_depth_ok": true,
+        "parallel_updates_constraints_ok": true,
+        "passed": true,
+        "phase_order_valid": true,
+        "reasons": [],
+        "request_send_constraints_ok": true,
+        "session_constraints_ok": true,
+        "writeback_constraints_ok": true
+      }
+    }
+  ],
+  "target_path": "data/targets/vdev_benchmarks/vdev_workday_focus_mode_01.json",
+  "vdev_id": "vdev_workday_focus_mode_01"
+}

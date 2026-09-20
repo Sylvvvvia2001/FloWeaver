@@ -1,0 +1,842 @@
+{
+  "meta": {
+    "action_lanes": {
+      "A1": "CLOUD",
+      "A10": "CLOUD",
+      "A11": "CLOUD",
+      "A12": "CLOUD",
+      "A13": "CLOUD",
+      "A14": "LOCAL",
+      "A15": "LOCAL",
+      "A16": "LOCAL",
+      "A17": "LOCAL",
+      "A18": "LOCAL",
+      "A19": "WRITEBACK_CLOUD",
+      "A2": "CLOUD",
+      "A20": "WRITEBACK_LOCAL",
+      "A21": "WRITEBACK_OVERALL",
+      "A3": "CLOUD",
+      "A4": "CLOUD",
+      "A5": "CLOUD",
+      "A6": "CLOUD",
+      "A7": "CLOUD",
+      "A8": "CLOUD",
+      "A9": "CLOUD"
+    },
+    "canonicalization_version": null,
+    "node_kind": "action_id",
+    "objectives": {
+      "metrics": {
+        "e2e_latency_ms": {
+          "p95": 4000
+        }
+      },
+      "primary": "minimize_tail_latency_for_profile_coverage_routine"
+    },
+    "policy": {
+      "ble_parallel": 1,
+      "cloud_parallel": 3,
+      "default_qps": 5.0,
+      "local_parallel": 6,
+      "max_parallel": 9
+    },
+    "profile_version": null,
+    "trust_compression": {
+      "action_to_msf_count": {
+        "A1": 2,
+        "A10": 2,
+        "A11": 1,
+        "A12": 1,
+        "A13": 1,
+        "A14": 1,
+        "A15": 1,
+        "A16": 1,
+        "A17": 1,
+        "A18": 1,
+        "A19": 1,
+        "A2": 1,
+        "A20": 1,
+        "A21": 1,
+        "A3": 1,
+        "A4": 1,
+        "A5": 2,
+        "A6": 1,
+        "A7": 1,
+        "A8": 1,
+        "A9": 1
+      },
+      "merged_constraints": [
+        {
+          "batch_id": "batch_015",
+          "compressed_constraint_count": 3,
+          "original_constraint_count": 5
+        }
+      ],
+      "policy_blocks": [
+        {
+          "fallback_actions": [],
+          "guard_kinds": [
+            "BATCH_GROUP",
+            "SAME_SESSION_GROUP"
+          ],
+          "policy_block": "cloud_policy",
+          "scope": [
+            "A1",
+            "A10",
+            "A5"
+          ]
+        },
+        {
+          "fallback_actions": [],
+          "guard_kinds": [
+            "BATCH_GROUP",
+            "SAME_SESSION_GROUP"
+          ],
+          "policy_block": "cloud_policy",
+          "scope": [
+            "A1",
+            "A10",
+            "A5"
+          ]
+        },
+        {
+          "fallback_actions": [
+            "preserve_action_order",
+            "serialize_local_api_reads"
+          ],
+          "guard_kinds": [],
+          "policy_block": "local_policy",
+          "scope": [
+            "A14"
+          ]
+        },
+        {
+          "fallback_actions": [
+            "preserve_action_order",
+            "serialize_local_api_reads"
+          ],
+          "guard_kinds": [],
+          "policy_block": "local_policy",
+          "scope": [
+            "A15"
+          ]
+        },
+        {
+          "fallback_actions": [
+            "preserve_action_order",
+            "serialize_local_api_reads"
+          ],
+          "guard_kinds": [],
+          "policy_block": "local_policy",
+          "scope": [
+            "A16"
+          ]
+        },
+        {
+          "fallback_actions": [
+            "serialize_local_api_reads"
+          ],
+          "guard_kinds": [],
+          "policy_block": "local_policy",
+          "scope": [
+            "A17"
+          ]
+        },
+        {
+          "fallback_actions": [
+            "serialize_local_api_reads"
+          ],
+          "guard_kinds": [],
+          "policy_block": "local_policy",
+          "scope": [
+            "A18"
+          ]
+        },
+        {
+          "fallback_actions": [
+            "preserve_action_order"
+          ],
+          "guard_kinds": [],
+          "policy_block": "writeback_local_policy",
+          "scope": [
+            "A20"
+          ]
+        }
+      ]
+    }
+  },
+  "ordered_batches": [
+    {
+      "batch_id": "batch_000",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A1"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_001",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A2"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_002",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A3"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_003",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A4"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_004",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A5"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_005",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A6"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_006",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A7"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_007",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A8"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_008",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A9"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_009",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A10"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_010",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A11"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_011",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A12"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_012",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A13"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_013",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A14"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_014",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A15"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_015",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A16"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_016",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A17"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_017",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A18"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_018",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A19"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_019",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A20"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    },
+    {
+      "batch_id": "batch_020",
+      "constraints": [],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {},
+          "scope": []
+        },
+        {
+          "action": "set_ble_parallelism_to_1",
+          "kind": "NO_OVERLAP",
+          "params": {},
+          "scope": []
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A21"
+        ]
+      ],
+      "rate_policy": {
+        "batch_size": 1,
+        "max_qps": 1.0
+      },
+      "session_policy": {
+        "max_age_s": 0,
+        "reuse": false
+      }
+    }
+  ]
+}

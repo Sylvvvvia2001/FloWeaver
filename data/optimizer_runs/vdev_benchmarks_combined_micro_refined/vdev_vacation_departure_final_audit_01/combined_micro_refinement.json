@@ -1,0 +1,116 @@
+{
+  "accepted_corridors": [
+    {
+      "action_ids": [
+        "A11",
+        "A15",
+        "A12",
+        "A13",
+        "A14",
+        "A16",
+        "A17",
+        "A18",
+        "A19",
+        "A20"
+      ],
+      "batch_ids": [
+        "batch_010",
+        "batch_011",
+        "batch_012",
+        "batch_013",
+        "batch_014",
+        "batch_015",
+        "batch_016"
+      ],
+      "corridor_id": "corridor_00",
+      "latency_saved_ms": 540,
+      "source": "API",
+      "validation_passed": true
+    },
+    {
+      "action_ids": [
+        "A21",
+        "A22",
+        "A23",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A28",
+        "A29"
+      ],
+      "batch_ids": [
+        "batch_017",
+        "batch_018",
+        "batch_019",
+        "batch_020",
+        "batch_021",
+        "batch_022",
+        "batch_023",
+        "batch_024",
+        "batch_025"
+      ],
+      "corridor_id": "corridor_01",
+      "latency_saved_ms": 200,
+      "source": "API",
+      "validation_passed": true
+    },
+    {
+      "action_ids": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10"
+      ],
+      "batch_ids": [
+        "batch_000",
+        "batch_001",
+        "batch_002",
+        "batch_003",
+        "batch_004",
+        "batch_005",
+        "batch_006",
+        "batch_007",
+        "batch_008",
+        "batch_009"
+      ],
+      "corridor_id": "corridor_00",
+      "latency_saved_ms": 846,
+      "source": "BLE",
+      "validation_passed": true
+    }
+  ],
+  "api_added_savings_ms": 740,
+  "ble_added_savings_ms": 846,
+  "case_name": "Vacation Departure Final Audit",
+  "combined_added_savings_ms": 1586,
+  "combined_added_savings_ratio": 0.13590402742073693,
+  "combined_refined_estimated_latency_ms": 10084,
+  "conflict_count": 0,
+  "group": "Profile Coverage - Arrival and Departure Routines",
+  "original_estimated_latency_ms": 11670,
+  "rejected_corridors": [],
+  "target_path": "data/targets/vdev_benchmarks/vdev_vacation_departure_final_audit_01.json",
+  "validation": {
+    "api_constraints_ok": true,
+    "batch_order_preserved": true,
+    "ble_constraints_ok": true,
+    "component_validations_ok": true,
+    "conflict_free": true,
+    "contiguous_coverage_ok": true,
+    "event_loop_constraints_ok": true,
+    "passed": true,
+    "projection_ok": true,
+    "reasons": [],
+    "savings_consistency_ok": true,
+    "simulated_event_count": 182,
+    "simulated_total_ms": 10084
+  },
+  "vdev_id": "vdev_vacation_departure_final_audit_01"
+}

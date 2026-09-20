@@ -1,0 +1,4641 @@
+{
+  "anchor_nodes": [
+    "0e4b12a7:_handle_coordinator_update:0:136",
+    "0e4b12a7:_handle_coordinator_update:0:217",
+    "0e4b12a7:_handle_coordinator_update:0:305",
+    "0e4b12a7:_handle_coordinator_update:1:137",
+    "0e4b12a7:_handle_coordinator_update:1:218",
+    "0e4b12a7:_handle_coordinator_update:1:306",
+    "0e4b12a7:_handle_coordinator_update:2:138",
+    "0e4b12a7:_handle_coordinator_update:2:219",
+    "0e4b12a7:_handle_coordinator_update:2:307",
+    "0e4b12a7:_handle_coordinator_update:3:139",
+    "0e4b12a7:_handle_coordinator_update:3:220",
+    "0e4b12a7:_handle_coordinator_update:3:308",
+    "0e4b12a7:_handle_coordinator_update:4:140",
+    "0e4b12a7:_handle_coordinator_update:4:223",
+    "0e4b12a7:_handle_coordinator_update:4:309",
+    "0e4b12a7:_handle_coordinator_update:5:142",
+    "0e4b12a7:_handle_coordinator_update:5:224",
+    "0e4b12a7:_handle_coordinator_update:5:311",
+    "0e4b12a7:_handle_coordinator_update:6:225",
+    "0e4b12a7:async_stop_cover:2:118",
+    "0e4b12a7:async_stop_cover:2:287",
+    "0e4b12a7:async_stop_cover_tilt:2:203",
+    "51425972:_update_values:7:240",
+    "67d079e8:async_discover_device:2.1:470",
+    "67d079e8:async_setup_entry:2:465",
+    "67d079e8:async_turn_on:4.1:608",
+    "67d079e8:async_turn_on:4.2:611",
+    "67d079e8:is_on:0:569",
+    "67d079e8:is_on:1:570",
+    "789a6e2e:_async_call_update_attrs:1.0:272",
+    "789a6e2e:_async_call_update_attrs:1:271",
+    "789a6e2e:_handle_coordinator_update:0:287",
+    "789a6e2e:_handle_coordinator_update:1:288",
+    "789a6e2e:_handle_coordinator_update:2:289",
+    "789a6e2e:async_added_to_hass:2:257",
+    "818854af:_async_wait_for_full_advertisement:2:73",
+    "818854af:_process_more_advertisements:0:76",
+    "8e4c1745:__init__:16.1.0:308",
+    "8e4c1745:__init__:16.1:307",
+    "8e4c1745:__init__:20.1:340",
+    "8e4c1745:async_set_hvac_mode:3:362",
+    "8e4c1745:async_set_swing_mode:1:386",
+    "8e4c1745:hvac_mode:5:431",
+    "8e4c1745:swing_mode:2:447",
+    "9425188b:async_oscillate:3:101",
+    "9425188b:async_set_percentage:3:92",
+    "9425188b:async_set_preset_mode:3:161",
+    "9425188b:async_set_preset_mode:3:83",
+    "9425188b:async_turn_off:3:125",
+    "9425188b:async_turn_off:3:187",
+    "9425188b:async_turn_on:3:118",
+    "9425188b:async_turn_on:3:179",
+    "9cfce7a4:_process_device_update:0:968",
+    "9cfce7a4:_process_device_update:1:973",
+    "9cfce7a4:async_discover_device:2.1:922",
+    "9cfce7a4:async_setup_entry:2:917",
+    "9da22f42:_handle_device_update:3:186",
+    "a073d609:_handle_state_update:1.0:76",
+    "a073d609:_handle_state_update:1:63",
+    "ab8f4bde:_async_handle_event:0:179",
+    "ab8f4bde:_async_handle_event:1:180",
+    "d9c4917e:sensor_update_to_bluetooth_data_update:0:111",
+    "d9c4917e:sensor_update_to_bluetooth_data_update:1:112"
+  ],
+  "edges": [
+    {
+      "dst": "9da22f42:_handle_device_update:3:186",
+      "edge_type": "CFG_NEXT",
+      "src": "9da22f42:_handle_device_update:2:185"
+    },
+    {
+      "dst": "51425972:_update_values:7:240",
+      "edge_type": "CFG_NEXT",
+      "src": "51425972:_update_values:6:239"
+    },
+    {
+      "dst": "0e4b12a7:async_stop_cover:2:118",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:async_stop_cover:1:117"
+    },
+    {
+      "dst": "0e4b12a7:async_stop_cover:3:119",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:async_stop_cover:2:118"
+    },
+    {
+      "dst": "0e4b12a7:async_stop_cover:4:120",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:async_stop_cover:3:119"
+    },
+    {
+      "dst": "0e4b12a7:async_stop_cover:5:121",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:async_stop_cover:4:120"
+    },
+    {
+      "dst": "0e4b12a7:async_stop_cover:0:284",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:async_stop_cover:5:121"
+    },
+    {
+      "dst": "0e4b12a7:async_stop_cover:1:286",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:async_stop_cover:0:284"
+    },
+    {
+      "dst": "0e4b12a7:async_stop_cover:2:287",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:async_stop_cover:1:286"
+    },
+    {
+      "dst": "0e4b12a7:async_stop_cover:3:288",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:async_stop_cover:2:287"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:1:137",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:0:136"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:2:138",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:1:137"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:3:139",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:2:138"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:4:140",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:3:139"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:5:142",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:4:140"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:0:217",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:5:142"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:1:218",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:0:217"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:2:219",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:1:218"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:2:219",
+      "edge_type": "DATA_DEP",
+      "src": "0e4b12a7:_handle_coordinator_update:1:218"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:3:220",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:2:219"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:3:220",
+      "edge_type": "DATA_DEP",
+      "src": "0e4b12a7:_handle_coordinator_update:1:218"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:4:223",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:3:220"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:5:224",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:4:223"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:6:225",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:5:224"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:0:305",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:6:225"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:1:306",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:0:305"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:2:307",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:1:306"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:3:308",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:2:307"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:4:309",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:3:308"
+    },
+    {
+      "dst": "0e4b12a7:_handle_coordinator_update:5:311",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:_handle_coordinator_update:4:309"
+    },
+    {
+      "dst": "0e4b12a7:async_stop_cover_tilt:2:203",
+      "edge_type": "CFG_NEXT",
+      "src": "0e4b12a7:async_stop_cover_tilt:1:202"
+    },
+    {
+      "dst": "9425188b:async_set_preset_mode:3:83",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_set_preset_mode:2:82"
+    },
+    {
+      "dst": "9425188b:async_set_preset_mode:0:153",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_set_preset_mode:3:83"
+    },
+    {
+      "dst": "9425188b:async_set_preset_mode:1:155",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_set_preset_mode:0:153"
+    },
+    {
+      "dst": "9425188b:async_set_preset_mode:2:160",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_set_preset_mode:1:155"
+    },
+    {
+      "dst": "9425188b:async_set_preset_mode:3:161",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_set_preset_mode:2:160"
+    },
+    {
+      "dst": "9425188b:async_set_percentage:3:92",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_set_percentage:2:91"
+    },
+    {
+      "dst": "9425188b:async_oscillate:3:101",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_oscillate:2:100"
+    },
+    {
+      "dst": "9425188b:async_turn_on:3:118",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_turn_on:2:117"
+    },
+    {
+      "dst": "9425188b:async_turn_on:0:170",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_turn_on:3:118"
+    },
+    {
+      "dst": "9425188b:async_turn_on:1:172",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_turn_on:0:170"
+    },
+    {
+      "dst": "9425188b:async_turn_on:2:178",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_turn_on:1:172"
+    },
+    {
+      "dst": "9425188b:async_turn_on:3:179",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_turn_on:2:178"
+    },
+    {
+      "dst": "9425188b:async_turn_off:3:125",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_turn_off:2:124"
+    },
+    {
+      "dst": "9425188b:async_turn_off:0:183",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_turn_off:3:125"
+    },
+    {
+      "dst": "9425188b:async_turn_off:1:185",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_turn_off:0:183"
+    },
+    {
+      "dst": "9425188b:async_turn_off:2:186",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_turn_off:1:185"
+    },
+    {
+      "dst": "9425188b:async_turn_off:3:187",
+      "edge_type": "CFG_NEXT",
+      "src": "9425188b:async_turn_off:2:186"
+    },
+    {
+      "dst": "789a6e2e:async_added_to_hass:2:257",
+      "edge_type": "CFG_NEXT",
+      "src": "789a6e2e:async_added_to_hass:1:255"
+    },
+    {
+      "dst": "789a6e2e:_async_call_update_attrs:1:271",
+      "edge_type": "CFG_NEXT",
+      "src": "789a6e2e:_async_call_update_attrs:0:270"
+    },
+    {
+      "dst": "789a6e2e:_async_call_update_attrs:1.0:272",
+      "edge_type": "CFG_NEXT",
+      "src": "789a6e2e:_async_call_update_attrs:1:271"
+    },
+    {
+      "dst": "789a6e2e:_async_call_update_attrs:1.0:274",
+      "edge_type": "CFG_NEXT",
+      "src": "789a6e2e:_async_call_update_attrs:1.0:272"
+    },
+    {
+      "dst": "789a6e2e:_async_call_update_attrs:1.0.0:275",
+      "edge_type": "CFG_NEXT",
+      "src": "789a6e2e:_async_call_update_attrs:1.0:274"
+    },
+    {
+      "dst": "789a6e2e:_async_call_update_attrs:1.1:281",
+      "edge_type": "CFG_NEXT",
+      "src": "789a6e2e:_async_call_update_attrs:1.0.0:275"
+    },
+    {
+      "dst": "789a6e2e:_async_call_update_attrs:1.0:283",
+      "edge_type": "CFG_NEXT",
+      "src": "789a6e2e:_async_call_update_attrs:1.1:281"
+    },
+    {
+      "dst": "789a6e2e:_async_call_update_attrs:1.0:283",
+      "edge_type": "DATA_DEP",
+      "src": "789a6e2e:_async_call_update_attrs:1.0:272"
+    },
+    {
+      "dst": "789a6e2e:_async_call_update_attrs:1.0:272",
+      "edge_type": "CONTROL_DEP",
+      "src": "789a6e2e:_async_call_update_attrs:1:271"
+    },
+    {
+      "dst": "789a6e2e:_async_call_update_attrs:1.0:274",
+      "edge_type": "CONTROL_DEP",
+      "src": "789a6e2e:_async_call_update_attrs:1:271"
+    },
+    {
+      "dst": "789a6e2e:_async_call_update_attrs:1.0.0:275",
+      "edge_type": "CONTROL_DEP",
+      "src": "789a6e2e:_async_call_update_attrs:1:271"
+    },
+    {
+      "dst": "789a6e2e:_async_call_update_attrs:1.1:281",
+      "edge_type": "CONTROL_DEP",
+      "src": "789a6e2e:_async_call_update_attrs:1:271"
+    },
+    {
+      "dst": "789a6e2e:_async_call_update_attrs:1.0:283",
+      "edge_type": "CONTROL_DEP",
+      "src": "789a6e2e:_async_call_update_attrs:1:271"
+    },
+    {
+      "dst": "789a6e2e:_async_call_update_attrs:1.0.0:275",
+      "edge_type": "CONTROL_DEP",
+      "src": "789a6e2e:_async_call_update_attrs:1.0:274"
+    },
+    {
+      "dst": "789a6e2e:_async_call_update_attrs:1.1:281",
+      "edge_type": "EXCEPTION_DEP",
+      "src": "789a6e2e:_async_call_update_attrs:1:271"
+    },
+    {
+      "dst": "789a6e2e:_handle_coordinator_update:1:288",
+      "edge_type": "CFG_NEXT",
+      "src": "789a6e2e:_handle_coordinator_update:0:287"
+    },
+    {
+      "dst": "789a6e2e:_handle_coordinator_update:2:289",
+      "edge_type": "CFG_NEXT",
+      "src": "789a6e2e:_handle_coordinator_update:1:288"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.1:307",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:__init__:16:305"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.1.0:308",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:16.1:307"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.1.0:308",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:__init__:16.1:307"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.1.0.0:312",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:16.1.0:308"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.1.0.0:312",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:__init__:16.1.0:308"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.0:314",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:16.1.0.0:312"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.0.0:315",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:16.0:314"
+    },
+    {
+      "dst": "8e4c1745:__init__:17:321",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:16.0.0:315"
+    },
+    {
+      "dst": "8e4c1745:__init__:17.0:322",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:17:321"
+    },
+    {
+      "dst": "8e4c1745:__init__:17.1:323",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:17.0:322"
+    },
+    {
+      "dst": "8e4c1745:__init__:17.2:324",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:17.1:323"
+    },
+    {
+      "dst": "8e4c1745:__init__:18:327",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:17.2:324"
+    },
+    {
+      "dst": "8e4c1745:__init__:18.0:328",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:18:327"
+    },
+    {
+      "dst": "8e4c1745:__init__:18.1:329",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:18.0:328"
+    },
+    {
+      "dst": "8e4c1745:__init__:18.2:330",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:18.1:329"
+    },
+    {
+      "dst": "8e4c1745:__init__:19:333",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:18.2:330"
+    },
+    {
+      "dst": "8e4c1745:__init__:19.0:334",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:19:333"
+    },
+    {
+      "dst": "8e4c1745:__init__:19.1:335",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:19.0:334"
+    },
+    {
+      "dst": "8e4c1745:__init__:20:338",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:19.1:335"
+    },
+    {
+      "dst": "8e4c1745:__init__:20.0:339",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:20:338"
+    },
+    {
+      "dst": "8e4c1745:__init__:20.1:340",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:20.0:339"
+    },
+    {
+      "dst": "8e4c1745:__init__:20.1:340",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:__init__:20:338"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.1:307",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:16:305"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.1.0:308",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:16:305"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.1.0.0:312",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:16:305"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.0:314",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:16:305"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.0.0:315",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:16:305"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.1.0:308",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:16.1:307"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.1.0.0:312",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:16.1:307"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.1.0.0:312",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:16.1.0:308"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.0.0:315",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:16.0:314"
+    },
+    {
+      "dst": "8e4c1745:__init__:17.0:322",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:17:321"
+    },
+    {
+      "dst": "8e4c1745:__init__:17.1:323",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:17:321"
+    },
+    {
+      "dst": "8e4c1745:__init__:17.2:324",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:17:321"
+    },
+    {
+      "dst": "8e4c1745:__init__:18.0:328",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:18:327"
+    },
+    {
+      "dst": "8e4c1745:__init__:18.1:329",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:18:327"
+    },
+    {
+      "dst": "8e4c1745:__init__:18.2:330",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:18:327"
+    },
+    {
+      "dst": "8e4c1745:__init__:19.0:334",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:19:333"
+    },
+    {
+      "dst": "8e4c1745:__init__:19.1:335",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:19:333"
+    },
+    {
+      "dst": "8e4c1745:__init__:20.0:339",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:20:338"
+    },
+    {
+      "dst": "8e4c1745:__init__:20.1:340",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:20:338"
+    },
+    {
+      "dst": "8e4c1745:async_set_hvac_mode:3:362",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:async_set_hvac_mode:1:355"
+    },
+    {
+      "dst": "8e4c1745:hvac_mode:5:431",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:hvac_mode:4:430"
+    },
+    {
+      "dst": "8e4c1745:hvac_mode:5:431",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:hvac_mode:4:430"
+    },
+    {
+      "dst": "8e4c1745:swing_mode:2:447",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:swing_mode:1:446"
+    },
+    {
+      "dst": "8e4c1745:swing_mode:2:447",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:swing_mode:1:446"
+    },
+    {
+      "dst": "a073d609:_handle_state_update:1.0:76",
+      "edge_type": "CFG_NEXT",
+      "src": "a073d609:_handle_state_update:1:63"
+    },
+    {
+      "dst": "a073d609:_handle_state_update:1.0:76",
+      "edge_type": "CONTROL_DEP",
+      "src": "a073d609:_handle_state_update:1:63"
+    },
+    {
+      "dst": "67d079e8:async_setup_entry:2:465",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_setup_entry:1:462"
+    },
+    {
+      "dst": "67d079e8:async_setup_entry:2:465",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_setup_entry:1:462"
+    },
+    {
+      "dst": "67d079e8:async_discover_device:2:468",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_discover_device:1:467"
+    },
+    {
+      "dst": "67d079e8:async_discover_device:2:468",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_discover_device:1:467"
+    },
+    {
+      "dst": "67d079e8:async_discover_device:2.0:469",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_discover_device:2:468"
+    },
+    {
+      "dst": "67d079e8:async_discover_device:2.0:469",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_discover_device:2:468"
+    },
+    {
+      "dst": "67d079e8:async_discover_device:2.1:470",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_discover_device:2.0:469"
+    },
+    {
+      "dst": "67d079e8:async_discover_device:2.1:470",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_discover_device:1:467"
+    },
+    {
+      "dst": "67d079e8:async_discover_device:2.1:470",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_discover_device:2:468"
+    },
+    {
+      "dst": "67d079e8:async_discover_device:2.1:470",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_discover_device:2.0:469"
+    },
+    {
+      "dst": "67d079e8:async_discover_device:2.0:469",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_discover_device:2:468"
+    },
+    {
+      "dst": "67d079e8:async_discover_device:2.1:470",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_discover_device:2:468"
+    },
+    {
+      "dst": "67d079e8:is_on:1:570",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:is_on:0:569"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.1.0:609",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_turn_on:4.1:608"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.2:611",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_turn_on:4.1.0:609"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.2.0:612",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_turn_on:4.2:611"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.1.0:609",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4.1:608"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.2.0:612",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4.2:611"
+    },
+    {
+      "dst": "9cfce7a4:async_setup_entry:2:917",
+      "edge_type": "CFG_NEXT",
+      "src": "9cfce7a4:async_setup_entry:1:914"
+    },
+    {
+      "dst": "9cfce7a4:async_setup_entry:2:917",
+      "edge_type": "DATA_DEP",
+      "src": "9cfce7a4:async_setup_entry:1:914"
+    },
+    {
+      "dst": "9cfce7a4:async_discover_device:2:920",
+      "edge_type": "CFG_NEXT",
+      "src": "9cfce7a4:async_discover_device:1:919"
+    },
+    {
+      "dst": "9cfce7a4:async_discover_device:2:920",
+      "edge_type": "DATA_DEP",
+      "src": "9cfce7a4:async_discover_device:1:919"
+    },
+    {
+      "dst": "9cfce7a4:async_discover_device:2.0:921",
+      "edge_type": "CFG_NEXT",
+      "src": "9cfce7a4:async_discover_device:2:920"
+    },
+    {
+      "dst": "9cfce7a4:async_discover_device:2.0:921",
+      "edge_type": "DATA_DEP",
+      "src": "9cfce7a4:async_discover_device:2:920"
+    },
+    {
+      "dst": "9cfce7a4:async_discover_device:2.1:922",
+      "edge_type": "CFG_NEXT",
+      "src": "9cfce7a4:async_discover_device:2.0:921"
+    },
+    {
+      "dst": "9cfce7a4:async_discover_device:2.1:922",
+      "edge_type": "DATA_DEP",
+      "src": "9cfce7a4:async_discover_device:1:919"
+    },
+    {
+      "dst": "9cfce7a4:async_discover_device:2.1:922",
+      "edge_type": "DATA_DEP",
+      "src": "9cfce7a4:async_discover_device:2:920"
+    },
+    {
+      "dst": "9cfce7a4:async_discover_device:2.1:922",
+      "edge_type": "DATA_DEP",
+      "src": "9cfce7a4:async_discover_device:2.0:921"
+    },
+    {
+      "dst": "9cfce7a4:async_discover_device:2.0:921",
+      "edge_type": "CONTROL_DEP",
+      "src": "9cfce7a4:async_discover_device:2:920"
+    },
+    {
+      "dst": "9cfce7a4:async_discover_device:2.1:922",
+      "edge_type": "CONTROL_DEP",
+      "src": "9cfce7a4:async_discover_device:2:920"
+    },
+    {
+      "dst": "9cfce7a4:_process_device_update:1:973",
+      "edge_type": "CFG_NEXT",
+      "src": "9cfce7a4:_process_device_update:0:968"
+    },
+    {
+      "dst": "d9c4917e:sensor_update_to_bluetooth_data_update:1:112",
+      "edge_type": "CFG_NEXT",
+      "src": "d9c4917e:sensor_update_to_bluetooth_data_update:0:111"
+    },
+    {
+      "dst": "818854af:_async_wait_for_full_advertisement:2:73",
+      "edge_type": "CFG_NEXT",
+      "src": "818854af:_async_wait_for_full_advertisement:1.0:71"
+    },
+    {
+      "dst": "ab8f4bde:_async_handle_event:1:180",
+      "edge_type": "CFG_NEXT",
+      "src": "ab8f4bde:_async_handle_event:0:179"
+    }
+  ],
+  "kept_nodes": [
+    "0e4b12a7:_handle_coordinator_update:0:136",
+    "0e4b12a7:_handle_coordinator_update:0:217",
+    "0e4b12a7:_handle_coordinator_update:0:305",
+    "0e4b12a7:_handle_coordinator_update:1:137",
+    "0e4b12a7:_handle_coordinator_update:1:218",
+    "0e4b12a7:_handle_coordinator_update:1:306",
+    "0e4b12a7:_handle_coordinator_update:2:138",
+    "0e4b12a7:_handle_coordinator_update:2:219",
+    "0e4b12a7:_handle_coordinator_update:2:307",
+    "0e4b12a7:_handle_coordinator_update:3:139",
+    "0e4b12a7:_handle_coordinator_update:3:220",
+    "0e4b12a7:_handle_coordinator_update:3:308",
+    "0e4b12a7:_handle_coordinator_update:4:140",
+    "0e4b12a7:_handle_coordinator_update:4:223",
+    "0e4b12a7:_handle_coordinator_update:4:309",
+    "0e4b12a7:_handle_coordinator_update:5:142",
+    "0e4b12a7:_handle_coordinator_update:5:224",
+    "0e4b12a7:_handle_coordinator_update:5:311",
+    "0e4b12a7:_handle_coordinator_update:6:225",
+    "0e4b12a7:async_stop_cover:0:284",
+    "0e4b12a7:async_stop_cover:1:117",
+    "0e4b12a7:async_stop_cover:1:286",
+    "0e4b12a7:async_stop_cover:2:118",
+    "0e4b12a7:async_stop_cover:2:287",
+    "0e4b12a7:async_stop_cover:3:119",
+    "0e4b12a7:async_stop_cover:3:288",
+    "0e4b12a7:async_stop_cover:4:120",
+    "0e4b12a7:async_stop_cover:5:121",
+    "0e4b12a7:async_stop_cover_tilt:1:202",
+    "0e4b12a7:async_stop_cover_tilt:2:203",
+    "51425972:_update_values:6:239",
+    "51425972:_update_values:7:240",
+    "67d079e8:async_discover_device:1:467",
+    "67d079e8:async_discover_device:2.0:469",
+    "67d079e8:async_discover_device:2.1:470",
+    "67d079e8:async_discover_device:2:468",
+    "67d079e8:async_setup_entry:1:462",
+    "67d079e8:async_setup_entry:2:465",
+    "67d079e8:async_turn_on:4.1.0:609",
+    "67d079e8:async_turn_on:4.1:608",
+    "67d079e8:async_turn_on:4.2.0:612",
+    "67d079e8:async_turn_on:4.2:611",
+    "67d079e8:is_on:0:569",
+    "67d079e8:is_on:1:570",
+    "789a6e2e:_async_call_update_attrs:0:270",
+    "789a6e2e:_async_call_update_attrs:1.0.0:275",
+    "789a6e2e:_async_call_update_attrs:1.0:272",
+    "789a6e2e:_async_call_update_attrs:1.0:274",
+    "789a6e2e:_async_call_update_attrs:1.0:283",
+    "789a6e2e:_async_call_update_attrs:1.1:281",
+    "789a6e2e:_async_call_update_attrs:1:271",
+    "789a6e2e:_handle_coordinator_update:0:287",
+    "789a6e2e:_handle_coordinator_update:1:288",
+    "789a6e2e:_handle_coordinator_update:2:289",
+    "789a6e2e:async_added_to_hass:1:255",
+    "789a6e2e:async_added_to_hass:2:257",
+    "818854af:_async_wait_for_full_advertisement:1.0:71",
+    "818854af:_async_wait_for_full_advertisement:2:73",
+    "818854af:_process_more_advertisements:0:76",
+    "8e4c1745:__init__:16.0.0:315",
+    "8e4c1745:__init__:16.0:314",
+    "8e4c1745:__init__:16.1.0.0:312",
+    "8e4c1745:__init__:16.1.0:308",
+    "8e4c1745:__init__:16.1:307",
+    "8e4c1745:__init__:16:305",
+    "8e4c1745:__init__:17.0:322",
+    "8e4c1745:__init__:17.1:323",
+    "8e4c1745:__init__:17.2:324",
+    "8e4c1745:__init__:17:321",
+    "8e4c1745:__init__:18.0:328",
+    "8e4c1745:__init__:18.1:329",
+    "8e4c1745:__init__:18.2:330",
+    "8e4c1745:__init__:18:327",
+    "8e4c1745:__init__:19.0:334",
+    "8e4c1745:__init__:19.1:335",
+    "8e4c1745:__init__:19:333",
+    "8e4c1745:__init__:20.0:339",
+    "8e4c1745:__init__:20.1:340",
+    "8e4c1745:__init__:20:338",
+    "8e4c1745:async_set_hvac_mode:1:355",
+    "8e4c1745:async_set_hvac_mode:3:362",
+    "8e4c1745:async_set_swing_mode:1:386",
+    "8e4c1745:hvac_mode:4:430",
+    "8e4c1745:hvac_mode:5:431",
+    "8e4c1745:swing_mode:1:446",
+    "8e4c1745:swing_mode:2:447",
+    "9425188b:async_oscillate:2:100",
+    "9425188b:async_oscillate:3:101",
+    "9425188b:async_set_percentage:2:91",
+    "9425188b:async_set_percentage:3:92",
+    "9425188b:async_set_preset_mode:0:153",
+    "9425188b:async_set_preset_mode:1:155",
+    "9425188b:async_set_preset_mode:2:160",
+    "9425188b:async_set_preset_mode:2:82",
+    "9425188b:async_set_preset_mode:3:161",
+    "9425188b:async_set_preset_mode:3:83",
+    "9425188b:async_turn_off:0:183",
+    "9425188b:async_turn_off:1:185",
+    "9425188b:async_turn_off:2:124",
+    "9425188b:async_turn_off:2:186",
+    "9425188b:async_turn_off:3:125",
+    "9425188b:async_turn_off:3:187",
+    "9425188b:async_turn_on:0:170",
+    "9425188b:async_turn_on:1:172",
+    "9425188b:async_turn_on:2:117",
+    "9425188b:async_turn_on:2:178",
+    "9425188b:async_turn_on:3:118",
+    "9425188b:async_turn_on:3:179",
+    "9cfce7a4:_process_device_update:0:968",
+    "9cfce7a4:_process_device_update:1:973",
+    "9cfce7a4:async_discover_device:1:919",
+    "9cfce7a4:async_discover_device:2.0:921",
+    "9cfce7a4:async_discover_device:2.1:922",
+    "9cfce7a4:async_discover_device:2:920",
+    "9cfce7a4:async_setup_entry:1:914",
+    "9cfce7a4:async_setup_entry:2:917",
+    "9da22f42:_async_setup_update_entity:4:82",
+    "9da22f42:_handle_device_update:2:185",
+    "9da22f42:_handle_device_update:3:186",
+    "9da22f42:async_setup_entry:7:71",
+    "a073d609:_handle_state_update:1.0:76",
+    "a073d609:_handle_state_update:1:63",
+    "ab8f4bde:_async_handle_event:0:179",
+    "ab8f4bde:_async_handle_event:1:180",
+    "d9c4917e:sensor_update_to_bluetooth_data_update:0:111",
+    "d9c4917e:sensor_update_to_bluetooth_data_update:1:112",
+    "f8314a32:async_unload_entry:0:191"
+  ],
+  "mapping": {
+    "0e4b12a7:_handle_coordinator_update:0:136": {
+      "col_end": 55,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 136,
+      "line_start": 136
+    },
+    "0e4b12a7:_handle_coordinator_update:0:217": {
+      "col_end": 55,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 217,
+      "line_start": 217
+    },
+    "0e4b12a7:_handle_coordinator_update:0:305": {
+      "col_end": 55,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 305,
+      "line_start": 305
+    },
+    "0e4b12a7:_handle_coordinator_update:1:137": {
+      "col_end": 57,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 137,
+      "line_start": 137
+    },
+    "0e4b12a7:_handle_coordinator_update:1:218": {
+      "col_end": 40,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 218,
+      "line_start": 218
+    },
+    "0e4b12a7:_handle_coordinator_update:1:306": {
+      "col_end": 57,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 306,
+      "line_start": 306
+    },
+    "0e4b12a7:_handle_coordinator_update:2:138": {
+      "col_end": 57,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 138,
+      "line_start": 138
+    },
+    "0e4b12a7:_handle_coordinator_update:2:219": {
+      "col_end": 54,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 219,
+      "line_start": 219
+    },
+    "0e4b12a7:_handle_coordinator_update:2:307": {
+      "col_end": 57,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 307,
+      "line_start": 307
+    },
+    "0e4b12a7:_handle_coordinator_update:3:139": {
+      "col_end": 72,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 139,
+      "line_start": 139
+    },
+    "0e4b12a7:_handle_coordinator_update:3:220": {
+      "col_end": 9,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 222,
+      "line_start": 220
+    },
+    "0e4b12a7:_handle_coordinator_update:3:308": {
+      "col_end": 72,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 308,
+      "line_start": 308
+    },
+    "0e4b12a7:_handle_coordinator_update:4:140": {
+      "col_end": 65,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 140,
+      "line_start": 140
+    },
+    "0e4b12a7:_handle_coordinator_update:4:223": {
+      "col_end": 78,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 223,
+      "line_start": 223
+    },
+    "0e4b12a7:_handle_coordinator_update:4:309": {
+      "col_end": 65,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 309,
+      "line_start": 309
+    },
+    "0e4b12a7:_handle_coordinator_update:5:142": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 142,
+      "line_start": 142
+    },
+    "0e4b12a7:_handle_coordinator_update:5:224": {
+      "col_end": 78,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 224,
+      "line_start": 224
+    },
+    "0e4b12a7:_handle_coordinator_update:5:311": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 311,
+      "line_start": 311
+    },
+    "0e4b12a7:_handle_coordinator_update:6:225": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 225,
+      "line_start": 225
+    },
+    "0e4b12a7:async_stop_cover:0:284": {
+      "col_end": 46,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "async_stop_cover",
+      "line_end": 284,
+      "line_start": 284
+    },
+    "0e4b12a7:async_stop_cover:1:117": {
+      "col_end": 60,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "async_stop_cover",
+      "line_end": 117,
+      "line_start": 117
+    },
+    "0e4b12a7:async_stop_cover:1:286": {
+      "col_end": 73,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "async_stop_cover",
+      "line_end": 286,
+      "line_start": 286
+    },
+    "0e4b12a7:async_stop_cover:2:118": {
+      "col_end": 64,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "async_stop_cover",
+      "line_end": 118,
+      "line_start": 118
+    },
+    "0e4b12a7:async_stop_cover:2:287": {
+      "col_end": 64,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "async_stop_cover",
+      "line_end": 287,
+      "line_start": 287
+    },
+    "0e4b12a7:async_stop_cover:3:119": {
+      "col_end": 57,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "async_stop_cover",
+      "line_end": 119,
+      "line_start": 119
+    },
+    "0e4b12a7:async_stop_cover:3:288": {
+      "col_end": 57,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "async_stop_cover",
+      "line_end": 288,
+      "line_start": 288
+    },
+    "0e4b12a7:async_stop_cover:4:120": {
+      "col_end": 57,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "async_stop_cover",
+      "line_end": 120,
+      "line_start": 120
+    },
+    "0e4b12a7:async_stop_cover:5:121": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "async_stop_cover",
+      "line_end": 121,
+      "line_start": 121
+    },
+    "0e4b12a7:async_stop_cover_tilt:1:202": {
+      "col_end": 60,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "async_stop_cover_tilt",
+      "line_end": 202,
+      "line_start": 202
+    },
+    "0e4b12a7:async_stop_cover_tilt:2:203": {
+      "col_end": 64,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/cover.py",
+      "function": "async_stop_cover_tilt",
+      "line_end": 203,
+      "line_start": 203
+    },
+    "51425972:_update_values:6:239": {
+      "col_end": 28,
+      "col_start": 8,
+      "file": "data/repo_snapshot/hue/v2/group.py",
+      "function": "_update_values",
+      "line_end": 239,
+      "line_start": 239
+    },
+    "51425972:_update_values:7:240": {
+      "col_end": 65,
+      "col_start": 8,
+      "file": "data/repo_snapshot/hue/v2/group.py",
+      "function": "_update_values",
+      "line_end": 240,
+      "line_start": 240
+    },
+    "67d079e8:async_discover_device:1:467": {
+      "col_end": 44,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_discover_device",
+      "line_end": 467,
+      "line_start": 467
+    },
+    "67d079e8:async_discover_device:2.0:469": {
+      "col_end": 50,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_discover_device",
+      "line_end": 469,
+      "line_start": 469
+    },
+    "67d079e8:async_discover_device:2.1:470": {
+      "col_end": 17,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_discover_device",
+      "line_end": 498,
+      "line_start": 470
+    },
+    "67d079e8:async_discover_device:2:468": {
+      "col_end": 17,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_discover_device",
+      "line_end": 498,
+      "line_start": 468
+    },
+    "67d079e8:async_setup_entry:1:462": {
+      "col_end": 40,
+      "col_start": 4,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_setup_entry",
+      "line_end": 462,
+      "line_start": 462
+    },
+    "67d079e8:async_setup_entry:2:465": {
+      "col_end": 36,
+      "col_start": 4,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_setup_entry",
+      "line_end": 500,
+      "line_start": 465
+    },
+    "67d079e8:async_turn_on:4.1.0:609": {
+      "col_end": 49,
+      "col_start": 16,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_turn_on",
+      "line_end": 609,
+      "line_start": 609
+    },
+    "67d079e8:async_turn_on:4.1:608": {
+      "col_end": 49,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_turn_on",
+      "line_end": 609,
+      "line_start": 608
+    },
+    "67d079e8:async_turn_on:4.2.0:612": {
+      "col_end": 47,
+      "col_start": 16,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_turn_on",
+      "line_end": 612,
+      "line_start": 612
+    },
+    "67d079e8:async_turn_on:4.2:611": {
+      "col_end": 47,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_turn_on",
+      "line_end": 612,
+      "line_start": 611
+    },
+    "67d079e8:is_on:0:569": {
+      "col_end": 41,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "is_on",
+      "line_end": 569,
+      "line_start": 569
+    },
+    "67d079e8:is_on:1:570": {
+      "col_end": 55,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "is_on",
+      "line_end": 570,
+      "line_start": 570
+    },
+    "789a6e2e:_async_call_update_attrs:0:270": {
+      "col_end": 70,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tplink/entity.py",
+      "function": "_async_call_update_attrs",
+      "line_end": 270,
+      "line_start": 270
+    },
+    "789a6e2e:_async_call_update_attrs:1.0.0:275": {
+      "col_end": 17,
+      "col_start": 16,
+      "file": "data/repo_snapshot/tplink/entity.py",
+      "function": "_async_call_update_attrs",
+      "line_end": 280,
+      "line_start": 275
+    },
+    "789a6e2e:_async_call_update_attrs:1.0:272": {
+      "col_end": 50,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tplink/entity.py",
+      "function": "_async_call_update_attrs",
+      "line_end": 272,
+      "line_start": 272
+    },
+    "789a6e2e:_async_call_update_attrs:1.0:274": {
+      "col_end": 17,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tplink/entity.py",
+      "function": "_async_call_update_attrs",
+      "line_end": 280,
+      "line_start": 274
+    },
+    "789a6e2e:_async_call_update_attrs:1.0:283": {
+      "col_end": 44,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tplink/entity.py",
+      "function": "_async_call_update_attrs",
+      "line_end": 283,
+      "line_start": 283
+    },
+    "789a6e2e:_async_call_update_attrs:1.1:281": {
+      "col_end": 40,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tplink/entity.py",
+      "function": "_async_call_update_attrs",
+      "line_end": 281,
+      "line_start": 281
+    },
+    "789a6e2e:_async_call_update_attrs:1:271": {
+      "col_end": 44,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tplink/entity.py",
+      "function": "_async_call_update_attrs",
+      "line_end": 283,
+      "line_start": 271
+    },
+    "789a6e2e:_handle_coordinator_update:0:287": {
+      "col_end": 55,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tplink/entity.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 287,
+      "line_start": 287
+    },
+    "789a6e2e:_handle_coordinator_update:1:288": {
+      "col_end": 39,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tplink/entity.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 288,
+      "line_start": 288
+    },
+    "789a6e2e:_handle_coordinator_update:2:289": {
+      "col_end": 44,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tplink/entity.py",
+      "function": "_handle_coordinator_update",
+      "line_end": 289,
+      "line_start": 289
+    },
+    "789a6e2e:async_added_to_hass:1:255": {
+      "col_end": 43,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tplink/entity.py",
+      "function": "async_added_to_hass",
+      "line_end": 255,
+      "line_start": 255
+    },
+    "789a6e2e:async_added_to_hass:2:257": {
+      "col_end": 39,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tplink/entity.py",
+      "function": "async_added_to_hass",
+      "line_end": 257,
+      "line_start": 257
+    },
+    "818854af:_async_wait_for_full_advertisement:1.0:71": {
+      "col_end": 33,
+      "col_start": 12,
+      "file": "data/repo_snapshot/xiaomi_ble/config_flow.py",
+      "function": "_async_wait_for_full_advertisement",
+      "line_end": 71,
+      "line_start": 71
+    },
+    "818854af:_async_wait_for_full_advertisement:2:73": {
+      "col_end": 37,
+      "col_start": 8,
+      "file": "data/repo_snapshot/xiaomi_ble/config_flow.py",
+      "function": "_async_wait_for_full_advertisement",
+      "line_end": 77,
+      "line_start": 73
+    },
+    "818854af:_process_more_advertisements:0:76": {
+      "col_end": 39,
+      "col_start": 12,
+      "file": "data/repo_snapshot/xiaomi_ble/config_flow.py",
+      "function": "_process_more_advertisements",
+      "line_end": 76,
+      "line_start": 76
+    },
+    "8e4c1745:__init__:16.0.0:315": {
+      "col_end": 13,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 318,
+      "line_start": 315
+    },
+    "8e4c1745:__init__:16.0:314": {
+      "col_end": 13,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 318,
+      "line_start": 314
+    },
+    "8e4c1745:__init__:16.1.0.0:312": {
+      "col_end": 57,
+      "col_start": 20,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 312,
+      "line_start": 312
+    },
+    "8e4c1745:__init__:16.1.0:308": {
+      "col_end": 57,
+      "col_start": 16,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 312,
+      "line_start": 308
+    },
+    "8e4c1745:__init__:16.1:307": {
+      "col_end": 57,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 312,
+      "line_start": 307
+    },
+    "8e4c1745:__init__:16:305": {
+      "col_end": 13,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 318,
+      "line_start": 305
+    },
+    "8e4c1745:__init__:17.0:322": {
+      "col_end": 75,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 322,
+      "line_start": 322
+    },
+    "8e4c1745:__init__:17.1:323": {
+      "col_end": 60,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 323,
+      "line_start": 323
+    },
+    "8e4c1745:__init__:17.2:324": {
+      "col_end": 77,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 324,
+      "line_start": 324
+    },
+    "8e4c1745:__init__:17:321": {
+      "col_end": 77,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 324,
+      "line_start": 321
+    },
+    "8e4c1745:__init__:18.0:328": {
+      "col_end": 81,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 328,
+      "line_start": 328
+    },
+    "8e4c1745:__init__:18.1:329": {
+      "col_end": 78,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 329,
+      "line_start": 329
+    },
+    "8e4c1745:__init__:18.2:330": {
+      "col_end": 78,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 330,
+      "line_start": 330
+    },
+    "8e4c1745:__init__:18:327": {
+      "col_end": 78,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 330,
+      "line_start": 327
+    },
+    "8e4c1745:__init__:19.0:334": {
+      "col_end": 74,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 334,
+      "line_start": 334
+    },
+    "8e4c1745:__init__:19.1:335": {
+      "col_end": 59,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 335,
+      "line_start": 335
+    },
+    "8e4c1745:__init__:19:333": {
+      "col_end": 59,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 335,
+      "line_start": 333
+    },
+    "8e4c1745:__init__:20.0:339": {
+      "col_end": 76,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 339,
+      "line_start": 339
+    },
+    "8e4c1745:__init__:20.1:340": {
+      "col_end": 13,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 346,
+      "line_start": 340
+    },
+    "8e4c1745:__init__:20:338": {
+      "col_end": 13,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 346,
+      "line_start": 338
+    },
+    "8e4c1745:async_set_hvac_mode:1:355": {
+      "col_end": 21,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "async_set_hvac_mode",
+      "line_end": 355,
+      "line_start": 355
+    },
+    "8e4c1745:async_set_hvac_mode:3:362": {
+      "col_end": 13,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "async_set_hvac_mode",
+      "line_end": 369,
+      "line_start": 362
+    },
+    "8e4c1745:async_set_swing_mode:1:386": {
+      "col_end": 82,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "async_set_swing_mode",
+      "line_end": 387,
+      "line_start": 386
+    },
+    "8e4c1745:hvac_mode:4:430": {
+      "col_end": 63,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "hvac_mode",
+      "line_end": 430,
+      "line_start": 430
+    },
+    "8e4c1745:hvac_mode:5:431": {
+      "col_end": 82,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "hvac_mode",
+      "line_end": 431,
+      "line_start": 431
+    },
+    "8e4c1745:swing_mode:1:446": {
+      "col_end": 60,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "swing_mode",
+      "line_end": 446,
+      "line_start": 446
+    },
+    "8e4c1745:swing_mode:2:447": {
+      "col_end": 81,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "swing_mode",
+      "line_end": 447,
+      "line_start": 447
+    },
+    "9425188b:async_oscillate:2:100": {
+      "col_end": 86,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_oscillate",
+      "line_end": 100,
+      "line_start": 100
+    },
+    "9425188b:async_oscillate:3:101": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_oscillate",
+      "line_end": 101,
+      "line_start": 101
+    },
+    "9425188b:async_set_percentage:2:91": {
+      "col_end": 84,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_set_percentage",
+      "line_end": 91,
+      "line_start": 91
+    },
+    "9425188b:async_set_percentage:3:92": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_set_percentage",
+      "line_end": 92,
+      "line_start": 92
+    },
+    "9425188b:async_set_preset_mode:0:153": {
+      "col_end": 54,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_set_preset_mode",
+      "line_end": 153,
+      "line_start": 153
+    },
+    "9425188b:async_set_preset_mode:1:155": {
+      "col_end": 9,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_set_preset_mode",
+      "line_end": 159,
+      "line_start": 155
+    },
+    "9425188b:async_set_preset_mode:2:160": {
+      "col_end": 86,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_set_preset_mode",
+      "line_end": 160,
+      "line_start": 160
+    },
+    "9425188b:async_set_preset_mode:2:82": {
+      "col_end": 86,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_set_preset_mode",
+      "line_end": 82,
+      "line_start": 82
+    },
+    "9425188b:async_set_preset_mode:3:161": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_set_preset_mode",
+      "line_end": 161,
+      "line_start": 161
+    },
+    "9425188b:async_set_preset_mode:3:83": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_set_preset_mode",
+      "line_end": 83,
+      "line_start": 83
+    },
+    "9425188b:async_turn_off:0:183": {
+      "col_end": 40,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_turn_off",
+      "line_end": 183,
+      "line_start": 183
+    },
+    "9425188b:async_turn_off:1:185": {
+      "col_end": 81,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_turn_off",
+      "line_end": 185,
+      "line_start": 185
+    },
+    "9425188b:async_turn_off:2:124": {
+      "col_end": 68,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_turn_off",
+      "line_end": 124,
+      "line_start": 124
+    },
+    "9425188b:async_turn_off:2:186": {
+      "col_end": 68,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_turn_off",
+      "line_end": 186,
+      "line_start": 186
+    },
+    "9425188b:async_turn_off:3:125": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_turn_off",
+      "line_end": 125,
+      "line_start": 125
+    },
+    "9425188b:async_turn_off:3:187": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_turn_off",
+      "line_end": 187,
+      "line_start": 187
+    },
+    "9425188b:async_turn_on:0:170": {
+      "col_end": 39,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_turn_on",
+      "line_end": 170,
+      "line_start": 170
+    },
+    "9425188b:async_turn_on:1:172": {
+      "col_end": 9,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_turn_on",
+      "line_end": 177,
+      "line_start": 172
+    },
+    "9425188b:async_turn_on:2:117": {
+      "col_end": 67,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_turn_on",
+      "line_end": 117,
+      "line_start": 117
+    },
+    "9425188b:async_turn_on:2:178": {
+      "col_end": 67,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_turn_on",
+      "line_end": 178,
+      "line_start": 178
+    },
+    "9425188b:async_turn_on:3:118": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_turn_on",
+      "line_end": 118,
+      "line_start": 118
+    },
+    "9425188b:async_turn_on:3:179": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/switchbot/fan.py",
+      "function": "async_turn_on",
+      "line_end": 179,
+      "line_start": 179
+    },
+    "9cfce7a4:_process_device_update:0:968": {
+      "col_end": 11,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/switch.py",
+      "function": "_process_device_update",
+      "line_end": 972,
+      "line_start": 968
+    },
+    "9cfce7a4:_process_device_update:1:973": {
+      "col_end": 9,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/switch.py",
+      "function": "_process_device_update",
+      "line_end": 975,
+      "line_start": 973
+    },
+    "9cfce7a4:async_discover_device:1:919": {
+      "col_end": 45,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/switch.py",
+      "function": "async_discover_device",
+      "line_end": 919,
+      "line_start": 919
+    },
+    "9cfce7a4:async_discover_device:2.0:921": {
+      "col_end": 50,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/switch.py",
+      "function": "async_discover_device",
+      "line_end": 921,
+      "line_start": 921
+    },
+    "9cfce7a4:async_discover_device:2.1:922": {
+      "col_end": 17,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/switch.py",
+      "function": "async_discover_device",
+      "line_end": 931,
+      "line_start": 922
+    },
+    "9cfce7a4:async_discover_device:2:920": {
+      "col_end": 17,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/switch.py",
+      "function": "async_discover_device",
+      "line_end": 931,
+      "line_start": 920
+    },
+    "9cfce7a4:async_setup_entry:1:914": {
+      "col_end": 40,
+      "col_start": 4,
+      "file": "data/repo_snapshot/tuya/switch.py",
+      "function": "async_setup_entry",
+      "line_end": 914,
+      "line_start": 914
+    },
+    "9cfce7a4:async_setup_entry:2:917": {
+      "col_end": 36,
+      "col_start": 4,
+      "file": "data/repo_snapshot/tuya/switch.py",
+      "function": "async_setup_entry",
+      "line_end": 933,
+      "line_start": 917
+    },
+    "9da22f42:_async_setup_update_entity:4:82": {
+      "col_end": 19,
+      "col_start": 8,
+      "file": "data/repo_snapshot/esphome/update.py",
+      "function": "_async_setup_update_entity",
+      "line_end": 83,
+      "line_start": 82
+    },
+    "9da22f42:_handle_device_update:2:185": {
+      "col_end": 28,
+      "col_start": 8,
+      "file": "data/repo_snapshot/esphome/update.py",
+      "function": "_handle_device_update",
+      "line_end": 185,
+      "line_start": 185
+    },
+    "9da22f42:_handle_device_update:3:186": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/esphome/update.py",
+      "function": "_handle_device_update",
+      "line_end": 186,
+      "line_start": 186
+    },
+    "9da22f42:async_setup_entry:7:71": {
+      "col_end": 81,
+      "col_start": 4,
+      "file": "data/repo_snapshot/esphome/update.py",
+      "function": "async_setup_entry",
+      "line_end": 86,
+      "line_start": 71
+    },
+    "a073d609:_handle_state_update:1.0:76": {
+      "col_end": 39,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/entity.py",
+      "function": "_handle_state_update",
+      "line_end": 76,
+      "line_start": 76
+    },
+    "a073d609:_handle_state_update:1:63": {
+      "col_end": 39,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/entity.py",
+      "function": "_handle_state_update",
+      "line_end": 76,
+      "line_start": 63
+    },
+    "ab8f4bde:_async_handle_event:0:179": {
+      "col_end": 71,
+      "col_start": 8,
+      "file": "data/repo_snapshot/xiaomi_ble/event.py",
+      "function": "_async_handle_event",
+      "line_end": 179,
+      "line_start": 179
+    },
+    "ab8f4bde:_async_handle_event:1:180": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/xiaomi_ble/event.py",
+      "function": "_async_handle_event",
+      "line_end": 180,
+      "line_start": 180
+    },
+    "d9c4917e:sensor_update_to_bluetooth_data_update:0:111": {
+      "col_end": 61,
+      "col_start": 4,
+      "file": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+      "function": "sensor_update_to_bluetooth_data_update",
+      "line_end": 111,
+      "line_start": 111
+    },
+    "d9c4917e:sensor_update_to_bluetooth_data_update:1:112": {
+      "col_end": 5,
+      "col_start": 4,
+      "file": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+      "function": "sensor_update_to_bluetooth_data_update",
+      "line_end": 132,
+      "line_start": 112
+    },
+    "f8314a32:async_unload_entry:0:191": {
+      "col_end": 32,
+      "col_start": 4,
+      "file": "data/repo_snapshot/xiaomi_ble/__init__.py",
+      "function": "async_unload_entry",
+      "line_end": 191,
+      "line_start": 191
+    }
+  },
+  "nodes": {
+    "0e4b12a7:_handle_coordinator_update:0:136": {
+      "col_end": 55,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 136,
+      "line_start": 136,
+      "marker_refs": [
+        "marker_c98ac57c4c"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:0:136",
+      "raw_repr": "Expr(Constant('Handle updated data from the coordinator.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "0e4b12a7:_handle_coordinator_update:0:217": {
+      "col_end": 55,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 217,
+      "line_start": 217,
+      "marker_refs": [
+        "marker_3c44b8ccd8"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:0:217",
+      "raw_repr": "Expr(Constant('Handle updated data from the coordinator.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "0e4b12a7:_handle_coordinator_update:0:305": {
+      "col_end": 55,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 305,
+      "line_start": 305,
+      "marker_refs": [
+        "marker_643e95f17b"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:0:305",
+      "raw_repr": "Expr(Constant('Handle updated data from the coordinator.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "0e4b12a7:_handle_coordinator_update:1:137": {
+      "col_end": 57,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 137,
+      "line_start": 137,
+      "marker_refs": [
+        "marker_c98ac57c4c"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:1:137",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_is_closing', Store())], Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'is_closing', Load())))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:1:218": {
+      "col_end": 40,
+      "col_start": 8,
+      "defs": [
+        "_tilt"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 218,
+      "line_start": 218,
+      "marker_refs": [
+        "marker_3c44b8ccd8"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:1:218",
+      "raw_repr": "Assign([Name('_tilt', Store())], Subscript(Attribute(Name('self', Load()), 'parsed_data', Load()), Constant('tilt'), Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:1:306": {
+      "col_end": 57,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 306,
+      "line_start": 306,
+      "marker_refs": [
+        "marker_643e95f17b"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:1:306",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_is_closing', Store())], Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'is_closing', Load())))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:2:138": {
+      "col_end": 57,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 138,
+      "line_start": 138,
+      "marker_refs": [
+        "marker_c98ac57c4c"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:2:138",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_is_opening', Store())], Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'is_opening', Load())))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:2:219": {
+      "col_end": 54,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 219,
+      "line_start": 219,
+      "marker_refs": [
+        "marker_3c44b8ccd8"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:2:219",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_current_cover_tilt_position', Store())], Name('_tilt', Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "_tilt",
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:2:307": {
+      "col_end": 57,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 307,
+      "line_start": 307,
+      "marker_refs": [
+        "marker_643e95f17b"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:2:307",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_is_opening', Store())], Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'is_opening', Load())))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:3:139": {
+      "col_end": 72,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 139,
+      "line_start": 139,
+      "marker_refs": [
+        "marker_c98ac57c4c"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:3:139",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_current_cover_position', Store())], Subscript(Attribute(Name('self', Load()), 'parsed_data', Load()), Constant('position'), Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:3:220": {
+      "col_end": 9,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 222,
+      "line_start": 220,
+      "marker_refs": [
+        "marker_3c44b8ccd8"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:3:220",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_is_closed', Store())], BoolOp(Or(), [Compare(Name('_tilt', Load()), [Lt()], [Attribute(Name('self', Load()), 'CLOSED_DOWN_THRESHOLD', Load())]), Compare(Name('_tilt', Load()), [Gt()], [Attribute(Name('self', Load()), 'CLOSED_UP_THRESHOLD', Load())])]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "_tilt",
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:3:308": {
+      "col_end": 72,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 308,
+      "line_start": 308,
+      "marker_refs": [
+        "marker_643e95f17b"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:3:308",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_current_cover_position', Store())], Subscript(Attribute(Name('self', Load()), 'parsed_data', Load()), Constant('position'), Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:4:140": {
+      "col_end": 65,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 140,
+      "line_start": 140,
+      "marker_refs": [
+        "marker_c98ac57c4c"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:4:140",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_is_closed', Store())], Compare(Subscript(Attribute(Name('self', Load()), 'parsed_data', Load()), Constant('position'), Load()), [LtE()], [Constant(20)]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:4:223": {
+      "col_end": 78,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 223,
+      "line_start": 223,
+      "marker_refs": [
+        "marker_3c44b8ccd8"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:4:223",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_is_opening', Store())], Subscript(Subscript(Attribute(Name('self', Load()), 'parsed_data', Load()), Constant('motionDirection'), Load()), Constant('opening'), Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:4:309": {
+      "col_end": 65,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 309,
+      "line_start": 309,
+      "marker_refs": [
+        "marker_643e95f17b"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:4:309",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_is_closed', Store())], Compare(Subscript(Attribute(Name('self', Load()), 'parsed_data', Load()), Constant('position'), Load()), [LtE()], [Constant(20)]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:5:142": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 142,
+      "line_start": 142,
+      "marker_refs": [
+        "marker_c98ac57c4c"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:5:142",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:5:224": {
+      "col_end": 78,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 224,
+      "line_start": 224,
+      "marker_refs": [
+        "marker_3c44b8ccd8"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:5:224",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_is_closing', Store())], Subscript(Subscript(Attribute(Name('self', Load()), 'parsed_data', Load()), Constant('motionDirection'), Load()), Constant('closing'), Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:5:311": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 311,
+      "line_start": 311,
+      "marker_refs": [
+        "marker_643e95f17b"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:5:311",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:_handle_coordinator_update:6:225": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 225,
+      "line_start": 225,
+      "marker_refs": [
+        "marker_3c44b8ccd8"
+      ],
+      "node_id": "0e4b12a7:_handle_coordinator_update:6:225",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:async_stop_cover:0:284": {
+      "col_end": 46,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "async_stop_cover",
+      "line_end": 284,
+      "line_start": 284,
+      "marker_refs": [],
+      "node_id": "0e4b12a7:async_stop_cover:0:284",
+      "raw_repr": "Expr(Constant('Stop the moving of roller shade.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "0e4b12a7:async_stop_cover:1:117": {
+      "col_end": 60,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "async_stop_cover",
+      "line_end": 117,
+      "line_start": 117,
+      "marker_refs": [],
+      "node_id": "0e4b12a7:async_stop_cover:1:117",
+      "raw_repr": "Expr(Call(Attribute(Name('_LOGGER', Load()), 'debug', Load()), [Constant('Switchbot to stop %s'), Attribute(Name('self', Load()), '_address', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "_LOGGER",
+        "self"
+      ]
+    },
+    "0e4b12a7:async_stop_cover:1:286": {
+      "col_end": 73,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "async_stop_cover",
+      "line_end": 286,
+      "line_start": 286,
+      "marker_refs": [],
+      "node_id": "0e4b12a7:async_stop_cover:1:286",
+      "raw_repr": "Expr(Call(Attribute(Name('_LOGGER', Load()), 'debug', Load()), [Constant('Switchbot to stop roller shade %s'), Attribute(Name('self', Load()), '_address', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "_LOGGER",
+        "self"
+      ]
+    },
+    "0e4b12a7:async_stop_cover:2:118": {
+      "col_end": 64,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "async_stop_cover",
+      "line_end": 118,
+      "line_start": 118,
+      "marker_refs": [
+        "marker_1a328b14d6"
+      ],
+      "node_id": "0e4b12a7:async_stop_cover:2:118",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_last_run_success', Store())], Call(Name('bool', Load()), [Await(Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'stop', Load())))]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "bool",
+        "self"
+      ]
+    },
+    "0e4b12a7:async_stop_cover:2:287": {
+      "col_end": 64,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "async_stop_cover",
+      "line_end": 287,
+      "line_start": 287,
+      "marker_refs": [
+        "marker_1f2c3503f3"
+      ],
+      "node_id": "0e4b12a7:async_stop_cover:2:287",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_last_run_success', Store())], Call(Name('bool', Load()), [Await(Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'stop', Load())))]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "bool",
+        "self"
+      ]
+    },
+    "0e4b12a7:async_stop_cover:3:119": {
+      "col_end": 57,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "async_stop_cover",
+      "line_end": 119,
+      "line_start": 119,
+      "marker_refs": [],
+      "node_id": "0e4b12a7:async_stop_cover:3:119",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_is_opening', Store())], Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'is_opening', Load())))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:async_stop_cover:3:288": {
+      "col_end": 57,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "async_stop_cover",
+      "line_end": 288,
+      "line_start": 288,
+      "marker_refs": [],
+      "node_id": "0e4b12a7:async_stop_cover:3:288",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_is_opening', Store())], Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'is_opening', Load())))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:async_stop_cover:4:120": {
+      "col_end": 57,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "async_stop_cover",
+      "line_end": 120,
+      "line_start": 120,
+      "marker_refs": [],
+      "node_id": "0e4b12a7:async_stop_cover:4:120",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_is_closing', Store())], Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'is_closing', Load())))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:async_stop_cover:5:121": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "async_stop_cover",
+      "line_end": 121,
+      "line_start": 121,
+      "marker_refs": [],
+      "node_id": "0e4b12a7:async_stop_cover:5:121",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "0e4b12a7:async_stop_cover_tilt:1:202": {
+      "col_end": 60,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "async_stop_cover_tilt",
+      "line_end": 202,
+      "line_start": 202,
+      "marker_refs": [],
+      "node_id": "0e4b12a7:async_stop_cover_tilt:1:202",
+      "raw_repr": "Expr(Call(Attribute(Name('_LOGGER', Load()), 'debug', Load()), [Constant('Switchbot to stop %s'), Attribute(Name('self', Load()), '_address', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "_LOGGER",
+        "self"
+      ]
+    },
+    "0e4b12a7:async_stop_cover_tilt:2:203": {
+      "col_end": 64,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/cover.py",
+      "function_name": "async_stop_cover_tilt",
+      "line_end": 203,
+      "line_start": 203,
+      "marker_refs": [
+        "marker_c586b78c6d"
+      ],
+      "node_id": "0e4b12a7:async_stop_cover_tilt:2:203",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_last_run_success', Store())], Call(Name('bool', Load()), [Await(Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'stop', Load())))]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "bool",
+        "self"
+      ]
+    },
+    "51425972:_update_values:6:239": {
+      "col_end": 28,
+      "col_start": 8,
+      "defs": [
+        "total_brightness"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/hue/v2/group.py",
+      "function_name": "_update_values",
+      "line_end": 239,
+      "line_start": 239,
+      "marker_refs": [],
+      "node_id": "51425972:_update_values:6:239",
+      "raw_repr": "Assign([Name('total_brightness', Store())], Constant(0))",
+      "stmt_kind": "Assign",
+      "uses": []
+    },
+    "51425972:_update_values:7:240": {
+      "col_end": 65,
+      "col_start": 8,
+      "defs": [
+        "all_lights"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/hue/v2/group.py",
+      "function_name": "_update_values",
+      "line_end": 240,
+      "line_start": 240,
+      "marker_refs": [
+        "marker_d36a07a587"
+      ],
+      "node_id": "51425972:_update_values:7:240",
+      "raw_repr": "Assign([Name('all_lights', Store())], Call(Attribute(Attribute(Name('self', Load()), 'controller', Load()), 'get_lights', Load()), [Attribute(Attribute(Name('self', Load()), 'resource', Load()), 'id', Load())]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "67d079e8:async_discover_device:1:467": {
+      "col_end": 44,
+      "col_start": 8,
+      "defs": [
+        "entities"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_discover_device",
+      "line_end": 467,
+      "line_start": 467,
+      "marker_refs": [],
+      "node_id": "67d079e8:async_discover_device:1:467",
+      "raw_repr": "AnnAssign(Name('entities', Store()), Subscript(Name('list', Load()), Name('TuyaLightEntity', Load()), Load()), List([], Load()), 1)",
+      "stmt_kind": "AnnAssign",
+      "uses": [
+        "TuyaLightEntity",
+        "list"
+      ]
+    },
+    "67d079e8:async_discover_device:2.0:469": {
+      "col_end": 50,
+      "col_start": 12,
+      "defs": [
+        "device"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_discover_device",
+      "line_end": 469,
+      "line_start": 469,
+      "marker_refs": [],
+      "node_id": "67d079e8:async_discover_device:2.0:469",
+      "raw_repr": "Assign([Name('device', Store())], Subscript(Attribute(Name('manager', Load()), 'device_map', Load()), Name('device_id', Load()), Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "device_id",
+        "manager"
+      ]
+    },
+    "67d079e8:async_discover_device:2.1:470": {
+      "col_end": 17,
+      "col_start": 12,
+      "defs": [
+        "brightness_wrapper",
+        "description",
+        "descriptions",
+        "switch_wrapper"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_discover_device",
+      "line_end": 498,
+      "line_start": 470,
+      "marker_refs": [
+        "marker_1b751f584b"
+      ],
+      "node_id": "67d079e8:async_discover_device:2.1:470",
+      "raw_repr": "If(NamedExpr(Name('descriptions', Store()), Call(Attribute(Name('LIGHTS', Load()), 'get', Load()), [Attribute(Name('device', Load()), 'category', Load())])), [Expr(Call(Attribute(Name('entities', Load()), 'extend', Load()), [GeneratorExp(Call(Name('TuyaLightEntity', Load()), [Name('device', Load()), Name('manager', Load()), Name('description', Load())], [keyword('brightness_wrapper', NamedExpr(Name('brightness_wrapper', Store()), Call(Name('_get_brightness_wrapper', Load()), [Name('device', Load()), Name('description', Load())]))), keyword('color_data_wrapper', Call(Name('_get_color_data_wrapper', Load()), [Name('device', Load()), Name('description', Load()), Name('brightness_wrapper', Load())])), keyword('color_mode_wrapper', Call(Attribute(Name('DPCodeEnumWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'color_mode', Load())], [keyword('prefer_function', Constant(True))])), keyword('color_temp_wrapper', Call(Attribute(Name('ColorTempWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'color_temp', Load())], [keyword('prefer_function', Constant(True))])), keyword('switch_wrapper', Name('switch_wrapper', Load()))]), [comprehension(Name('description', Store()), Name('descriptions', Load()), [NamedExpr(Name('switch_wrapper', Store()), Call(Attribute(Name('DPCodeBooleanWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'key', Load())], [keyword('prefer_function', Constant(True))]))], 0)])]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "ColorTempWrapper",
+        "DPCodeBooleanWrapper",
+        "DPCodeEnumWrapper",
+        "LIGHTS",
+        "TuyaLightEntity",
+        "_get_brightness_wrapper",
+        "_get_color_data_wrapper",
+        "brightness_wrapper",
+        "description",
+        "descriptions",
+        "device",
+        "entities",
+        "manager",
+        "switch_wrapper"
+      ]
+    },
+    "67d079e8:async_discover_device:2:468": {
+      "col_end": 17,
+      "col_start": 8,
+      "defs": [
+        "brightness_wrapper",
+        "description",
+        "descriptions",
+        "device",
+        "device_id",
+        "switch_wrapper"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_discover_device",
+      "line_end": 498,
+      "line_start": 468,
+      "marker_refs": [],
+      "node_id": "67d079e8:async_discover_device:2:468",
+      "raw_repr": "For(Name('device_id', Store()), Name('device_ids', Load()), [Assign([Name('device', Store())], Subscript(Attribute(Name('manager', Load()), 'device_map', Load()), Name('device_id', Load()), Load())), If(NamedExpr(Name('descriptions', Store()), Call(Attribute(Name('LIGHTS', Load()), 'get', Load()), [Attribute(Name('device', Load()), 'category', Load())])), [Expr(Call(Attribute(Name('entities', Load()), 'extend', Load()), [GeneratorExp(Call(Name('TuyaLightEntity', Load()), [Name('device', Load()), Name('manager', Load()), Name('description', Load())], [keyword('brightness_wrapper', NamedExpr(Name('brightness_wrapper', Store()), Call(Name('_get_brightness_wrapper', Load()), [Name('device', Load()), Name('description', Load())]))), keyword('color_data_wrapper', Call(Name('_get_color_data_wrapper', Load()), [Name('device', Load()), Name('description', Load()), Name('brightness_wrapper', Load())])), keyword('color_mode_wrapper', Call(Attribute(Name('DPCodeEnumWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'color_mode', Load())], [keyword('prefer_function', Constant(True))])), keyword('color_temp_wrapper', Call(Attribute(Name('ColorTempWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'color_temp', Load())], [keyword('prefer_function', Constant(True))])), keyword('switch_wrapper', Name('switch_wrapper', Load()))]), [comprehension(Name('description', Store()), Name('descriptions', Load()), [NamedExpr(Name('switch_wrapper', Store()), Call(Attribute(Name('DPCodeBooleanWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'key', Load())], [keyword('prefer_function', Constant(True))]))], 0)])]))])])",
+      "stmt_kind": "For",
+      "uses": [
+        "ColorTempWrapper",
+        "DPCodeBooleanWrapper",
+        "DPCodeEnumWrapper",
+        "LIGHTS",
+        "TuyaLightEntity",
+        "_get_brightness_wrapper",
+        "_get_color_data_wrapper",
+        "brightness_wrapper",
+        "description",
+        "descriptions",
+        "device",
+        "device_id",
+        "device_ids",
+        "entities",
+        "manager",
+        "switch_wrapper"
+      ]
+    },
+    "67d079e8:async_setup_entry:1:462": {
+      "col_end": 40,
+      "col_start": 4,
+      "defs": [
+        "manager"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_setup_entry",
+      "line_end": 462,
+      "line_start": 462,
+      "marker_refs": [
+        "marker_b3fb0fdc6c"
+      ],
+      "node_id": "67d079e8:async_setup_entry:1:462",
+      "raw_repr": "Assign([Name('manager', Store())], Attribute(Attribute(Name('entry', Load()), 'runtime_data', Load()), 'manager', Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "entry"
+      ]
+    },
+    "67d079e8:async_setup_entry:2:465": {
+      "col_end": 36,
+      "col_start": 4,
+      "defs": [
+        "brightness_wrapper",
+        "description",
+        "descriptions",
+        "device",
+        "device_id",
+        "entities",
+        "switch_wrapper"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_setup_entry",
+      "line_end": 500,
+      "line_start": 465,
+      "marker_refs": [
+        "marker_b3fb0fdc6c",
+        "marker_6ceebf98ce"
+      ],
+      "node_id": "67d079e8:async_setup_entry:2:465",
+      "raw_repr": "FunctionDef('async_discover_device', arguments([], [arg('device_ids', Subscript(Name('list', Load()), Name('str', Load()), Load()))]), [Expr(Constant('Discover and add a discovered tuya light.')), AnnAssign(Name('entities', Store()), Subscript(Name('list', Load()), Name('TuyaLightEntity', Load()), Load()), List([], Load()), 1), For(Name('device_id', Store()), Name('device_ids', Load()), [Assign([Name('device', Store())], Subscript(Attribute(Name('manager', Load()), 'device_map', Load()), Name('device_id', Load()), Load())), If(NamedExpr(Name('descriptions', Store()), Call(Attribute(Name('LIGHTS', Load()), 'get', Load()), [Attribute(Name('device', Load()), 'category', Load())])), [Expr(Call(Attribute(Name('entities', Load()), 'extend', Load()), [GeneratorExp(Call(Name('TuyaLightEntity', Load()), [Name('device', Load()), Name('manager', Load()), Name('description', Load())], [keyword('brightness_wrapper', NamedExpr(Name('brightness_wrapper', Store()), Call(Name('_get_brightness_wrapper', Load()), [Name('device', Load()), Name('description', Load())]))), keyword('color_data_wrapper', Call(Name('_get_color_data_wrapper', Load()), [Name('device', Load()), Name('description', Load()), Name('brightness_wrapper', Load())])), keyword('color_mode_wrapper', Call(Attribute(Name('DPCodeEnumWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'color_mode', Load())], [keyword('prefer_function', Constant(True))])), keyword('color_temp_wrapper', Call(Attribute(Name('ColorTempWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'color_temp', Load())], [keyword('prefer_function', Constant(True))])), keyword('switch_wrapper', Name('switch_wrapper', Load()))]), [comprehension(Name('description', Store()), Name('descriptions', Load()), [NamedExpr(Name('switch_wrapper', Store()), Call(Attribute(Name('DPCodeBooleanWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'key', Load())], [keyword('prefer_function', Constant(True))]))], 0)])]))])]), Expr(Call(Name('async_add_entities', Load()), [Name('entities', Load())]))], [Name('callback', Load())])",
+      "stmt_kind": "FunctionDef",
+      "uses": [
+        "ColorTempWrapper",
+        "DPCodeBooleanWrapper",
+        "DPCodeEnumWrapper",
+        "LIGHTS",
+        "TuyaLightEntity",
+        "_get_brightness_wrapper",
+        "_get_color_data_wrapper",
+        "async_add_entities",
+        "brightness_wrapper",
+        "callback",
+        "description",
+        "descriptions",
+        "device",
+        "device_id",
+        "device_ids",
+        "entities",
+        "list",
+        "manager",
+        "str",
+        "switch_wrapper"
+      ]
+    },
+    "67d079e8:async_turn_on:4.1.0:609": {
+      "col_end": 49,
+      "col_start": 16,
+      "defs": [
+        "brightness"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_turn_on",
+      "line_end": 609,
+      "line_start": 609,
+      "marker_refs": [],
+      "node_id": "67d079e8:async_turn_on:4.1.0:609",
+      "raw_repr": "Assign([Name('brightness', Store())], BoolOp(Or(), [Attribute(Name('self', Load()), 'brightness', Load()), Constant(0)]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "67d079e8:async_turn_on:4.1:608": {
+      "col_end": 49,
+      "col_start": 12,
+      "defs": [
+        "brightness"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_turn_on",
+      "line_end": 609,
+      "line_start": 608,
+      "marker_refs": [
+        "marker_9477e26632"
+      ],
+      "node_id": "67d079e8:async_turn_on:4.1:608",
+      "raw_repr": "If(UnaryOp(Not(), NamedExpr(Name('brightness', Store()), Call(Attribute(Name('kwargs', Load()), 'get', Load()), [Name('ATTR_BRIGHTNESS', Load())]))), [Assign([Name('brightness', Store())], BoolOp(Or(), [Attribute(Name('self', Load()), 'brightness', Load()), Constant(0)]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "ATTR_BRIGHTNESS",
+        "kwargs",
+        "self"
+      ]
+    },
+    "67d079e8:async_turn_on:4.2.0:612": {
+      "col_end": 47,
+      "col_start": 16,
+      "defs": [
+        "color"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_turn_on",
+      "line_end": 612,
+      "line_start": 612,
+      "marker_refs": [],
+      "node_id": "67d079e8:async_turn_on:4.2.0:612",
+      "raw_repr": "Assign([Name('color', Store())], BoolOp(Or(), [Attribute(Name('self', Load()), 'hs_color', Load()), Tuple([Constant(0), Constant(0)], Load())]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "67d079e8:async_turn_on:4.2:611": {
+      "col_end": 47,
+      "col_start": 12,
+      "defs": [
+        "color"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_turn_on",
+      "line_end": 612,
+      "line_start": 611,
+      "marker_refs": [
+        "marker_ab26f3c7a9"
+      ],
+      "node_id": "67d079e8:async_turn_on:4.2:611",
+      "raw_repr": "If(UnaryOp(Not(), NamedExpr(Name('color', Store()), Call(Attribute(Name('kwargs', Load()), 'get', Load()), [Name('ATTR_HS_COLOR', Load())]))), [Assign([Name('color', Store())], BoolOp(Or(), [Attribute(Name('self', Load()), 'hs_color', Load()), Tuple([Constant(0), Constant(0)], Load())]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "ATTR_HS_COLOR",
+        "kwargs",
+        "self"
+      ]
+    },
+    "67d079e8:is_on:0:569": {
+      "col_end": 41,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "is_on",
+      "line_end": 569,
+      "line_start": 569,
+      "marker_refs": [
+        "marker_38491c12cd"
+      ],
+      "node_id": "67d079e8:is_on:0:569",
+      "raw_repr": "Expr(Constant('Return true if light is on.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "67d079e8:is_on:1:570": {
+      "col_end": 55,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "is_on",
+      "line_end": 570,
+      "line_start": 570,
+      "marker_refs": [
+        "marker_38491c12cd"
+      ],
+      "node_id": "67d079e8:is_on:1:570",
+      "raw_repr": "Return(Call(Attribute(Name('self', Load()), '_read_wrapper', Load()), [Attribute(Name('self', Load()), '_switch_wrapper', Load())]))",
+      "stmt_kind": "Return",
+      "uses": [
+        "self"
+      ]
+    },
+    "789a6e2e:_async_call_update_attrs:0:270": {
+      "col_end": 70,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tplink/entity.py",
+      "function_name": "_async_call_update_attrs",
+      "line_end": 270,
+      "line_start": 270,
+      "marker_refs": [],
+      "node_id": "789a6e2e:_async_call_update_attrs:0:270",
+      "raw_repr": "Expr(Constant('Call update_attrs and make entity unavailable on errors.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "789a6e2e:_async_call_update_attrs:1.0.0:275": {
+      "col_end": 17,
+      "col_start": 16,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tplink/entity.py",
+      "function_name": "_async_call_update_attrs",
+      "line_end": 280,
+      "line_start": 275,
+      "marker_refs": [],
+      "node_id": "789a6e2e:_async_call_update_attrs:1.0.0:275",
+      "raw_repr": "Expr(Call(Attribute(Name('_LOGGER', Load()), 'warning', Load()), [Constant('Unable to read data for %s %s: %s'), Attribute(Name('self', Load()), '_device', Load()), Attribute(Name('self', Load()), 'entity_id', Load()), Name('ex', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "_LOGGER",
+        "ex",
+        "self"
+      ]
+    },
+    "789a6e2e:_async_call_update_attrs:1.0:272": {
+      "col_end": 50,
+      "col_start": 12,
+      "defs": [
+        "available"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tplink/entity.py",
+      "function_name": "_async_call_update_attrs",
+      "line_end": 272,
+      "line_start": 272,
+      "marker_refs": [
+        "marker_b458225c16"
+      ],
+      "node_id": "789a6e2e:_async_call_update_attrs:1.0:272",
+      "raw_repr": "Assign([Name('available', Store())], Call(Attribute(Name('self', Load()), '_async_update_attrs', Load())))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "789a6e2e:_async_call_update_attrs:1.0:274": {
+      "col_end": 17,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tplink/entity.py",
+      "function_name": "_async_call_update_attrs",
+      "line_end": 280,
+      "line_start": 274,
+      "marker_refs": [],
+      "node_id": "789a6e2e:_async_call_update_attrs:1.0:274",
+      "raw_repr": "If(Attribute(Name('self', Load()), '_attr_available', Load()), [Expr(Call(Attribute(Name('_LOGGER', Load()), 'warning', Load()), [Constant('Unable to read data for %s %s: %s'), Attribute(Name('self', Load()), '_device', Load()), Attribute(Name('self', Load()), 'entity_id', Load()), Name('ex', Load())]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "_LOGGER",
+        "ex",
+        "self"
+      ]
+    },
+    "789a6e2e:_async_call_update_attrs:1.0:283": {
+      "col_end": 44,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tplink/entity.py",
+      "function_name": "_async_call_update_attrs",
+      "line_end": 283,
+      "line_start": 283,
+      "marker_refs": [],
+      "node_id": "789a6e2e:_async_call_update_attrs:1.0:283",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_available', Store())], Name('available', Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "available",
+        "self"
+      ]
+    },
+    "789a6e2e:_async_call_update_attrs:1.1:281": {
+      "col_end": 40,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tplink/entity.py",
+      "function_name": "_async_call_update_attrs",
+      "line_end": 281,
+      "line_start": 281,
+      "marker_refs": [],
+      "node_id": "789a6e2e:_async_call_update_attrs:1.1:281",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_available', Store())], Constant(False))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "789a6e2e:_async_call_update_attrs:1:271": {
+      "col_end": 44,
+      "col_start": 8,
+      "defs": [
+        "available"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tplink/entity.py",
+      "function_name": "_async_call_update_attrs",
+      "line_end": 283,
+      "line_start": 271,
+      "marker_refs": [
+        "marker_b458225c16"
+      ],
+      "node_id": "789a6e2e:_async_call_update_attrs:1:271",
+      "raw_repr": "Try([Assign([Name('available', Store())], Call(Attribute(Name('self', Load()), '_async_update_attrs', Load())))], [ExceptHandler(Name('Exception', Load()), 'ex', [If(Attribute(Name('self', Load()), '_attr_available', Load()), [Expr(Call(Attribute(Name('_LOGGER', Load()), 'warning', Load()), [Constant('Unable to read data for %s %s: %s'), Attribute(Name('self', Load()), '_device', Load()), Attribute(Name('self', Load()), 'entity_id', Load()), Name('ex', Load())]))]), Assign([Attribute(Name('self', Load()), '_attr_available', Store())], Constant(False))])], [Assign([Attribute(Name('self', Load()), '_attr_available', Store())], Name('available', Load()))])",
+      "stmt_kind": "Try",
+      "uses": [
+        "Exception",
+        "_LOGGER",
+        "available",
+        "ex",
+        "self"
+      ]
+    },
+    "789a6e2e:_handle_coordinator_update:0:287": {
+      "col_end": 55,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tplink/entity.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 287,
+      "line_start": 287,
+      "marker_refs": [
+        "marker_72c8030d25"
+      ],
+      "node_id": "789a6e2e:_handle_coordinator_update:0:287",
+      "raw_repr": "Expr(Constant('Handle updated data from the coordinator.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "789a6e2e:_handle_coordinator_update:1:288": {
+      "col_end": 39,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tplink/entity.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 288,
+      "line_start": 288,
+      "marker_refs": [
+        "marker_72c8030d25",
+        "marker_c2552af8eb"
+      ],
+      "node_id": "789a6e2e:_handle_coordinator_update:1:288",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), '_async_call_update_attrs', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "789a6e2e:_handle_coordinator_update:2:289": {
+      "col_end": 44,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tplink/entity.py",
+      "function_name": "_handle_coordinator_update",
+      "line_end": 289,
+      "line_start": 289,
+      "marker_refs": [
+        "marker_72c8030d25",
+        "marker_256ce13a2c",
+        "marker_ada6039538"
+      ],
+      "node_id": "789a6e2e:_handle_coordinator_update:2:289",
+      "raw_repr": "Expr(Call(Attribute(Call(Name('super', Load())), '_handle_coordinator_update', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "super"
+      ]
+    },
+    "789a6e2e:async_added_to_hass:1:255": {
+      "col_end": 43,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tplink/entity.py",
+      "function_name": "async_added_to_hass",
+      "line_end": 255,
+      "line_start": 255,
+      "marker_refs": [],
+      "node_id": "789a6e2e:async_added_to_hass:1:255",
+      "raw_repr": "Expr(Await(Call(Attribute(Call(Name('super', Load())), 'async_added_to_hass', Load()))))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "super"
+      ]
+    },
+    "789a6e2e:async_added_to_hass:2:257": {
+      "col_end": 39,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tplink/entity.py",
+      "function_name": "async_added_to_hass",
+      "line_end": 257,
+      "line_start": 257,
+      "marker_refs": [
+        "marker_a7252fbd5f"
+      ],
+      "node_id": "789a6e2e:async_added_to_hass:2:257",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), '_async_call_update_attrs', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "818854af:_async_wait_for_full_advertisement:1.0:71": {
+      "col_end": 33,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/xiaomi_ble/config_flow.py",
+      "function_name": "_async_wait_for_full_advertisement",
+      "line_end": 71,
+      "line_start": 71,
+      "marker_refs": [],
+      "node_id": "818854af:_async_wait_for_full_advertisement:1.0:71",
+      "raw_repr": "Return(Name('discovery_info', Load()))",
+      "stmt_kind": "Return",
+      "uses": [
+        "discovery_info"
+      ]
+    },
+    "818854af:_async_wait_for_full_advertisement:2:73": {
+      "col_end": 37,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/xiaomi_ble/config_flow.py",
+      "function_name": "_async_wait_for_full_advertisement",
+      "line_end": 77,
+      "line_start": 73,
+      "marker_refs": [
+        "marker_7c4fb1ffd3"
+      ],
+      "node_id": "818854af:_async_wait_for_full_advertisement:2:73",
+      "raw_repr": "FunctionDef('_process_more_advertisements', arguments([], [arg('service_info', Name('BluetoothServiceInfo', Load()))]), [Expr(Call(Attribute(Name('device', Load()), 'update', Load()), [Name('service_info', Load())])), Return(UnaryOp(Not(), Attribute(Name('device', Load()), 'pending', Load())))], [], Name('bool', Load()))",
+      "stmt_kind": "FunctionDef",
+      "uses": [
+        "BluetoothServiceInfo",
+        "bool",
+        "device",
+        "service_info"
+      ]
+    },
+    "818854af:_process_more_advertisements:0:76": {
+      "col_end": 39,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/xiaomi_ble/config_flow.py",
+      "function_name": "_process_more_advertisements",
+      "line_end": 76,
+      "line_start": 76,
+      "marker_refs": [
+        "marker_d1e9b0e724"
+      ],
+      "node_id": "818854af:_process_more_advertisements:0:76",
+      "raw_repr": "Expr(Call(Attribute(Name('device', Load()), 'update', Load()), [Name('service_info', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "device",
+        "service_info"
+      ]
+    },
+    "8e4c1745:__init__:16.0.0:315": {
+      "col_end": 13,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 318,
+      "line_start": 315,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:16.0.0:315",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_hvac_modes', Store())], List([Attribute(Name('HVACMode', Load()), 'OFF', Load()), Attribute(Name('description', Load()), 'switch_only_hvac_mode', Load())], Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "HVACMode",
+        "description",
+        "self"
+      ]
+    },
+    "8e4c1745:__init__:16.0:314": {
+      "col_end": 13,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 318,
+      "line_start": 314,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:16.0:314",
+      "raw_repr": "If(Name('switch_wrapper', Load()), [Assign([Attribute(Name('self', Load()), '_attr_hvac_modes', Store())], List([Attribute(Name('HVACMode', Load()), 'OFF', Load()), Attribute(Name('description', Load()), 'switch_only_hvac_mode', Load())], Load()))])",
+      "stmt_kind": "If",
+      "uses": [
+        "HVACMode",
+        "description",
+        "self",
+        "switch_wrapper"
+      ]
+    },
+    "8e4c1745:__init__:16.1.0.0:312": {
+      "col_end": 57,
+      "col_start": 20,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 312,
+      "line_start": 312,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:16.1.0.0:312",
+      "raw_repr": "Expr(Call(Attribute(Attribute(Name('self', Load()), '_attr_hvac_modes', Load()), 'append', Load()), [Name('ha_mode', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "ha_mode",
+        "self"
+      ]
+    },
+    "8e4c1745:__init__:16.1.0:308": {
+      "col_end": 57,
+      "col_start": 16,
+      "defs": [
+        "ha_mode"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 312,
+      "line_start": 308,
+      "marker_refs": [
+        "marker_1de9a6c786",
+        "marker_6ecab44062"
+      ],
+      "node_id": "8e4c1745:__init__:16.1.0:308",
+      "raw_repr": "If(BoolOp(And(), [NamedExpr(Name('ha_mode', Store()), Call(Attribute(Name('_TUYA_TO_HA_HVACMODE_MAPPINGS', Load()), 'get', Load()), [Name('tuya_mode', Load())])), Compare(Name('ha_mode', Load()), [NotEq()], [Attribute(Name('HVACMode', Load()), 'OFF', Load())])]), [Expr(Call(Attribute(Attribute(Name('self', Load()), '_attr_hvac_modes', Load()), 'append', Load()), [Name('ha_mode', Load())]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "HVACMode",
+        "_TUYA_TO_HA_HVACMODE_MAPPINGS",
+        "ha_mode",
+        "self",
+        "tuya_mode"
+      ]
+    },
+    "8e4c1745:__init__:16.1:307": {
+      "col_end": 57,
+      "col_start": 12,
+      "defs": [
+        "ha_mode",
+        "tuya_mode"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 312,
+      "line_start": 307,
+      "marker_refs": [
+        "marker_1de9a6c786",
+        "marker_6ecab44062"
+      ],
+      "node_id": "8e4c1745:__init__:16.1:307",
+      "raw_repr": "For(Name('tuya_mode', Store()), Call(Name('cast', Load()), [Subscript(Name('list', Load()), Name('TuyaClimateHVACMode', Load()), Load()), Attribute(Name('hvac_mode_wrapper', Load()), 'options', Load())]), [If(BoolOp(And(), [NamedExpr(Name('ha_mode', Store()), Call(Attribute(Name('_TUYA_TO_HA_HVACMODE_MAPPINGS', Load()), 'get', Load()), [Name('tuya_mode', Load())])), Compare(Name('ha_mode', Load()), [NotEq()], [Attribute(Name('HVACMode', Load()), 'OFF', Load())])]), [Expr(Call(Attribute(Attribute(Name('self', Load()), '_attr_hvac_modes', Load()), 'append', Load()), [Name('ha_mode', Load())]))])])",
+      "stmt_kind": "For",
+      "uses": [
+        "HVACMode",
+        "TuyaClimateHVACMode",
+        "_TUYA_TO_HA_HVACMODE_MAPPINGS",
+        "cast",
+        "ha_mode",
+        "hvac_mode_wrapper",
+        "list",
+        "self",
+        "tuya_mode"
+      ]
+    },
+    "8e4c1745:__init__:16:305": {
+      "col_end": 13,
+      "col_start": 8,
+      "defs": [
+        "ha_mode",
+        "tuya_mode"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 318,
+      "line_start": 305,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:16:305",
+      "raw_repr": "If(Name('hvac_mode_wrapper', Load()), [Assign([Attribute(Name('self', Load()), '_attr_hvac_modes', Store())], List([Attribute(Name('HVACMode', Load()), 'OFF', Load())], Load())), For(Name('tuya_mode', Store()), Call(Name('cast', Load()), [Subscript(Name('list', Load()), Name('TuyaClimateHVACMode', Load()), Load()), Attribute(Name('hvac_mode_wrapper', Load()), 'options', Load())]), [If(BoolOp(And(), [NamedExpr(Name('ha_mode', Store()), Call(Attribute(Name('_TUYA_TO_HA_HVACMODE_MAPPINGS', Load()), 'get', Load()), [Name('tuya_mode', Load())])), Compare(Name('ha_mode', Load()), [NotEq()], [Attribute(Name('HVACMode', Load()), 'OFF', Load())])]), [Expr(Call(Attribute(Attribute(Name('self', Load()), '_attr_hvac_modes', Load()), 'append', Load()), [Name('ha_mode', Load())]))])])], [If(Name('switch_wrapper', Load()), [Assign([Attribute(Name('self', Load()), '_attr_hvac_modes', Store())], List([Attribute(Name('HVACMode', Load()), 'OFF', Load()), Attribute(Name('description', Load()), 'switch_only_hvac_mode', Load())], Load()))])])",
+      "stmt_kind": "If",
+      "uses": [
+        "HVACMode",
+        "TuyaClimateHVACMode",
+        "_TUYA_TO_HA_HVACMODE_MAPPINGS",
+        "cast",
+        "description",
+        "ha_mode",
+        "hvac_mode_wrapper",
+        "list",
+        "self",
+        "switch_wrapper",
+        "tuya_mode"
+      ]
+    },
+    "8e4c1745:__init__:17.0:322": {
+      "col_end": 75,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 322,
+      "line_start": 322,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:17.0:322",
+      "raw_repr": "Expr(Call(Attribute(Attribute(Name('self', Load()), '_attr_hvac_modes', Load()), 'append', Load()), [Attribute(Name('description', Load()), 'switch_only_hvac_mode', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "description",
+        "self"
+      ]
+    },
+    "8e4c1745:__init__:17.1:323": {
+      "col_end": 60,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 323,
+      "line_start": 323,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:17.1:323",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_preset_modes', Store())], Attribute(Name('preset_wrapper', Load()), 'options', Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "preset_wrapper",
+        "self"
+      ]
+    },
+    "8e4c1745:__init__:17.2:324": {
+      "col_end": 77,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 324,
+      "line_start": 324,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:17.2:324",
+      "raw_repr": "AugAssign(Attribute(Name('self', Load()), '_attr_supported_features', Store()), BitOr(), Attribute(Name('ClimateEntityFeature', Load()), 'PRESET_MODE', Load()))",
+      "stmt_kind": "AugAssign",
+      "uses": [
+        "ClimateEntityFeature",
+        "self"
+      ]
+    },
+    "8e4c1745:__init__:17:321": {
+      "col_end": 77,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 324,
+      "line_start": 321,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:17:321",
+      "raw_repr": "If(BoolOp(And(), [Name('preset_wrapper', Load()), Attribute(Name('preset_wrapper', Load()), 'options', Load())]), [Expr(Call(Attribute(Attribute(Name('self', Load()), '_attr_hvac_modes', Load()), 'append', Load()), [Attribute(Name('description', Load()), 'switch_only_hvac_mode', Load())])), Assign([Attribute(Name('self', Load()), '_attr_preset_modes', Store())], Attribute(Name('preset_wrapper', Load()), 'options', Load())), AugAssign(Attribute(Name('self', Load()), '_attr_supported_features', Store()), BitOr(), Attribute(Name('ClimateEntityFeature', Load()), 'PRESET_MODE', Load()))])",
+      "stmt_kind": "If",
+      "uses": [
+        "ClimateEntityFeature",
+        "description",
+        "preset_wrapper",
+        "self"
+      ]
+    },
+    "8e4c1745:__init__:18.0:328": {
+      "col_end": 81,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 328,
+      "line_start": 328,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:18.0:328",
+      "raw_repr": "AugAssign(Attribute(Name('self', Load()), '_attr_supported_features', Store()), BitOr(), Attribute(Name('ClimateEntityFeature', Load()), 'TARGET_HUMIDITY', Load()))",
+      "stmt_kind": "AugAssign",
+      "uses": [
+        "ClimateEntityFeature",
+        "self"
+      ]
+    },
+    "8e4c1745:__init__:18.1:329": {
+      "col_end": 78,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 329,
+      "line_start": 329,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:18.1:329",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_min_humidity', Store())], Call(Name('round', Load()), [Attribute(Name('target_humidity_wrapper', Load()), 'min_value', Load())]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "round",
+        "self",
+        "target_humidity_wrapper"
+      ]
+    },
+    "8e4c1745:__init__:18.2:330": {
+      "col_end": 78,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 330,
+      "line_start": 330,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:18.2:330",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_max_humidity', Store())], Call(Name('round', Load()), [Attribute(Name('target_humidity_wrapper', Load()), 'max_value', Load())]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "round",
+        "self",
+        "target_humidity_wrapper"
+      ]
+    },
+    "8e4c1745:__init__:18:327": {
+      "col_end": 78,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 330,
+      "line_start": 327,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:18:327",
+      "raw_repr": "If(Name('target_humidity_wrapper', Load()), [AugAssign(Attribute(Name('self', Load()), '_attr_supported_features', Store()), BitOr(), Attribute(Name('ClimateEntityFeature', Load()), 'TARGET_HUMIDITY', Load())), Assign([Attribute(Name('self', Load()), '_attr_min_humidity', Store())], Call(Name('round', Load()), [Attribute(Name('target_humidity_wrapper', Load()), 'min_value', Load())])), Assign([Attribute(Name('self', Load()), '_attr_max_humidity', Store())], Call(Name('round', Load()), [Attribute(Name('target_humidity_wrapper', Load()), 'max_value', Load())]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "ClimateEntityFeature",
+        "round",
+        "self",
+        "target_humidity_wrapper"
+      ]
+    },
+    "8e4c1745:__init__:19.0:334": {
+      "col_end": 74,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 334,
+      "line_start": 334,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:19.0:334",
+      "raw_repr": "AugAssign(Attribute(Name('self', Load()), '_attr_supported_features', Store()), BitOr(), Attribute(Name('ClimateEntityFeature', Load()), 'FAN_MODE', Load()))",
+      "stmt_kind": "AugAssign",
+      "uses": [
+        "ClimateEntityFeature",
+        "self"
+      ]
+    },
+    "8e4c1745:__init__:19.1:335": {
+      "col_end": 59,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 335,
+      "line_start": 335,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:19.1:335",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_fan_modes', Store())], Attribute(Name('fan_mode_wrapper', Load()), 'options', Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "fan_mode_wrapper",
+        "self"
+      ]
+    },
+    "8e4c1745:__init__:19:333": {
+      "col_end": 59,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 335,
+      "line_start": 333,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:19:333",
+      "raw_repr": "If(Name('fan_mode_wrapper', Load()), [AugAssign(Attribute(Name('self', Load()), '_attr_supported_features', Store()), BitOr(), Attribute(Name('ClimateEntityFeature', Load()), 'FAN_MODE', Load())), Assign([Attribute(Name('self', Load()), '_attr_fan_modes', Store())], Attribute(Name('fan_mode_wrapper', Load()), 'options', Load()))])",
+      "stmt_kind": "If",
+      "uses": [
+        "ClimateEntityFeature",
+        "fan_mode_wrapper",
+        "self"
+      ]
+    },
+    "8e4c1745:__init__:20.0:339": {
+      "col_end": 76,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 339,
+      "line_start": 339,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:20.0:339",
+      "raw_repr": "AugAssign(Attribute(Name('self', Load()), '_attr_supported_features', Store()), BitOr(), Attribute(Name('ClimateEntityFeature', Load()), 'SWING_MODE', Load()))",
+      "stmt_kind": "AugAssign",
+      "uses": [
+        "ClimateEntityFeature",
+        "self"
+      ]
+    },
+    "8e4c1745:__init__:20.1:340": {
+      "col_end": 13,
+      "col_start": 12,
+      "defs": [
+        "ha_swing_mode",
+        "tuya_swing_mode"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 346,
+      "line_start": 340,
+      "marker_refs": [
+        "marker_8ffa4b296f",
+        "marker_4f5add5c94"
+      ],
+      "node_id": "8e4c1745:__init__:20.1:340",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_swing_modes', Store())], ListComp(Name('ha_swing_mode', Load()), [comprehension(Name('tuya_swing_mode', Store()), Call(Name('cast', Load()), [Subscript(Name('list', Load()), Name('TuyaClimateSwingMode', Load()), Load()), Attribute(Name('swing_wrapper', Load()), 'options', Load())]), [NamedExpr(Name('ha_swing_mode', Store()), Call(Attribute(Name('_TUYA_TO_HA_SWING_MAPPINGS', Load()), 'get', Load()), [Name('tuya_swing_mode', Load())]))], 0)]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "TuyaClimateSwingMode",
+        "_TUYA_TO_HA_SWING_MAPPINGS",
+        "cast",
+        "ha_swing_mode",
+        "list",
+        "self",
+        "swing_wrapper",
+        "tuya_swing_mode"
+      ]
+    },
+    "8e4c1745:__init__:20:338": {
+      "col_end": 13,
+      "col_start": 8,
+      "defs": [
+        "ha_swing_mode",
+        "tuya_swing_mode"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 346,
+      "line_start": 338,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:20:338",
+      "raw_repr": "If(Name('swing_wrapper', Load()), [AugAssign(Attribute(Name('self', Load()), '_attr_supported_features', Store()), BitOr(), Attribute(Name('ClimateEntityFeature', Load()), 'SWING_MODE', Load())), Assign([Attribute(Name('self', Load()), '_attr_swing_modes', Store())], ListComp(Name('ha_swing_mode', Load()), [comprehension(Name('tuya_swing_mode', Store()), Call(Name('cast', Load()), [Subscript(Name('list', Load()), Name('TuyaClimateSwingMode', Load()), Load()), Attribute(Name('swing_wrapper', Load()), 'options', Load())]), [NamedExpr(Name('ha_swing_mode', Store()), Call(Attribute(Name('_TUYA_TO_HA_SWING_MAPPINGS', Load()), 'get', Load()), [Name('tuya_swing_mode', Load())]))], 0)]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "ClimateEntityFeature",
+        "TuyaClimateSwingMode",
+        "_TUYA_TO_HA_SWING_MAPPINGS",
+        "cast",
+        "ha_swing_mode",
+        "list",
+        "self",
+        "swing_wrapper",
+        "tuya_swing_mode"
+      ]
+    },
+    "8e4c1745:async_set_hvac_mode:1:355": {
+      "col_end": 21,
+      "col_start": 8,
+      "defs": [
+        "commands"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "async_set_hvac_mode",
+      "line_end": 355,
+      "line_start": 355,
+      "marker_refs": [],
+      "node_id": "8e4c1745:async_set_hvac_mode:1:355",
+      "raw_repr": "Assign([Name('commands', Store())], List([], Load()))",
+      "stmt_kind": "Assign",
+      "uses": []
+    },
+    "8e4c1745:async_set_hvac_mode:3:362": {
+      "col_end": 13,
+      "col_start": 8,
+      "defs": [
+        "tuya_mode"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "async_set_hvac_mode",
+      "line_end": 369,
+      "line_start": 362,
+      "marker_refs": [
+        "marker_e5303f6c04",
+        "marker_3ae997c228",
+        "marker_ff3b4fcc64"
+      ],
+      "node_id": "8e4c1745:async_set_hvac_mode:3:362",
+      "raw_repr": "If(BoolOp(And(), [Attribute(Name('self', Load()), '_hvac_mode_wrapper', Load()), NamedExpr(Name('tuya_mode', Store()), Call(Attribute(Name('_HA_TO_TUYA_HVACMODE_MAPPINGS', Load()), 'get', Load()), [Name('hvac_mode', Load())])), Compare(Name('tuya_mode', Load()), [In()], [Attribute(Attribute(Name('self', Load()), '_hvac_mode_wrapper', Load()), 'options', Load())])]), [Expr(Call(Attribute(Name('commands', Load()), 'extend', Load()), [Call(Attribute(Attribute(Name('self', Load()), '_hvac_mode_wrapper', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Name('tuya_mode', Load())])]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "_HA_TO_TUYA_HVACMODE_MAPPINGS",
+        "commands",
+        "hvac_mode",
+        "self",
+        "tuya_mode"
+      ]
+    },
+    "8e4c1745:async_set_swing_mode:1:386": {
+      "col_end": 82,
+      "col_start": 8,
+      "defs": [
+        "tuya_mode"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "async_set_swing_mode",
+      "line_end": 387,
+      "line_start": 386,
+      "marker_refs": [
+        "marker_6bd50376d1",
+        "marker_c9941cd101"
+      ],
+      "node_id": "8e4c1745:async_set_swing_mode:1:386",
+      "raw_repr": "If(NamedExpr(Name('tuya_mode', Store()), Call(Attribute(Name('_HA_TO_TUYA_SWING_MAPPINGS', Load()), 'get', Load()), [Name('swing_mode', Load())])), [Expr(Await(Call(Attribute(Name('self', Load()), '_async_send_wrapper_updates', Load()), [Attribute(Name('self', Load()), '_swing_wrapper', Load()), Name('tuya_mode', Load())])))])",
+      "stmt_kind": "If",
+      "uses": [
+        "_HA_TO_TUYA_SWING_MAPPINGS",
+        "self",
+        "swing_mode",
+        "tuya_mode"
+      ]
+    },
+    "8e4c1745:hvac_mode:4:430": {
+      "col_end": 63,
+      "col_start": 8,
+      "defs": [
+        "tuya_mode"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "hvac_mode",
+      "line_end": 430,
+      "line_start": 430,
+      "marker_refs": [],
+      "node_id": "8e4c1745:hvac_mode:4:430",
+      "raw_repr": "Assign([Name('tuya_mode', Store())], Call(Attribute(Name('self', Load()), '_read_wrapper', Load()), [Attribute(Name('self', Load()), '_hvac_mode_wrapper', Load())]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "8e4c1745:hvac_mode:5:431": {
+      "col_end": 82,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "hvac_mode",
+      "line_end": 431,
+      "line_start": 431,
+      "marker_refs": [
+        "marker_60a9b40dcb",
+        "marker_10199b611b"
+      ],
+      "node_id": "8e4c1745:hvac_mode:5:431",
+      "raw_repr": "Return(IfExp(Name('tuya_mode', Load()), Call(Attribute(Name('_TUYA_TO_HA_HVACMODE_MAPPINGS', Load()), 'get', Load()), [Name('tuya_mode', Load())]), Constant(None)))",
+      "stmt_kind": "Return",
+      "uses": [
+        "_TUYA_TO_HA_HVACMODE_MAPPINGS",
+        "tuya_mode"
+      ]
+    },
+    "8e4c1745:swing_mode:1:446": {
+      "col_end": 60,
+      "col_start": 8,
+      "defs": [
+        "tuya_value"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "swing_mode",
+      "line_end": 446,
+      "line_start": 446,
+      "marker_refs": [],
+      "node_id": "8e4c1745:swing_mode:1:446",
+      "raw_repr": "Assign([Name('tuya_value', Store())], Call(Attribute(Name('self', Load()), '_read_wrapper', Load()), [Attribute(Name('self', Load()), '_swing_wrapper', Load())]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "8e4c1745:swing_mode:2:447": {
+      "col_end": 81,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "swing_mode",
+      "line_end": 447,
+      "line_start": 447,
+      "marker_refs": [
+        "marker_f9a02ab387",
+        "marker_9c3071ff0d"
+      ],
+      "node_id": "8e4c1745:swing_mode:2:447",
+      "raw_repr": "Return(IfExp(Name('tuya_value', Load()), Call(Attribute(Name('_TUYA_TO_HA_SWING_MAPPINGS', Load()), 'get', Load()), [Name('tuya_value', Load())]), Constant(None)))",
+      "stmt_kind": "Return",
+      "uses": [
+        "_TUYA_TO_HA_SWING_MAPPINGS",
+        "tuya_value"
+      ]
+    },
+    "9425188b:async_oscillate:2:100": {
+      "col_end": 86,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_oscillate",
+      "line_end": 100,
+      "line_start": 100,
+      "marker_refs": [],
+      "node_id": "9425188b:async_oscillate:2:100",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_last_run_success', Store())], Call(Name('bool', Load()), [Await(Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'set_oscillation', Load()), [Name('oscillating', Load())]))]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "bool",
+        "oscillating",
+        "self"
+      ]
+    },
+    "9425188b:async_oscillate:3:101": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_oscillate",
+      "line_end": 101,
+      "line_start": 101,
+      "marker_refs": [
+        "marker_c1599f0892"
+      ],
+      "node_id": "9425188b:async_oscillate:3:101",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "9425188b:async_set_percentage:2:91": {
+      "col_end": 84,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_set_percentage",
+      "line_end": 91,
+      "line_start": 91,
+      "marker_refs": [],
+      "node_id": "9425188b:async_set_percentage:2:91",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_last_run_success', Store())], Call(Name('bool', Load()), [Await(Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'set_percentage', Load()), [Name('percentage', Load())]))]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "bool",
+        "percentage",
+        "self"
+      ]
+    },
+    "9425188b:async_set_percentage:3:92": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_set_percentage",
+      "line_end": 92,
+      "line_start": 92,
+      "marker_refs": [
+        "marker_b9989a7050"
+      ],
+      "node_id": "9425188b:async_set_percentage:3:92",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "9425188b:async_set_preset_mode:0:153": {
+      "col_end": 54,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_set_preset_mode",
+      "line_end": 153,
+      "line_start": 153,
+      "marker_refs": [],
+      "node_id": "9425188b:async_set_preset_mode:0:153",
+      "raw_repr": "Expr(Constant('Set the preset mode of the air purifier.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "9425188b:async_set_preset_mode:1:155": {
+      "col_end": 9,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_set_preset_mode",
+      "line_end": 159,
+      "line_start": 155,
+      "marker_refs": [],
+      "node_id": "9425188b:async_set_preset_mode:1:155",
+      "raw_repr": "Expr(Call(Attribute(Name('_LOGGER', Load()), 'debug', Load()), [Constant('Switchbot air purifier to set preset mode %s %s'), Name('preset_mode', Load()), Attribute(Name('self', Load()), '_address', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "_LOGGER",
+        "preset_mode",
+        "self"
+      ]
+    },
+    "9425188b:async_set_preset_mode:2:160": {
+      "col_end": 86,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_set_preset_mode",
+      "line_end": 160,
+      "line_start": 160,
+      "marker_refs": [],
+      "node_id": "9425188b:async_set_preset_mode:2:160",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_last_run_success', Store())], Call(Name('bool', Load()), [Await(Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'set_preset_mode', Load()), [Name('preset_mode', Load())]))]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "bool",
+        "preset_mode",
+        "self"
+      ]
+    },
+    "9425188b:async_set_preset_mode:2:82": {
+      "col_end": 86,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_set_preset_mode",
+      "line_end": 82,
+      "line_start": 82,
+      "marker_refs": [],
+      "node_id": "9425188b:async_set_preset_mode:2:82",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_last_run_success', Store())], Call(Name('bool', Load()), [Await(Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'set_preset_mode', Load()), [Name('preset_mode', Load())]))]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "bool",
+        "preset_mode",
+        "self"
+      ]
+    },
+    "9425188b:async_set_preset_mode:3:161": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_set_preset_mode",
+      "line_end": 161,
+      "line_start": 161,
+      "marker_refs": [
+        "marker_7529ee2411"
+      ],
+      "node_id": "9425188b:async_set_preset_mode:3:161",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "9425188b:async_set_preset_mode:3:83": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_set_preset_mode",
+      "line_end": 83,
+      "line_start": 83,
+      "marker_refs": [
+        "marker_e34316b43e"
+      ],
+      "node_id": "9425188b:async_set_preset_mode:3:83",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "9425188b:async_turn_off:0:183": {
+      "col_end": 40,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_turn_off",
+      "line_end": 183,
+      "line_start": 183,
+      "marker_refs": [],
+      "node_id": "9425188b:async_turn_off:0:183",
+      "raw_repr": "Expr(Constant('Turn off the air purifier.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "9425188b:async_turn_off:1:185": {
+      "col_end": 81,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_turn_off",
+      "line_end": 185,
+      "line_start": 185,
+      "marker_refs": [],
+      "node_id": "9425188b:async_turn_off:1:185",
+      "raw_repr": "Expr(Call(Attribute(Name('_LOGGER', Load()), 'debug', Load()), [Constant('Switchbot air purifier to set turn off %s'), Attribute(Name('self', Load()), '_address', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "_LOGGER",
+        "self"
+      ]
+    },
+    "9425188b:async_turn_off:2:124": {
+      "col_end": 68,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_turn_off",
+      "line_end": 124,
+      "line_start": 124,
+      "marker_refs": [],
+      "node_id": "9425188b:async_turn_off:2:124",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_last_run_success', Store())], Call(Name('bool', Load()), [Await(Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'turn_off', Load())))]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "bool",
+        "self"
+      ]
+    },
+    "9425188b:async_turn_off:2:186": {
+      "col_end": 68,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_turn_off",
+      "line_end": 186,
+      "line_start": 186,
+      "marker_refs": [],
+      "node_id": "9425188b:async_turn_off:2:186",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_last_run_success', Store())], Call(Name('bool', Load()), [Await(Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'turn_off', Load())))]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "bool",
+        "self"
+      ]
+    },
+    "9425188b:async_turn_off:3:125": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_turn_off",
+      "line_end": 125,
+      "line_start": 125,
+      "marker_refs": [
+        "marker_8ff06e2c99"
+      ],
+      "node_id": "9425188b:async_turn_off:3:125",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "9425188b:async_turn_off:3:187": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_turn_off",
+      "line_end": 187,
+      "line_start": 187,
+      "marker_refs": [
+        "marker_a75f778a26"
+      ],
+      "node_id": "9425188b:async_turn_off:3:187",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "9425188b:async_turn_on:0:170": {
+      "col_end": 39,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_turn_on",
+      "line_end": 170,
+      "line_start": 170,
+      "marker_refs": [],
+      "node_id": "9425188b:async_turn_on:0:170",
+      "raw_repr": "Expr(Constant('Turn on the air purifier.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "9425188b:async_turn_on:1:172": {
+      "col_end": 9,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_turn_on",
+      "line_end": 177,
+      "line_start": 172,
+      "marker_refs": [],
+      "node_id": "9425188b:async_turn_on:1:172",
+      "raw_repr": "Expr(Call(Attribute(Name('_LOGGER', Load()), 'debug', Load()), [Constant('Switchbot air purifier to set turn on %s %s %s'), Name('percentage', Load()), Name('preset_mode', Load()), Attribute(Name('self', Load()), '_address', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "_LOGGER",
+        "percentage",
+        "preset_mode",
+        "self"
+      ]
+    },
+    "9425188b:async_turn_on:2:117": {
+      "col_end": 67,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_turn_on",
+      "line_end": 117,
+      "line_start": 117,
+      "marker_refs": [],
+      "node_id": "9425188b:async_turn_on:2:117",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_last_run_success', Store())], Call(Name('bool', Load()), [Await(Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'turn_on', Load())))]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "bool",
+        "self"
+      ]
+    },
+    "9425188b:async_turn_on:2:178": {
+      "col_end": 67,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_turn_on",
+      "line_end": 178,
+      "line_start": 178,
+      "marker_refs": [],
+      "node_id": "9425188b:async_turn_on:2:178",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_last_run_success', Store())], Call(Name('bool', Load()), [Await(Call(Attribute(Attribute(Name('self', Load()), '_device', Load()), 'turn_on', Load())))]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "bool",
+        "self"
+      ]
+    },
+    "9425188b:async_turn_on:3:118": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_turn_on",
+      "line_end": 118,
+      "line_start": 118,
+      "marker_refs": [
+        "marker_771a133e32"
+      ],
+      "node_id": "9425188b:async_turn_on:3:118",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "9425188b:async_turn_on:3:179": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/switchbot/fan.py",
+      "function_name": "async_turn_on",
+      "line_end": 179,
+      "line_start": 179,
+      "marker_refs": [
+        "marker_4664192a7e"
+      ],
+      "node_id": "9425188b:async_turn_on:3:179",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "9cfce7a4:_process_device_update:0:968": {
+      "col_end": 11,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/switch.py",
+      "function_name": "_process_device_update",
+      "line_end": 972,
+      "line_start": 968,
+      "marker_refs": [
+        "marker_6601025770"
+      ],
+      "node_id": "9cfce7a4:_process_device_update:0:968",
+      "raw_repr": "Expr(Constant('Called when Tuya device sends an update with updated properties.\\n\\n        Returns True if the Home Assistant state should be written,\\n        or False if the state write should be skipped.\\n        '))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "9cfce7a4:_process_device_update:1:973": {
+      "col_end": 9,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/switch.py",
+      "function_name": "_process_device_update",
+      "line_end": 975,
+      "line_start": 973,
+      "marker_refs": [
+        "marker_6601025770"
+      ],
+      "node_id": "9cfce7a4:_process_device_update:1:973",
+      "raw_repr": "Return(UnaryOp(Not(), Call(Attribute(Attribute(Name('self', Load()), '_dpcode_wrapper', Load()), 'skip_update', Load()), [Attribute(Name('self', Load()), 'device', Load()), Name('updated_status_properties', Load()), Name('dp_timestamps', Load())])))",
+      "stmt_kind": "Return",
+      "uses": [
+        "dp_timestamps",
+        "self",
+        "updated_status_properties"
+      ]
+    },
+    "9cfce7a4:async_discover_device:1:919": {
+      "col_end": 45,
+      "col_start": 8,
+      "defs": [
+        "entities"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/switch.py",
+      "function_name": "async_discover_device",
+      "line_end": 919,
+      "line_start": 919,
+      "marker_refs": [],
+      "node_id": "9cfce7a4:async_discover_device:1:919",
+      "raw_repr": "AnnAssign(Name('entities', Store()), Subscript(Name('list', Load()), Name('TuyaSwitchEntity', Load()), Load()), List([], Load()), 1)",
+      "stmt_kind": "AnnAssign",
+      "uses": [
+        "TuyaSwitchEntity",
+        "list"
+      ]
+    },
+    "9cfce7a4:async_discover_device:2.0:921": {
+      "col_end": 50,
+      "col_start": 12,
+      "defs": [
+        "device"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/switch.py",
+      "function_name": "async_discover_device",
+      "line_end": 921,
+      "line_start": 921,
+      "marker_refs": [],
+      "node_id": "9cfce7a4:async_discover_device:2.0:921",
+      "raw_repr": "Assign([Name('device', Store())], Subscript(Attribute(Name('manager', Load()), 'device_map', Load()), Name('device_id', Load()), Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "device_id",
+        "manager"
+      ]
+    },
+    "9cfce7a4:async_discover_device:2.1:922": {
+      "col_end": 17,
+      "col_start": 12,
+      "defs": [
+        "description",
+        "descriptions",
+        "dpcode_wrapper"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/switch.py",
+      "function_name": "async_discover_device",
+      "line_end": 931,
+      "line_start": 922,
+      "marker_refs": [
+        "marker_77fdf39f18"
+      ],
+      "node_id": "9cfce7a4:async_discover_device:2.1:922",
+      "raw_repr": "If(NamedExpr(Name('descriptions', Store()), Call(Attribute(Name('SWITCHES', Load()), 'get', Load()), [Attribute(Name('device', Load()), 'category', Load())])), [Expr(Call(Attribute(Name('entities', Load()), 'extend', Load()), [GeneratorExp(Call(Name('TuyaSwitchEntity', Load()), [Name('device', Load()), Name('manager', Load()), Name('description', Load()), Name('dpcode_wrapper', Load())]), [comprehension(Name('description', Store()), Name('descriptions', Load()), [NamedExpr(Name('dpcode_wrapper', Store()), Call(Attribute(Name('DPCodeBooleanWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'key', Load())], [keyword('prefer_function', Constant(True))]))], 0)])]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "DPCodeBooleanWrapper",
+        "SWITCHES",
+        "TuyaSwitchEntity",
+        "description",
+        "descriptions",
+        "device",
+        "dpcode_wrapper",
+        "entities",
+        "manager"
+      ]
+    },
+    "9cfce7a4:async_discover_device:2:920": {
+      "col_end": 17,
+      "col_start": 8,
+      "defs": [
+        "description",
+        "descriptions",
+        "device",
+        "device_id",
+        "dpcode_wrapper"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/switch.py",
+      "function_name": "async_discover_device",
+      "line_end": 931,
+      "line_start": 920,
+      "marker_refs": [],
+      "node_id": "9cfce7a4:async_discover_device:2:920",
+      "raw_repr": "For(Name('device_id', Store()), Name('device_ids', Load()), [Assign([Name('device', Store())], Subscript(Attribute(Name('manager', Load()), 'device_map', Load()), Name('device_id', Load()), Load())), If(NamedExpr(Name('descriptions', Store()), Call(Attribute(Name('SWITCHES', Load()), 'get', Load()), [Attribute(Name('device', Load()), 'category', Load())])), [Expr(Call(Attribute(Name('entities', Load()), 'extend', Load()), [GeneratorExp(Call(Name('TuyaSwitchEntity', Load()), [Name('device', Load()), Name('manager', Load()), Name('description', Load()), Name('dpcode_wrapper', Load())]), [comprehension(Name('description', Store()), Name('descriptions', Load()), [NamedExpr(Name('dpcode_wrapper', Store()), Call(Attribute(Name('DPCodeBooleanWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'key', Load())], [keyword('prefer_function', Constant(True))]))], 0)])]))])])",
+      "stmt_kind": "For",
+      "uses": [
+        "DPCodeBooleanWrapper",
+        "SWITCHES",
+        "TuyaSwitchEntity",
+        "description",
+        "descriptions",
+        "device",
+        "device_id",
+        "device_ids",
+        "dpcode_wrapper",
+        "entities",
+        "manager"
+      ]
+    },
+    "9cfce7a4:async_setup_entry:1:914": {
+      "col_end": 40,
+      "col_start": 4,
+      "defs": [
+        "manager"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/switch.py",
+      "function_name": "async_setup_entry",
+      "line_end": 914,
+      "line_start": 914,
+      "marker_refs": [
+        "marker_63cc69fb3d"
+      ],
+      "node_id": "9cfce7a4:async_setup_entry:1:914",
+      "raw_repr": "Assign([Name('manager', Store())], Attribute(Attribute(Name('entry', Load()), 'runtime_data', Load()), 'manager', Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "entry"
+      ]
+    },
+    "9cfce7a4:async_setup_entry:2:917": {
+      "col_end": 36,
+      "col_start": 4,
+      "defs": [
+        "description",
+        "descriptions",
+        "device",
+        "device_id",
+        "dpcode_wrapper",
+        "entities"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/switch.py",
+      "function_name": "async_setup_entry",
+      "line_end": 933,
+      "line_start": 917,
+      "marker_refs": [
+        "marker_63cc69fb3d",
+        "marker_daaee061ab"
+      ],
+      "node_id": "9cfce7a4:async_setup_entry:2:917",
+      "raw_repr": "FunctionDef('async_discover_device', arguments([], [arg('device_ids', Subscript(Name('list', Load()), Name('str', Load()), Load()))]), [Expr(Constant('Discover and add a discovered tuya sensor.')), AnnAssign(Name('entities', Store()), Subscript(Name('list', Load()), Name('TuyaSwitchEntity', Load()), Load()), List([], Load()), 1), For(Name('device_id', Store()), Name('device_ids', Load()), [Assign([Name('device', Store())], Subscript(Attribute(Name('manager', Load()), 'device_map', Load()), Name('device_id', Load()), Load())), If(NamedExpr(Name('descriptions', Store()), Call(Attribute(Name('SWITCHES', Load()), 'get', Load()), [Attribute(Name('device', Load()), 'category', Load())])), [Expr(Call(Attribute(Name('entities', Load()), 'extend', Load()), [GeneratorExp(Call(Name('TuyaSwitchEntity', Load()), [Name('device', Load()), Name('manager', Load()), Name('description', Load()), Name('dpcode_wrapper', Load())]), [comprehension(Name('description', Store()), Name('descriptions', Load()), [NamedExpr(Name('dpcode_wrapper', Store()), Call(Attribute(Name('DPCodeBooleanWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'key', Load())], [keyword('prefer_function', Constant(True))]))], 0)])]))])]), Expr(Call(Name('async_add_entities', Load()), [Name('entities', Load())]))], [Name('callback', Load())], Constant(None))",
+      "stmt_kind": "FunctionDef",
+      "uses": [
+        "DPCodeBooleanWrapper",
+        "SWITCHES",
+        "TuyaSwitchEntity",
+        "async_add_entities",
+        "callback",
+        "description",
+        "descriptions",
+        "device",
+        "device_id",
+        "device_ids",
+        "dpcode_wrapper",
+        "entities",
+        "list",
+        "manager",
+        "str"
+      ]
+    },
+    "9da22f42:_async_setup_update_entity:4:82": {
+      "col_end": 19,
+      "col_start": 8,
+      "defs": [
+        "unsub"
+      ],
+      "effects": [
+        "unsubscribe"
+      ],
+      "file_path": "data/repo_snapshot/esphome/update.py",
+      "function_name": "_async_setup_update_entity",
+      "line_end": 83,
+      "line_start": 82,
+      "marker_refs": [
+        "marker_0057872025"
+      ],
+      "node_id": "9da22f42:_async_setup_update_entity:4:82",
+      "raw_repr": "For(Name('unsub', Store()), Name('unsubs', Load()), [Expr(Call(Name('unsub', Load())))])",
+      "stmt_kind": "For",
+      "uses": [
+        "unsub",
+        "unsubs"
+      ]
+    },
+    "9da22f42:_handle_device_update:2:185": {
+      "col_end": 28,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/update.py",
+      "function_name": "_handle_device_update",
+      "line_end": 185,
+      "line_start": 185,
+      "marker_refs": [],
+      "node_id": "9da22f42:_handle_device_update:2:185",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), '_update_attrs', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "9da22f42:_handle_device_update:3:186": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/esphome/update.py",
+      "function_name": "_handle_device_update",
+      "line_end": 186,
+      "line_start": 186,
+      "marker_refs": [
+        "marker_767e7c72f5"
+      ],
+      "node_id": "9da22f42:_handle_device_update:3:186",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "9da22f42:async_setup_entry:7:71": {
+      "col_end": 81,
+      "col_start": 4,
+      "defs": [
+        "unsub"
+      ],
+      "effects": [
+        "external_call_cloud",
+        "unsubscribe"
+      ],
+      "file_path": "data/repo_snapshot/esphome/update.py",
+      "function_name": "async_setup_entry",
+      "line_end": 86,
+      "line_start": 71,
+      "marker_refs": [
+        "marker_ce22d7b81f",
+        "marker_8364d61ffe"
+      ],
+      "node_id": "9da22f42:async_setup_entry:7:71",
+      "raw_repr": "FunctionDef('_async_setup_update_entity', arguments(), [Expr(Constant('Set up the update entity.')), Assert(Compare(Name('dashboard', Load()), [IsNot()], [Constant(None)])), If(BoolOp(Or(), [UnaryOp(Not(), Attribute(Name('entry_data', Load()), 'available', Load())), UnaryOp(Not(), Attribute(Name('dashboard', Load()), 'last_update_success', Load()))]), [Return()]), If(BoolOp(Or(), [Compare(Attribute(Name('dashboard', Load()), 'data', Load()), [Is()], [Constant(None)]), Compare(Call(Attribute(Attribute(Name('dashboard', Load()), 'data', Load()), 'get', Load()), [Name('device_name', Load())]), [Is()], [Constant(None)])]), [Return()]), For(Name('unsub', Store()), Name('unsubs', Load()), [Expr(Call(Name('unsub', Load())))]), Expr(Call(Attribute(Name('unsubs', Load()), 'clear', Load()))), Expr(Call(Name('async_add_entities', Load()), [List([Call(Name('ESPHomeDashboardUpdateEntity', Load()), [Name('entry_data', Load()), Name('dashboard', Load())])], Load())]))], [Name('callback', Load())], Constant(None))",
+      "stmt_kind": "FunctionDef",
+      "uses": [
+        "ESPHomeDashboardUpdateEntity",
+        "async_add_entities",
+        "callback",
+        "dashboard",
+        "device_name",
+        "entry_data",
+        "unsub",
+        "unsubs"
+      ]
+    },
+    "a073d609:_handle_state_update:1.0:76": {
+      "col_end": 39,
+      "col_start": 12,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/tuya/entity.py",
+      "function_name": "_handle_state_update",
+      "line_end": 76,
+      "line_start": 76,
+      "marker_refs": [
+        "marker_5718cbb36c"
+      ],
+      "node_id": "a073d609:_handle_state_update:1.0:76",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "a073d609:_handle_state_update:1:63": {
+      "col_end": 39,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/tuya/entity.py",
+      "function_name": "_handle_state_update",
+      "line_end": 76,
+      "line_start": 63,
+      "marker_refs": [
+        "marker_5718cbb36c"
+      ],
+      "node_id": "a073d609:_handle_state_update:1:63",
+      "raw_repr": "If(BoolOp(Or(), [Compare(Name('updated_status_properties', Load()), [Is()], [Constant(None)]), Await(Call(Attribute(Name('self', Load()), '_process_device_update', Load()), [Name('updated_status_properties', Load()), Name('dp_timestamps', Load())]))]), [Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))])",
+      "stmt_kind": "If",
+      "uses": [
+        "dp_timestamps",
+        "self",
+        "updated_status_properties"
+      ]
+    },
+    "ab8f4bde:_async_handle_event:0:179": {
+      "col_end": 71,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/xiaomi_ble/event.py",
+      "function_name": "_async_handle_event",
+      "line_end": 179,
+      "line_start": 179,
+      "marker_refs": [
+        "marker_6f52f6ca11"
+      ],
+      "node_id": "ab8f4bde:_async_handle_event:0:179",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), '_trigger_event', Load()), [Subscript(Name('event', Load()), Name('EVENT_TYPE', Load()), Load()), Subscript(Name('event', Load()), Name('EVENT_PROPERTIES', Load()), Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "EVENT_PROPERTIES",
+        "EVENT_TYPE",
+        "event",
+        "self"
+      ]
+    },
+    "ab8f4bde:_async_handle_event:1:180": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/xiaomi_ble/event.py",
+      "function_name": "_async_handle_event",
+      "line_end": 180,
+      "line_start": 180,
+      "marker_refs": [
+        "marker_6f52f6ca11"
+      ],
+      "node_id": "ab8f4bde:_async_handle_event:1:180",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "d9c4917e:sensor_update_to_bluetooth_data_update:0:111": {
+      "col_end": 61,
+      "col_start": 4,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+      "function_name": "sensor_update_to_bluetooth_data_update",
+      "line_end": 111,
+      "line_start": 111,
+      "marker_refs": [
+        "marker_0e91c5f067"
+      ],
+      "node_id": "d9c4917e:sensor_update_to_bluetooth_data_update:0:111",
+      "raw_repr": "Expr(Constant('Convert a sensor update to a bluetooth data update.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "d9c4917e:sensor_update_to_bluetooth_data_update:1:112": {
+      "col_end": 5,
+      "col_start": 4,
+      "defs": [
+        "description",
+        "device_id",
+        "device_info",
+        "device_key",
+        "sensor_values"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+      "function_name": "sensor_update_to_bluetooth_data_update",
+      "line_end": 132,
+      "line_start": 112,
+      "marker_refs": [
+        "marker_0e91c5f067"
+      ],
+      "node_id": "d9c4917e:sensor_update_to_bluetooth_data_update:1:112",
+      "raw_repr": "Return(Call(Name('PassiveBluetoothDataUpdate', Load()), [], [keyword('devices', DictComp(Name('device_id', Load()), Call(Name('sensor_device_info_to_hass_device_info', Load()), [Name('device_info', Load())]), [comprehension(Tuple([Name('device_id', Store()), Name('device_info', Store())], Store()), Call(Attribute(Attribute(Name('sensor_update', Load()), 'devices', Load()), 'items', Load())), [], 0)])), keyword('entity_descriptions', DictComp(Call(Name('device_key_to_bluetooth_entity_key', Load()), [Name('device_key', Load())]), Subscript(Name('BINARY_SENSOR_DESCRIPTIONS', Load()), Attribute(Name('description', Load()), 'device_class', Load()), Load()), [comprehension(Tuple([Name('device_key', Store()), Name('description', Store())], Store()), Call(Attribute(Attribute(Name('sensor_update', Load()), 'binary_entity_descriptions', Load()), 'items', Load())), [Attribute(Name('description', Load()), 'device_class', Load())], 0)])), keyword('entity_data', DictComp(Call(Name('device_key_to_bluetooth_entity_key', Load()), [Name('device_key', Load())]), Attribute(Name('sensor_values', Load()), 'native_value', Load()), [comprehension(Tuple([Name('device_key', Store()), Name('sensor_values', Store())], Store()), Call(Attribute(Attribute(Name('sensor_update', Load()), 'binary_entity_values', Load()), 'items', Load())), [], 0)])), keyword('entity_names', DictComp(Call(Name('device_key_to_bluetooth_entity_key', Load()), [Name('device_key', Load())]), Attribute(Name('sensor_values', Load()), 'name', Load()), [comprehension(Tuple([Name('device_key', Store()), Name('sensor_values', Store())], Store()), Call(Attribute(Attribute(Name('sensor_update', Load()), 'binary_entity_values', Load()), 'items', Load())), [], 0)]))]))",
+      "stmt_kind": "Return",
+      "uses": [
+        "BINARY_SENSOR_DESCRIPTIONS",
+        "PassiveBluetoothDataUpdate",
+        "description",
+        "device_id",
+        "device_info",
+        "device_key",
+        "device_key_to_bluetooth_entity_key",
+        "sensor_device_info_to_hass_device_info",
+        "sensor_update",
+        "sensor_values"
+      ]
+    },
+    "f8314a32:async_unload_entry:0:191": {
+      "col_end": 32,
+      "col_start": 4,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/xiaomi_ble/__init__.py",
+      "function_name": "async_unload_entry",
+      "line_end": 191,
+      "line_start": 191,
+      "marker_refs": [
+        "marker_abcd008d4f"
+      ],
+      "node_id": "f8314a32:async_unload_entry:0:191",
+      "raw_repr": "Expr(Constant('Unload a config entry.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    }
+  },
+  "source_files": [
+    "data/repo_snapshot/esphome/update.py",
+    "data/repo_snapshot/hue/v2/group.py",
+    "data/repo_snapshot/switchbot/cover.py",
+    "data/repo_snapshot/switchbot/fan.py",
+    "data/repo_snapshot/tplink/entity.py",
+    "data/repo_snapshot/tuya/climate.py",
+    "data/repo_snapshot/tuya/entity.py",
+    "data/repo_snapshot/tuya/light.py",
+    "data/repo_snapshot/tuya/switch.py",
+    "data/repo_snapshot/xiaomi_ble/__init__.py",
+    "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+    "data/repo_snapshot/xiaomi_ble/config_flow.py",
+    "data/repo_snapshot/xiaomi_ble/device.py",
+    "data/repo_snapshot/xiaomi_ble/event.py"
+  ]
+}

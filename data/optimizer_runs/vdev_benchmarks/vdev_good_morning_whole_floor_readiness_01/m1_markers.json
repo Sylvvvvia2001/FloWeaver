@@ -1,0 +1,1722 @@
+[
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/ecobee/climate.py",
+    "function_name": "async_setup_entry",
+    "line_end": 345,
+    "line_start": 204,
+    "marker_id": "marker_5cdbba7a82",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_op_hint_only"
+    ],
+    "file_path": "data/repo_snapshot/ecobee/climate.py",
+    "function_name": "async_setup_entry",
+    "line_end": 241,
+    "line_start": 241,
+    "marker_id": "marker_5aa46f6002",
+    "marker_type": "STATE_WRITE",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_op_hint_only"
+    ],
+    "file_path": "data/repo_snapshot/ecobee/climate.py",
+    "function_name": "async_setup_entry",
+    "line_end": 252,
+    "line_start": 252,
+    "marker_id": "marker_46c43eefcf",
+    "marker_type": "STATE_WRITE",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_op_hint_only"
+    ],
+    "file_path": "data/repo_snapshot/ecobee/climate.py",
+    "function_name": "async_setup_entry",
+    "line_end": 270,
+    "line_start": 270,
+    "marker_id": "marker_10deb709e5",
+    "marker_type": "STATE_WRITE",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_op_hint_only"
+    ],
+    "file_path": "data/repo_snapshot/ecobee/climate.py",
+    "function_name": "async_setup_entry",
+    "line_end": 287,
+    "line_start": 287,
+    "marker_id": "marker_95c81b4242",
+    "marker_type": "STATE_WRITE",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match",
+      "binding_hint_target_token",
+      "binding_hint_action_id"
+    ],
+    "binding_score": 1.29,
+    "evidence": [
+      "grounding_profile:ecobee:CLOUD_STATUS_CALL",
+      "grounding_profile:boost_imports",
+      "grounding_profile:boost_names",
+      "grounding_profile:boost_target_tokens",
+      "grounding_profile_rule:ecobee:climate_runtime_status_read",
+      "grounding_profile:match=call",
+      "grounding_profile:score:1.00",
+      "grounding_profile:runtime_path:runtime_function:async_update",
+      "grounding_profile:runtime_path:runtime_call:get_thermostat",
+      "grounding_profile:runtime_path:runtime_call:update",
+      "grounding_profile:runtime_path:runtime_call:self.data.ecobee.get_thermostat",
+      "grounding_profile:negative:negative_function:async_setup_entry",
+      "grounding_profile:negative:negative_function:set_preset_mode",
+      "grounding_profile:negative:negative_function:set_temperature",
+      "grounding_profile:negative:negative_function:fan",
+      "grounding_profile:why_not_setup:exclude_role:setup:async_setup_entry",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:set_preset_mode",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:set_temperature",
+      "grounding_profile:why_not_setup:exclude_role:property_getter:fan",
+      "grounding_profile:reviewer_status:draft",
+      "related_actions:A11",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match",
+      "action_match:binding_hint_target_token",
+      "action_match:binding_hint_action_id"
+    ],
+    "file_path": "data/repo_snapshot/ecobee/climate.py",
+    "function_name": "async_update",
+    "line_end": 399,
+    "line_start": 399,
+    "marker_id": "marker_acc1836129",
+    "marker_type": "CLOUD_STATUS_CALL",
+    "phase": "RUNTIME",
+    "primary_action_id": "A11",
+    "related_action_ids": [
+      "A11"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "call:unsubscribe"
+    ],
+    "file_path": "data/repo_snapshot/esphome/update.py",
+    "function_name": "_async_setup_update_entity",
+    "line_end": 83,
+    "line_start": 83,
+    "marker_id": "marker_0057872025",
+    "marker_type": "UNSUBSCRIBE",
+    "phase": "TEARDOWN",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_seed",
+      "related_actions:A17",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/esphome/update.py",
+    "function_name": "_handle_device_update",
+    "line_end": 186,
+    "line_start": 186,
+    "marker_id": "marker_767e7c72f5",
+    "marker_type": "STATE_WRITE",
+    "phase": "RUNTIME",
+    "primary_action_id": "A17",
+    "related_action_ids": [
+      "A17"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/esphome/update.py",
+    "function_name": "async_setup_entry",
+    "line_end": 102,
+    "line_start": 48,
+    "marker_id": "marker_ce22d7b81f",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "call:unsubscribe"
+    ],
+    "file_path": "data/repo_snapshot/esphome/update.py",
+    "function_name": "async_setup_entry",
+    "line_end": 83,
+    "line_start": 83,
+    "marker_id": "marker_8364d61ffe",
+    "marker_type": "UNSUBSCRIBE",
+    "phase": "TEARDOWN",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_seed",
+      "related_actions:A16",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/hue/v2/entity.py",
+    "function_name": "_handle_event",
+    "line_end": 138,
+    "line_start": 138,
+    "marker_id": "marker_ca66dce737",
+    "marker_type": "STATE_WRITE",
+    "phase": "RUNTIME",
+    "primary_action_id": "A16",
+    "related_action_ids": [
+      "A16"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "binding_hint_target_token",
+      "binding_hint_action_id",
+      "generalized_profile_secondary_binding"
+    ],
+    "binding_score": 1.04,
+    "evidence": [
+      "grounding_profile:hue:LOCAL_API_READ",
+      "grounding_profile:boost_imports",
+      "grounding_profile:boost_names",
+      "grounding_profile_rule:hue:group_local_api_read",
+      "grounding_profile:match=call",
+      "grounding_profile:score:0.95",
+      "grounding_profile:runtime_path:runtime_function:_update_values",
+      "grounding_profile:runtime_path:runtime_function:on_update",
+      "grounding_profile:runtime_path:runtime_call:set",
+      "grounding_profile:runtime_path:runtime_call:get_lights",
+      "grounding_profile:negative:negative_function:async_setup_entry",
+      "grounding_profile:negative:negative_function:async_turn_on",
+      "grounding_profile:negative:negative_function:async_turn_off",
+      "grounding_profile:negative:negative_function:is_on",
+      "grounding_profile:why_not_setup:exclude_role:setup:async_setup_entry",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:async_turn_on",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:async_turn_off",
+      "grounding_profile:why_not_setup:exclude_role:property_getter:is_on",
+      "grounding_profile:reviewer_status:draft",
+      "target_anchor_seed",
+      "related_actions:A12,A13",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:binding_hint_target_token",
+      "action_match:binding_hint_action_id",
+      "action_match:generalized_profile_secondary_binding"
+    ],
+    "file_path": "data/repo_snapshot/hue/v2/group.py",
+    "function_name": "_update_values",
+    "line_end": 240,
+    "line_start": 240,
+    "marker_id": "marker_d36a07a587",
+    "marker_type": "LOCAL_API_READ",
+    "phase": "RUNTIME",
+    "primary_action_id": "A12",
+    "related_action_ids": [
+      "A12",
+      "A13"
+    ],
+    "secondary_action_ids": [
+      "A13"
+    ],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "call:protocol:ble_retry_or_timeout",
+      "context_missing:module_hints"
+    ],
+    "file_path": "data/repo_snapshot/hue/v2/group.py",
+    "function_name": "async_add_light",
+    "line_end": 61,
+    "line_start": 61,
+    "marker_id": "marker_b625b3ee7c",
+    "marker_type": "BLE_RETRY_OR_TIMEOUT",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "WEAK"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/hue/v2/group.py",
+    "function_name": "async_setup_entry",
+    "line_end": 81,
+    "line_start": 42,
+    "marker_id": "marker_c80dc58c92",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "call:protocol:ble_retry_or_timeout",
+      "context_missing:module_hints"
+    ],
+    "file_path": "data/repo_snapshot/hue/v2/group.py",
+    "function_name": "async_setup_entry",
+    "line_end": 61,
+    "line_start": 61,
+    "marker_id": "marker_a1020462ef",
+    "marker_type": "BLE_RETRY_OR_TIMEOUT",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "WEAK"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match",
+      "binding_hint_action_kind",
+      "binding_hint_target_token",
+      "binding_hint_action_id",
+      "generalized_profile_secondary_binding"
+    ],
+    "binding_score": 1.49,
+    "evidence": [
+      "grounding_profile:switchbot:BLE_OP",
+      "grounding_profile:boost_imports",
+      "grounding_profile:boost_names",
+      "grounding_profile_rule:switchbot:cover_runtime_refresh_cover_control",
+      "grounding_profile:match=function",
+      "grounding_profile:score:0.95",
+      "grounding_profile:runtime_path:runtime_function:_handle_coordinator_update",
+      "grounding_profile:runtime_path:runtime_call:is_closing",
+      "grounding_profile:runtime_path:runtime_call:is_opening",
+      "grounding_profile:runtime_path:runtime_call:async_write_ha_state",
+      "grounding_profile:negative:negative_function:async_setup_entry",
+      "grounding_profile:negative:negative_function:async_set_cover_position",
+      "grounding_profile:negative:negative_function:async_set_cover_tilt_position",
+      "grounding_profile:negative:negative_function:is_closed",
+      "grounding_profile:why_not_setup:exclude_role:setup:async_setup_entry",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:async_set_cover_position",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:async_set_cover_tilt_position",
+      "grounding_profile:why_not_setup:exclude_role:property_getter:is_closed",
+      "grounding_profile:reviewer_status:draft",
+      "related_actions:A1,A2",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match",
+      "action_match:binding_hint_action_kind",
+      "action_match:binding_hint_target_token",
+      "action_match:binding_hint_action_id",
+      "action_match:generalized_profile_secondary_binding"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/cover.py",
+    "function_name": "_handle_coordinator_update",
+    "line_end": 142,
+    "line_start": 135,
+    "marker_id": "marker_c98ac57c4c",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1",
+      "A2"
+    ],
+    "secondary_action_ids": [
+      "A2"
+    ],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match",
+      "binding_hint_action_kind",
+      "binding_hint_target_token",
+      "binding_hint_action_id",
+      "generalized_profile_secondary_binding"
+    ],
+    "binding_score": 1.49,
+    "evidence": [
+      "grounding_profile:switchbot:BLE_OP",
+      "grounding_profile:boost_imports",
+      "grounding_profile:boost_names",
+      "grounding_profile_rule:switchbot:cover_runtime_refresh_cover_control",
+      "grounding_profile:match=function",
+      "grounding_profile:score:0.95",
+      "grounding_profile:runtime_path:runtime_function:_handle_coordinator_update",
+      "grounding_profile:runtime_path:runtime_call:is_closing",
+      "grounding_profile:runtime_path:runtime_call:is_opening",
+      "grounding_profile:runtime_path:runtime_call:async_write_ha_state",
+      "grounding_profile:negative:negative_function:async_setup_entry",
+      "grounding_profile:negative:negative_function:async_set_cover_position",
+      "grounding_profile:negative:negative_function:async_set_cover_tilt_position",
+      "grounding_profile:negative:negative_function:is_closed",
+      "grounding_profile:why_not_setup:exclude_role:setup:async_setup_entry",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:async_set_cover_position",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:async_set_cover_tilt_position",
+      "grounding_profile:why_not_setup:exclude_role:property_getter:is_closed",
+      "grounding_profile:reviewer_status:draft",
+      "related_actions:A1,A2",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match",
+      "action_match:binding_hint_action_kind",
+      "action_match:binding_hint_target_token",
+      "action_match:binding_hint_action_id",
+      "action_match:generalized_profile_secondary_binding"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/cover.py",
+    "function_name": "_handle_coordinator_update",
+    "line_end": 225,
+    "line_start": 216,
+    "marker_id": "marker_3c44b8ccd8",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1",
+      "A2"
+    ],
+    "secondary_action_ids": [
+      "A2"
+    ],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match",
+      "binding_hint_action_kind",
+      "binding_hint_target_token",
+      "binding_hint_action_id",
+      "generalized_profile_secondary_binding"
+    ],
+    "binding_score": 1.49,
+    "evidence": [
+      "grounding_profile:switchbot:BLE_OP",
+      "grounding_profile:boost_imports",
+      "grounding_profile:boost_names",
+      "grounding_profile_rule:switchbot:cover_runtime_refresh_cover_control",
+      "grounding_profile:match=function",
+      "grounding_profile:score:0.95",
+      "grounding_profile:runtime_path:runtime_function:_handle_coordinator_update",
+      "grounding_profile:runtime_path:runtime_call:is_closing",
+      "grounding_profile:runtime_path:runtime_call:is_opening",
+      "grounding_profile:runtime_path:runtime_call:async_write_ha_state",
+      "grounding_profile:negative:negative_function:async_setup_entry",
+      "grounding_profile:negative:negative_function:async_set_cover_position",
+      "grounding_profile:negative:negative_function:async_set_cover_tilt_position",
+      "grounding_profile:negative:negative_function:is_closed",
+      "grounding_profile:why_not_setup:exclude_role:setup:async_setup_entry",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:async_set_cover_position",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:async_set_cover_tilt_position",
+      "grounding_profile:why_not_setup:exclude_role:property_getter:is_closed",
+      "grounding_profile:reviewer_status:draft",
+      "related_actions:A1,A2",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match",
+      "action_match:binding_hint_action_kind",
+      "action_match:binding_hint_target_token",
+      "action_match:binding_hint_action_id",
+      "action_match:generalized_profile_secondary_binding"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/cover.py",
+    "function_name": "_handle_coordinator_update",
+    "line_end": 311,
+    "line_start": 304,
+    "marker_id": "marker_643e95f17b",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1",
+      "A2"
+    ],
+    "secondary_action_ids": [
+      "A2"
+    ],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/cover.py",
+    "function_name": "async_setup_entry",
+    "line_end": 46,
+    "line_start": 32,
+    "marker_id": "marker_8e8dae5ed9",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "heuristic:ble_device_runtime_call",
+      "related_actions:A1",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/cover.py",
+    "function_name": "async_stop_cover",
+    "line_end": 118,
+    "line_start": 118,
+    "marker_id": "marker_1a328b14d6",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "heuristic:ble_device_runtime_call",
+      "related_actions:A1",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/cover.py",
+    "function_name": "async_stop_cover",
+    "line_end": 287,
+    "line_start": 287,
+    "marker_id": "marker_1f2c3503f3",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "heuristic:ble_device_runtime_call",
+      "related_actions:A1",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/cover.py",
+    "function_name": "async_stop_cover_tilt",
+    "line_end": 203,
+    "line_start": 203,
+    "marker_id": "marker_c586b78c6d",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A1",
+    "related_action_ids": [
+      "A1"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_seed",
+      "related_actions:A14",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/fan.py",
+    "function_name": "async_oscillate",
+    "line_end": 101,
+    "line_start": 101,
+    "marker_id": "marker_c1599f0892",
+    "marker_type": "STATE_WRITE",
+    "phase": "RUNTIME",
+    "primary_action_id": "A14",
+    "related_action_ids": [
+      "A14"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_seed",
+      "related_actions:A14",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/fan.py",
+    "function_name": "async_set_percentage",
+    "line_end": 92,
+    "line_start": 92,
+    "marker_id": "marker_b9989a7050",
+    "marker_type": "STATE_WRITE",
+    "phase": "RUNTIME",
+    "primary_action_id": "A14",
+    "related_action_ids": [
+      "A14"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_seed",
+      "related_actions:A14",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/fan.py",
+    "function_name": "async_set_preset_mode",
+    "line_end": 83,
+    "line_start": 83,
+    "marker_id": "marker_e34316b43e",
+    "marker_type": "STATE_WRITE",
+    "phase": "RUNTIME",
+    "primary_action_id": "A14",
+    "related_action_ids": [
+      "A14"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_seed",
+      "related_actions:A14",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/fan.py",
+    "function_name": "async_set_preset_mode",
+    "line_end": 161,
+    "line_start": 161,
+    "marker_id": "marker_7529ee2411",
+    "marker_type": "STATE_WRITE",
+    "phase": "RUNTIME",
+    "primary_action_id": "A14",
+    "related_action_ids": [
+      "A14"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/fan.py",
+    "function_name": "async_setup_entry",
+    "line_end": 33,
+    "line_start": 23,
+    "marker_id": "marker_19cb718405",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_seed",
+      "related_actions:A14",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/fan.py",
+    "function_name": "async_turn_off",
+    "line_end": 125,
+    "line_start": 125,
+    "marker_id": "marker_8ff06e2c99",
+    "marker_type": "STATE_WRITE",
+    "phase": "RUNTIME",
+    "primary_action_id": "A14",
+    "related_action_ids": [
+      "A14"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_seed",
+      "related_actions:A14",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/fan.py",
+    "function_name": "async_turn_off",
+    "line_end": 187,
+    "line_start": 187,
+    "marker_id": "marker_a75f778a26",
+    "marker_type": "STATE_WRITE",
+    "phase": "RUNTIME",
+    "primary_action_id": "A14",
+    "related_action_ids": [
+      "A14"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_seed",
+      "related_actions:A14",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/fan.py",
+    "function_name": "async_turn_on",
+    "line_end": 118,
+    "line_start": 118,
+    "marker_id": "marker_771a133e32",
+    "marker_type": "STATE_WRITE",
+    "phase": "RUNTIME",
+    "primary_action_id": "A14",
+    "related_action_ids": [
+      "A14"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_seed",
+      "related_actions:A14",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/switchbot/fan.py",
+    "function_name": "async_turn_on",
+    "line_end": 179,
+    "line_start": 179,
+    "marker_id": "marker_4664192a7e",
+    "marker_type": "STATE_WRITE",
+    "phase": "RUNTIME",
+    "primary_action_id": "A14",
+    "related_action_ids": [
+      "A14"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:protocol:cloud_http_call",
+      "target_anchor_seed",
+      "context_missing:module_hints",
+      "related_actions:A7",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "__init__",
+    "line_end": 309,
+    "line_start": 309,
+    "marker_id": "marker_1de9a6c786",
+    "marker_type": "CLOUD_HTTP_CALL",
+    "phase": "RUNTIME",
+    "primary_action_id": "A7",
+    "related_action_ids": [
+      "A7"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:protocol:cloud_http_call",
+      "target_anchor_seed",
+      "context_missing:module_hints",
+      "related_actions:A7",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "__init__",
+    "line_end": 345,
+    "line_start": 345,
+    "marker_id": "marker_8ffa4b296f",
+    "marker_type": "CLOUD_HTTP_CALL",
+    "phase": "RUNTIME",
+    "primary_action_id": "A7",
+    "related_action_ids": [
+      "A7"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match",
+      "binding_hint_action_kind",
+      "binding_hint_target_token",
+      "binding_hint_action_id",
+      "generalized_profile_secondary_binding"
+    ],
+    "binding_score": 1.49,
+    "evidence": [
+      "grounding_profile:tuya:CLOUD_STATUS_CALL",
+      "grounding_profile:boost_imports",
+      "grounding_profile:boost_names",
+      "grounding_profile_rule:tuya:climate_runtime_status_read",
+      "grounding_profile:match=call",
+      "grounding_profile:score:0.95",
+      "grounding_profile:runtime_path:runtime_function:_get_temperature_wrappers",
+      "grounding_profile:runtime_path:runtime_call:find_dpcode",
+      "grounding_profile:runtime_path:runtime_call:_get_temperature_wrapper",
+      "grounding_profile:runtime_path:runtime_call:read_device_status",
+      "grounding_profile:negative:negative_function:async_setup_entry",
+      "grounding_profile:negative:negative_function:async_turn_on",
+      "grounding_profile:negative:negative_function:async_turn_off",
+      "grounding_profile:negative:negative_function:fan_mode",
+      "grounding_profile:why_not_setup:exclude_role:setup:async_setup_entry",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:async_turn_on",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:async_turn_off",
+      "grounding_profile:why_not_setup:exclude_role:property_getter:fan_mode",
+      "grounding_profile:reviewer_status:draft",
+      "related_actions:A7,A8",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match",
+      "action_match:binding_hint_action_kind",
+      "action_match:binding_hint_target_token",
+      "action_match:binding_hint_action_id",
+      "action_match:generalized_profile_secondary_binding"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "_get_temperature_wrappers",
+    "line_end": 152,
+    "line_start": 150,
+    "marker_id": "marker_36002290a2",
+    "marker_type": "CLOUD_STATUS_CALL",
+    "phase": "SETUP",
+    "primary_action_id": "A7",
+    "related_action_ids": [
+      "A7",
+      "A8"
+    ],
+    "secondary_action_ids": [
+      "A8"
+    ],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:protocol:cloud_http_call",
+      "target_anchor_seed",
+      "context_missing:module_hints",
+      "related_actions:A7",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "async_set_hvac_mode",
+    "line_end": 364,
+    "line_start": 364,
+    "marker_id": "marker_e5303f6c04",
+    "marker_type": "CLOUD_HTTP_CALL",
+    "phase": "RUNTIME",
+    "primary_action_id": "A7",
+    "related_action_ids": [
+      "A7"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:protocol:cloud_http_call",
+      "target_anchor_seed",
+      "context_missing:module_hints",
+      "related_actions:A7",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "async_set_swing_mode",
+    "line_end": 386,
+    "line_start": 386,
+    "marker_id": "marker_6bd50376d1",
+    "marker_type": "CLOUD_HTTP_CALL",
+    "phase": "RUNTIME",
+    "primary_action_id": "A7",
+    "related_action_ids": [
+      "A7"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "async_setup_entry",
+    "line_end": 253,
+    "line_start": 198,
+    "marker_id": "marker_40c3f5103e",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:protocol:cloud_http_call",
+      "target_anchor_seed",
+      "context_missing:module_hints",
+      "related_actions:A7",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "hvac_mode",
+    "line_end": 431,
+    "line_start": 431,
+    "marker_id": "marker_60a9b40dcb",
+    "marker_type": "CLOUD_HTTP_CALL",
+    "phase": "RUNTIME",
+    "primary_action_id": "A7",
+    "related_action_ids": [
+      "A7"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:protocol:cloud_http_call",
+      "target_anchor_seed",
+      "context_missing:module_hints",
+      "related_actions:A7",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/climate.py",
+    "function_name": "swing_mode",
+    "line_end": 447,
+    "line_start": 447,
+    "marker_id": "marker_f9a02ab387",
+    "marker_type": "CLOUD_HTTP_CALL",
+    "phase": "RUNTIME",
+    "primary_action_id": "A7",
+    "related_action_ids": [
+      "A7"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "call:state_write",
+      "target_anchor_seed",
+      "related_actions:A15",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/entity.py",
+    "function_name": "_handle_state_update",
+    "line_end": 76,
+    "line_start": 76,
+    "marker_id": "marker_5718cbb36c",
+    "marker_type": "STATE_WRITE",
+    "phase": "RUNTIME",
+    "primary_action_id": "A15",
+    "related_action_ids": [
+      "A15"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:protocol:cloud_http_call",
+      "target_anchor_seed",
+      "context_missing:module_hints",
+      "related_actions:A10",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/light.py",
+    "function_name": "async_discover_device",
+    "line_end": 470,
+    "line_start": 470,
+    "marker_id": "marker_1b751f584b",
+    "marker_type": "CLOUD_HTTP_CALL",
+    "phase": "SETUP",
+    "primary_action_id": "A10",
+    "related_action_ids": [
+      "A10"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/tuya/light.py",
+    "function_name": "async_setup_entry",
+    "line_end": 506,
+    "line_start": 456,
+    "marker_id": "marker_b3fb0fdc6c",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:protocol:cloud_http_call",
+      "target_anchor_seed",
+      "context_missing:module_hints",
+      "related_actions:A10",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/light.py",
+    "function_name": "async_setup_entry",
+    "line_end": 470,
+    "line_start": 470,
+    "marker_id": "marker_6ceebf98ce",
+    "marker_type": "CLOUD_HTTP_CALL",
+    "phase": "SETUP",
+    "primary_action_id": "A10",
+    "related_action_ids": [
+      "A10"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:protocol:cloud_http_call",
+      "target_anchor_seed",
+      "context_missing:module_hints",
+      "related_actions:A10",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/light.py",
+    "function_name": "async_turn_on",
+    "line_end": 608,
+    "line_start": 608,
+    "marker_id": "marker_9477e26632",
+    "marker_type": "CLOUD_HTTP_CALL",
+    "phase": "RUNTIME",
+    "primary_action_id": "A10",
+    "related_action_ids": [
+      "A10"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match"
+    ],
+    "binding_score": 1.05,
+    "evidence": [
+      "call:protocol:cloud_http_call",
+      "target_anchor_seed",
+      "context_missing:module_hints",
+      "related_actions:A10",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match"
+    ],
+    "file_path": "data/repo_snapshot/tuya/light.py",
+    "function_name": "async_turn_on",
+    "line_end": 611,
+    "line_start": 611,
+    "marker_id": "marker_ab26f3c7a9",
+    "marker_type": "CLOUD_HTTP_CALL",
+    "phase": "RUNTIME",
+    "primary_action_id": "A10",
+    "related_action_ids": [
+      "A10"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match",
+      "binding_hint_action_kind",
+      "binding_hint_target_token",
+      "binding_hint_action_id",
+      "generalized_profile_secondary_binding"
+    ],
+    "binding_score": 1.49,
+    "evidence": [
+      "grounding_profile:tuya:CLOUD_STATUS_CALL",
+      "grounding_profile:boost_imports",
+      "grounding_profile:boost_names",
+      "grounding_profile_rule:tuya:light_runtime_status_read",
+      "grounding_profile:match=function",
+      "grounding_profile:score:0.95",
+      "grounding_profile:runtime_path:runtime_function:is_on",
+      "grounding_profile:runtime_path:runtime_call:_read_wrapper",
+      "grounding_profile:runtime_path:runtime_call:self._read_wrapper",
+      "grounding_profile:runtime_path:path_signal:property_function:is_on",
+      "grounding_profile:negative:negative_function:async_setup_entry",
+      "grounding_profile:negative:negative_function:async_turn_off",
+      "grounding_profile:negative:negative_function:async_turn_on",
+      "grounding_profile:negative:negative_function:is_on",
+      "grounding_profile:why_not_setup:exclude_role:setup:async_setup_entry",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:async_turn_off",
+      "grounding_profile:why_not_setup:exclude_role:runtime_write:async_turn_on",
+      "grounding_profile:why_not_setup:exclude_role:property_getter:is_on",
+      "grounding_profile:reviewer_status:draft",
+      "related_actions:A10,A9",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match",
+      "action_match:binding_hint_action_kind",
+      "action_match:binding_hint_target_token",
+      "action_match:binding_hint_action_id",
+      "action_match:generalized_profile_secondary_binding"
+    ],
+    "file_path": "data/repo_snapshot/tuya/light.py",
+    "function_name": "is_on",
+    "line_end": 570,
+    "line_start": 568,
+    "marker_id": "marker_38491c12cd",
+    "marker_type": "CLOUD_STATUS_CALL",
+    "phase": "RUNTIME",
+    "primary_action_id": "A10",
+    "related_action_ids": [
+      "A10",
+      "A9"
+    ],
+    "secondary_action_ids": [
+      "A9"
+    ],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/xiaomi_ble/__init__.py",
+    "function_name": "async_setup_entry",
+    "line_end": 187,
+    "line_start": 122,
+    "marker_id": "marker_af050aeecb",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_unload_entry"
+    ],
+    "file_path": "data/repo_snapshot/xiaomi_ble/__init__.py",
+    "function_name": "async_unload_entry",
+    "line_end": 192,
+    "line_start": 190,
+    "marker_id": "marker_abcd008d4f",
+    "marker_type": "ENTRY_UNLOAD",
+    "phase": "TEARDOWN",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+    "function_name": "async_setup_entry",
+    "line_end": 152,
+    "line_start": 135,
+    "marker_id": "marker_7bd5c0fc4d",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match",
+      "binding_hint_action_kind",
+      "binding_hint_target_token",
+      "binding_hint_action_id"
+    ],
+    "binding_score": 1.49,
+    "evidence": [
+      "grounding_profile:xiaomi_ble:BLE_OP",
+      "grounding_profile:boost_imports",
+      "grounding_profile:boost_names",
+      "grounding_profile_rule:xiaomi_ble:binary_sensor_runtime_read_status_control",
+      "grounding_profile:match=function",
+      "grounding_profile:score:0.95",
+      "grounding_profile:runtime_path:runtime_function:sensor_update_to_bluetooth_data_update",
+      "grounding_profile:runtime_path:runtime_call:passivebluetoothdataupdate",
+      "grounding_profile:runtime_path:runtime_call:sensor_device_info_to_hass_device_info",
+      "grounding_profile:runtime_path:runtime_call:device_key_to_bluetooth_entity_key",
+      "grounding_profile:negative:negative_function:async_setup_entry",
+      "grounding_profile:negative:negative_function:is_on",
+      "grounding_profile:negative:negative_function:available",
+      "grounding_profile:negative:negative_call:xiaomipassivebluetoothdataprocessor",
+      "grounding_profile:why_not_setup:exclude_role:setup:async_setup_entry",
+      "grounding_profile:why_not_setup:exclude_role:property_getter:is_on",
+      "grounding_profile:why_not_setup:exclude_role:property_getter:available",
+      "grounding_profile:why_not_setup:exclude_path_signal:setup_function:async_setup_entry",
+      "grounding_profile:reviewer_status:draft",
+      "related_actions:A5",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match",
+      "action_match:binding_hint_action_kind",
+      "action_match:binding_hint_target_token",
+      "action_match:binding_hint_action_id"
+    ],
+    "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+    "function_name": "sensor_update_to_bluetooth_data_update",
+    "line_end": 132,
+    "line_start": 108,
+    "marker_id": "marker_0e91c5f067",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A5",
+    "related_action_ids": [
+      "A5"
+    ],
+    "secondary_action_ids": [],
+    "strength": "MEDIUM"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "heuristic:ble_device_runtime_call",
+      "related_actions:A6",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/xiaomi_ble/config_flow.py",
+    "function_name": "_async_wait_for_full_advertisement",
+    "line_end": 76,
+    "line_start": 76,
+    "marker_id": "marker_7c4fb1ffd3",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A6",
+    "related_action_ids": [
+      "A6"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match"
+    ],
+    "binding_score": 0.8,
+    "evidence": [
+      "heuristic:ble_device_runtime_call",
+      "related_actions:A6",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match"
+    ],
+    "file_path": "data/repo_snapshot/xiaomi_ble/config_flow.py",
+    "function_name": "_process_more_advertisements",
+    "line_end": 76,
+    "line_start": 76,
+    "marker_id": "marker_d1e9b0e724",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A6",
+    "related_action_ids": [
+      "A6"
+    ],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [],
+    "binding_score": 0.0,
+    "evidence": [
+      "func:async_setup_entry"
+    ],
+    "file_path": "data/repo_snapshot/xiaomi_ble/sensor.py",
+    "function_name": "async_setup_entry",
+    "line_end": 279,
+    "line_start": 262,
+    "marker_id": "marker_37d538b4b7",
+    "marker_type": "ENTRY_SETUP",
+    "phase": "SETUP",
+    "primary_action_id": null,
+    "related_action_ids": [],
+    "secondary_action_ids": [],
+    "strength": "STRONG"
+  },
+  {
+    "binding_reason": [
+      "hint_exact_match",
+      "file_binding_match",
+      "integration_binding_match",
+      "protocol_binding_match",
+      "service_token_match",
+      "binding_hint_action_kind",
+      "binding_hint_target_token",
+      "binding_hint_action_id",
+      "generalized_profile_secondary_binding"
+    ],
+    "binding_score": 1.49,
+    "evidence": [
+      "grounding_profile:xiaomi_ble:BLE_OP",
+      "grounding_profile:boost_imports",
+      "grounding_profile:boost_names",
+      "grounding_profile_rule:xiaomi_ble:sensor_runtime_read_sensor_control",
+      "grounding_profile:match=function",
+      "grounding_profile:score:0.95",
+      "grounding_profile:runtime_path:runtime_function:sensor_update_to_bluetooth_data_update",
+      "grounding_profile:runtime_path:runtime_call:passivebluetoothdataupdate",
+      "grounding_profile:runtime_path:runtime_call:device_key_to_bluetooth_entity_key",
+      "grounding_profile:runtime_path:runtime_call:items",
+      "grounding_profile:negative:negative_function:async_setup_entry",
+      "grounding_profile:negative:negative_function:available",
+      "grounding_profile:negative:negative_function:native_value",
+      "grounding_profile:negative:negative_call:xiaomipassivebluetoothdataprocessor",
+      "grounding_profile:why_not_setup:exclude_role:setup:async_setup_entry",
+      "grounding_profile:why_not_setup:exclude_role:property_getter:available",
+      "grounding_profile:why_not_setup:exclude_role:property_getter:native_value",
+      "grounding_profile:why_not_setup:exclude_path_signal:setup_function:async_setup_entry",
+      "grounding_profile:reviewer_status:draft",
+      "related_actions:A3,A4",
+      "action_match:hint_exact_match",
+      "action_match:file_binding_match",
+      "action_match:integration_binding_match",
+      "action_match:protocol_binding_match",
+      "action_match:service_token_match",
+      "action_match:binding_hint_action_kind",
+      "action_match:binding_hint_target_token",
+      "action_match:binding_hint_action_id",
+      "action_match:generalized_profile_secondary_binding"
+    ],
+    "file_path": "data/repo_snapshot/xiaomi_ble/sensor.py",
+    "function_name": "sensor_update_to_bluetooth_data_update",
+    "line_end": 259,
+    "line_start": 220,
+    "marker_id": "marker_4869bf4a6f",
+    "marker_type": "BLE_OP",
+    "phase": "RUNTIME",
+    "primary_action_id": "A3",
+    "related_action_ids": [
+      "A3",
+      "A4"
+    ],
+    "secondary_action_ids": [
+      "A4"
+    ],
+    "strength": "MEDIUM"
+  }
+]

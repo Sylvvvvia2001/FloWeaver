@@ -1,0 +1,9 @@
+{
+  "codeowners": [],
+  "dependencies": [],
+  "documentation": "https://example.invalid/vibeaura/vdev",
+  "domain": "vdev_vdev_bad_air_morning_recovery_01",
+  "name": "Bad-Air Morning Recovery",
+  "requirements": [],
+  "version": "0.1.0"
+}

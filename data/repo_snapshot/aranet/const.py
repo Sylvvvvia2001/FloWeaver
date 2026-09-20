@@ -1,0 +1,4 @@
+
+
+DOMAIN = "aranet"
+ARANET_MANUFACTURER_NAME = "SAF Tehnika"

@@ -1,0 +1,22 @@
+{
+  "canonicalization_version": "v1",
+  "semantic_ops": [
+    "ENTRY_SETUP",
+    "COORD_REFRESH",
+    "STATE_WRITE",
+    "SUBSCRIBE",
+    "UNSUBSCRIBE",
+    "BLE_CONNECT",
+    "BLE_GATT_OP",
+    "CLOUD_HTTP_CALL"
+  ],
+  "required_state_writes": ["sensor.vdev_x"],
+  "equivalence_whitelist": [
+    {
+      "policy": "commute",
+      "ops": ["STATE_WRITE"],
+      "group_key": "entity_id",
+      "scope": ["sensor.vdev_x"]
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "vdev_id": "vdev_dinner_preparation_readiness_01",
+  "name": "Dinner Preparation Readiness",
+  "group": "Coming Home and Evening Comfort Routines",
+  "target_path": "data/targets/vdev_benchmarks/vdev_dinner_preparation_readiness_01.json",
+  "run_dir": "data/optimizer_runs/vdev_benchmarks/vdev_dinner_preparation_readiness_01",
+  "strict_pass": 6,
+  "tolerant_pass": 6,
+  "counterexample_count": 0,
+  "batch_count": 9,
+  "parallel_groups": {
+    "batch_000": [
+      [
+        "A1"
+      ]
+    ],
+    "batch_001": [
+      [
+        "A2"
+      ]
+    ],
+    "batch_002": [
+      [
+        "A3"
+      ]
+    ],
+    "batch_003": [
+      [
+        "A4",
+        "A7"
+      ],
+      [
+        "A5"
+      ],
+      [
+        "A6"
+      ]
+    ],
+    "batch_004": [
+      [
+        "A8"
+      ],
+      [
+        "A9"
+      ]
+    ],
+    "batch_005": [
+      [
+        "A10"
+      ]
+    ],
+    "batch_006": [
+      [
+        "A11"
+      ]
+    ],
+    "batch_007": [
+      [
+        "A12"
+      ],
+      [
+        "A13"
+      ],
+      [
+        "A14"
+      ]
+    ],
+    "batch_008": [
+      [
+        "A15"
+      ]
+    ]
+  },
+  "batching_buckets": {
+    "batch_000": [],
+    "batch_001": [],
+    "batch_002": [],
+    "batch_003": [
+      {
+        "bucket": "tuya",
+        "chunks": 1,
+        "group_key": "host",
+        "max_batch_size": 3,
+        "max_wait_ms": 40,
+        "members": [
+          "A4",
+          "A7"
+        ],
+        "rule_kind": "SAME_SESSION_GROUP",
+        "size": 2
+      }
+    ],
+    "batch_004": [],
+    "batch_005": [],
+    "batch_006": [],
+    "batch_007": [],
+    "batch_008": []
+  },
+  "triggered_fallbacks": [
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A2"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A3"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A2",
+        "A3"
+      ]
+    },
+    {
+      "fallback": "serialize_local_api_reads",
+      "kind": "SAME_SESSION_GROUP",
+      "params": {
+        "group_key": "endpoint",
+        "reuse_window_ms": 5000,
+        "rule_id": "rule_protocol_local_api_budget",
+        "template_kind": "SAME_SESSION_GROUP"
+      },
+      "scope": [
+        "A10",
+        "A9"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:CONTROL_DEP"
+      },
+      "scope": [
+        "A10",
+        "A14"
+      ]
+    }
+  ],
+  "unknown_protocol_actions": [],
+  "status": "ok",
+  "run_id": "28a76fe6a26b4035bb294da0c1c85f93"
+}

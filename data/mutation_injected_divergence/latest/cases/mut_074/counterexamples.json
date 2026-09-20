@@ -1,0 +1,107 @@
+[
+  {
+    "alignment_status": "PARTIAL",
+    "counterexample_id": "cex_d78144a856",
+    "culprit_ids": [
+      "RUNTIME:CLOUD:CLOUD_AUTH_CHECK:smart-home:58:m5:api"
+    ],
+    "diff_summary": {
+      "baseline_state_at_divergence": {
+        "exception_category": null,
+        "resource_keys": [],
+        "state_writes": {}
+      },
+      "baseline_trace_prefix": [
+        {
+          "corr_id": null,
+          "op": "CLOUD_AUTH_CHECK",
+          "params_abst": {
+            "action_id": "A_auth"
+          },
+          "phase": "RUNTIME",
+          "provider": "CLOUD",
+          "target": "smart-home:58:m5:api",
+          "ts": 0.0
+        }
+      ],
+      "counterexample_verdict": "DIFF_FOUND",
+      "divergence_point": {
+        "details": {
+          "compare_meta": {
+            "canonicalization_version": "v1",
+            "commutable_ops": [
+              "COORD_REFRESH",
+              "STATE_WRITE"
+            ],
+            "config_hash": "9285a670239fb92a",
+            "equivalence_rules": [],
+            "parallel_action_scopes": []
+          },
+          "diff_hunks": [
+            {
+              "anchor": "RUNTIME:CLOUD:CLOUD_AUTH_CHECK:smart-home:58:m5:api",
+              "baseline_ops": [
+                "RUNTIME:CLOUD:CLOUD_AUTH_CHECK:smart-home:58:m5:api"
+              ],
+              "optimized_ops": [],
+              "severity": "MEDIUM"
+            }
+          ]
+        },
+        "kind": "SPLIT",
+        "reason": "trace_prefix_mismatch",
+        "step": 0,
+        "useg_node_id": "useg_0000"
+      },
+      "environment_assumptions": {
+        "framework_events": [
+          "runtime"
+        ],
+        "path_assumptions": [
+          "scenario:mut_074"
+        ],
+        "toggle_assumptions": {
+          "mutation_type": "M5_cloud_rate_session_violation"
+        }
+      },
+      "hunks": [
+        {
+          "anchor": "RUNTIME:CLOUD:CLOUD_AUTH_CHECK:smart-home:58:m5:api",
+          "baseline_ops": [
+            "RUNTIME:CLOUD:CLOUD_AUTH_CHECK:smart-home:58:m5:api",
+            "RUNTIME:CLOUD:CLOUD_RATE_CHECK:smart-home:58:m5:api"
+          ],
+          "optimized_ops": [],
+          "severity": "MEDIUM"
+        }
+      ],
+      "inferred_by": "check_observation_schema_or_alignment_rule",
+      "input_assumptions": {
+        "symbolic_inputs": {
+          "scenario_id": "mut_074"
+        }
+      },
+      "kind": "missing_prerequisite",
+      "minimal_conditions": [
+        "scenario:mut_074",
+        "symbolic_inputs.scenario_id=mut_074",
+        "toggle_assumptions.mutation_type=M5_cloud_rate_session_violation",
+        "framework_event:runtime"
+      ],
+      "optimized_state_at_divergence": {
+        "exception_category": null,
+        "resource_keys": [],
+        "state_writes": {}
+      },
+      "optimized_trace_prefix": [],
+      "refinement_hint": "check_observation_schema_or_alignment_rule",
+      "suspicious_region_id": null,
+      "violated_property": "TRACE_MISMATCH"
+    },
+    "execution_plan_hash": null,
+    "scenario_id": "mut_074",
+    "suspicious_region_count": 3,
+    "trust_plan_hash": null,
+    "violated_assertion": "observable_semantic_equivalence"
+  }
+]

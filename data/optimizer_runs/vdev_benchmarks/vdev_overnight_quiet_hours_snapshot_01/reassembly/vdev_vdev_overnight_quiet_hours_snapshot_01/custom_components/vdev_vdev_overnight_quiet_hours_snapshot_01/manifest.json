@@ -1,0 +1,9 @@
+{
+  "codeowners": [],
+  "dependencies": [],
+  "documentation": "https://example.invalid/vibeaura/vdev",
+  "domain": "vdev_vdev_overnight_quiet_hours_snapshot_01",
+  "name": "Overnight Quiet-Hours Snapshot",
+  "requirements": [],
+  "version": "0.1.0"
+}

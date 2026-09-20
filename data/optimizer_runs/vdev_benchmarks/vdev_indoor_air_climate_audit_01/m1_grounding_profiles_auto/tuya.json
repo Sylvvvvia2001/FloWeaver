@@ -1,0 +1,832 @@
+{
+  "integration": "tuya",
+  "runtime_families": [
+    {
+      "action_kind": "status",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "climate_audit_ac_1",
+          "tuya:climate.climate_audit_ac_1.status",
+          "climate_audit_ac_2",
+          "tuya:climate.climate_audit_ac_2.status",
+          "climate_audit_ac_3",
+          "tuya:climate.climate_audit_ac_3.status"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "status",
+          "poll_update"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "const",
+          "homeassistant",
+          "logging",
+          "tuya_sharing",
+          "typing"
+        ],
+        "boost_if_names": [
+          "status",
+          "update_device",
+          "update_token"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "CLOUD_STATUS_CALL",
+      "file_globs": [
+        "tuya/__init__.py"
+      ],
+      "forbidden_context": [
+        "setup_function",
+        "dunder_init",
+        "entity_property_getter"
+      ],
+      "forbidden_path_signals": [
+        "setup_function:async_setup_entry",
+        "control_function:async_turn_on",
+        "control_function:async_turn_off",
+        "control_function:async_open_cover",
+        "control_function:async_close_cover",
+        "control_function:async_set_cover_position",
+        "control_function:set_state",
+        "state_accessor_property:state"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "update_device",
+        "update_token"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A6",
+        "A7",
+        "A8"
+      ],
+      "integration": "tuya",
+      "negative_call_patterns": [
+        "tokenlistener",
+        "devicelistener",
+        "add_device_listener",
+        "homeassistanttuyadata",
+        "async_get",
+        "async_add_executor_job"
+      ],
+      "negative_evidence": [
+        "negative_function:async_setup_entry",
+        "negative_function:add_device",
+        "negative_call:tokenlistener",
+        "negative_call:devicelistener",
+        "negative_call:add_device_listener",
+        "negative_call:homeassistanttuyadata",
+        "negative_call:async_get",
+        "negative_call:values",
+        "negative_call:async_add_executor_job",
+        "negative_call:cleanup_device_registry"
+      ],
+      "negative_function_patterns": [
+        "async_setup_entry",
+        "add_device",
+        "async_turn_on",
+        "async_turn_off",
+        "async_set_*",
+        "async_open_*"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [
+            "tokenlistener",
+            "devicelistener",
+            "manager.add_device_listener",
+            "homeassistanttuyadata",
+            "dr.async_get",
+            "manager.device_map.values",
+            "hass.async_add_executor_job",
+            "cleanup_device_registry"
+          ],
+          "call_patterns": [
+            "tokenlistener",
+            "devicelistener",
+            "add_device_listener",
+            "homeassistanttuyadata",
+            "async_get",
+            "values",
+            "async_add_executor_job",
+            "cleanup_device_registry"
+          ],
+          "file_path": "data/repo_snapshot/tuya/__init__.py",
+          "function_name": "async_setup_entry",
+          "path_kind": "setup_path",
+          "path_signals": [
+            "setup_function:async_setup_entry",
+            "subscription_call:tokenlistener",
+            "subscription_call:devicelistener",
+            "subscription_call:manager.add_device_listener"
+          ],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -18,
+          "snippet": "58: \n59: async def async_setup_entry(hass: HomeAssistant, entry: TuyaConfigEntry) -> bool:\n60:     \"\"\"Async setup hass config entry.\"\"\"\n61:     token_listener = TokenListener(hass, entry)\n62: \n63:     # Move to executor as it makes blocking call to import_module\n64:     # with args ('.system', 'urllib3.contrib.resolver')\n65:     manager = await hass.async_add_executor_job(_create_manager, entry, token_listener)\n66: \n67:     listener = DeviceListener(hass, manager)\n68:     manager.add_device_listener(listener)\n69: \n70:     # Get all devices from Tuya\n71:     try:"
+        },
+        {
+          "call_chains": [
+            "self.hass.add_job",
+            "logger.debug",
+            "dispatcher_send"
+          ],
+          "call_patterns": [
+            "add_job",
+            "debug",
+            "dispatcher_send"
+          ],
+          "file_path": "data/repo_snapshot/tuya/__init__.py",
+          "function_name": "add_device",
+          "path_kind": "helper_path",
+          "path_signals": [],
+          "prototype_kind": "negative_helper",
+          "role_hint": "helper",
+          "score": -4,
+          "snippet": "192: \n193:     def add_device(self, device: CustomerDevice) -> None:\n194:         \"\"\"Add device added listener.\"\"\"\n195:         # Ensure the device isn't present stale\n196:         self.hass.add_job(self.async_remove_device, device.id)\n197: \n198:         LOGGER.debug(\n199:             \"Add device %s (online: %s): %s (function: %s, status range: %s)\",\n200:             device.id,\n201:             device.online,\n202:             device.status,\n203:             device.function,\n204:             device.status_range,\n205:         )"
+        }
+      ],
+      "origin_action_id": null,
+      "origin_cluster_id": "tuya____init____cloud_status_call__status__cloud",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [
+            "logger.debug",
+            "dispatcher_send"
+          ],
+          "call_patterns": [
+            "debug",
+            "dispatcher_send"
+          ],
+          "file_path": "data/repo_snapshot/tuya/__init__.py",
+          "function_name": "update_device",
+          "path_kind": "read_path",
+          "path_signals": [],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 6,
+          "snippet": "169: \n170:     def update_device(\n171:         self,\n172:         device: CustomerDevice,\n173:         updated_status_properties: list[str] | None = None,\n174:         dp_timestamps: dict[str, int] | None = None,\n175:     ) -> None:\n176:         \"\"\"Update device status with optional DP timestamps.\"\"\"\n177:         LOGGER.debug(\n178:             \"Received update for device %s (online: %s): %s\"\n179:             \" (updated properties: %s, dp_timestamps: %s)\",\n180:             device.id,\n181:             device.online,\n182:             device.status,"
+        },
+        {
+          "call_chains": [
+            "self.hass.add_job",
+            "self.hass.config_entries.async_update_entry"
+          ],
+          "call_patterns": [
+            "add_job",
+            "async_update_entry"
+          ],
+          "file_path": "data/repo_snapshot/tuya/__init__.py",
+          "function_name": "update_token",
+          "path_kind": "read_path",
+          "path_signals": [],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 6,
+          "snippet": "236: \n237:     def update_token(self, token_info: dict[str, Any]) -> None:\n238:         \"\"\"Update token info in config entry.\"\"\"\n239:         data = {\n240:             **self.entry.data,\n241:             CONF_TOKEN_INFO: {\n242:                 \"t\": token_info[\"t\"],\n243:                 \"uid\": token_info[\"uid\"],\n244:                 \"expire_time\": token_info[\"expire_time\"],\n245:                 \"access_token\": token_info[\"access_token\"],\n246:                 \"refresh_token\": token_info[\"refresh_token\"],\n247:             },\n248:         }\n249:"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read"
+      ],
+      "required_context": [
+        "runtime_update_path"
+      ],
+      "required_path_signals": [],
+      "required_runtime_roles": [
+        "runtime_read"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "tuya:__init___runtime_status_read",
+      "runtime_archetypes": [
+        "cloud_runtime_read",
+        "entity_wrapper_read",
+        "coordinator_update_path"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:update_device",
+        "runtime_function:update_token",
+        "runtime_call:debug",
+        "runtime_call:dispatcher_send",
+        "runtime_call:logger.debug",
+        "runtime_call:add_job",
+        "runtime_call:async_update_entry",
+        "runtime_call:self.hass.add_job",
+        "runtime_call:self.hass.config_entries.async_update_entry",
+        "path_signal:read_function:_get_temperature_wrappers"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/tuya/__init__.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A7",
+        "A8"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "same runtime idiom appears in one file across multiple unresolved actions",
+      "why_not_setup": [
+        "exclude_role:setup:async_setup_entry",
+        "exclude_role:helper:add_device",
+        "exclude_path_signal:setup_function:async_setup_entry",
+        "exclude_control_path_for_read_like_action"
+      ]
+    },
+    {
+      "action_kind": "status",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "climate_audit_ac_1",
+          "tuya:climate.climate_audit_ac_1.status",
+          "climate_audit_ac_2",
+          "tuya:climate.climate_audit_ac_2.status",
+          "climate_audit_ac_3",
+          "tuya:climate.climate_audit_ac_3.status"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "status",
+          "poll_update"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [
+        "read_device_status",
+        "temp_unit_convert.read_device_status"
+      ],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "const",
+          "dataclasses",
+          "entity",
+          "homeassistant",
+          "tuya_device_handlers"
+        ],
+        "boost_if_names": [
+          "status",
+          "_get_temperature_wrappers",
+          "read_device_status",
+          "temp_unit_convert.read_device_status"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "CLOUD_STATUS_CALL",
+      "file_globs": [
+        "tuya/climate.py"
+      ],
+      "forbidden_context": [
+        "setup_function",
+        "dunder_init",
+        "entity_property_getter"
+      ],
+      "forbidden_path_signals": [
+        "setup_function:async_setup_entry",
+        "setup_call:async_add_entities",
+        "setup_call:async_dispatcher_connect",
+        "control_function:async_turn_on",
+        "control_call:self._async_send_wrapper_updates",
+        "awaited_control_call:self._async_send_wrapper_updates",
+        "control_function:async_turn_off",
+        "property_function:fan_mode"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "_get_temperature_wrappers"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A6",
+        "A7",
+        "A8"
+      ],
+      "integration": "tuya",
+      "negative_call_patterns": [
+        "async_discover_device",
+        "async_on_unload",
+        "async_add_entities",
+        "async_dispatcher_connect",
+        "_get_temperature_wrappers",
+        "tuyaclimateentity"
+      ],
+      "negative_evidence": [
+        "negative_function:async_setup_entry",
+        "negative_function:async_turn_on",
+        "negative_function:async_turn_off",
+        "negative_function:fan_mode",
+        "negative_function:hvac_mode",
+        "negative_call:async_discover_device",
+        "negative_call:async_on_unload",
+        "negative_call:async_add_entities",
+        "negative_call:async_dispatcher_connect",
+        "negative_call:_get_temperature_wrappers"
+      ],
+      "negative_function_patterns": [
+        "async_setup_entry",
+        "async_turn_on",
+        "async_turn_off",
+        "fan_mode",
+        "hvac_mode",
+        "async_set_*"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [
+            "async_discover_device",
+            "entry.async_on_unload",
+            "async_add_entities",
+            "async_dispatcher_connect",
+            "_get_temperature_wrappers",
+            "entities.append",
+            "tuyaclimateentity",
+            "dpcoderoundedintegerwrapper.find_dpcode"
+          ],
+          "call_patterns": [
+            "async_discover_device",
+            "async_on_unload",
+            "async_add_entities",
+            "async_dispatcher_connect",
+            "_get_temperature_wrappers",
+            "append",
+            "tuyaclimateentity",
+            "find_dpcode"
+          ],
+          "file_path": "data/repo_snapshot/tuya/climate.py",
+          "function_name": "async_setup_entry",
+          "path_kind": "setup_path",
+          "path_signals": [
+            "setup_function:async_setup_entry",
+            "setup_call:async_add_entities",
+            "setup_call:async_dispatcher_connect",
+            "connect_call:async_dispatcher_connect"
+          ],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -8,
+          "snippet": "197: \n198: async def async_setup_entry(\n199:     hass: HomeAssistant,\n200:     entry: TuyaConfigEntry,\n201:     async_add_entities: AddConfigEntryEntitiesCallback,\n202: ) -> None:\n203:     \"\"\"Set up Tuya climate dynamically through Tuya discovery.\"\"\"\n204:     manager = entry.runtime_data.manager\n205: \n206:     @callback\n207:     def async_discover_device(device_ids: list[str]) -> None:\n208:         \"\"\"Discover and add a discovered Tuya climate.\"\"\"\n209:         entities: list[TuyaClimateEntity] = []\n210:         for device_id in device_ids:"
+        },
+        {
+          "call_chains": [
+            "self._async_send_wrapper_updates"
+          ],
+          "call_patterns": [
+            "_async_send_wrapper_updates"
+          ],
+          "file_path": "data/repo_snapshot/tuya/climate.py",
+          "function_name": "async_turn_on",
+          "path_kind": "control_path",
+          "path_signals": [
+            "control_function:async_turn_on",
+            "control_call:self._async_send_wrapper_updates",
+            "awaited_control_call:self._async_send_wrapper_updates"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -12,
+          "snippet": "448: \n449:     async def async_turn_on(self) -> None:\n450:         \"\"\"Turn the device on, retaining current HVAC (if supported).\"\"\"\n451:         await self._async_send_wrapper_updates(self._switch_wrapper, True)\n452: \n453:     async def async_turn_off(self) -> None:"
+        },
+        {
+          "call_chains": [
+            "self._async_send_wrapper_updates"
+          ],
+          "call_patterns": [
+            "_async_send_wrapper_updates"
+          ],
+          "file_path": "data/repo_snapshot/tuya/climate.py",
+          "function_name": "async_turn_off",
+          "path_kind": "control_path",
+          "path_signals": [
+            "control_function:async_turn_off",
+            "control_call:self._async_send_wrapper_updates",
+            "awaited_control_call:self._async_send_wrapper_updates"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -12,
+          "snippet": "452: \n453:     async def async_turn_off(self) -> None:\n454:         \"\"\"Turn the device on, retaining current HVAC (if supported).\"\"\"\n455:         await self._async_send_wrapper_updates(self._switch_wrapper, False)"
+        },
+        {
+          "call_chains": [
+            "self._read_wrapper"
+          ],
+          "call_patterns": [
+            "_read_wrapper"
+          ],
+          "file_path": "data/repo_snapshot/tuya/climate.py",
+          "function_name": "fan_mode",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:fan_mode",
+            "state_accessor_property:fan_mode",
+            "state_accessor_call:self._read_wrapper"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "438:     @property\n439:     def fan_mode(self) -> str | None:\n440:         \"\"\"Return fan mode.\"\"\"\n441:         return self._read_wrapper(self._fan_mode_wrapper)\n442: \n443:     @property"
+        },
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/tuya/climate.py",
+          "function_name": "hvac_mode",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:hvac_mode",
+            "state_accessor_property:hvac_mode",
+            "state_accessor_call:self._read_wrapper"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "415:     @property\n416:     def hvac_mode(self) -> HVACMode | None:\n417:         \"\"\"Return hvac mode.\"\"\"\n418:         # If the switch is off, hvac mode is off.\n419:         switch_status: bool | None\n420:         if (switch_status := self._read_wrapper(self._switch_wrapper)) is False:\n421:             return HVACMode.OFF\n422: \n423:         # If we don't have a mode wrapper, return switch only mode.\n424:         if self._hvac_mode_wrapper is None:\n425:             if switch_status is True:\n426:                 return self.entity_description.switch_only_hvac_mode\n427:             return None\n428:"
+        }
+      ],
+      "origin_action_id": null,
+      "origin_cluster_id": "tuya__climate__cloud_status_call__status__cloud",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [
+            "dpcodeintegerwrapper.find_dpcode",
+            "_get_temperature_wrapper",
+            "dpcodeenumwrapper.find_dpcode",
+            "temp_unit_convert.read_device_status"
+          ],
+          "call_patterns": [
+            "find_dpcode",
+            "_get_temperature_wrapper",
+            "read_device_status"
+          ],
+          "file_path": "data/repo_snapshot/tuya/climate.py",
+          "function_name": "_get_temperature_wrappers",
+          "path_kind": "read_path",
+          "path_signals": [
+            "read_function:_get_temperature_wrappers",
+            "read_call:temp_unit_convert.read_device_status",
+            "state_accessor_call:temp_unit_convert.read_device_status"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 8,
+          "snippet": "123: \n124: def _get_temperature_wrappers(\n125:     device: CustomerDevice, system_temperature_unit: UnitOfTemperature\n126: ) -> tuple[DPCodeIntegerWrapper | None, DPCodeIntegerWrapper | None, UnitOfTemperature]:\n127:     \"\"\"Get temperature wrappers for current and set temperatures.\"\"\"\n128:     # Get all possible temperature dpcodes\n129:     temp_current = DPCodeIntegerWrapper.find_dpcode(\n130:         device, (DPCode.TEMP_CURRENT, DPCode.UPPER_TEMP)\n131:     )\n132:     temp_current_f = DPCodeIntegerWrapper.find_dpcode(\n133:         device, (DPCode.TEMP_CURRENT_F, DPCode.UPPER_TEMP_F)\n134:     )\n135:     temp_set = DPCodeIntegerWrapper.find_dpcode(\n136:         device, DPCode.TEMP_SET, prefer_function=True"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read"
+      ],
+      "required_context": [
+        "runtime_update_path"
+      ],
+      "required_path_signals": [
+        "read_function:_get_temperature_wrappers",
+        "read_call:temp_unit_convert.read_device_status",
+        "state_accessor_call:temp_unit_convert.read_device_status"
+      ],
+      "required_runtime_roles": [
+        "runtime_read"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "tuya:climate_runtime_status_read",
+      "runtime_archetypes": [
+        "cloud_runtime_read",
+        "entity_wrapper_read",
+        "coordinator_update_path"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:_get_temperature_wrappers",
+        "runtime_call:find_dpcode",
+        "runtime_call:_get_temperature_wrapper",
+        "runtime_call:read_device_status",
+        "runtime_call:dpcodeintegerwrapper.find_dpcode",
+        "runtime_call:dpcodeenumwrapper.find_dpcode",
+        "runtime_call:temp_unit_convert.read_device_status",
+        "path_signal:read_function:_get_temperature_wrappers",
+        "path_signal:read_call:temp_unit_convert.read_device_status",
+        "path_signal:state_accessor_call:temp_unit_convert.read_device_status"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/tuya/climate.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A7",
+        "A8"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "same runtime idiom appears in one file across multiple unresolved actions",
+      "why_not_setup": [
+        "exclude_role:setup:async_setup_entry",
+        "exclude_role:runtime_write:async_turn_on",
+        "exclude_role:runtime_write:async_turn_off",
+        "exclude_role:property_getter:fan_mode",
+        "exclude_role:property_getter:hvac_mode",
+        "exclude_path_signal:setup_function:async_setup_entry",
+        "exclude_path_signal:setup_call:async_add_entities",
+        "exclude_path_signal:setup_call:async_dispatcher_connect"
+      ]
+    },
+    {
+      "action_kind": "status",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "climate_audit_ac_1",
+          "tuya:climate.climate_audit_ac_1.status",
+          "climate_audit_ac_2",
+          "tuya:climate.climate_audit_ac_2.status",
+          "climate_audit_ac_3",
+          "tuya:climate.climate_audit_ac_3.status"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "status",
+          "poll_update"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [
+        "read_device_status"
+      ],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "const",
+          "homeassistant",
+          "tuya_device_handlers",
+          "tuya_sharing",
+          "typing"
+        ],
+        "boost_if_names": [
+          "status",
+          "_process_device_update",
+          "read_device_status"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "CLOUD_STATUS_CALL",
+      "file_globs": [
+        "tuya/entity.py"
+      ],
+      "forbidden_context": [
+        "setup_function",
+        "dunder_init",
+        "entity_property_getter"
+      ],
+      "forbidden_path_signals": [
+        "control_function:_async_send_wrapper_updates",
+        "control_call:self._async_send_commands",
+        "awaited_control_call:self._async_send_commands",
+        "control_function:_async_send_commands",
+        "property_function:available",
+        "property_function:device_info",
+        "control_function:async_turn_on",
+        "control_function:async_turn_off"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "_process_device_update"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A6",
+        "A7",
+        "A8"
+      ],
+      "integration": "tuya",
+      "negative_call_patterns": [
+        "_async_send_commands",
+        "get_update_commands",
+        "self._async_send_commands",
+        "wrapper.get_update_commands",
+        "async_add_executor_job",
+        "logger.debug"
+      ],
+      "negative_evidence": [
+        "negative_function:__init__",
+        "negative_function:_async_send_wrapper_updates",
+        "negative_function:_async_send_commands",
+        "negative_function:available",
+        "negative_function:device_info",
+        "negative_call:_async_send_commands",
+        "negative_call:get_update_commands",
+        "negative_call:self._async_send_commands",
+        "negative_call:wrapper.get_update_commands",
+        "negative_call:debug"
+      ],
+      "negative_function_patterns": [
+        "__init__",
+        "_async_send_wrapper_updates",
+        "_async_send_commands",
+        "available",
+        "device_info",
+        "_read_wrapper"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/tuya/entity.py",
+          "function_name": "__init__",
+          "path_kind": "setup_path",
+          "path_signals": [],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -6,
+          "snippet": "22: \n23:     def __init__(self, device: CustomerDevice, device_manager: Manager) -> None:\n24:         \"\"\"Init TuyaHaEntity.\"\"\"\n25:         self._attr_unique_id = f\"tuya.{device.id}\"\n26:         # TuyaEntity initialize mq can subscribe\n27:         device.set_up = True\n28:         self.device = device\n29:         self.device_manager = device_manager\n30: \n31:     @property"
+        },
+        {
+          "call_chains": [
+            "self._async_send_commands",
+            "wrapper.get_update_commands"
+          ],
+          "call_patterns": [
+            "_async_send_commands",
+            "get_update_commands"
+          ],
+          "file_path": "data/repo_snapshot/tuya/entity.py",
+          "function_name": "_async_send_wrapper_updates",
+          "path_kind": "control_path",
+          "path_signals": [
+            "control_function:_async_send_wrapper_updates",
+            "read_function:_async_send_wrapper_updates",
+            "control_call:self._async_send_commands",
+            "read_call:wrapper.get_update_commands",
+            "awaited_control_call:self._async_send_commands"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -10,
+          "snippet": "104: \n105:     async def _async_send_wrapper_updates[T](\n106:         self, wrapper: DeviceWrapper[T] | None, value: T\n107:     ) -> None:\n108:         \"\"\"Send command to the device.\"\"\"\n109:         if wrapper is None:\n110:             return\n111:         await self._async_send_commands(\n112:             wrapper.get_update_commands(self.device, value),\n113:         )"
+        },
+        {
+          "call_chains": [
+            "logger.debug",
+            "self.hass.async_add_executor_job"
+          ],
+          "call_patterns": [
+            "debug",
+            "async_add_executor_job"
+          ],
+          "file_path": "data/repo_snapshot/tuya/entity.py",
+          "function_name": "_async_send_commands",
+          "path_kind": "control_path",
+          "path_signals": [
+            "control_function:_async_send_commands"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -8,
+          "snippet": "89: \n90:     async def _async_send_commands(self, commands: list[dict[str, Any]]) -> None:\n91:         \"\"\"Send a list of commands to the device.\"\"\"\n92:         LOGGER.debug(\"Sending commands for device %s: %s\", self.device.id, commands)\n93:         if not commands:\n94:             return\n95:         await self.hass.async_add_executor_job(\n96:             self.device_manager.send_commands, self.device.id, commands\n97:         )\n98: \n99:     def _read_wrapper[T](self, wrapper: DeviceWrapper[T] | None) -> T | None:"
+        },
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/tuya/entity.py",
+          "function_name": "available",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:available"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "42:     @property\n43:     def available(self) -> bool:\n44:         \"\"\"Return if the device is available.\"\"\"\n45:         return self.device.online\n46: \n47:     async def async_added_to_hass(self) -> None:"
+        },
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/tuya/entity.py",
+          "function_name": "device_info",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:device_info"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "31:     @property\n32:     def device_info(self) -> DeviceInfo:\n33:         \"\"\"Return a device description for device registry.\"\"\"\n34:         return DeviceInfo(\n35:             identifiers={(DOMAIN, self.device.id)},\n36:             manufacturer=\"Tuya\",\n37:             name=self.device.name,\n38:             model=self.device.product_name,\n39:             model_id=self.device.product_id,\n40:         )\n41: \n42:     @property"
+        }
+      ],
+      "origin_action_id": null,
+      "origin_cluster_id": "tuya__entity__cloud_status_call__status__cloud",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [
+            "wrapper.read_device_status"
+          ],
+          "call_patterns": [
+            "read_device_status"
+          ],
+          "file_path": "data/repo_snapshot/tuya/entity.py",
+          "function_name": "_read_wrapper",
+          "path_kind": "read_path",
+          "path_signals": [
+            "read_function:_read_wrapper",
+            "read_call:wrapper.read_device_status",
+            "state_accessor_call:wrapper.read_device_status"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 8,
+          "snippet": "98: \n99:     def _read_wrapper[T](self, wrapper: DeviceWrapper[T] | None) -> T | None:\n100:         \"\"\"Read the wrapper device status.\"\"\"\n101:         if wrapper is None:\n102:             return None\n103:         return wrapper.read_device_status(self.device)\n104: \n105:     async def _async_send_wrapper_updates[T]("
+        },
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/tuya/entity.py",
+          "function_name": "_process_device_update",
+          "path_kind": "read_path",
+          "path_signals": [
+            "update_callback_function:_process_device_update"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 8,
+          "snippet": "77: \n78:     async def _process_device_update(\n79:         self,\n80:         updated_status_properties: list[str],\n81:         dp_timestamps: dict[str, int] | None,\n82:     ) -> bool:\n83:         \"\"\"Called when Tuya device sends an update with updated properties.\n84: \n85:         Returns True if the Home Assistant state should be written,\n86:         or False if the state write should be skipped.\n87:         \"\"\"\n88:         return True\n89: \n90:     async def _async_send_commands(self, commands: list[dict[str, Any]]) -> None:"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read"
+      ],
+      "required_context": [
+        "runtime_update_path"
+      ],
+      "required_path_signals": [
+        "read_function:_read_wrapper",
+        "read_call:wrapper.read_device_status",
+        "state_accessor_call:wrapper.read_device_status",
+        "update_callback_function:_process_device_update"
+      ],
+      "required_runtime_roles": [
+        "runtime_read"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "tuya:entity_runtime_status_read",
+      "runtime_archetypes": [
+        "cloud_runtime_read",
+        "entity_wrapper_read",
+        "coordinator_update_path"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:_read_wrapper",
+        "runtime_function:_process_device_update",
+        "runtime_call:read_device_status",
+        "runtime_call:wrapper.read_device_status",
+        "path_signal:read_function:_read_wrapper",
+        "path_signal:read_call:wrapper.read_device_status",
+        "path_signal:state_accessor_call:wrapper.read_device_status",
+        "path_signal:update_callback_function:_process_device_update",
+        "path_signal:read_function:_get_temperature_wrappers",
+        "path_signal:read_call:temp_unit_convert.read_device_status"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/tuya/entity.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A7",
+        "A8"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "same runtime idiom appears in one file across multiple unresolved actions",
+      "why_not_setup": [
+        "exclude_role:setup:__init__",
+        "exclude_role:runtime_write:_async_send_wrapper_updates",
+        "exclude_role:runtime_write:_async_send_commands",
+        "exclude_role:property_getter:available",
+        "exclude_role:property_getter:device_info",
+        "exclude_path_signal:control_function:_async_send_wrapper_updates",
+        "exclude_path_signal:control_call:self._async_send_commands",
+        "exclude_path_signal:awaited_control_call:self._async_send_commands"
+      ]
+    }
+  ],
+  "schema_version": "m1_grounding_profile/v3",
+  "version": "draft_llm_v3"
+}

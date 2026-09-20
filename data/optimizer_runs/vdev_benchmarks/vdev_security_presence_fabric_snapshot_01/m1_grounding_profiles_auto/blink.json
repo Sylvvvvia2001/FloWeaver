@@ -1,0 +1,219 @@
+{
+  "integration": "blink",
+  "runtime_families": [
+    {
+      "action_kind": "read_runtime",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "blink:security.presence_fabric",
+          "presence_fabric",
+          "security"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "status",
+          "poll_update"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "const",
+          "coordinator",
+          "homeassistant",
+          "logging"
+        ],
+        "boost_if_names": [
+          "read_runtime",
+          "_handle_coordinator_update",
+          "_update_attr"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "CLOUD_STATUS_CALL",
+      "file_globs": [
+        "blink/sensor.py"
+      ],
+      "forbidden_context": [
+        "setup_function",
+        "dunder_init",
+        "entity_property_getter"
+      ],
+      "forbidden_path_signals": [
+        "setup_function:async_setup_entry",
+        "setup_call:async_add_entities",
+        "control_function:async_turn_on",
+        "control_function:async_turn_off",
+        "control_function:async_open_cover",
+        "control_function:async_close_cover",
+        "control_function:async_set_cover_position",
+        "control_function:set_state"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "_handle_coordinator_update",
+        "_update_attr"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A9"
+      ],
+      "integration": "blink",
+      "negative_call_patterns": [
+        "async_add_entities",
+        "blinksensor",
+        "_async_send_commands",
+        "_async_send_wrapper_updates",
+        "async_turn_on",
+        "async_turn_off"
+      ],
+      "negative_evidence": [
+        "negative_function:async_setup_entry",
+        "negative_call:async_add_entities",
+        "negative_call:blinksensor",
+        "negative_path_signal:setup_function:async_setup_entry",
+        "negative_path_signal:setup_call:async_add_entities",
+        "negative_path_signal:update_callback_function:_handle_coordinator_update",
+        "negative_path_signal:state_write_function:_handle_coordinator_update",
+        "negative_path_signal:state_write_call:_handle_coordinator_update",
+        "negative_family_constraint:exclude_control_path_for_read_semantics"
+      ],
+      "negative_function_patterns": [
+        "async_setup_entry",
+        "async_turn_on",
+        "async_turn_off",
+        "async_set_*",
+        "async_open_*",
+        "async_close_*"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [
+            "async_add_entities",
+            "blinksensor"
+          ],
+          "call_patterns": [
+            "async_add_entities",
+            "blinksensor"
+          ],
+          "file_path": "data/repo_snapshot/blink/sensor.py",
+          "function_name": "async_setup_entry",
+          "path_kind": "setup_path",
+          "path_signals": [
+            "setup_function:async_setup_entry",
+            "setup_call:async_add_entities"
+          ],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -10,
+          "snippet": "46: \n47: async def async_setup_entry(\n48:     hass: HomeAssistant,\n49:     config_entry: BlinkConfigEntry,\n50:     async_add_entities: AddConfigEntryEntitiesCallback,\n51: ) -> None:\n52:     \"\"\"Initialize a Blink sensor.\"\"\"\n53: \n54:     coordinator = config_entry.runtime_data\n55:     entities = [\n56:         BlinkSensor(coordinator, camera, description)\n57:         for camera in coordinator.api.cameras\n58:         for description in SENSOR_TYPES\n59:     ]"
+        }
+      ],
+      "origin_action_id": "A9",
+      "origin_cluster_id": "blink__sensor__cloud_status_call__read_runtime__cloud",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [
+            "self._update_attr",
+            "_handle_coordinator_update",
+            "super"
+          ],
+          "call_patterns": [
+            "_update_attr",
+            "_handle_coordinator_update",
+            "super"
+          ],
+          "file_path": "data/repo_snapshot/blink/sensor.py",
+          "function_name": "_handle_coordinator_update",
+          "path_kind": "control_path",
+          "path_signals": [
+            "update_callback_function:_handle_coordinator_update",
+            "state_write_function:_handle_coordinator_update",
+            "state_write_call:_handle_coordinator_update"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_write",
+          "score": 14,
+          "snippet": "96:     @callback\n97:     def _handle_coordinator_update(self) -> None:\n98:         \"\"\"Handle coordinator update.\"\"\"\n99:         self._update_attr()\n100:         super()._handle_coordinator_update()\n101: \n102:     @callback"
+        },
+        {
+          "call_chains": [
+            "_logger.debug",
+            "_logger.error"
+          ],
+          "call_patterns": [
+            "debug",
+            "error"
+          ],
+          "file_path": "data/repo_snapshot/blink/sensor.py",
+          "function_name": "_update_attr",
+          "path_kind": "read_path",
+          "path_signals": [],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 6,
+          "snippet": "102:     @callback\n103:     def _update_attr(self) -> None:\n104:         \"\"\"Update attributes for sensor.\"\"\"\n105:         try:\n106:             self._attr_native_value = self._camera.attributes[self._sensor_key]\n107:             _LOGGER.debug(\n108:                 \"'%s' %s = %s\",\n109:                 self._camera.attributes[\"name\"],\n110:                 self._sensor_key,\n111:                 self._attr_native_value,\n112:             )\n113:         except KeyError:\n114:             self._attr_native_value = None\n115:             _LOGGER.error("
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read"
+      ],
+      "required_context": [
+        "runtime_update_path"
+      ],
+      "required_path_signals": [
+        "update_callback_function:_handle_coordinator_update",
+        "state_write_function:_handle_coordinator_update",
+        "state_write_call:_handle_coordinator_update"
+      ],
+      "required_runtime_roles": [
+        "runtime_read"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "blink:sensor_runtime_status_read",
+      "runtime_archetypes": [
+        "cloud_runtime_read",
+        "entity_wrapper_read",
+        "coordinator_update_path"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:_handle_coordinator_update",
+        "runtime_function:_update_attr",
+        "runtime_call:_update_attr",
+        "runtime_call:_handle_coordinator_update",
+        "runtime_call:super",
+        "runtime_call:self._update_attr",
+        "runtime_call:debug",
+        "runtime_call:error",
+        "runtime_call:_logger.debug",
+        "runtime_call:_logger.error"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/blink/sensor.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A9"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+      "why_not_setup": [
+        "exclude_role:setup:async_setup_entry",
+        "exclude_path_signal:setup_function:async_setup_entry",
+        "exclude_path_signal:setup_call:async_add_entities",
+        "exclude_control_path_for_read_like_action"
+      ]
+    }
+  ],
+  "schema_version": "m1_grounding_profile/v3",
+  "version": "draft_llm_v3"
+}

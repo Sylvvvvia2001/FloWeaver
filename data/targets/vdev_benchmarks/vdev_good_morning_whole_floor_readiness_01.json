@@ -1,0 +1,1041 @@
+{
+  "meta": {
+    "spec_version": "0.1",
+    "vdev_id": "vdev_good_morning_whole_floor_readiness_01",
+    "name": "Good-Morning Whole-Floor Readiness",
+    "benchmark": {
+      "group": "Morning and Leaving Home Routines",
+      "story": "After wake-up time, the routine collects bedroom, living-room, and dining-room temperatures, lights, curtains, and climate states to decide whether the floor is already in morning mode.",
+      "strengths": [
+        "Read-heavy whole-floor routine with no artificial padding.",
+        "BLE lane is long enough to expose ordering and transport budget issues.",
+        "Cloud climate plus light grouping is naturally present."
+      ],
+      "focus_areas": [
+        "BLE read-heavy corridor ordering",
+        "Cloud climate and light batching",
+        "Local Hue groups should stay cheap",
+        "Lane publish structure should remain explainable"
+      ]
+    }
+  },
+  "source_scope": {
+    "repo_path": "data/repo_snapshot",
+    "commit": "HEAD",
+    "domains": [
+      "ecobee",
+      "esphome",
+      "hue",
+      "switchbot",
+      "tuya",
+      "xiaomi_ble"
+    ],
+    "platforms": [
+      "binary_sensor",
+      "climate",
+      "cover",
+      "device",
+      "light",
+      "sensor"
+    ],
+    "protocols": [
+      "BLE",
+      "CLOUD",
+      "HA",
+      "LOCAL"
+    ],
+    "files": [
+      "data/repo_snapshot/ecobee/climate.py",
+      "data/repo_snapshot/esphome/update.py",
+      "data/repo_snapshot/hue/v2/group.py",
+      "data/repo_snapshot/switchbot/cover.py",
+      "data/repo_snapshot/switchbot/fan.py",
+      "data/repo_snapshot/tuya/climate.py",
+      "data/repo_snapshot/tuya/entity.py",
+      "data/repo_snapshot/tuya/light.py",
+      "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+      "data/repo_snapshot/xiaomi_ble/device.py",
+      "data/repo_snapshot/xiaomi_ble/sensor.py"
+    ],
+    "file_bindings": [
+      {
+        "device_id": "ble:switchbot:curtain_master_morning",
+        "file_path": "data/repo_snapshot/switchbot/cover.py",
+        "integration": "switchbot",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:curtain_living_morning",
+        "file_path": "data/repo_snapshot/switchbot/cover.py",
+        "integration": "switchbot",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:xiaomi_ble:temp_sensor_master_morning",
+        "file_path": "data/repo_snapshot/xiaomi_ble/sensor.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:xiaomi_ble:temp_sensor_dining_morning",
+        "file_path": "data/repo_snapshot/xiaomi_ble/sensor.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:xiaomi_ble:bedside_lamp_left_morning",
+        "file_path": "data/repo_snapshot/xiaomi_ble/binary_sensor.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:xiaomi_ble:bedside_lamp_right_morning",
+        "file_path": "data/repo_snapshot/xiaomi_ble/device.py",
+        "integration": "xiaomi_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:climate.master_floor.status",
+        "file_path": "data/repo_snapshot/tuya/climate.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:climate.living_floor.status",
+        "file_path": "data/repo_snapshot/tuya/climate.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.master_floor.status",
+        "file_path": "data/repo_snapshot/tuya/light.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.dining_floor.status",
+        "file_path": "data/repo_snapshot/tuya/light.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ecobee:thermostat.morning_floor_1",
+        "file_path": "data/repo_snapshot/ecobee/climate.py",
+        "integration": "ecobee",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:bedroom_group_morning",
+        "file_path": "data/repo_snapshot/hue/v2/group.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:hallway_group_morning",
+        "file_path": "data/repo_snapshot/hue/v2/group.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_good_morning_whole_floor_readiness_ble_lane",
+        "file_path": "data/repo_snapshot/switchbot/fan.py",
+        "integration": "switchbot",
+        "protocols": [
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_good_morning_whole_floor_readiness_cloud_lane",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_good_morning_whole_floor_readiness_local_lane",
+        "file_path": "data/repo_snapshot/hue/v2/group.py",
+        "integration": "hue",
+        "protocols": [
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_good_morning_whole_floor_readiness_overall",
+        "file_path": "data/repo_snapshot/esphome/update.py",
+        "integration": "esphome",
+        "protocols": [
+          "HA"
+        ]
+      }
+    ],
+    "entrypoints": [
+      {
+        "kind": "ha_service",
+        "service": {
+          "domain": "floweaver",
+          "name": "run_good_morning_whole_floor_readiness_01"
+        }
+      }
+    ]
+  },
+  "vdev_actions": [
+    {
+      "action_id": "A1",
+      "type": "refresh_cover",
+      "protocol": "BLE",
+      "critical": true,
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "ble_device",
+      "target": {
+        "id": "ble:switchbot:curtain_master_morning",
+        "kind": "ble_device",
+        "device_id": "ble:switchbot:curtain_master_morning"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "cover",
+        "service": "refresh_cover",
+        "data_template": {
+          "device_id": "ble:switchbot:curtain_master_morning"
+        }
+      }
+    },
+    {
+      "action_id": "A2",
+      "type": "refresh_cover",
+      "protocol": "BLE",
+      "critical": true,
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "ble_device",
+      "target": {
+        "id": "ble:switchbot:curtain_living_morning",
+        "kind": "ble_device",
+        "device_id": "ble:switchbot:curtain_living_morning"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "cover",
+        "service": "refresh_cover",
+        "data_template": {
+          "device_id": "ble:switchbot:curtain_living_morning"
+        }
+      }
+    },
+    {
+      "action_id": "A3",
+      "type": "read_sensor",
+      "protocol": "BLE",
+      "critical": true,
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "ble_device",
+      "target": {
+        "id": "ble:xiaomi_ble:temp_sensor_master_morning",
+        "kind": "ble_device",
+        "device_id": "ble:xiaomi_ble:temp_sensor_master_morning"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "read_sensor",
+        "data_template": {
+          "device_id": "ble:xiaomi_ble:temp_sensor_master_morning"
+        }
+      }
+    },
+    {
+      "action_id": "A4",
+      "type": "read_sensor",
+      "protocol": "BLE",
+      "critical": true,
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "ble_device",
+      "target": {
+        "id": "ble:xiaomi_ble:temp_sensor_dining_morning",
+        "kind": "ble_device",
+        "device_id": "ble:xiaomi_ble:temp_sensor_dining_morning"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "read_sensor",
+        "data_template": {
+          "device_id": "ble:xiaomi_ble:temp_sensor_dining_morning"
+        }
+      }
+    },
+    {
+      "action_id": "A5",
+      "type": "read_status",
+      "protocol": "BLE",
+      "critical": true,
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "ble_device",
+      "target": {
+        "id": "ble:xiaomi_ble:bedside_lamp_left_morning",
+        "kind": "ble_device",
+        "device_id": "ble:xiaomi_ble:bedside_lamp_left_morning"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "binary_sensor",
+        "service": "read_status",
+        "data_template": {
+          "device_id": "ble:xiaomi_ble:bedside_lamp_left_morning"
+        }
+      }
+    },
+    {
+      "action_id": "A6",
+      "type": "read_status",
+      "protocol": "BLE",
+      "critical": true,
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "ble_device",
+      "target": {
+        "id": "ble:xiaomi_ble:bedside_lamp_right_morning",
+        "kind": "ble_device",
+        "device_id": "ble:xiaomi_ble:bedside_lamp_right_morning"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "device",
+        "service": "read_status",
+        "data_template": {
+          "device_id": "ble:xiaomi_ble:bedside_lamp_right_morning"
+        }
+      }
+    },
+    {
+      "action_id": "A7",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:climate.master_floor.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:climate.master_floor.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "climate",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:climate.master_floor.status",
+          "endpoint_group_key": "morning_floor_hvac",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A8",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:climate.living_floor.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:climate.living_floor.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "climate",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:climate.living_floor.status",
+          "endpoint_group_key": "morning_floor_hvac",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A9",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:light.master_floor.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:light.master_floor.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "light",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:light.master_floor.status",
+          "endpoint_group_key": "morning_floor_lights",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A10",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:light.dining_floor.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:light.dining_floor.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "light",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:light.dining_floor.status",
+          "endpoint_group_key": "morning_floor_lights",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A11",
+      "type": "read_runtime",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "ecobee",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "POLL_UPDATE",
+        "CLOUD_HTTP_CALL"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "ecobee:thermostat.morning_floor_1",
+        "kind": "cloud_endpoint",
+        "endpoint": "ecobee:thermostat.morning_floor_1"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "climate",
+        "service": "read_runtime",
+        "provider": "ecobee",
+        "data_template": {
+          "endpoint": "ecobee:thermostat.morning_floor_1",
+          "endpoint_group_key": "morning_floor_ecobee",
+          "host_group_key": "ecobee"
+        }
+      }
+    },
+    {
+      "action_id": "A12",
+      "type": "get_state",
+      "protocol": "LOCAL",
+      "critical": true,
+      "idempotent": true,
+      "provider": "hue_local",
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "local_endpoint",
+      "target": {
+        "id": "hue:bridge_1:bedroom_group_morning",
+        "kind": "local_endpoint",
+        "endpoint": "hue:bridge_1:bedroom_group_morning",
+        "provider": "hue_local"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "light",
+        "service": "get_state",
+        "provider": "hue_local",
+        "data_template": {
+          "endpoint": "hue:bridge_1:bedroom_group_morning",
+          "endpoint_group_key": "bridge_1",
+          "host_group_key": "hue_bridge_1"
+        }
+      }
+    },
+    {
+      "action_id": "A13",
+      "type": "get_state",
+      "protocol": "LOCAL",
+      "critical": true,
+      "idempotent": true,
+      "provider": "hue_local",
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "local_endpoint",
+      "target": {
+        "id": "hue:bridge_1:hallway_group_morning",
+        "kind": "local_endpoint",
+        "endpoint": "hue:bridge_1:hallway_group_morning",
+        "provider": "hue_local"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "light",
+        "service": "get_state",
+        "provider": "hue_local",
+        "data_template": {
+          "endpoint": "hue:bridge_1:hallway_group_morning",
+          "endpoint_group_key": "bridge_1",
+          "host_group_key": "hue_bridge_1"
+        }
+      }
+    },
+    {
+      "action_id": "A14",
+      "type": "write",
+      "protocol": "HA",
+      "critical": true,
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "side_effects": [
+        "state_write"
+      ],
+      "target_kind": "ha_entity",
+      "target": {
+        "entity_id": "sensor.vdev_good_morning_whole_floor_readiness_ble_lane",
+        "id": "sensor.vdev_good_morning_whole_floor_readiness_ble_lane",
+        "kind": "ha_entity"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "publish",
+        "data_template": {
+          "entity_id": "sensor.vdev_good_morning_whole_floor_readiness_ble_lane"
+        }
+      }
+    },
+    {
+      "action_id": "A15",
+      "type": "write",
+      "protocol": "HA",
+      "critical": true,
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "side_effects": [
+        "state_write"
+      ],
+      "target_kind": "ha_entity",
+      "target": {
+        "entity_id": "sensor.vdev_good_morning_whole_floor_readiness_cloud_lane",
+        "id": "sensor.vdev_good_morning_whole_floor_readiness_cloud_lane",
+        "kind": "ha_entity"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "publish",
+        "data_template": {
+          "entity_id": "sensor.vdev_good_morning_whole_floor_readiness_cloud_lane"
+        }
+      }
+    },
+    {
+      "action_id": "A16",
+      "type": "write",
+      "protocol": "HA",
+      "critical": true,
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "side_effects": [
+        "state_write"
+      ],
+      "target_kind": "ha_entity",
+      "target": {
+        "entity_id": "sensor.vdev_good_morning_whole_floor_readiness_local_lane",
+        "id": "sensor.vdev_good_morning_whole_floor_readiness_local_lane",
+        "kind": "ha_entity"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "publish",
+        "data_template": {
+          "entity_id": "sensor.vdev_good_morning_whole_floor_readiness_local_lane"
+        }
+      }
+    },
+    {
+      "action_id": "A17",
+      "type": "write",
+      "protocol": "HA",
+      "critical": true,
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "side_effects": [
+        "state_write"
+      ],
+      "target_kind": "ha_entity",
+      "target": {
+        "entity_id": "sensor.vdev_good_morning_whole_floor_readiness_overall",
+        "id": "sensor.vdev_good_morning_whole_floor_readiness_overall",
+        "kind": "ha_entity"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "publish",
+        "data_template": {
+          "entity_id": "sensor.vdev_good_morning_whole_floor_readiness_overall"
+        }
+      }
+    }
+  ],
+  "target_anchors": {
+    "device_ids": [
+      "ble:switchbot:curtain_master_morning",
+      "ble:switchbot:curtain_living_morning",
+      "ble:xiaomi_ble:temp_sensor_master_morning",
+      "ble:xiaomi_ble:temp_sensor_dining_morning",
+      "ble:xiaomi_ble:bedside_lamp_left_morning",
+      "ble:xiaomi_ble:bedside_lamp_right_morning"
+    ],
+    "endpoints": [
+      "tuya:climate.master_floor.status",
+      "tuya:climate.living_floor.status",
+      "tuya:light.master_floor.status",
+      "tuya:light.dining_floor.status",
+      "ecobee:thermostat.morning_floor_1"
+    ],
+    "entities": [
+      "sensor.vdev_good_morning_whole_floor_readiness_ble_lane",
+      "sensor.vdev_good_morning_whole_floor_readiness_cloud_lane",
+      "sensor.vdev_good_morning_whole_floor_readiness_local_lane",
+      "sensor.vdev_good_morning_whole_floor_readiness_overall"
+    ],
+    "characteristics": [],
+    "required_state_writes": [
+      "sensor.vdev_good_morning_whole_floor_readiness_ble_lane",
+      "sensor.vdev_good_morning_whole_floor_readiness_cloud_lane",
+      "sensor.vdev_good_morning_whole_floor_readiness_local_lane",
+      "sensor.vdev_good_morning_whole_floor_readiness_overall"
+    ],
+    "service_entrypoints": [
+      "floweaver.run_good_morning_whole_floor_readiness_01"
+    ],
+    "anchor_ops": [
+      "BLE_GATT_OP",
+      "BLE_OP",
+      "CLOUD_HTTP_CALL",
+      "CLOUD_OP",
+      "CLOUD_STATUS_CALL",
+      "LOCAL_API_READ",
+      "POLL_UPDATE",
+      "STATE_WRITE"
+    ]
+  },
+  "entrypoint": {
+    "kind": "ha_service",
+    "service": {
+      "domain": "floweaver",
+      "name": "run_good_morning_whole_floor_readiness_01"
+    }
+  },
+  "objectives": {
+    "primary": "minimize_tail_latency_under_mixed_transport",
+    "metrics": {
+      "e2e_latency_ms": {
+        "p95": 2200
+      },
+      "lane_completion_ms": {
+        "ble_lane_p95": 900,
+        "cloud_lane_p95": 1400,
+        "local_lane_p95": 600
+      }
+    }
+  },
+  "constraints": {
+    "source_protocols": [
+      "BLE",
+      "CLOUD",
+      "HA",
+      "LOCAL"
+    ],
+    "optimization_knobs": {
+      "allow_concurrency": true,
+      "max_concurrency": {
+        "ble": 1,
+        "cloud": 4,
+        "local": 6,
+        "total": 10
+      }
+    }
+  },
+  "validation": {
+    "differential_tests": {
+      "enabled": true,
+      "runs_per_scenario": 2,
+      "scenarios": [
+        "baseline_happy_path",
+        "fault_cloud_429",
+        "fault_ble_disconnect"
+      ]
+    },
+    "fault_model": {
+      "ble_disconnect": true,
+      "cloud_429": true,
+      "network_jitter": true
+    },
+    "observation": {
+      "canonicalization_version": "v1",
+      "equivalence_whitelist": [
+        "COALESCE_STATE_WRITE"
+      ],
+      "semantic_ops": [
+        "ENTRY_SETUP",
+        "COORD_REFRESH",
+        "STATE_WRITE",
+        "SUBSCRIBE",
+        "UNSUBSCRIBE",
+        "MQTT_SUBSCRIBE",
+        "BLE_CONNECT",
+        "BLE_DISCONNECT",
+        "BLE_NOTIFY_SUBSCRIBE",
+        "BLE_OP",
+        "BLE_GATT_OP",
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_429_CHECK",
+        "CLOUD_BACKOFF_SLEEP",
+        "CLOUD_BATCH_CALL",
+        "CLOUD_SESSION_REUSE",
+        "LOCAL_API_READ",
+        "POLL_UPDATE"
+      ]
+    },
+    "llm_detector": {
+      "enabled": true,
+      "timeout_s": 45,
+      "max_attempts": 0,
+      "retry_backoff_s": 0.5
+    },
+    "profile_version": "ha_profile_default",
+    "sampling": {},
+    "source_protocols": [
+      "BLE",
+      "CLOUD",
+      "HA",
+      "LOCAL"
+    ]
+  },
+  "hard_dependencies": [
+    {
+      "before": "A1",
+      "after": "A14",
+      "reason": "ble_write_depends_on_a1"
+    },
+    {
+      "before": "A2",
+      "after": "A14",
+      "reason": "ble_write_depends_on_a2"
+    },
+    {
+      "before": "A3",
+      "after": "A14",
+      "reason": "ble_write_depends_on_a3"
+    },
+    {
+      "before": "A4",
+      "after": "A14",
+      "reason": "ble_write_depends_on_a4"
+    },
+    {
+      "before": "A5",
+      "after": "A14",
+      "reason": "ble_write_depends_on_a5"
+    },
+    {
+      "before": "A6",
+      "after": "A14",
+      "reason": "ble_write_depends_on_a6"
+    },
+    {
+      "before": "A7",
+      "after": "A15",
+      "reason": "cloud_write_depends_on_a7"
+    },
+    {
+      "before": "A8",
+      "after": "A15",
+      "reason": "cloud_write_depends_on_a8"
+    },
+    {
+      "before": "A9",
+      "after": "A15",
+      "reason": "cloud_write_depends_on_a9"
+    },
+    {
+      "before": "A10",
+      "after": "A15",
+      "reason": "cloud_write_depends_on_a10"
+    },
+    {
+      "before": "A11",
+      "after": "A15",
+      "reason": "cloud_write_depends_on_a11"
+    },
+    {
+      "before": "A12",
+      "after": "A16",
+      "reason": "local_write_depends_on_a12"
+    },
+    {
+      "before": "A13",
+      "after": "A16",
+      "reason": "local_write_depends_on_a13"
+    },
+    {
+      "before": "A14",
+      "after": "A17",
+      "reason": "overall_write_depends_on_ble_lane"
+    },
+    {
+      "before": "A15",
+      "after": "A17",
+      "reason": "overall_write_depends_on_cloud_lane"
+    },
+    {
+      "before": "A16",
+      "after": "A17",
+      "reason": "overall_write_depends_on_local_lane"
+    }
+  ],
+  "soft_dependencies": [
+    {
+      "before": "A1",
+      "after": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A1",
+      "after": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A1",
+      "after": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A1",
+      "after": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A1",
+      "after": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A2",
+      "after": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A2",
+      "after": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A2",
+      "after": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A2",
+      "after": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A3",
+      "after": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A3",
+      "after": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A3",
+      "after": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A4",
+      "after": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A4",
+      "after": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A5",
+      "after": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    }
+  ],
+  "critical_action_ids": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "A8",
+    "A9",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15",
+    "A16",
+    "A17"
+  ]
+}

@@ -1,0 +1,1096 @@
+{
+  "dependency_candidates": [
+    [
+      "msf00_000_entry_setup",
+      "msf00_001_state_write",
+      "DATA_DEP"
+    ],
+    [
+      "msf00_000_entry_setup",
+      "msf00_002_state_write",
+      "DATA_DEP"
+    ],
+    [
+      "msf00_000_entry_setup",
+      "msf00_003_state_write",
+      "DATA_DEP"
+    ],
+    [
+      "msf00_000_entry_setup",
+      "msf00_004_state_write",
+      "DATA_DEP"
+    ],
+    [
+      "msf00_001_state_write",
+      "msf00_002_state_write",
+      "DATA_DEP"
+    ],
+    [
+      "msf00_002_state_write",
+      "msf00_003_state_write",
+      "DATA_DEP"
+    ],
+    [
+      "msf00_003_state_write",
+      "msf00_004_state_write",
+      "DATA_DEP"
+    ]
+  ],
+  "msfs": [
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "ATTR_ENTITY_ID",
+        "ATTR_FAN_MIN_ON_TIME",
+        "ATTR_RESUME_ALL",
+        "ATTR_VACATION_NAME",
+        "ServiceCall",
+        "data",
+        "index",
+        "service",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf00_000_entry_setup",
+      "msf_type": "INIT",
+      "node_ids": [
+        "92f94299:async_setup_entry:2:212",
+        "92f94299:async_setup_entry:3.0:215",
+        "92f94299:async_setup_entry:6:234",
+        "92f94299:async_setup_entry:7:244",
+        "92f94299:async_setup_entry:8:255",
+        "92f94299:async_setup_entry:9:272"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "entry_setup",
+        "external_call_cloud",
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "ATTR_ENTITY_ID",
+        "ServiceCall",
+        "entities",
+        "service"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": null,
+      "msf_id": "msf00_001_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "92f94299:async_setup_entry:6:234"
+      ],
+      "outputs": [
+        "entity_id",
+        "thermostat"
+      ],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "ATTR_ENTITY_ID",
+        "ATTR_VACATION_NAME",
+        "ServiceCall",
+        "entities",
+        "service"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": null,
+      "msf_id": "msf00_002_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "92f94299:async_setup_entry:7:244"
+      ],
+      "outputs": [
+        "entity_id",
+        "thermostat",
+        "vacation_name"
+      ],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "ATTR_ENTITY_ID",
+        "ATTR_FAN_MIN_ON_TIME",
+        "ServiceCall",
+        "entities",
+        "service",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": null,
+      "msf_id": "msf00_003_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "92f94299:async_setup_entry:8:255"
+      ],
+      "outputs": [
+        "entity",
+        "entity_id",
+        "fan_min_on_time",
+        "target_thermostats",
+        "thermostat"
+      ],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "external_call_cloud",
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "ATTR_ENTITY_ID",
+        "ATTR_RESUME_ALL",
+        "ServiceCall",
+        "entities",
+        "service"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": null,
+      "msf_id": "msf00_004_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "92f94299:async_setup_entry:9:272"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "external_call_cloud",
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [
+        "A9"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf00_005_cloud_status_call",
+      "msf_type": "ACT",
+      "node_ids": [
+        "92f94299:async_update:2:399"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A9",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "ecobee:thermostat.home_1",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_status_call"
+      ]
+    },
+    {
+      "action_refs": [
+        "A10"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self",
+        "sensor"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf01_000_cloud_status_call",
+      "msf_type": "ACT",
+      "node_ids": [
+        "8f7a1c51:async_update:2.1.1.0:190",
+        "8f7a1c51:async_update:2.1.1:187",
+        "8f7a1c51:async_update:2.1:184",
+        "8f7a1c51:async_update:2:181"
+      ],
+      "outputs": [
+        "item",
+        "sensor",
+        "thermostat"
+      ],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A10",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "ecobee:thermostat.home_2",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_status_call"
+      ]
+    },
+    {
+      "action_refs": [
+        "A16"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "is_aggregate_sink": true,
+      "is_shared_infra": false,
+      "lane_tag": "WRITEBACK_OVERALL",
+      "msf_id": "msf02_000_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "9da22f42:_handle_device_update:3:186"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A16",
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "resource_instance_tag": "sensor.vdev_overnight_overall",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "ESPHomeDashboardUpdateEntity",
+        "async_add_entities",
+        "callback",
+        "dashboard",
+        "device_name",
+        "entry_data",
+        "unsubs"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf02_001_entry_setup",
+      "msf_type": "INIT",
+      "node_ids": [
+        "9da22f42:async_setup_entry:7:71"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "entry_setup",
+        "external_call_cloud",
+        "unsubscribe"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "unsubs"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf02_002_unsubscribe",
+      "msf_type": "CLEANUP",
+      "node_ids": [
+        "9da22f42:_async_setup_update_entity:4:82"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "unsubscribe"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "ESPHomeDashboardUpdateEntity",
+        "async_add_entities",
+        "callback",
+        "dashboard",
+        "device_name",
+        "entry_data",
+        "unsubs"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf02_003_unsubscribe",
+      "msf_type": "CLEANUP",
+      "node_ids": [
+        "9da22f42:async_setup_entry:7:71"
+      ],
+      "outputs": [],
+      "phase": "TEARDOWN",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "external_call_cloud",
+        "unsubscribe"
+      ]
+    },
+    {
+      "action_refs": [
+        "A13"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "WRITEBACK_BLE",
+      "msf_id": "msf03_000_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "dc9b9699:_value_is_expired:3:392"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A13",
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "resource_instance_tag": "sensor.vdev_overnight_ble_lane",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [
+        "A12"
+      ],
+      "critical": true,
+      "exceptions": [
+        "Exception"
+      ],
+      "inputs": [
+        "PAYLOAD_NONE",
+        "PayloadSentinel",
+        "SensorDeviceClass",
+        "ValueError",
+        "_LOGGER",
+        "async_call_later",
+        "check_state_too_long",
+        "dt_util",
+        "isinstance",
+        "msg",
+        "self",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": null,
+      "msf_id": "msf03_001_mqtt_subscribe",
+      "msf_type": "ACT",
+      "node_ids": [
+        "dc9b9699:_update_state:0.0:287",
+        "dc9b9699:_update_state:0.1.0:291",
+        "dc9b9699:_update_state:0.1:290",
+        "dc9b9699:_update_state:0.2:294",
+        "dc9b9699:_update_state:0:284",
+        "dc9b9699:_update_state:1.0:299",
+        "dc9b9699:_update_state:1.0:301",
+        "dc9b9699:_update_state:10:348",
+        "dc9b9699:_update_state:1:298",
+        "dc9b9699:_update_state:2.0:303",
+        "dc9b9699:_update_state:2:302",
+        "dc9b9699:_update_state:3.0:305",
+        "dc9b9699:_update_state:3.1:310",
+        "dc9b9699:_update_state:3:304",
+        "dc9b9699:_update_state:4.0:313",
+        "dc9b9699:_update_state:4.1:314",
+        "dc9b9699:_update_state:4:312",
+        "dc9b9699:_update_state:5.0.0:318",
+        "dc9b9699:_update_state:5.0.0:320",
+        "dc9b9699:_update_state:5.0:317",
+        "dc9b9699:_update_state:5.1:321",
+        "dc9b9699:_update_state:5:316",
+        "dc9b9699:_update_state:6.0:324",
+        "dc9b9699:_update_state:6.1:330",
+        "dc9b9699:_update_state:6:323",
+        "dc9b9699:_update_state:7.0:336",
+        "dc9b9699:_update_state:7.1:337",
+        "dc9b9699:_update_state:7:332",
+        "dc9b9699:_update_state:8.0.0:340",
+        "dc9b9699:_update_state:8.0:339",
+        "dc9b9699:_update_state:8.0:342",
+        "dc9b9699:_update_state:8.1:343",
+        "dc9b9699:_update_state:8.2:344",
+        "dc9b9699:_update_state:8:338",
+        "dc9b9699:_update_state:9.0:346",
+        "dc9b9699:_update_state:9.1:347",
+        "dc9b9699:_update_state:9:345"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A12",
+      "required_guards": [],
+      "resource_instance_tag": "mqtt:air_quality_node_baby_room",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "mqtt_subscribe"
+      ]
+    },
+    {
+      "action_refs": [
+        "A11"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "TYPE_CHECKING",
+        "debug_info",
+        "other",
+        "self",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": null,
+      "msf_id": "msf04_000_mqtt_subscribe",
+      "msf_type": "ACT",
+      "node_ids": [
+        "81aa8b2e:resubscribe_if_necessary:0:35",
+        "81aa8b2e:resubscribe_if_necessary:1.0.0:38",
+        "81aa8b2e:resubscribe_if_necessary:1.0:37",
+        "81aa8b2e:resubscribe_if_necessary:1.1:39",
+        "81aa8b2e:resubscribe_if_necessary:1.2:40",
+        "81aa8b2e:resubscribe_if_necessary:1:36",
+        "81aa8b2e:resubscribe_if_necessary:2.0:43",
+        "81aa8b2e:resubscribe_if_necessary:2.1:45",
+        "81aa8b2e:resubscribe_if_necessary:2:42",
+        "81aa8b2e:resubscribe_if_necessary:3.0:49",
+        "81aa8b2e:resubscribe_if_necessary:3:47",
+        "81aa8b2e:resubscribe_if_necessary:4:52",
+        "81aa8b2e:resubscribe_if_necessary:5:54"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A11",
+      "required_guards": [],
+      "resource_instance_tag": "mqtt:air_quality_node_bedroom",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "mqtt_subscribe"
+      ]
+    },
+    {
+      "action_refs": [
+        "A11"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "DEFAULT_QOS",
+        "EntitySubscription",
+        "debug_info",
+        "dict",
+        "hass",
+        "str",
+        "topics"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": null,
+      "msf_id": "msf04_001_mqtt_subscribe",
+      "msf_type": "ACT",
+      "node_ids": [
+        "81aa8b2e:async_prepare_subscribe_topics:0:92",
+        "81aa8b2e:async_prepare_subscribe_topics:1:104",
+        "81aa8b2e:async_prepare_subscribe_topics:2:105",
+        "81aa8b2e:async_prepare_subscribe_topics:3:106",
+        "81aa8b2e:async_prepare_subscribe_topics:4.0:109",
+        "81aa8b2e:async_prepare_subscribe_topics:4.1:121",
+        "81aa8b2e:async_prepare_subscribe_topics:4.2:122",
+        "81aa8b2e:async_prepare_subscribe_topics:4.3:123",
+        "81aa8b2e:async_prepare_subscribe_topics:4:107",
+        "81aa8b2e:async_prepare_subscribe_topics:5.0.0:128",
+        "81aa8b2e:async_prepare_subscribe_topics:5.0.1:130",
+        "81aa8b2e:async_prepare_subscribe_topics:5.0:127",
+        "81aa8b2e:async_prepare_subscribe_topics:5:126",
+        "81aa8b2e:async_prepare_subscribe_topics:6:136"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A11",
+      "required_guards": [],
+      "resource_instance_tag": "mqtt:air_quality_node_bedroom",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "external_call_cloud",
+        "mqtt_subscribe"
+      ]
+    },
+    {
+      "action_refs": [
+        "A13"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "WRITEBACK_BLE",
+      "msf_id": "msf05_000_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "9425188b:async_oscillate:3:101",
+        "9425188b:async_set_percentage:3:92",
+        "9425188b:async_set_preset_mode:3:161",
+        "9425188b:async_set_preset_mode:3:83",
+        "9425188b:async_turn_off:3:125",
+        "9425188b:async_turn_off:3:187",
+        "9425188b:async_turn_on:3:118",
+        "9425188b:async_turn_on:3:179"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A13",
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "resource_instance_tag": "sensor.vdev_overnight_ble_lane",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [
+        "A15"
+      ],
+      "critical": true,
+      "exceptions": [
+        "Exception"
+      ],
+      "inputs": [
+        "Exception",
+        "_LOGGER",
+        "ex",
+        "self",
+        "super"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "WRITEBACK",
+      "msf_id": "msf06_000_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "789a6e2e:_async_call_update_attrs:1.0:272",
+        "789a6e2e:_async_call_update_attrs:1.1:281",
+        "789a6e2e:_async_call_update_attrs:1:271",
+        "789a6e2e:_handle_coordinator_update:1:288",
+        "789a6e2e:_handle_coordinator_update:2:289",
+        "789a6e2e:async_added_to_hass:2:257"
+      ],
+      "outputs": [
+        "available"
+      ],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A15",
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "resource_instance_tag": "sensor.vdev_overnight_local_lane",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [
+        "A5"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "ClimateEntityFeature",
+        "HVACMode",
+        "TuyaClimateHVACMode",
+        "TuyaClimateSwingMode",
+        "_HA_TO_TUYA_HVACMODE_MAPPINGS",
+        "_HA_TO_TUYA_SWING_MAPPINGS",
+        "_TUYA_TO_HA_HVACMODE_MAPPINGS",
+        "_TUYA_TO_HA_SWING_MAPPINGS",
+        "cast",
+        "description",
+        "hvac_mode",
+        "hvac_mode_wrapper",
+        "list",
+        "self",
+        "swing_mode",
+        "swing_wrapper",
+        "switch_wrapper"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf07_000_cloud_http_call",
+      "msf_type": "ACT",
+      "node_ids": [
+        "8e4c1745:__init__:16.1.0:308",
+        "8e4c1745:__init__:16.1:307",
+        "8e4c1745:__init__:16:305",
+        "8e4c1745:__init__:20.1:340",
+        "8e4c1745:__init__:20:338",
+        "8e4c1745:async_set_hvac_mode:1:355",
+        "8e4c1745:async_set_hvac_mode:3:362",
+        "8e4c1745:async_set_swing_mode:1:386",
+        "8e4c1745:hvac_mode:4:430",
+        "8e4c1745:hvac_mode:5:431",
+        "8e4c1745:swing_mode:1:446",
+        "8e4c1745:swing_mode:2:447"
+      ],
+      "outputs": [
+        "ha_mode"
+      ],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A5",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:climate.bedroom.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_http_call",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A5",
+        "A6"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "DPCode",
+        "DPCodeEnumWrapper",
+        "DPCodeIntegerWrapper",
+        "device"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf07_006_cloud_status_call",
+      "msf_type": "ACT",
+      "node_ids": [
+        "8e4c1745:_get_temperature_wrappers:1:129",
+        "8e4c1745:_get_temperature_wrappers:2:132",
+        "8e4c1745:_get_temperature_wrappers:3:135",
+        "8e4c1745:_get_temperature_wrappers:4:138",
+        "8e4c1745:_get_temperature_wrappers:5.0.0.0:150",
+        "8e4c1745:_get_temperature_wrappers:5.0.0:149",
+        "8e4c1745:_get_temperature_wrappers:5.0:148",
+        "8e4c1745:_get_temperature_wrappers:5:143"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": "A5",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:climate.bedroom.status",
+      "secondary_action_refs": [
+        "A6"
+      ],
+      "side_effect_sig": [
+        "cloud_status_call"
+      ]
+    },
+    {
+      "action_refs": [
+        "A14"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "dp_timestamps",
+        "self",
+        "updated_status_properties"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "WRITEBACK_CLOUD",
+      "msf_id": "msf08_000_state_write",
+      "msf_type": "UPDATE",
+      "node_ids": [
+        "a073d609:_handle_state_update:1.0:76",
+        "a073d609:_handle_state_update:1:63"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A14",
+      "required_guards": [
+        "state_write_contract_ok"
+      ],
+      "resource_instance_tag": "sensor.vdev_overnight_cloud_lane",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [
+        "A7"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "DPCodeBooleanWrapper",
+        "SWITCHES",
+        "TuyaSwitchEntity",
+        "async_add_entities",
+        "callback",
+        "device_ids",
+        "entry",
+        "list",
+        "manager",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf09_000_cloud_http_call",
+      "msf_type": "ACT",
+      "node_ids": [
+        "9cfce7a4:async_discover_device:1:919",
+        "9cfce7a4:async_discover_device:2.0:921",
+        "9cfce7a4:async_discover_device:2.1:922",
+        "9cfce7a4:async_discover_device:2:920",
+        "9cfce7a4:async_setup_entry:1:914",
+        "9cfce7a4:async_setup_entry:2:917"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": "A7",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:switch.energy_strip_server.status",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "cloud_http_call",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [],
+      "critical": false,
+      "exceptions": [],
+      "inputs": [
+        "DPCodeBooleanWrapper",
+        "SWITCHES",
+        "TuyaSwitchEntity",
+        "async_add_entities",
+        "callback",
+        "device_ids",
+        "entry",
+        "list",
+        "str"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": null,
+      "msf_id": "msf09_002_entry_setup",
+      "msf_type": "INIT",
+      "node_ids": [
+        "9cfce7a4:async_setup_entry:1:914",
+        "9cfce7a4:async_setup_entry:2:917"
+      ],
+      "outputs": [],
+      "phase": "SETUP",
+      "primary_action_ref": null,
+      "required_guards": [],
+      "resource_instance_tag": null,
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "entry_setup",
+        "external_call_cloud"
+      ]
+    },
+    {
+      "action_refs": [
+        "A7",
+        "A8"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "dp_timestamps",
+        "self",
+        "updated_status_properties"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": "CLOUD",
+      "msf_id": "msf09_003_cloud_status_call",
+      "msf_type": "ACT",
+      "node_ids": [
+        "9cfce7a4:_process_device_update:0:968",
+        "9cfce7a4:_process_device_update:1:973"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A7",
+      "required_guards": [
+        "rate_limit_budget_ok"
+      ],
+      "resource_instance_tag": "tuya:switch.energy_strip_server.status",
+      "secondary_action_refs": [
+        "A8"
+      ],
+      "side_effect_sig": [
+        "cloud_status_call"
+      ]
+    },
+    {
+      "action_refs": [
+        "A3"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "BINARY_SENSOR_DESCRIPTIONS",
+        "PassiveBluetoothDataUpdate",
+        "device_key_to_bluetooth_entity_key",
+        "sensor_device_info_to_hass_device_info",
+        "sensor_update"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "BLE_LOCAL",
+      "msf_id": "msf10_000_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "d9c4917e:sensor_update_to_bluetooth_data_update:0:111",
+        "d9c4917e:sensor_update_to_bluetooth_data_update:1:112"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A3",
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": "ble:xiaomi_ble:door_sensor_entry",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "ble_op"
+      ]
+    },
+    {
+      "action_refs": [
+        "A4"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "EVENT_PROPERTIES",
+        "EVENT_TYPE",
+        "event",
+        "self"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": false,
+      "lane_tag": "BLE_LOCAL",
+      "msf_id": "msf11_000_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "ab8f4bde:_async_handle_event:0:179",
+        "ab8f4bde:_async_handle_event:1:180"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A4",
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": "ble:xiaomi_ble:window_sensor_study",
+      "secondary_action_refs": [],
+      "side_effect_sig": [
+        "ble_op",
+        "state_write"
+      ]
+    },
+    {
+      "action_refs": [
+        "A1",
+        "A2"
+      ],
+      "critical": true,
+      "exceptions": [],
+      "inputs": [
+        "EntityDescription",
+        "PassiveBluetoothDataUpdate",
+        "PassiveBluetoothEntityKey",
+        "SENSOR_DESCRIPTIONS",
+        "cast",
+        "device_key_to_bluetooth_entity_key",
+        "dict",
+        "float",
+        "sensor_device_info_to_hass_device_info",
+        "sensor_update"
+      ],
+      "is_aggregate_sink": false,
+      "is_shared_infra": true,
+      "lane_tag": "BLE_LOCAL",
+      "msf_id": "msf12_000_ble_op",
+      "msf_type": "ACT",
+      "node_ids": [
+        "919f9a6b:sensor_update_to_bluetooth_data_update:0:223",
+        "919f9a6b:sensor_update_to_bluetooth_data_update:1:224",
+        "919f9a6b:sensor_update_to_bluetooth_data_update:2:232"
+      ],
+      "outputs": [],
+      "phase": "RUNTIME",
+      "primary_action_ref": "A1",
+      "required_guards": [
+        "resource_available"
+      ],
+      "resource_instance_tag": "ble:xiaomi_ble:temp_sensor_bedroom",
+      "secondary_action_refs": [
+        "A2"
+      ],
+      "side_effect_sig": [
+        "ble_op",
+        "external_call_cloud"
+      ]
+    }
+  ],
+  "summary": {
+    "build_status": "OK",
+    "critical_action_ids": [
+      "A1",
+      "A10",
+      "A11",
+      "A12",
+      "A13",
+      "A14",
+      "A15",
+      "A16",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9"
+    ],
+    "missing_critical_action_ids": [],
+    "multi_bound_nonshared_msf_ids": [],
+    "resolved_action_refs": [
+      "A1",
+      "A10",
+      "A11",
+      "A12",
+      "A13",
+      "A14",
+      "A15",
+      "A16",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9"
+    ],
+    "resolved_runtime_action_count": 15,
+    "resolved_runtime_action_refs": [
+      "A1",
+      "A10",
+      "A11",
+      "A12",
+      "A13",
+      "A14",
+      "A15",
+      "A16",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A7",
+      "A8",
+      "A9"
+    ]
+  }
+}

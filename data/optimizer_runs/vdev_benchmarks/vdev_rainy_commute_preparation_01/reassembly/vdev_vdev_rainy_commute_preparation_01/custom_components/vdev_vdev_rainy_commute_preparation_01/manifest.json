@@ -1,0 +1,9 @@
+{
+  "codeowners": [],
+  "dependencies": [],
+  "documentation": "https://example.invalid/vibeaura/vdev",
+  "domain": "vdev_vdev_rainy_commute_preparation_01",
+  "name": "Rainy Commute Preparation",
+  "requirements": [],
+  "version": "0.1.0"
+}

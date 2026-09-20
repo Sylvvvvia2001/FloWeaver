@@ -1,0 +1,1038 @@
+{
+  "meta": {
+    "spec_version": "0.1",
+    "vdev_id": "vdev_whole_family_morning_comfort_snapshot_01",
+    "name": "Whole-Family Morning Comfort Snapshot",
+    "benchmark": {
+      "group": "Profile Coverage - Morning Routines",
+      "story": "Before the whole family wakes up, the routine snapshots comfort state across multiple rooms, including BLE environment sensors, SwitchBot curtains, local lighting systems, Tuya climate or lights, and Netatmo runtime.",
+      "strengths": [
+        "Read-heavy mixed snapshot with no artificial hard action dependency.",
+        "BLE sensor count is high enough to expose radio ordering pressure.",
+        "Cloud and local lanes are naturally separable."
+      ],
+      "focus_areas": [
+        "BLE read-heavy ordering",
+        "Cloud/local frontier completeness",
+        "Local Hue and Nanoleaf packing",
+        "Single comfort summary tail"
+      ]
+    }
+  },
+  "source_scope": {
+    "repo_path": "data/repo_snapshot",
+    "commit": "HEAD",
+    "domains": [
+      "airthings_ble",
+      "esphome",
+      "hue",
+      "nanoleaf",
+      "netatmo",
+      "ruuvitag_ble",
+      "switchbot",
+      "thermobeacon",
+      "tplink",
+      "tuya"
+    ],
+    "platforms": [
+      "climate",
+      "cover",
+      "light",
+      "sensor"
+    ],
+    "protocols": [
+      "BLE",
+      "CLOUD",
+      "HA",
+      "LOCAL"
+    ],
+    "files": [
+      "data/repo_snapshot/airthings_ble/sensor.py",
+      "data/repo_snapshot/esphome/update.py",
+      "data/repo_snapshot/hue/v2/group.py",
+      "data/repo_snapshot/nanoleaf/light.py",
+      "data/repo_snapshot/netatmo/sensor.py",
+      "data/repo_snapshot/ruuvitag_ble/sensor.py",
+      "data/repo_snapshot/switchbot/cover.py",
+      "data/repo_snapshot/switchbot/fan.py",
+      "data/repo_snapshot/thermobeacon/sensor.py",
+      "data/repo_snapshot/tplink/entity.py",
+      "data/repo_snapshot/tuya/climate.py",
+      "data/repo_snapshot/tuya/entity.py",
+      "data/repo_snapshot/tuya/light.py"
+    ],
+    "file_bindings": [
+      {
+        "device_id": "ble:airthings_ble:living_room_air_quality",
+        "file_path": "data/repo_snapshot/airthings_ble/sensor.py",
+        "integration": "airthings_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:ruuvitag_ble:bedroom_environment",
+        "file_path": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+        "integration": "ruuvitag_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:ruuvitag_ble:kids_room_environment",
+        "file_path": "data/repo_snapshot/ruuvitag_ble/sensor.py",
+        "integration": "ruuvitag_ble",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:thermobeacon:hallway_environment",
+        "file_path": "data/repo_snapshot/thermobeacon/sensor.py",
+        "integration": "thermobeacon",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:living_room_curtain_left",
+        "file_path": "data/repo_snapshot/switchbot/cover.py",
+        "integration": "switchbot",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ble:switchbot:living_room_curtain_right",
+        "file_path": "data/repo_snapshot/switchbot/cover.py",
+        "integration": "switchbot",
+        "protocols": [
+          "BLE",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.living_room_morning_1.status",
+        "file_path": "data/repo_snapshot/tuya/light.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.living_room_morning_2.status",
+        "file_path": "data/repo_snapshot/tuya/light.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:climate.kids_room_ac.status",
+        "file_path": "data/repo_snapshot/tuya/climate.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "netatmo:station.indoor_environment",
+        "file_path": "data/repo_snapshot/netatmo/sensor.py",
+        "integration": "netatmo",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:living_room_group",
+        "file_path": "data/repo_snapshot/hue/v2/group.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "hue:bridge_1:dining_room_group",
+        "file_path": "data/repo_snapshot/hue/v2/group.py",
+        "integration": "hue",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "nanoleaf:panel.family_room",
+        "file_path": "data/repo_snapshot/nanoleaf/light.py",
+        "integration": "nanoleaf",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_whole_family_morning_comfort_snapshot_01_ble_lane",
+        "file_path": "data/repo_snapshot/switchbot/fan.py",
+        "integration": "switchbot",
+        "protocols": [
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_whole_family_morning_comfort_snapshot_01_cloud_lane",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_whole_family_morning_comfort_snapshot_01_local_lane",
+        "file_path": "data/repo_snapshot/tplink/entity.py",
+        "integration": "tplink",
+        "protocols": [
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_whole_family_morning_comfort_snapshot_01_overall",
+        "file_path": "data/repo_snapshot/esphome/update.py",
+        "integration": "esphome",
+        "protocols": [
+          "HA"
+        ]
+      }
+    ],
+    "entrypoints": [
+      {
+        "kind": "ha_service",
+        "service": {
+          "domain": "floweaver",
+          "name": "run_whole_family_morning_comfort_snapshot_01"
+        }
+      }
+    ]
+  },
+  "vdev_actions": [
+    {
+      "action_id": "A1",
+      "type": "read_sensor",
+      "protocol": "BLE",
+      "critical": true,
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "ble_device",
+      "target": {
+        "id": "ble:airthings_ble:living_room_air_quality",
+        "kind": "ble_device",
+        "device_id": "ble:airthings_ble:living_room_air_quality"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "read_sensor",
+        "data_template": {
+          "device_id": "ble:airthings_ble:living_room_air_quality"
+        }
+      }
+    },
+    {
+      "action_id": "A2",
+      "type": "read_sensor",
+      "protocol": "BLE",
+      "critical": true,
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "ble_device",
+      "target": {
+        "id": "ble:ruuvitag_ble:bedroom_environment",
+        "kind": "ble_device",
+        "device_id": "ble:ruuvitag_ble:bedroom_environment"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "read_sensor",
+        "data_template": {
+          "device_id": "ble:ruuvitag_ble:bedroom_environment"
+        }
+      }
+    },
+    {
+      "action_id": "A3",
+      "type": "read_sensor",
+      "protocol": "BLE",
+      "critical": true,
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "ble_device",
+      "target": {
+        "id": "ble:ruuvitag_ble:kids_room_environment",
+        "kind": "ble_device",
+        "device_id": "ble:ruuvitag_ble:kids_room_environment"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "read_sensor",
+        "data_template": {
+          "device_id": "ble:ruuvitag_ble:kids_room_environment"
+        }
+      }
+    },
+    {
+      "action_id": "A4",
+      "type": "read_sensor",
+      "protocol": "BLE",
+      "critical": true,
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "ble_device",
+      "target": {
+        "id": "ble:thermobeacon:hallway_environment",
+        "kind": "ble_device",
+        "device_id": "ble:thermobeacon:hallway_environment"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "read_sensor",
+        "data_template": {
+          "device_id": "ble:thermobeacon:hallway_environment"
+        }
+      }
+    },
+    {
+      "action_id": "A5",
+      "type": "refresh_cover",
+      "protocol": "BLE",
+      "critical": true,
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "ble_device",
+      "target": {
+        "id": "ble:switchbot:living_room_curtain_left",
+        "kind": "ble_device",
+        "device_id": "ble:switchbot:living_room_curtain_left"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "cover",
+        "service": "refresh_cover",
+        "data_template": {
+          "device_id": "ble:switchbot:living_room_curtain_left"
+        }
+      }
+    },
+    {
+      "action_id": "A6",
+      "type": "refresh_cover",
+      "protocol": "BLE",
+      "critical": true,
+      "marker_hints": [
+        "BLE_OP",
+        "BLE_GATT_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "ble_device",
+      "target": {
+        "id": "ble:switchbot:living_room_curtain_right",
+        "kind": "ble_device",
+        "device_id": "ble:switchbot:living_room_curtain_right"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "cover",
+        "service": "refresh_cover",
+        "data_template": {
+          "device_id": "ble:switchbot:living_room_curtain_right"
+        }
+      }
+    },
+    {
+      "action_id": "A7",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:light.living_room_morning_1.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:light.living_room_morning_1.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "light",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:light.living_room_morning_1.status",
+          "endpoint_group_key": "whole_family_morning_comfort_snapshot_01_tuya_light",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A8",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:light.living_room_morning_2.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:light.living_room_morning_2.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "light",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:light.living_room_morning_2.status",
+          "endpoint_group_key": "whole_family_morning_comfort_snapshot_01_tuya_light",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A9",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:climate.kids_room_ac.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:climate.kids_room_ac.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "climate",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:climate.kids_room_ac.status",
+          "endpoint_group_key": "whole_family_morning_comfort_snapshot_01_tuya_climate",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A10",
+      "type": "read_runtime",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "netatmo",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "POLL_UPDATE",
+        "CLOUD_HTTP_CALL"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "netatmo:station.indoor_environment",
+        "kind": "cloud_endpoint",
+        "endpoint": "netatmo:station.indoor_environment"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "read_runtime",
+        "provider": "netatmo",
+        "data_template": {
+          "endpoint": "netatmo:station.indoor_environment",
+          "endpoint_group_key": "whole_family_morning_comfort_snapshot_01_netatmo",
+          "host_group_key": "netatmo"
+        }
+      }
+    },
+    {
+      "action_id": "A11",
+      "type": "get_state",
+      "protocol": "LOCAL",
+      "critical": true,
+      "idempotent": true,
+      "provider": "hue_local",
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "local_endpoint",
+      "target": {
+        "id": "hue:bridge_1:living_room_group",
+        "kind": "local_endpoint",
+        "endpoint": "hue:bridge_1:living_room_group",
+        "provider": "hue_local"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "light",
+        "service": "get_state",
+        "provider": "hue_local",
+        "data_template": {
+          "endpoint": "hue:bridge_1:living_room_group",
+          "endpoint_group_key": "bridge_1",
+          "host_group_key": "hue_bridge_1"
+        }
+      }
+    },
+    {
+      "action_id": "A12",
+      "type": "get_state",
+      "protocol": "LOCAL",
+      "critical": true,
+      "idempotent": true,
+      "provider": "hue_local",
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "local_endpoint",
+      "target": {
+        "id": "hue:bridge_1:dining_room_group",
+        "kind": "local_endpoint",
+        "endpoint": "hue:bridge_1:dining_room_group",
+        "provider": "hue_local"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "light",
+        "service": "get_state",
+        "provider": "hue_local",
+        "data_template": {
+          "endpoint": "hue:bridge_1:dining_room_group",
+          "endpoint_group_key": "bridge_1",
+          "host_group_key": "hue_bridge_1"
+        }
+      }
+    },
+    {
+      "action_id": "A13",
+      "type": "get_state",
+      "protocol": "LOCAL",
+      "critical": true,
+      "idempotent": true,
+      "provider": "nanoleaf_local",
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "local_endpoint",
+      "target": {
+        "id": "nanoleaf:panel.family_room",
+        "kind": "local_endpoint",
+        "endpoint": "nanoleaf:panel.family_room",
+        "provider": "nanoleaf_local"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "light",
+        "service": "get_state",
+        "provider": "nanoleaf_local",
+        "data_template": {
+          "endpoint": "nanoleaf:panel.family_room",
+          "endpoint_group_key": "whole_family_morning_comfort_snapshot_01_nanoleaf",
+          "host_group_key": "nanoleaf_local"
+        }
+      }
+    },
+    {
+      "action_id": "A14",
+      "type": "write",
+      "protocol": "HA",
+      "critical": true,
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "side_effects": [
+        "state_write"
+      ],
+      "target_kind": "ha_entity",
+      "target": {
+        "entity_id": "sensor.vdev_whole_family_morning_comfort_snapshot_01_ble_lane",
+        "id": "sensor.vdev_whole_family_morning_comfort_snapshot_01_ble_lane",
+        "kind": "ha_entity"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "publish",
+        "data_template": {
+          "entity_id": "sensor.vdev_whole_family_morning_comfort_snapshot_01_ble_lane"
+        }
+      }
+    },
+    {
+      "action_id": "A15",
+      "type": "write",
+      "protocol": "HA",
+      "critical": true,
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "side_effects": [
+        "state_write"
+      ],
+      "target_kind": "ha_entity",
+      "target": {
+        "entity_id": "sensor.vdev_whole_family_morning_comfort_snapshot_01_cloud_lane",
+        "id": "sensor.vdev_whole_family_morning_comfort_snapshot_01_cloud_lane",
+        "kind": "ha_entity"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "publish",
+        "data_template": {
+          "entity_id": "sensor.vdev_whole_family_morning_comfort_snapshot_01_cloud_lane"
+        }
+      }
+    },
+    {
+      "action_id": "A16",
+      "type": "write",
+      "protocol": "HA",
+      "critical": true,
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "side_effects": [
+        "state_write"
+      ],
+      "target_kind": "ha_entity",
+      "target": {
+        "entity_id": "sensor.vdev_whole_family_morning_comfort_snapshot_01_local_lane",
+        "id": "sensor.vdev_whole_family_morning_comfort_snapshot_01_local_lane",
+        "kind": "ha_entity"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "publish",
+        "data_template": {
+          "entity_id": "sensor.vdev_whole_family_morning_comfort_snapshot_01_local_lane"
+        }
+      }
+    },
+    {
+      "action_id": "A17",
+      "type": "write",
+      "protocol": "HA",
+      "critical": true,
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "side_effects": [
+        "state_write"
+      ],
+      "target_kind": "ha_entity",
+      "target": {
+        "entity_id": "sensor.vdev_whole_family_morning_comfort_snapshot_01_overall",
+        "id": "sensor.vdev_whole_family_morning_comfort_snapshot_01_overall",
+        "kind": "ha_entity"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "publish",
+        "data_template": {
+          "entity_id": "sensor.vdev_whole_family_morning_comfort_snapshot_01_overall"
+        }
+      }
+    }
+  ],
+  "target_anchors": {
+    "device_ids": [
+      "ble:airthings_ble:living_room_air_quality",
+      "ble:ruuvitag_ble:bedroom_environment",
+      "ble:ruuvitag_ble:kids_room_environment",
+      "ble:thermobeacon:hallway_environment",
+      "ble:switchbot:living_room_curtain_left",
+      "ble:switchbot:living_room_curtain_right"
+    ],
+    "endpoints": [
+      "tuya:light.living_room_morning_1.status",
+      "tuya:light.living_room_morning_2.status",
+      "tuya:climate.kids_room_ac.status",
+      "netatmo:station.indoor_environment"
+    ],
+    "entities": [
+      "sensor.vdev_whole_family_morning_comfort_snapshot_01_ble_lane",
+      "sensor.vdev_whole_family_morning_comfort_snapshot_01_cloud_lane",
+      "sensor.vdev_whole_family_morning_comfort_snapshot_01_local_lane",
+      "sensor.vdev_whole_family_morning_comfort_snapshot_01_overall"
+    ],
+    "characteristics": [],
+    "required_state_writes": [
+      "sensor.vdev_whole_family_morning_comfort_snapshot_01_ble_lane",
+      "sensor.vdev_whole_family_morning_comfort_snapshot_01_cloud_lane",
+      "sensor.vdev_whole_family_morning_comfort_snapshot_01_local_lane",
+      "sensor.vdev_whole_family_morning_comfort_snapshot_01_overall"
+    ],
+    "service_entrypoints": [
+      "floweaver.run_whole_family_morning_comfort_snapshot_01"
+    ],
+    "anchor_ops": [
+      "BLE_GATT_OP",
+      "BLE_OP",
+      "CLOUD_HTTP_CALL",
+      "CLOUD_OP",
+      "CLOUD_STATUS_CALL",
+      "LOCAL_API_READ",
+      "POLL_UPDATE",
+      "STATE_WRITE"
+    ]
+  },
+  "entrypoint": {
+    "kind": "ha_service",
+    "service": {
+      "domain": "floweaver",
+      "name": "run_whole_family_morning_comfort_snapshot_01"
+    }
+  },
+  "objectives": {
+    "primary": "minimize_tail_latency_for_profile_coverage_routine",
+    "metrics": {
+      "e2e_latency_ms": {
+        "p95": 2800
+      }
+    }
+  },
+  "constraints": {
+    "source_protocols": [
+      "BLE",
+      "CLOUD",
+      "HA",
+      "LOCAL"
+    ],
+    "optimization_knobs": {
+      "allow_concurrency": true,
+      "max_concurrency": {
+        "ble": 1,
+        "cloud": 4,
+        "local": 6,
+        "total": 10
+      }
+    }
+  },
+  "validation": {
+    "differential_tests": {
+      "enabled": true,
+      "runs_per_scenario": 2,
+      "scenarios": [
+        "baseline_happy_path",
+        "fault_cloud_429",
+        "fault_ble_disconnect"
+      ]
+    },
+    "fault_model": {
+      "ble_disconnect": true,
+      "cloud_429": true,
+      "network_jitter": true
+    },
+    "observation": {
+      "canonicalization_version": "v1",
+      "equivalence_whitelist": [
+        "COALESCE_STATE_WRITE"
+      ],
+      "semantic_ops": [
+        "ENTRY_SETUP",
+        "COORD_REFRESH",
+        "STATE_WRITE",
+        "SUBSCRIBE",
+        "UNSUBSCRIBE",
+        "MQTT_SUBSCRIBE",
+        "BLE_CONNECT",
+        "BLE_DISCONNECT",
+        "BLE_NOTIFY_SUBSCRIBE",
+        "BLE_OP",
+        "BLE_GATT_OP",
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_429_CHECK",
+        "CLOUD_BACKOFF_SLEEP",
+        "CLOUD_BATCH_CALL",
+        "CLOUD_SESSION_REUSE",
+        "LOCAL_API_READ",
+        "POLL_UPDATE"
+      ]
+    },
+    "llm_detector": {
+      "enabled": true,
+      "timeout_s": 45,
+      "max_attempts": 0,
+      "retry_backoff_s": 0.5
+    },
+    "profile_version": "ha_profile_default",
+    "sampling": {},
+    "source_protocols": [
+      "BLE",
+      "CLOUD",
+      "HA",
+      "LOCAL"
+    ]
+  },
+  "hard_dependencies": [
+    {
+      "before": "A1",
+      "after": "A14",
+      "reason": "ble_write_depends_on_a1"
+    },
+    {
+      "before": "A2",
+      "after": "A14",
+      "reason": "ble_write_depends_on_a2"
+    },
+    {
+      "before": "A3",
+      "after": "A14",
+      "reason": "ble_write_depends_on_a3"
+    },
+    {
+      "before": "A4",
+      "after": "A14",
+      "reason": "ble_write_depends_on_a4"
+    },
+    {
+      "before": "A5",
+      "after": "A14",
+      "reason": "ble_write_depends_on_a5"
+    },
+    {
+      "before": "A6",
+      "after": "A14",
+      "reason": "ble_write_depends_on_a6"
+    },
+    {
+      "before": "A7",
+      "after": "A15",
+      "reason": "cloud_write_depends_on_a7"
+    },
+    {
+      "before": "A8",
+      "after": "A15",
+      "reason": "cloud_write_depends_on_a8"
+    },
+    {
+      "before": "A9",
+      "after": "A15",
+      "reason": "cloud_write_depends_on_a9"
+    },
+    {
+      "before": "A10",
+      "after": "A15",
+      "reason": "cloud_write_depends_on_a10"
+    },
+    {
+      "before": "A11",
+      "after": "A16",
+      "reason": "local_write_depends_on_a11"
+    },
+    {
+      "before": "A12",
+      "after": "A16",
+      "reason": "local_write_depends_on_a12"
+    },
+    {
+      "before": "A13",
+      "after": "A16",
+      "reason": "local_write_depends_on_a13"
+    },
+    {
+      "before": "A14",
+      "after": "A17",
+      "reason": "overall_write_depends_on_ble_lane"
+    },
+    {
+      "before": "A15",
+      "after": "A17",
+      "reason": "overall_write_depends_on_cloud_lane"
+    },
+    {
+      "before": "A16",
+      "after": "A17",
+      "reason": "overall_write_depends_on_local_lane"
+    }
+  ],
+  "soft_dependencies": [
+    {
+      "before": "A1",
+      "after": "A2",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A1",
+      "after": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A1",
+      "after": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A1",
+      "after": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A1",
+      "after": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A2",
+      "after": "A3",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A2",
+      "after": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A2",
+      "after": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A2",
+      "after": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A3",
+      "after": "A4",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A3",
+      "after": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A3",
+      "after": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A4",
+      "after": "A5",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A4",
+      "after": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    },
+    {
+      "before": "A5",
+      "after": "A6",
+      "reason": "shared_radio_or_transport_budget"
+    }
+  ],
+  "critical_action_ids": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "A8",
+    "A9",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15",
+    "A16",
+    "A17"
+  ]
+}

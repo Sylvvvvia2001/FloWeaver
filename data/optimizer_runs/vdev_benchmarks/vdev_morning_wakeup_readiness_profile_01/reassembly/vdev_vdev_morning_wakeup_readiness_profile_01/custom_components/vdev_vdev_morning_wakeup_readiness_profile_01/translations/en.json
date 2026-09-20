@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_morning_wakeup_readiness_profile_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Morning Wake-Up Readiness Profile Coverage"
+}

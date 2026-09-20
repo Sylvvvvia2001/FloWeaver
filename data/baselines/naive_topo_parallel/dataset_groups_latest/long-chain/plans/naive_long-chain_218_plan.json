@@ -1,0 +1,205 @@
+{
+  "meta": {
+    "action_lanes": {
+      "A_ha_local": "HA",
+      "A_local_001": "LOCAL",
+      "A_local_002": "LOCAL",
+      "A_local_003": "LOCAL",
+      "A_local_004": "LOCAL",
+      "A_local_005": "LOCAL",
+      "A_local_006": "LOCAL",
+      "A_local_007": "LOCAL",
+      "A_local_008": "LOCAL",
+      "A_local_009": "LOCAL",
+      "A_local_010": "LOCAL",
+      "A_local_011": "LOCAL",
+      "A_local_012": "LOCAL",
+      "A_local_013": "LOCAL",
+      "A_local_014": "LOCAL",
+      "A_local_015": "LOCAL",
+      "A_local_016": "LOCAL",
+      "A_local_017": "LOCAL",
+      "A_local_018": "LOCAL",
+      "A_local_019": "LOCAL",
+      "A_local_020": "LOCAL",
+      "A_local_021": "LOCAL",
+      "A_local_022": "LOCAL",
+      "A_local_023": "LOCAL",
+      "A_local_024": "LOCAL",
+      "A_local_025": "LOCAL",
+      "A_local_026": "LOCAL",
+      "A_local_027": "LOCAL",
+      "A_local_028": "LOCAL",
+      "A_local_029": "LOCAL",
+      "A_local_030": "LOCAL",
+      "A_local_031": "LOCAL",
+      "A_local_032": "LOCAL",
+      "A_local_033": "LOCAL"
+    },
+    "baseline": "naive_topo_parallel",
+    "micro_applicable": false,
+    "node_kind": "action_id",
+    "policy": {
+      "ble_parallel": 1,
+      "cloud_parallel": 4,
+      "local_parallel": 4,
+      "max_parallel": 4
+    }
+  },
+  "ordered_batches": [
+    {
+      "batch_id": "naive_batch_000",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_local_001",
+          "A_local_002",
+          "A_local_003",
+          "A_local_004"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_001",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_local_005",
+          "A_local_006",
+          "A_local_007",
+          "A_local_008"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_002",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_local_009",
+          "A_local_010",
+          "A_local_011",
+          "A_local_012"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_003",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_local_013",
+          "A_local_014",
+          "A_local_015",
+          "A_local_016"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_004",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_local_017",
+          "A_local_018",
+          "A_local_019",
+          "A_local_020"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_005",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_local_021",
+          "A_local_022",
+          "A_local_023",
+          "A_local_024"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_006",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_local_025",
+          "A_local_026",
+          "A_local_027",
+          "A_local_028"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_007",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_local_029",
+          "A_local_030",
+          "A_local_031",
+          "A_local_032"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_008",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_local_033"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    },
+    {
+      "batch_id": "naive_batch_009",
+      "constraints": [],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A_ha_local"
+        ]
+      ],
+      "rate_policy": {},
+      "session_policy": {}
+    }
+  ]
+}

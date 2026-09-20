@@ -1,0 +1,187 @@
+[
+  {
+    "alignment_status": "PARTIAL",
+    "counterexample_id": "cex_4a14dda1f2",
+    "culprit_ids": [
+      "RUNTIME:HA:STATE_WRITE:smart-home:vdev_weekend_whole_home_snapshot_01:m6:plug_state"
+    ],
+    "diff_summary": {
+      "baseline_state_at_divergence": {
+        "exception_category": null,
+        "resource_keys": [],
+        "state_writes": {
+          "smart-home:vdev_weekend_whole_home_snapshot_01:m6:light_state": {
+            "action_id": "A_light_write"
+          },
+          "smart-home:vdev_weekend_whole_home_snapshot_01:m6:plug_state": {
+            "action_id": "A_plug_write"
+          }
+        }
+      },
+      "baseline_trace_prefix": [
+        {
+          "corr_id": null,
+          "op": "DEVICE_COMMAND",
+          "params_abst": {
+            "action_id": "A_light_cmd"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "smart-home:vdev_weekend_whole_home_snapshot_01:m6:light",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "STATE_WRITE",
+          "params_abst": {
+            "action_id": "A_light_write"
+          },
+          "phase": "RUNTIME",
+          "provider": "HA",
+          "target": "smart-home:vdev_weekend_whole_home_snapshot_01:m6:light_state",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "DEVICE_COMMAND",
+          "params_abst": {
+            "action_id": "A_plug_cmd"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "smart-home:vdev_weekend_whole_home_snapshot_01:m6:plug",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "STATE_WRITE",
+          "params_abst": {
+            "action_id": "A_plug_write"
+          },
+          "phase": "RUNTIME",
+          "provider": "HA",
+          "target": "smart-home:vdev_weekend_whole_home_snapshot_01:m6:plug_state",
+          "ts": 0.0
+        }
+      ],
+      "counterexample_verdict": "DIFF_FOUND",
+      "divergence_point": {
+        "details": {
+          "compare_meta": {
+            "canonicalization_version": "v1",
+            "commutable_ops": [
+              "COORD_REFRESH",
+              "STATE_WRITE"
+            ],
+            "config_hash": "9285a670239fb92a",
+            "equivalence_rules": [],
+            "parallel_action_scopes": []
+          },
+          "diff_hunks": [
+            {
+              "anchor": "RUNTIME:HA:STATE_WRITE:smart-home:vdev_weekend_whole_home_snapshot_01:m6:plug_state",
+              "baseline_ops": [
+                "RUNTIME:HA:STATE_WRITE:smart-home:vdev_weekend_whole_home_snapshot_01:m6:plug_state"
+              ],
+              "optimized_ops": [],
+              "severity": "HIGH"
+            }
+          ]
+        },
+        "kind": "SPLIT",
+        "reason": "trace_prefix_mismatch",
+        "step": 3,
+        "useg_node_id": "useg_0003"
+      },
+      "environment_assumptions": {
+        "framework_events": [
+          "runtime"
+        ],
+        "path_assumptions": [
+          "scenario:mut_103"
+        ],
+        "suspicious_region_id": "sr_001",
+        "toggle_assumptions": {
+          "mutation_type": "M6_wrong_batching_writeback_merge"
+        }
+      },
+      "hunks": [
+        {
+          "anchor": "RUNTIME:HA:STATE_WRITE:smart-home:vdev_weekend_whole_home_snapshot_01:m6:plug_state",
+          "baseline_ops": [
+            "RUNTIME:HA:STATE_WRITE:smart-home:vdev_weekend_whole_home_snapshot_01:m6:plug_state"
+          ],
+          "optimized_ops": [
+            "RUNTIME:HA:STATE_WRITE:smart-home:vdev_weekend_whole_home_snapshot_01:m6:light_state"
+          ],
+          "severity": "HIGH"
+        }
+      ],
+      "inferred_by": "check_observation_schema_or_alignment_rule",
+      "input_assumptions": {
+        "symbolic_inputs": {
+          "scenario_id": "mut_103"
+        }
+      },
+      "kind": "order_violation",
+      "minimal_conditions": [
+        "scenario:mut_103",
+        "symbolic_inputs.scenario_id=mut_103",
+        "toggle_assumptions.mutation_type=M6_wrong_batching_writeback_merge",
+        "framework_event:runtime"
+      ],
+      "optimized_state_at_divergence": {
+        "exception_category": null,
+        "resource_keys": [],
+        "state_writes": {
+          "smart-home:vdev_weekend_whole_home_snapshot_01:m6:light_state": {
+            "action_id": "A_light_write"
+          }
+        }
+      },
+      "optimized_trace_prefix": [
+        {
+          "corr_id": null,
+          "op": "DEVICE_COMMAND",
+          "params_abst": {
+            "action_id": "A_light_cmd"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "smart-home:vdev_weekend_whole_home_snapshot_01:m6:light",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "STATE_WRITE",
+          "params_abst": {
+            "action_id": "A_light_write"
+          },
+          "phase": "RUNTIME",
+          "provider": "HA",
+          "target": "smart-home:vdev_weekend_whole_home_snapshot_01:m6:light_state",
+          "ts": 0.0
+        },
+        {
+          "corr_id": null,
+          "op": "DEVICE_COMMAND",
+          "params_abst": {
+            "action_id": "A_plug_cmd"
+          },
+          "phase": "RUNTIME",
+          "provider": "BLE",
+          "target": "smart-home:vdev_weekend_whole_home_snapshot_01:m6:plug",
+          "ts": 0.0
+        }
+      ],
+      "refinement_hint": "check_observation_schema_or_alignment_rule",
+      "suspicious_region_id": "sr_001",
+      "violated_property": "TRACE_MISMATCH"
+    },
+    "execution_plan_hash": null,
+    "scenario_id": "mut_103",
+    "suspicious_region_count": 5,
+    "trust_plan_hash": null,
+    "violated_assertion": "observable_semantic_equivalence"
+  }
+]

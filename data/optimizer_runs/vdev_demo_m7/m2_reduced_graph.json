@@ -1,0 +1,456 @@
+{
+  "edges": [
+    {
+      "dst": "3bfe9039:async_setup_entry:1:6",
+      "edge_type": "CFG_NEXT",
+      "src": "3bfe9039:async_setup_entry:0:5"
+    },
+    {
+      "dst": "3bfe9039:async_setup_entry:1:6",
+      "edge_type": "DATA_DEP",
+      "src": "3bfe9039:async_setup_entry:0:5"
+    },
+    {
+      "dst": "3bfe9039:async_setup_entry:2:7",
+      "edge_type": "CFG_NEXT",
+      "src": "3bfe9039:async_setup_entry:1:6"
+    },
+    {
+      "dst": "3bfe9039:async_setup_entry:2:7",
+      "edge_type": "DATA_DEP",
+      "src": "3bfe9039:async_setup_entry:0:5"
+    },
+    {
+      "dst": "3bfe9039:async_setup_entry:3:8",
+      "edge_type": "CFG_NEXT",
+      "src": "3bfe9039:async_setup_entry:2:7"
+    },
+    {
+      "dst": "3bfe9039:async_setup_entry:3:8",
+      "edge_type": "DATA_DEP",
+      "src": "3bfe9039:async_setup_entry:2:7"
+    },
+    {
+      "dst": "3bfe9039:async_unload_entry:1:16",
+      "edge_type": "CFG_NEXT",
+      "src": "3bfe9039:async_unload_entry:0:15"
+    },
+    {
+      "dst": "3bfe9039:async_unload_entry:1:16",
+      "edge_type": "DATA_DEP",
+      "src": "3bfe9039:async_unload_entry:0:15"
+    },
+    {
+      "dst": "3bfe9039:_async_update_data:1:31",
+      "edge_type": "CFG_NEXT",
+      "src": "3bfe9039:_async_update_data:0:30"
+    },
+    {
+      "dst": "3bfe9039:_async_update_data:1:31",
+      "edge_type": "DATA_DEP",
+      "src": "3bfe9039:_async_update_data:0:30"
+    },
+    {
+      "dst": "3bfe9039:async_setup_entry:3:8",
+      "edge_type": "LIFECYCLE_DEP",
+      "src": "3bfe9039:async_setup_entry:1:6"
+    },
+    {
+      "dst": "ac792e94:async_setup_entry:1:6",
+      "edge_type": "CFG_NEXT",
+      "src": "ac792e94:async_setup_entry:0:5"
+    },
+    {
+      "dst": "ac792e94:async_setup_entry:2:7",
+      "edge_type": "CFG_NEXT",
+      "src": "ac792e94:async_setup_entry:1:6"
+    },
+    {
+      "dst": "ac792e94:async_setup_entry:2:7",
+      "edge_type": "DATA_DEP",
+      "src": "ac792e94:async_setup_entry:1:6"
+    },
+    {
+      "dst": "ac792e94:async_unload_entry:1:13",
+      "edge_type": "CFG_NEXT",
+      "src": "ac792e94:async_unload_entry:0:12"
+    },
+    {
+      "dst": "ac792e94:async_unload_entry:1:13",
+      "edge_type": "DATA_DEP",
+      "src": "ac792e94:async_unload_entry:0:12"
+    }
+  ],
+  "kept_nodes": [
+    "3bfe9039:_async_update_data:0:30",
+    "3bfe9039:_async_update_data:1:31",
+    "3bfe9039:async_setup_entry:0:5",
+    "3bfe9039:async_setup_entry:1:6",
+    "3bfe9039:async_setup_entry:2:7",
+    "3bfe9039:async_setup_entry:3:8",
+    "3bfe9039:async_unload_entry:0:15",
+    "3bfe9039:async_unload_entry:1:16",
+    "ac792e94:async_setup_entry:0:5",
+    "ac792e94:async_setup_entry:1:6",
+    "ac792e94:async_setup_entry:2:7",
+    "ac792e94:async_unload_entry:0:12",
+    "ac792e94:async_unload_entry:1:13"
+  ],
+  "mapping": {
+    "3bfe9039:_async_update_data:0:30": {
+      "file": "data/repo_snapshot/demo_integration.py",
+      "function": "_async_update_data",
+      "line_end": 30,
+      "line_start": 30
+    },
+    "3bfe9039:_async_update_data:1:31": {
+      "file": "data/repo_snapshot/demo_integration.py",
+      "function": "_async_update_data",
+      "line_end": 34,
+      "line_start": 31
+    },
+    "3bfe9039:async_setup_entry:0:5": {
+      "file": "data/repo_snapshot/demo_integration.py",
+      "function": "async_setup_entry",
+      "line_end": 5,
+      "line_start": 5
+    },
+    "3bfe9039:async_setup_entry:1:6": {
+      "file": "data/repo_snapshot/demo_integration.py",
+      "function": "async_setup_entry",
+      "line_end": 6,
+      "line_start": 6
+    },
+    "3bfe9039:async_setup_entry:2:7": {
+      "file": "data/repo_snapshot/demo_integration.py",
+      "function": "async_setup_entry",
+      "line_end": 7,
+      "line_start": 7
+    },
+    "3bfe9039:async_setup_entry:3:8": {
+      "file": "data/repo_snapshot/demo_integration.py",
+      "function": "async_setup_entry",
+      "line_end": 8,
+      "line_start": 8
+    },
+    "3bfe9039:async_unload_entry:0:15": {
+      "file": "data/repo_snapshot/demo_integration.py",
+      "function": "async_unload_entry",
+      "line_end": 15,
+      "line_start": 15
+    },
+    "3bfe9039:async_unload_entry:1:16": {
+      "file": "data/repo_snapshot/demo_integration.py",
+      "function": "async_unload_entry",
+      "line_end": 16,
+      "line_start": 16
+    },
+    "ac792e94:async_setup_entry:0:5": {
+      "file": "data/repo_snapshot/demo_cloud_integration.py",
+      "function": "async_setup_entry",
+      "line_end": 5,
+      "line_start": 5
+    },
+    "ac792e94:async_setup_entry:1:6": {
+      "file": "data/repo_snapshot/demo_cloud_integration.py",
+      "function": "async_setup_entry",
+      "line_end": 6,
+      "line_start": 6
+    },
+    "ac792e94:async_setup_entry:2:7": {
+      "file": "data/repo_snapshot/demo_cloud_integration.py",
+      "function": "async_setup_entry",
+      "line_end": 7,
+      "line_start": 7
+    },
+    "ac792e94:async_unload_entry:0:12": {
+      "file": "data/repo_snapshot/demo_cloud_integration.py",
+      "function": "async_unload_entry",
+      "line_end": 12,
+      "line_start": 12
+    },
+    "ac792e94:async_unload_entry:1:13": {
+      "file": "data/repo_snapshot/demo_cloud_integration.py",
+      "function": "async_unload_entry",
+      "line_end": 13,
+      "line_start": 13
+    }
+  },
+  "nodes": {
+    "3bfe9039:_async_update_data:0:30": {
+      "defs": [
+        "client"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/demo_integration.py",
+      "function_name": "_async_update_data",
+      "line_end": 30,
+      "line_start": 30,
+      "marker_refs": [
+        "marker_fc085a3aa9"
+      ],
+      "node_id": "3bfe9039:_async_update_data:0:30",
+      "raw_repr": "Assign([Name('client', Store())], Call(Attribute(Attribute(Attribute(Name('self', Load()), 'hass', Load()), 'data', Load()), 'get', Load()), [Constant('client')]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "3bfe9039:_async_update_data:1:31": {
+      "defs": [],
+      "effects": [
+        "external_call_ble"
+      ],
+      "file_path": "data/repo_snapshot/demo_integration.py",
+      "function_name": "_async_update_data",
+      "line_end": 34,
+      "line_start": 31,
+      "marker_refs": [
+        "marker_5ccea175cd",
+        "marker_fdaa35596a",
+        "marker_5aeace2cd4"
+      ],
+      "node_id": "3bfe9039:_async_update_data:1:31",
+      "raw_repr": "If(Name('client', Load()), [Expr(Await(Call(Attribute(Name('client', Load()), 'connect', Load())))), Expr(Await(Call(Attribute(Name('client', Load()), 'read_gatt_char', Load()), [Constant('temp')]))), Expr(Await(Call(Attribute(Name('client', Load()), 'disconnect', Load()))))])",
+      "stmt_kind": "If",
+      "uses": [
+        "client"
+      ]
+    },
+    "3bfe9039:async_setup_entry:0:5": {
+      "defs": [
+        "coordinator"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/demo_integration.py",
+      "function_name": "async_setup_entry",
+      "line_end": 5,
+      "line_start": 5,
+      "marker_refs": [
+        "marker_57651508dc"
+      ],
+      "node_id": "3bfe9039:async_setup_entry:0:5",
+      "raw_repr": "Assign([Name('coordinator', Store())], Call(Name('DemoCoordinator', Load()), [Name('hass', Load())]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "DemoCoordinator",
+        "hass"
+      ]
+    },
+    "3bfe9039:async_setup_entry:1:6": {
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/demo_integration.py",
+      "function_name": "async_setup_entry",
+      "line_end": 6,
+      "line_start": 6,
+      "marker_refs": [
+        "marker_57651508dc",
+        "marker_5304861a13"
+      ],
+      "node_id": "3bfe9039:async_setup_entry:1:6",
+      "raw_repr": "Expr(Await(Call(Attribute(Name('coordinator', Load()), 'async_config_entry_first_refresh', Load()))))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "coordinator"
+      ]
+    },
+    "3bfe9039:async_setup_entry:2:7": {
+      "defs": [
+        "entity"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/demo_integration.py",
+      "function_name": "async_setup_entry",
+      "line_end": 7,
+      "line_start": 7,
+      "marker_refs": [
+        "marker_57651508dc"
+      ],
+      "node_id": "3bfe9039:async_setup_entry:2:7",
+      "raw_repr": "Assign([Name('entity', Store())], Call(Name('DemoEntity', Load()), [Name('coordinator', Load())]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "DemoEntity",
+        "coordinator"
+      ]
+    },
+    "3bfe9039:async_setup_entry:3:8": {
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/demo_integration.py",
+      "function_name": "async_setup_entry",
+      "line_end": 8,
+      "line_start": 8,
+      "marker_refs": [
+        "marker_57651508dc",
+        "marker_e093aebcd4"
+      ],
+      "node_id": "3bfe9039:async_setup_entry:3:8",
+      "raw_repr": "Expr(Call(Attribute(Name('entity', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "entity"
+      ]
+    },
+    "3bfe9039:async_unload_entry:0:15": {
+      "defs": [
+        "data"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/demo_integration.py",
+      "function_name": "async_unload_entry",
+      "line_end": 15,
+      "line_start": 15,
+      "marker_refs": [
+        "marker_9dc1abe70d",
+        "marker_ac4f4dfe6c"
+      ],
+      "node_id": "3bfe9039:async_unload_entry:0:15",
+      "raw_repr": "Assign([Name('data', Store())], Call(Attribute(Attribute(Name('hass', Load()), 'data', Load()), 'get', Load()), [Attribute(Name('entry', Load()), 'entry_id', Load()), Dict()]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "entry",
+        "hass"
+      ]
+    },
+    "3bfe9039:async_unload_entry:1:16": {
+      "defs": [
+        "unsub"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/demo_integration.py",
+      "function_name": "async_unload_entry",
+      "line_end": 16,
+      "line_start": 16,
+      "marker_refs": [
+        "marker_9dc1abe70d",
+        "marker_da5dfbb04d"
+      ],
+      "node_id": "3bfe9039:async_unload_entry:1:16",
+      "raw_repr": "Assign([Name('unsub', Store())], Call(Attribute(Name('data', Load()), 'get', Load()), [Constant('unsub')]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "data"
+      ]
+    },
+    "ac792e94:async_setup_entry:0:5": {
+      "defs": [
+        "result"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/demo_cloud_integration.py",
+      "function_name": "async_setup_entry",
+      "line_end": 5,
+      "line_start": 5,
+      "marker_refs": [
+        "marker_14221eda6c",
+        "marker_7e23ab6e87"
+      ],
+      "node_id": "ac792e94:async_setup_entry:0:5",
+      "raw_repr": "Assign([Name('result', Store())], Await(Call(Attribute(Name('cloud_client', Load()), 'call_api', Load()), [Constant('tuya:device.control')])))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "cloud_client"
+      ]
+    },
+    "ac792e94:async_setup_entry:1:6": {
+      "defs": [
+        "entity"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/demo_cloud_integration.py",
+      "function_name": "async_setup_entry",
+      "line_end": 6,
+      "line_start": 6,
+      "marker_refs": [
+        "marker_14221eda6c"
+      ],
+      "node_id": "ac792e94:async_setup_entry:1:6",
+      "raw_repr": "Assign([Name('entity', Store())], Call(Name('DemoCloudEntity', Load())))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "DemoCloudEntity"
+      ]
+    },
+    "ac792e94:async_setup_entry:2:7": {
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/demo_cloud_integration.py",
+      "function_name": "async_setup_entry",
+      "line_end": 7,
+      "line_start": 7,
+      "marker_refs": [
+        "marker_14221eda6c",
+        "marker_856c1cc77e"
+      ],
+      "node_id": "ac792e94:async_setup_entry:2:7",
+      "raw_repr": "Expr(Call(Attribute(Name('entity', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "entity"
+      ]
+    },
+    "ac792e94:async_unload_entry:0:12": {
+      "defs": [
+        "data"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/demo_cloud_integration.py",
+      "function_name": "async_unload_entry",
+      "line_end": 12,
+      "line_start": 12,
+      "marker_refs": [
+        "marker_5f68eb7aa1",
+        "marker_20a09c3bfb"
+      ],
+      "node_id": "ac792e94:async_unload_entry:0:12",
+      "raw_repr": "Assign([Name('data', Store())], Call(Attribute(Attribute(Name('hass', Load()), 'data', Load()), 'get', Load()), [Attribute(Name('entry', Load()), 'entry_id', Load()), Dict()]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "entry",
+        "hass"
+      ]
+    },
+    "ac792e94:async_unload_entry:1:13": {
+      "defs": [
+        "unsub"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/demo_cloud_integration.py",
+      "function_name": "async_unload_entry",
+      "line_end": 13,
+      "line_start": 13,
+      "marker_refs": [
+        "marker_5f68eb7aa1",
+        "marker_eac653485d"
+      ],
+      "node_id": "ac792e94:async_unload_entry:1:13",
+      "raw_repr": "Assign([Name('unsub', Store())], Call(Attribute(Name('data', Load()), 'get', Load()), [Constant('unsub')]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "data"
+      ]
+    }
+  },
+  "source_files": [
+    "data/repo_snapshot/demo_integration.py",
+    "data/repo_snapshot/demo_cloud_integration.py"
+  ]
+}

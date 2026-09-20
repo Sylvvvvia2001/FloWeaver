@@ -1,0 +1,454 @@
+{
+  "vdev_id": "vdev_morning_wakeup_ramp_01",
+  "name": "Morning Wake-Up Ramp Routine",
+  "group": "Scene Activation and Comfort Control Routines",
+  "target_path": "data/targets/vdev_benchmarks/vdev_morning_wakeup_ramp_01.json",
+  "run_dir": "data/optimizer_runs/vdev_benchmarks/vdev_morning_wakeup_ramp_01",
+  "strict_pass": 6,
+  "tolerant_pass": 6,
+  "counterexample_count": 0,
+  "batch_count": 18,
+  "parallel_groups": {
+    "batch_000": [
+      [
+        "A1"
+      ]
+    ],
+    "batch_001": [
+      [
+        "A2"
+      ]
+    ],
+    "batch_002": [
+      [
+        "A3"
+      ]
+    ],
+    "batch_003": [
+      [
+        "A4"
+      ]
+    ],
+    "batch_004": [
+      [
+        "A5"
+      ]
+    ],
+    "batch_005": [
+      [
+        "A6"
+      ]
+    ],
+    "batch_006": [
+      [
+        "A7",
+        "A8",
+        "A9"
+      ],
+      [
+        "A10"
+      ]
+    ],
+    "batch_007": [
+      [
+        "A11",
+        "A12"
+      ],
+      [
+        "A13"
+      ]
+    ],
+    "batch_008": [
+      [
+        "A14"
+      ]
+    ],
+    "batch_009": [
+      [
+        "A15"
+      ]
+    ],
+    "batch_010": [
+      [
+        "A16"
+      ]
+    ],
+    "batch_011": [
+      [
+        "A17"
+      ]
+    ],
+    "batch_012": [
+      [
+        "A18"
+      ]
+    ],
+    "batch_013": [
+      [
+        "A19"
+      ],
+      [
+        "A20"
+      ]
+    ],
+    "batch_014": [
+      [
+        "A21"
+      ]
+    ],
+    "batch_015": [
+      [
+        "A22"
+      ]
+    ],
+    "batch_016": [
+      [
+        "A23"
+      ],
+      [
+        "A24"
+      ],
+      [
+        "A25"
+      ]
+    ],
+    "batch_017": [
+      [
+        "A26"
+      ]
+    ]
+  },
+  "batching_buckets": {
+    "batch_000": [],
+    "batch_001": [],
+    "batch_002": [],
+    "batch_003": [],
+    "batch_004": [],
+    "batch_005": [],
+    "batch_006": [
+      {
+        "bucket": "tuya|wakeup_light_controls",
+        "chunks": 2,
+        "group_key": "endpoint",
+        "max_batch_size": 3,
+        "max_wait_ms": 40,
+        "members": [
+          "A7",
+          "A8",
+          "A9",
+          "A10"
+        ],
+        "rule_kind": "BATCH_GROUP",
+        "size": 4
+      }
+    ],
+    "batch_007": [
+      {
+        "bucket": "tuya|wakeup_hvac_controls",
+        "chunks": 1,
+        "group_key": "endpoint",
+        "max_batch_size": 3,
+        "max_wait_ms": 40,
+        "members": [
+          "A11",
+          "A12"
+        ],
+        "rule_kind": "BATCH_GROUP",
+        "size": 2
+      }
+    ],
+    "batch_008": [],
+    "batch_009": [],
+    "batch_010": [],
+    "batch_011": [],
+    "batch_012": [],
+    "batch_013": [],
+    "batch_014": [],
+    "batch_015": [],
+    "batch_016": [],
+    "batch_017": []
+  },
+  "triggered_fallbacks": [
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A6"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A5",
+        "A6"
+      ]
+    },
+    {
+      "fallback": "serialize_local_api_reads",
+      "kind": "SAME_SESSION_GROUP",
+      "params": {
+        "group_key": "endpoint",
+        "reuse_window_ms": 5000,
+        "rule_id": "rule_protocol_local_api_budget",
+        "template_kind": "SAME_SESSION_GROUP"
+      },
+      "scope": [
+        "A20",
+        "A21"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:CONTROL_DEP"
+      },
+      "scope": [
+        "A20",
+        "A25"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:CONTROL_DEP"
+      },
+      "scope": [
+        "A21",
+        "A25"
+      ]
+    },
+    {
+      "fallback": "force_topological_local_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:DATA_DEP"
+      },
+      "scope": [
+        "A18"
+      ]
+    },
+    {
+      "fallback": "force_topological_local_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:DATA_DEP"
+      },
+      "scope": [
+        "A10",
+        "A7",
+        "A8",
+        "A9"
+      ]
+    },
+    {
+      "fallback": "force_topological_local_order",
+      "kind": "SOFT_ORDER",
+      "params": {
+        "reason": "candidate:CONTROL_DEP"
+      },
+      "scope": [
+        "A10",
+        "A7",
+        "A8",
+        "A9"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A2"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A3"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A4"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A5"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A1",
+        "A6"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A2",
+        "A3"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A2",
+        "A4"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A2",
+        "A5"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A2",
+        "A6"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A3",
+        "A5"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A3",
+        "A6"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A4",
+        "A5"
+      ]
+    },
+    {
+      "fallback": "preserve_action_order",
+      "kind": "MIN_GAP",
+      "params": {
+        "reason": "shared_radio_or_transport_budget"
+      },
+      "scope": [
+        "A4",
+        "A6"
+      ]
+    }
+  ],
+  "unknown_protocol_actions": [],
+  "status": "ok",
+  "run_id": "1bbe659fb7a04e6d8598a95ca56e49c6"
+}

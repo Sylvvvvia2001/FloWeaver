@@ -1,0 +1,567 @@
+{
+  "added_savings_ms": 108,
+  "added_savings_ratio": 0.05567010309278351,
+  "case_name": "Night Shutdown Routine",
+  "group": "Night and Energy Monitoring Routines",
+  "original_estimated_latency_ms": 1940,
+  "policy": {
+    "aggregate_async_safe_max_ms": 180,
+    "allow_cloud_auth_budget_overlap": true,
+    "allow_cloud_prepare_overlap": true,
+    "allow_local_prepare_overlap": true,
+    "availability_must_precede_write": true,
+    "cloud_backoff_wait_ms": 220,
+    "cloud_bucket_concurrency_limit": 1,
+    "cloud_control_min_corridor_latency_ms": 760,
+    "cloud_control_min_corridor_length": 2,
+    "cloud_host_concurrency_limit": 1,
+    "cloud_read_min_corridor_latency_ms": 700,
+    "cloud_read_min_corridor_length": 2,
+    "disallow_backoff_bypass": true,
+    "disallow_entity_level_overlap": true,
+    "disallow_parse_aggregate_cross_action_overlap": true,
+    "keep_writeback_serialized": true,
+    "local_endpoint_concurrency_limit": 1,
+    "local_http_control_min_corridor_latency_ms": 220,
+    "local_http_control_min_corridor_length": 2,
+    "local_http_read_min_corridor_latency_ms": 180,
+    "local_http_read_min_corridor_length": 2,
+    "local_session_concurrency_limit": 1,
+    "max_lookahead_steps": 1,
+    "min_corridor_latency_ms": 700,
+    "min_corridor_length": 2,
+    "mqtt_read_min_corridor_latency_ms": 220,
+    "mqtt_read_min_corridor_length": 3,
+    "parse_async_safe_max_ms": 220,
+    "preserve_refresh_cadence": true,
+    "require_coordinator_style_fetch": true,
+    "require_known_bucket_key": false,
+    "require_known_endpoint_key": false,
+    "require_known_host_key": true,
+    "require_known_session_key": true,
+    "require_shared_web_session": true,
+    "treat_mqtt_as_non_overlap_lane": true
+  },
+  "refined_estimated_latency_ms": 1832,
+  "selected_corridors": [
+    {
+      "action_ids": [
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A11"
+      ],
+      "batch_ids": [
+        "batch_006",
+        "batch_007"
+      ],
+      "corridor_id": "corridor_00",
+      "latency_saved_ms": 83,
+      "original_latency_ms": 820,
+      "overlap_candidate_pairs": 1,
+      "phase_kind": "CLOUD",
+      "protocol": "CLOUD",
+      "refined_events": [
+        {
+          "end_ms": 33,
+          "phase": "CLOUD_AUTH_CHECK",
+          "start_ms": 0,
+          "step_id": "batch_006"
+        },
+        {
+          "end_ms": 59,
+          "phase": "CLOUD_RATE_BUDGET_CHECK",
+          "start_ms": 33,
+          "step_id": "batch_006"
+        },
+        {
+          "end_ms": 109,
+          "phase": "API_PREPARE",
+          "start_ms": 59,
+          "step_id": "batch_006"
+        },
+        {
+          "end_ms": 135,
+          "phase": "API_SESSION_READY",
+          "start_ms": 109,
+          "step_id": "batch_006"
+        },
+        {
+          "end_ms": 240,
+          "phase": "CLOUD_REQUEST_SEND",
+          "start_ms": 135,
+          "step_id": "batch_006"
+        },
+        {
+          "end_ms": 336,
+          "phase": "API_RESPONSE_RECV",
+          "start_ms": 240,
+          "step_id": "batch_006"
+        },
+        {
+          "end_ms": 336,
+          "phase": "CLOUD_BACKOFF_WAIT",
+          "start_ms": 336,
+          "step_id": "batch_006"
+        },
+        {
+          "end_ms": 384,
+          "phase": "API_PARSE_NORMALIZE",
+          "start_ms": 336,
+          "step_id": "batch_006"
+        },
+        {
+          "end_ms": 421,
+          "phase": "API_AGGREGATE",
+          "start_ms": 384,
+          "step_id": "batch_006"
+        },
+        {
+          "end_ms": 447,
+          "phase": "CLOUD_BATCH_GROUP_COMMIT",
+          "start_ms": 421,
+          "step_id": "batch_006"
+        },
+        {
+          "end_ms": 470,
+          "phase": "HA_STATE_WRITE",
+          "start_ms": 447,
+          "step_id": "batch_006"
+        },
+        {
+          "end_ms": 278,
+          "phase": "CLOUD_AUTH_CHECK",
+          "start_ms": 253,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 298,
+          "phase": "CLOUD_RATE_BUDGET_CHECK",
+          "start_ms": 278,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 336,
+          "phase": "API_PREPARE",
+          "start_ms": 298,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 490,
+          "phase": "API_SESSION_READY",
+          "start_ms": 470,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 567,
+          "phase": "CLOUD_REQUEST_SEND",
+          "start_ms": 490,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 638,
+          "phase": "API_RESPONSE_RECV",
+          "start_ms": 567,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 638,
+          "phase": "CLOUD_BACKOFF_WAIT",
+          "start_ms": 638,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 674,
+          "phase": "API_PARSE_NORMALIZE",
+          "start_ms": 638,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 702,
+          "phase": "API_AGGREGATE",
+          "start_ms": 674,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 722,
+          "phase": "CLOUD_BATCH_GROUP_COMMIT",
+          "start_ms": 702,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 737,
+          "phase": "HA_STATE_WRITE",
+          "start_ms": 722,
+          "step_id": "batch_007"
+        }
+      ],
+      "refined_latency_ms": 737,
+      "serial_events": [
+        {
+          "end_ms": 33,
+          "phase": "CLOUD_AUTH_CHECK",
+          "start_ms": 0,
+          "step_id": "batch_006"
+        },
+        {
+          "end_ms": 59,
+          "phase": "CLOUD_RATE_BUDGET_CHECK",
+          "start_ms": 33,
+          "step_id": "batch_006"
+        },
+        {
+          "end_ms": 109,
+          "phase": "API_PREPARE",
+          "start_ms": 59,
+          "step_id": "batch_006"
+        },
+        {
+          "end_ms": 135,
+          "phase": "API_SESSION_READY",
+          "start_ms": 109,
+          "step_id": "batch_006"
+        },
+        {
+          "end_ms": 240,
+          "phase": "CLOUD_REQUEST_SEND",
+          "start_ms": 135,
+          "step_id": "batch_006"
+        },
+        {
+          "end_ms": 336,
+          "phase": "API_RESPONSE_RECV",
+          "start_ms": 240,
+          "step_id": "batch_006"
+        },
+        {
+          "end_ms": 336,
+          "phase": "CLOUD_BACKOFF_WAIT",
+          "start_ms": 336,
+          "step_id": "batch_006"
+        },
+        {
+          "end_ms": 384,
+          "phase": "API_PARSE_NORMALIZE",
+          "start_ms": 336,
+          "step_id": "batch_006"
+        },
+        {
+          "end_ms": 421,
+          "phase": "API_AGGREGATE",
+          "start_ms": 384,
+          "step_id": "batch_006"
+        },
+        {
+          "end_ms": 447,
+          "phase": "CLOUD_BATCH_GROUP_COMMIT",
+          "start_ms": 421,
+          "step_id": "batch_006"
+        },
+        {
+          "end_ms": 470,
+          "phase": "HA_STATE_WRITE",
+          "start_ms": 447,
+          "step_id": "batch_006"
+        },
+        {
+          "end_ms": 495,
+          "phase": "CLOUD_AUTH_CHECK",
+          "start_ms": 470,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 515,
+          "phase": "CLOUD_RATE_BUDGET_CHECK",
+          "start_ms": 495,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 553,
+          "phase": "API_PREPARE",
+          "start_ms": 515,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 573,
+          "phase": "API_SESSION_READY",
+          "start_ms": 553,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 650,
+          "phase": "CLOUD_REQUEST_SEND",
+          "start_ms": 573,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 721,
+          "phase": "API_RESPONSE_RECV",
+          "start_ms": 650,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 721,
+          "phase": "CLOUD_BACKOFF_WAIT",
+          "start_ms": 721,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 757,
+          "phase": "API_PARSE_NORMALIZE",
+          "start_ms": 721,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 785,
+          "phase": "API_AGGREGATE",
+          "start_ms": 757,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 805,
+          "phase": "CLOUD_BATCH_GROUP_COMMIT",
+          "start_ms": 785,
+          "step_id": "batch_007"
+        },
+        {
+          "end_ms": 820,
+          "phase": "HA_STATE_WRITE",
+          "start_ms": 805,
+          "step_id": "batch_007"
+        }
+      ],
+      "step_ids": [
+        "batch_006",
+        "batch_007"
+      ],
+      "validation": {
+        "availability_constraints_ok": true,
+        "backoff_constraints_ok": true,
+        "cadence_constraints_ok": true,
+        "coarse_completion_order_preserved": true,
+        "coordinator_constraints_ok": true,
+        "event_loop_constraints_ok": true,
+        "lookahead_depth_ok": true,
+        "parallel_updates_constraints_ok": true,
+        "passed": true,
+        "phase_order_valid": true,
+        "reasons": [],
+        "request_send_constraints_ok": true,
+        "session_constraints_ok": true,
+        "writeback_constraints_ok": true
+      }
+    },
+    {
+      "action_ids": [
+        "A12",
+        "A13"
+      ],
+      "batch_ids": [
+        "batch_008",
+        "batch_009"
+      ],
+      "corridor_id": "corridor_01",
+      "latency_saved_ms": 25,
+      "original_latency_ms": 200,
+      "overlap_candidate_pairs": 1,
+      "phase_kind": "LOCAL_HTTP",
+      "protocol": "LOCAL",
+      "refined_events": [
+        {
+          "end_ms": 14,
+          "phase": "LOCAL_ENDPOINT_RESOLVE",
+          "start_ms": 0,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 25,
+          "phase": "LOCAL_SESSION_READY",
+          "start_ms": 14,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 46,
+          "phase": "LOCAL_REQUEST_SEND",
+          "start_ms": 25,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 67,
+          "phase": "LOCAL_RESPONSE_RECV",
+          "start_ms": 46,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 81,
+          "phase": "LOCAL_PARSE",
+          "start_ms": 67,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 92,
+          "phase": "LOCAL_CACHE_UPDATE",
+          "start_ms": 81,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 100,
+          "phase": "HA_STATE_WRITE",
+          "start_ms": 92,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 56,
+          "phase": "LOCAL_ENDPOINT_RESOLVE",
+          "start_ms": 42,
+          "step_id": "batch_009"
+        },
+        {
+          "end_ms": 67,
+          "phase": "LOCAL_SESSION_READY",
+          "start_ms": 56,
+          "step_id": "batch_009"
+        },
+        {
+          "end_ms": 121,
+          "phase": "LOCAL_REQUEST_SEND",
+          "start_ms": 100,
+          "step_id": "batch_009"
+        },
+        {
+          "end_ms": 142,
+          "phase": "LOCAL_RESPONSE_RECV",
+          "start_ms": 121,
+          "step_id": "batch_009"
+        },
+        {
+          "end_ms": 156,
+          "phase": "LOCAL_PARSE",
+          "start_ms": 142,
+          "step_id": "batch_009"
+        },
+        {
+          "end_ms": 167,
+          "phase": "LOCAL_CACHE_UPDATE",
+          "start_ms": 156,
+          "step_id": "batch_009"
+        },
+        {
+          "end_ms": 175,
+          "phase": "HA_STATE_WRITE",
+          "start_ms": 167,
+          "step_id": "batch_009"
+        }
+      ],
+      "refined_latency_ms": 175,
+      "serial_events": [
+        {
+          "end_ms": 14,
+          "phase": "LOCAL_ENDPOINT_RESOLVE",
+          "start_ms": 0,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 25,
+          "phase": "LOCAL_SESSION_READY",
+          "start_ms": 14,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 46,
+          "phase": "LOCAL_REQUEST_SEND",
+          "start_ms": 25,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 67,
+          "phase": "LOCAL_RESPONSE_RECV",
+          "start_ms": 46,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 81,
+          "phase": "LOCAL_PARSE",
+          "start_ms": 67,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 92,
+          "phase": "LOCAL_CACHE_UPDATE",
+          "start_ms": 81,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 100,
+          "phase": "HA_STATE_WRITE",
+          "start_ms": 92,
+          "step_id": "batch_008"
+        },
+        {
+          "end_ms": 114,
+          "phase": "LOCAL_ENDPOINT_RESOLVE",
+          "start_ms": 100,
+          "step_id": "batch_009"
+        },
+        {
+          "end_ms": 125,
+          "phase": "LOCAL_SESSION_READY",
+          "start_ms": 114,
+          "step_id": "batch_009"
+        },
+        {
+          "end_ms": 146,
+          "phase": "LOCAL_REQUEST_SEND",
+          "start_ms": 125,
+          "step_id": "batch_009"
+        },
+        {
+          "end_ms": 167,
+          "phase": "LOCAL_RESPONSE_RECV",
+          "start_ms": 146,
+          "step_id": "batch_009"
+        },
+        {
+          "end_ms": 181,
+          "phase": "LOCAL_PARSE",
+          "start_ms": 167,
+          "step_id": "batch_009"
+        },
+        {
+          "end_ms": 192,
+          "phase": "LOCAL_CACHE_UPDATE",
+          "start_ms": 181,
+          "step_id": "batch_009"
+        },
+        {
+          "end_ms": 200,
+          "phase": "HA_STATE_WRITE",
+          "start_ms": 192,
+          "step_id": "batch_009"
+        }
+      ],
+      "step_ids": [
+        "batch_008",
+        "batch_009"
+      ],
+      "validation": {
+        "availability_constraints_ok": true,
+        "backoff_constraints_ok": true,
+        "cadence_constraints_ok": true,
+        "coarse_completion_order_preserved": true,
+        "coordinator_constraints_ok": true,
+        "event_loop_constraints_ok": true,
+        "lookahead_depth_ok": true,
+        "parallel_updates_constraints_ok": true,
+        "passed": true,
+        "phase_order_valid": true,
+        "reasons": [],
+        "request_send_constraints_ok": true,
+        "session_constraints_ok": true,
+        "writeback_constraints_ok": true
+      }
+    }
+  ],
+  "target_path": "data/targets/vdev_benchmarks/vdev_night_shutdown_01.json",
+  "vdev_id": "vdev_night_shutdown_01"
+}

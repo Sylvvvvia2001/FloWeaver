@@ -1,0 +1,517 @@
+{
+  "integration": "roku",
+  "runtime_families": [
+    {
+      "action_kind": "get_state",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "holiday_roku",
+          "roku:media_player.holiday_roku",
+          "roku_local"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "read",
+          "local_api_read"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "const",
+          "datetime",
+          "homeassistant",
+          "logging",
+          "rokuecp"
+        ],
+        "boost_if_names": [
+          "get_state",
+          "_async_update_data"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "LOCAL_API_READ",
+      "file_globs": [
+        "roku/coordinator.py"
+      ],
+      "forbidden_context": [
+        "dunder_init"
+      ],
+      "forbidden_path_signals": [
+        "control_function:async_turn_on",
+        "control_function:async_turn_off",
+        "control_function:async_open_cover",
+        "control_function:async_close_cover",
+        "control_function:async_set_cover_position",
+        "control_function:set_state",
+        "setup_function:async_setup_entry",
+        "state_accessor_property:state"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter"
+      ],
+      "function_name_patterns": [
+        "_async_update_data"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A34"
+      ],
+      "integration": "roku",
+      "negative_call_patterns": [
+        "roku",
+        "timedelta",
+        "__init__",
+        "async_get_clientsession",
+        "super",
+        "debouncer"
+      ],
+      "negative_evidence": [
+        "negative_function:__init__",
+        "negative_call:roku",
+        "negative_call:get",
+        "negative_call:timedelta",
+        "negative_call:__init__",
+        "negative_call:async_get_clientsession",
+        "negative_call:super",
+        "negative_call:debouncer",
+        "negative_call:config_entry.options.get",
+        "negative_path_signal:control_function:async_turn_on"
+      ],
+      "negative_function_patterns": [
+        "__init__",
+        "async_turn_on",
+        "async_turn_off",
+        "async_set_*",
+        "async_open_*",
+        "async_close_*"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [
+            "roku",
+            "config_entry.options.get",
+            "timedelta",
+            "__init__",
+            "async_get_clientsession",
+            "super",
+            "debouncer"
+          ],
+          "call_patterns": [
+            "roku",
+            "get",
+            "timedelta",
+            "__init__",
+            "async_get_clientsession",
+            "super",
+            "debouncer"
+          ],
+          "file_path": "data/repo_snapshot/roku/coordinator.py",
+          "function_name": "__init__",
+          "path_kind": "setup_path",
+          "path_signals": [],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -6,
+          "snippet": "35: \n36:     def __init__(\n37:         self,\n38:         hass: HomeAssistant,\n39:         config_entry: RokuConfigEntry,\n40:     ) -> None:\n41:         \"\"\"Initialize global Roku data updater.\"\"\"\n42:         self.device_id = config_entry.unique_id or config_entry.entry_id\n43:         self.roku = Roku(\n44:             host=config_entry.data[CONF_HOST], session=async_get_clientsession(hass)\n45:         )\n46:         self.play_media_app_id = config_entry.options.get(\n47:             CONF_PLAY_MEDIA_APP_ID, DEFAULT_PLAY_MEDIA_APP_ID\n48:         )"
+        }
+      ],
+      "origin_action_id": "A34",
+      "origin_cluster_id": "roku__coordinator__local_api_read__get_state__local",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [
+            "utcnow",
+            "self.roku.update",
+            "updatefailed"
+          ],
+          "call_patterns": [
+            "utcnow",
+            "update",
+            "updatefailed"
+          ],
+          "file_path": "data/repo_snapshot/roku/coordinator.py",
+          "function_name": "_async_update_data",
+          "path_kind": "read_path",
+          "path_signals": [],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 6,
+          "snippet": "65: \n66:     async def _async_update_data(self) -> Device:\n67:         \"\"\"Fetch data from Roku.\"\"\"\n68:         full_update = self.last_full_update is None or utcnow() >= (\n69:             self.last_full_update + self.full_update_interval\n70:         )\n71: \n72:         try:\n73:             data = await self.roku.update(full_update=full_update)\n74:         except RokuError as error:\n75:             raise UpdateFailed(f\"Invalid response from API: {error}\") from error\n76: \n77:         if full_update:\n78:             self.last_full_update = utcnow()"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read"
+      ],
+      "required_context": [
+        "runtime_path"
+      ],
+      "required_path_signals": [],
+      "required_runtime_roles": [
+        "runtime_read"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "roku:coordinator_local_api_read",
+      "runtime_archetypes": [
+        "local_bridge_getter",
+        "runtime_read"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:_async_update_data",
+        "runtime_call:utcnow",
+        "runtime_call:update",
+        "runtime_call:updatefailed",
+        "runtime_call:self.roku.update",
+        "path_signal:refresh_call:self.coordinator.async_request_refresh",
+        "path_signal:awaited_refresh_call:self.coordinator.async_request_refresh"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/roku/coordinator.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A34"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+      "why_not_setup": [
+        "exclude_role:setup:__init__",
+        "exclude_control_path_for_read_like_action"
+      ]
+    },
+    {
+      "action_kind": "get_state",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "holiday_roku",
+          "roku:media_player.holiday_roku",
+          "roku_local"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "read",
+          "local_api_read"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "browse_media",
+          "const",
+          "coordinator",
+          "datetime",
+          "entity"
+        ],
+        "boost_if_names": [
+          "get_state",
+          "async_play_media",
+          "async_media_pause",
+          "async_media_play"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "LOCAL_API_READ",
+      "file_globs": [
+        "roku/media_player.py"
+      ],
+      "forbidden_context": [
+        "dunder_init"
+      ],
+      "forbidden_path_signals": [
+        "setup_function:async_setup_entry",
+        "setup_call:async_add_entities",
+        "control_function:async_turn_on",
+        "control_function:async_turn_off",
+        "property_function:state",
+        "property_function:media_position_updated_at",
+        "control_function:async_open_cover",
+        "control_function:async_close_cover"
+      ],
+      "forbidden_runtime_roles": [
+        "runtime_write",
+        "setup",
+        "property_getter",
+        "helper"
+      ],
+      "function_name_patterns": [
+        "async_play_media",
+        "async_media_pause",
+        "async_media_play"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A34"
+      ],
+      "integration": "roku",
+      "negative_call_patterns": [
+        "async_add_entities",
+        "rokumediaplayer",
+        "roku_exception_handler",
+        "remote",
+        "async_request_refresh",
+        "self.coordinator.roku.remote"
+      ],
+      "negative_evidence": [
+        "negative_function:async_setup_entry",
+        "negative_function:async_turn_on",
+        "negative_function:async_turn_off",
+        "negative_function:state",
+        "negative_function:media_position_updated_at",
+        "negative_call:async_add_entities",
+        "negative_call:rokumediaplayer",
+        "negative_call:roku_exception_handler",
+        "negative_call:remote",
+        "negative_call:async_request_refresh"
+      ],
+      "negative_function_patterns": [
+        "async_setup_entry",
+        "async_turn_on",
+        "async_turn_off",
+        "state",
+        "media_position_updated_at",
+        "async_set_*"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [
+            "async_add_entities",
+            "rokumediaplayer"
+          ],
+          "call_patterns": [
+            "async_add_entities",
+            "rokumediaplayer"
+          ],
+          "file_path": "data/repo_snapshot/roku/media_player.py",
+          "function_name": "async_setup_entry",
+          "path_kind": "setup_path",
+          "path_signals": [
+            "setup_function:async_setup_entry",
+            "setup_call:async_add_entities"
+          ],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -10,
+          "snippet": "76: \n77: async def async_setup_entry(\n78:     hass: HomeAssistant,\n79:     entry: RokuConfigEntry,\n80:     async_add_entities: AddConfigEntryEntitiesCallback,\n81: ) -> None:\n82:     \"\"\"Set up the Roku config entry.\"\"\"\n83:     async_add_entities(\n84:         [\n85:             RokuMediaPlayer(\n86:                 coordinator=entry.runtime_data,\n87:             )\n88:         ],\n89:         True,"
+        },
+        {
+          "call_chains": [
+            "roku_exception_handler",
+            "self.coordinator.roku.remote",
+            "self.coordinator.async_request_refresh"
+          ],
+          "call_patterns": [
+            "roku_exception_handler",
+            "remote",
+            "async_request_refresh"
+          ],
+          "file_path": "data/repo_snapshot/roku/media_player.py",
+          "function_name": "async_turn_on",
+          "path_kind": "control_path",
+          "path_signals": [
+            "control_function:async_turn_on",
+            "refresh_call:self.coordinator.async_request_refresh",
+            "awaited_refresh_call:self.coordinator.async_request_refresh"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -4,
+          "snippet": "281:     @roku_exception_handler()\n282:     async def async_turn_on(self) -> None:\n283:         \"\"\"Turn on the Roku.\"\"\"\n284:         await self.coordinator.roku.remote(\"poweron\")\n285:         await self.coordinator.async_request_refresh()\n286: \n287:     @roku_exception_handler(ignore_timeout=True)"
+        },
+        {
+          "call_chains": [
+            "roku_exception_handler",
+            "self.coordinator.roku.remote",
+            "self.coordinator.async_request_refresh"
+          ],
+          "call_patterns": [
+            "roku_exception_handler",
+            "remote",
+            "async_request_refresh"
+          ],
+          "file_path": "data/repo_snapshot/roku/media_player.py",
+          "function_name": "async_turn_off",
+          "path_kind": "control_path",
+          "path_signals": [
+            "control_function:async_turn_off",
+            "refresh_call:self.coordinator.async_request_refresh",
+            "awaited_refresh_call:self.coordinator.async_request_refresh"
+          ],
+          "prototype_kind": "negative_control",
+          "role_hint": "runtime_write",
+          "score": -4,
+          "snippet": "287:     @roku_exception_handler(ignore_timeout=True)\n288:     async def async_turn_off(self) -> None:\n289:         \"\"\"Turn off the Roku.\"\"\"\n290:         await self.coordinator.roku.remote(\"poweroff\")\n291:         await self.coordinator.async_request_refresh()\n292: \n293:     @roku_exception_handler()"
+        },
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/roku/media_player.py",
+          "function_name": "state",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:state"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "126:     @property\n127:     def state(self) -> MediaPlayerState | None:\n128:         \"\"\"Return the state of the device.\"\"\"\n129:         if self.coordinator.data.state.standby:\n130:             return MediaPlayerState.OFF\n131: \n132:         if self.coordinator.data.app is None:\n133:             return None\n134: \n135:         if (\n136:             self.coordinator.data.app.name in {\"Power Saver\", \"Roku\"}\n137:             or self.coordinator.data.app.screensaver\n138:         ):\n139:             return MediaPlayerState.IDLE"
+        },
+        {
+          "call_chains": [
+            "self._media_playback_trackable"
+          ],
+          "call_patterns": [
+            "_media_playback_trackable"
+          ],
+          "file_path": "data/repo_snapshot/roku/media_player.py",
+          "function_name": "media_position_updated_at",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:media_position_updated_at",
+            "update_callback_function:media_position_updated_at"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -8,
+          "snippet": "223:     @property\n224:     def media_position_updated_at(self) -> dt.datetime | None:\n225:         \"\"\"When was the position of the current playing media valid.\"\"\"\n226:         if self.coordinator.data.media is not None and self._media_playback_trackable():\n227:             return self.coordinator.data.media.at\n228: \n229:         return None\n230: \n231:     @property"
+        }
+      ],
+      "origin_action_id": "A34",
+      "origin_cluster_id": "roku__media_player__local_api_read__get_state__local",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [
+            "roku_exception_handler",
+            "extra.get",
+            "media_source.is_media_source_id",
+            "kwargs.get",
+            "guess_stream_format",
+            "async_process_play_media_url",
+            "yarl.url",
+            "self.coordinator.async_request_refresh"
+          ],
+          "call_patterns": [
+            "roku_exception_handler",
+            "get",
+            "is_media_source_id",
+            "guess_stream_format",
+            "async_process_play_media_url",
+            "url",
+            "async_request_refresh",
+            "async_resolve_media"
+          ],
+          "file_path": "data/repo_snapshot/roku/media_player.py",
+          "function_name": "async_play_media",
+          "path_kind": "read_path",
+          "path_signals": [
+            "refresh_call:self.coordinator.async_request_refresh",
+            "awaited_refresh_call:self.coordinator.async_request_refresh"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 2,
+          "snippet": "342:     @roku_exception_handler()\n343:     async def async_play_media(\n344:         self, media_type: MediaType | str, media_id: str, **kwargs: Any\n345:     ) -> None:\n346:         \"\"\"Play media from a URL or file, launch an application, or tune to a channel.\"\"\"\n347:         extra: dict[str, Any] = kwargs.get(ATTR_MEDIA_EXTRA) or {}\n348:         original_media_type: str = media_type\n349:         original_media_id: str = media_id\n350:         mime_type: str | None = None\n351:         stream_name: str | None = None\n352:         stream_format: str | None = extra.get(ATTR_FORMAT)\n353: \n354:         # Handle media_source\n355:         if media_source.is_media_source_id(media_id):"
+        },
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/roku/media_player.py",
+          "function_name": "async_media_pause",
+          "path_kind": "read_path",
+          "path_signals": [
+            "refresh_call:self.coordinator.async_request_refresh",
+            "awaited_refresh_call:self.coordinator.async_request_refresh"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 2,
+          "snippet": "293:     @roku_exception_handler()\n294:     async def async_media_pause(self) -> None:\n295:         \"\"\"Send pause command.\"\"\"\n296:         if self.state not in {MediaPlayerState.OFF, MediaPlayerState.PAUSED}:\n297:             await self.coordinator.roku.remote(\"play\")\n298:             await self.coordinator.async_request_refresh()\n299: \n300:     @roku_exception_handler()"
+        },
+        {
+          "call_chains": [
+            "roku_exception_handler",
+            "self.coordinator.roku.remote",
+            "self.coordinator.async_request_refresh"
+          ],
+          "call_patterns": [
+            "roku_exception_handler",
+            "remote",
+            "async_request_refresh"
+          ],
+          "file_path": "data/repo_snapshot/roku/media_player.py",
+          "function_name": "async_media_play",
+          "path_kind": "read_path",
+          "path_signals": [
+            "refresh_call:self.coordinator.async_request_refresh",
+            "awaited_refresh_call:self.coordinator.async_request_refresh"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_read",
+          "score": 2,
+          "snippet": "300:     @roku_exception_handler()\n301:     async def async_media_play(self) -> None:\n302:         \"\"\"Send play command.\"\"\"\n303:         if self.state not in {MediaPlayerState.OFF, MediaPlayerState.PLAYING}:\n304:             await self.coordinator.roku.remote(\"play\")\n305:             await self.coordinator.async_request_refresh()\n306: \n307:     @roku_exception_handler()"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_read"
+      ],
+      "required_context": [
+        "runtime_path"
+      ],
+      "required_path_signals": [
+        "refresh_call:self.coordinator.async_request_refresh",
+        "awaited_refresh_call:self.coordinator.async_request_refresh"
+      ],
+      "required_runtime_roles": [
+        "runtime_read"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "roku:media_player_local_api_read",
+      "runtime_archetypes": [
+        "local_bridge_getter",
+        "runtime_read"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:async_play_media",
+        "runtime_function:async_media_pause",
+        "runtime_function:async_media_play",
+        "runtime_call:roku_exception_handler",
+        "runtime_call:get",
+        "runtime_call:is_media_source_id",
+        "runtime_call:guess_stream_format",
+        "runtime_call:async_process_play_media_url",
+        "runtime_call:url",
+        "runtime_call:async_request_refresh"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/roku/media_player.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A34"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+      "why_not_setup": [
+        "exclude_role:setup:async_setup_entry",
+        "exclude_role:runtime_write:async_turn_on",
+        "exclude_role:runtime_write:async_turn_off",
+        "exclude_role:property_getter:state",
+        "exclude_role:property_getter:media_position_updated_at",
+        "exclude_path_signal:setup_function:async_setup_entry",
+        "exclude_path_signal:setup_call:async_add_entities",
+        "exclude_path_signal:control_function:async_turn_on"
+      ]
+    }
+  ],
+  "schema_version": "m1_grounding_profile/v3",
+  "version": "draft_llm_v3"
+}

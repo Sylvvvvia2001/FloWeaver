@@ -1,0 +1,2178 @@
+{
+  "long-chain:122": {
+    "audit_id": "long-chain:122",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "hue.122.local",
+        "fields": [
+          "power"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "hue.122.local": {
+        "power": "default"
+      }
+    },
+    "lifecycle_events": [],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "local.hue_122",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_122",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "local_command",
+        "normalized_key": "device_command:hue:local"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:122"
+      }
+    ],
+    "routine_id": "122",
+    "routine_name": "Turn on Hue and Kasa lights when you arrive home [3x long-chain]"
+  },
+  "long-chain:154": {
+    "audit_id": "long-chain:154",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "hue.154.local",
+        "fields": [
+          "power"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "hue.154.local": {
+        "power": "default"
+      }
+    },
+    "lifecycle_events": [],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "local.hue_154",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_154",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "local_command",
+        "normalized_key": "device_command:hue:local"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:154"
+      }
+    ],
+    "routine_id": "154",
+    "routine_name": "Turn off Hue and Kasa lights when you leave home [3x long-chain]"
+  },
+  "long-chain:189": {
+    "audit_id": "long-chain:189",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "hue.189.local",
+        "fields": [
+          "power"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "hue.189.local": {
+        "power": "default"
+      }
+    },
+    "lifecycle_events": [],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "local.hue_189",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_189",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "local_command",
+        "normalized_key": "device_command:hue:local"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:189"
+      }
+    ],
+    "routine_id": "189",
+    "routine_name": "Turn on Hue and Nanoleaf lights at sunset [3x long-chain]"
+  },
+  "long-chain:203": {
+    "audit_id": "long-chain:203",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "smartthings.203.local",
+        "fields": [
+          "power"
+        ],
+        "source": "vendor_or_device_api"
+      },
+      {
+        "device": "smartthings.203.cloud",
+        "fields": [
+          "power"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "smartthings.203.cloud": {
+        "power": "default"
+      },
+      "smartthings.203.local": {
+        "power": "default"
+      }
+    },
+    "lifecycle_events": [
+      {
+        "normalized_key": "cloud_session:smartthings"
+      }
+    ],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "local.smartthings_203",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "cloud.smartthings_203",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_203",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "local_command",
+        "normalized_key": "device_command:smartthings:local"
+      },
+      {
+        "name": "cloud_command",
+        "normalized_key": "device_command:smartthings:cloud"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:203"
+      }
+    ],
+    "routine_id": "203",
+    "routine_name": "Turn on SmartThings scene and Hue lights when arriving home [3x long-chain]"
+  },
+  "long-chain:205": {
+    "audit_id": "long-chain:205",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "blink.205.cloud",
+        "fields": [
+          "state"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "blink.205.cloud": {
+        "state": "default"
+      }
+    },
+    "lifecycle_events": [
+      {
+        "normalized_key": "cloud_session:blink"
+      }
+    ],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "cloud.blink_205",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_205",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "cloud_command",
+        "normalized_key": "device_command:blink:cloud"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:205"
+      }
+    ],
+    "routine_id": "205",
+    "routine_name": "Send Roborock home and disarm Blink when a Webhook event fires [3x long-chain]"
+  },
+  "long-chain:210": {
+    "audit_id": "long-chain:210",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "hue.210.local",
+        "fields": [
+          "power"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "hue.210.local": {
+        "power": "default"
+      }
+    },
+    "lifecycle_events": [],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "local.hue_210",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_210",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "local_command",
+        "normalized_key": "device_command:hue:local"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:210"
+      }
+    ],
+    "routine_id": "210",
+    "routine_name": "Turn off Hue and Nanoleaf lights at bedtime [3x long-chain]"
+  },
+  "long-chain:213": {
+    "audit_id": "long-chain:213",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "smartthings.213.local",
+        "fields": [
+          "power"
+        ],
+        "source": "vendor_or_device_api"
+      },
+      {
+        "device": "smartthings.213.cloud",
+        "fields": [
+          "power"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "smartthings.213.cloud": {
+        "power": "default"
+      },
+      "smartthings.213.local": {
+        "power": "default"
+      }
+    },
+    "lifecycle_events": [
+      {
+        "normalized_key": "cloud_session:smartthings"
+      }
+    ],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "local.smartthings_213",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "cloud.smartthings_213",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_213",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "local_command",
+        "normalized_key": "device_command:smartthings:local"
+      },
+      {
+        "name": "cloud_command",
+        "normalized_key": "device_command:smartthings:cloud"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:213"
+      }
+    ],
+    "routine_id": "213",
+    "routine_name": "Turn off SmartThings scene and Hue lights when leaving home [3x long-chain]"
+  },
+  "long-chain:215": {
+    "audit_id": "long-chain:215",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "blink.215.cloud",
+        "fields": [
+          "state"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "blink.215.cloud": {
+        "state": "default"
+      }
+    },
+    "lifecycle_events": [
+      {
+        "normalized_key": "cloud_session:blink"
+      }
+    ],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "cloud.blink_215",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_215",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "cloud_command",
+        "normalized_key": "device_command:blink:cloud"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:215"
+      }
+    ],
+    "routine_id": "215",
+    "routine_name": "Arm Blink and start Roborock when a Webhook event arrives [3x long-chain]"
+  },
+  "long-chain:234": {
+    "audit_id": "long-chain:234",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "kasa.234.local",
+        "fields": [
+          "power"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "kasa.234.local": {
+        "power": "default"
+      }
+    },
+    "lifecycle_events": [],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "local.kasa_234",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_234",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "local_command",
+        "normalized_key": "device_command:kasa:local"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:234"
+      }
+    ],
+    "routine_id": "234",
+    "routine_name": "Toggle Kasa lights with Button widget [3x long-chain]"
+  },
+  "long-chain:86": {
+    "audit_id": "long-chain:86",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "hue.86.local",
+        "fields": [
+          "power"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "hue.86.local": {
+        "power": "default"
+      }
+    },
+    "lifecycle_events": [],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "local.hue_86",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_86",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "local_command",
+        "normalized_key": "device_command:hue:local"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:86"
+      }
+    ],
+    "routine_id": "86",
+    "routine_name": "Turn on Philips Hue lights when you arrive home [3x long-chain]"
+  },
+  "smart-home:116": {
+    "audit_id": "smart-home:116",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "netatmo.116.local",
+        "fields": [
+          "mode"
+        ],
+        "source": "vendor_or_device_api"
+      },
+      {
+        "device": "netatmo.116.cloud",
+        "fields": [
+          "mode"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "netatmo.116.cloud": {
+        "mode": "default"
+      },
+      "netatmo.116.local": {
+        "mode": "default"
+      }
+    },
+    "lifecycle_events": [
+      {
+        "normalized_key": "cloud_session:netatmo"
+      }
+    ],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "local.netatmo_116",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "cloud.netatmo_116",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_116",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "local_command",
+        "normalized_key": "device_command:netatmo:local"
+      },
+      {
+        "name": "cloud_command",
+        "normalized_key": "device_command:netatmo:cloud"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:116"
+      }
+    ],
+    "routine_id": "116",
+    "routine_name": "Turn on Hue lights when Netatmo temperature rises above threshold"
+  },
+  "smart-home:122": {
+    "audit_id": "smart-home:122",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "hue.122.local",
+        "fields": [
+          "power"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "hue.122.local": {
+        "power": "default"
+      }
+    },
+    "lifecycle_events": [],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "local.hue_122",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_122",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "local_command",
+        "normalized_key": "device_command:hue:local"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:122"
+      }
+    ],
+    "routine_id": "122",
+    "routine_name": "Turn on Hue and Kasa lights when you arrive home"
+  },
+  "smart-home:143": {
+    "audit_id": "smart-home:143",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "blink.143.cloud",
+        "fields": [
+          "state"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "blink.143.cloud": {
+        "state": "default"
+      }
+    },
+    "lifecycle_events": [
+      {
+        "normalized_key": "cloud_session:blink"
+      }
+    ],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "cloud.blink_143",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_143",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "cloud_command",
+        "normalized_key": "device_command:blink:cloud"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:143"
+      }
+    ],
+    "routine_id": "143",
+    "routine_name": "Disarm Blink when the first person arrives home"
+  },
+  "smart-home:16": {
+    "audit_id": "smart-home:16",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "home_connect.16.cloud",
+        "fields": [
+          "power"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "home_connect.16.cloud": {
+        "power": "default"
+      }
+    },
+    "lifecycle_events": [
+      {
+        "normalized_key": "cloud_session:home_connect"
+      }
+    ],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "cloud.home_connect_16",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_16",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "cloud_command",
+        "normalized_key": "device_command:home_connect:cloud"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:16"
+      }
+    ],
+    "routine_id": "16",
+    "routine_name": "Turn on Home Connect Hood light on a special day"
+  },
+  "smart-home:202": {
+    "audit_id": "smart-home:202",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "netatmo.202.local",
+        "fields": [
+          "power"
+        ],
+        "source": "vendor_or_device_api"
+      },
+      {
+        "device": "netatmo.202.cloud",
+        "fields": [
+          "power"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "netatmo.202.cloud": {
+        "power": "default"
+      },
+      "netatmo.202.local": {
+        "power": "default"
+      }
+    },
+    "lifecycle_events": [
+      {
+        "normalized_key": "cloud_session:netatmo"
+      }
+    ],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "local.netatmo_202",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "cloud.netatmo_202",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_202",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "local_command",
+        "normalized_key": "device_command:netatmo:local"
+      },
+      {
+        "name": "cloud_command",
+        "normalized_key": "device_command:netatmo:cloud"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:202"
+      }
+    ],
+    "routine_id": "202",
+    "routine_name": "Color-loop Hue lights when Netatmo CO2 gets high"
+  },
+  "smart-home:205": {
+    "audit_id": "smart-home:205",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "blink.205.cloud",
+        "fields": [
+          "state"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "blink.205.cloud": {
+        "state": "default"
+      }
+    },
+    "lifecycle_events": [
+      {
+        "normalized_key": "cloud_session:blink"
+      }
+    ],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "cloud.blink_205",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_205",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "cloud_command",
+        "normalized_key": "device_command:blink:cloud"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:205"
+      }
+    ],
+    "routine_id": "205",
+    "routine_name": "Send Roborock home and disarm Blink when a Webhook event fires"
+  },
+  "smart-home:210": {
+    "audit_id": "smart-home:210",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "hue.210.local",
+        "fields": [
+          "power"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "hue.210.local": {
+        "power": "default"
+      }
+    },
+    "lifecycle_events": [],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "local.hue_210",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_210",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "local_command",
+        "normalized_key": "device_command:hue:local"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:210"
+      }
+    ],
+    "routine_id": "210",
+    "routine_name": "Turn off Hue and Nanoleaf lights at bedtime"
+  },
+  "smart-home:211": {
+    "audit_id": "smart-home:211",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "hue.211.local",
+        "fields": [
+          "power"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "hue.211.local": {
+        "power": "default"
+      }
+    },
+    "lifecycle_events": [],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "local.hue_211",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_211",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "local_command",
+        "normalized_key": "device_command:hue:local"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:211"
+      }
+    ],
+    "routine_id": "211",
+    "routine_name": "Turn on Hue and Nanoleaf lights at sunset"
+  },
+  "smart-home:212": {
+    "audit_id": "smart-home:212",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "blink.212.local",
+        "fields": [
+          "power"
+        ],
+        "source": "vendor_or_device_api"
+      },
+      {
+        "device": "blink.212.cloud",
+        "fields": [
+          "power"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "blink.212.cloud": {
+        "power": "default"
+      },
+      "blink.212.local": {
+        "power": "default"
+      }
+    },
+    "lifecycle_events": [
+      {
+        "normalized_key": "cloud_session:blink"
+      }
+    ],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "local.blink_212",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "cloud.blink_212",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_212",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "local_command",
+        "normalized_key": "device_command:blink:local"
+      },
+      {
+        "name": "cloud_command",
+        "normalized_key": "device_command:blink:cloud"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:212"
+      }
+    ],
+    "routine_id": "212",
+    "routine_name": "Blink Philips Hue lights and notify if fridge door left open"
+  },
+  "smart-home:228": {
+    "audit_id": "smart-home:228",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "home_connect.228.cloud",
+        "fields": [
+          "state"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "home_connect.228.cloud": {
+        "state": "default"
+      }
+    },
+    "lifecycle_events": [
+      {
+        "normalized_key": "cloud_session:home_connect"
+      }
+    ],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "cloud.home_connect_228",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_228",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "cloud_command",
+        "normalized_key": "device_command:home_connect:cloud"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:228"
+      }
+    ],
+    "routine_id": "228",
+    "routine_name": "Activate Home Connect fridge sabbath mode every Friday"
+  },
+  "smart-home:232": {
+    "audit_id": "smart-home:232",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "kasa.232.local",
+        "fields": [
+          "state"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "kasa.232.local": {
+        "state": "default"
+      }
+    },
+    "lifecycle_events": [],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "local.kasa_232",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_232",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "local_command",
+        "normalized_key": "device_command:kasa:local"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:232"
+      }
+    ],
+    "routine_id": "232",
+    "routine_name": "Turn off my TP-Link Kasa plug when there's an electricity price spike"
+  },
+  "smart-home:240": {
+    "audit_id": "smart-home:240",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "switchbot.240.ble",
+        "fields": [
+          "position"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "switchbot.240.ble": {
+        "position": "default"
+      }
+    },
+    "lifecycle_events": [
+      {
+        "normalized_key": "ble_connect:switchbot"
+      },
+      {
+        "normalized_key": "ble_disconnect:switchbot"
+      }
+    ],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "ble.switchbot_240",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_240",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "ble_command",
+        "normalized_key": "device_command:switchbot:ble"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:240"
+      }
+    ],
+    "routine_id": "240",
+    "routine_name": "Open SwitchBot curtains when your Smart Bed alarm rings"
+  },
+  "smart-home:248": {
+    "audit_id": "smart-home:248",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "ecobee.248.cloud",
+        "fields": [
+          "mode"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "ecobee.248.cloud": {
+        "mode": "default"
+      }
+    },
+    "lifecycle_events": [
+      {
+        "normalized_key": "cloud_session:ecobee"
+      }
+    ],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "cloud.ecobee_248",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_248",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "cloud_command",
+        "normalized_key": "device_command:ecobee:cloud"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:248"
+      }
+    ],
+    "routine_id": "248",
+    "routine_name": "Switch your ecobee to your chosen comfort profile as you arrive home"
+  },
+  "smart-home:284": {
+    "audit_id": "smart-home:284",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "cloud_device.284.cloud",
+        "fields": [
+          "mode"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "cloud_device.284.cloud": {
+        "mode": "default"
+      }
+    },
+    "lifecycle_events": [
+      {
+        "normalized_key": "cloud_session:cloud_device"
+      }
+    ],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "cloud.cloud_device_284",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_284",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "cloud_command",
+        "normalized_key": "device_command:cloud_device:cloud"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:284"
+      }
+    ],
+    "routine_id": "284",
+    "routine_name": "Get IFTTT notification when freezer temperature is high"
+  },
+  "smart-home:58": {
+    "audit_id": "smart-home:58",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "blink.58.local",
+        "fields": [
+          "power"
+        ],
+        "source": "vendor_or_device_api"
+      },
+      {
+        "device": "blink.58.cloud",
+        "fields": [
+          "power"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "blink.58.cloud": {
+        "power": "default"
+      },
+      "blink.58.local": {
+        "power": "default"
+      }
+    },
+    "lifecycle_events": [
+      {
+        "normalized_key": "cloud_session:blink"
+      }
+    ],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "local.blink_58",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "cloud.blink_58",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_58",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "local_command",
+        "normalized_key": "device_command:blink:local"
+      },
+      {
+        "name": "cloud_command",
+        "normalized_key": "device_command:blink:cloud"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:58"
+      }
+    ],
+    "routine_id": "58",
+    "routine_name": "Blink Philips Hue lights and notify if fridge door left open"
+  },
+  "smart-home:72": {
+    "audit_id": "smart-home:72",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "blink.72.ble",
+        "fields": [
+          "position"
+        ],
+        "source": "vendor_or_device_api"
+      },
+      {
+        "device": "blink.72.cloud",
+        "fields": [
+          "position"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "blink.72.ble": {
+        "position": "default"
+      },
+      "blink.72.cloud": {
+        "position": "default"
+      }
+    },
+    "lifecycle_events": [
+      {
+        "normalized_key": "ble_connect:blink"
+      },
+      {
+        "normalized_key": "ble_disconnect:blink"
+      },
+      {
+        "normalized_key": "cloud_session:blink"
+      }
+    ],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "ble.blink_72",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "cloud.blink_72",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_72",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "ble_command",
+        "normalized_key": "device_command:blink:ble"
+      },
+      {
+        "name": "cloud_command",
+        "normalized_key": "device_command:blink:cloud"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:72"
+      }
+    ],
+    "routine_id": "72",
+    "routine_name": "Arm Blink system and run SwitchBot scene when you leave home"
+  },
+  "smart-home:86": {
+    "audit_id": "smart-home:86",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "hue.86.local",
+        "fields": [
+          "power"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "hue.86.local": {
+        "power": "default"
+      }
+    },
+    "lifecycle_events": [],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "local.hue_86",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_86",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "local_command",
+        "normalized_key": "device_command:hue:local"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:86"
+      }
+    ],
+    "routine_id": "86",
+    "routine_name": "Turn on Philips Hue lights when you arrive home"
+  },
+  "smart-home:vdev_morning_wakeup_readiness_01": {
+    "audit_id": "smart-home:vdev_morning_wakeup_readiness_01",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "ble_device.vdev_morning_wakeup_readiness_01.ble",
+        "fields": [
+          "state"
+        ],
+        "source": "vendor_or_device_api"
+      },
+      {
+        "device": "local_device.vdev_morning_wakeup_readiness_01.local",
+        "fields": [
+          "state"
+        ],
+        "source": "vendor_or_device_api"
+      },
+      {
+        "device": "cloud_device.vdev_morning_wakeup_readiness_01.cloud",
+        "fields": [
+          "state"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "ble_device.vdev_morning_wakeup_readiness_01.ble": {
+        "state": "default"
+      },
+      "cloud_device.vdev_morning_wakeup_readiness_01.cloud": {
+        "state": "default"
+      },
+      "local_device.vdev_morning_wakeup_readiness_01.local": {
+        "state": "default"
+      }
+    },
+    "lifecycle_events": [
+      {
+        "normalized_key": "ble_connect:ble_device"
+      },
+      {
+        "normalized_key": "ble_disconnect:ble_device"
+      },
+      {
+        "normalized_key": "cloud_session:cloud_device"
+      }
+    ],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "ble.ble_device_vdev_morning_wakeup_readiness_01",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "local.local_device_vdev_morning_wakeup_readiness_01",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "cloud.cloud_device_vdev_morning_wakeup_readiness_01",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_vdev_morning_wakeup_readiness_01",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "ble_command",
+        "normalized_key": "device_command:ble_device:ble"
+      },
+      {
+        "name": "local_command",
+        "normalized_key": "device_command:local_device:local"
+      },
+      {
+        "name": "cloud_command",
+        "normalized_key": "device_command:cloud_device:cloud"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:vdev_morning_wakeup_readiness_01"
+      }
+    ],
+    "routine_id": "vdev_morning_wakeup_readiness_01",
+    "routine_name": "Morning Wake-Up Readiness Routine"
+  },
+  "smart-home:vdev_vacation_departure_final_audit_01": {
+    "audit_id": "smart-home:vdev_vacation_departure_final_audit_01",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "ble_device.vdev_vacation_departure_final_audit_01.ble",
+        "fields": [
+          "state"
+        ],
+        "source": "vendor_or_device_api"
+      },
+      {
+        "device": "local_device.vdev_vacation_departure_final_audit_01.local",
+        "fields": [
+          "state"
+        ],
+        "source": "vendor_or_device_api"
+      },
+      {
+        "device": "cloud_device.vdev_vacation_departure_final_audit_01.cloud",
+        "fields": [
+          "state"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "ble_device.vdev_vacation_departure_final_audit_01.ble": {
+        "state": "default"
+      },
+      "cloud_device.vdev_vacation_departure_final_audit_01.cloud": {
+        "state": "default"
+      },
+      "local_device.vdev_vacation_departure_final_audit_01.local": {
+        "state": "default"
+      }
+    },
+    "lifecycle_events": [
+      {
+        "normalized_key": "ble_connect:ble_device"
+      },
+      {
+        "normalized_key": "ble_disconnect:ble_device"
+      },
+      {
+        "normalized_key": "cloud_session:cloud_device"
+      }
+    ],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "ble.ble_device_vdev_vacation_departure_final_audit_01",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "local.local_device_vdev_vacation_departure_final_audit_01",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "cloud.cloud_device_vdev_vacation_departure_final_audit_01",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_vdev_vacation_departure_final_audit_01",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "ble_command",
+        "normalized_key": "device_command:ble_device:ble"
+      },
+      {
+        "name": "local_command",
+        "normalized_key": "device_command:local_device:local"
+      },
+      {
+        "name": "cloud_command",
+        "normalized_key": "device_command:cloud_device:cloud"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:vdev_vacation_departure_final_audit_01"
+      }
+    ],
+    "routine_id": "vdev_vacation_departure_final_audit_01",
+    "routine_name": "Vacation Departure Final Audit"
+  },
+  "smart-home:vdev_weekend_whole_home_snapshot_01": {
+    "audit_id": "smart-home:vdev_weekend_whole_home_snapshot_01",
+    "comparison_rules": {
+      "ignore_fields": [
+        "timestamp",
+        "request_id",
+        "uuid",
+        "nonce"
+      ],
+      "numeric_tolerance": {
+        "brightness": 1,
+        "position": 2,
+        "temperature": 0.1
+      }
+    },
+    "device_side_fields": [
+      {
+        "device": "ble_device.vdev_weekend_whole_home_snapshot_01.ble",
+        "fields": [
+          "state"
+        ],
+        "source": "vendor_or_device_api"
+      },
+      {
+        "device": "local_device.vdev_weekend_whole_home_snapshot_01.local",
+        "fields": [
+          "state"
+        ],
+        "source": "vendor_or_device_api"
+      },
+      {
+        "device": "cloud_device.vdev_weekend_whole_home_snapshot_01.cloud",
+        "fields": [
+          "state"
+        ],
+        "source": "vendor_or_device_api"
+      }
+    ],
+    "initial_state": {
+      "ble_device.vdev_weekend_whole_home_snapshot_01.ble": {
+        "state": "default"
+      },
+      "cloud_device.vdev_weekend_whole_home_snapshot_01.cloud": {
+        "state": "default"
+      },
+      "local_device.vdev_weekend_whole_home_snapshot_01.local": {
+        "state": "default"
+      }
+    },
+    "lifecycle_events": [
+      {
+        "normalized_key": "ble_connect:ble_device"
+      },
+      {
+        "normalized_key": "ble_disconnect:ble_device"
+      },
+      {
+        "normalized_key": "cloud_session:cloud_device"
+      }
+    ],
+    "oracle_mode": "simulated",
+    "platform_side_fields": [
+      {
+        "entity": "ble.ble_device_vdev_weekend_whole_home_snapshot_01",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "local.local_device_vdev_weekend_whole_home_snapshot_01",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "cloud.cloud_device_vdev_weekend_whole_home_snapshot_01",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      },
+      {
+        "entity": "sensor.routine_summary_vdev_weekend_whole_home_snapshot_01",
+        "fields": [
+          "state"
+        ],
+        "source": "home_assistant_state"
+      }
+    ],
+    "required_events": [
+      {
+        "name": "ble_command",
+        "normalized_key": "device_command:ble_device:ble"
+      },
+      {
+        "name": "local_command",
+        "normalized_key": "device_command:local_device:local"
+      },
+      {
+        "name": "cloud_command",
+        "normalized_key": "device_command:cloud_device:cloud"
+      },
+      {
+        "name": "summary_writeback",
+        "normalized_key": "state_write:ha:routine_summary:vdev_weekend_whole_home_snapshot_01"
+      }
+    ],
+    "routine_id": "vdev_weekend_whole_home_snapshot_01",
+    "routine_name": "Weekend Whole-Home Snapshot Routine"
+  }
+}

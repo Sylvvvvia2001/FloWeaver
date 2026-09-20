@@ -1,0 +1,9 @@
+{
+  "codeowners": [],
+  "dependencies": [],
+  "documentation": "https://example.invalid/vibeaura/vdev",
+  "domain": "vdev_vdev_bedtime_lockdown_routine_01",
+  "name": "Bedtime Lockdown Routine",
+  "requirements": [],
+  "version": "0.1.0"
+}

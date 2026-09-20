@@ -1,0 +1,9 @@
+{
+  "services": {
+    "run_workday_departure_office_zone_shutdown_01": {
+      "description": "Execute generated VDev action plan",
+      "name": "Run VDev"
+    }
+  },
+  "title": "Workday Departure Office-Zone Shutdown"
+}

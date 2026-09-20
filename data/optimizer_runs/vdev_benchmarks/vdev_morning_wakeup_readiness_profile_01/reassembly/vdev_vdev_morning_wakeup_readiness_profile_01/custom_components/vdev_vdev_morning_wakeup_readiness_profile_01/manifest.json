@@ -1,0 +1,9 @@
+{
+  "codeowners": [],
+  "dependencies": [],
+  "documentation": "https://example.invalid/vibeaura/vdev",
+  "domain": "vdev_vdev_morning_wakeup_readiness_profile_01",
+  "name": "Morning Wake-Up Readiness Profile Coverage",
+  "requirements": [],
+  "version": "0.1.0"
+}

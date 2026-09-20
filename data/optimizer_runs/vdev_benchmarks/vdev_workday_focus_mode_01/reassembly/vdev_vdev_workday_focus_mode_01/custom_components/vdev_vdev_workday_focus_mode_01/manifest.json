@@ -1,0 +1,9 @@
+{
+  "codeowners": [],
+  "dependencies": [],
+  "documentation": "https://example.invalid/vibeaura/vdev",
+  "domain": "vdev_vdev_workday_focus_mode_01",
+  "name": "Workday Focus Mode Routine",
+  "requirements": [],
+  "version": "0.1.0"
+}

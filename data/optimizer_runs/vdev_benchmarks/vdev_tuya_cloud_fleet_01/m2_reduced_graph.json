@@ -1,0 +1,4659 @@
+{
+  "anchor_nodes": [
+    "27112d2d:async_close_cover:1.0:308",
+    "27112d2d:async_close_cover:1:307",
+    "27112d2d:async_discover_device:2.1:185",
+    "27112d2d:async_open_cover:1.0:292",
+    "27112d2d:async_open_cover:1:291",
+    "27112d2d:async_setup_entry:2:180",
+    "67d079e8:async_discover_device:2.1:470",
+    "67d079e8:async_setup_entry:2:465",
+    "67d079e8:async_turn_on:1:574",
+    "67d079e8:async_turn_on:2.0:579",
+    "67d079e8:async_turn_on:2:576",
+    "67d079e8:async_turn_on:3.0:586",
+    "67d079e8:async_turn_on:3:585",
+    "67d079e8:async_turn_on:4.0.0:602",
+    "67d079e8:async_turn_on:4.0.1:628",
+    "67d079e8:async_turn_on:4.0:601",
+    "67d079e8:async_turn_on:4.1:608",
+    "67d079e8:async_turn_on:4.2:611",
+    "67d079e8:async_turn_on:4.3:614",
+    "67d079e8:async_turn_on:4:592",
+    "67d079e8:async_turn_on:5:632",
+    "7127a953:async_set_direction:1:182",
+    "7127a953:async_turn_on:2:203",
+    "7127a953:async_turn_on:3.0:206",
+    "7127a953:async_turn_on:3:205",
+    "7127a953:async_turn_on:4.0:211",
+    "7127a953:async_turn_on:4:210",
+    "7127a953:async_turn_on:5:214",
+    "7127a953:current_direction:2:229",
+    "8e4c1745:__init__:16.1.0:308",
+    "8e4c1745:__init__:16.1:307",
+    "8e4c1745:__init__:20.1:340",
+    "8e4c1745:_get_temperature_wrappers:5.0.0.0:150",
+    "8e4c1745:_get_temperature_wrappers:5.0.0:149",
+    "8e4c1745:_get_temperature_wrappers:5.0:148",
+    "8e4c1745:_get_temperature_wrappers:5:143",
+    "8e4c1745:async_set_hvac_mode:2.0:357",
+    "8e4c1745:async_set_hvac_mode:2:356",
+    "8e4c1745:async_set_hvac_mode:3.0:367",
+    "8e4c1745:async_set_hvac_mode:3:362",
+    "8e4c1745:async_set_hvac_mode:4:370",
+    "8e4c1745:async_set_swing_mode:1:386",
+    "8e4c1745:hvac_mode:5:431",
+    "8e4c1745:swing_mode:2:447",
+    "960e735a:_validate_device_class_unit:1.2:1736",
+    "960e735a:async_discover_device:2.1:1658",
+    "960e735a:async_setup_entry:2:1653",
+    "9cfce7a4:async_discover_device:2.1:922",
+    "9cfce7a4:async_setup_entry:2:917",
+    "9da22f42:_handle_device_update:3:186",
+    "a073d609:_handle_state_update:1.0:76",
+    "a073d609:_handle_state_update:1:63"
+  ],
+  "edges": [
+    {
+      "dst": "9da22f42:_handle_device_update:3:186",
+      "edge_type": "CFG_NEXT",
+      "src": "9da22f42:_handle_device_update:2:185"
+    },
+    {
+      "dst": "8e4c1745:_get_temperature_wrappers:2:132",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:_get_temperature_wrappers:1:129"
+    },
+    {
+      "dst": "8e4c1745:_get_temperature_wrappers:3:135",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:_get_temperature_wrappers:2:132"
+    },
+    {
+      "dst": "8e4c1745:_get_temperature_wrappers:4:138",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:_get_temperature_wrappers:3:135"
+    },
+    {
+      "dst": "8e4c1745:_get_temperature_wrappers:5:143",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:_get_temperature_wrappers:4:138"
+    },
+    {
+      "dst": "8e4c1745:_get_temperature_wrappers:5:143",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:_get_temperature_wrappers:3:135"
+    },
+    {
+      "dst": "8e4c1745:_get_temperature_wrappers:5:143",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:_get_temperature_wrappers:1:129"
+    },
+    {
+      "dst": "8e4c1745:_get_temperature_wrappers:5:143",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:_get_temperature_wrappers:4:138"
+    },
+    {
+      "dst": "8e4c1745:_get_temperature_wrappers:5:143",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:_get_temperature_wrappers:2:132"
+    },
+    {
+      "dst": "8e4c1745:_get_temperature_wrappers:5.0:148",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:_get_temperature_wrappers:5:143"
+    },
+    {
+      "dst": "8e4c1745:_get_temperature_wrappers:5.0:148",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:_get_temperature_wrappers:3:135"
+    },
+    {
+      "dst": "8e4c1745:_get_temperature_wrappers:5.0:148",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:_get_temperature_wrappers:1:129"
+    },
+    {
+      "dst": "8e4c1745:_get_temperature_wrappers:5.0:148",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:_get_temperature_wrappers:4:138"
+    },
+    {
+      "dst": "8e4c1745:_get_temperature_wrappers:5.0:148",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:_get_temperature_wrappers:5:143"
+    },
+    {
+      "dst": "8e4c1745:_get_temperature_wrappers:5.0:148",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:_get_temperature_wrappers:2:132"
+    },
+    {
+      "dst": "8e4c1745:_get_temperature_wrappers:5.0.0:149",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:_get_temperature_wrappers:5.0:148"
+    },
+    {
+      "dst": "8e4c1745:_get_temperature_wrappers:5.0.0:149",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:_get_temperature_wrappers:5.0:148"
+    },
+    {
+      "dst": "8e4c1745:_get_temperature_wrappers:5.0.0:149",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:_get_temperature_wrappers:5:143"
+    },
+    {
+      "dst": "8e4c1745:_get_temperature_wrappers:5.0.0.0:150",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:_get_temperature_wrappers:5.0.0:149"
+    },
+    {
+      "dst": "8e4c1745:_get_temperature_wrappers:5.0.0.0:150",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:_get_temperature_wrappers:5.0:148"
+    },
+    {
+      "dst": "8e4c1745:_get_temperature_wrappers:5.0.0.0:150",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:_get_temperature_wrappers:5:143"
+    },
+    {
+      "dst": "8e4c1745:_get_temperature_wrappers:5.0:148",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:_get_temperature_wrappers:5:143"
+    },
+    {
+      "dst": "8e4c1745:_get_temperature_wrappers:5.0.0:149",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:_get_temperature_wrappers:5:143"
+    },
+    {
+      "dst": "8e4c1745:_get_temperature_wrappers:5.0.0.0:150",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:_get_temperature_wrappers:5:143"
+    },
+    {
+      "dst": "8e4c1745:_get_temperature_wrappers:5.0.0:149",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:_get_temperature_wrappers:5.0:148"
+    },
+    {
+      "dst": "8e4c1745:_get_temperature_wrappers:5.0.0.0:150",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:_get_temperature_wrappers:5.0:148"
+    },
+    {
+      "dst": "8e4c1745:_get_temperature_wrappers:5.0.0.0:150",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:_get_temperature_wrappers:5.0.0:149"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.1:307",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:__init__:16:305"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.1.0:308",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:16.1:307"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.1.0:308",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:__init__:16.1:307"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.1.0.0:312",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:16.1.0:308"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.1.0.0:312",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:__init__:16.1.0:308"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.0:314",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:16.1.0.0:312"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.0.0:315",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:16.0:314"
+    },
+    {
+      "dst": "8e4c1745:__init__:17:321",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:16.0.0:315"
+    },
+    {
+      "dst": "8e4c1745:__init__:17.0:322",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:17:321"
+    },
+    {
+      "dst": "8e4c1745:__init__:17.1:323",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:17.0:322"
+    },
+    {
+      "dst": "8e4c1745:__init__:17.2:324",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:17.1:323"
+    },
+    {
+      "dst": "8e4c1745:__init__:18:327",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:17.2:324"
+    },
+    {
+      "dst": "8e4c1745:__init__:18.0:328",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:18:327"
+    },
+    {
+      "dst": "8e4c1745:__init__:18.1:329",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:18.0:328"
+    },
+    {
+      "dst": "8e4c1745:__init__:18.2:330",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:18.1:329"
+    },
+    {
+      "dst": "8e4c1745:__init__:19:333",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:18.2:330"
+    },
+    {
+      "dst": "8e4c1745:__init__:19.0:334",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:19:333"
+    },
+    {
+      "dst": "8e4c1745:__init__:19.1:335",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:19.0:334"
+    },
+    {
+      "dst": "8e4c1745:__init__:20:338",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:19.1:335"
+    },
+    {
+      "dst": "8e4c1745:__init__:20.0:339",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:20:338"
+    },
+    {
+      "dst": "8e4c1745:__init__:20.1:340",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:__init__:20.0:339"
+    },
+    {
+      "dst": "8e4c1745:__init__:20.1:340",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:__init__:20:338"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.1:307",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:16:305"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.1.0:308",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:16:305"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.1.0.0:312",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:16:305"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.0:314",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:16:305"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.0.0:315",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:16:305"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.1.0:308",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:16.1:307"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.1.0.0:312",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:16.1:307"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.1.0.0:312",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:16.1.0:308"
+    },
+    {
+      "dst": "8e4c1745:__init__:16.0.0:315",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:16.0:314"
+    },
+    {
+      "dst": "8e4c1745:__init__:17.0:322",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:17:321"
+    },
+    {
+      "dst": "8e4c1745:__init__:17.1:323",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:17:321"
+    },
+    {
+      "dst": "8e4c1745:__init__:17.2:324",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:17:321"
+    },
+    {
+      "dst": "8e4c1745:__init__:18.0:328",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:18:327"
+    },
+    {
+      "dst": "8e4c1745:__init__:18.1:329",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:18:327"
+    },
+    {
+      "dst": "8e4c1745:__init__:18.2:330",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:18:327"
+    },
+    {
+      "dst": "8e4c1745:__init__:19.0:334",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:19:333"
+    },
+    {
+      "dst": "8e4c1745:__init__:19.1:335",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:19:333"
+    },
+    {
+      "dst": "8e4c1745:__init__:20.0:339",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:20:338"
+    },
+    {
+      "dst": "8e4c1745:__init__:20.1:340",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:__init__:20:338"
+    },
+    {
+      "dst": "8e4c1745:async_set_hvac_mode:2:356",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:async_set_hvac_mode:1:355"
+    },
+    {
+      "dst": "8e4c1745:async_set_hvac_mode:2:356",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:async_set_hvac_mode:1:355"
+    },
+    {
+      "dst": "8e4c1745:async_set_hvac_mode:2.0:357",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:async_set_hvac_mode:2:356"
+    },
+    {
+      "dst": "8e4c1745:async_set_hvac_mode:2.0:357",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:async_set_hvac_mode:1:355"
+    },
+    {
+      "dst": "8e4c1745:async_set_hvac_mode:3:362",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:async_set_hvac_mode:2.0:357"
+    },
+    {
+      "dst": "8e4c1745:async_set_hvac_mode:3:362",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:async_set_hvac_mode:1:355"
+    },
+    {
+      "dst": "8e4c1745:async_set_hvac_mode:3.0:367",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:async_set_hvac_mode:3:362"
+    },
+    {
+      "dst": "8e4c1745:async_set_hvac_mode:3.0:367",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:async_set_hvac_mode:3:362"
+    },
+    {
+      "dst": "8e4c1745:async_set_hvac_mode:3.0:367",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:async_set_hvac_mode:1:355"
+    },
+    {
+      "dst": "8e4c1745:async_set_hvac_mode:4:370",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:async_set_hvac_mode:3.0:367"
+    },
+    {
+      "dst": "8e4c1745:async_set_hvac_mode:4:370",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:async_set_hvac_mode:1:355"
+    },
+    {
+      "dst": "8e4c1745:async_set_hvac_mode:2.0:357",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:async_set_hvac_mode:2:356"
+    },
+    {
+      "dst": "8e4c1745:async_set_hvac_mode:3.0:367",
+      "edge_type": "CONTROL_DEP",
+      "src": "8e4c1745:async_set_hvac_mode:3:362"
+    },
+    {
+      "dst": "8e4c1745:async_set_swing_mode:1:386",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:async_set_swing_mode:0:385"
+    },
+    {
+      "dst": "8e4c1745:hvac_mode:5:431",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:hvac_mode:4:430"
+    },
+    {
+      "dst": "8e4c1745:hvac_mode:5:431",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:hvac_mode:4:430"
+    },
+    {
+      "dst": "8e4c1745:swing_mode:2:447",
+      "edge_type": "CFG_NEXT",
+      "src": "8e4c1745:swing_mode:1:446"
+    },
+    {
+      "dst": "8e4c1745:swing_mode:2:447",
+      "edge_type": "DATA_DEP",
+      "src": "8e4c1745:swing_mode:1:446"
+    },
+    {
+      "dst": "27112d2d:async_setup_entry:2:180",
+      "edge_type": "CFG_NEXT",
+      "src": "27112d2d:async_setup_entry:1:177"
+    },
+    {
+      "dst": "27112d2d:async_setup_entry:2:180",
+      "edge_type": "DATA_DEP",
+      "src": "27112d2d:async_setup_entry:1:177"
+    },
+    {
+      "dst": "27112d2d:async_discover_device:2:183",
+      "edge_type": "CFG_NEXT",
+      "src": "27112d2d:async_discover_device:1:182"
+    },
+    {
+      "dst": "27112d2d:async_discover_device:2:183",
+      "edge_type": "DATA_DEP",
+      "src": "27112d2d:async_discover_device:1:182"
+    },
+    {
+      "dst": "27112d2d:async_discover_device:2.0:184",
+      "edge_type": "CFG_NEXT",
+      "src": "27112d2d:async_discover_device:2:183"
+    },
+    {
+      "dst": "27112d2d:async_discover_device:2.0:184",
+      "edge_type": "DATA_DEP",
+      "src": "27112d2d:async_discover_device:2:183"
+    },
+    {
+      "dst": "27112d2d:async_discover_device:2.1:185",
+      "edge_type": "CFG_NEXT",
+      "src": "27112d2d:async_discover_device:2.0:184"
+    },
+    {
+      "dst": "27112d2d:async_discover_device:2.1:185",
+      "edge_type": "DATA_DEP",
+      "src": "27112d2d:async_discover_device:2:183"
+    },
+    {
+      "dst": "27112d2d:async_discover_device:2.1:185",
+      "edge_type": "DATA_DEP",
+      "src": "27112d2d:async_discover_device:2.0:184"
+    },
+    {
+      "dst": "27112d2d:async_discover_device:2.1:185",
+      "edge_type": "DATA_DEP",
+      "src": "27112d2d:async_discover_device:1:182"
+    },
+    {
+      "dst": "27112d2d:async_discover_device:2.0:184",
+      "edge_type": "CONTROL_DEP",
+      "src": "27112d2d:async_discover_device:2:183"
+    },
+    {
+      "dst": "27112d2d:async_discover_device:2.1:185",
+      "edge_type": "CONTROL_DEP",
+      "src": "27112d2d:async_discover_device:2:183"
+    },
+    {
+      "dst": "27112d2d:async_open_cover:1:291",
+      "edge_type": "CFG_NEXT",
+      "src": "27112d2d:async_open_cover:0:290"
+    },
+    {
+      "dst": "27112d2d:async_open_cover:1.0:292",
+      "edge_type": "CFG_NEXT",
+      "src": "27112d2d:async_open_cover:1:291"
+    },
+    {
+      "dst": "27112d2d:async_open_cover:1.0:292",
+      "edge_type": "CONTROL_DEP",
+      "src": "27112d2d:async_open_cover:1:291"
+    },
+    {
+      "dst": "27112d2d:async_close_cover:1.0:308",
+      "edge_type": "CFG_NEXT",
+      "src": "27112d2d:async_close_cover:1:307"
+    },
+    {
+      "dst": "27112d2d:async_close_cover:1.0:308",
+      "edge_type": "CONTROL_DEP",
+      "src": "27112d2d:async_close_cover:1:307"
+    },
+    {
+      "dst": "a073d609:_handle_state_update:1.0:76",
+      "edge_type": "CFG_NEXT",
+      "src": "a073d609:_handle_state_update:1:63"
+    },
+    {
+      "dst": "a073d609:_handle_state_update:1.0:76",
+      "edge_type": "CONTROL_DEP",
+      "src": "a073d609:_handle_state_update:1:63"
+    },
+    {
+      "dst": "7127a953:async_set_direction:1:182",
+      "edge_type": "CFG_NEXT",
+      "src": "7127a953:async_set_direction:0:181"
+    },
+    {
+      "dst": "7127a953:async_turn_on:2:203",
+      "edge_type": "CFG_NEXT",
+      "src": "7127a953:async_turn_on:1.0:201"
+    },
+    {
+      "dst": "7127a953:async_turn_on:3:205",
+      "edge_type": "CFG_NEXT",
+      "src": "7127a953:async_turn_on:2:203"
+    },
+    {
+      "dst": "7127a953:async_turn_on:3:205",
+      "edge_type": "DATA_DEP",
+      "src": "7127a953:async_turn_on:2:203"
+    },
+    {
+      "dst": "7127a953:async_turn_on:3.0:206",
+      "edge_type": "CFG_NEXT",
+      "src": "7127a953:async_turn_on:3:205"
+    },
+    {
+      "dst": "7127a953:async_turn_on:3.0:206",
+      "edge_type": "DATA_DEP",
+      "src": "7127a953:async_turn_on:2:203"
+    },
+    {
+      "dst": "7127a953:async_turn_on:4:210",
+      "edge_type": "CFG_NEXT",
+      "src": "7127a953:async_turn_on:3.0:206"
+    },
+    {
+      "dst": "7127a953:async_turn_on:4:210",
+      "edge_type": "DATA_DEP",
+      "src": "7127a953:async_turn_on:2:203"
+    },
+    {
+      "dst": "7127a953:async_turn_on:4.0:211",
+      "edge_type": "CFG_NEXT",
+      "src": "7127a953:async_turn_on:4:210"
+    },
+    {
+      "dst": "7127a953:async_turn_on:4.0:211",
+      "edge_type": "DATA_DEP",
+      "src": "7127a953:async_turn_on:2:203"
+    },
+    {
+      "dst": "7127a953:async_turn_on:5:214",
+      "edge_type": "CFG_NEXT",
+      "src": "7127a953:async_turn_on:4.0:211"
+    },
+    {
+      "dst": "7127a953:async_turn_on:5:214",
+      "edge_type": "DATA_DEP",
+      "src": "7127a953:async_turn_on:2:203"
+    },
+    {
+      "dst": "7127a953:async_turn_on:3.0:206",
+      "edge_type": "CONTROL_DEP",
+      "src": "7127a953:async_turn_on:3:205"
+    },
+    {
+      "dst": "7127a953:async_turn_on:4.0:211",
+      "edge_type": "CONTROL_DEP",
+      "src": "7127a953:async_turn_on:4:210"
+    },
+    {
+      "dst": "7127a953:current_direction:2:229",
+      "edge_type": "CFG_NEXT",
+      "src": "7127a953:current_direction:1:228"
+    },
+    {
+      "dst": "7127a953:current_direction:2:229",
+      "edge_type": "DATA_DEP",
+      "src": "7127a953:current_direction:1:228"
+    },
+    {
+      "dst": "67d079e8:async_setup_entry:2:465",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_setup_entry:1:462"
+    },
+    {
+      "dst": "67d079e8:async_setup_entry:2:465",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_setup_entry:1:462"
+    },
+    {
+      "dst": "67d079e8:async_discover_device:2:468",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_discover_device:1:467"
+    },
+    {
+      "dst": "67d079e8:async_discover_device:2:468",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_discover_device:1:467"
+    },
+    {
+      "dst": "67d079e8:async_discover_device:2.0:469",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_discover_device:2:468"
+    },
+    {
+      "dst": "67d079e8:async_discover_device:2.0:469",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_discover_device:2:468"
+    },
+    {
+      "dst": "67d079e8:async_discover_device:2.1:470",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_discover_device:2.0:469"
+    },
+    {
+      "dst": "67d079e8:async_discover_device:2.1:470",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_discover_device:2:468"
+    },
+    {
+      "dst": "67d079e8:async_discover_device:2.1:470",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_discover_device:2.0:469"
+    },
+    {
+      "dst": "67d079e8:async_discover_device:2.1:470",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_discover_device:1:467"
+    },
+    {
+      "dst": "67d079e8:async_discover_device:2.0:469",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_discover_device:2:468"
+    },
+    {
+      "dst": "67d079e8:async_discover_device:2.1:470",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_discover_device:2:468"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:1:574",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_turn_on:0:573"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:2:576",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_turn_on:1:574"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:2:576",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_turn_on:1:574"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:2.0:579",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_turn_on:2:576"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:2.0:579",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_turn_on:1:574"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:3:585",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_turn_on:2.0:579"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:3:585",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_turn_on:1:574"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:3.0:586",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_turn_on:3:585"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:3.0:586",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_turn_on:1:574"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4:592",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_turn_on:3.0:586"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4:592",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_turn_on:1:574"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0:601",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_turn_on:4:592"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0:601",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_turn_on:1:574"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0.0:602",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_turn_on:4.0:601"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0.0:602",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_turn_on:1:574"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.1:608",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_turn_on:4.0.0:602"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.1.0:609",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_turn_on:4.1:608"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.2:611",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_turn_on:4.1.0:609"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.2.0:612",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_turn_on:4.2:611"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.3:614",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_turn_on:4.2.0:612"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.3:614",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_turn_on:4.2.0:612"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.3:614",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_turn_on:4.1.0:609"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.3:614",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_turn_on:1:574"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0:620",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_turn_on:4.3:614"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0:620",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_turn_on:4.1.0:609"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0:620",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_turn_on:1:574"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0.0:623",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_turn_on:4.0:620"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0.0.0:624",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_turn_on:4.0.0:623"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0.0.0:626",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_turn_on:4.0.0.0:624"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0.1:628",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_turn_on:4.0.0.0:626"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0.1:628",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_turn_on:4.0.0.0:626"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0.1:628",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_turn_on:1:574"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:5:632",
+      "edge_type": "CFG_NEXT",
+      "src": "67d079e8:async_turn_on:4.0.1:628"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:5:632",
+      "edge_type": "DATA_DEP",
+      "src": "67d079e8:async_turn_on:1:574"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:2.0:579",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:2:576"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:3.0:586",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:3:585"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0:601",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4:592"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0.0:602",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4:592"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.1:608",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4:592"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.1.0:609",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4:592"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.2:611",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4:592"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.2.0:612",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4:592"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.3:614",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4:592"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0:620",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4:592"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0.0:623",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4:592"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0.0.0:624",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4:592"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0.0.0:626",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4:592"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0.1:628",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4:592"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0.0:602",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4.0:601"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0.0:623",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4.0:601"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0.0.0:624",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4.0:601"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0.0.0:626",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4.0:601"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0.1:628",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4.0:601"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.1.0:609",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4.1:608"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.2.0:612",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4.2:611"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0.0:602",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4.0:620"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0.0:623",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4.0:620"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0.0.0:624",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4.0:620"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0.0.0:626",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4.0:620"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0.1:628",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4.0:620"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0.0.0:624",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4.0.0:623"
+    },
+    {
+      "dst": "67d079e8:async_turn_on:4.0.0.0:626",
+      "edge_type": "CONTROL_DEP",
+      "src": "67d079e8:async_turn_on:4.0.0:623"
+    },
+    {
+      "dst": "960e735a:async_setup_entry:2:1653",
+      "edge_type": "CFG_NEXT",
+      "src": "960e735a:async_setup_entry:1:1650"
+    },
+    {
+      "dst": "960e735a:async_setup_entry:2:1653",
+      "edge_type": "DATA_DEP",
+      "src": "960e735a:async_setup_entry:1:1650"
+    },
+    {
+      "dst": "960e735a:async_discover_device:2:1656",
+      "edge_type": "CFG_NEXT",
+      "src": "960e735a:async_discover_device:1:1655"
+    },
+    {
+      "dst": "960e735a:async_discover_device:2:1656",
+      "edge_type": "DATA_DEP",
+      "src": "960e735a:async_discover_device:1:1655"
+    },
+    {
+      "dst": "960e735a:async_discover_device:2.0:1657",
+      "edge_type": "CFG_NEXT",
+      "src": "960e735a:async_discover_device:2:1656"
+    },
+    {
+      "dst": "960e735a:async_discover_device:2.0:1657",
+      "edge_type": "DATA_DEP",
+      "src": "960e735a:async_discover_device:2:1656"
+    },
+    {
+      "dst": "960e735a:async_discover_device:2.1:1658",
+      "edge_type": "CFG_NEXT",
+      "src": "960e735a:async_discover_device:2.0:1657"
+    },
+    {
+      "dst": "960e735a:async_discover_device:2.1:1658",
+      "edge_type": "DATA_DEP",
+      "src": "960e735a:async_discover_device:2:1656"
+    },
+    {
+      "dst": "960e735a:async_discover_device:2.1:1658",
+      "edge_type": "DATA_DEP",
+      "src": "960e735a:async_discover_device:2.0:1657"
+    },
+    {
+      "dst": "960e735a:async_discover_device:2.1:1658",
+      "edge_type": "DATA_DEP",
+      "src": "960e735a:async_discover_device:1:1655"
+    },
+    {
+      "dst": "960e735a:async_discover_device:2.0:1657",
+      "edge_type": "CONTROL_DEP",
+      "src": "960e735a:async_discover_device:2:1656"
+    },
+    {
+      "dst": "960e735a:async_discover_device:2.1:1658",
+      "edge_type": "CONTROL_DEP",
+      "src": "960e735a:async_discover_device:2:1656"
+    },
+    {
+      "dst": "960e735a:_validate_device_class_unit:1.2:1736",
+      "edge_type": "CFG_NEXT",
+      "src": "960e735a:_validate_device_class_unit:1.1:1735"
+    },
+    {
+      "dst": "960e735a:_validate_device_class_unit:1.2:1736",
+      "edge_type": "DATA_DEP",
+      "src": "960e735a:_validate_device_class_unit:1.1:1735"
+    },
+    {
+      "dst": "9cfce7a4:async_setup_entry:2:917",
+      "edge_type": "CFG_NEXT",
+      "src": "9cfce7a4:async_setup_entry:1:914"
+    },
+    {
+      "dst": "9cfce7a4:async_setup_entry:2:917",
+      "edge_type": "DATA_DEP",
+      "src": "9cfce7a4:async_setup_entry:1:914"
+    },
+    {
+      "dst": "9cfce7a4:async_discover_device:2:920",
+      "edge_type": "CFG_NEXT",
+      "src": "9cfce7a4:async_discover_device:1:919"
+    },
+    {
+      "dst": "9cfce7a4:async_discover_device:2:920",
+      "edge_type": "DATA_DEP",
+      "src": "9cfce7a4:async_discover_device:1:919"
+    },
+    {
+      "dst": "9cfce7a4:async_discover_device:2.0:921",
+      "edge_type": "CFG_NEXT",
+      "src": "9cfce7a4:async_discover_device:2:920"
+    },
+    {
+      "dst": "9cfce7a4:async_discover_device:2.0:921",
+      "edge_type": "DATA_DEP",
+      "src": "9cfce7a4:async_discover_device:2:920"
+    },
+    {
+      "dst": "9cfce7a4:async_discover_device:2.1:922",
+      "edge_type": "CFG_NEXT",
+      "src": "9cfce7a4:async_discover_device:2.0:921"
+    },
+    {
+      "dst": "9cfce7a4:async_discover_device:2.1:922",
+      "edge_type": "DATA_DEP",
+      "src": "9cfce7a4:async_discover_device:2:920"
+    },
+    {
+      "dst": "9cfce7a4:async_discover_device:2.1:922",
+      "edge_type": "DATA_DEP",
+      "src": "9cfce7a4:async_discover_device:2.0:921"
+    },
+    {
+      "dst": "9cfce7a4:async_discover_device:2.1:922",
+      "edge_type": "DATA_DEP",
+      "src": "9cfce7a4:async_discover_device:1:919"
+    },
+    {
+      "dst": "9cfce7a4:async_discover_device:2.0:921",
+      "edge_type": "CONTROL_DEP",
+      "src": "9cfce7a4:async_discover_device:2:920"
+    },
+    {
+      "dst": "9cfce7a4:async_discover_device:2.1:922",
+      "edge_type": "CONTROL_DEP",
+      "src": "9cfce7a4:async_discover_device:2:920"
+    }
+  ],
+  "kept_nodes": [
+    "27112d2d:async_close_cover:1.0:308",
+    "27112d2d:async_close_cover:1:307",
+    "27112d2d:async_discover_device:1:182",
+    "27112d2d:async_discover_device:2.0:184",
+    "27112d2d:async_discover_device:2.1:185",
+    "27112d2d:async_discover_device:2:183",
+    "27112d2d:async_open_cover:0:290",
+    "27112d2d:async_open_cover:1.0:292",
+    "27112d2d:async_open_cover:1:291",
+    "27112d2d:async_setup_entry:1:177",
+    "27112d2d:async_setup_entry:2:180",
+    "67d079e8:async_discover_device:1:467",
+    "67d079e8:async_discover_device:2.0:469",
+    "67d079e8:async_discover_device:2.1:470",
+    "67d079e8:async_discover_device:2:468",
+    "67d079e8:async_setup_entry:1:462",
+    "67d079e8:async_setup_entry:2:465",
+    "67d079e8:async_turn_on:0:573",
+    "67d079e8:async_turn_on:1:574",
+    "67d079e8:async_turn_on:2.0:579",
+    "67d079e8:async_turn_on:2:576",
+    "67d079e8:async_turn_on:3.0:586",
+    "67d079e8:async_turn_on:3:585",
+    "67d079e8:async_turn_on:4.0.0.0:624",
+    "67d079e8:async_turn_on:4.0.0.0:626",
+    "67d079e8:async_turn_on:4.0.0:602",
+    "67d079e8:async_turn_on:4.0.0:623",
+    "67d079e8:async_turn_on:4.0.1:628",
+    "67d079e8:async_turn_on:4.0:601",
+    "67d079e8:async_turn_on:4.0:620",
+    "67d079e8:async_turn_on:4.1.0:609",
+    "67d079e8:async_turn_on:4.1:608",
+    "67d079e8:async_turn_on:4.2.0:612",
+    "67d079e8:async_turn_on:4.2:611",
+    "67d079e8:async_turn_on:4.3:614",
+    "67d079e8:async_turn_on:4:592",
+    "67d079e8:async_turn_on:5:632",
+    "7127a953:async_set_direction:0:181",
+    "7127a953:async_set_direction:1:182",
+    "7127a953:async_turn_on:1.0:201",
+    "7127a953:async_turn_on:2:203",
+    "7127a953:async_turn_on:3.0:206",
+    "7127a953:async_turn_on:3:205",
+    "7127a953:async_turn_on:4.0:211",
+    "7127a953:async_turn_on:4:210",
+    "7127a953:async_turn_on:5:214",
+    "7127a953:current_direction:1:228",
+    "7127a953:current_direction:2:229",
+    "8e4c1745:__init__:16.0.0:315",
+    "8e4c1745:__init__:16.0:314",
+    "8e4c1745:__init__:16.1.0.0:312",
+    "8e4c1745:__init__:16.1.0:308",
+    "8e4c1745:__init__:16.1:307",
+    "8e4c1745:__init__:16:305",
+    "8e4c1745:__init__:17.0:322",
+    "8e4c1745:__init__:17.1:323",
+    "8e4c1745:__init__:17.2:324",
+    "8e4c1745:__init__:17:321",
+    "8e4c1745:__init__:18.0:328",
+    "8e4c1745:__init__:18.1:329",
+    "8e4c1745:__init__:18.2:330",
+    "8e4c1745:__init__:18:327",
+    "8e4c1745:__init__:19.0:334",
+    "8e4c1745:__init__:19.1:335",
+    "8e4c1745:__init__:19:333",
+    "8e4c1745:__init__:20.0:339",
+    "8e4c1745:__init__:20.1:340",
+    "8e4c1745:__init__:20:338",
+    "8e4c1745:_get_temperature_wrappers:1:129",
+    "8e4c1745:_get_temperature_wrappers:2:132",
+    "8e4c1745:_get_temperature_wrappers:3:135",
+    "8e4c1745:_get_temperature_wrappers:4:138",
+    "8e4c1745:_get_temperature_wrappers:5.0.0.0:150",
+    "8e4c1745:_get_temperature_wrappers:5.0.0:149",
+    "8e4c1745:_get_temperature_wrappers:5.0:148",
+    "8e4c1745:_get_temperature_wrappers:5:143",
+    "8e4c1745:async_set_hvac_mode:1:355",
+    "8e4c1745:async_set_hvac_mode:2.0:357",
+    "8e4c1745:async_set_hvac_mode:2:356",
+    "8e4c1745:async_set_hvac_mode:3.0:367",
+    "8e4c1745:async_set_hvac_mode:3:362",
+    "8e4c1745:async_set_hvac_mode:4:370",
+    "8e4c1745:async_set_swing_mode:0:385",
+    "8e4c1745:async_set_swing_mode:1:386",
+    "8e4c1745:hvac_mode:4:430",
+    "8e4c1745:hvac_mode:5:431",
+    "8e4c1745:swing_mode:1:446",
+    "8e4c1745:swing_mode:2:447",
+    "960e735a:_validate_device_class_unit:1.1:1735",
+    "960e735a:_validate_device_class_unit:1.2:1736",
+    "960e735a:async_discover_device:1:1655",
+    "960e735a:async_discover_device:2.0:1657",
+    "960e735a:async_discover_device:2.1:1658",
+    "960e735a:async_discover_device:2:1656",
+    "960e735a:async_setup_entry:1:1650",
+    "960e735a:async_setup_entry:2:1653",
+    "9cfce7a4:async_discover_device:1:919",
+    "9cfce7a4:async_discover_device:2.0:921",
+    "9cfce7a4:async_discover_device:2.1:922",
+    "9cfce7a4:async_discover_device:2:920",
+    "9cfce7a4:async_setup_entry:1:914",
+    "9cfce7a4:async_setup_entry:2:917",
+    "9da22f42:_async_setup_update_entity:4:82",
+    "9da22f42:_handle_device_update:2:185",
+    "9da22f42:_handle_device_update:3:186",
+    "9da22f42:async_setup_entry:7:71",
+    "a073d609:_handle_state_update:1.0:76",
+    "a073d609:_handle_state_update:1:63"
+  ],
+  "mapping": {
+    "27112d2d:async_close_cover:1.0:308": {
+      "col_end": 13,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/cover.py",
+      "function": "async_close_cover",
+      "line_end": 310,
+      "line_start": 308
+    },
+    "27112d2d:async_close_cover:1:307": {
+      "col_end": 18,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/cover.py",
+      "function": "async_close_cover",
+      "line_end": 311,
+      "line_start": 307
+    },
+    "27112d2d:async_discover_device:1:182": {
+      "col_end": 44,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/cover.py",
+      "function": "async_discover_device",
+      "line_end": 182,
+      "line_start": 182
+    },
+    "27112d2d:async_discover_device:2.0:184": {
+      "col_end": 50,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/cover.py",
+      "function": "async_discover_device",
+      "line_end": 184,
+      "line_start": 184
+    },
+    "27112d2d:async_discover_device:2.1:185": {
+      "col_end": 17,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/cover.py",
+      "function": "async_discover_device",
+      "line_end": 214,
+      "line_start": 185
+    },
+    "27112d2d:async_discover_device:2:183": {
+      "col_end": 17,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/cover.py",
+      "function": "async_discover_device",
+      "line_end": 214,
+      "line_start": 183
+    },
+    "27112d2d:async_open_cover:0:290": {
+      "col_end": 29,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/cover.py",
+      "function": "async_open_cover",
+      "line_end": 290,
+      "line_start": 290
+    },
+    "27112d2d:async_open_cover:1.0:292": {
+      "col_end": 13,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/cover.py",
+      "function": "async_open_cover",
+      "line_end": 294,
+      "line_start": 292
+    },
+    "27112d2d:async_open_cover:1:291": {
+      "col_end": 18,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/cover.py",
+      "function": "async_open_cover",
+      "line_end": 295,
+      "line_start": 291
+    },
+    "27112d2d:async_setup_entry:1:177": {
+      "col_end": 40,
+      "col_start": 4,
+      "file": "data/repo_snapshot/tuya/cover.py",
+      "function": "async_setup_entry",
+      "line_end": 177,
+      "line_start": 177
+    },
+    "27112d2d:async_setup_entry:2:180": {
+      "col_end": 36,
+      "col_start": 4,
+      "file": "data/repo_snapshot/tuya/cover.py",
+      "function": "async_setup_entry",
+      "line_end": 216,
+      "line_start": 180
+    },
+    "67d079e8:async_discover_device:1:467": {
+      "col_end": 44,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_discover_device",
+      "line_end": 467,
+      "line_start": 467
+    },
+    "67d079e8:async_discover_device:2.0:469": {
+      "col_end": 50,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_discover_device",
+      "line_end": 469,
+      "line_start": 469
+    },
+    "67d079e8:async_discover_device:2.1:470": {
+      "col_end": 17,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_discover_device",
+      "line_end": 498,
+      "line_start": 470
+    },
+    "67d079e8:async_discover_device:2:468": {
+      "col_end": 17,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_discover_device",
+      "line_end": 498,
+      "line_start": 468
+    },
+    "67d079e8:async_setup_entry:1:462": {
+      "col_end": 40,
+      "col_start": 4,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_setup_entry",
+      "line_end": 462,
+      "line_start": 462
+    },
+    "67d079e8:async_setup_entry:2:465": {
+      "col_end": 36,
+      "col_start": 4,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_setup_entry",
+      "line_end": 500,
+      "line_start": 465
+    },
+    "67d079e8:async_turn_on:0:573": {
+      "col_end": 43,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_turn_on",
+      "line_end": 573,
+      "line_start": 573
+    },
+    "67d079e8:async_turn_on:1:574": {
+      "col_end": 78,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_turn_on",
+      "line_end": 574,
+      "line_start": 574
+    },
+    "67d079e8:async_turn_on:2.0:579": {
+      "col_end": 13,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_turn_on",
+      "line_end": 583,
+      "line_start": 579
+    },
+    "67d079e8:async_turn_on:2:576": {
+      "col_end": 13,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_turn_on",
+      "line_end": 583,
+      "line_start": 576
+    },
+    "67d079e8:async_turn_on:3.0:586": {
+      "col_end": 13,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_turn_on",
+      "line_end": 590,
+      "line_start": 586
+    },
+    "67d079e8:async_turn_on:3:585": {
+      "col_end": 13,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_turn_on",
+      "line_end": 590,
+      "line_start": 585
+    },
+    "67d079e8:async_turn_on:4.0.0.0:624": {
+      "col_end": 52,
+      "col_start": 16,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_turn_on",
+      "line_end": 624,
+      "line_start": 624
+    },
+    "67d079e8:async_turn_on:4.0.0.0:626": {
+      "col_end": 47,
+      "col_start": 16,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_turn_on",
+      "line_end": 626,
+      "line_start": 626
+    },
+    "67d079e8:async_turn_on:4.0.0:602": {
+      "col_end": 17,
+      "col_start": 16,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_turn_on",
+      "line_end": 606,
+      "line_start": 602
+    },
+    "67d079e8:async_turn_on:4.0.0:623": {
+      "col_end": 47,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_turn_on",
+      "line_end": 626,
+      "line_start": 623
+    },
+    "67d079e8:async_turn_on:4.0.1:628": {
+      "col_end": 13,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_turn_on",
+      "line_end": 630,
+      "line_start": 628
+    },
+    "67d079e8:async_turn_on:4.0:601": {
+      "col_end": 17,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_turn_on",
+      "line_end": 606,
+      "line_start": 601
+    },
+    "67d079e8:async_turn_on:4.0:620": {
+      "col_end": 13,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_turn_on",
+      "line_end": 630,
+      "line_start": 620
+    },
+    "67d079e8:async_turn_on:4.1.0:609": {
+      "col_end": 49,
+      "col_start": 16,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_turn_on",
+      "line_end": 609,
+      "line_start": 609
+    },
+    "67d079e8:async_turn_on:4.1:608": {
+      "col_end": 49,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_turn_on",
+      "line_end": 609,
+      "line_start": 608
+    },
+    "67d079e8:async_turn_on:4.2.0:612": {
+      "col_end": 47,
+      "col_start": 16,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_turn_on",
+      "line_end": 612,
+      "line_start": 612
+    },
+    "67d079e8:async_turn_on:4.2:611": {
+      "col_end": 47,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_turn_on",
+      "line_end": 612,
+      "line_start": 611
+    },
+    "67d079e8:async_turn_on:4.3:614": {
+      "col_end": 13,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_turn_on",
+      "line_end": 618,
+      "line_start": 614
+    },
+    "67d079e8:async_turn_on:4:592": {
+      "col_end": 13,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_turn_on",
+      "line_end": 630,
+      "line_start": 592
+    },
+    "67d079e8:async_turn_on:5:632": {
+      "col_end": 49,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/light.py",
+      "function": "async_turn_on",
+      "line_end": 632,
+      "line_start": 632
+    },
+    "7127a953:async_set_direction:0:181": {
+      "col_end": 43,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/fan.py",
+      "function": "async_set_direction",
+      "line_end": 181,
+      "line_start": 181
+    },
+    "7127a953:async_set_direction:1:182": {
+      "col_end": 87,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/fan.py",
+      "function": "async_set_direction",
+      "line_end": 183,
+      "line_start": 182
+    },
+    "7127a953:async_turn_on:1.0:201": {
+      "col_end": 18,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/fan.py",
+      "function": "async_turn_on",
+      "line_end": 201,
+      "line_start": 201
+    },
+    "7127a953:async_turn_on:2:203": {
+      "col_end": 78,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/fan.py",
+      "function": "async_turn_on",
+      "line_end": 203,
+      "line_start": 203
+    },
+    "7127a953:async_turn_on:3.0:206": {
+      "col_end": 13,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/fan.py",
+      "function": "async_turn_on",
+      "line_end": 208,
+      "line_start": 206
+    },
+    "7127a953:async_turn_on:3:205": {
+      "col_end": 13,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/fan.py",
+      "function": "async_turn_on",
+      "line_end": 208,
+      "line_start": 205
+    },
+    "7127a953:async_turn_on:4.0:211": {
+      "col_end": 13,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/fan.py",
+      "function": "async_turn_on",
+      "line_end": 213,
+      "line_start": 211
+    },
+    "7127a953:async_turn_on:4:210": {
+      "col_end": 13,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/fan.py",
+      "function": "async_turn_on",
+      "line_end": 213,
+      "line_start": 210
+    },
+    "7127a953:async_turn_on:5:214": {
+      "col_end": 49,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/fan.py",
+      "function": "async_turn_on",
+      "line_end": 214,
+      "line_start": 214
+    },
+    "7127a953:current_direction:1:228": {
+      "col_end": 64,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/fan.py",
+      "function": "current_direction",
+      "line_end": 228,
+      "line_start": 228
+    },
+    "7127a953:current_direction:2:229": {
+      "col_end": 85,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/fan.py",
+      "function": "current_direction",
+      "line_end": 229,
+      "line_start": 229
+    },
+    "8e4c1745:__init__:16.0.0:315": {
+      "col_end": 13,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 318,
+      "line_start": 315
+    },
+    "8e4c1745:__init__:16.0:314": {
+      "col_end": 13,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 318,
+      "line_start": 314
+    },
+    "8e4c1745:__init__:16.1.0.0:312": {
+      "col_end": 57,
+      "col_start": 20,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 312,
+      "line_start": 312
+    },
+    "8e4c1745:__init__:16.1.0:308": {
+      "col_end": 57,
+      "col_start": 16,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 312,
+      "line_start": 308
+    },
+    "8e4c1745:__init__:16.1:307": {
+      "col_end": 57,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 312,
+      "line_start": 307
+    },
+    "8e4c1745:__init__:16:305": {
+      "col_end": 13,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 318,
+      "line_start": 305
+    },
+    "8e4c1745:__init__:17.0:322": {
+      "col_end": 75,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 322,
+      "line_start": 322
+    },
+    "8e4c1745:__init__:17.1:323": {
+      "col_end": 60,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 323,
+      "line_start": 323
+    },
+    "8e4c1745:__init__:17.2:324": {
+      "col_end": 77,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 324,
+      "line_start": 324
+    },
+    "8e4c1745:__init__:17:321": {
+      "col_end": 77,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 324,
+      "line_start": 321
+    },
+    "8e4c1745:__init__:18.0:328": {
+      "col_end": 81,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 328,
+      "line_start": 328
+    },
+    "8e4c1745:__init__:18.1:329": {
+      "col_end": 78,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 329,
+      "line_start": 329
+    },
+    "8e4c1745:__init__:18.2:330": {
+      "col_end": 78,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 330,
+      "line_start": 330
+    },
+    "8e4c1745:__init__:18:327": {
+      "col_end": 78,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 330,
+      "line_start": 327
+    },
+    "8e4c1745:__init__:19.0:334": {
+      "col_end": 74,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 334,
+      "line_start": 334
+    },
+    "8e4c1745:__init__:19.1:335": {
+      "col_end": 59,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 335,
+      "line_start": 335
+    },
+    "8e4c1745:__init__:19:333": {
+      "col_end": 59,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 335,
+      "line_start": 333
+    },
+    "8e4c1745:__init__:20.0:339": {
+      "col_end": 76,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 339,
+      "line_start": 339
+    },
+    "8e4c1745:__init__:20.1:340": {
+      "col_end": 13,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 346,
+      "line_start": 340
+    },
+    "8e4c1745:__init__:20:338": {
+      "col_end": 13,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "__init__",
+      "line_end": 346,
+      "line_start": 338
+    },
+    "8e4c1745:_get_temperature_wrappers:1:129": {
+      "col_end": 5,
+      "col_start": 4,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "_get_temperature_wrappers",
+      "line_end": 131,
+      "line_start": 129
+    },
+    "8e4c1745:_get_temperature_wrappers:2:132": {
+      "col_end": 5,
+      "col_start": 4,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "_get_temperature_wrappers",
+      "line_end": 134,
+      "line_start": 132
+    },
+    "8e4c1745:_get_temperature_wrappers:3:135": {
+      "col_end": 5,
+      "col_start": 4,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "_get_temperature_wrappers",
+      "line_end": 137,
+      "line_start": 135
+    },
+    "8e4c1745:_get_temperature_wrappers:4:138": {
+      "col_end": 5,
+      "col_start": 4,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "_get_temperature_wrappers",
+      "line_end": 140,
+      "line_start": 138
+    },
+    "8e4c1745:_get_temperature_wrappers:5.0.0.0:150": {
+      "col_end": 17,
+      "col_start": 16,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "_get_temperature_wrappers",
+      "line_end": 152,
+      "line_start": 150
+    },
+    "8e4c1745:_get_temperature_wrappers:5.0.0:149": {
+      "col_end": 17,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "_get_temperature_wrappers",
+      "line_end": 152,
+      "line_start": 149
+    },
+    "8e4c1745:_get_temperature_wrappers:5.0:148": {
+      "col_end": 17,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "_get_temperature_wrappers",
+      "line_end": 152,
+      "line_start": 148
+    },
+    "8e4c1745:_get_temperature_wrappers:5:143": {
+      "col_end": 17,
+      "col_start": 4,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "_get_temperature_wrappers",
+      "line_end": 152,
+      "line_start": 143
+    },
+    "8e4c1745:async_set_hvac_mode:1:355": {
+      "col_end": 21,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "async_set_hvac_mode",
+      "line_end": 355,
+      "line_start": 355
+    },
+    "8e4c1745:async_set_hvac_mode:2.0:357": {
+      "col_end": 13,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "async_set_hvac_mode",
+      "line_end": 361,
+      "line_start": 357
+    },
+    "8e4c1745:async_set_hvac_mode:2:356": {
+      "col_end": 13,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "async_set_hvac_mode",
+      "line_end": 361,
+      "line_start": 356
+    },
+    "8e4c1745:async_set_hvac_mode:3.0:367": {
+      "col_end": 13,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "async_set_hvac_mode",
+      "line_end": 369,
+      "line_start": 367
+    },
+    "8e4c1745:async_set_hvac_mode:3:362": {
+      "col_end": 13,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "async_set_hvac_mode",
+      "line_end": 369,
+      "line_start": 362
+    },
+    "8e4c1745:async_set_hvac_mode:4:370": {
+      "col_end": 49,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "async_set_hvac_mode",
+      "line_end": 370,
+      "line_start": 370
+    },
+    "8e4c1745:async_set_swing_mode:0:385": {
+      "col_end": 45,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "async_set_swing_mode",
+      "line_end": 385,
+      "line_start": 385
+    },
+    "8e4c1745:async_set_swing_mode:1:386": {
+      "col_end": 82,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "async_set_swing_mode",
+      "line_end": 387,
+      "line_start": 386
+    },
+    "8e4c1745:hvac_mode:4:430": {
+      "col_end": 63,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "hvac_mode",
+      "line_end": 430,
+      "line_start": 430
+    },
+    "8e4c1745:hvac_mode:5:431": {
+      "col_end": 82,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "hvac_mode",
+      "line_end": 431,
+      "line_start": 431
+    },
+    "8e4c1745:swing_mode:1:446": {
+      "col_end": 60,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "swing_mode",
+      "line_end": 446,
+      "line_start": 446
+    },
+    "8e4c1745:swing_mode:2:447": {
+      "col_end": 81,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/climate.py",
+      "function": "swing_mode",
+      "line_end": 447,
+      "line_start": 447
+    },
+    "960e735a:_validate_device_class_unit:1.1:1735": {
+      "col_end": 56,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/sensor.py",
+      "function": "_validate_device_class_unit",
+      "line_end": 1735,
+      "line_start": 1735
+    },
+    "960e735a:_validate_device_class_unit:1.2:1736": {
+      "col_end": 13,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/sensor.py",
+      "function": "_validate_device_class_unit",
+      "line_end": 1738,
+      "line_start": 1736
+    },
+    "960e735a:async_discover_device:1:1655": {
+      "col_end": 45,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/sensor.py",
+      "function": "async_discover_device",
+      "line_end": 1655,
+      "line_start": 1655
+    },
+    "960e735a:async_discover_device:2.0:1657": {
+      "col_end": 50,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/sensor.py",
+      "function": "async_discover_device",
+      "line_end": 1657,
+      "line_start": 1657
+    },
+    "960e735a:async_discover_device:2.1:1658": {
+      "col_end": 17,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/sensor.py",
+      "function": "async_discover_device",
+      "line_end": 1663,
+      "line_start": 1658
+    },
+    "960e735a:async_discover_device:2:1656": {
+      "col_end": 17,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/sensor.py",
+      "function": "async_discover_device",
+      "line_end": 1663,
+      "line_start": 1656
+    },
+    "960e735a:async_setup_entry:1:1650": {
+      "col_end": 40,
+      "col_start": 4,
+      "file": "data/repo_snapshot/tuya/sensor.py",
+      "function": "async_setup_entry",
+      "line_end": 1650,
+      "line_start": 1650
+    },
+    "960e735a:async_setup_entry:2:1653": {
+      "col_end": 36,
+      "col_start": 4,
+      "file": "data/repo_snapshot/tuya/sensor.py",
+      "function": "async_setup_entry",
+      "line_end": 1665,
+      "line_start": 1653
+    },
+    "9cfce7a4:async_discover_device:1:919": {
+      "col_end": 45,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/switch.py",
+      "function": "async_discover_device",
+      "line_end": 919,
+      "line_start": 919
+    },
+    "9cfce7a4:async_discover_device:2.0:921": {
+      "col_end": 50,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/switch.py",
+      "function": "async_discover_device",
+      "line_end": 921,
+      "line_start": 921
+    },
+    "9cfce7a4:async_discover_device:2.1:922": {
+      "col_end": 17,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/switch.py",
+      "function": "async_discover_device",
+      "line_end": 931,
+      "line_start": 922
+    },
+    "9cfce7a4:async_discover_device:2:920": {
+      "col_end": 17,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/switch.py",
+      "function": "async_discover_device",
+      "line_end": 931,
+      "line_start": 920
+    },
+    "9cfce7a4:async_setup_entry:1:914": {
+      "col_end": 40,
+      "col_start": 4,
+      "file": "data/repo_snapshot/tuya/switch.py",
+      "function": "async_setup_entry",
+      "line_end": 914,
+      "line_start": 914
+    },
+    "9cfce7a4:async_setup_entry:2:917": {
+      "col_end": 36,
+      "col_start": 4,
+      "file": "data/repo_snapshot/tuya/switch.py",
+      "function": "async_setup_entry",
+      "line_end": 933,
+      "line_start": 917
+    },
+    "9da22f42:_async_setup_update_entity:4:82": {
+      "col_end": 19,
+      "col_start": 8,
+      "file": "data/repo_snapshot/esphome/update.py",
+      "function": "_async_setup_update_entity",
+      "line_end": 83,
+      "line_start": 82
+    },
+    "9da22f42:_handle_device_update:2:185": {
+      "col_end": 28,
+      "col_start": 8,
+      "file": "data/repo_snapshot/esphome/update.py",
+      "function": "_handle_device_update",
+      "line_end": 185,
+      "line_start": 185
+    },
+    "9da22f42:_handle_device_update:3:186": {
+      "col_end": 35,
+      "col_start": 8,
+      "file": "data/repo_snapshot/esphome/update.py",
+      "function": "_handle_device_update",
+      "line_end": 186,
+      "line_start": 186
+    },
+    "9da22f42:async_setup_entry:7:71": {
+      "col_end": 81,
+      "col_start": 4,
+      "file": "data/repo_snapshot/esphome/update.py",
+      "function": "async_setup_entry",
+      "line_end": 86,
+      "line_start": 71
+    },
+    "a073d609:_handle_state_update:1.0:76": {
+      "col_end": 39,
+      "col_start": 12,
+      "file": "data/repo_snapshot/tuya/entity.py",
+      "function": "_handle_state_update",
+      "line_end": 76,
+      "line_start": 76
+    },
+    "a073d609:_handle_state_update:1:63": {
+      "col_end": 39,
+      "col_start": 8,
+      "file": "data/repo_snapshot/tuya/entity.py",
+      "function": "_handle_state_update",
+      "line_end": 76,
+      "line_start": 63
+    }
+  },
+  "nodes": {
+    "27112d2d:async_close_cover:1.0:308": {
+      "col_end": 13,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/cover.py",
+      "function_name": "async_close_cover",
+      "line_end": 310,
+      "line_start": 308,
+      "marker_refs": [
+        "marker_3ea288dff9",
+        "marker_16db401d63"
+      ],
+      "node_id": "27112d2d:async_close_cover:1.0:308",
+      "raw_repr": "Expr(Await(Call(Attribute(Name('self', Load()), '_async_send_commands', Load()), [Call(Attribute(Attribute(Name('self', Load()), '_set_position', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Constant(0)])])))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "27112d2d:async_close_cover:1:307": {
+      "col_end": 18,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/cover.py",
+      "function_name": "async_close_cover",
+      "line_end": 311,
+      "line_start": 307,
+      "marker_refs": [
+        "marker_3ea288dff9",
+        "marker_16db401d63"
+      ],
+      "node_id": "27112d2d:async_close_cover:1:307",
+      "raw_repr": "If(Compare(Attribute(Name('self', Load()), '_set_position', Load()), [IsNot()], [Constant(None)]), [Expr(Await(Call(Attribute(Name('self', Load()), '_async_send_commands', Load()), [Call(Attribute(Attribute(Name('self', Load()), '_set_position', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Constant(0)])]))), Return()])",
+      "stmt_kind": "If",
+      "uses": [
+        "self"
+      ]
+    },
+    "27112d2d:async_discover_device:1:182": {
+      "col_end": 44,
+      "col_start": 8,
+      "defs": [
+        "entities"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/cover.py",
+      "function_name": "async_discover_device",
+      "line_end": 182,
+      "line_start": 182,
+      "marker_refs": [],
+      "node_id": "27112d2d:async_discover_device:1:182",
+      "raw_repr": "AnnAssign(Name('entities', Store()), Subscript(Name('list', Load()), Name('TuyaCoverEntity', Load()), Load()), List([], Load()), 1)",
+      "stmt_kind": "AnnAssign",
+      "uses": [
+        "TuyaCoverEntity",
+        "list"
+      ]
+    },
+    "27112d2d:async_discover_device:2.0:184": {
+      "col_end": 50,
+      "col_start": 12,
+      "defs": [
+        "device"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/cover.py",
+      "function_name": "async_discover_device",
+      "line_end": 184,
+      "line_start": 184,
+      "marker_refs": [],
+      "node_id": "27112d2d:async_discover_device:2.0:184",
+      "raw_repr": "Assign([Name('device', Store())], Subscript(Attribute(Name('manager', Load()), 'device_map', Load()), Name('device_id', Load()), Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "device_id",
+        "manager"
+      ]
+    },
+    "27112d2d:async_discover_device:2.1:185": {
+      "col_end": 17,
+      "col_start": 12,
+      "defs": [
+        "description",
+        "descriptions"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/cover.py",
+      "function_name": "async_discover_device",
+      "line_end": 214,
+      "line_start": 185,
+      "marker_refs": [
+        "marker_139686e0a3"
+      ],
+      "node_id": "27112d2d:async_discover_device:2.1:185",
+      "raw_repr": "If(NamedExpr(Name('descriptions', Store()), Call(Attribute(Name('COVERS', Load()), 'get', Load()), [Attribute(Name('device', Load()), 'category', Load())])), [Expr(Call(Attribute(Name('entities', Load()), 'extend', Load()), [GeneratorExp(Call(Name('TuyaCoverEntity', Load()), [Name('device', Load()), Name('manager', Load()), Name('description', Load())], [keyword('current_position', Call(Attribute(Attribute(Name('description', Load()), 'position_wrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'current_position', Load())])), keyword('current_state_wrapper', Call(Attribute(Attribute(Name('description', Load()), 'current_state_wrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'current_state', Load())])), keyword('instruction_wrapper', Call(Name('_get_instruction_wrapper', Load()), [Name('device', Load()), Name('description', Load())])), keyword('set_position', Call(Attribute(Attribute(Name('description', Load()), 'position_wrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'set_position', Load())], [keyword('prefer_function', Constant(True))])), keyword('tilt_position', Call(Attribute(Attribute(Name('description', Load()), 'position_wrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Tuple([Attribute(Name('DPCode', Load()), 'ANGLE_HORIZONTAL', Load()), Attribute(Name('DPCode', Load()), 'ANGLE_VERTICAL', Load())], Load())], [keyword('prefer_function', Constant(True))]))]), [comprehension(Name('description', Store()), Name('descriptions', Load()), [BoolOp(Or(), [Compare(Attribute(Name('description', Load()), 'key', Load()), [In()], [Attribute(Name('device', Load()), 'function', Load())]), Compare(Attribute(Name('description', Load()), 'key', Load()), [In()], [Attribute(Name('device', Load()), 'status_range', Load())])])], 0)])]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "COVERS",
+        "DPCode",
+        "TuyaCoverEntity",
+        "_get_instruction_wrapper",
+        "description",
+        "descriptions",
+        "device",
+        "entities",
+        "manager"
+      ]
+    },
+    "27112d2d:async_discover_device:2:183": {
+      "col_end": 17,
+      "col_start": 8,
+      "defs": [
+        "description",
+        "descriptions",
+        "device",
+        "device_id"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/cover.py",
+      "function_name": "async_discover_device",
+      "line_end": 214,
+      "line_start": 183,
+      "marker_refs": [],
+      "node_id": "27112d2d:async_discover_device:2:183",
+      "raw_repr": "For(Name('device_id', Store()), Name('device_ids', Load()), [Assign([Name('device', Store())], Subscript(Attribute(Name('manager', Load()), 'device_map', Load()), Name('device_id', Load()), Load())), If(NamedExpr(Name('descriptions', Store()), Call(Attribute(Name('COVERS', Load()), 'get', Load()), [Attribute(Name('device', Load()), 'category', Load())])), [Expr(Call(Attribute(Name('entities', Load()), 'extend', Load()), [GeneratorExp(Call(Name('TuyaCoverEntity', Load()), [Name('device', Load()), Name('manager', Load()), Name('description', Load())], [keyword('current_position', Call(Attribute(Attribute(Name('description', Load()), 'position_wrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'current_position', Load())])), keyword('current_state_wrapper', Call(Attribute(Attribute(Name('description', Load()), 'current_state_wrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'current_state', Load())])), keyword('instruction_wrapper', Call(Name('_get_instruction_wrapper', Load()), [Name('device', Load()), Name('description', Load())])), keyword('set_position', Call(Attribute(Attribute(Name('description', Load()), 'position_wrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'set_position', Load())], [keyword('prefer_function', Constant(True))])), keyword('tilt_position', Call(Attribute(Attribute(Name('description', Load()), 'position_wrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Tuple([Attribute(Name('DPCode', Load()), 'ANGLE_HORIZONTAL', Load()), Attribute(Name('DPCode', Load()), 'ANGLE_VERTICAL', Load())], Load())], [keyword('prefer_function', Constant(True))]))]), [comprehension(Name('description', Store()), Name('descriptions', Load()), [BoolOp(Or(), [Compare(Attribute(Name('description', Load()), 'key', Load()), [In()], [Attribute(Name('device', Load()), 'function', Load())]), Compare(Attribute(Name('description', Load()), 'key', Load()), [In()], [Attribute(Name('device', Load()), 'status_range', Load())])])], 0)])]))])])",
+      "stmt_kind": "For",
+      "uses": [
+        "COVERS",
+        "DPCode",
+        "TuyaCoverEntity",
+        "_get_instruction_wrapper",
+        "description",
+        "descriptions",
+        "device",
+        "device_id",
+        "device_ids",
+        "entities",
+        "manager"
+      ]
+    },
+    "27112d2d:async_open_cover:0:290": {
+      "col_end": 29,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/cover.py",
+      "function_name": "async_open_cover",
+      "line_end": 290,
+      "line_start": 290,
+      "marker_refs": [],
+      "node_id": "27112d2d:async_open_cover:0:290",
+      "raw_repr": "Expr(Constant('Open the cover.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "27112d2d:async_open_cover:1.0:292": {
+      "col_end": 13,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/cover.py",
+      "function_name": "async_open_cover",
+      "line_end": 294,
+      "line_start": 292,
+      "marker_refs": [
+        "marker_1b8c76dd85",
+        "marker_ecb042c309"
+      ],
+      "node_id": "27112d2d:async_open_cover:1.0:292",
+      "raw_repr": "Expr(Await(Call(Attribute(Name('self', Load()), '_async_send_commands', Load()), [Call(Attribute(Attribute(Name('self', Load()), '_set_position', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Constant(100)])])))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "27112d2d:async_open_cover:1:291": {
+      "col_end": 18,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/cover.py",
+      "function_name": "async_open_cover",
+      "line_end": 295,
+      "line_start": 291,
+      "marker_refs": [
+        "marker_1b8c76dd85",
+        "marker_ecb042c309"
+      ],
+      "node_id": "27112d2d:async_open_cover:1:291",
+      "raw_repr": "If(Compare(Attribute(Name('self', Load()), '_set_position', Load()), [IsNot()], [Constant(None)]), [Expr(Await(Call(Attribute(Name('self', Load()), '_async_send_commands', Load()), [Call(Attribute(Attribute(Name('self', Load()), '_set_position', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Constant(100)])]))), Return()])",
+      "stmt_kind": "If",
+      "uses": [
+        "self"
+      ]
+    },
+    "27112d2d:async_setup_entry:1:177": {
+      "col_end": 40,
+      "col_start": 4,
+      "defs": [
+        "manager"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/cover.py",
+      "function_name": "async_setup_entry",
+      "line_end": 177,
+      "line_start": 177,
+      "marker_refs": [
+        "marker_04c760b96a"
+      ],
+      "node_id": "27112d2d:async_setup_entry:1:177",
+      "raw_repr": "Assign([Name('manager', Store())], Attribute(Attribute(Name('entry', Load()), 'runtime_data', Load()), 'manager', Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "entry"
+      ]
+    },
+    "27112d2d:async_setup_entry:2:180": {
+      "col_end": 36,
+      "col_start": 4,
+      "defs": [
+        "description",
+        "descriptions",
+        "device",
+        "device_id",
+        "entities"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/cover.py",
+      "function_name": "async_setup_entry",
+      "line_end": 216,
+      "line_start": 180,
+      "marker_refs": [
+        "marker_04c760b96a",
+        "marker_4d5415d4b6"
+      ],
+      "node_id": "27112d2d:async_setup_entry:2:180",
+      "raw_repr": "FunctionDef('async_discover_device', arguments([], [arg('device_ids', Subscript(Name('list', Load()), Name('str', Load()), Load()))]), [Expr(Constant('Discover and add a discovered tuya cover.')), AnnAssign(Name('entities', Store()), Subscript(Name('list', Load()), Name('TuyaCoverEntity', Load()), Load()), List([], Load()), 1), For(Name('device_id', Store()), Name('device_ids', Load()), [Assign([Name('device', Store())], Subscript(Attribute(Name('manager', Load()), 'device_map', Load()), Name('device_id', Load()), Load())), If(NamedExpr(Name('descriptions', Store()), Call(Attribute(Name('COVERS', Load()), 'get', Load()), [Attribute(Name('device', Load()), 'category', Load())])), [Expr(Call(Attribute(Name('entities', Load()), 'extend', Load()), [GeneratorExp(Call(Name('TuyaCoverEntity', Load()), [Name('device', Load()), Name('manager', Load()), Name('description', Load())], [keyword('current_position', Call(Attribute(Attribute(Name('description', Load()), 'position_wrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'current_position', Load())])), keyword('current_state_wrapper', Call(Attribute(Attribute(Name('description', Load()), 'current_state_wrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'current_state', Load())])), keyword('instruction_wrapper', Call(Name('_get_instruction_wrapper', Load()), [Name('device', Load()), Name('description', Load())])), keyword('set_position', Call(Attribute(Attribute(Name('description', Load()), 'position_wrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'set_position', Load())], [keyword('prefer_function', Constant(True))])), keyword('tilt_position', Call(Attribute(Attribute(Name('description', Load()), 'position_wrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Tuple([Attribute(Name('DPCode', Load()), 'ANGLE_HORIZONTAL', Load()), Attribute(Name('DPCode', Load()), 'ANGLE_VERTICAL', Load())], Load())], [keyword('prefer_function', Constant(True))]))]), [comprehension(Name('description', Store()), Name('descriptions', Load()), [BoolOp(Or(), [Compare(Attribute(Name('description', Load()), 'key', Load()), [In()], [Attribute(Name('device', Load()), 'function', Load())]), Compare(Attribute(Name('description', Load()), 'key', Load()), [In()], [Attribute(Name('device', Load()), 'status_range', Load())])])], 0)])]))])]), Expr(Call(Name('async_add_entities', Load()), [Name('entities', Load())]))], [Name('callback', Load())], Constant(None))",
+      "stmt_kind": "FunctionDef",
+      "uses": [
+        "COVERS",
+        "DPCode",
+        "TuyaCoverEntity",
+        "_get_instruction_wrapper",
+        "async_add_entities",
+        "callback",
+        "description",
+        "descriptions",
+        "device",
+        "device_id",
+        "device_ids",
+        "entities",
+        "list",
+        "manager",
+        "str"
+      ]
+    },
+    "67d079e8:async_discover_device:1:467": {
+      "col_end": 44,
+      "col_start": 8,
+      "defs": [
+        "entities"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_discover_device",
+      "line_end": 467,
+      "line_start": 467,
+      "marker_refs": [],
+      "node_id": "67d079e8:async_discover_device:1:467",
+      "raw_repr": "AnnAssign(Name('entities', Store()), Subscript(Name('list', Load()), Name('TuyaLightEntity', Load()), Load()), List([], Load()), 1)",
+      "stmt_kind": "AnnAssign",
+      "uses": [
+        "TuyaLightEntity",
+        "list"
+      ]
+    },
+    "67d079e8:async_discover_device:2.0:469": {
+      "col_end": 50,
+      "col_start": 12,
+      "defs": [
+        "device"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_discover_device",
+      "line_end": 469,
+      "line_start": 469,
+      "marker_refs": [],
+      "node_id": "67d079e8:async_discover_device:2.0:469",
+      "raw_repr": "Assign([Name('device', Store())], Subscript(Attribute(Name('manager', Load()), 'device_map', Load()), Name('device_id', Load()), Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "device_id",
+        "manager"
+      ]
+    },
+    "67d079e8:async_discover_device:2.1:470": {
+      "col_end": 17,
+      "col_start": 12,
+      "defs": [
+        "brightness_wrapper",
+        "description",
+        "descriptions",
+        "switch_wrapper"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_discover_device",
+      "line_end": 498,
+      "line_start": 470,
+      "marker_refs": [
+        "marker_ecddbca34e"
+      ],
+      "node_id": "67d079e8:async_discover_device:2.1:470",
+      "raw_repr": "If(NamedExpr(Name('descriptions', Store()), Call(Attribute(Name('LIGHTS', Load()), 'get', Load()), [Attribute(Name('device', Load()), 'category', Load())])), [Expr(Call(Attribute(Name('entities', Load()), 'extend', Load()), [GeneratorExp(Call(Name('TuyaLightEntity', Load()), [Name('device', Load()), Name('manager', Load()), Name('description', Load())], [keyword('brightness_wrapper', NamedExpr(Name('brightness_wrapper', Store()), Call(Name('_get_brightness_wrapper', Load()), [Name('device', Load()), Name('description', Load())]))), keyword('color_data_wrapper', Call(Name('_get_color_data_wrapper', Load()), [Name('device', Load()), Name('description', Load()), Name('brightness_wrapper', Load())])), keyword('color_mode_wrapper', Call(Attribute(Name('DPCodeEnumWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'color_mode', Load())], [keyword('prefer_function', Constant(True))])), keyword('color_temp_wrapper', Call(Attribute(Name('ColorTempWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'color_temp', Load())], [keyword('prefer_function', Constant(True))])), keyword('switch_wrapper', Name('switch_wrapper', Load()))]), [comprehension(Name('description', Store()), Name('descriptions', Load()), [NamedExpr(Name('switch_wrapper', Store()), Call(Attribute(Name('DPCodeBooleanWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'key', Load())], [keyword('prefer_function', Constant(True))]))], 0)])]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "ColorTempWrapper",
+        "DPCodeBooleanWrapper",
+        "DPCodeEnumWrapper",
+        "LIGHTS",
+        "TuyaLightEntity",
+        "_get_brightness_wrapper",
+        "_get_color_data_wrapper",
+        "brightness_wrapper",
+        "description",
+        "descriptions",
+        "device",
+        "entities",
+        "manager",
+        "switch_wrapper"
+      ]
+    },
+    "67d079e8:async_discover_device:2:468": {
+      "col_end": 17,
+      "col_start": 8,
+      "defs": [
+        "brightness_wrapper",
+        "description",
+        "descriptions",
+        "device",
+        "device_id",
+        "switch_wrapper"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_discover_device",
+      "line_end": 498,
+      "line_start": 468,
+      "marker_refs": [],
+      "node_id": "67d079e8:async_discover_device:2:468",
+      "raw_repr": "For(Name('device_id', Store()), Name('device_ids', Load()), [Assign([Name('device', Store())], Subscript(Attribute(Name('manager', Load()), 'device_map', Load()), Name('device_id', Load()), Load())), If(NamedExpr(Name('descriptions', Store()), Call(Attribute(Name('LIGHTS', Load()), 'get', Load()), [Attribute(Name('device', Load()), 'category', Load())])), [Expr(Call(Attribute(Name('entities', Load()), 'extend', Load()), [GeneratorExp(Call(Name('TuyaLightEntity', Load()), [Name('device', Load()), Name('manager', Load()), Name('description', Load())], [keyword('brightness_wrapper', NamedExpr(Name('brightness_wrapper', Store()), Call(Name('_get_brightness_wrapper', Load()), [Name('device', Load()), Name('description', Load())]))), keyword('color_data_wrapper', Call(Name('_get_color_data_wrapper', Load()), [Name('device', Load()), Name('description', Load()), Name('brightness_wrapper', Load())])), keyword('color_mode_wrapper', Call(Attribute(Name('DPCodeEnumWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'color_mode', Load())], [keyword('prefer_function', Constant(True))])), keyword('color_temp_wrapper', Call(Attribute(Name('ColorTempWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'color_temp', Load())], [keyword('prefer_function', Constant(True))])), keyword('switch_wrapper', Name('switch_wrapper', Load()))]), [comprehension(Name('description', Store()), Name('descriptions', Load()), [NamedExpr(Name('switch_wrapper', Store()), Call(Attribute(Name('DPCodeBooleanWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'key', Load())], [keyword('prefer_function', Constant(True))]))], 0)])]))])])",
+      "stmt_kind": "For",
+      "uses": [
+        "ColorTempWrapper",
+        "DPCodeBooleanWrapper",
+        "DPCodeEnumWrapper",
+        "LIGHTS",
+        "TuyaLightEntity",
+        "_get_brightness_wrapper",
+        "_get_color_data_wrapper",
+        "brightness_wrapper",
+        "description",
+        "descriptions",
+        "device",
+        "device_id",
+        "device_ids",
+        "entities",
+        "manager",
+        "switch_wrapper"
+      ]
+    },
+    "67d079e8:async_setup_entry:1:462": {
+      "col_end": 40,
+      "col_start": 4,
+      "defs": [
+        "manager"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_setup_entry",
+      "line_end": 462,
+      "line_start": 462,
+      "marker_refs": [
+        "marker_b3fb0fdc6c"
+      ],
+      "node_id": "67d079e8:async_setup_entry:1:462",
+      "raw_repr": "Assign([Name('manager', Store())], Attribute(Attribute(Name('entry', Load()), 'runtime_data', Load()), 'manager', Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "entry"
+      ]
+    },
+    "67d079e8:async_setup_entry:2:465": {
+      "col_end": 36,
+      "col_start": 4,
+      "defs": [
+        "brightness_wrapper",
+        "description",
+        "descriptions",
+        "device",
+        "device_id",
+        "entities",
+        "switch_wrapper"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_setup_entry",
+      "line_end": 500,
+      "line_start": 465,
+      "marker_refs": [
+        "marker_b3fb0fdc6c",
+        "marker_c199fc04cb"
+      ],
+      "node_id": "67d079e8:async_setup_entry:2:465",
+      "raw_repr": "FunctionDef('async_discover_device', arguments([], [arg('device_ids', Subscript(Name('list', Load()), Name('str', Load()), Load()))]), [Expr(Constant('Discover and add a discovered tuya light.')), AnnAssign(Name('entities', Store()), Subscript(Name('list', Load()), Name('TuyaLightEntity', Load()), Load()), List([], Load()), 1), For(Name('device_id', Store()), Name('device_ids', Load()), [Assign([Name('device', Store())], Subscript(Attribute(Name('manager', Load()), 'device_map', Load()), Name('device_id', Load()), Load())), If(NamedExpr(Name('descriptions', Store()), Call(Attribute(Name('LIGHTS', Load()), 'get', Load()), [Attribute(Name('device', Load()), 'category', Load())])), [Expr(Call(Attribute(Name('entities', Load()), 'extend', Load()), [GeneratorExp(Call(Name('TuyaLightEntity', Load()), [Name('device', Load()), Name('manager', Load()), Name('description', Load())], [keyword('brightness_wrapper', NamedExpr(Name('brightness_wrapper', Store()), Call(Name('_get_brightness_wrapper', Load()), [Name('device', Load()), Name('description', Load())]))), keyword('color_data_wrapper', Call(Name('_get_color_data_wrapper', Load()), [Name('device', Load()), Name('description', Load()), Name('brightness_wrapper', Load())])), keyword('color_mode_wrapper', Call(Attribute(Name('DPCodeEnumWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'color_mode', Load())], [keyword('prefer_function', Constant(True))])), keyword('color_temp_wrapper', Call(Attribute(Name('ColorTempWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'color_temp', Load())], [keyword('prefer_function', Constant(True))])), keyword('switch_wrapper', Name('switch_wrapper', Load()))]), [comprehension(Name('description', Store()), Name('descriptions', Load()), [NamedExpr(Name('switch_wrapper', Store()), Call(Attribute(Name('DPCodeBooleanWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'key', Load())], [keyword('prefer_function', Constant(True))]))], 0)])]))])]), Expr(Call(Name('async_add_entities', Load()), [Name('entities', Load())]))], [Name('callback', Load())])",
+      "stmt_kind": "FunctionDef",
+      "uses": [
+        "ColorTempWrapper",
+        "DPCodeBooleanWrapper",
+        "DPCodeEnumWrapper",
+        "LIGHTS",
+        "TuyaLightEntity",
+        "_get_brightness_wrapper",
+        "_get_color_data_wrapper",
+        "async_add_entities",
+        "brightness_wrapper",
+        "callback",
+        "description",
+        "descriptions",
+        "device",
+        "device_id",
+        "device_ids",
+        "entities",
+        "list",
+        "manager",
+        "str",
+        "switch_wrapper"
+      ]
+    },
+    "67d079e8:async_turn_on:0:573": {
+      "col_end": 43,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_turn_on",
+      "line_end": 573,
+      "line_start": 573,
+      "marker_refs": [],
+      "node_id": "67d079e8:async_turn_on:0:573",
+      "raw_repr": "Expr(Constant('Turn on or control the light.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "67d079e8:async_turn_on:1:574": {
+      "col_end": 78,
+      "col_start": 8,
+      "defs": [
+        "commands"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_turn_on",
+      "line_end": 574,
+      "line_start": 574,
+      "marker_refs": [
+        "marker_6f012a324b"
+      ],
+      "node_id": "67d079e8:async_turn_on:1:574",
+      "raw_repr": "Assign([Name('commands', Store())], Call(Attribute(Attribute(Name('self', Load()), '_switch_wrapper', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Constant(True)]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "67d079e8:async_turn_on:2.0:579": {
+      "col_end": 13,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_turn_on",
+      "line_end": 583,
+      "line_start": 579,
+      "marker_refs": [
+        "marker_a32e4d4ff7"
+      ],
+      "node_id": "67d079e8:async_turn_on:2.0:579",
+      "raw_repr": "Expr(Call(Attribute(Name('commands', Load()), 'extend', Load()), [Call(Attribute(Attribute(Name('self', Load()), '_color_mode_wrapper', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Attribute(Name('WorkMode', Load()), 'WHITE', Load())])]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "WorkMode",
+        "commands",
+        "self"
+      ]
+    },
+    "67d079e8:async_turn_on:2:576": {
+      "col_end": 13,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_turn_on",
+      "line_end": 583,
+      "line_start": 576,
+      "marker_refs": [
+        "marker_a32e4d4ff7"
+      ],
+      "node_id": "67d079e8:async_turn_on:2:576",
+      "raw_repr": "If(BoolOp(And(), [Attribute(Name('self', Load()), '_color_mode_wrapper', Load()), BoolOp(Or(), [Compare(Name('ATTR_WHITE', Load()), [In()], [Name('kwargs', Load())]), Compare(Name('ATTR_COLOR_TEMP_KELVIN', Load()), [In()], [Name('kwargs', Load())])])]), [Expr(Call(Attribute(Name('commands', Load()), 'extend', Load()), [Call(Attribute(Attribute(Name('self', Load()), '_color_mode_wrapper', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Attribute(Name('WorkMode', Load()), 'WHITE', Load())])]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "ATTR_COLOR_TEMP_KELVIN",
+        "ATTR_WHITE",
+        "WorkMode",
+        "commands",
+        "kwargs",
+        "self"
+      ]
+    },
+    "67d079e8:async_turn_on:3.0:586": {
+      "col_end": 13,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_turn_on",
+      "line_end": 590,
+      "line_start": 586,
+      "marker_refs": [
+        "marker_58f86ad284"
+      ],
+      "node_id": "67d079e8:async_turn_on:3.0:586",
+      "raw_repr": "Expr(Call(Attribute(Name('commands', Load()), 'extend', Load()), [Call(Attribute(Attribute(Name('self', Load()), '_color_temp_wrapper', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Subscript(Name('kwargs', Load()), Name('ATTR_COLOR_TEMP_KELVIN', Load()), Load())])]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "ATTR_COLOR_TEMP_KELVIN",
+        "commands",
+        "kwargs",
+        "self"
+      ]
+    },
+    "67d079e8:async_turn_on:3:585": {
+      "col_end": 13,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_turn_on",
+      "line_end": 590,
+      "line_start": 585,
+      "marker_refs": [
+        "marker_58f86ad284"
+      ],
+      "node_id": "67d079e8:async_turn_on:3:585",
+      "raw_repr": "If(BoolOp(And(), [Attribute(Name('self', Load()), '_color_temp_wrapper', Load()), Compare(Name('ATTR_COLOR_TEMP_KELVIN', Load()), [In()], [Name('kwargs', Load())])]), [Expr(Call(Attribute(Name('commands', Load()), 'extend', Load()), [Call(Attribute(Attribute(Name('self', Load()), '_color_temp_wrapper', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Subscript(Name('kwargs', Load()), Name('ATTR_COLOR_TEMP_KELVIN', Load()), Load())])]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "ATTR_COLOR_TEMP_KELVIN",
+        "commands",
+        "kwargs",
+        "self"
+      ]
+    },
+    "67d079e8:async_turn_on:4.0.0.0:624": {
+      "col_end": 52,
+      "col_start": 16,
+      "defs": [
+        "brightness"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_turn_on",
+      "line_end": 624,
+      "line_start": 624,
+      "marker_refs": [],
+      "node_id": "67d079e8:async_turn_on:4.0.0.0:624",
+      "raw_repr": "Assign([Name('brightness', Store())], Subscript(Name('kwargs', Load()), Name('ATTR_BRIGHTNESS', Load()), Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "ATTR_BRIGHTNESS",
+        "kwargs"
+      ]
+    },
+    "67d079e8:async_turn_on:4.0.0.0:626": {
+      "col_end": 47,
+      "col_start": 16,
+      "defs": [
+        "brightness"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_turn_on",
+      "line_end": 626,
+      "line_start": 626,
+      "marker_refs": [],
+      "node_id": "67d079e8:async_turn_on:4.0.0.0:626",
+      "raw_repr": "Assign([Name('brightness', Store())], Subscript(Name('kwargs', Load()), Name('ATTR_WHITE', Load()), Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "ATTR_WHITE",
+        "kwargs"
+      ]
+    },
+    "67d079e8:async_turn_on:4.0.0:602": {
+      "col_end": 17,
+      "col_start": 16,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_turn_on",
+      "line_end": 606,
+      "line_start": 602,
+      "marker_refs": [
+        "marker_95c9ae14ca"
+      ],
+      "node_id": "67d079e8:async_turn_on:4.0.0:602",
+      "raw_repr": "Expr(Call(Attribute(Name('commands', Load()), 'extend', Load()), [Call(Attribute(Attribute(Name('self', Load()), '_color_mode_wrapper', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Attribute(Name('WorkMode', Load()), 'COLOUR', Load())])]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "WorkMode",
+        "commands",
+        "self"
+      ]
+    },
+    "67d079e8:async_turn_on:4.0.0:623": {
+      "col_end": 47,
+      "col_start": 12,
+      "defs": [
+        "brightness"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_turn_on",
+      "line_end": 626,
+      "line_start": 623,
+      "marker_refs": [],
+      "node_id": "67d079e8:async_turn_on:4.0.0:623",
+      "raw_repr": "If(Compare(Name('ATTR_BRIGHTNESS', Load()), [In()], [Name('kwargs', Load())]), [Assign([Name('brightness', Store())], Subscript(Name('kwargs', Load()), Name('ATTR_BRIGHTNESS', Load()), Load()))], [Assign([Name('brightness', Store())], Subscript(Name('kwargs', Load()), Name('ATTR_WHITE', Load()), Load()))])",
+      "stmt_kind": "If",
+      "uses": [
+        "ATTR_BRIGHTNESS",
+        "ATTR_WHITE",
+        "kwargs"
+      ]
+    },
+    "67d079e8:async_turn_on:4.0.1:628": {
+      "col_end": 13,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_turn_on",
+      "line_end": 630,
+      "line_start": 628,
+      "marker_refs": [
+        "marker_7d5e150be7"
+      ],
+      "node_id": "67d079e8:async_turn_on:4.0.1:628",
+      "raw_repr": "Expr(Call(Attribute(Name('commands', Load()), 'extend', Load()), [Call(Attribute(Attribute(Name('self', Load()), '_brightness_wrapper', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Name('brightness', Load())])]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "brightness",
+        "commands",
+        "self"
+      ]
+    },
+    "67d079e8:async_turn_on:4.0:601": {
+      "col_end": 17,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_turn_on",
+      "line_end": 606,
+      "line_start": 601,
+      "marker_refs": [
+        "marker_95c9ae14ca"
+      ],
+      "node_id": "67d079e8:async_turn_on:4.0:601",
+      "raw_repr": "If(Attribute(Name('self', Load()), '_color_mode_wrapper', Load()), [Expr(Call(Attribute(Name('commands', Load()), 'extend', Load()), [Call(Attribute(Attribute(Name('self', Load()), '_color_mode_wrapper', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Attribute(Name('WorkMode', Load()), 'COLOUR', Load())])]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "WorkMode",
+        "commands",
+        "self"
+      ]
+    },
+    "67d079e8:async_turn_on:4.0:620": {
+      "col_end": 13,
+      "col_start": 8,
+      "defs": [
+        "brightness"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_turn_on",
+      "line_end": 630,
+      "line_start": 620,
+      "marker_refs": [],
+      "node_id": "67d079e8:async_turn_on:4.0:620",
+      "raw_repr": "If(BoolOp(And(), [Attribute(Name('self', Load()), '_brightness_wrapper', Load()), BoolOp(Or(), [Compare(Name('ATTR_BRIGHTNESS', Load()), [In()], [Name('kwargs', Load())]), Compare(Name('ATTR_WHITE', Load()), [In()], [Name('kwargs', Load())])])]), [If(Compare(Name('ATTR_BRIGHTNESS', Load()), [In()], [Name('kwargs', Load())]), [Assign([Name('brightness', Store())], Subscript(Name('kwargs', Load()), Name('ATTR_BRIGHTNESS', Load()), Load()))], [Assign([Name('brightness', Store())], Subscript(Name('kwargs', Load()), Name('ATTR_WHITE', Load()), Load()))]), Expr(Call(Attribute(Name('commands', Load()), 'extend', Load()), [Call(Attribute(Attribute(Name('self', Load()), '_brightness_wrapper', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Name('brightness', Load())])]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "ATTR_BRIGHTNESS",
+        "ATTR_WHITE",
+        "brightness",
+        "commands",
+        "kwargs",
+        "self"
+      ]
+    },
+    "67d079e8:async_turn_on:4.1.0:609": {
+      "col_end": 49,
+      "col_start": 16,
+      "defs": [
+        "brightness"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_turn_on",
+      "line_end": 609,
+      "line_start": 609,
+      "marker_refs": [],
+      "node_id": "67d079e8:async_turn_on:4.1.0:609",
+      "raw_repr": "Assign([Name('brightness', Store())], BoolOp(Or(), [Attribute(Name('self', Load()), 'brightness', Load()), Constant(0)]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "67d079e8:async_turn_on:4.1:608": {
+      "col_end": 49,
+      "col_start": 12,
+      "defs": [
+        "brightness"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_turn_on",
+      "line_end": 609,
+      "line_start": 608,
+      "marker_refs": [
+        "marker_b659d41a9a"
+      ],
+      "node_id": "67d079e8:async_turn_on:4.1:608",
+      "raw_repr": "If(UnaryOp(Not(), NamedExpr(Name('brightness', Store()), Call(Attribute(Name('kwargs', Load()), 'get', Load()), [Name('ATTR_BRIGHTNESS', Load())]))), [Assign([Name('brightness', Store())], BoolOp(Or(), [Attribute(Name('self', Load()), 'brightness', Load()), Constant(0)]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "ATTR_BRIGHTNESS",
+        "kwargs",
+        "self"
+      ]
+    },
+    "67d079e8:async_turn_on:4.2.0:612": {
+      "col_end": 47,
+      "col_start": 16,
+      "defs": [
+        "color"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_turn_on",
+      "line_end": 612,
+      "line_start": 612,
+      "marker_refs": [],
+      "node_id": "67d079e8:async_turn_on:4.2.0:612",
+      "raw_repr": "Assign([Name('color', Store())], BoolOp(Or(), [Attribute(Name('self', Load()), 'hs_color', Load()), Tuple([Constant(0), Constant(0)], Load())]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "67d079e8:async_turn_on:4.2:611": {
+      "col_end": 47,
+      "col_start": 12,
+      "defs": [
+        "color"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_turn_on",
+      "line_end": 612,
+      "line_start": 611,
+      "marker_refs": [
+        "marker_529bc06448"
+      ],
+      "node_id": "67d079e8:async_turn_on:4.2:611",
+      "raw_repr": "If(UnaryOp(Not(), NamedExpr(Name('color', Store()), Call(Attribute(Name('kwargs', Load()), 'get', Load()), [Name('ATTR_HS_COLOR', Load())]))), [Assign([Name('color', Store())], BoolOp(Or(), [Attribute(Name('self', Load()), 'hs_color', Load()), Tuple([Constant(0), Constant(0)], Load())]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "ATTR_HS_COLOR",
+        "kwargs",
+        "self"
+      ]
+    },
+    "67d079e8:async_turn_on:4.3:614": {
+      "col_end": 13,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_turn_on",
+      "line_end": 618,
+      "line_start": 614,
+      "marker_refs": [
+        "marker_60cc029118"
+      ],
+      "node_id": "67d079e8:async_turn_on:4.3:614",
+      "raw_repr": "Expr(Call(Attribute(Name('commands', Load()), 'extend', Load()), [Call(Attribute(Attribute(Name('self', Load()), '_color_data_wrapper', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Tuple([Subscript(Name('color', Load()), Constant(0), Load()), Subscript(Name('color', Load()), Constant(1), Load()), Name('brightness', Load())], Load())])]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "brightness",
+        "color",
+        "commands",
+        "self"
+      ]
+    },
+    "67d079e8:async_turn_on:4:592": {
+      "col_end": 13,
+      "col_start": 8,
+      "defs": [
+        "brightness",
+        "color"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_turn_on",
+      "line_end": 630,
+      "line_start": 592,
+      "marker_refs": [
+        "marker_95c9ae14ca"
+      ],
+      "node_id": "67d079e8:async_turn_on:4:592",
+      "raw_repr": "If(BoolOp(And(), [Attribute(Name('self', Load()), '_color_data_wrapper', Load()), BoolOp(Or(), [Compare(Name('ATTR_HS_COLOR', Load()), [In()], [Name('kwargs', Load())]), BoolOp(And(), [Compare(Name('ATTR_BRIGHTNESS', Load()), [In()], [Name('kwargs', Load())]), Compare(Attribute(Name('self', Load()), 'color_mode', Load()), [Eq()], [Attribute(Name('ColorMode', Load()), 'HS', Load())]), Compare(Name('ATTR_WHITE', Load()), [NotIn()], [Name('kwargs', Load())]), Compare(Name('ATTR_COLOR_TEMP_KELVIN', Load()), [NotIn()], [Name('kwargs', Load())])])])]), [If(Attribute(Name('self', Load()), '_color_mode_wrapper', Load()), [Expr(Call(Attribute(Name('commands', Load()), 'extend', Load()), [Call(Attribute(Attribute(Name('self', Load()), '_color_mode_wrapper', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Attribute(Name('WorkMode', Load()), 'COLOUR', Load())])]))]), If(UnaryOp(Not(), NamedExpr(Name('brightness', Store()), Call(Attribute(Name('kwargs', Load()), 'get', Load()), [Name('ATTR_BRIGHTNESS', Load())]))), [Assign([Name('brightness', Store())], BoolOp(Or(), [Attribute(Name('self', Load()), 'brightness', Load()), Constant(0)]))]), If(UnaryOp(Not(), NamedExpr(Name('color', Store()), Call(Attribute(Name('kwargs', Load()), 'get', Load()), [Name('ATTR_HS_COLOR', Load())]))), [Assign([Name('color', Store())], BoolOp(Or(), [Attribute(Name('self', Load()), 'hs_color', Load()), Tuple([Constant(0), Constant(0)], Load())]))]), Expr(Call(Attribute(Name('commands', Load()), 'extend', Load()), [Call(Attribute(Attribute(Name('self', Load()), '_color_data_wrapper', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Tuple([Subscript(Name('color', Load()), Constant(0), Load()), Subscript(Name('color', Load()), Constant(1), Load()), Name('brightness', Load())], Load())])]))], [If(BoolOp(And(), [Attribute(Name('self', Load()), '_brightness_wrapper', Load()), BoolOp(Or(), [Compare(Name('ATTR_BRIGHTNESS', Load()), [In()], [Name('kwargs', Load())]), Compare(Name('ATTR_WHITE', Load()), [In()], [Name('kwargs', Load())])])]), [If(Compare(Name('ATTR_BRIGHTNESS', Load()), [In()], [Name('kwargs', Load())]), [Assign([Name('brightness', Store())], Subscript(Name('kwargs', Load()), Name('ATTR_BRIGHTNESS', Load()), Load()))], [Assign([Name('brightness', Store())], Subscript(Name('kwargs', Load()), Name('ATTR_WHITE', Load()), Load()))]), Expr(Call(Attribute(Name('commands', Load()), 'extend', Load()), [Call(Attribute(Attribute(Name('self', Load()), '_brightness_wrapper', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Name('brightness', Load())])]))])])",
+      "stmt_kind": "If",
+      "uses": [
+        "ATTR_BRIGHTNESS",
+        "ATTR_COLOR_TEMP_KELVIN",
+        "ATTR_HS_COLOR",
+        "ATTR_WHITE",
+        "ColorMode",
+        "WorkMode",
+        "brightness",
+        "color",
+        "commands",
+        "kwargs",
+        "self"
+      ]
+    },
+    "67d079e8:async_turn_on:5:632": {
+      "col_end": 49,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/light.py",
+      "function_name": "async_turn_on",
+      "line_end": 632,
+      "line_start": 632,
+      "marker_refs": [
+        "marker_c36b907e75"
+      ],
+      "node_id": "67d079e8:async_turn_on:5:632",
+      "raw_repr": "Expr(Await(Call(Attribute(Name('self', Load()), '_async_send_commands', Load()), [Name('commands', Load())])))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "commands",
+        "self"
+      ]
+    },
+    "7127a953:async_set_direction:0:181": {
+      "col_end": 43,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/fan.py",
+      "function_name": "async_set_direction",
+      "line_end": 181,
+      "line_start": 181,
+      "marker_refs": [],
+      "node_id": "7127a953:async_set_direction:0:181",
+      "raw_repr": "Expr(Constant('Set the direction of the fan.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "7127a953:async_set_direction:1:182": {
+      "col_end": 87,
+      "col_start": 8,
+      "defs": [
+        "tuya_value"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/fan.py",
+      "function_name": "async_set_direction",
+      "line_end": 183,
+      "line_start": 182,
+      "marker_refs": [
+        "marker_c267cdad72"
+      ],
+      "node_id": "7127a953:async_set_direction:1:182",
+      "raw_repr": "If(NamedExpr(Name('tuya_value', Store()), Call(Attribute(Name('_HA_TO_TUYA_DIRECTION_MAPPINGS', Load()), 'get', Load()), [Name('direction', Load())])), [Expr(Await(Call(Attribute(Name('self', Load()), '_async_send_wrapper_updates', Load()), [Attribute(Name('self', Load()), '_direction_wrapper', Load()), Name('tuya_value', Load())])))])",
+      "stmt_kind": "If",
+      "uses": [
+        "_HA_TO_TUYA_DIRECTION_MAPPINGS",
+        "direction",
+        "self",
+        "tuya_value"
+      ]
+    },
+    "7127a953:async_turn_on:1.0:201": {
+      "col_end": 18,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/fan.py",
+      "function_name": "async_turn_on",
+      "line_end": 201,
+      "line_start": 201,
+      "marker_refs": [],
+      "node_id": "7127a953:async_turn_on:1.0:201",
+      "raw_repr": "Return()",
+      "stmt_kind": "Return",
+      "uses": []
+    },
+    "7127a953:async_turn_on:2:203": {
+      "col_end": 78,
+      "col_start": 8,
+      "defs": [
+        "commands"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/fan.py",
+      "function_name": "async_turn_on",
+      "line_end": 203,
+      "line_start": 203,
+      "marker_refs": [
+        "marker_9f73a93651"
+      ],
+      "node_id": "7127a953:async_turn_on:2:203",
+      "raw_repr": "Assign([Name('commands', Store())], Call(Attribute(Attribute(Name('self', Load()), '_switch_wrapper', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Constant(True)]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "7127a953:async_turn_on:3.0:206": {
+      "col_end": 13,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/fan.py",
+      "function_name": "async_turn_on",
+      "line_end": 208,
+      "line_start": 206,
+      "marker_refs": [
+        "marker_ee09176380"
+      ],
+      "node_id": "7127a953:async_turn_on:3.0:206",
+      "raw_repr": "Expr(Call(Attribute(Name('commands', Load()), 'extend', Load()), [Call(Attribute(Attribute(Name('self', Load()), '_speed_wrapper', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Name('percentage', Load())])]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "commands",
+        "percentage",
+        "self"
+      ]
+    },
+    "7127a953:async_turn_on:3:205": {
+      "col_end": 13,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/fan.py",
+      "function_name": "async_turn_on",
+      "line_end": 208,
+      "line_start": 205,
+      "marker_refs": [
+        "marker_ee09176380"
+      ],
+      "node_id": "7127a953:async_turn_on:3:205",
+      "raw_repr": "If(BoolOp(And(), [Compare(Name('percentage', Load()), [IsNot()], [Constant(None)]), Compare(Attribute(Name('self', Load()), '_speed_wrapper', Load()), [IsNot()], [Constant(None)])]), [Expr(Call(Attribute(Name('commands', Load()), 'extend', Load()), [Call(Attribute(Attribute(Name('self', Load()), '_speed_wrapper', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Name('percentage', Load())])]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "commands",
+        "percentage",
+        "self"
+      ]
+    },
+    "7127a953:async_turn_on:4.0:211": {
+      "col_end": 13,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/fan.py",
+      "function_name": "async_turn_on",
+      "line_end": 213,
+      "line_start": 211,
+      "marker_refs": [
+        "marker_713506990e"
+      ],
+      "node_id": "7127a953:async_turn_on:4.0:211",
+      "raw_repr": "Expr(Call(Attribute(Name('commands', Load()), 'extend', Load()), [Call(Attribute(Attribute(Name('self', Load()), '_mode_wrapper', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Name('preset_mode', Load())])]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "commands",
+        "preset_mode",
+        "self"
+      ]
+    },
+    "7127a953:async_turn_on:4:210": {
+      "col_end": 13,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/fan.py",
+      "function_name": "async_turn_on",
+      "line_end": 213,
+      "line_start": 210,
+      "marker_refs": [
+        "marker_713506990e"
+      ],
+      "node_id": "7127a953:async_turn_on:4:210",
+      "raw_repr": "If(BoolOp(And(), [Compare(Name('preset_mode', Load()), [IsNot()], [Constant(None)]), Attribute(Name('self', Load()), '_mode_wrapper', Load())]), [Expr(Call(Attribute(Name('commands', Load()), 'extend', Load()), [Call(Attribute(Attribute(Name('self', Load()), '_mode_wrapper', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Name('preset_mode', Load())])]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "commands",
+        "preset_mode",
+        "self"
+      ]
+    },
+    "7127a953:async_turn_on:5:214": {
+      "col_end": 49,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/fan.py",
+      "function_name": "async_turn_on",
+      "line_end": 214,
+      "line_start": 214,
+      "marker_refs": [
+        "marker_f260fc275d"
+      ],
+      "node_id": "7127a953:async_turn_on:5:214",
+      "raw_repr": "Expr(Await(Call(Attribute(Name('self', Load()), '_async_send_commands', Load()), [Name('commands', Load())])))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "commands",
+        "self"
+      ]
+    },
+    "7127a953:current_direction:1:228": {
+      "col_end": 64,
+      "col_start": 8,
+      "defs": [
+        "tuya_value"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/fan.py",
+      "function_name": "current_direction",
+      "line_end": 228,
+      "line_start": 228,
+      "marker_refs": [],
+      "node_id": "7127a953:current_direction:1:228",
+      "raw_repr": "Assign([Name('tuya_value', Store())], Call(Attribute(Name('self', Load()), '_read_wrapper', Load()), [Attribute(Name('self', Load()), '_direction_wrapper', Load())]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "7127a953:current_direction:2:229": {
+      "col_end": 85,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/fan.py",
+      "function_name": "current_direction",
+      "line_end": 229,
+      "line_start": 229,
+      "marker_refs": [
+        "marker_74a71d9ca9"
+      ],
+      "node_id": "7127a953:current_direction:2:229",
+      "raw_repr": "Return(IfExp(Name('tuya_value', Load()), Call(Attribute(Name('_TUYA_TO_HA_DIRECTION_MAPPINGS', Load()), 'get', Load()), [Name('tuya_value', Load())]), Constant(None)))",
+      "stmt_kind": "Return",
+      "uses": [
+        "_TUYA_TO_HA_DIRECTION_MAPPINGS",
+        "tuya_value"
+      ]
+    },
+    "8e4c1745:__init__:16.0.0:315": {
+      "col_end": 13,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 318,
+      "line_start": 315,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:16.0.0:315",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_hvac_modes', Store())], List([Attribute(Name('HVACMode', Load()), 'OFF', Load()), Attribute(Name('description', Load()), 'switch_only_hvac_mode', Load())], Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "HVACMode",
+        "description",
+        "self"
+      ]
+    },
+    "8e4c1745:__init__:16.0:314": {
+      "col_end": 13,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 318,
+      "line_start": 314,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:16.0:314",
+      "raw_repr": "If(Name('switch_wrapper', Load()), [Assign([Attribute(Name('self', Load()), '_attr_hvac_modes', Store())], List([Attribute(Name('HVACMode', Load()), 'OFF', Load()), Attribute(Name('description', Load()), 'switch_only_hvac_mode', Load())], Load()))])",
+      "stmt_kind": "If",
+      "uses": [
+        "HVACMode",
+        "description",
+        "self",
+        "switch_wrapper"
+      ]
+    },
+    "8e4c1745:__init__:16.1.0.0:312": {
+      "col_end": 57,
+      "col_start": 20,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 312,
+      "line_start": 312,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:16.1.0.0:312",
+      "raw_repr": "Expr(Call(Attribute(Attribute(Name('self', Load()), '_attr_hvac_modes', Load()), 'append', Load()), [Name('ha_mode', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "ha_mode",
+        "self"
+      ]
+    },
+    "8e4c1745:__init__:16.1.0:308": {
+      "col_end": 57,
+      "col_start": 16,
+      "defs": [
+        "ha_mode"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 312,
+      "line_start": 308,
+      "marker_refs": [
+        "marker_6ecab44062"
+      ],
+      "node_id": "8e4c1745:__init__:16.1.0:308",
+      "raw_repr": "If(BoolOp(And(), [NamedExpr(Name('ha_mode', Store()), Call(Attribute(Name('_TUYA_TO_HA_HVACMODE_MAPPINGS', Load()), 'get', Load()), [Name('tuya_mode', Load())])), Compare(Name('ha_mode', Load()), [NotEq()], [Attribute(Name('HVACMode', Load()), 'OFF', Load())])]), [Expr(Call(Attribute(Attribute(Name('self', Load()), '_attr_hvac_modes', Load()), 'append', Load()), [Name('ha_mode', Load())]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "HVACMode",
+        "_TUYA_TO_HA_HVACMODE_MAPPINGS",
+        "ha_mode",
+        "self",
+        "tuya_mode"
+      ]
+    },
+    "8e4c1745:__init__:16.1:307": {
+      "col_end": 57,
+      "col_start": 12,
+      "defs": [
+        "ha_mode",
+        "tuya_mode"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 312,
+      "line_start": 307,
+      "marker_refs": [
+        "marker_6ecab44062"
+      ],
+      "node_id": "8e4c1745:__init__:16.1:307",
+      "raw_repr": "For(Name('tuya_mode', Store()), Call(Name('cast', Load()), [Subscript(Name('list', Load()), Name('TuyaClimateHVACMode', Load()), Load()), Attribute(Name('hvac_mode_wrapper', Load()), 'options', Load())]), [If(BoolOp(And(), [NamedExpr(Name('ha_mode', Store()), Call(Attribute(Name('_TUYA_TO_HA_HVACMODE_MAPPINGS', Load()), 'get', Load()), [Name('tuya_mode', Load())])), Compare(Name('ha_mode', Load()), [NotEq()], [Attribute(Name('HVACMode', Load()), 'OFF', Load())])]), [Expr(Call(Attribute(Attribute(Name('self', Load()), '_attr_hvac_modes', Load()), 'append', Load()), [Name('ha_mode', Load())]))])])",
+      "stmt_kind": "For",
+      "uses": [
+        "HVACMode",
+        "TuyaClimateHVACMode",
+        "_TUYA_TO_HA_HVACMODE_MAPPINGS",
+        "cast",
+        "ha_mode",
+        "hvac_mode_wrapper",
+        "list",
+        "self",
+        "tuya_mode"
+      ]
+    },
+    "8e4c1745:__init__:16:305": {
+      "col_end": 13,
+      "col_start": 8,
+      "defs": [
+        "ha_mode",
+        "tuya_mode"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 318,
+      "line_start": 305,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:16:305",
+      "raw_repr": "If(Name('hvac_mode_wrapper', Load()), [Assign([Attribute(Name('self', Load()), '_attr_hvac_modes', Store())], List([Attribute(Name('HVACMode', Load()), 'OFF', Load())], Load())), For(Name('tuya_mode', Store()), Call(Name('cast', Load()), [Subscript(Name('list', Load()), Name('TuyaClimateHVACMode', Load()), Load()), Attribute(Name('hvac_mode_wrapper', Load()), 'options', Load())]), [If(BoolOp(And(), [NamedExpr(Name('ha_mode', Store()), Call(Attribute(Name('_TUYA_TO_HA_HVACMODE_MAPPINGS', Load()), 'get', Load()), [Name('tuya_mode', Load())])), Compare(Name('ha_mode', Load()), [NotEq()], [Attribute(Name('HVACMode', Load()), 'OFF', Load())])]), [Expr(Call(Attribute(Attribute(Name('self', Load()), '_attr_hvac_modes', Load()), 'append', Load()), [Name('ha_mode', Load())]))])])], [If(Name('switch_wrapper', Load()), [Assign([Attribute(Name('self', Load()), '_attr_hvac_modes', Store())], List([Attribute(Name('HVACMode', Load()), 'OFF', Load()), Attribute(Name('description', Load()), 'switch_only_hvac_mode', Load())], Load()))])])",
+      "stmt_kind": "If",
+      "uses": [
+        "HVACMode",
+        "TuyaClimateHVACMode",
+        "_TUYA_TO_HA_HVACMODE_MAPPINGS",
+        "cast",
+        "description",
+        "ha_mode",
+        "hvac_mode_wrapper",
+        "list",
+        "self",
+        "switch_wrapper",
+        "tuya_mode"
+      ]
+    },
+    "8e4c1745:__init__:17.0:322": {
+      "col_end": 75,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 322,
+      "line_start": 322,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:17.0:322",
+      "raw_repr": "Expr(Call(Attribute(Attribute(Name('self', Load()), '_attr_hvac_modes', Load()), 'append', Load()), [Attribute(Name('description', Load()), 'switch_only_hvac_mode', Load())]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "description",
+        "self"
+      ]
+    },
+    "8e4c1745:__init__:17.1:323": {
+      "col_end": 60,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 323,
+      "line_start": 323,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:17.1:323",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_preset_modes', Store())], Attribute(Name('preset_wrapper', Load()), 'options', Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "preset_wrapper",
+        "self"
+      ]
+    },
+    "8e4c1745:__init__:17.2:324": {
+      "col_end": 77,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 324,
+      "line_start": 324,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:17.2:324",
+      "raw_repr": "AugAssign(Attribute(Name('self', Load()), '_attr_supported_features', Store()), BitOr(), Attribute(Name('ClimateEntityFeature', Load()), 'PRESET_MODE', Load()))",
+      "stmt_kind": "AugAssign",
+      "uses": [
+        "ClimateEntityFeature",
+        "self"
+      ]
+    },
+    "8e4c1745:__init__:17:321": {
+      "col_end": 77,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 324,
+      "line_start": 321,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:17:321",
+      "raw_repr": "If(BoolOp(And(), [Name('preset_wrapper', Load()), Attribute(Name('preset_wrapper', Load()), 'options', Load())]), [Expr(Call(Attribute(Attribute(Name('self', Load()), '_attr_hvac_modes', Load()), 'append', Load()), [Attribute(Name('description', Load()), 'switch_only_hvac_mode', Load())])), Assign([Attribute(Name('self', Load()), '_attr_preset_modes', Store())], Attribute(Name('preset_wrapper', Load()), 'options', Load())), AugAssign(Attribute(Name('self', Load()), '_attr_supported_features', Store()), BitOr(), Attribute(Name('ClimateEntityFeature', Load()), 'PRESET_MODE', Load()))])",
+      "stmt_kind": "If",
+      "uses": [
+        "ClimateEntityFeature",
+        "description",
+        "preset_wrapper",
+        "self"
+      ]
+    },
+    "8e4c1745:__init__:18.0:328": {
+      "col_end": 81,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 328,
+      "line_start": 328,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:18.0:328",
+      "raw_repr": "AugAssign(Attribute(Name('self', Load()), '_attr_supported_features', Store()), BitOr(), Attribute(Name('ClimateEntityFeature', Load()), 'TARGET_HUMIDITY', Load()))",
+      "stmt_kind": "AugAssign",
+      "uses": [
+        "ClimateEntityFeature",
+        "self"
+      ]
+    },
+    "8e4c1745:__init__:18.1:329": {
+      "col_end": 78,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 329,
+      "line_start": 329,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:18.1:329",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_min_humidity', Store())], Call(Name('round', Load()), [Attribute(Name('target_humidity_wrapper', Load()), 'min_value', Load())]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "round",
+        "self",
+        "target_humidity_wrapper"
+      ]
+    },
+    "8e4c1745:__init__:18.2:330": {
+      "col_end": 78,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 330,
+      "line_start": 330,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:18.2:330",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_max_humidity', Store())], Call(Name('round', Load()), [Attribute(Name('target_humidity_wrapper', Load()), 'max_value', Load())]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "round",
+        "self",
+        "target_humidity_wrapper"
+      ]
+    },
+    "8e4c1745:__init__:18:327": {
+      "col_end": 78,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 330,
+      "line_start": 327,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:18:327",
+      "raw_repr": "If(Name('target_humidity_wrapper', Load()), [AugAssign(Attribute(Name('self', Load()), '_attr_supported_features', Store()), BitOr(), Attribute(Name('ClimateEntityFeature', Load()), 'TARGET_HUMIDITY', Load())), Assign([Attribute(Name('self', Load()), '_attr_min_humidity', Store())], Call(Name('round', Load()), [Attribute(Name('target_humidity_wrapper', Load()), 'min_value', Load())])), Assign([Attribute(Name('self', Load()), '_attr_max_humidity', Store())], Call(Name('round', Load()), [Attribute(Name('target_humidity_wrapper', Load()), 'max_value', Load())]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "ClimateEntityFeature",
+        "round",
+        "self",
+        "target_humidity_wrapper"
+      ]
+    },
+    "8e4c1745:__init__:19.0:334": {
+      "col_end": 74,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 334,
+      "line_start": 334,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:19.0:334",
+      "raw_repr": "AugAssign(Attribute(Name('self', Load()), '_attr_supported_features', Store()), BitOr(), Attribute(Name('ClimateEntityFeature', Load()), 'FAN_MODE', Load()))",
+      "stmt_kind": "AugAssign",
+      "uses": [
+        "ClimateEntityFeature",
+        "self"
+      ]
+    },
+    "8e4c1745:__init__:19.1:335": {
+      "col_end": 59,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 335,
+      "line_start": 335,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:19.1:335",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_fan_modes', Store())], Attribute(Name('fan_mode_wrapper', Load()), 'options', Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "fan_mode_wrapper",
+        "self"
+      ]
+    },
+    "8e4c1745:__init__:19:333": {
+      "col_end": 59,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 335,
+      "line_start": 333,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:19:333",
+      "raw_repr": "If(Name('fan_mode_wrapper', Load()), [AugAssign(Attribute(Name('self', Load()), '_attr_supported_features', Store()), BitOr(), Attribute(Name('ClimateEntityFeature', Load()), 'FAN_MODE', Load())), Assign([Attribute(Name('self', Load()), '_attr_fan_modes', Store())], Attribute(Name('fan_mode_wrapper', Load()), 'options', Load()))])",
+      "stmt_kind": "If",
+      "uses": [
+        "ClimateEntityFeature",
+        "fan_mode_wrapper",
+        "self"
+      ]
+    },
+    "8e4c1745:__init__:20.0:339": {
+      "col_end": 76,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 339,
+      "line_start": 339,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:20.0:339",
+      "raw_repr": "AugAssign(Attribute(Name('self', Load()), '_attr_supported_features', Store()), BitOr(), Attribute(Name('ClimateEntityFeature', Load()), 'SWING_MODE', Load()))",
+      "stmt_kind": "AugAssign",
+      "uses": [
+        "ClimateEntityFeature",
+        "self"
+      ]
+    },
+    "8e4c1745:__init__:20.1:340": {
+      "col_end": 13,
+      "col_start": 12,
+      "defs": [
+        "ha_swing_mode",
+        "tuya_swing_mode"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 346,
+      "line_start": 340,
+      "marker_refs": [
+        "marker_4f5add5c94"
+      ],
+      "node_id": "8e4c1745:__init__:20.1:340",
+      "raw_repr": "Assign([Attribute(Name('self', Load()), '_attr_swing_modes', Store())], ListComp(Name('ha_swing_mode', Load()), [comprehension(Name('tuya_swing_mode', Store()), Call(Name('cast', Load()), [Subscript(Name('list', Load()), Name('TuyaClimateSwingMode', Load()), Load()), Attribute(Name('swing_wrapper', Load()), 'options', Load())]), [NamedExpr(Name('ha_swing_mode', Store()), Call(Attribute(Name('_TUYA_TO_HA_SWING_MAPPINGS', Load()), 'get', Load()), [Name('tuya_swing_mode', Load())]))], 0)]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "TuyaClimateSwingMode",
+        "_TUYA_TO_HA_SWING_MAPPINGS",
+        "cast",
+        "ha_swing_mode",
+        "list",
+        "self",
+        "swing_wrapper",
+        "tuya_swing_mode"
+      ]
+    },
+    "8e4c1745:__init__:20:338": {
+      "col_end": 13,
+      "col_start": 8,
+      "defs": [
+        "ha_swing_mode",
+        "tuya_swing_mode"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "__init__",
+      "line_end": 346,
+      "line_start": 338,
+      "marker_refs": [],
+      "node_id": "8e4c1745:__init__:20:338",
+      "raw_repr": "If(Name('swing_wrapper', Load()), [AugAssign(Attribute(Name('self', Load()), '_attr_supported_features', Store()), BitOr(), Attribute(Name('ClimateEntityFeature', Load()), 'SWING_MODE', Load())), Assign([Attribute(Name('self', Load()), '_attr_swing_modes', Store())], ListComp(Name('ha_swing_mode', Load()), [comprehension(Name('tuya_swing_mode', Store()), Call(Name('cast', Load()), [Subscript(Name('list', Load()), Name('TuyaClimateSwingMode', Load()), Load()), Attribute(Name('swing_wrapper', Load()), 'options', Load())]), [NamedExpr(Name('ha_swing_mode', Store()), Call(Attribute(Name('_TUYA_TO_HA_SWING_MAPPINGS', Load()), 'get', Load()), [Name('tuya_swing_mode', Load())]))], 0)]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "ClimateEntityFeature",
+        "TuyaClimateSwingMode",
+        "_TUYA_TO_HA_SWING_MAPPINGS",
+        "cast",
+        "ha_swing_mode",
+        "list",
+        "self",
+        "swing_wrapper",
+        "tuya_swing_mode"
+      ]
+    },
+    "8e4c1745:_get_temperature_wrappers:1:129": {
+      "col_end": 5,
+      "col_start": 4,
+      "defs": [
+        "temp_current"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "_get_temperature_wrappers",
+      "line_end": 131,
+      "line_start": 129,
+      "marker_refs": [],
+      "node_id": "8e4c1745:_get_temperature_wrappers:1:129",
+      "raw_repr": "Assign([Name('temp_current', Store())], Call(Attribute(Name('DPCodeIntegerWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Tuple([Attribute(Name('DPCode', Load()), 'TEMP_CURRENT', Load()), Attribute(Name('DPCode', Load()), 'UPPER_TEMP', Load())], Load())]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "DPCode",
+        "DPCodeIntegerWrapper",
+        "device"
+      ]
+    },
+    "8e4c1745:_get_temperature_wrappers:2:132": {
+      "col_end": 5,
+      "col_start": 4,
+      "defs": [
+        "temp_current_f"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "_get_temperature_wrappers",
+      "line_end": 134,
+      "line_start": 132,
+      "marker_refs": [],
+      "node_id": "8e4c1745:_get_temperature_wrappers:2:132",
+      "raw_repr": "Assign([Name('temp_current_f', Store())], Call(Attribute(Name('DPCodeIntegerWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Tuple([Attribute(Name('DPCode', Load()), 'TEMP_CURRENT_F', Load()), Attribute(Name('DPCode', Load()), 'UPPER_TEMP_F', Load())], Load())]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "DPCode",
+        "DPCodeIntegerWrapper",
+        "device"
+      ]
+    },
+    "8e4c1745:_get_temperature_wrappers:3:135": {
+      "col_end": 5,
+      "col_start": 4,
+      "defs": [
+        "temp_set"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "_get_temperature_wrappers",
+      "line_end": 137,
+      "line_start": 135,
+      "marker_refs": [],
+      "node_id": "8e4c1745:_get_temperature_wrappers:3:135",
+      "raw_repr": "Assign([Name('temp_set', Store())], Call(Attribute(Name('DPCodeIntegerWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('DPCode', Load()), 'TEMP_SET', Load())], [keyword('prefer_function', Constant(True))]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "DPCode",
+        "DPCodeIntegerWrapper",
+        "device"
+      ]
+    },
+    "8e4c1745:_get_temperature_wrappers:4:138": {
+      "col_end": 5,
+      "col_start": 4,
+      "defs": [
+        "temp_set_f"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "_get_temperature_wrappers",
+      "line_end": 140,
+      "line_start": 138,
+      "marker_refs": [],
+      "node_id": "8e4c1745:_get_temperature_wrappers:4:138",
+      "raw_repr": "Assign([Name('temp_set_f', Store())], Call(Attribute(Name('DPCodeIntegerWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('DPCode', Load()), 'TEMP_SET_F', Load())], [keyword('prefer_function', Constant(True))]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "DPCode",
+        "DPCodeIntegerWrapper",
+        "device"
+      ]
+    },
+    "8e4c1745:_get_temperature_wrappers:5.0.0.0:150": {
+      "col_end": 17,
+      "col_start": 16,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "_get_temperature_wrappers",
+      "line_end": 152,
+      "line_start": 150,
+      "marker_refs": [
+        "marker_a9d59478a4"
+      ],
+      "node_id": "8e4c1745:_get_temperature_wrappers:5.0.0.0:150",
+      "raw_repr": "Assign([Attribute(Attribute(Name('wrapper', Load()), 'type_information', Load()), 'unit', Store())], Call(Attribute(Name('temp_unit_convert', Load()), 'read_device_status', Load()), [Name('device', Load())]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "device",
+        "temp_unit_convert",
+        "wrapper"
+      ]
+    },
+    "8e4c1745:_get_temperature_wrappers:5.0.0:149": {
+      "col_end": 17,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "_get_temperature_wrappers",
+      "line_end": 152,
+      "line_start": 149,
+      "marker_refs": [
+        "marker_a9d59478a4"
+      ],
+      "node_id": "8e4c1745:_get_temperature_wrappers:5.0.0:149",
+      "raw_repr": "If(BoolOp(And(), [Compare(Name('wrapper', Load()), [IsNot()], [Constant(None)]), UnaryOp(Not(), Attribute(Attribute(Name('wrapper', Load()), 'type_information', Load()), 'unit', Load()))]), [Assign([Attribute(Attribute(Name('wrapper', Load()), 'type_information', Load()), 'unit', Store())], Call(Attribute(Name('temp_unit_convert', Load()), 'read_device_status', Load()), [Name('device', Load())]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "device",
+        "temp_unit_convert",
+        "wrapper"
+      ]
+    },
+    "8e4c1745:_get_temperature_wrappers:5.0:148": {
+      "col_end": 17,
+      "col_start": 8,
+      "defs": [
+        "wrapper"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "_get_temperature_wrappers",
+      "line_end": 152,
+      "line_start": 148,
+      "marker_refs": [
+        "marker_a9d59478a4"
+      ],
+      "node_id": "8e4c1745:_get_temperature_wrappers:5.0:148",
+      "raw_repr": "For(Name('wrapper', Store()), Tuple([Name('temp_current', Load()), Name('temp_current_f', Load()), Name('temp_set', Load()), Name('temp_set_f', Load())], Load()), [If(BoolOp(And(), [Compare(Name('wrapper', Load()), [IsNot()], [Constant(None)]), UnaryOp(Not(), Attribute(Attribute(Name('wrapper', Load()), 'type_information', Load()), 'unit', Load()))]), [Assign([Attribute(Attribute(Name('wrapper', Load()), 'type_information', Load()), 'unit', Store())], Call(Attribute(Name('temp_unit_convert', Load()), 'read_device_status', Load()), [Name('device', Load())]))])])",
+      "stmt_kind": "For",
+      "uses": [
+        "device",
+        "temp_current",
+        "temp_current_f",
+        "temp_set",
+        "temp_set_f",
+        "temp_unit_convert",
+        "wrapper"
+      ]
+    },
+    "8e4c1745:_get_temperature_wrappers:5:143": {
+      "col_end": 17,
+      "col_start": 4,
+      "defs": [
+        "temp_unit_convert",
+        "wrapper"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "_get_temperature_wrappers",
+      "line_end": 152,
+      "line_start": 143,
+      "marker_refs": [
+        "marker_a9d59478a4"
+      ],
+      "node_id": "8e4c1745:_get_temperature_wrappers:5:143",
+      "raw_repr": "If(Compare(NamedExpr(Name('temp_unit_convert', Store()), Call(Attribute(Name('DPCodeEnumWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('DPCode', Load()), 'TEMP_UNIT_CONVERT', Load())])), [IsNot()], [Constant(None)]), [For(Name('wrapper', Store()), Tuple([Name('temp_current', Load()), Name('temp_current_f', Load()), Name('temp_set', Load()), Name('temp_set_f', Load())], Load()), [If(BoolOp(And(), [Compare(Name('wrapper', Load()), [IsNot()], [Constant(None)]), UnaryOp(Not(), Attribute(Attribute(Name('wrapper', Load()), 'type_information', Load()), 'unit', Load()))]), [Assign([Attribute(Attribute(Name('wrapper', Load()), 'type_information', Load()), 'unit', Store())], Call(Attribute(Name('temp_unit_convert', Load()), 'read_device_status', Load()), [Name('device', Load())]))])])])",
+      "stmt_kind": "If",
+      "uses": [
+        "DPCode",
+        "DPCodeEnumWrapper",
+        "device",
+        "temp_current",
+        "temp_current_f",
+        "temp_set",
+        "temp_set_f",
+        "temp_unit_convert",
+        "wrapper"
+      ]
+    },
+    "8e4c1745:async_set_hvac_mode:1:355": {
+      "col_end": 21,
+      "col_start": 8,
+      "defs": [
+        "commands"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "async_set_hvac_mode",
+      "line_end": 355,
+      "line_start": 355,
+      "marker_refs": [],
+      "node_id": "8e4c1745:async_set_hvac_mode:1:355",
+      "raw_repr": "Assign([Name('commands', Store())], List([], Load()))",
+      "stmt_kind": "Assign",
+      "uses": []
+    },
+    "8e4c1745:async_set_hvac_mode:2.0:357": {
+      "col_end": 13,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "async_set_hvac_mode",
+      "line_end": 361,
+      "line_start": 357,
+      "marker_refs": [
+        "marker_42c8149358"
+      ],
+      "node_id": "8e4c1745:async_set_hvac_mode:2.0:357",
+      "raw_repr": "Expr(Call(Attribute(Name('commands', Load()), 'extend', Load()), [Call(Attribute(Attribute(Name('self', Load()), '_switch_wrapper', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Compare(Name('hvac_mode', Load()), [NotEq()], [Attribute(Name('HVACMode', Load()), 'OFF', Load())])])]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "HVACMode",
+        "commands",
+        "hvac_mode",
+        "self"
+      ]
+    },
+    "8e4c1745:async_set_hvac_mode:2:356": {
+      "col_end": 13,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "async_set_hvac_mode",
+      "line_end": 361,
+      "line_start": 356,
+      "marker_refs": [
+        "marker_42c8149358"
+      ],
+      "node_id": "8e4c1745:async_set_hvac_mode:2:356",
+      "raw_repr": "If(Attribute(Name('self', Load()), '_switch_wrapper', Load()), [Expr(Call(Attribute(Name('commands', Load()), 'extend', Load()), [Call(Attribute(Attribute(Name('self', Load()), '_switch_wrapper', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Compare(Name('hvac_mode', Load()), [NotEq()], [Attribute(Name('HVACMode', Load()), 'OFF', Load())])])]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "HVACMode",
+        "commands",
+        "hvac_mode",
+        "self"
+      ]
+    },
+    "8e4c1745:async_set_hvac_mode:3.0:367": {
+      "col_end": 13,
+      "col_start": 12,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "async_set_hvac_mode",
+      "line_end": 369,
+      "line_start": 367,
+      "marker_refs": [
+        "marker_ff3b4fcc64"
+      ],
+      "node_id": "8e4c1745:async_set_hvac_mode:3.0:367",
+      "raw_repr": "Expr(Call(Attribute(Name('commands', Load()), 'extend', Load()), [Call(Attribute(Attribute(Name('self', Load()), '_hvac_mode_wrapper', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Name('tuya_mode', Load())])]))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "commands",
+        "self",
+        "tuya_mode"
+      ]
+    },
+    "8e4c1745:async_set_hvac_mode:3:362": {
+      "col_end": 13,
+      "col_start": 8,
+      "defs": [
+        "tuya_mode"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "async_set_hvac_mode",
+      "line_end": 369,
+      "line_start": 362,
+      "marker_refs": [
+        "marker_3ae997c228",
+        "marker_ff3b4fcc64"
+      ],
+      "node_id": "8e4c1745:async_set_hvac_mode:3:362",
+      "raw_repr": "If(BoolOp(And(), [Attribute(Name('self', Load()), '_hvac_mode_wrapper', Load()), NamedExpr(Name('tuya_mode', Store()), Call(Attribute(Name('_HA_TO_TUYA_HVACMODE_MAPPINGS', Load()), 'get', Load()), [Name('hvac_mode', Load())])), Compare(Name('tuya_mode', Load()), [In()], [Attribute(Attribute(Name('self', Load()), '_hvac_mode_wrapper', Load()), 'options', Load())])]), [Expr(Call(Attribute(Name('commands', Load()), 'extend', Load()), [Call(Attribute(Attribute(Name('self', Load()), '_hvac_mode_wrapper', Load()), 'get_update_commands', Load()), [Attribute(Name('self', Load()), 'device', Load()), Name('tuya_mode', Load())])]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "_HA_TO_TUYA_HVACMODE_MAPPINGS",
+        "commands",
+        "hvac_mode",
+        "self",
+        "tuya_mode"
+      ]
+    },
+    "8e4c1745:async_set_hvac_mode:4:370": {
+      "col_end": 49,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "async_set_hvac_mode",
+      "line_end": 370,
+      "line_start": 370,
+      "marker_refs": [
+        "marker_8b66d9b4a1"
+      ],
+      "node_id": "8e4c1745:async_set_hvac_mode:4:370",
+      "raw_repr": "Expr(Await(Call(Attribute(Name('self', Load()), '_async_send_commands', Load()), [Name('commands', Load())])))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "commands",
+        "self"
+      ]
+    },
+    "8e4c1745:async_set_swing_mode:0:385": {
+      "col_end": 45,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "async_set_swing_mode",
+      "line_end": 385,
+      "line_start": 385,
+      "marker_refs": [],
+      "node_id": "8e4c1745:async_set_swing_mode:0:385",
+      "raw_repr": "Expr(Constant('Set new target swing operation.'))",
+      "stmt_kind": "Expr",
+      "uses": []
+    },
+    "8e4c1745:async_set_swing_mode:1:386": {
+      "col_end": 82,
+      "col_start": 8,
+      "defs": [
+        "tuya_mode"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "async_set_swing_mode",
+      "line_end": 387,
+      "line_start": 386,
+      "marker_refs": [
+        "marker_c9941cd101"
+      ],
+      "node_id": "8e4c1745:async_set_swing_mode:1:386",
+      "raw_repr": "If(NamedExpr(Name('tuya_mode', Store()), Call(Attribute(Name('_HA_TO_TUYA_SWING_MAPPINGS', Load()), 'get', Load()), [Name('swing_mode', Load())])), [Expr(Await(Call(Attribute(Name('self', Load()), '_async_send_wrapper_updates', Load()), [Attribute(Name('self', Load()), '_swing_wrapper', Load()), Name('tuya_mode', Load())])))])",
+      "stmt_kind": "If",
+      "uses": [
+        "_HA_TO_TUYA_SWING_MAPPINGS",
+        "self",
+        "swing_mode",
+        "tuya_mode"
+      ]
+    },
+    "8e4c1745:hvac_mode:4:430": {
+      "col_end": 63,
+      "col_start": 8,
+      "defs": [
+        "tuya_mode"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "hvac_mode",
+      "line_end": 430,
+      "line_start": 430,
+      "marker_refs": [],
+      "node_id": "8e4c1745:hvac_mode:4:430",
+      "raw_repr": "Assign([Name('tuya_mode', Store())], Call(Attribute(Name('self', Load()), '_read_wrapper', Load()), [Attribute(Name('self', Load()), '_hvac_mode_wrapper', Load())]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "8e4c1745:hvac_mode:5:431": {
+      "col_end": 82,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "hvac_mode",
+      "line_end": 431,
+      "line_start": 431,
+      "marker_refs": [
+        "marker_10199b611b"
+      ],
+      "node_id": "8e4c1745:hvac_mode:5:431",
+      "raw_repr": "Return(IfExp(Name('tuya_mode', Load()), Call(Attribute(Name('_TUYA_TO_HA_HVACMODE_MAPPINGS', Load()), 'get', Load()), [Name('tuya_mode', Load())]), Constant(None)))",
+      "stmt_kind": "Return",
+      "uses": [
+        "_TUYA_TO_HA_HVACMODE_MAPPINGS",
+        "tuya_mode"
+      ]
+    },
+    "8e4c1745:swing_mode:1:446": {
+      "col_end": 60,
+      "col_start": 8,
+      "defs": [
+        "tuya_value"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "swing_mode",
+      "line_end": 446,
+      "line_start": 446,
+      "marker_refs": [],
+      "node_id": "8e4c1745:swing_mode:1:446",
+      "raw_repr": "Assign([Name('tuya_value', Store())], Call(Attribute(Name('self', Load()), '_read_wrapper', Load()), [Attribute(Name('self', Load()), '_swing_wrapper', Load())]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self"
+      ]
+    },
+    "8e4c1745:swing_mode:2:447": {
+      "col_end": 81,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/climate.py",
+      "function_name": "swing_mode",
+      "line_end": 447,
+      "line_start": 447,
+      "marker_refs": [
+        "marker_9c3071ff0d"
+      ],
+      "node_id": "8e4c1745:swing_mode:2:447",
+      "raw_repr": "Return(IfExp(Name('tuya_value', Load()), Call(Attribute(Name('_TUYA_TO_HA_SWING_MAPPINGS', Load()), 'get', Load()), [Name('tuya_value', Load())]), Constant(None)))",
+      "stmt_kind": "Return",
+      "uses": [
+        "_TUYA_TO_HA_SWING_MAPPINGS",
+        "tuya_value"
+      ]
+    },
+    "960e735a:_validate_device_class_unit:1.1:1735": {
+      "col_end": 56,
+      "col_start": 12,
+      "defs": [
+        "uoms"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/sensor.py",
+      "function_name": "_validate_device_class_unit",
+      "line_end": 1735,
+      "line_start": 1735,
+      "marker_refs": [],
+      "node_id": "960e735a:_validate_device_class_unit:1.1:1735",
+      "raw_repr": "Assign([Name('uoms', Store())], Subscript(Name('DEVICE_CLASS_UNITS', Load()), Attribute(Name('self', Load()), 'device_class', Load()), Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "DEVICE_CLASS_UNITS",
+        "self"
+      ]
+    },
+    "960e735a:_validate_device_class_unit:1.2:1736": {
+      "col_end": 13,
+      "col_start": 12,
+      "defs": [
+        "uom"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/sensor.py",
+      "function_name": "_validate_device_class_unit",
+      "line_end": 1738,
+      "line_start": 1736,
+      "marker_refs": [
+        "marker_c019b33b97",
+        "marker_3996f9cdbe"
+      ],
+      "node_id": "960e735a:_validate_device_class_unit:1.2:1736",
+      "raw_repr": "Assign([Name('uom', Store())], BoolOp(Or(), [Call(Attribute(Name('uoms', Load()), 'get', Load()), [Attribute(Name('self', Load()), 'native_unit_of_measurement', Load())]), Call(Attribute(Name('uoms', Load()), 'get', Load()), [Call(Attribute(Attribute(Name('self', Load()), 'native_unit_of_measurement', Load()), 'lower', Load()))])]))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "self",
+        "uoms"
+      ]
+    },
+    "960e735a:async_discover_device:1:1655": {
+      "col_end": 45,
+      "col_start": 8,
+      "defs": [
+        "entities"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/sensor.py",
+      "function_name": "async_discover_device",
+      "line_end": 1655,
+      "line_start": 1655,
+      "marker_refs": [],
+      "node_id": "960e735a:async_discover_device:1:1655",
+      "raw_repr": "AnnAssign(Name('entities', Store()), Subscript(Name('list', Load()), Name('TuyaSensorEntity', Load()), Load()), List([], Load()), 1)",
+      "stmt_kind": "AnnAssign",
+      "uses": [
+        "TuyaSensorEntity",
+        "list"
+      ]
+    },
+    "960e735a:async_discover_device:2.0:1657": {
+      "col_end": 50,
+      "col_start": 12,
+      "defs": [
+        "device"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/sensor.py",
+      "function_name": "async_discover_device",
+      "line_end": 1657,
+      "line_start": 1657,
+      "marker_refs": [],
+      "node_id": "960e735a:async_discover_device:2.0:1657",
+      "raw_repr": "Assign([Name('device', Store())], Subscript(Attribute(Name('manager', Load()), 'device_map', Load()), Name('device_id', Load()), Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "device_id",
+        "manager"
+      ]
+    },
+    "960e735a:async_discover_device:2.1:1658": {
+      "col_end": 17,
+      "col_start": 12,
+      "defs": [
+        "description",
+        "descriptions",
+        "dpcode_wrapper"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/sensor.py",
+      "function_name": "async_discover_device",
+      "line_end": 1663,
+      "line_start": 1658,
+      "marker_refs": [
+        "marker_9fbba56a83"
+      ],
+      "node_id": "960e735a:async_discover_device:2.1:1658",
+      "raw_repr": "If(NamedExpr(Name('descriptions', Store()), Call(Attribute(Name('SENSORS', Load()), 'get', Load()), [Attribute(Name('device', Load()), 'category', Load())])), [Expr(Call(Attribute(Name('entities', Load()), 'extend', Load()), [GeneratorExp(Call(Name('TuyaSensorEntity', Load()), [Name('device', Load()), Name('manager', Load()), Name('description', Load()), Name('dpcode_wrapper', Load())]), [comprehension(Name('description', Store()), Name('descriptions', Load()), [NamedExpr(Name('dpcode_wrapper', Store()), Call(Name('_get_dpcode_wrapper', Load()), [Name('device', Load()), Name('description', Load())]))], 0)])]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "SENSORS",
+        "TuyaSensorEntity",
+        "_get_dpcode_wrapper",
+        "description",
+        "descriptions",
+        "device",
+        "dpcode_wrapper",
+        "entities",
+        "manager"
+      ]
+    },
+    "960e735a:async_discover_device:2:1656": {
+      "col_end": 17,
+      "col_start": 8,
+      "defs": [
+        "description",
+        "descriptions",
+        "device",
+        "device_id",
+        "dpcode_wrapper"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/sensor.py",
+      "function_name": "async_discover_device",
+      "line_end": 1663,
+      "line_start": 1656,
+      "marker_refs": [],
+      "node_id": "960e735a:async_discover_device:2:1656",
+      "raw_repr": "For(Name('device_id', Store()), Name('device_ids', Load()), [Assign([Name('device', Store())], Subscript(Attribute(Name('manager', Load()), 'device_map', Load()), Name('device_id', Load()), Load())), If(NamedExpr(Name('descriptions', Store()), Call(Attribute(Name('SENSORS', Load()), 'get', Load()), [Attribute(Name('device', Load()), 'category', Load())])), [Expr(Call(Attribute(Name('entities', Load()), 'extend', Load()), [GeneratorExp(Call(Name('TuyaSensorEntity', Load()), [Name('device', Load()), Name('manager', Load()), Name('description', Load()), Name('dpcode_wrapper', Load())]), [comprehension(Name('description', Store()), Name('descriptions', Load()), [NamedExpr(Name('dpcode_wrapper', Store()), Call(Name('_get_dpcode_wrapper', Load()), [Name('device', Load()), Name('description', Load())]))], 0)])]))])])",
+      "stmt_kind": "For",
+      "uses": [
+        "SENSORS",
+        "TuyaSensorEntity",
+        "_get_dpcode_wrapper",
+        "description",
+        "descriptions",
+        "device",
+        "device_id",
+        "device_ids",
+        "dpcode_wrapper",
+        "entities",
+        "manager"
+      ]
+    },
+    "960e735a:async_setup_entry:1:1650": {
+      "col_end": 40,
+      "col_start": 4,
+      "defs": [
+        "manager"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/sensor.py",
+      "function_name": "async_setup_entry",
+      "line_end": 1650,
+      "line_start": 1650,
+      "marker_refs": [
+        "marker_494e1a2729"
+      ],
+      "node_id": "960e735a:async_setup_entry:1:1650",
+      "raw_repr": "Assign([Name('manager', Store())], Attribute(Attribute(Name('entry', Load()), 'runtime_data', Load()), 'manager', Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "entry"
+      ]
+    },
+    "960e735a:async_setup_entry:2:1653": {
+      "col_end": 36,
+      "col_start": 4,
+      "defs": [
+        "description",
+        "descriptions",
+        "device",
+        "device_id",
+        "dpcode_wrapper",
+        "entities"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/sensor.py",
+      "function_name": "async_setup_entry",
+      "line_end": 1665,
+      "line_start": 1653,
+      "marker_refs": [
+        "marker_494e1a2729",
+        "marker_7e2b68e1ac"
+      ],
+      "node_id": "960e735a:async_setup_entry:2:1653",
+      "raw_repr": "FunctionDef('async_discover_device', arguments([], [arg('device_ids', Subscript(Name('list', Load()), Name('str', Load()), Load()))]), [Expr(Constant('Discover and add a discovered Tuya sensor.')), AnnAssign(Name('entities', Store()), Subscript(Name('list', Load()), Name('TuyaSensorEntity', Load()), Load()), List([], Load()), 1), For(Name('device_id', Store()), Name('device_ids', Load()), [Assign([Name('device', Store())], Subscript(Attribute(Name('manager', Load()), 'device_map', Load()), Name('device_id', Load()), Load())), If(NamedExpr(Name('descriptions', Store()), Call(Attribute(Name('SENSORS', Load()), 'get', Load()), [Attribute(Name('device', Load()), 'category', Load())])), [Expr(Call(Attribute(Name('entities', Load()), 'extend', Load()), [GeneratorExp(Call(Name('TuyaSensorEntity', Load()), [Name('device', Load()), Name('manager', Load()), Name('description', Load()), Name('dpcode_wrapper', Load())]), [comprehension(Name('description', Store()), Name('descriptions', Load()), [NamedExpr(Name('dpcode_wrapper', Store()), Call(Name('_get_dpcode_wrapper', Load()), [Name('device', Load()), Name('description', Load())]))], 0)])]))])]), Expr(Call(Name('async_add_entities', Load()), [Name('entities', Load())]))], [Name('callback', Load())], Constant(None))",
+      "stmt_kind": "FunctionDef",
+      "uses": [
+        "SENSORS",
+        "TuyaSensorEntity",
+        "_get_dpcode_wrapper",
+        "async_add_entities",
+        "callback",
+        "description",
+        "descriptions",
+        "device",
+        "device_id",
+        "device_ids",
+        "dpcode_wrapper",
+        "entities",
+        "list",
+        "manager",
+        "str"
+      ]
+    },
+    "9cfce7a4:async_discover_device:1:919": {
+      "col_end": 45,
+      "col_start": 8,
+      "defs": [
+        "entities"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/switch.py",
+      "function_name": "async_discover_device",
+      "line_end": 919,
+      "line_start": 919,
+      "marker_refs": [],
+      "node_id": "9cfce7a4:async_discover_device:1:919",
+      "raw_repr": "AnnAssign(Name('entities', Store()), Subscript(Name('list', Load()), Name('TuyaSwitchEntity', Load()), Load()), List([], Load()), 1)",
+      "stmt_kind": "AnnAssign",
+      "uses": [
+        "TuyaSwitchEntity",
+        "list"
+      ]
+    },
+    "9cfce7a4:async_discover_device:2.0:921": {
+      "col_end": 50,
+      "col_start": 12,
+      "defs": [
+        "device"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/switch.py",
+      "function_name": "async_discover_device",
+      "line_end": 921,
+      "line_start": 921,
+      "marker_refs": [],
+      "node_id": "9cfce7a4:async_discover_device:2.0:921",
+      "raw_repr": "Assign([Name('device', Store())], Subscript(Attribute(Name('manager', Load()), 'device_map', Load()), Name('device_id', Load()), Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "device_id",
+        "manager"
+      ]
+    },
+    "9cfce7a4:async_discover_device:2.1:922": {
+      "col_end": 17,
+      "col_start": 12,
+      "defs": [
+        "description",
+        "descriptions",
+        "dpcode_wrapper"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/switch.py",
+      "function_name": "async_discover_device",
+      "line_end": 931,
+      "line_start": 922,
+      "marker_refs": [
+        "marker_47f9feae06"
+      ],
+      "node_id": "9cfce7a4:async_discover_device:2.1:922",
+      "raw_repr": "If(NamedExpr(Name('descriptions', Store()), Call(Attribute(Name('SWITCHES', Load()), 'get', Load()), [Attribute(Name('device', Load()), 'category', Load())])), [Expr(Call(Attribute(Name('entities', Load()), 'extend', Load()), [GeneratorExp(Call(Name('TuyaSwitchEntity', Load()), [Name('device', Load()), Name('manager', Load()), Name('description', Load()), Name('dpcode_wrapper', Load())]), [comprehension(Name('description', Store()), Name('descriptions', Load()), [NamedExpr(Name('dpcode_wrapper', Store()), Call(Attribute(Name('DPCodeBooleanWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'key', Load())], [keyword('prefer_function', Constant(True))]))], 0)])]))])",
+      "stmt_kind": "If",
+      "uses": [
+        "DPCodeBooleanWrapper",
+        "SWITCHES",
+        "TuyaSwitchEntity",
+        "description",
+        "descriptions",
+        "device",
+        "dpcode_wrapper",
+        "entities",
+        "manager"
+      ]
+    },
+    "9cfce7a4:async_discover_device:2:920": {
+      "col_end": 17,
+      "col_start": 8,
+      "defs": [
+        "description",
+        "descriptions",
+        "device",
+        "device_id",
+        "dpcode_wrapper"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/switch.py",
+      "function_name": "async_discover_device",
+      "line_end": 931,
+      "line_start": 920,
+      "marker_refs": [],
+      "node_id": "9cfce7a4:async_discover_device:2:920",
+      "raw_repr": "For(Name('device_id', Store()), Name('device_ids', Load()), [Assign([Name('device', Store())], Subscript(Attribute(Name('manager', Load()), 'device_map', Load()), Name('device_id', Load()), Load())), If(NamedExpr(Name('descriptions', Store()), Call(Attribute(Name('SWITCHES', Load()), 'get', Load()), [Attribute(Name('device', Load()), 'category', Load())])), [Expr(Call(Attribute(Name('entities', Load()), 'extend', Load()), [GeneratorExp(Call(Name('TuyaSwitchEntity', Load()), [Name('device', Load()), Name('manager', Load()), Name('description', Load()), Name('dpcode_wrapper', Load())]), [comprehension(Name('description', Store()), Name('descriptions', Load()), [NamedExpr(Name('dpcode_wrapper', Store()), Call(Attribute(Name('DPCodeBooleanWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'key', Load())], [keyword('prefer_function', Constant(True))]))], 0)])]))])])",
+      "stmt_kind": "For",
+      "uses": [
+        "DPCodeBooleanWrapper",
+        "SWITCHES",
+        "TuyaSwitchEntity",
+        "description",
+        "descriptions",
+        "device",
+        "device_id",
+        "device_ids",
+        "dpcode_wrapper",
+        "entities",
+        "manager"
+      ]
+    },
+    "9cfce7a4:async_setup_entry:1:914": {
+      "col_end": 40,
+      "col_start": 4,
+      "defs": [
+        "manager"
+      ],
+      "effects": [],
+      "file_path": "data/repo_snapshot/tuya/switch.py",
+      "function_name": "async_setup_entry",
+      "line_end": 914,
+      "line_start": 914,
+      "marker_refs": [
+        "marker_63cc69fb3d"
+      ],
+      "node_id": "9cfce7a4:async_setup_entry:1:914",
+      "raw_repr": "Assign([Name('manager', Store())], Attribute(Attribute(Name('entry', Load()), 'runtime_data', Load()), 'manager', Load()))",
+      "stmt_kind": "Assign",
+      "uses": [
+        "entry"
+      ]
+    },
+    "9cfce7a4:async_setup_entry:2:917": {
+      "col_end": 36,
+      "col_start": 4,
+      "defs": [
+        "description",
+        "descriptions",
+        "device",
+        "device_id",
+        "dpcode_wrapper",
+        "entities"
+      ],
+      "effects": [
+        "external_call_cloud"
+      ],
+      "file_path": "data/repo_snapshot/tuya/switch.py",
+      "function_name": "async_setup_entry",
+      "line_end": 933,
+      "line_start": 917,
+      "marker_refs": [
+        "marker_63cc69fb3d",
+        "marker_3a2ff87a59"
+      ],
+      "node_id": "9cfce7a4:async_setup_entry:2:917",
+      "raw_repr": "FunctionDef('async_discover_device', arguments([], [arg('device_ids', Subscript(Name('list', Load()), Name('str', Load()), Load()))]), [Expr(Constant('Discover and add a discovered tuya sensor.')), AnnAssign(Name('entities', Store()), Subscript(Name('list', Load()), Name('TuyaSwitchEntity', Load()), Load()), List([], Load()), 1), For(Name('device_id', Store()), Name('device_ids', Load()), [Assign([Name('device', Store())], Subscript(Attribute(Name('manager', Load()), 'device_map', Load()), Name('device_id', Load()), Load())), If(NamedExpr(Name('descriptions', Store()), Call(Attribute(Name('SWITCHES', Load()), 'get', Load()), [Attribute(Name('device', Load()), 'category', Load())])), [Expr(Call(Attribute(Name('entities', Load()), 'extend', Load()), [GeneratorExp(Call(Name('TuyaSwitchEntity', Load()), [Name('device', Load()), Name('manager', Load()), Name('description', Load()), Name('dpcode_wrapper', Load())]), [comprehension(Name('description', Store()), Name('descriptions', Load()), [NamedExpr(Name('dpcode_wrapper', Store()), Call(Attribute(Name('DPCodeBooleanWrapper', Load()), 'find_dpcode', Load()), [Name('device', Load()), Attribute(Name('description', Load()), 'key', Load())], [keyword('prefer_function', Constant(True))]))], 0)])]))])]), Expr(Call(Name('async_add_entities', Load()), [Name('entities', Load())]))], [Name('callback', Load())], Constant(None))",
+      "stmt_kind": "FunctionDef",
+      "uses": [
+        "DPCodeBooleanWrapper",
+        "SWITCHES",
+        "TuyaSwitchEntity",
+        "async_add_entities",
+        "callback",
+        "description",
+        "descriptions",
+        "device",
+        "device_id",
+        "device_ids",
+        "dpcode_wrapper",
+        "entities",
+        "list",
+        "manager",
+        "str"
+      ]
+    },
+    "9da22f42:_async_setup_update_entity:4:82": {
+      "col_end": 19,
+      "col_start": 8,
+      "defs": [
+        "unsub"
+      ],
+      "effects": [
+        "unsubscribe"
+      ],
+      "file_path": "data/repo_snapshot/esphome/update.py",
+      "function_name": "_async_setup_update_entity",
+      "line_end": 83,
+      "line_start": 82,
+      "marker_refs": [
+        "marker_0057872025"
+      ],
+      "node_id": "9da22f42:_async_setup_update_entity:4:82",
+      "raw_repr": "For(Name('unsub', Store()), Name('unsubs', Load()), [Expr(Call(Name('unsub', Load())))])",
+      "stmt_kind": "For",
+      "uses": [
+        "unsub",
+        "unsubs"
+      ]
+    },
+    "9da22f42:_handle_device_update:2:185": {
+      "col_end": 28,
+      "col_start": 8,
+      "defs": [],
+      "effects": [],
+      "file_path": "data/repo_snapshot/esphome/update.py",
+      "function_name": "_handle_device_update",
+      "line_end": 185,
+      "line_start": 185,
+      "marker_refs": [],
+      "node_id": "9da22f42:_handle_device_update:2:185",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), '_update_attrs', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "9da22f42:_handle_device_update:3:186": {
+      "col_end": 35,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/esphome/update.py",
+      "function_name": "_handle_device_update",
+      "line_end": 186,
+      "line_start": 186,
+      "marker_refs": [
+        "marker_767e7c72f5"
+      ],
+      "node_id": "9da22f42:_handle_device_update:3:186",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "9da22f42:async_setup_entry:7:71": {
+      "col_end": 81,
+      "col_start": 4,
+      "defs": [
+        "unsub"
+      ],
+      "effects": [
+        "external_call_cloud",
+        "unsubscribe"
+      ],
+      "file_path": "data/repo_snapshot/esphome/update.py",
+      "function_name": "async_setup_entry",
+      "line_end": 86,
+      "line_start": 71,
+      "marker_refs": [
+        "marker_ce22d7b81f",
+        "marker_8364d61ffe"
+      ],
+      "node_id": "9da22f42:async_setup_entry:7:71",
+      "raw_repr": "FunctionDef('_async_setup_update_entity', arguments(), [Expr(Constant('Set up the update entity.')), Assert(Compare(Name('dashboard', Load()), [IsNot()], [Constant(None)])), If(BoolOp(Or(), [UnaryOp(Not(), Attribute(Name('entry_data', Load()), 'available', Load())), UnaryOp(Not(), Attribute(Name('dashboard', Load()), 'last_update_success', Load()))]), [Return()]), If(BoolOp(Or(), [Compare(Attribute(Name('dashboard', Load()), 'data', Load()), [Is()], [Constant(None)]), Compare(Call(Attribute(Attribute(Name('dashboard', Load()), 'data', Load()), 'get', Load()), [Name('device_name', Load())]), [Is()], [Constant(None)])]), [Return()]), For(Name('unsub', Store()), Name('unsubs', Load()), [Expr(Call(Name('unsub', Load())))]), Expr(Call(Attribute(Name('unsubs', Load()), 'clear', Load()))), Expr(Call(Name('async_add_entities', Load()), [List([Call(Name('ESPHomeDashboardUpdateEntity', Load()), [Name('entry_data', Load()), Name('dashboard', Load())])], Load())]))], [Name('callback', Load())], Constant(None))",
+      "stmt_kind": "FunctionDef",
+      "uses": [
+        "ESPHomeDashboardUpdateEntity",
+        "async_add_entities",
+        "callback",
+        "dashboard",
+        "device_name",
+        "entry_data",
+        "unsub",
+        "unsubs"
+      ]
+    },
+    "a073d609:_handle_state_update:1.0:76": {
+      "col_end": 39,
+      "col_start": 12,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/tuya/entity.py",
+      "function_name": "_handle_state_update",
+      "line_end": 76,
+      "line_start": 76,
+      "marker_refs": [
+        "marker_5718cbb36c"
+      ],
+      "node_id": "a073d609:_handle_state_update:1.0:76",
+      "raw_repr": "Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))",
+      "stmt_kind": "Expr",
+      "uses": [
+        "self"
+      ]
+    },
+    "a073d609:_handle_state_update:1:63": {
+      "col_end": 39,
+      "col_start": 8,
+      "defs": [],
+      "effects": [
+        "state_write"
+      ],
+      "file_path": "data/repo_snapshot/tuya/entity.py",
+      "function_name": "_handle_state_update",
+      "line_end": 76,
+      "line_start": 63,
+      "marker_refs": [
+        "marker_5718cbb36c"
+      ],
+      "node_id": "a073d609:_handle_state_update:1:63",
+      "raw_repr": "If(BoolOp(Or(), [Compare(Name('updated_status_properties', Load()), [Is()], [Constant(None)]), Await(Call(Attribute(Name('self', Load()), '_process_device_update', Load()), [Name('updated_status_properties', Load()), Name('dp_timestamps', Load())]))]), [Expr(Call(Attribute(Name('self', Load()), 'async_write_ha_state', Load())))])",
+      "stmt_kind": "If",
+      "uses": [
+        "dp_timestamps",
+        "self",
+        "updated_status_properties"
+      ]
+    }
+  },
+  "source_files": [
+    "data/repo_snapshot/esphome/update.py",
+    "data/repo_snapshot/tuya/climate.py",
+    "data/repo_snapshot/tuya/cover.py",
+    "data/repo_snapshot/tuya/entity.py",
+    "data/repo_snapshot/tuya/fan.py",
+    "data/repo_snapshot/tuya/light.py",
+    "data/repo_snapshot/tuya/sensor.py",
+    "data/repo_snapshot/tuya/switch.py"
+  ]
+}

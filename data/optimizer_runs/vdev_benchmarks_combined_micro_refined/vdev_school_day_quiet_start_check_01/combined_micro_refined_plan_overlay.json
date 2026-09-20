@@ -1,0 +1,1917 @@
+{
+  "meta": {
+    "action_lanes": {
+      "A1": "BLE_LOCAL",
+      "A10": "WRITEBACK_BLE",
+      "A11": "WRITEBACK_CLOUD",
+      "A12": "WRITEBACK_LOCAL",
+      "A13": "WRITEBACK_OVERALL",
+      "A2": "BLE_LOCAL",
+      "A3": "BLE_LOCAL",
+      "A4": "CLOUD",
+      "A5": "CLOUD",
+      "A6": "CLOUD",
+      "A7": "LOCAL",
+      "A8": "LOCAL",
+      "A9": "LOCAL"
+    },
+    "action_phase": {
+      "A1": "pre_control_acquisition",
+      "A10": "writeback",
+      "A11": "writeback",
+      "A12": "writeback",
+      "A13": "writeback",
+      "A2": "pre_control_acquisition",
+      "A3": "pre_control_acquisition",
+      "A4": "pre_control_acquisition",
+      "A5": "pre_control_acquisition",
+      "A6": "pre_control_acquisition",
+      "A7": "pre_control_acquisition",
+      "A8": "pre_control_acquisition",
+      "A9": "pre_control_acquisition"
+    },
+    "action_to_msfs": {
+      "A1": [
+        "msf13_000_ble_op"
+      ],
+      "A10": [
+        "msf08_000_state_write"
+      ],
+      "A11": [
+        "msf10_000_state_write"
+      ],
+      "A12": [
+        "msf09_000_state_write"
+      ],
+      "A13": [
+        "msf01_000_state_write"
+      ],
+      "A2": [
+        "msf05_000_ble_op"
+      ],
+      "A3": [
+        "msf07_000_ble_op"
+      ],
+      "A4": [
+        "msf11_000_cloud_http_call"
+      ],
+      "A5": [
+        "msf06_000_cloud_status_call"
+      ],
+      "A6": [
+        "msf00_005_cloud_status_call"
+      ],
+      "A7": [
+        "msf02_000_local_api_read",
+        "msf02_001_local_api_read",
+        "msf03_000_local_api_read",
+        "msf04_000_local_api_read"
+      ],
+      "A8": [
+        "msf02_000_local_api_read",
+        "msf02_001_local_api_read",
+        "msf03_000_local_api_read",
+        "msf04_000_local_api_read"
+      ],
+      "A9": [
+        "msf12_000_local_api_read"
+      ]
+    },
+    "api_micro_refinement": {
+      "corridors": [
+        {
+          "action_ids": [
+            "A8",
+            "A9"
+          ],
+          "batch_ids": [
+            "batch_005",
+            "batch_006"
+          ],
+          "capability_class": "local_http_read",
+          "corridor_id": "corridor_00",
+          "latency_saved_ms": 25,
+          "original_latency_ms": 200,
+          "overlap_candidate_pairs": 1,
+          "phase_kind": "LOCAL_HTTP",
+          "protocol": "LOCAL",
+          "refined_latency_ms": 175,
+          "step_ids": [
+            "batch_005",
+            "batch_006"
+          ],
+          "validation_passed": true
+        }
+      ],
+      "enabled": true,
+      "policy": {
+        "aggregate_async_safe_max_ms": 180,
+        "allow_cloud_auth_budget_overlap": true,
+        "allow_cloud_prepare_overlap": true,
+        "allow_local_prepare_overlap": true,
+        "availability_must_precede_write": true,
+        "cloud_backoff_wait_ms": 220,
+        "cloud_bucket_concurrency_limit": 1,
+        "cloud_control_min_corridor_latency_ms": 760,
+        "cloud_control_min_corridor_length": 2,
+        "cloud_host_concurrency_limit": 1,
+        "cloud_read_min_corridor_latency_ms": 700,
+        "cloud_read_min_corridor_length": 2,
+        "disallow_backoff_bypass": true,
+        "disallow_entity_level_overlap": true,
+        "disallow_parse_aggregate_cross_action_overlap": true,
+        "keep_writeback_serialized": true,
+        "local_endpoint_concurrency_limit": 1,
+        "local_http_control_min_corridor_latency_ms": 220,
+        "local_http_control_min_corridor_length": 2,
+        "local_http_read_min_corridor_latency_ms": 180,
+        "local_http_read_min_corridor_length": 2,
+        "local_session_concurrency_limit": 1,
+        "max_lookahead_steps": 1,
+        "min_corridor_latency_ms": 700,
+        "min_corridor_length": 2,
+        "mqtt_read_min_corridor_latency_ms": 220,
+        "mqtt_read_min_corridor_length": 3,
+        "parse_async_safe_max_ms": 220,
+        "preserve_refresh_cadence": true,
+        "require_coordinator_style_fetch": true,
+        "require_known_bucket_key": false,
+        "require_known_endpoint_key": false,
+        "require_known_host_key": true,
+        "require_known_session_key": true,
+        "require_shared_web_session": true,
+        "treat_mqtt_as_non_overlap_lane": true
+      },
+      "strategy": "ha_conservative_api_pre_request_overlap"
+    },
+    "ble_micro_refinement": {
+      "corridors": [
+        {
+          "action_ids": [
+            "A1",
+            "A2",
+            "A3"
+          ],
+          "batch_ids": [
+            "batch_000",
+            "batch_001",
+            "batch_002"
+          ],
+          "corridor_id": "corridor_00",
+          "latency_saved_ms": 192,
+          "original_latency_ms": 2350,
+          "overlap_candidate_pairs": 2,
+          "profile_class": "read_like",
+          "refined_latency_ms": 2158,
+          "validation_passed": true
+        }
+      ],
+      "enabled": true,
+      "micro_phases": [
+        "PREPARE_ADV_SIDE",
+        "PREPARE_CONNECT_SIDE",
+        "BLE_XFER",
+        "BLE_SETTLE"
+      ],
+      "policy": {
+        "allow_adv_prepare_during_connect_capabilities": [
+          "adv_anchor_safe"
+        ],
+        "allow_adv_prepare_during_connect_for_sources": [
+          "switchbot",
+          "xiaomi_ble"
+        ],
+        "allow_adv_prepare_overlap": true,
+        "allow_connect_prepare_overlap": false,
+        "allow_same_device_adv_overlap": false,
+        "allow_same_session_adv_overlap": false,
+        "allow_subscribe_like_adv_overlap": false,
+        "allow_subscribe_like_adv_overlap_capabilities": [
+          "subscribe_adv_overlap_safe"
+        ],
+        "allow_subscribe_like_adv_overlap_sources": [
+          "esphome"
+        ],
+        "allow_unknown_source_adv_overlap": false,
+        "assume_connectable_controller_available": true,
+        "assume_shared_scanner_available": true,
+        "connectable_slot_limit": 1,
+        "control_like_min_corridor_latency_ms": 1800,
+        "control_like_min_corridor_length": 3,
+        "current_xfer_slot_cost": 1,
+        "enforce_connection_slot_guard": true,
+        "generic_min_corridor_latency_ms": 1800,
+        "generic_min_corridor_length": 3,
+        "kind_capability_overrides": {
+          "connect": [
+            "session_chain_ble_op"
+          ],
+          "read_sensor": [
+            "read_like_ble_op"
+          ],
+          "read_status": [
+            "read_like_ble_op"
+          ],
+          "refresh_cover": [
+            "read_like_ble_op"
+          ],
+          "set_cover_position": [
+            "control_like_ble_op"
+          ],
+          "set_percentage": [
+            "control_like_ble_op"
+          ],
+          "subscribe": [
+            "session_chain_ble_op"
+          ],
+          "turn_off": [
+            "control_like_ble_op"
+          ],
+          "turn_on": [
+            "control_like_ble_op"
+          ]
+        },
+        "max_lookahead_actions": 1,
+        "min_corridor_latency_ms": 1800,
+        "min_corridor_length": 3,
+        "next_connect_prepare_slot_cost": 1,
+        "prepare_adv_timeout_ms": 120,
+        "prepare_connect_timeout_ms": 180,
+        "prepare_must_be_side_effect_free": true,
+        "read_like_min_corridor_latency_ms": 1200,
+        "read_like_min_corridor_length": 2,
+        "require_connectable_controller_for_connect_prep": true,
+        "require_shared_scanner": true,
+        "require_source_resolution_for_adv_overlap": true,
+        "session_chain_min_corridor_latency_ms": 1400,
+        "session_chain_min_corridor_length": 2,
+        "source_capability_overrides": {
+          "esphome": [
+            "subscribe_adv_overlap_safe"
+          ],
+          "switchbot": [
+            "adv_anchor_safe"
+          ],
+          "xiaomi_ble": [
+            "adv_anchor_safe"
+          ]
+        }
+      },
+      "strategy": "ha_conservative_adv_prepare_overlap"
+    },
+    "combined_micro_refinement": {
+      "accepted_corridors": [
+        {
+          "action_ids": [
+            "A8",
+            "A9"
+          ],
+          "batch_ids": [
+            "batch_005",
+            "batch_006"
+          ],
+          "corridor_id": "corridor_00",
+          "latency_saved_ms": 25,
+          "source": "API",
+          "validation_passed": true
+        },
+        {
+          "action_ids": [
+            "A1",
+            "A2",
+            "A3"
+          ],
+          "batch_ids": [
+            "batch_000",
+            "batch_001",
+            "batch_002"
+          ],
+          "corridor_id": "corridor_00",
+          "latency_saved_ms": 192,
+          "source": "BLE",
+          "validation_passed": true
+        }
+      ],
+      "enabled": true,
+      "policy": {
+        "adjacent_batch_gap_threshold": 1,
+        "ble_global_connect_prepare_limit": 1,
+        "ble_global_xfer_limit": 1,
+        "cloud_bucket_request_limit": 1,
+        "cloud_host_request_limit": 1,
+        "conflict_policy": "highest_saving_wins",
+        "enforce_batch_order_projection": true,
+        "forbid_action_overlap": true,
+        "forbid_adjacent_same_api_endpoint_domain": false,
+        "forbid_adjacent_same_api_host_domain": false,
+        "forbid_adjacent_same_ble_session_domain": true,
+        "forbid_batch_overlap": true,
+        "local_endpoint_request_limit": 1,
+        "local_session_request_limit": 1,
+        "max_global_parse_overlap": 1,
+        "require_component_validation": true,
+        "require_contiguous_corridor_batches": true,
+        "require_segment_local_refinement": true
+      },
+      "rejected_corridors": [],
+      "validation": {
+        "api_constraints_ok": true,
+        "batch_order_preserved": true,
+        "ble_constraints_ok": true,
+        "component_validations_ok": true,
+        "conflict_free": true,
+        "contiguous_coverage_ok": true,
+        "event_loop_constraints_ok": true,
+        "passed": true,
+        "projection_ok": true,
+        "reasons": [],
+        "savings_consistency_ok": true,
+        "simulated_event_count": 30,
+        "simulated_total_ms": 3233
+      }
+    },
+    "critical_boost": {
+      "A1": 1,
+      "A10": 1,
+      "A11": 1,
+      "A12": 1,
+      "A13": 1,
+      "A2": 1,
+      "A3": 1,
+      "A4": 1,
+      "A5": 1,
+      "A6": 1,
+      "A7": 1,
+      "A8": 1,
+      "A9": 1
+    },
+    "critical_score": {
+      "A1": 3.0,
+      "A10": 2.0,
+      "A11": 2.0,
+      "A12": 2.0,
+      "A13": 1.0,
+      "A2": 3.0,
+      "A3": 3.0,
+      "A4": 3.0,
+      "A5": 3.0,
+      "A6": 3.0,
+      "A7": 3.0,
+      "A8": 3.0,
+      "A9": 3.0
+    },
+    "cycle_report": [],
+    "cycle_resolution": [],
+    "derived_policy": {
+      "ble_limit": 1,
+      "budget_rules": [],
+      "cloud_limit": 4,
+      "latency_budget_ms": 2800,
+      "local_limit": 1,
+      "max_qps": 5.0,
+      "rate_limit_burst": 10,
+      "rate_limit_window_ms": 1000,
+      "reuse_enabled": true,
+      "reuse_window_ms": 20000,
+      "total_limit": 10,
+      "triggered_fallbacks": [
+        {
+          "fallback": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A1",
+            "A2"
+          ]
+        },
+        {
+          "fallback": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A1",
+            "A3"
+          ]
+        },
+        {
+          "fallback": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A2",
+            "A3"
+          ]
+        },
+        {
+          "fallback": "serialize_local_api_reads",
+          "kind": "SAME_SESSION_GROUP",
+          "params": {
+            "group_key": "endpoint",
+            "reuse_window_ms": 5000,
+            "rule_id": "rule_protocol_local_api_budget",
+            "template_kind": "SAME_SESSION_GROUP"
+          },
+          "scope": [
+            "A7",
+            "A8",
+            "A9"
+          ]
+        }
+      ],
+      "unknown_limit": 1
+    },
+    "fat_actions": [],
+    "node_kind": "action_id",
+    "objectives": {
+      "metrics": {
+        "e2e_latency_ms": {
+          "p95": 2800
+        }
+      },
+      "primary": "minimize_tail_latency_for_profile_coverage_routine"
+    },
+    "observable_anchor_priority": {
+      "A1": 0,
+      "A10": 9,
+      "A11": 10,
+      "A12": 11,
+      "A13": 12,
+      "A2": 1,
+      "A3": 2,
+      "A4": 3,
+      "A5": 4,
+      "A6": 5,
+      "A7": 6,
+      "A8": 7,
+      "A9": 8
+    },
+    "optimizer_decisions": [
+      {
+        "batch_index": 3,
+        "mode": "corridor",
+        "selected": [
+          "A4"
+        ],
+        "window": [
+          "A4",
+          "A5",
+          "A6",
+          "A7",
+          "A8",
+          "A9"
+        ]
+      },
+      {
+        "batch_index": 4,
+        "mode": "frontier_window",
+        "selected": [
+          "A5",
+          "A7",
+          "A6"
+        ],
+        "window": [
+          "A5",
+          "A6",
+          "A7",
+          "A8",
+          "A9"
+        ]
+      }
+    ],
+    "policy": {
+      "ble_parallel": 1,
+      "cloud_parallel": 4,
+      "default_qps": 5.0,
+      "local_parallel": 6,
+      "max_parallel": 10
+    },
+    "policy_snapshot": {
+      "adaptive_controls": {
+        "active_constraints": [
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A2"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A3"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A2",
+              "A3"
+            ]
+          },
+          {
+            "enforced": false,
+            "fallback": "serialize_ble_ops_and_disable_reuse",
+            "guard": "ble_timeout_rate_high OR ble_overlap_risk_high",
+            "kind": "BUDGET_K",
+            "params": {
+              "limit": 1,
+              "mode": "soft_cap",
+              "resource": "BLE",
+              "rule_id": "rule_protocol_ble_budget_overlap",
+              "template_kind": "BUDGET_K"
+            },
+            "scope": [
+              "A1",
+              "A2",
+              "A3"
+            ]
+          },
+          {
+            "enforced": false,
+            "fallback": "serialize_ble_ops_and_disable_reuse",
+            "guard": "ble_timeout_rate_high OR ble_overlap_risk_high",
+            "kind": "NO_OVERLAP",
+            "params": {
+              "max_parallel": 1,
+              "resource": "BLE_AIRTIME",
+              "risk_feature": "conn_event_overlap",
+              "rule_id": "rule_protocol_ble_budget_overlap",
+              "template_kind": "NO_OVERLAP"
+            },
+            "scope": [
+              "A1",
+              "A2",
+              "A3"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "disable_ble_reuse_and_insert_gap",
+            "guard": "ble_conn_success_rate_ok",
+            "kind": "SAME_SESSION_GROUP",
+            "params": {
+              "group_key": "device_id",
+              "reuse_window_ms": 3000,
+              "rule_id": "rule_protocol_ble_reuse_gap",
+              "template_kind": "SAME_SESSION_GROUP"
+            },
+            "scope": [
+              "A1",
+              "A2",
+              "A3"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "disable_ble_reuse_and_insert_gap",
+            "guard": "ble_conn_success_rate_ok",
+            "kind": "MIN_GAP",
+            "params": {
+              "gap_ms": 100,
+              "reason": "cooldown",
+              "rule_id": "rule_protocol_ble_reuse_gap",
+              "template_kind": "MIN_GAP"
+            },
+            "scope": [
+              "A1",
+              "A2",
+              "A3"
+            ]
+          },
+          {
+            "enforced": false,
+            "fallback": "serialize_local_api_reads",
+            "guard": "local_endpoint_reachable",
+            "kind": "BUDGET_K",
+            "params": {
+              "limit": 4,
+              "resource": "LOCAL_PARALLEL",
+              "rule_id": "rule_protocol_local_api_budget",
+              "template_kind": "BUDGET_K"
+            },
+            "scope": [
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "enforced": false,
+            "fallback": "serialize_local_api_reads",
+            "guard": "local_endpoint_reachable",
+            "kind": "SAME_SESSION_GROUP",
+            "params": {
+              "group_key": "endpoint",
+              "reuse_window_ms": 5000,
+              "rule_id": "rule_protocol_local_api_budget",
+              "template_kind": "SAME_SESSION_GROUP"
+            },
+            "scope": [
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "enforced": false,
+            "fallback": "reduce_qps_and_parallelism",
+            "guard": "recent_429_rate_high",
+            "kind": "BUDGET_K",
+            "params": {
+              "limit": 4,
+              "resource": "CLOUD_PARALLEL",
+              "rule_id": "rule_protocol_cloud_budget_rate",
+              "template_kind": "BUDGET_K"
+            },
+            "scope": [
+              "A4"
+            ]
+          },
+          {
+            "enforced": false,
+            "fallback": "reduce_qps_and_parallelism",
+            "guard": "recent_429_rate_high",
+            "kind": "RATE_LIMIT",
+            "params": {
+              "burst": 8,
+              "max_qps": 5.0,
+              "rule_id": "rule_protocol_cloud_budget_rate",
+              "template_kind": "RATE_LIMIT",
+              "window_ms": 1000
+            },
+            "scope": [
+              "A4"
+            ]
+          },
+          {
+            "enforced": false,
+            "fallback": "backoff_then_shrink_batch",
+            "guard": "recent_429_rate_high",
+            "kind": "BACKOFF_WINDOW",
+            "params": {
+              "base_ms": 200,
+              "factor": 2.0,
+              "max_ms": 2000,
+              "rule_id": "rule_protocol_cloud_backoff",
+              "template_kind": "BACKOFF_WINDOW"
+            },
+            "scope": [
+              "A4"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "shrink_batch_not_disable",
+            "guard": "latency_budget_allows_batching AND 429_rate_low",
+            "kind": "BATCH_GROUP",
+            "params": {
+              "group_key": "endpoint",
+              "idempotent_only": true,
+              "max_batch_size": 3,
+              "max_wait_ms": 40,
+              "rule_id": "rule_protocol_cloud_batch_reuse",
+              "template_kind": "BATCH_GROUP"
+            },
+            "scope": [
+              "A4"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "shrink_batch_not_disable",
+            "guard": "latency_budget_allows_batching AND 429_rate_low",
+            "kind": "SAME_SESSION_GROUP",
+            "params": {
+              "group_key": "host",
+              "reuse_window_ms": 10000,
+              "rule_id": "rule_protocol_cloud_batch_reuse",
+              "template_kind": "SAME_SESSION_GROUP"
+            },
+            "scope": [
+              "A4"
+            ]
+          },
+          {
+            "enforced": false,
+            "fallback": "reduce_parallelism",
+            "guard": "resource_constrained",
+            "kind": "BUDGET_K",
+            "params": {
+              "limit": 1,
+              "resource": "BLE"
+            },
+            "scope": [
+              "A1",
+              "A2",
+              "A3"
+            ]
+          },
+          {
+            "enforced": false,
+            "fallback": "reduce_parallelism",
+            "guard": "resource_constrained",
+            "kind": "BUDGET_K",
+            "params": {
+              "limit": 4,
+              "resource": "CLOUD"
+            },
+            "scope": [
+              "A4",
+              "A5",
+              "A6"
+            ]
+          },
+          {
+            "enforced": false,
+            "fallback": "reduce_parallelism",
+            "guard": "resource_constrained",
+            "kind": "BUDGET_K",
+            "params": {
+              "limit": 6,
+              "resource": "LOCAL"
+            },
+            "scope": [
+              "A1",
+              "A10",
+              "A11",
+              "A12",
+              "A13",
+              "A2",
+              "A3",
+              "A4",
+              "A5",
+              "A6",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "enforced": false,
+            "fallback": "reduce_parallelism",
+            "guard": "resource_constrained",
+            "kind": "BUDGET_K",
+            "params": {
+              "limit": 10,
+              "resource": "TOTAL"
+            },
+            "scope": [
+              "A1",
+              "A10",
+              "A11",
+              "A12",
+              "A13",
+              "A2",
+              "A3",
+              "A4",
+              "A5",
+              "A6",
+              "A7",
+              "A8",
+              "A9"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A2"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A3"
+            ]
+          },
+          {
+            "enforced": true,
+            "fallback": "preserve_action_order",
+            "guard": "true",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A2",
+              "A3"
+            ]
+          }
+        ],
+        "triggered_fallbacks": [
+          {
+            "fallback": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A2"
+            ]
+          },
+          {
+            "fallback": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1",
+              "A3"
+            ]
+          },
+          {
+            "fallback": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A2",
+              "A3"
+            ]
+          },
+          {
+            "fallback": "serialize_local_api_reads",
+            "kind": "SAME_SESSION_GROUP",
+            "params": {
+              "group_key": "endpoint",
+              "reuse_window_ms": 5000,
+              "rule_id": "rule_protocol_local_api_budget",
+              "template_kind": "SAME_SESSION_GROUP"
+            },
+            "scope": [
+              "A7",
+              "A8",
+              "A9"
+            ]
+          }
+        ]
+      },
+      "batch_policy": {
+        "bucket_key_stats": [
+          {
+            "bucket_key_hit_rate": 1.0,
+            "bucket_key_hits": 1,
+            "cloud_actions": 1,
+            "group_key": "endpoint",
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope_size": 1
+          }
+        ],
+        "latency_budget_ms": 2800,
+        "rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A4"
+            ]
+          }
+        ]
+      },
+      "budget_rules": [],
+      "budgets": {
+        "ble": 1,
+        "cloud": 4,
+        "local": 1,
+        "total": 10,
+        "unknown": 1
+      },
+      "rate_limit": {
+        "burst": 10,
+        "max_qps": 5.0,
+        "window_ms": 1000
+      },
+      "reuse_policy": {
+        "enabled": true,
+        "reuse_window_ms": 20000,
+        "session_rules": [
+          {
+            "group_key": "device_id",
+            "reuse_window_ms": 3000,
+            "scope": [
+              "A1",
+              "A2",
+              "A3"
+            ],
+            "scope_set": [
+              "A1",
+              "A2",
+              "A3"
+            ]
+          },
+          {
+            "group_key": "host",
+            "reuse_window_ms": 10000,
+            "scope": [
+              "A4"
+            ],
+            "scope_set": [
+              "A4"
+            ]
+          }
+        ]
+      },
+      "schema_version": "m5_policy_snapshot/v1",
+      "versions": {
+        "canonicalization_version": "v1",
+        "profile_version": "ha_profile_default"
+      }
+    },
+    "soft_summary": {
+      "BACKOFF_WINDOW": [
+        {
+          "base_ms": 200,
+          "factor": 2.0,
+          "max_ms": 2000,
+          "rule_id": "rule_protocol_cloud_backoff",
+          "template_kind": "BACKOFF_WINDOW"
+        }
+      ],
+      "BATCH_GROUP": [
+        {
+          "group_key": "endpoint",
+          "idempotent_only": true,
+          "max_batch_size": 20,
+          "max_wait_ms": 80,
+          "rule_id": "rule_protocol_cloud_batch_reuse",
+          "template_kind": "BATCH_GROUP"
+        }
+      ],
+      "BUDGET_K": [
+        {
+          "limit": 1,
+          "mode": "soft_cap",
+          "resource": "BLE",
+          "rule_id": "rule_protocol_ble_budget_overlap",
+          "template_kind": "BUDGET_K"
+        },
+        {
+          "limit": 4,
+          "resource": "LOCAL_PARALLEL",
+          "rule_id": "rule_protocol_local_api_budget",
+          "template_kind": "BUDGET_K"
+        },
+        {
+          "limit": 4,
+          "resource": "CLOUD_PARALLEL",
+          "rule_id": "rule_protocol_cloud_budget_rate",
+          "template_kind": "BUDGET_K"
+        },
+        {
+          "limit": 1,
+          "resource": "BLE"
+        },
+        {
+          "limit": 4,
+          "resource": "CLOUD"
+        },
+        {
+          "limit": 6,
+          "resource": "LOCAL"
+        },
+        {
+          "limit": 10,
+          "resource": "TOTAL"
+        }
+      ],
+      "MIN_GAP": [
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "gap_ms": 100,
+          "reason": "cooldown",
+          "rule_id": "rule_protocol_ble_reuse_gap",
+          "template_kind": "MIN_GAP"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        },
+        {
+          "reason": "shared_radio_or_transport_budget"
+        }
+      ],
+      "NO_OVERLAP": [
+        {
+          "max_parallel": 1,
+          "resource": "BLE_AIRTIME",
+          "risk_feature": "conn_event_overlap",
+          "rule_id": "rule_protocol_ble_budget_overlap",
+          "template_kind": "NO_OVERLAP"
+        }
+      ],
+      "RATE_LIMIT": [
+        {
+          "burst": 8,
+          "max_qps": 5.0,
+          "rule_id": "rule_protocol_cloud_budget_rate",
+          "template_kind": "RATE_LIMIT",
+          "window_ms": 1000
+        }
+      ],
+      "SAME_SESSION_GROUP": [
+        {
+          "group_key": "device_id",
+          "reuse_window_ms": 3000,
+          "rule_id": "rule_protocol_ble_reuse_gap",
+          "template_kind": "SAME_SESSION_GROUP"
+        },
+        {
+          "group_key": "endpoint",
+          "reuse_window_ms": 5000,
+          "rule_id": "rule_protocol_local_api_budget",
+          "template_kind": "SAME_SESSION_GROUP"
+        },
+        {
+          "group_key": "host",
+          "reuse_window_ms": 10000,
+          "rule_id": "rule_protocol_cloud_batch_reuse",
+          "template_kind": "SAME_SESSION_GROUP"
+        }
+      ]
+    },
+    "transitive_reduction": [],
+    "unknown_protocol_actions": []
+  },
+  "ordered_batches": [
+    {
+      "batch_id": "batch_000",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A1"
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A2"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A3"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "ble_conn_success_rate_ok",
+          "kind": "SAME_SESSION_GROUP",
+          "scope": [
+            "A1",
+            "A2",
+            "A3"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "ble_conn_success_rate_ok",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A2",
+            "A3"
+          ]
+        }
+      ],
+      "parallel_groups": [
+        [
+          "A1"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [
+          {
+            "action": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A1"
+            ]
+          }
+        ],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A4"
+            ]
+          }
+        ],
+        "batch_size": 1,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "device_id",
+            "scope": [
+              "A1",
+              "A2",
+              "A3"
+            ]
+          },
+          {
+            "group_key": "host",
+            "scope": [
+              "A4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_001",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A2"
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A2"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A2",
+            "A3"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "ble_conn_success_rate_ok",
+          "kind": "SAME_SESSION_GROUP",
+          "scope": [
+            "A1",
+            "A2",
+            "A3"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "ble_conn_success_rate_ok",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A2",
+            "A3"
+          ]
+        }
+      ],
+      "parallel_groups": [
+        [
+          "A2"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [
+          {
+            "action": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A2"
+            ]
+          }
+        ],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A4"
+            ]
+          }
+        ],
+        "batch_size": 1,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 100,
+        "min_gap_rules": [
+          {
+            "after": "A2",
+            "before": "A1",
+            "gap_ms": 100
+          }
+        ],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "device_id",
+            "scope": [
+              "A1",
+              "A2",
+              "A3"
+            ]
+          },
+          {
+            "group_key": "host",
+            "scope": [
+              "A4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_002",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [
+        {
+          "action": "preserve_action_order",
+          "kind": "MIN_GAP",
+          "params": {
+            "reason": "shared_radio_or_transport_budget"
+          },
+          "scope": [
+            "A3"
+          ]
+        }
+      ],
+      "guards": [
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A3"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "true",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A2",
+            "A3"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "ble_conn_success_rate_ok",
+          "kind": "SAME_SESSION_GROUP",
+          "scope": [
+            "A1",
+            "A2",
+            "A3"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "ble_conn_success_rate_ok",
+          "kind": "MIN_GAP",
+          "scope": [
+            "A1",
+            "A2",
+            "A3"
+          ]
+        }
+      ],
+      "parallel_groups": [
+        [
+          "A3"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [
+          {
+            "action": "preserve_action_order",
+            "kind": "MIN_GAP",
+            "params": {
+              "reason": "shared_radio_or_transport_budget"
+            },
+            "scope": [
+              "A3"
+            ]
+          }
+        ],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A4"
+            ]
+          }
+        ],
+        "batch_size": 1,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 100,
+        "min_gap_rules": [
+          {
+            "after": "A3",
+            "before": "A1",
+            "gap_ms": 0
+          },
+          {
+            "after": "A3",
+            "before": "A2",
+            "gap_ms": 100
+          }
+        ],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "device_id",
+            "scope": [
+              "A1",
+              "A2",
+              "A3"
+            ]
+          },
+          {
+            "group_key": "host",
+            "scope": [
+              "A4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_003",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [],
+      "guards": [
+        {
+          "enforced": true,
+          "expr": "latency_budget_allows_batching AND 429_rate_low",
+          "kind": "BATCH_GROUP",
+          "scope": [
+            "A4"
+          ]
+        },
+        {
+          "enforced": true,
+          "expr": "latency_budget_allows_batching AND 429_rate_low",
+          "kind": "SAME_SESSION_GROUP",
+          "scope": [
+            "A4"
+          ]
+        }
+      ],
+      "parallel_groups": [
+        [
+          "A4"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A4"
+            ]
+          }
+        ],
+        "batch_size": 1,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "device_id",
+            "scope": [
+              "A1",
+              "A2",
+              "A3"
+            ]
+          },
+          {
+            "group_key": "host",
+            "scope": [
+              "A4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_004",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [
+        {
+          "action": "serialize_local_api_reads",
+          "kind": "SAME_SESSION_GROUP",
+          "params": {
+            "group_key": "endpoint",
+            "reuse_window_ms": 5000,
+            "rule_id": "rule_protocol_local_api_budget",
+            "template_kind": "SAME_SESSION_GROUP"
+          },
+          "scope": [
+            "A7"
+          ]
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A5"
+        ],
+        [
+          "A6"
+        ],
+        [
+          "A7"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [
+          {
+            "action": "serialize_local_api_reads",
+            "kind": "SAME_SESSION_GROUP",
+            "params": {
+              "group_key": "endpoint",
+              "reuse_window_ms": 5000,
+              "rule_id": "rule_protocol_local_api_budget",
+              "template_kind": "SAME_SESSION_GROUP"
+            },
+            "scope": [
+              "A7"
+            ]
+          }
+        ],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A4"
+            ]
+          }
+        ],
+        "batch_size": 3,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "device_id",
+            "scope": [
+              "A1",
+              "A2",
+              "A3"
+            ]
+          },
+          {
+            "group_key": "host",
+            "scope": [
+              "A4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_005",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [
+        {
+          "action": "serialize_local_api_reads",
+          "kind": "SAME_SESSION_GROUP",
+          "params": {
+            "group_key": "endpoint",
+            "reuse_window_ms": 5000,
+            "rule_id": "rule_protocol_local_api_budget",
+            "template_kind": "SAME_SESSION_GROUP"
+          },
+          "scope": [
+            "A8"
+          ]
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A8"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [
+          {
+            "action": "serialize_local_api_reads",
+            "kind": "SAME_SESSION_GROUP",
+            "params": {
+              "group_key": "endpoint",
+              "reuse_window_ms": 5000,
+              "rule_id": "rule_protocol_local_api_budget",
+              "template_kind": "SAME_SESSION_GROUP"
+            },
+            "scope": [
+              "A8"
+            ]
+          }
+        ],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A4"
+            ]
+          }
+        ],
+        "batch_size": 1,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "device_id",
+            "scope": [
+              "A1",
+              "A2",
+              "A3"
+            ]
+          },
+          {
+            "group_key": "host",
+            "scope": [
+              "A4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_006",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [
+        {
+          "action": "serialize_local_api_reads",
+          "kind": "SAME_SESSION_GROUP",
+          "params": {
+            "group_key": "endpoint",
+            "reuse_window_ms": 5000,
+            "rule_id": "rule_protocol_local_api_budget",
+            "template_kind": "SAME_SESSION_GROUP"
+          },
+          "scope": [
+            "A9"
+          ]
+        }
+      ],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A9"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [
+          {
+            "action": "serialize_local_api_reads",
+            "kind": "SAME_SESSION_GROUP",
+            "params": {
+              "group_key": "endpoint",
+              "reuse_window_ms": 5000,
+              "rule_id": "rule_protocol_local_api_budget",
+              "template_kind": "SAME_SESSION_GROUP"
+            },
+            "scope": [
+              "A9"
+            ]
+          }
+        ],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A4"
+            ]
+          }
+        ],
+        "batch_size": 1,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "device_id",
+            "scope": [
+              "A1",
+              "A2",
+              "A3"
+            ]
+          },
+          {
+            "group_key": "host",
+            "scope": [
+              "A4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_007",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A10"
+        ],
+        [
+          "A11"
+        ],
+        [
+          "A12"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A4"
+            ]
+          }
+        ],
+        "batch_size": 3,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "device_id",
+            "scope": [
+              "A1",
+              "A2",
+              "A3"
+            ]
+          },
+          {
+            "group_key": "host",
+            "scope": [
+              "A4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_008",
+      "constraints": [
+        "HARD_CONTROL"
+      ],
+      "fallback": [],
+      "guards": [],
+      "parallel_groups": [
+        [
+          "A13"
+        ]
+      ],
+      "rate_policy": {
+        "adaptive_controls": [],
+        "batch_rules": [
+          {
+            "group_key": "endpoint",
+            "idempotent_only": true,
+            "max_batch_size": 3,
+            "max_wait_ms": 40,
+            "scope": [
+              "A4"
+            ]
+          }
+        ],
+        "batch_size": 1,
+        "batching_buckets": [],
+        "burst": 10,
+        "forced_pick": false,
+        "forced_pick_blocked_kinds": [],
+        "forced_pick_target": [],
+        "max_qps": 5.0,
+        "min_gap_before_ms": 0,
+        "min_gap_rules": [],
+        "window_ms": 1000
+      },
+      "session_policy": {
+        "max_age_s": 20,
+        "reuse": true,
+        "session_groups": [
+          {
+            "group_key": "device_id",
+            "scope": [
+              "A1",
+              "A2",
+              "A3"
+            ]
+          },
+          {
+            "group_key": "host",
+            "scope": [
+              "A4"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

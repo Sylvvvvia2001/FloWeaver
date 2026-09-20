@@ -1,0 +1,294 @@
+{
+  "integration": "tplink",
+  "runtime_families": [
+    {
+      "action_kind": "write",
+      "allow_accessor_fallback": false,
+      "binding_hints": {
+        "boost_target_tokens": [
+          "sensor.vdev_overnight_quiet_hours_snapshot_01_local_lane",
+          "vdev_overnight_quiet_hours_snapshot_01_local_lane"
+        ],
+        "phase": "RUNTIME",
+        "preferred_action_kinds": [
+          "publish",
+          "write"
+        ],
+        "required_service_tokens": []
+      },
+      "call_patterns": [
+        "_async_call_update_attrs",
+        "_handle_coordinator_update",
+        "super",
+        "self._async_call_update_attrs",
+        "async_added_to_hass",
+        "_async_update_attrs"
+      ],
+      "confidence": {
+        "base": 0.7,
+        "boost_if_imports": [
+          "__future__",
+          "abc",
+          "collections",
+          "const",
+          "coordinator",
+          "dataclasses"
+        ],
+        "boost_if_names": [
+          "write",
+          "_handle_coordinator_update",
+          "async_added_to_hass",
+          "_async_call_update_attrs",
+          "super",
+          "self._async_call_update_attrs"
+        ],
+        "emit_threshold": 0.7
+      },
+      "family": "STATE_WRITE",
+      "file_globs": [
+        "tplink/entity.py"
+      ],
+      "forbidden_context": [
+        "dunder_init"
+      ],
+      "forbidden_path_signals": [
+        "property_function:available"
+      ],
+      "forbidden_runtime_roles": [
+        "setup",
+        "property_getter"
+      ],
+      "function_name_patterns": [
+        "_handle_coordinator_update",
+        "async_added_to_hass",
+        "_async_call_update_attrs"
+      ],
+      "generalization_scope": "file_specific",
+      "generalizes_actions": [
+        "A15"
+      ],
+      "integration": "tplink",
+      "negative_call_patterns": [
+        "__init__",
+        "get_device_name",
+        "deviceinfo",
+        "_get_unique_id",
+        "self._get_unique_id",
+        "replace"
+      ],
+      "negative_evidence": [
+        "negative_function:__init__",
+        "negative_function:available",
+        "negative_function:_description_for_feature",
+        "negative_call:__init__",
+        "negative_call:get_device_name",
+        "negative_call:deviceinfo",
+        "negative_call:_get_unique_id",
+        "negative_call:super",
+        "negative_call:str",
+        "negative_call:self._get_unique_id"
+      ],
+      "negative_function_patterns": [
+        "__init__",
+        "available",
+        "_description_for_feature"
+      ],
+      "negative_prototypes": [
+        {
+          "call_chains": [
+            "__init__",
+            "get_device_name",
+            "deviceinfo",
+            "self._get_unique_id",
+            "super",
+            "str"
+          ],
+          "call_patterns": [
+            "__init__",
+            "get_device_name",
+            "deviceinfo",
+            "_get_unique_id",
+            "super",
+            "str"
+          ],
+          "file_path": "data/repo_snapshot/tplink/entity.py",
+          "function_name": "__init__",
+          "path_kind": "setup_path",
+          "path_signals": [
+            "read_function:__init__",
+            "read_call:get_device_name"
+          ],
+          "prototype_kind": "negative_setup",
+          "role_hint": "setup",
+          "score": -4,
+          "snippet": "166: \n167:     def __init__(\n168:         self,\n169:         device: Device,\n170:         coordinator: TPLinkDataUpdateCoordinator,\n171:         description: TPLinkEntityDescription,\n172:         *,\n173:         feature: Feature | None = None,\n174:         parent: Device | None = None,\n175:     ) -> None:\n176:         \"\"\"Initialize the entity.\"\"\"\n177:         super().__init__(coordinator)\n178:         self.entity_description = description\n179:         self._device: Device = device"
+        },
+        {
+          "call_chains": [],
+          "call_patterns": [],
+          "file_path": "data/repo_snapshot/tplink/entity.py",
+          "function_name": "available",
+          "path_kind": "property_path",
+          "path_signals": [
+            "property_function:available"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "property_getter",
+          "score": -10,
+          "snippet": "291:     @property\n292:     def available(self) -> bool:\n293:         \"\"\"Return if entity is available.\"\"\"\n294:         return self.coordinator.last_update_success and self._attr_available\n295: \n296:"
+        },
+        {
+          "call_chains": [
+            "_logger.debug",
+            "replace",
+            "descriptions.get",
+            "get_device_name",
+            "cls._category_for_feature"
+          ],
+          "call_patterns": [
+            "debug",
+            "replace",
+            "get",
+            "get_device_name",
+            "_category_for_feature"
+          ],
+          "file_path": "data/repo_snapshot/tplink/entity.py",
+          "function_name": "_description_for_feature",
+          "path_kind": "helper_path",
+          "path_signals": [
+            "read_function:_description_for_feature",
+            "read_call:get_device_name"
+          ],
+          "prototype_kind": "negative_helper",
+          "role_hint": "helper",
+          "score": 0,
+          "snippet": "360:     @classmethod\n361:     def _description_for_feature[_D: EntityDescription](\n362:         cls,\n363:         feature: Feature,\n364:         descriptions: Mapping[str, _D],\n365:         *,\n366:         device: Device,\n367:         parent: Device | None = None,\n368:     ) -> _D | None:\n369:         \"\"\"Return description object for the given feature.\n370: \n371:         This is responsible for setting the common parameters & deciding\n372:         based on feature id which additional parameters are passed.\n373:         \"\"\""
+        }
+      ],
+      "origin_action_id": "A15",
+      "origin_cluster_id": "tplink__entity__state_write__write__ha",
+      "phase": "RUNTIME",
+      "positive_prototypes": [
+        {
+          "call_chains": [
+            "self._async_call_update_attrs",
+            "_handle_coordinator_update",
+            "super"
+          ],
+          "call_patterns": [
+            "_async_call_update_attrs",
+            "_handle_coordinator_update",
+            "super"
+          ],
+          "file_path": "data/repo_snapshot/tplink/entity.py",
+          "function_name": "_handle_coordinator_update",
+          "path_kind": "control_path",
+          "path_signals": [
+            "update_callback_function:_handle_coordinator_update",
+            "state_write_function:_handle_coordinator_update",
+            "state_write_call:self._async_call_update_attrs",
+            "state_write_call:_handle_coordinator_update"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_write",
+          "score": 9,
+          "snippet": "285:     @callback\n286:     def _handle_coordinator_update(self) -> None:\n287:         \"\"\"Handle updated data from the coordinator.\"\"\"\n288:         self._async_call_update_attrs()\n289:         super()._handle_coordinator_update()\n290: \n291:     @property"
+        },
+        {
+          "call_chains": [
+            "self._async_call_update_attrs",
+            "async_added_to_hass",
+            "super"
+          ],
+          "call_patterns": [
+            "_async_call_update_attrs",
+            "async_added_to_hass",
+            "super"
+          ],
+          "file_path": "data/repo_snapshot/tplink/entity.py",
+          "function_name": "async_added_to_hass",
+          "path_kind": "control_path",
+          "path_signals": [
+            "state_write_function:async_added_to_hass",
+            "state_write_call:self._async_call_update_attrs"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_write",
+          "score": 7,
+          "snippet": "252: \n253:     async def async_added_to_hass(self) -> None:\n254:         \"\"\"Call update attributes after the device is added to the platform.\"\"\"\n255:         await super().async_added_to_hass()\n256: \n257:         self._async_call_update_attrs()\n258: \n259:     @abstractmethod"
+        },
+        {
+          "call_chains": [
+            "self._async_update_attrs",
+            "_logger.warning"
+          ],
+          "call_patterns": [
+            "_async_update_attrs",
+            "warning"
+          ],
+          "file_path": "data/repo_snapshot/tplink/entity.py",
+          "function_name": "_async_call_update_attrs",
+          "path_kind": "control_path",
+          "path_signals": [
+            "state_write_function:_async_call_update_attrs",
+            "state_write_call:self._async_update_attrs"
+          ],
+          "prototype_kind": "positive",
+          "role_hint": "runtime_write",
+          "score": 7,
+          "snippet": "268:     @callback\n269:     def _async_call_update_attrs(self) -> None:\n270:         \"\"\"Call update_attrs and make entity unavailable on errors.\"\"\"\n271:         try:\n272:             available = self._async_update_attrs()\n273:         except Exception as ex:  # noqa: BLE001\n274:             if self._attr_available:\n275:                 _LOGGER.warning(\n276:                     \"Unable to read data for %s %s: %s\",\n277:                     self._device,\n278:                     self.entity_id,\n279:                     ex,\n280:                 )\n281:             self._attr_available = False"
+        }
+      ],
+      "preferred_runtime_roles": [
+        "runtime_write"
+      ],
+      "required_context": [
+        "runtime_path"
+      ],
+      "required_path_signals": [
+        "update_callback_function:_handle_coordinator_update",
+        "state_write_function:_handle_coordinator_update",
+        "state_write_call:self._async_call_update_attrs",
+        "state_write_call:_handle_coordinator_update",
+        "state_write_function:async_added_to_hass",
+        "state_write_function:_async_call_update_attrs",
+        "state_write_call:self._async_update_attrs"
+      ],
+      "required_runtime_roles": [
+        "runtime_write"
+      ],
+      "reviewer_status": "draft",
+      "rule_id": "tplink:entity_runtime_writeback",
+      "runtime_archetypes": [
+        "state_writeback"
+      ],
+      "runtime_path_evidence": [
+        "runtime_function:_handle_coordinator_update",
+        "runtime_function:async_added_to_hass",
+        "runtime_function:_async_call_update_attrs",
+        "runtime_call:_async_call_update_attrs",
+        "runtime_call:_handle_coordinator_update",
+        "runtime_call:super",
+        "runtime_call:self._async_call_update_attrs",
+        "runtime_call:async_added_to_hass",
+        "runtime_call:_async_update_attrs",
+        "runtime_call:warning"
+      ],
+      "source_file_paths": [
+        "data/repo_snapshot/tplink/entity.py"
+      ],
+      "source_unresolved_action_ids": [
+        "A15"
+      ],
+      "strength": "MEDIUM",
+      "why_not_more_general": "single unresolved action still exposes a reusable file-local runtime idiom",
+      "why_not_setup": [
+        "exclude_role:setup:__init__",
+        "exclude_role:property_getter:available",
+        "exclude_path_signal:property_function:available"
+      ]
+    }
+  ],
+  "schema_version": "m1_grounding_profile/v3",
+  "version": "draft_llm_v3"
+}

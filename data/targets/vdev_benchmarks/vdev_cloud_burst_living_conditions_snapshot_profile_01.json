@@ -1,0 +1,1236 @@
+{
+  "meta": {
+    "spec_version": "0.1",
+    "vdev_id": "vdev_cloud_burst_living_conditions_snapshot_profile_01",
+    "name": "Cloud Burst Living Conditions Snapshot Profile Coverage",
+    "benchmark": {
+      "group": "Profile Coverage - Realistic Stress Routines",
+      "story": "During a weather change or scheduled snapshot, the routine performs a burst read over whole-home lights, plug strips, climates, thermostats, Netatmo runtime, SmartThings aggregation, and a small local plug lane.",
+      "strengths": [
+        "Cloud-heavy flagship benchmark.",
+        "Provider separation and same-provider grouping are both visible.",
+        "Small local TP-Link lane tests that cloud burst does not swallow cheap local work."
+      ],
+      "focus_areas": [
+        "Cloud burst batching",
+        "Provider separation",
+        "Backoff-safe same-bucket grouping",
+        "Small local lane packing"
+      ]
+    }
+  },
+  "source_scope": {
+    "repo_path": "data/repo_snapshot",
+    "commit": "HEAD",
+    "domains": [
+      "ecobee",
+      "esphome",
+      "netatmo",
+      "smartthings",
+      "tplink",
+      "tuya"
+    ],
+    "platforms": [
+      "climate",
+      "light",
+      "sensor",
+      "switch"
+    ],
+    "protocols": [
+      "CLOUD",
+      "HA",
+      "LOCAL"
+    ],
+    "files": [
+      "data/repo_snapshot/ecobee/climate.py",
+      "data/repo_snapshot/esphome/update.py",
+      "data/repo_snapshot/netatmo/sensor.py",
+      "data/repo_snapshot/smartthings/entity.py",
+      "data/repo_snapshot/tplink/entity.py",
+      "data/repo_snapshot/tuya/climate.py",
+      "data/repo_snapshot/tuya/entity.py",
+      "data/repo_snapshot/tuya/light.py",
+      "data/repo_snapshot/tuya/switch.py"
+    ],
+    "file_bindings": [
+      {
+        "device_id": "tuya:light.cloud_burst_light_1.status",
+        "file_path": "data/repo_snapshot/tuya/light.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.cloud_burst_light_2.status",
+        "file_path": "data/repo_snapshot/tuya/light.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.cloud_burst_light_3.status",
+        "file_path": "data/repo_snapshot/tuya/light.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.cloud_burst_light_4.status",
+        "file_path": "data/repo_snapshot/tuya/light.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:light.cloud_burst_light_5.status",
+        "file_path": "data/repo_snapshot/tuya/light.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.cloud_burst_strip_1.status",
+        "file_path": "data/repo_snapshot/tuya/switch.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.cloud_burst_strip_2.status",
+        "file_path": "data/repo_snapshot/tuya/switch.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.cloud_burst_strip_3.status",
+        "file_path": "data/repo_snapshot/tuya/switch.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.cloud_burst_strip_4.status",
+        "file_path": "data/repo_snapshot/tuya/switch.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:switch.cloud_burst_strip_5.status",
+        "file_path": "data/repo_snapshot/tuya/switch.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:climate.cloud_burst_ac_1.status",
+        "file_path": "data/repo_snapshot/tuya/climate.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:climate.cloud_burst_ac_2.status",
+        "file_path": "data/repo_snapshot/tuya/climate.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tuya:climate.cloud_burst_ac_3.status",
+        "file_path": "data/repo_snapshot/tuya/climate.py",
+        "integration": "tuya",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ecobee:thermostat.cloud_burst_1",
+        "file_path": "data/repo_snapshot/ecobee/climate.py",
+        "integration": "ecobee",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "ecobee:thermostat.cloud_burst_2",
+        "file_path": "data/repo_snapshot/ecobee/climate.py",
+        "integration": "ecobee",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "netatmo:station.cloud_burst",
+        "file_path": "data/repo_snapshot/netatmo/sensor.py",
+        "integration": "netatmo",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "smartthings:platform.cloud_burst_snapshot",
+        "file_path": "data/repo_snapshot/smartthings/entity.py",
+        "integration": "smartthings",
+        "protocols": [
+          "CLOUD",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tplink:plug.cloud_burst_local_1",
+        "file_path": "data/repo_snapshot/tplink/entity.py",
+        "integration": "tplink",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "tplink:plug.cloud_burst_local_2",
+        "file_path": "data/repo_snapshot/tplink/entity.py",
+        "integration": "tplink",
+        "protocols": [
+          "LOCAL",
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_cloud_burst_living_conditions_snapshot_profile_01_cloud_lane",
+        "file_path": "data/repo_snapshot/tuya/entity.py",
+        "integration": "tuya",
+        "protocols": [
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_cloud_burst_living_conditions_snapshot_profile_01_local_lane",
+        "file_path": "data/repo_snapshot/tplink/entity.py",
+        "integration": "tplink",
+        "protocols": [
+          "HA"
+        ]
+      },
+      {
+        "device_id": "sensor.vdev_cloud_burst_living_conditions_snapshot_profile_01_overall",
+        "file_path": "data/repo_snapshot/esphome/update.py",
+        "integration": "esphome",
+        "protocols": [
+          "HA"
+        ]
+      }
+    ],
+    "entrypoints": [
+      {
+        "kind": "ha_service",
+        "service": {
+          "domain": "floweaver",
+          "name": "run_cloud_burst_living_conditions_snapshot_profile_01"
+        }
+      }
+    ]
+  },
+  "vdev_actions": [
+    {
+      "action_id": "A1",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:light.cloud_burst_light_1.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:light.cloud_burst_light_1.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "light",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:light.cloud_burst_light_1.status",
+          "endpoint_group_key": "cloud_burst_living_conditions_snapshot_profile_01_tuya_light",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A2",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:light.cloud_burst_light_2.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:light.cloud_burst_light_2.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "light",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:light.cloud_burst_light_2.status",
+          "endpoint_group_key": "cloud_burst_living_conditions_snapshot_profile_01_tuya_light",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A3",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:light.cloud_burst_light_3.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:light.cloud_burst_light_3.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "light",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:light.cloud_burst_light_3.status",
+          "endpoint_group_key": "cloud_burst_living_conditions_snapshot_profile_01_tuya_light",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A4",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:light.cloud_burst_light_4.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:light.cloud_burst_light_4.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "light",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:light.cloud_burst_light_4.status",
+          "endpoint_group_key": "cloud_burst_living_conditions_snapshot_profile_01_tuya_light",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A5",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:light.cloud_burst_light_5.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:light.cloud_burst_light_5.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "light",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:light.cloud_burst_light_5.status",
+          "endpoint_group_key": "cloud_burst_living_conditions_snapshot_profile_01_tuya_light",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A6",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:switch.cloud_burst_strip_1.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:switch.cloud_burst_strip_1.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "switch",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:switch.cloud_burst_strip_1.status",
+          "endpoint_group_key": "cloud_burst_living_conditions_snapshot_profile_01_tuya_switch",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A7",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:switch.cloud_burst_strip_2.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:switch.cloud_burst_strip_2.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "switch",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:switch.cloud_burst_strip_2.status",
+          "endpoint_group_key": "cloud_burst_living_conditions_snapshot_profile_01_tuya_switch",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A8",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:switch.cloud_burst_strip_3.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:switch.cloud_burst_strip_3.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "switch",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:switch.cloud_burst_strip_3.status",
+          "endpoint_group_key": "cloud_burst_living_conditions_snapshot_profile_01_tuya_switch",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A9",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:switch.cloud_burst_strip_4.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:switch.cloud_burst_strip_4.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "switch",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:switch.cloud_burst_strip_4.status",
+          "endpoint_group_key": "cloud_burst_living_conditions_snapshot_profile_01_tuya_switch",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A10",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:switch.cloud_burst_strip_5.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:switch.cloud_burst_strip_5.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "switch",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:switch.cloud_burst_strip_5.status",
+          "endpoint_group_key": "cloud_burst_living_conditions_snapshot_profile_01_tuya_switch",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A11",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:climate.cloud_burst_ac_1.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:climate.cloud_burst_ac_1.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "climate",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:climate.cloud_burst_ac_1.status",
+          "endpoint_group_key": "cloud_burst_living_conditions_snapshot_profile_01_tuya_climate",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A12",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:climate.cloud_burst_ac_2.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:climate.cloud_burst_ac_2.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "climate",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:climate.cloud_burst_ac_2.status",
+          "endpoint_group_key": "cloud_burst_living_conditions_snapshot_profile_01_tuya_climate",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A13",
+      "type": "status",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tuya",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_OP"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "tuya:climate.cloud_burst_ac_3.status",
+        "kind": "cloud_endpoint",
+        "endpoint": "tuya:climate.cloud_burst_ac_3.status"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "climate",
+        "service": "status",
+        "provider": "tuya",
+        "data_template": {
+          "endpoint": "tuya:climate.cloud_burst_ac_3.status",
+          "endpoint_group_key": "cloud_burst_living_conditions_snapshot_profile_01_tuya_climate",
+          "host_group_key": "tuya"
+        }
+      }
+    },
+    {
+      "action_id": "A14",
+      "type": "read_runtime",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "ecobee",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "POLL_UPDATE",
+        "CLOUD_HTTP_CALL"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "ecobee:thermostat.cloud_burst_1",
+        "kind": "cloud_endpoint",
+        "endpoint": "ecobee:thermostat.cloud_burst_1"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "climate",
+        "service": "read_runtime",
+        "provider": "ecobee",
+        "data_template": {
+          "endpoint": "ecobee:thermostat.cloud_burst_1",
+          "endpoint_group_key": "cloud_burst_living_conditions_snapshot_profile_01_ecobee",
+          "host_group_key": "ecobee"
+        }
+      }
+    },
+    {
+      "action_id": "A15",
+      "type": "read_runtime",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "ecobee",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "POLL_UPDATE",
+        "CLOUD_HTTP_CALL"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "ecobee:thermostat.cloud_burst_2",
+        "kind": "cloud_endpoint",
+        "endpoint": "ecobee:thermostat.cloud_burst_2"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "climate",
+        "service": "read_runtime",
+        "provider": "ecobee",
+        "data_template": {
+          "endpoint": "ecobee:thermostat.cloud_burst_2",
+          "endpoint_group_key": "cloud_burst_living_conditions_snapshot_profile_01_ecobee",
+          "host_group_key": "ecobee"
+        }
+      }
+    },
+    {
+      "action_id": "A16",
+      "type": "read_runtime",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "netatmo",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "POLL_UPDATE",
+        "CLOUD_HTTP_CALL"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "netatmo:station.cloud_burst",
+        "kind": "cloud_endpoint",
+        "endpoint": "netatmo:station.cloud_burst"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "read_runtime",
+        "provider": "netatmo",
+        "data_template": {
+          "endpoint": "netatmo:station.cloud_burst",
+          "endpoint_group_key": "cloud_burst_living_conditions_snapshot_profile_01_netatmo",
+          "host_group_key": "netatmo"
+        }
+      }
+    },
+    {
+      "action_id": "A17",
+      "type": "read_runtime",
+      "protocol": "CLOUD",
+      "critical": true,
+      "idempotent": true,
+      "provider": "smartthings",
+      "marker_hints": [
+        "CLOUD_STATUS_CALL",
+        "POLL_UPDATE",
+        "CLOUD_HTTP_CALL"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "cloud_endpoint",
+      "target": {
+        "id": "smartthings:platform.cloud_burst_snapshot",
+        "kind": "cloud_endpoint",
+        "endpoint": "smartthings:platform.cloud_burst_snapshot"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "read_runtime",
+        "provider": "smartthings",
+        "data_template": {
+          "endpoint": "smartthings:platform.cloud_burst_snapshot",
+          "endpoint_group_key": "cloud_burst_living_conditions_snapshot_profile_01_smartthings",
+          "host_group_key": "smartthings"
+        }
+      }
+    },
+    {
+      "action_id": "A18",
+      "type": "get_state",
+      "protocol": "LOCAL",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tplink_local",
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "local_endpoint",
+      "target": {
+        "id": "tplink:plug.cloud_burst_local_1",
+        "kind": "local_endpoint",
+        "endpoint": "tplink:plug.cloud_burst_local_1",
+        "provider": "tplink_local"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "switch",
+        "service": "get_state",
+        "provider": "tplink_local",
+        "data_template": {
+          "endpoint": "tplink:plug.cloud_burst_local_1",
+          "endpoint_group_key": "cloud_burst_living_conditions_snapshot_profile_01_tplink",
+          "host_group_key": "tplink_local"
+        }
+      }
+    },
+    {
+      "action_id": "A19",
+      "type": "get_state",
+      "protocol": "LOCAL",
+      "critical": true,
+      "idempotent": true,
+      "provider": "tplink_local",
+      "marker_hints": [
+        "LOCAL_API_READ"
+      ],
+      "must_happen_before": [],
+      "side_effects": [],
+      "target_kind": "local_endpoint",
+      "target": {
+        "id": "tplink:plug.cloud_burst_local_2",
+        "kind": "local_endpoint",
+        "endpoint": "tplink:plug.cloud_burst_local_2",
+        "provider": "tplink_local"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "switch",
+        "service": "get_state",
+        "provider": "tplink_local",
+        "data_template": {
+          "endpoint": "tplink:plug.cloud_burst_local_2",
+          "endpoint_group_key": "cloud_burst_living_conditions_snapshot_profile_01_tplink",
+          "host_group_key": "tplink_local"
+        }
+      }
+    },
+    {
+      "action_id": "A20",
+      "type": "write",
+      "protocol": "HA",
+      "critical": true,
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "side_effects": [
+        "state_write"
+      ],
+      "target_kind": "ha_entity",
+      "target": {
+        "entity_id": "sensor.vdev_cloud_burst_living_conditions_snapshot_profile_01_cloud_lane",
+        "id": "sensor.vdev_cloud_burst_living_conditions_snapshot_profile_01_cloud_lane",
+        "kind": "ha_entity"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "publish",
+        "data_template": {
+          "entity_id": "sensor.vdev_cloud_burst_living_conditions_snapshot_profile_01_cloud_lane"
+        }
+      }
+    },
+    {
+      "action_id": "A21",
+      "type": "write",
+      "protocol": "HA",
+      "critical": true,
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "side_effects": [
+        "state_write"
+      ],
+      "target_kind": "ha_entity",
+      "target": {
+        "entity_id": "sensor.vdev_cloud_burst_living_conditions_snapshot_profile_01_local_lane",
+        "id": "sensor.vdev_cloud_burst_living_conditions_snapshot_profile_01_local_lane",
+        "kind": "ha_entity"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "publish",
+        "data_template": {
+          "entity_id": "sensor.vdev_cloud_burst_living_conditions_snapshot_profile_01_local_lane"
+        }
+      }
+    },
+    {
+      "action_id": "A22",
+      "type": "write",
+      "protocol": "HA",
+      "critical": true,
+      "marker_hints": [
+        "STATE_WRITE"
+      ],
+      "must_happen_before": [],
+      "side_effects": [
+        "state_write"
+      ],
+      "target_kind": "ha_entity",
+      "target": {
+        "entity_id": "sensor.vdev_cloud_burst_living_conditions_snapshot_profile_01_overall",
+        "id": "sensor.vdev_cloud_burst_living_conditions_snapshot_profile_01_overall",
+        "kind": "ha_entity"
+      },
+      "exec": {
+        "blocking": true,
+        "kind": "ha_service_call",
+        "domain": "sensor",
+        "service": "publish",
+        "data_template": {
+          "entity_id": "sensor.vdev_cloud_burst_living_conditions_snapshot_profile_01_overall"
+        }
+      }
+    }
+  ],
+  "target_anchors": {
+    "device_ids": [],
+    "endpoints": [
+      "tuya:light.cloud_burst_light_1.status",
+      "tuya:light.cloud_burst_light_2.status",
+      "tuya:light.cloud_burst_light_3.status",
+      "tuya:light.cloud_burst_light_4.status",
+      "tuya:light.cloud_burst_light_5.status",
+      "tuya:switch.cloud_burst_strip_1.status",
+      "tuya:switch.cloud_burst_strip_2.status",
+      "tuya:switch.cloud_burst_strip_3.status",
+      "tuya:switch.cloud_burst_strip_4.status",
+      "tuya:switch.cloud_burst_strip_5.status",
+      "tuya:climate.cloud_burst_ac_1.status",
+      "tuya:climate.cloud_burst_ac_2.status",
+      "tuya:climate.cloud_burst_ac_3.status",
+      "ecobee:thermostat.cloud_burst_1",
+      "ecobee:thermostat.cloud_burst_2",
+      "netatmo:station.cloud_burst",
+      "smartthings:platform.cloud_burst_snapshot"
+    ],
+    "entities": [
+      "sensor.vdev_cloud_burst_living_conditions_snapshot_profile_01_cloud_lane",
+      "sensor.vdev_cloud_burst_living_conditions_snapshot_profile_01_local_lane",
+      "sensor.vdev_cloud_burst_living_conditions_snapshot_profile_01_overall"
+    ],
+    "characteristics": [],
+    "required_state_writes": [
+      "sensor.vdev_cloud_burst_living_conditions_snapshot_profile_01_cloud_lane",
+      "sensor.vdev_cloud_burst_living_conditions_snapshot_profile_01_local_lane",
+      "sensor.vdev_cloud_burst_living_conditions_snapshot_profile_01_overall"
+    ],
+    "service_entrypoints": [
+      "floweaver.run_cloud_burst_living_conditions_snapshot_profile_01"
+    ],
+    "anchor_ops": [
+      "CLOUD_HTTP_CALL",
+      "CLOUD_OP",
+      "CLOUD_STATUS_CALL",
+      "LOCAL_API_READ",
+      "POLL_UPDATE",
+      "STATE_WRITE"
+    ]
+  },
+  "entrypoint": {
+    "kind": "ha_service",
+    "service": {
+      "domain": "floweaver",
+      "name": "run_cloud_burst_living_conditions_snapshot_profile_01"
+    }
+  },
+  "objectives": {
+    "primary": "minimize_tail_latency_for_profile_coverage_routine",
+    "metrics": {
+      "e2e_latency_ms": {
+        "p95": 4300
+      }
+    }
+  },
+  "constraints": {
+    "source_protocols": [
+      "CLOUD",
+      "HA",
+      "LOCAL"
+    ],
+    "optimization_knobs": {
+      "allow_concurrency": true,
+      "max_concurrency": {
+        "ble": 1,
+        "cloud": 4,
+        "local": 6,
+        "total": 10
+      }
+    }
+  },
+  "validation": {
+    "differential_tests": {
+      "enabled": true,
+      "runs_per_scenario": 2,
+      "scenarios": [
+        "baseline_happy_path",
+        "fault_cloud_429",
+        "fault_ble_disconnect"
+      ]
+    },
+    "fault_model": {
+      "ble_disconnect": true,
+      "cloud_429": true,
+      "network_jitter": true
+    },
+    "observation": {
+      "canonicalization_version": "v1",
+      "equivalence_whitelist": [
+        "COALESCE_STATE_WRITE"
+      ],
+      "semantic_ops": [
+        "ENTRY_SETUP",
+        "COORD_REFRESH",
+        "STATE_WRITE",
+        "SUBSCRIBE",
+        "UNSUBSCRIBE",
+        "MQTT_SUBSCRIBE",
+        "BLE_CONNECT",
+        "BLE_DISCONNECT",
+        "BLE_NOTIFY_SUBSCRIBE",
+        "BLE_OP",
+        "BLE_GATT_OP",
+        "CLOUD_STATUS_CALL",
+        "CLOUD_HTTP_CALL",
+        "CLOUD_429_CHECK",
+        "CLOUD_BACKOFF_SLEEP",
+        "CLOUD_BATCH_CALL",
+        "CLOUD_SESSION_REUSE",
+        "LOCAL_API_READ",
+        "POLL_UPDATE"
+      ]
+    },
+    "llm_detector": {
+      "enabled": true,
+      "timeout_s": 45,
+      "max_attempts": 0,
+      "retry_backoff_s": 0.5
+    },
+    "profile_version": "ha_profile_default",
+    "sampling": {},
+    "source_protocols": [
+      "CLOUD",
+      "HA",
+      "LOCAL"
+    ]
+  },
+  "hard_dependencies": [
+    {
+      "before": "A1",
+      "after": "A20",
+      "reason": "cloud_write_depends_on_a1"
+    },
+    {
+      "before": "A2",
+      "after": "A20",
+      "reason": "cloud_write_depends_on_a2"
+    },
+    {
+      "before": "A3",
+      "after": "A20",
+      "reason": "cloud_write_depends_on_a3"
+    },
+    {
+      "before": "A4",
+      "after": "A20",
+      "reason": "cloud_write_depends_on_a4"
+    },
+    {
+      "before": "A5",
+      "after": "A20",
+      "reason": "cloud_write_depends_on_a5"
+    },
+    {
+      "before": "A6",
+      "after": "A20",
+      "reason": "cloud_write_depends_on_a6"
+    },
+    {
+      "before": "A7",
+      "after": "A20",
+      "reason": "cloud_write_depends_on_a7"
+    },
+    {
+      "before": "A8",
+      "after": "A20",
+      "reason": "cloud_write_depends_on_a8"
+    },
+    {
+      "before": "A9",
+      "after": "A20",
+      "reason": "cloud_write_depends_on_a9"
+    },
+    {
+      "before": "A10",
+      "after": "A20",
+      "reason": "cloud_write_depends_on_a10"
+    },
+    {
+      "before": "A11",
+      "after": "A20",
+      "reason": "cloud_write_depends_on_a11"
+    },
+    {
+      "before": "A12",
+      "after": "A20",
+      "reason": "cloud_write_depends_on_a12"
+    },
+    {
+      "before": "A13",
+      "after": "A20",
+      "reason": "cloud_write_depends_on_a13"
+    },
+    {
+      "before": "A14",
+      "after": "A20",
+      "reason": "cloud_write_depends_on_a14"
+    },
+    {
+      "before": "A15",
+      "after": "A20",
+      "reason": "cloud_write_depends_on_a15"
+    },
+    {
+      "before": "A16",
+      "after": "A20",
+      "reason": "cloud_write_depends_on_a16"
+    },
+    {
+      "before": "A17",
+      "after": "A20",
+      "reason": "cloud_write_depends_on_a17"
+    },
+    {
+      "before": "A18",
+      "after": "A21",
+      "reason": "local_write_depends_on_a18"
+    },
+    {
+      "before": "A19",
+      "after": "A21",
+      "reason": "local_write_depends_on_a19"
+    },
+    {
+      "before": "A20",
+      "after": "A22",
+      "reason": "overall_write_depends_on_cloud_lane"
+    },
+    {
+      "before": "A21",
+      "after": "A22",
+      "reason": "overall_write_depends_on_local_lane"
+    }
+  ],
+  "soft_dependencies": [],
+  "critical_action_ids": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "A8",
+    "A9",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15",
+    "A16",
+    "A17",
+    "A18",
+    "A19",
+    "A20",
+    "A21",
+    "A22"
+  ]
+}
